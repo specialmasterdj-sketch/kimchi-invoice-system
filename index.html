@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#C62828">
+<title>Kimchi Mart Invoice System</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<script src="seed_data.js"></script>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  padding-bottom: 70px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, #C62828, #B71C1C);
+  color: white;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.header h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.header .subtitle {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+/* ===== BOTTOM NAV ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  border-top: 1px solid #ddd;
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 4px;
+  font-size: 0.65rem;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-item.active { color: #C62828; }
+.nav-item svg { width: 22px; height: 22px; margin-bottom: 2px; }
+.nav-item span { white-space: nowrap; }
+
+/* ===== PAGES ===== */
+.page { display: none; padding: 16px; }
+.page.active { display: block; }
+
+/* ===== CARDS ===== */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+.card-subtitle {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+/* ===== STAT GRID ===== */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 6px;
+}
+.stat-number.red { color: #F44336; }
+.stat-number.green { color: #4CAF50; }
+.stat-number.blue { color: #2196F3; }
+.stat-number.orange { color: #FF9800; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.1s, opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: #C62828; color: white; }
+.btn-primary:disabled { background: #ccc; }
+.btn-secondary { background: #e0e0e0; color: #333; }
+.btn-success { background: #4CAF50; color: white; }
+.btn-sm { padding: 8px 16px; font-size: 0.8rem; width: auto; }
+
+/* ===== FORM ELEMENTS ===== */
+.form-group { margin-bottom: 16px; }
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+select, input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  -webkit-appearance: none;
+}
+select:focus, input:focus { outline: none; border-color: #C62828; }
+
+/* ===== FILE UPLOAD ===== */
+.upload-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: #fafafa;
+}
+.upload-zone:hover, .upload-zone.dragover {
+  border-color: #C62828;
+  background: #fff5f5;
+}
+.upload-zone svg { width: 48px; height: 48px; color: #999; margin-bottom: 10px; }
+.upload-zone p { color: #666; font-size: 0.85rem; }
+.upload-zone .file-name { color: #C62828; font-weight: 600; margin-top: 8px; }
+
+.camera-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border: 2px solid #C62828;
+  border-radius: 10px;
+  background: white;
+  color: #C62828;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+.camera-btn svg { width: 24px; height: 24px; }
+
+/* ===== RESULTS TABLE ===== */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.results-table th {
+  background: #f5f5f5;
+  padding: 10px 8px;
+  text-align: left;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #ddd;
+}
+.results-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+.results-table tr.price-up { background: #FFEBEE; }
+.results-table tr.price-down { background: #E8F5E9; }
+.results-table tr.new-item { background: #E3F2FD; }
+.results-table tr.duplicate { background: #FFF8E1; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+}
+.badge-red { background: #F44336; }
+.badge-green { background: #4CAF50; }
+.badge-blue { background: #2196F3; }
+.badge-yellow { background: #FF9800; }
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+.progress-fill {
+  height: 100%;
+  background: #C62828;
+  border-radius: 4px;
+  transition: width 0.3s;
+  width: 0%;
+}
+
+/* ===== HISTORY LIST ===== */
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.history-item:last-child { border-bottom: none; }
+.history-info h4 { font-size: 0.85rem; font-weight: 600; }
+.history-info p { font-size: 0.7rem; color: #888; margin-top: 2px; }
+.history-meta { text-align: right; }
+.history-meta .amount { font-size: 0.85rem; font-weight: 700; }
+.history-meta .date { font-size: 0.65rem; color: #888; }
+
+/* ===== LOADING ===== */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+.loading-overlay.active { display: flex; }
+.loading-box {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  width: 280px;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #eee;
+  border-top-color: #C62828;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== TABS ===== */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tab {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #e0e0e0;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+}
+.tab.active { background: #C62828; color: white; }
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+.empty-state svg { width: 64px; height: 64px; margin-bottom: 12px; opacity: 0.4; }
+.empty-state p { font-size: 0.85rem; }
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  z-index: 300;
+  transition: transform 0.3s;
+  white-space: nowrap;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ===== MANUAL INPUT ===== */
+.manual-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.manual-row input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
+  body { max-width: 800px; margin: 0 auto; }
+  .bottom-nav { max-width: 800px; left: 50%; transform: translateX(-50%); }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>KIMCHI MART INVOICE SYSTEM</h1>
+  <div class="subtitle">김치마트 인보이스 대조 시스템</div>
+</div>
+
+<!-- ===== PAGE: DASHBOARD ===== -->
+<div id="page-dashboard" class="page active">
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-number blue" id="stat-invoices">0</div>
+      <div class="stat-label">Total Invoices<br>전체 인보이스</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number orange" id="stat-items">0</div>
+      <div class="stat-label">Total Items<br>전체 품목</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number red" id="stat-flags">0</div>
+      <div class="stat-label">Price Flags<br>가격 알림</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number green" id="stat-vendors">3</div>
+      <div class="stat-label">Vendors<br>거래처</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Quick Actions / 빠른 실행</div>
+    <button class="btn btn-primary" onclick="navigate('upload')" style="margin-bottom:10px">
+      Upload New Invoice / 새 인보이스 업로드
+    </button>
+    <button class="btn btn-secondary" onclick="navigate('history')">
+      View History / 기록 보기
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Recent Comparisons / 최근 비교 결과</div>
+    <div id="recent-comparisons">
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        <p>No comparisons yet<br>아직 비교 결과가 없습니다</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: UPLOAD ===== -->
+<div id="page-upload" class="page">
+  <div class="card">
+    <div class="card-title">Upload Invoice / 인보이스 업로드</div>
+    <div class="card-subtitle">Upload a PDF or take a photo of an invoice</div>
+
+    <div class="form-group">
+      <label class="form-label">Vendor / 거래처</label>
+      <select id="vendor-select">
+        <option value="">-- Select Vendor --</option>
+        <option value="rhee">Rhee Bros / 리브라더스</option>
+        <option value="wang">Wang / 왕</option>
+        <option value="choripdong">Choripdong / 초립동</option>
+        <option value="other">Other / 기타</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Invoice Date / 인보이스 날짜</label>
+      <input type="date" id="invoice-date" value="">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Invoice File / 인보이스 파일</label>
+      <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <p>Tap to upload PDF or image<br>PDF 또는 이미지를 업로드하세요</p>
+        <div class="file-name" id="file-name"></div>
+      </div>
+      <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png,.txt" style="display:none" onchange="handleFileSelect(event)">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Or take a photo / 사진 촬영</label>
+      <label class="camera-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        Camera / 카메라
+        <input type="file" accept="image/*" capture="camera" style="display:none" onchange="handleFileSelect(event)">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Or paste text data / 텍스트 직접 입력</label>
+      <textarea id="manual-text" rows="5" placeholder="Paste pipe-delimited invoice data here...&#10;No|Brand|Description|Size|Qty|UM|Type|Unit|Each|Total" style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.8rem;font-family:monospace;resize:vertical;"></textarea>
+    </div>
+
+    <div id="processing-status" style="display:none">
+      <div class="card-subtitle" id="status-text">Processing...</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <button class="btn btn-primary" id="btn-process" onclick="processInvoice()">
+      Process & Compare / 처리 및 비교
+    </button>
+  </div>
+</div>
+
+<!-- ===== PAGE: COMPARE ===== -->
+<div id="page-compare" class="page">
+  <div class="card">
+    <div class="card-title" id="compare-title">Comparison Results / 비교 결과</div>
+    <div class="card-subtitle" id="compare-subtitle"></div>
+
+    <div class="tab-bar" id="flag-tabs">
+      <button class="tab active" data-filter="all" onclick="filterFlags('all',this)">All</button>
+      <button class="tab" data-filter="PRICE_UP" onclick="filterFlags('PRICE_UP',this)">Price Up</button>
+      <button class="tab" data-filter="PRICE_DOWN" onclick="filterFlags('PRICE_DOWN',this)">Price Down</button>
+      <button class="tab" data-filter="NEW_ITEM" onclick="filterFlags('NEW_ITEM',this)">New Item</button>
+      <button class="tab" data-filter="UNCHANGED" onclick="filterFlags('UNCHANGED',this)">Unchanged</button>
+    </div>
+  </div>
+
+  <div class="card" id="compare-summary" style="display:none">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-number red" id="cmp-up">0</div><div class="stat-label">Price Up<br>가격 상승</div></div>
+      <div class="stat-card"><div class="stat-number green" id="cmp-down">0</div><div class="stat-label">Price Down<br>가격 하락</div></div>
+      <div class="stat-card"><div class="stat-number blue" id="cmp-new">0</div><div class="stat-label">New Items<br>신규 품목</div></div>
+      <div class="stat-card"><div class="stat-number orange" id="cmp-same">0</div><div class="stat-label">Unchanged<br>변동 없음</div></div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="results-table" id="results-table">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody id="results-body"></tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:12px; display:flex; gap:8px;">
+    <button class="btn btn-success" onclick="exportCSV()" style="flex:1">Export CSV</button>
+    <button class="btn btn-secondary" onclick="saveComparison()" style="flex:1">Save / 저장</button>
+  </div>
+</div>
+
+<!-- ===== PAGE: HISTORY ===== -->
+<div id="page-history" class="page">
+  <div class="card">
+    <div class="card-title">Invoice History / 인보이스 기록</div>
+    <div class="tab-bar">
+      <button class="tab active" onclick="filterHistory('all',this)">All</button>
+      <button class="tab" onclick="filterHistory('rhee',this)">Rhee Bros</button>
+      <button class="tab" onclick="filterHistory('wang',this)">Wang</button>
+      <button class="tab" onclick="filterHistory('choripdong',this)">Choripdong</button>
+    </div>
+    <div id="history-list"></div>
+  </div>
+</div>
+
+<!-- ===== PAGE: FLAGS ===== -->
+<div id="page-flags" class="page">
+  <div class="card">
+    <div class="card-title">Price Change Flags / 가격 변동 알림</div>
+    <div class="card-subtitle">Items with significant price changes across all invoices</div>
+  </div>
+  <div class="table-wrap">
+    <table class="results-table" id="flags-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Vendor</th>
+          <th>Old</th>
+          <th>New</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="flags-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== PAGE: EXPORT ===== -->
+<div id="page-export" class="page">
+  <div class="card">
+    <div class="card-title">Export Data / 데이터 내보내기</div>
+    <div class="card-subtitle">Download data as CSV files</div>
+
+    <button class="btn btn-primary" onclick="exportAllHistory()" style="margin-bottom:10px">
+      Export All History / 전체 기록 내보내기
+    </button>
+    <button class="btn btn-secondary" onclick="exportAllFlags()" style="margin-bottom:10px">
+      Export All Flags / 전체 알림 내보내기
+    </button>
+    <button class="btn btn-secondary" onclick="exportPriceTracker()">
+      Export Price Tracker / 가격 추적 내보내기
+    </button>
+  </div>
+</div>
+
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <div id="loading-text">Processing invoice...</div>
+    <div class="progress-bar" style="margin-top:12px"><div class="progress-fill" id="loading-progress"></div></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="nav-item" data-page="upload" onclick="navigate('upload')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    <span>Upload</span>
+  </a>
+  <a class="nav-item" data-page="compare" onclick="navigate('compare')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+    <span>Compare</span>
+  </a>
+  <a class="nav-item" data-page="history" onclick="navigate('history')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span>History</span>
+  </a>
+  <a class="nav-item" data-page="flags" onclick="navigate('flags')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+    <span>Flags</span>
+  </a>
+  <a class="nav-item" data-page="export" onclick="navigate('export')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span>Export</span>
+  </a>
+</nav>
+
+<script>
+// ===== APP STATE =====
+let currentFile = null;
+let currentFlags = [];
+let allComparisons = [];
+let DB = null;
+
+// ===== INDEXEDDB =====
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open('KimchiInvoiceDB', 2);
+    req.onupgradeneeded = (e) => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('invoices')) {
+        db.createObjectStore('invoices', { keyPath: 'id', autoIncrement: true });
+      }
+      if (!db.objectStoreNames.contains('comparisons')) {
+        db.createObjectStore('comparisons', { keyPath: 'id', autoIncrement: true });
+      }
+      if (!db.objectStoreNames.contains('flags')) {
+        db.createObjectStore('flags', { keyPath: 'id', autoIncrement: true });
+      }
+    };
+    req.onsuccess = (e) => { DB = e.target.result; resolve(DB); };
+    req.onerror = (e) => reject(e);
+  });
+}
+
+function dbAdd(store, data) {
+  return new Promise((resolve, reject) => {
+    const tx = DB.transaction(store, 'readwrite');
+    const s = tx.objectStore(store);
+    const req = s.add(data);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = (e) => reject(e);
+  });
+}
+
+function dbGetAll(store) {
+  return new Promise((resolve, reject) => {
+    const tx = DB.transaction(store, 'readonly');
+    const s = tx.objectStore(store);
+    const req = s.getAll();
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = (e) => reject(e);
+  });
+}
+
+// ===== NAVIGATION =====
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  const navItem = document.querySelector(`.nav-item[data-page="${page}"]`);
+  if (navItem) navItem.classList.add('active');
+  window.scrollTo(0, 0);
+
+  if (page === 'history') renderHistory();
+  if (page === 'flags') renderAllFlags();
+  if (page === 'dashboard') updateDashboard();
+}
+
+// ===== FILE HANDLING =====
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  currentFile = file;
+  const nameEl = document.getElementById('file-name');
+  nameEl.textContent = file.name;
+  document.getElementById('upload-zone').querySelector('p').textContent = 'File selected / 파일 선택됨';
+  showToast('File loaded: ' + file.name);
+}
+
+// Drag & Drop
+const uploadZone = document.getElementById('upload-zone');
+uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  uploadZone.classList.remove('dragover');
+  const file = e.dataTransfer.files[0];
+  if (file) {
+    currentFile = file;
+    document.getElementById('file-name').textContent = file.name;
+    showToast('File loaded: ' + file.name);
+  }
+});
+
+// ===== PROCESS INVOICE =====
+async function processInvoice() {
+  const vendor = document.getElementById('vendor-select').value;
+  const date = document.getElementById('invoice-date').value;
+  const manualText = document.getElementById('manual-text').value.trim();
+
+  if (!vendor) { showToast('Please select a vendor / 거래처를 선택하세요'); return; }
+  if (!currentFile && !manualText) { showToast('Please upload a file or paste data / 파일 업로드 또는 데이터를 입력하세요'); return; }
+
+  showLoading('Processing invoice / 인보이스 처리 중...');
+  setProgress(10);
+
+  try {
+    let parsedItems = [];
+
+    if (manualText) {
+      setProgress(30);
+      parsedItems = parseTextData(manualText, vendor);
+    } else if (currentFile) {
+      const ext = currentFile.name.split('.').pop().toLowerCase();
+
+      if (ext === 'txt') {
+        setProgress(20);
+        const text = await readFileAsText(currentFile);
+        setProgress(40);
+        parsedItems = parseTextData(text, vendor);
+      } else if (ext === 'pdf') {
+        setProgress(20);
+        updateLoadingText('Extracting PDF text / PDF 텍스트 추출 중...');
+        const text = await extractPDFText(currentFile);
+        setProgress(50);
+        updateLoadingText('Parsing items / 품목 파싱 중...');
+        parsedItems = parseTextData(text, vendor);
+      } else if (['jpg', 'jpeg', 'png'].includes(ext)) {
+        setProgress(20);
+        updateLoadingText('Running OCR / OCR 실행 중...');
+        const text = await runOCR(currentFile);
+        setProgress(60);
+        updateLoadingText('Parsing items / 품목 파싱 중...');
+        parsedItems = parseTextData(text, vendor);
+      }
+    }
+
+    setProgress(70);
+    updateLoadingText('Comparing prices / 가격 비교 중...');
+
+    if (parsedItems.length === 0) {
+      hideLoading();
+      showToast('No items found. Check the data format / 품목을 찾을 수 없습니다');
+      return;
+    }
+
+    // Compare with historical data
+    const flags = compareInvoice(parsedItems, vendor);
+    setProgress(90);
+
+    // Create invoice record
+    const invoice = {
+      vendor: vendor,
+      vendorName: getVendorName(vendor),
+      date: date || new Date().toISOString().split('T')[0],
+      itemCount: parsedItems.length,
+      items: parsedItems,
+      flags: flags,
+      timestamp: Date.now()
+    };
+
+    // Save to IndexedDB
+    if (DB) {
+      await dbAdd('invoices', invoice);
+      await dbAdd('comparisons', {
+        invoiceVendor: vendor,
+        invoiceDate: invoice.date,
+        flags: flags,
+        itemCount: parsedItems.length,
+        timestamp: Date.now()
+      });
+    }
+
+    currentFlags = flags;
+    setProgress(100);
+
+    setTimeout(() => {
+      hideLoading();
+      displayResults(invoice, flags);
+      navigate('compare');
+      showToast(`Found ${flags.filter(f=>f.type!=='UNCHANGED').length} flags in ${parsedItems.length} items`);
+    }, 300);
+
+  } catch (err) {
+    hideLoading();
+    console.error(err);
+    showToast('Error: ' + err.message);
+  }
+}
+
+// ===== TEXT PARSING =====
+function parseTextData(text, vendor) {
+  const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+  const items = [];
+
+  for (const line of lines) {
+    // Skip headers and metadata lines
+    if (line.startsWith('INVOICE:') || line.startsWith('DATE:') || line.startsWith('CUSTOMER:') ||
+        line.startsWith('TOTAL:') || line.startsWith('NOTE:') || line.startsWith('ORDER:') ||
+        line.startsWith('SHIP TO:') || line.startsWith('SALESPERSON:') || line.startsWith('TERMS:') ||
+        line.startsWith('No|') || line.startsWith('No.') || line.startsWith('index|')) continue;
+
+    const parts = line.split('|');
+
+    if (vendor === 'rhee' && parts.length >= 8) {
+      const unitPrice = parseFloat(parts[7]) || 0;
+      const each = parseFloat(parts[8]) || 0;
+      const total = parseFloat(parts[9]) || 0;
+      if (unitPrice === 0 && each === 0 && total === 0) continue;
+
+      items.push({
+        itemNo: parts[0].trim(),
+        brand: parts[1] ? parts[1].trim() : '',
+        name: parts[2] ? parts[2].trim() : '',
+        size: parts[3] ? parts[3].trim() : '',
+        qty: parseInt(parts[4]) || 0,
+        unitPrice: unitPrice,
+        each: each,
+        total: total
+      });
+    } else if (vendor === 'wang' && parts.length >= 4) {
+      const price = parseFloat(parts[3]) || 0;
+      if (price === 0) continue;
+      items.push({
+        itemNo: parts[1] ? parts[1].trim() : '',
+        brand: 'WANG',
+        name: parts[2] ? parts[2].trim() : '',
+        size: '',
+        qty: 1,
+        unitPrice: price,
+        each: price,
+        total: price
+      });
+    } else if (vendor === 'choripdong') {
+      // Try JSON parse for choripdong
+      try {
+        const json = JSON.parse(text);
+        for (const [code, item] of Object.entries(json)) {
+          items.push({
+            itemNo: item.item_code || code,
+            brand: 'CHORIPDONG',
+            name: item.en_desc || item.kr_desc || '',
+            krName: item.kr_desc || '',
+            size: item.size_pack || '',
+            qty: item.qty || 0,
+            unitPrice: item.cs_price || 0,
+            each: item.ea_price || 0,
+            total: (item.cs_price || 0) * (item.qty || 0)
+          });
+        }
+        return items;
+      } catch(e) {
+        // Not JSON, try pipe-delimited
+        if (parts.length >= 4) {
+          items.push({
+            itemNo: parts[0].trim(),
+            brand: 'CHORIPDONG',
+            name: parts[1] ? parts[1].trim() : '',
+            size: parts[2] ? parts[2].trim() : '',
+            qty: parseInt(parts[3]) || 0,
+            unitPrice: parseFloat(parts[4]) || 0,
+            each: parseFloat(parts[5]) || 0,
+            total: parseFloat(parts[6]) || 0
+          });
+        }
+      }
+    } else if (vendor === 'other' && parts.length >= 3) {
+      // Generic: try to find numbers
+      const nums = line.match(/[\d.]+/g);
+      if (nums && nums.length >= 2) {
+        items.push({
+          itemNo: parts[0].trim(),
+          brand: '',
+          name: parts[1] ? parts[1].trim() : line.substring(0, 40),
+          size: '',
+          qty: parseInt(nums[0]) || 1,
+          unitPrice: parseFloat(nums[nums.length - 1]) || 0,
+          each: parseFloat(nums[nums.length - 1]) || 0,
+          total: parseFloat(nums[nums.length - 1]) || 0
+        });
+      }
+    }
+  }
+  return items;
+}
+
+// ===== COMPARISON ENGINE =====
+function compareInvoice(newItems, vendor) {
+  const flags = [];
+  const historicalPrices = buildPriceHistory(vendor);
+
+  for (const item of newItems) {
+    const key = item.itemNo.toUpperCase().trim();
+    const history = historicalPrices[key];
+
+    if (!history) {
+      flags.push({
+        type: 'NEW_ITEM',
+        item: item,
+        oldPrice: null,
+        newPrice: item.unitPrice,
+        pctChange: null
+      });
+    } else {
+      const lastPrice = history.lastPrice;
+      const newPrice = item.unitPrice;
+
+      if (newPrice > lastPrice * 1.01) {
+        const pctChange = ((newPrice - lastPrice) / lastPrice * 100).toFixed(1);
+        flags.push({
+          type: 'PRICE_UP',
+          item: item,
+          oldPrice: lastPrice,
+          newPrice: newPrice,
+          pctChange: pctChange
+        });
+      } else if (newPrice < lastPrice * 0.99) {
+        const pctChange = ((lastPrice - newPrice) / lastPrice * 100).toFixed(1);
+        flags.push({
+          type: 'PRICE_DOWN',
+          item: item,
+          oldPrice: lastPrice,
+          newPrice: newPrice,
+          pctChange: '-' + pctChange
+        });
+      } else {
+        flags.push({
+          type: 'UNCHANGED',
+          item: item,
+          oldPrice: lastPrice,
+          newPrice: newPrice,
+          pctChange: '0.0'
+        });
+      }
+    }
+  }
+
+  // Sort: PRICE_UP first, then PRICE_DOWN, NEW_ITEM, UNCHANGED
+  const order = { PRICE_UP: 0, PRICE_DOWN: 1, NEW_ITEM: 2, UNCHANGED: 3 };
+  flags.sort((a, b) => order[a.type] - order[b.type]);
+  return flags;
+}
+
+function buildPriceHistory(vendor) {
+  const prices = {};
+  const vendorData = HISTORICAL_DATA[vendor] || [];
+
+  // Also check all vendors for cross-reference
+  const allData = vendor === 'all'
+    ? [...(HISTORICAL_DATA.rhee || []), ...(HISTORICAL_DATA.wang || []), ...(HISTORICAL_DATA.choripdong || [])]
+    : vendorData;
+
+  for (const invoice of allData) {
+    for (const item of invoice.items) {
+      const key = (item.itemNo || '').toUpperCase().trim();
+      if (!key) continue;
+      if (!prices[key]) {
+        prices[key] = { lastPrice: item.unitPrice, prices: [], name: item.name, brand: item.brand };
+      }
+      prices[key].prices.push({ price: item.unitPrice, date: invoice.date });
+      prices[key].lastPrice = item.unitPrice;
+      prices[key].name = item.name;
+    }
+  }
+  return prices;
+}
+
+// ===== DISPLAY RESULTS =====
+function displayResults(invoice, flags) {
+  document.getElementById('compare-title').textContent =
+    `${invoice.vendorName} - ${invoice.date}`;
+  document.getElementById('compare-subtitle').textContent =
+    `${invoice.itemCount} items processed / ${invoice.itemCount}개 품목 처리됨`;
+
+  const upCount = flags.filter(f => f.type === 'PRICE_UP').length;
+  const downCount = flags.filter(f => f.type === 'PRICE_DOWN').length;
+  const newCount = flags.filter(f => f.type === 'NEW_ITEM').length;
+  const sameCount = flags.filter(f => f.type === 'UNCHANGED').length;
+
+  document.getElementById('cmp-up').textContent = upCount;
+  document.getElementById('cmp-down').textContent = downCount;
+  document.getElementById('cmp-new').textContent = newCount;
+  document.getElementById('cmp-same').textContent = sameCount;
+  document.getElementById('compare-summary').style.display = 'block';
+
+  renderFlagTable(flags);
+}
+
+function renderFlagTable(flags) {
+  const tbody = document.getElementById('results-body');
+  tbody.innerHTML = '';
+
+  for (const flag of flags) {
+    const tr = document.createElement('tr');
+
+    let rowClass = '';
+    let badgeClass = '';
+    let badgeText = '';
+
+    switch (flag.type) {
+      case 'PRICE_UP':
+        rowClass = 'price-up'; badgeClass = 'badge-red'; badgeText = 'UP'; break;
+      case 'PRICE_DOWN':
+        rowClass = 'price-down'; badgeClass = 'badge-green'; badgeText = 'DOWN'; break;
+      case 'NEW_ITEM':
+        rowClass = 'new-item'; badgeClass = 'badge-blue'; badgeText = 'NEW'; break;
+      case 'UNCHANGED':
+        rowClass = ''; badgeClass = 'badge-yellow'; badgeText = 'OK'; break;
+    }
+
+    tr.className = rowClass;
+    tr.dataset.type = flag.type;
+
+    const item = flag.item;
+    const nameDisplay = item.name || item.krName || item.itemNo;
+
+    tr.innerHTML = `
+      <td><span class="badge ${badgeClass}">${badgeText}</span></td>
+      <td>
+        <strong>${item.itemNo}</strong><br>
+        <span style="font-size:0.7rem;color:#555">${nameDisplay}</span>
+        ${item.brand ? '<br><span style="font-size:0.6rem;color:#999">' + item.brand + '</span>' : ''}
+      </td>
+      <td>
+        ${flag.oldPrice !== null ? '<span style="text-decoration:line-through;color:#999;font-size:0.7rem">$' + flag.oldPrice.toFixed(2) + '</span><br>' : ''}
+        <strong>$${flag.newPrice.toFixed(2)}</strong>
+      </td>
+      <td style="font-weight:700;color:${flag.type==='PRICE_UP'?'#F44336':flag.type==='PRICE_DOWN'?'#4CAF50':'#666'}">
+        ${flag.pctChange !== null ? flag.pctChange + '%' : '--'}
+      </td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+function filterFlags(type, btn) {
+  document.querySelectorAll('#flag-tabs .tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+
+  const rows = document.querySelectorAll('#results-body tr');
+  rows.forEach(row => {
+    if (type === 'all') {
+      row.style.display = '';
+    } else {
+      row.style.display = row.dataset.type === type ? '' : 'none';
+    }
+  });
+}
+
+// ===== PDF EXTRACTION =====
+async function extractPDFText(file) {
+  // Load pdf.js if not already loaded
+  if (typeof pdfjsLib === 'undefined') {
+    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+
+  const arrayBuffer = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  let fullText = '';
+
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const pageText = content.items.map(item => item.str).join(' ');
+    fullText += pageText + '\n';
+    setProgress(20 + (i / pdf.numPages) * 30);
+  }
+  return fullText;
+}
+
+// ===== OCR =====
+async function runOCR(file) {
+  if (typeof Tesseract === 'undefined') {
+    await loadScript('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js');
+  }
+
+  updateLoadingText('Loading OCR engine / OCR 엔진 로딩 중...');
+  setProgress(25);
+
+  const result = await Tesseract.recognize(file, 'eng+kor', {
+    logger: m => {
+      if (m.progress) setProgress(25 + m.progress * 50);
+    }
+  });
+
+  return result.data.text;
+}
+
+// ===== HELPERS =====
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+function readFileAsText(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsText(file);
+  });
+}
+
+function getVendorName(code) {
+  const names = { rhee: 'Rhee Bros', wang: 'Wang', choripdong: 'Choripdong', other: 'Other' };
+  return names[code] || code;
+}
+
+function showLoading(text) {
+  document.getElementById('loading-text').textContent = text || 'Processing...';
+  document.getElementById('loading').classList.add('active');
+}
+function hideLoading() { document.getElementById('loading').classList.remove('active'); }
+function updateLoadingText(text) { document.getElementById('loading-text').textContent = text; }
+function setProgress(pct) { document.getElementById('loading-progress').style.width = pct + '%'; }
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+// ===== EXPORT CSV =====
+function exportCSV() {
+  if (!currentFlags.length) { showToast('No data to export'); return; }
+
+  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
+  for (const flag of currentFlags) {
+    const item = flag.item;
+    csv += [
+      flag.type,
+      '"' + (item.itemNo || '') + '"',
+      '"' + (item.brand || '') + '"',
+      '"' + (item.name || '').replace(/"/g, '""') + '"',
+      '"' + (item.size || '') + '"',
+      item.qty || '',
+      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2),
+      flag.pctChange || ''
+    ].join(',') + '\n';
+  }
+
+  downloadCSV(csv, 'invoice_comparison_' + new Date().toISOString().split('T')[0] + '.csv');
+}
+
+function exportAllHistory() {
+  const allInvoices = [...(HISTORICAL_DATA.rhee || []), ...(HISTORICAL_DATA.wang || []), ...(HISTORICAL_DATA.choripdong || [])];
+  let csv = 'Vendor,Invoice,Date,Item No,Brand,Name,Size,Qty,Unit Price,Total\n';
+
+  for (const inv of allInvoices) {
+    for (const item of inv.items) {
+      csv += [
+        '"' + inv.vendor + '"',
+        '"' + inv.invoice + '"',
+        inv.date,
+        '"' + (item.itemNo || '') + '"',
+        '"' + (item.brand || '') + '"',
+        '"' + (item.name || '').replace(/"/g, '""') + '"',
+        '"' + (item.size || '') + '"',
+        item.qty || '',
+        item.unitPrice || '',
+        item.total || ''
+      ].join(',') + '\n';
+    }
+  }
+  downloadCSV(csv, 'all_invoice_history_' + new Date().toISOString().split('T')[0] + '.csv');
+  showToast('History exported / 기록 내보내기 완료');
+}
+
+function exportAllFlags() {
+  const allPrices = {};
+  const vendors = ['rhee', 'wang', 'choripdong'];
+
+  for (const v of vendors) {
+    const data = HISTORICAL_DATA[v] || [];
+    for (const inv of data) {
+      for (const item of inv.items) {
+        const key = item.itemNo;
+        if (!allPrices[key]) allPrices[key] = { items: [], vendor: inv.vendor };
+        allPrices[key].items.push({ price: item.unitPrice, date: inv.date, name: item.name, brand: item.brand });
+      }
+    }
+  }
+
+  let csv = 'Item No,Brand,Name,Vendor,Min Price,Max Price,Last Price,Price Range %\n';
+  for (const [key, data] of Object.entries(allPrices)) {
+    if (data.items.length < 2) continue;
+    const prices = data.items.map(i => i.price).filter(p => p > 0);
+    if (prices.length < 2) continue;
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    const last = prices[prices.length - 1];
+    const range = ((max - min) / min * 100).toFixed(1);
+    if (parseFloat(range) < 1) continue;
+
+    const lastItem = data.items[data.items.length - 1];
+    csv += [key, '"' + (lastItem.brand || '') + '"', '"' + (lastItem.name || '').replace(/"/g, '""') + '"',
+      '"' + data.vendor + '"', min.toFixed(2), max.toFixed(2), last.toFixed(2), range].join(',') + '\n';
+  }
+  downloadCSV(csv, 'price_flags_' + new Date().toISOString().split('T')[0] + '.csv');
+  showToast('Flags exported / 알림 내보내기 완료');
+}
+
+function exportPriceTracker() {
+  const allPrices = {};
+  const vendors = ['rhee', 'wang', 'choripdong'];
+
+  for (const v of vendors) {
+    const data = HISTORICAL_DATA[v] || [];
+    for (const inv of data) {
+      for (const item of inv.items) {
+        const key = item.itemNo + '|' + (item.name || '');
+        if (!allPrices[key]) allPrices[key] = [];
+        allPrices[key].push({ price: item.unitPrice, date: inv.date, vendor: inv.vendor, brand: item.brand });
+      }
+    }
+  }
+
+  let csv = 'Item No,Name,Brand,Vendor,Date,Price\n';
+  for (const [key, records] of Object.entries(allPrices)) {
+    const [itemNo, name] = key.split('|');
+    for (const r of records) {
+      csv += ['"' + itemNo + '"', '"' + (name || '').replace(/"/g, '""') + '"', '"' + (r.brand || '') + '"',
+        '"' + r.vendor + '"', r.date, r.price.toFixed(2)].join(',') + '\n';
+    }
+  }
+  downloadCSV(csv, 'price_tracker_' + new Date().toISOString().split('T')[0] + '.csv');
+  showToast('Price tracker exported / 가격 추적 내보내기 완료');
+}
+
+function downloadCSV(csv, filename) {
+  const BOM = '\uFEFF';
+  const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ===== HISTORY =====
+async function renderHistory(filter) {
+  const list = document.getElementById('history-list');
+
+  // Combine seed data and IndexedDB data
+  let allInvoices = [];
+
+  // Seed data
+  for (const v of ['rhee', 'wang', 'choripdong']) {
+    const data = HISTORICAL_DATA[v] || [];
+    for (const inv of data) {
+      allInvoices.push({
+        vendor: v,
+        vendorName: inv.vendor,
+        invoice: inv.invoice,
+        date: inv.date,
+        total: inv.total,
+        itemCount: inv.items.length,
+        customer: inv.customer
+      });
+    }
+  }
+
+  // IndexedDB data
+  if (DB) {
+    try {
+      const dbInvoices = await dbGetAll('invoices');
+      for (const inv of dbInvoices) {
+        allInvoices.push({
+          vendor: inv.vendor,
+          vendorName: inv.vendorName,
+          invoice: 'Uploaded',
+          date: inv.date,
+          total: inv.items.reduce((sum, i) => sum + (i.total || 0), 0),
+          itemCount: inv.itemCount,
+          customer: 'Uploaded Invoice'
+        });
+      }
+    } catch(e) {}
+  }
+
+  // Sort by date descending
+  allInvoices.sort((a, b) => b.date.localeCompare(a.date));
+
+  // Filter
+  if (filter && filter !== 'all') {
+    allInvoices = allInvoices.filter(inv => inv.vendor === filter);
+  }
+
+  if (allInvoices.length === 0) {
+    list.innerHTML = '<div class="empty-state"><p>No invoices found</p></div>';
+    return;
+  }
+
+  list.innerHTML = allInvoices.map(inv => `
+    <div class="history-item">
+      <div class="history-info">
+        <h4>${inv.vendorName} - ${inv.invoice}</h4>
+        <p>${inv.customer || ''} | ${inv.itemCount} items</p>
+      </div>
+      <div class="history-meta">
+        <div class="amount">${inv.total > 0 ? '$' + inv.total.toLocaleString('en-US', {minimumFractionDigits: 2}) : '--'}</div>
+        <div class="date">${inv.date}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterHistory(filter, btn) {
+  document.querySelectorAll('#page-history .tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderHistory(filter);
+}
+
+// ===== ALL FLAGS =====
+function renderAllFlags() {
+  const allPrices = {};
+
+  for (const v of ['rhee', 'wang', 'choripdong']) {
+    const data = HISTORICAL_DATA[v] || [];
+    for (const inv of data) {
+      for (const item of inv.items) {
+        const key = item.itemNo;
+        if (!allPrices[key]) allPrices[key] = { records: [], vendor: inv.vendor, name: item.name, brand: item.brand };
+        allPrices[key].records.push({ price: item.unitPrice, date: inv.date });
+      }
+    }
+  }
+
+  const tbody = document.getElementById('flags-body');
+  tbody.innerHTML = '';
+
+  const flaggedItems = [];
+  for (const [key, data] of Object.entries(allPrices)) {
+    if (data.records.length < 2) continue;
+    const prices = data.records.map(r => r.price).filter(p => p > 0);
+    if (prices.length < 2) continue;
+    const oldPrice = prices[0];
+    const newPrice = prices[prices.length - 1];
+    const pct = ((newPrice - oldPrice) / oldPrice * 100);
+    if (Math.abs(pct) < 1) continue;
+
+    flaggedItems.push({ key, ...data, oldPrice, newPrice, pct });
+  }
+
+  flaggedItems.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
+
+  for (const item of flaggedItems.slice(0, 100)) {
+    const tr = document.createElement('tr');
+    tr.className = item.pct > 0 ? 'price-up' : 'price-down';
+    tr.innerHTML = `
+      <td><strong>${item.key}</strong><br><span style="font-size:0.65rem;color:#666">${item.name || ''}</span></td>
+      <td style="font-size:0.7rem">${item.vendor}</td>
+      <td>$${item.oldPrice.toFixed(2)}</td>
+      <td>$${item.newPrice.toFixed(2)}</td>
+      <td style="font-weight:700;color:${item.pct>0?'#F44336':'#4CAF50'}">${item.pct>0?'+':''}${item.pct.toFixed(1)}%</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  if (flaggedItems.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:20px;color:#999">No significant price changes detected</td></tr>';
+  }
+}
+
+// ===== SAVE COMPARISON =====
+async function saveComparison() {
+  if (!currentFlags.length) { showToast('No comparison to save'); return; }
+  if (DB) {
+    await dbAdd('comparisons', {
+      flags: currentFlags,
+      timestamp: Date.now(),
+      date: new Date().toISOString().split('T')[0]
+    });
+    showToast('Comparison saved / 비교 결과 저장됨');
+  } else {
+    showToast('Database not available');
+  }
+}
+
+// ===== DASHBOARD =====
+function updateDashboard() {
+  let totalInvoices = 0;
+  let totalItems = 0;
+
+  for (const v of ['rhee', 'wang', 'choripdong']) {
+    const data = HISTORICAL_DATA[v] || [];
+    totalInvoices += data.length;
+    for (const inv of data) {
+      totalItems += inv.items.length;
+    }
+  }
+
+  document.getElementById('stat-invoices').textContent = totalInvoices;
+  document.getElementById('stat-items').textContent = totalItems;
+
+  // Count flags from price changes
+  const allPrices = {};
+  for (const v of ['rhee']) {
+    const data = HISTORICAL_DATA[v] || [];
+    for (const inv of data) {
+      for (const item of inv.items) {
+        const key = item.itemNo;
+        if (!allPrices[key]) allPrices[key] = [];
+        allPrices[key].push(item.unitPrice);
+      }
+    }
+  }
+
+  let flagCount = 0;
+  for (const prices of Object.values(allPrices)) {
+    if (prices.length >= 2) {
+      const first = prices[0];
+      const last = prices[prices.length - 1];
+      if (Math.abs((last - first) / first) > 0.01) flagCount++;
+    }
+  }
+  document.getElementById('stat-flags').textContent = flagCount;
+}
+
+// ===== INIT =====
+async function init() {
+  // Set today's date
+  document.getElementById('invoice-date').value = new Date().toISOString().split('T')[0];
+
+  // Open IndexedDB
+  try {
+    await openDB();
+  } catch(e) {
+    console.warn('IndexedDB not available:', e);
+  }
+
+  // Update dashboard
+  updateDashboard();
+
+  // Register service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(e => console.log('SW registration failed:', e));
+  }
+}
+
+init();
+</script>
+</body>
+</html>
