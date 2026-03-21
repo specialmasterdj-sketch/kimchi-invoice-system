@@ -235,16 +235,29 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 
   <div class="branch-grid" id="branchGrid"></div>
 
-  <div class="card" style="margin-top:10px; border-left: 4px solid #FF6F00;">
-    <div class="card-title" style="color:#FF6F00">Cross-Vendor Price Comparison</div>
-    <div class="card-subtitle">Same product, different vendors - who has the best price?</div>
-    <button class="btn" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()">Compare Vendors</button>
+  <!-- Upload New Invoice -->
+  <div class="card" style="margin-top:14px;">
+    <div class="card-title">📄 Upload New Invoice</div>
+    <div class="card-subtitle">Upload PDF/Excel invoice to compare against historical data</div>
+    <button class="btn btn-primary" onclick="showPage('page-upload')">Upload & Compare</button>
   </div>
 
-  <div class="card" style="margin-top:10px;">
-    <div class="card-title">Upload New Invoice</div>
-    <div class="card-subtitle">Compare against historical data</div>
-    <button class="btn btn-primary" onclick="showPage('page-upload')">Upload & Compare</button>
+  <!-- Scan Physical Invoice - CAMERA -->
+  <div class="card" style="margin-top:10px; border-left: 4px solid #00897B;">
+    <div class="card-title" style="color:#00897B">📸 Scan Physical Invoice</div>
+    <div class="card-subtitle">Take a photo of a paper invoice to compare prices instantly</div>
+    <button class="btn" style="background:#00897B;color:#fff;" onclick="openScanInvoice()">Scan with Camera</button>
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleCameraCapture(this)">
+  </div>
+
+  <!-- Advanced Tools (bottom, less prominent) -->
+  <div style="margin-top:30px; padding-top:14px; border-top:1px solid #e0e0e0;">
+    <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;">Advanced Tools</div>
+    <div class="card" style="border-left: 4px solid #FF6F00; opacity:0.8;">
+      <div class="card-title" style="color:#FF6F00; font-size:0.8rem;">Cross-Vendor Price Comparison</div>
+      <div class="card-subtitle">Same product, different vendors - who has the best price?</div>
+      <button class="btn btn-sm" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()">Compare Vendors</button>
+    </div>
   </div>
 </div>
 
@@ -481,6 +494,14 @@ function openBranch(branchId) {
   const allItems = invoices.reduce((a, i) => a + i.itemCount, 0);
   const totalSpent = invoices.reduce((a, i) => a + i.total, 0);
 
+  // Group invoices by vendor FIRST (before stats use it)
+  const vendorGroups = {};
+  for (const inv of invoices) {
+    const v = inv.vendor || 'Other';
+    if (!vendorGroups[v]) vendorGroups[v] = [];
+    vendorGroups[v].push(inv);
+  }
+
   // Stats
   document.getElementById('branchStats').innerHTML = `
     <div class="stat-card"><div class="stat-number blue">${invoices.length}</div><div class="stat-label">Invoices</div></div>
@@ -488,14 +509,6 @@ function openBranch(branchId) {
     <div class="stat-card"><div class="stat-number green">$${(totalSpent/1000).toFixed(0)}K</div><div class="stat-label">Total</div></div>
     <div class="stat-card"><div class="stat-number orange">${Object.keys(vendorGroups).length}</div><div class="stat-label">Vendors</div></div>
   `;
-
-  // Group invoices by vendor
-  const vendorGroups = {};
-  for (const inv of invoices) {
-    const v = inv.vendor || 'Other';
-    if (!vendorGroups[v]) vendorGroups[v] = [];
-    vendorGroups[v].push(inv);
-  }
 
   let content = '';
   const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Other': '#555' };
@@ -1079,6 +1092,57 @@ showPage = function(pageId) {
   if (pageId === 'page-cross') renderCrossBranch();
   if (pageId === 'page-crossvendor') renderCrossVendor();
 };
+
+// ===== SCAN PHYSICAL INVOICE (CAMERA) =====
+function openScanInvoice() {
+  document.getElementById('cameraInput').click();
+}
+
+function handleCameraCapture(input) {
+  if (!input.files || !input.files[0]) return;
+  const file = input.files[0];
+
+  // Show loading
+  const loadingDiv = document.createElement('div');
+  loadingDiv.id = 'scanLoading';
+  loadingDiv.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;';
+  loadingDiv.innerHTML = '<div style="font-size:2rem;margin-bottom:10px;">📸</div><div style="font-size:1.1rem;font-weight:700;">Scanning Invoice...</div><div style="font-size:0.8rem;margin-top:8px;color:#aaa;">OCR processing may take 30-60 seconds</div><div style="margin-top:15px;width:60px;height:60px;border:4px solid #555;border-top:4px solid #fff;border-radius:50%;animation:spin 1s linear infinite;"></div>';
+  document.body.appendChild(loadingDiv);
+
+  // Use Tesseract.js for OCR
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js';
+  script.onload = function() {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      Tesseract.recognize(e.target.result, 'eng', {
+        logger: m => {
+          if (m.status === 'recognizing text') {
+            const pct = Math.round(m.progress * 100);
+            const ld = document.getElementById('scanLoading');
+            if (ld) ld.querySelector('div:nth-child(3)').textContent = 'Processing: ' + pct + '%';
+          }
+        }
+      }).then(({ data: { text } }) => {
+        const ld = document.getElementById('scanLoading');
+        if (ld) ld.remove();
+
+        // Pre-fill the upload page with extracted text
+        showPage('page-upload');
+        const ta = document.getElementById('invoiceText');
+        if (ta) ta.value = text;
+        showToast('Invoice scanned! Review the text and click Compare.', 'success');
+      }).catch(err => {
+        const ld = document.getElementById('scanLoading');
+        if (ld) ld.remove();
+        showToast('Scan failed: ' + err.message, 'error');
+      });
+    };
+    reader.readAsDataURL(file);
+  };
+  document.head.appendChild(script);
+  input.value = '';
+}
 
 // ===== CROSS-VENDOR COMPARISON =====
 // Compare same product name across different vendors
