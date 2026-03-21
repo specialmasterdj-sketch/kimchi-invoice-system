@@ -428,7 +428,6 @@ function initApp() {
     const color = branchColors[id] || '#666';
     html += `<div class="branch-card" style="border-left-color:${color}" onclick="openBranch('${id}')">
       <div class="branch-name">${br.name}</div>
-      <div class="branch-code">${br.code}</div>
       <div class="branch-stats">${brInvoices.length} invoices / ${brItems} items<br>Latest: ${latestDate}</div>
     </div>`;
   }
@@ -487,7 +486,7 @@ function openBranch(branchId) {
     <div class="stat-card"><div class="stat-number blue">${invoices.length}</div><div class="stat-label">Invoices</div></div>
     <div class="stat-card"><div class="stat-number">${allItems}</div><div class="stat-label">Items</div></div>
     <div class="stat-card"><div class="stat-number green">$${(totalSpent/1000).toFixed(0)}K</div><div class="stat-label">Total</div></div>
-    <div class="stat-card"><div class="stat-number orange">${br.code}</div><div class="stat-label">Code</div></div>
+    <div class="stat-card"><div class="stat-number orange">${Object.keys(vendorGroups).length}</div><div class="stat-label">Vendors</div></div>
   `;
 
   // Group invoices by vendor
