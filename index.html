@@ -473,13 +473,28 @@ function openBranch(branchId) {
     <div class="stat-card"><div class="stat-number orange">${br.code}</div><div class="stat-label">Code</div></div>
   `;
 
-  // Invoice list
-  let content = '<div class="card"><div class="card-title">Invoice History / 주문 내역</div>';
-  if (invoices.length === 0) {
-    content += '<div style="text-align:center;padding:20px;color:#999;">No invoices with item data</div>';
-  } else {
-    invoices.sort((a, b) => b.date.localeCompare(a.date));
-    for (const inv of invoices) {
+  // Group invoices by vendor
+  const vendorGroups = {};
+  for (const inv of invoices) {
+    const v = inv.vendor || 'Other';
+    if (!vendorGroups[v]) vendorGroups[v] = [];
+    vendorGroups[v].push(inv);
+  }
+
+  let content = '';
+  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Other': '#555' };
+
+  // Render each vendor section separately
+  for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
+    const vColor = vendorColors[vendorName] || '#555';
+    const vItems = vInvoices.reduce((a, i) => a + i.itemCount, 0);
+    const vTotal = vInvoices.reduce((a, i) => a + i.total, 0);
+
+    content += `<div class="card" style="border-left: 4px solid ${vColor};">`;
+    content += `<div class="card-title" style="color:${vColor}">${vendorName} (${vInvoices.length} invoices / ${vItems} items / $${(vTotal/1000).toFixed(1)}K)</div>`;
+
+    vInvoices.sort((a, b) => b.date.localeCompare(a.date));
+    for (const inv of vInvoices) {
       const hasItems = inv.itemCount > 0;
       content += `<div class="history-item" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
         <div class="history-info">
@@ -492,47 +507,51 @@ function openBranch(branchId) {
         </div>
       </div>`;
     }
-  }
-  content += '</div>';
+    content += '</div>';
 
-  // Price trends for this branch - find items that appear in multiple invoices
-  // IMPORTANT: Skip promo/credit lines ($2 or less) and deduplicate same item in same invoice (keep highest price)
-  const itemPriceMap = {};
-  for (const inv of invoices) {
-    const bestPrices = {};
-    for (const item of inv.items) {
-      if (item.unitPrice <= 2) continue; // Skip promo/credit lines
-      if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
-        bestPrices[item.itemNo] = item;
+    // Price trends PER VENDOR - only compare same vendor's items
+    const itemPriceMap = {};
+    for (const inv of vInvoices) {
+      const bestPrices = {};
+      for (const item of inv.items) {
+        if (item.unitPrice <= 2) continue;
+        if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
+          bestPrices[item.itemNo] = item;
+        }
+      }
+      for (const [itemNo, item] of Object.entries(bestPrices)) {
+        if (!itemPriceMap[itemNo]) itemPriceMap[itemNo] = [];
+        itemPriceMap[itemNo].push({ date: inv.date, price: item.unitPrice, brand: item.brand, desc: item.description });
       }
     }
-    for (const [itemNo, item] of Object.entries(bestPrices)) {
-      if (!itemPriceMap[itemNo]) itemPriceMap[itemNo] = [];
-      itemPriceMap[itemNo].push({ date: inv.date, price: item.unitPrice, brand: item.brand, desc: item.description });
+    const changedItems = Object.entries(itemPriceMap)
+      .filter(([_, entries]) => entries.length > 1)
+      .map(([itemNo, entries]) => {
+        entries.sort((a, b) => a.date.localeCompare(b.date));
+        const oldP = entries[0].price;
+        const newP = entries[entries.length - 1].price;
+        const diff = newP - oldP;
+        const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
+        return { itemNo, brand: entries[0].brand, desc: entries[0].desc, oldPrice: oldP, newPrice: newP, diff, pct };
+      })
+      .filter(i => Math.abs(i.pct) > 1)
+      .sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
+
+    if (changedItems.length > 0) {
+      content += `<div class="card" style="border-left: 4px solid ${vColor};">`;
+      content += `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes</div>`;
+      content += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
+      for (const item of changedItems.slice(0, 30)) {
+        const cls = item.diff > 0 ? 'price-up' : 'price-down';
+        const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
+        content += `<tr class="${cls}"><td class="item-desc">${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
+      }
+      content += '</table></div></div>';
     }
   }
-  const changedItems = Object.entries(itemPriceMap)
-    .filter(([_, entries]) => entries.length > 1)
-    .map(([itemNo, entries]) => {
-      entries.sort((a, b) => a.date.localeCompare(b.date));
-      const oldP = entries[0].price;
-      const newP = entries[entries.length - 1].price;
-      const diff = newP - oldP;
-      const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
-      return { itemNo, brand: entries[0].brand, desc: entries[0].desc, oldPrice: oldP, newPrice: newP, diff, pct };
-    })
-    .filter(i => Math.abs(i.pct) > 1)
-    .sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
 
-  if (changedItems.length > 0) {
-    content += '<div class="card"><div class="card-title">Price Changes Over Time / 가격 변동 추이</div>';
-    content += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
-    for (const item of changedItems.slice(0, 20)) {
-      const cls = item.diff > 0 ? 'price-up' : 'price-down';
-      const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
-      content += `<tr class="${cls}"><td class="item-desc">${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
-    }
-    content += '</table></div></div>';
+  if (Object.keys(vendorGroups).length === 0) {
+    content = '<div class="card"><div style="text-align:center;padding:20px;color:#999;">No invoices</div></div>';
   }
 
   document.getElementById('branchContent').innerHTML = content;
@@ -748,9 +767,9 @@ function runComparison() {
       comparisonInvoice = newInvoice;
       updateProgress(30);
 
-      // Find historical prices for same branch
+      // Find historical prices for same branch AND same vendor only
       const historicalInvoices = SEED_DATA.invoices.filter(i =>
-        i.branchId === newInvoice.branchId && i.items.length > 0
+        i.branchId === newInvoice.branchId && i.vendor === newInvoice.vendor && i.items.length > 0
       ).sort((a, b) => b.date.localeCompare(a.date));
 
       // Build price history map: itemNo -> [{date, price, invoice}]
