@@ -1,6 +1,6 @@
 // Kimchi Mart Invoice System - Seed Data
-// Total: 168 invoices, 5327 items
-// Vendors: {"Rhee Bros": 99, "Choripdong": 69}
+// Total: 208 invoices, 7731 items
+// Vendors: {"Rhee Bros": 99, "Choripdong": 69, "Wang": 40}
 
 const SEED_DATA = {
  "branches": {
@@ -55488,6 +55488,24565 @@ const SEED_DATA = {
    ],
    "itemCount": 14,
    "source": "Sales Invoice PSI-0171177.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038031-IN",
+   "vendor": "Wang",
+   "date": "2025-11-10",
+   "dateDisplay": "11/10/2025",
+   "customer": "",
+   "total": 11738.5,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "07623",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 12/1.5L",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 38.0,
+     "eachPrice": 3.17,
+     "totalPrice": 114.0
+    },
+    {
+     "itemNo": "33251",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 4/6/17.50F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "83358",
+     "brand": "WANG",
+     "description": "EVERTDAZE곰부차,레몬 생강24/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "83357",
+     "brand": "WANG",
+     "description": "EVERYDAZE곰부차,파인애플패션프",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "10161",
+     "brand": "WANG",
+     "description": "수라상 인삼드링크 5/10/4.05FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "32265",
+     "brand": "WANG",
+     "description": "수라상 홍삼뿌리드링크 5/10/4.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "00556",
+     "brand": "WANG",
+     "description": "다정 인삼생강차 15/20.45OZ(580",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 5.99,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "16305",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 15/20.46OZ(580",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "04705",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 15/20.46",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "14955",
+     "brand": "WANG",
+     "description": "녹차원 유기농녹차가루PET 20/1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 6.6,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "16198",
+     "brand": "WANG",
+     "description": "담터 호두아몬드율무차 20/15T/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.0,
+     "eachPrice": 5.3,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "28912",
+     "brand": "WANG",
+     "description": "맥심 아라비카 커피믹스 8/100/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 20.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 중력분 6/5.5LB(2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "06421",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(30장) 50/2.53",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 325.0,
+     "eachPrice": 6.5,
+     "totalPrice": 325.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "32721",
+     "brand": "WANG",
+     "description": "왕 생돌김구이, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김, 8+8팩 6/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "00815",
+     "brand": "WANG",
+     "description": "왕 우동국수 24/16oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "27495",
+     "brand": "WANG",
+     "description": "왕 불지않는 잔치진당면20/1.5lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "15210",
+     "brand": "WANG",
+     "description": "왕 가쓰오우동 용기 6PACK 6/7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "15249",
+     "brand": "WANG",
+     "description": "왕 삼선짬뽕용기 6PACK 6/7.93OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "15250",
+     "brand": "WANG",
+     "description": "왕 삼선짜장 용기 6PACK/7.97OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "19246",
+     "brand": "WANG",
+     "description": "왕 로제 떡볶이 10/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "04901",
+     "brand": "WANG",
+     "description": "왕 생우동 w/Soup(3P) 12/3/7.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "21936",
+     "brand": "WANG",
+     "description": "왕 생우동-김치맛w/soup(3P) 12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "80435",
+     "brand": "WANG",
+     "description": "농심R 순라면(멀티) 8/4/112g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.4,
+     "eachPrice": 3.8,
+     "totalPrice": 30.4
+    },
+    {
+     "itemNo": "02301",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 봉지 6/4/6.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "81253",
+     "brand": "WANG",
+     "description": "농심R 짜파게티(멀티) 4/4/127g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 16.8,
+     "eachPrice": 4.2,
+     "totalPrice": 33.6
+    },
+    {
+     "itemNo": "80423",
+     "brand": "WANG",
+     "description": "농심R 신사발면 12/86g",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "80430",
+     "brand": "WANG",
+     "description": "농심R 튀김우동(컵) 6/75g",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "83188",
+     "brand": "WANG",
+     "description": "농심R 생생우동-오리지널 10/253",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 21.0,
+     "eachPrice": 2.1,
+     "totalPrice": 21.0
+    },
+    {
+     "itemNo": "82433",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-레드 6/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 12.0
+    },
+    {
+     "itemNo": "80268",
+     "brand": "WANG",
+     "description": "농심R 신건면(멀티) 8/4/3.42oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 7.0,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83352",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-핫&스파이시",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "82103",
+     "brand": "WANG",
+     "description": "농심R 새우사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "33864",
+     "brand": "WANG",
+     "description": "삼양R 까르보불닭볶음면(멀티) 8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 40.0,
+     "eachPrice": 5.0,
+     "totalPrice": 200.0
+    },
+    {
+     "itemNo": "16027",
+     "brand": "WANG",
+     "description": "왕 베개팝스낵 10/10.58 oz(300",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80047",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(대) 6/6.35oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "05147",
+     "brand": "WANG",
+     "description": "일광 진한생강캔디 10/8.81OZ(25",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "06266",
+     "brand": "WANG",
+     "description": "일광 유가 10/8.81OZ(250G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "19495",
+     "brand": "WANG",
+     "description": "일광 호박젤리 10/9.87OZ(280G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "04544",
+     "brand": "WANG",
+     "description": "일광 생강젤리 10/9.87OZ(280G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "10758",
+     "brand": "WANG",
+     "description": "왕 갈비양념 15/16.93 oz (480 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 2.88,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "10756",
+     "brand": "WANG",
+     "description": "왕 불고기양념 15/16.93 oz(480",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 2.88,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "10757",
+     "brand": "WANG",
+     "description": "왕 불고기양념 12/29.63 oz (840",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "01122",
+     "brand": "WANG",
+     "description": "수라상 양념치킨소스 12/12.69 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "34859",
+     "brand": "WANG",
+     "description": "스키나 돈까스소스12/8.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "82827",
+     "brand": "WANG",
+     "description": "LKK SHRIMP SAUCE 12/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.6,
+     "eachPrice": 5.8,
+     "totalPrice": 69.6
+    },
+    {
+     "itemNo": "08014",
+     "brand": "WANG",
+     "description": "왕 물연근 24/12 oz.(340 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "34320",
+     "brand": "WANG",
+     "description": "싱그람 치킨무 30/0.44 Lb (200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 157.2
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 262.8
+    },
+    {
+     "itemNo": "33190",
+     "brand": "WANG",
+     "description": "부산어묵 10/2.03 LBS",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 56.6,
+     "eachPrice": 5.66,
+     "totalPrice": 283.0
+    },
+    {
+     "itemNo": "17194",
+     "brand": "WANG",
+     "description": "왕 손질한꽃게(11-15) 12/1.5 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 143.9,
+     "eachPrice": 11.99,
+     "totalPrice": 287.8
+    },
+    {
+     "itemNo": "16852",
+     "brand": "WANG",
+     "description": "명품도라야끼 통단팥 15/10.58OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "00040",
+     "brand": "WANG",
+     "description": "수라상 부추교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "02746",
+     "brand": "WANG",
+     "description": "수라상 갈비왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "12512",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 칠리 12/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "16064",
+     "brand": "WANG",
+     "description": "빙그레 메로나-멜론(8입) 8/8/2.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 65.6
+    },
+    {
+     "itemNo": "09336",
+     "brand": "WANG",
+     "description": "왕 유부초밥 2인분 48/5.64 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 2.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "14268",
+     "brand": "WANG",
+     "description": "모란각 물냉면, 3인분 6/4.3LB(1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.6,
+     "eachPrice": 11.6,
+     "totalPrice": 69.6
+    },
+    {
+     "itemNo": "19446",
+     "brand": "WANG",
+     "description": "모란각 알뜰평양냉면, 3인분 6/3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 6.67,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "14266",
+     "brand": "WANG",
+     "description": "왕 생중화면 10/2.2 Lb (1 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "82353",
+     "brand": "WANG",
+     "description": "LKK SRIRACHA MAYO 12/15oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    }
+   ],
+   "itemCount": 106,
+   "source": "KIMCHI CORAL SPRINGS INV# 0038031.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038849-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0.0,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "80787",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 딸기 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80788",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 메론5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80790",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 복숭아 5/6/250 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "80786",
+     "brand": "WANG",
+     "description": "롯데D 밀키스CAN 5/6/250 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "80791",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 바나나 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81339",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 복숭아 4/10/5.07",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81342",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 더블베리4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82730",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 리치 4/10/5.07fz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "10161",
+     "brand": "WANG",
+     "description": "수라상 인삼드링크 5/10/4.05FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "83249",
+     "brand": "WANG",
+     "description": "동원 김치찌개용 참치 12/4/150g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.8,
+     "eachPrice": 7.4,
+     "totalPrice": 88.8
+    },
+    {
+     "itemNo": "16219",
+     "brand": "WANG",
+     "description": "담터 발아현미율무차 12/15T/0.5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "40832",
+     "brand": "WANG",
+     "description": "스키나 건강잡곡 16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 4.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "14322",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 양념용 24/7.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 중력분 6/5.5LB(2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "11672",
+     "brand": "WANG",
+     "description": "수라상 다시마튀각 20/1.8 oz (5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.0,
+     "eachPrice": 2.45,
+     "totalPrice": 49.0
+    },
+    {
+     "itemNo": "04436",
+     "brand": "WANG",
+     "description": "왕 막국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "04919",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 12/3 Lb (1.36",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "05893",
+     "brand": "WANG",
+     "description": "왕 알뜰잡채당면 24/12oz(340g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "15210",
+     "brand": "WANG",
+     "description": "왕 가쓰오우동 용기 6PACK 6/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "15250",
+     "brand": "WANG",
+     "description": "왕 삼선짜장 용기 6PACK/7.97OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "15247",
+     "brand": "WANG",
+     "description": "왕 유부우동용기 6PACK 6/7.76OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "29795",
+     "brand": "WANG",
+     "description": "왕 불닭맛볶음우동 용기 6PACK/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "02302",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 용기 16/5.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "04901",
+     "brand": "WANG",
+     "description": "왕 생우동 w/Soup(3P) 12/3/7.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 16.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80447",
+     "brand": "WANG",
+     "description": "농심R 소고기사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80432",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵) 6/75g",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 26.4
+    },
+    {
+     "itemNo": "33858",
+     "brand": "WANG",
+     "description": "삼양R 불닭볶음면(멀티) 8/5/140",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 6.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "33864",
+     "brand": "WANG",
+     "description": "삼양R 까르보불닭볶음면(멀티) 8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 48.0,
+     "eachPrice": 6.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "81529",
+     "brand": "WANG",
+     "description": "삼양R 하바네로불닭볶음면(멀티)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "83012",
+     "brand": "WANG",
+     "description": "삼양R 양념치킨불닭볶음면(큰컵)",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 14.1,
+     "eachPrice": 2.35,
+     "totalPrice": 84.6
+    },
+    {
+     "itemNo": "80268",
+     "brand": "WANG",
+     "description": "농심R 신건면(멀티) 8/4/3.42oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 7.0,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "20585",
+     "brand": "WANG",
+     "description": "수라상 죽마고우롤전병, 검은참?",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "16027",
+     "brand": "WANG",
+     "description": "왕 베개팝스낵 10/10.58 oz(300",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "00008",
+     "brand": "WANG",
+     "description": "수라상 쌀선과 10/10.58 oz (300",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 3.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 1.5,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "22703",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 말차맛 24/7.40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "83354",
+     "brand": "WANG",
+     "description": "농심S 와사비새우깡(소) 20/75g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "06267",
+     "brand": "WANG",
+     "description": "일광 호박엿 캔디 10/250g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "04544",
+     "brand": "WANG",
+     "description": "일광 생강젤리 10/9.87OZ(280G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "06265",
+     "brand": "WANG",
+     "description": "일광 맛있는 땅콩캬라멜 10/8.81",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "10833",
+     "brand": "WANG",
+     "description": "왕 한식콩된장 20/500 g (1.1 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 2.65,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "20706",
+     "brand": "WANG",
+     "description": "수라상 김치 핫소스 15/7.78 flo",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "02524",
+     "brand": "WANG",
+     "description": "수라상 떡볶이소스 15/16.93 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "14628",
+     "brand": "WANG",
+     "description": "몬 월남쌈소스12/9.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "15335",
+     "brand": "WANG",
+     "description": "몬 피넛월남쌈소스 12/8.1oz (23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "16322",
+     "brand": "WANG",
+     "description": "왕 마파두부소스 Hot 24/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "82801",
+     "brand": "WANG",
+     "description": "LKK SOUP FOR SCHN 2/6/7oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.0,
+     "eachPrice": 15.5,
+     "totalPrice": 31.0
+    },
+    {
+     "itemNo": "03138",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET(KR) 1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 157.2
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 262.8
+    },
+    {
+     "itemNo": "08591",
+     "brand": "WANG",
+     "description": "왕 생우동짜장 10/2.2 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "80585",
+     "brand": "WANG",
+     "description": "서울순대(냉동) 12/24oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 12.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "17827",
+     "brand": "WANG",
+     "description": "왕 고갈비 24/10 oz.(283 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "33128",
+     "brand": "WANG",
+     "description": "왕) 통통굴비3 PCS 12/1.43lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 118.8,
+     "eachPrice": 9.9,
+     "totalPrice": 118.8
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "14619",
+     "brand": "WANG",
+     "description": "수라상 춘하추동 밀면 6/3.52 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 9.2,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "14267",
+     "brand": "WANG",
+     "description": "모란각 비빔냉면, 3인분 6/2.5LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.6,
+     "eachPrice": 11.6,
+     "totalPrice": 69.6
+    },
+    {
+     "itemNo": "17681",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-팥 6/4/5.1 fl",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "80782",
+     "brand": "WANG",
+     "description": "롯데빙과 찰옥수수바 멀티6/5/14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 44.0,
+     "eachPrice": 7.33,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "07745",
+     "brand": "WANG",
+     "description": "SUNLIT 야채김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    }
+   ],
+   "itemCount": 86,
+   "source": "KIMCHI CORAL SPRINGS INV# 0038849.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038033-IN",
+   "vendor": "Wang",
+   "date": "2025-11-10",
+   "dateDisplay": "11/10/2025",
+   "customer": "",
+   "total": 5714.32,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz(227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08271",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/8 oz (22",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "12730",
+     "brand": "WANG",
+     "description": "수라상 부침가루 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "82615",
+     "brand": "WANG",
+     "description": "삼양R 탱글청크토마토파스타(컵)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "15250",
+     "brand": "WANG",
+     "description": "왕 삼선짜장 용기 6PACK/7.97OZ(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 156.0
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "31596",
+     "brand": "WANG",
+     "description": "왕 불고기 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "00008",
+     "brand": "WANG",
+     "description": "수라상 쌀선과 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "22734",
+     "brand": "WANG",
+     "description": "수라상 매운맛 쌀전병10/8.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06452",
+     "brand": "WANG",
+     "description": "수라상 88서울 국물라볶이 (6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05430",
+     "brand": "WANG",
+     "description": "왕 요고베라 패션후르츠 20/16.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16492",
+     "brand": "WANG",
+     "description": "왕 요고베라 코코넛 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "33251",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 4/6/17.50F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "81821",
+     "brand": "WANG",
+     "description": "해태 갈배 사이다 24/500 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "14955",
+     "brand": "WANG",
+     "description": "녹차원 유기농녹차가루PET 20/1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 6.6,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "19359",
+     "brand": "WANG",
+     "description": "담터 고구마라떼 20/12T/0.63OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 104.0,
+     "eachPrice": 5.2,
+     "totalPrice": 104.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치,PET 6/42.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 200.0
+    },
+    {
+     "itemNo": "08605",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이,봉지",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    }
+   ],
+   "itemCount": 40,
+   "source": "KIMCHI FORT LAUDERDALE INV# 0038033.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038854-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0.0,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "33864",
+     "brand": "WANG",
+     "description": "삼양R 까르보불닭볶음면(멀티) 8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 48.0,
+     "eachPrice": 6.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 16.0,
+     "eachPrice": 4.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "82677",
+     "brand": "WANG",
+     "description": "하우스 자바카레 HOT 6/10/6.52o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 39.0,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "83012",
+     "brand": "WANG",
+     "description": "삼양R 양념치킨불닭볶음면(큰컵)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 14.0,
+     "eachPrice": 2.33,
+     "totalPrice": 70.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83352",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-핫&스파이시",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83375",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-똠얌 12/1",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "15247",
+     "brand": "WANG",
+     "description": "왕 유부우동용기 6PACK 6/7.76OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "23071",
+     "brand": "WANG",
+     "description": "왕 뚝불우동, Value Pack 6/229g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "12544",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 멸치 20/3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "13822",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김40/50장",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 11.0,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "83195",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/59oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "16212",
+     "brand": "WANG",
+     "description": "왕 흰물엿 6/2.45 kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 38.0,
+     "eachPrice": 6.33,
+     "totalPrice": 38.0
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "80048",
+     "brand": "WANG",
+     "description": "농심S 타코칩(대) 6/10.09oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80086",
+     "brand": "WANG",
+     "description": "농심S 타코칩(소) 20/2.11oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80115",
+     "brand": "WANG",
+     "description": "농심S 고구마깡(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80133",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80169",
+     "brand": "WANG",
+     "description": "농심S 꿀꽈배기(대) 6/10.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "82263",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-콰트로치즈 12",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "03226",
+     "brand": "WANG",
+     "description": "유어스 카카오망고스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "03228",
+     "brand": "WANG",
+     "description": "유어스 카카오애플스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "09768",
+     "brand": "WANG",
+     "description": "구겐 코코넛 주스드링크 4/6/9.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "36352",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크 바나나 4/6/9.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "36353",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크 망고 4/6/9.80O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "36355",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크-딸기 4/6/9.80f",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "82485",
+     "brand": "WANG",
+     "description": "해태 큰집 식혜 6/12/238 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 10.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "21410",
+     "brand": "WANG",
+     "description": "왕 볶은우엉차(통) 12/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "24568",
+     "brand": "WANG",
+     "description": "왕 여주차통 12/2.12oz(60g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "00556",
+     "brand": "WANG",
+     "description": "다정 인삼생강차 15/20.45OZ(580",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 5.99,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "03138",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET(KR) 1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "15332",
+     "brand": "WANG",
+     "description": "M신고배8/3pc (12과) 22 Lb (10",
+     "size": "",
+     "qty": 60,
+     "unitPrice": 49.0,
+     "eachPrice": 49.0,
+     "totalPrice": 2940.0
+    }
+   ],
+   "itemCount": 55,
+   "source": "KIMCHI FORT LAUDERDALE INV# 0038854.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038855-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0.0,
+   "branchId": "fort_lauderdale",
+   "items": [],
+   "itemCount": 0,
+   "source": "KIMCHI FORT LAUDERDALE INV# 0038855.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038858-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0.0,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "06253",
+     "brand": "WANG",
+     "description": "수라상 남도 대파김치 12/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "10675",
+     "brand": "WANG",
+     "description": "빙그레 뽕따-소다 4/6/4.4 floz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16067",
+     "brand": "WANG",
+     "description": "빙그레 메로나-망고 8/8/2.4floz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 65.6
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 123.0
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "80775",
+     "brand": "WANG",
+     "description": "롯데빙과 수박바 멀티 6/6/75 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 27.6,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "80782",
+     "brand": "WANG",
+     "description": "롯데빙과 찰옥수수바 멀티6/5/14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 44.0,
+     "eachPrice": 7.33,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "81183",
+     "brand": "WANG",
+     "description": "롯데빙과 티코밀크쵸코6/510g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.3,
+     "eachPrice": 6.55,
+     "totalPrice": 39.3
+    },
+    {
+     "itemNo": "81187",
+     "brand": "WANG",
+     "description": "롯데빙과 티코다크쵸코6/510g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.3,
+     "eachPrice": 6.55,
+     "totalPrice": 39.3
+    },
+    {
+     "itemNo": "81309",
+     "brand": "WANG",
+     "description": "롯데빙과그릭요구르트바블루베리",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "81310",
+     "brand": "WANG",
+     "description": "롯데빙과 그릭요구르트바,딸기6/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "00041",
+     "brand": "WANG",
+     "description": "수라상 김치교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.5,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.5,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "02746",
+     "brand": "WANG",
+     "description": "수라상 갈비왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "02747",
+     "brand": "WANG",
+     "description": "수라상 김치왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09152",
+     "brand": "WANG",
+     "description": "왕 야채만두 50EA 12/23.8OZ(67",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "18242",
+     "brand": "WANG",
+     "description": "수라상 잡채왕만두, 수제, 10EA",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "18243",
+     "brand": "WANG",
+     "description": "수라상 유산슬왕만두, 수제, 10E",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "07745",
+     "brand": "WANG",
+     "description": "SUNLIT 야채김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "07747",
+     "brand": "WANG",
+     "description": "SUNLIT 김치불고기김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 129.6
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "17193",
+     "brand": "WANG",
+     "description": "왕 손질한꽃게(6-10) 12/1.5 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 143.9,
+     "eachPrice": 11.99,
+     "totalPrice": 143.9
+    },
+    {
+     "itemNo": "82102",
+     "brand": "WANG",
+     "description": "Eel 2/11 lbs (9 z)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 250.0,
+     "eachPrice": 125.0,
+     "totalPrice": 1250.0
+    }
+   ],
+   "itemCount": 27,
+   "source": "KIMCHI FORT LAUDERDALE INV# 0038858.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038037-IN",
+   "vendor": "Wang",
+   "date": "2025-11-10",
+   "dateDisplay": "11/10/2025",
+   "customer": "",
+   "total": 11091.9,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40 LBS",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 26.0,
+     "eachPrice": 26.0,
+     "totalPrice": 390.0
+    },
+    {
+     "itemNo": "41283",
+     "brand": "WANG",
+     "description": "왕 한가위쌀,1/15 LBS(6.8KG)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "08270",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/1LB(453g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08272",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/1LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "33864",
+     "brand": "WANG",
+     "description": "삼양R 까르보불닭볶음면(멀티) 8",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 40.0,
+     "eachPrice": 5.0,
+     "totalPrice": 400.0
+    },
+    {
+     "itemNo": "81529",
+     "brand": "WANG",
+     "description": "삼양R 하바네로불닭볶음면(멀티)",
+     "size": "",
+     "qty": 7,
+     "unitPrice": 40.0,
+     "eachPrice": 5.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "80420",
+     "brand": "WANG",
+     "description": "농심R 김치사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80437",
+     "brand": "WANG",
+     "description": "농심R 매운치킨사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80428",
+     "brand": "WANG",
+     "description": "농심R 새우탕(컵) 6/67g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "80432",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵) 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80651",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵)-비건 6/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82819",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-툼바 6/10",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "19081",
+     "brand": "WANG",
+     "description": "수라상 샐러리 당면24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5LB",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "05021",
+     "brand": "WANG",
+     "description": "스키나 생우동 30/7 oz (200 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 0.8,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "15210",
+     "brand": "WANG",
+     "description": "왕 가쓰오우동 용기 6PACK 6/7",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "15211",
+     "brand": "WANG",
+     "description": "왕 해물우동 용기 6PACK 6/6.9",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "15247",
+     "brand": "WANG",
+     "description": "왕 유부우동용기 6PACK 6/7.76OZ",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "15248",
+     "brand": "WANG",
+     "description": "수라상 바지락칼국수용기 6/202g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "15249",
+     "brand": "WANG",
+     "description": "왕 삼선짬뽕용기 6PACK 6/7.93OZ",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "14321",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 김치용 24/8O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "01145",
+     "brand": "WANG",
+     "description": "왕 고운소금 10/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05905",
+     "brand": "WANG",
+     "description": "왕 흰물엿 (White) 12/2.64 Lb (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "16878",
+     "brand": "WANG",
+     "description": "스키나 미린 15/30.4 floz (0.78",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 49.5
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "20706",
+     "brand": "WANG",
+     "description": "수라상 김치 핫소스 15/7.78 flo",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "08059",
+     "brand": "WANG",
+     "description": "농심S 빵부장-초코빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 22.4
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 22.4
+    },
+    {
+     "itemNo": "22734",
+     "brand": "WANG",
+     "description": "수라상 매운맛 쌀전병10/8.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80047",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(대) 6/6.35oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80049",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(대) 6/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80835",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 아몬드 M 9/128",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81178",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 아몬드 B 6/8/3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.4,
+     "eachPrice": 7.07,
+     "totalPrice": 42.4
+    },
+    {
+     "itemNo": "83020",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로화이트쿠키 B 6/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.4,
+     "eachPrice": 7.07,
+     "totalPrice": 42.4
+    },
+    {
+     "itemNo": "17196",
+     "brand": "WANG",
+     "description": "왕 마파두부소스-Mild 24/4.58 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "11347",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 다크로스트",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "15781",
+     "brand": "WANG",
+     "description": "왕 요고베라 망고 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 380.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치,PET 6/42.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "30922",
+     "brand": "WANG",
+     "description": "수라상 신당동 떡볶이떡 20/907g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.6,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08604",
+     "brand": "WANG",
+     "description": "왕 오리지널 국물떡볶이, 봉지 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "08605",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이,봉지",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    }
+   ],
+   "itemCount": 71,
+   "source": "KIMCHI HOLLYWOOD INV# 0038037.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038861-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "40830",
+     "brand": "WANG",
+     "description": "왕 통녹두, 16/2 LBS (907 G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 83.2,
+     "eachPrice": 5.2,
+     "totalPrice": 83.2
+    },
+    {
+     "itemNo": "40837",
+     "brand": "WANG",
+     "description": "수라상 장수콩 15/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.5,
+     "eachPrice": 4.3,
+     "totalPrice": 64.5
+    },
+    {
+     "itemNo": "41238",
+     "brand": "WANG",
+     "description": "왕 붉은팥16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.32,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz(227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "12730",
+     "brand": "WANG",
+     "description": "수라상 부침가루 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "04791",
+     "brand": "WANG",
+     "description": "왕 잔치당면 15/1.5LB(680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "09702",
+     "brand": "WANG",
+     "description": "왕 해물맛우동 12/14.8 oz (420",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "10320",
+     "brand": "WANG",
+     "description": "왕 가쓰오우동 12/14.8 oz (420",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "21936",
+     "brand": "WANG",
+     "description": "왕 생우동-김치맛w/soup(3P) 12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22086",
+     "brand": "WANG",
+     "description": "왕 불닭볶음우동 12/15.58 oz (4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "03975",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(100장) 24/8.5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 446.0,
+     "eachPrice": 18.6,
+     "totalPrice": 446.0
+    },
+    {
+     "itemNo": "04475",
+     "brand": "WANG",
+     "description": "스키나 야끼노리(10장) 50/25g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 3.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "12544",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 멸치 20/3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "14301",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김-녹차 20/2.11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "06126",
+     "brand": "WANG",
+     "description": "왕 유기농 고금도돌각미역 10/12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 113.0,
+     "eachPrice": 11.3,
+     "totalPrice": 113.0
+    },
+    {
+     "itemNo": "00422",
+     "brand": "WANG",
+     "description": "수라상 초고추장 20/12 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 2.65,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "15377",
+     "brand": "WANG",
+     "description": "수라상 매운고추장(병) 12/1.1 L",
+     "size": "",
+     "qty": 0,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 0.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "14322",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 양념용 24/7.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "14137",
+     "brand": "WANG",
+     "description": "수라상 김치절임소금 6/6.6 Lb (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.2,
+     "eachPrice": 13.2,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "20606",
+     "brand": "WANG",
+     "description": "왕 고운소금 6/5 Lb (2.27 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 34.0,
+     "eachPrice": 5.67,
+     "totalPrice": 34.0
+    },
+    {
+     "itemNo": "20608",
+     "brand": "WANG",
+     "description": "왕 굵은소금 6/5 Lb (2.27 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.8,
+     "eachPrice": 11.3,
+     "totalPrice": 67.8
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "04170",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 청양마요맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "80085",
+     "brand": "WANG",
+     "description": "농심S 조청유과(소) 20/2.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80086",
+     "brand": "WANG",
+     "description": "농심S 타코칩(소) 20/2.11oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80111",
+     "brand": "WANG",
+     "description": "농심S 조청유과(대) 10/10.22oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 57.0,
+     "eachPrice": 5.7,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "80133",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80169",
+     "brand": "WANG",
+     "description": "농심S 꿀꽈배기(대) 6/10.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 20.0,
+     "eachPrice": 2.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "83227",
+     "brand": "WANG",
+     "description": "농심S 메론킥(대) 6/180g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "16442",
+     "brand": "WANG",
+     "description": "왕 로제 쫄볶이, 봉지 10/12.5OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "05430",
+     "brand": "WANG",
+     "description": "왕 요고베라 패션후르츠 20/16.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "11348",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 누룽지 4/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "14781",
+     "brand": "WANG",
+     "description": "왕 요고베라 파인애플 12/50.67F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "15781",
+     "brand": "WANG",
+     "description": "왕 요고베라 망고 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16680",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 12/50.67FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "18583",
+     "brand": "WANG",
+     "description": "담터 호두아몬드율무차 8/50T/0.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 133.0,
+     "eachPrice": 16.63,
+     "totalPrice": 133.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "83548",
+     "brand": "WANG",
+     "description": "동원 고추참치150G 원터치48/150",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 120.0,
+     "eachPrice": 2.5,
+     "totalPrice": 360.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 45.8
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "11625",
+     "brand": "WANG",
+     "description": "왕 소세지-새우 24/13.4 oz (380",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "12736",
+     "brand": "WANG",
+     "description": "왕 소세지-야채 24/9.5 oz (270",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "05404",
+     "brand": "WANG",
+     "description": "파이어스톤 부탄가스 7/4/7.76 o",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 23.0,
+     "eachPrice": 3.29,
+     "totalPrice": 230.0
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "23881",
+     "brand": "WANG",
+     "description": "초코모찌파이피넛크림 12/5.29 z",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "23882",
+     "brand": "WANG",
+     "description": "아몬드모찌파이 아몬드초코12/5.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    }
+   ],
+   "itemCount": 59,
+   "source": "KIMCHI HOLLYWOOD INV# 0038861.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038862-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "16045",
+     "brand": "WANG",
+     "description": "수라상 어육비엔나 소세지 24/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 6.67,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "00041",
+     "brand": "WANG",
+     "description": "수라상 김치교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "02747",
+     "brand": "WANG",
+     "description": "수라상 김치왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10350",
+     "brand": "WANG",
+     "description": "왕 새우춘권 10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 7.2,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10851",
+     "brand": "WANG",
+     "description": "왕 오징어춘권 10/1.5 Lb (680 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 6.6,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "11775",
+     "brand": "WANG",
+     "description": "왕 야채춘권10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "35093",
+     "brand": "WANG",
+     "description": "수라상 낙지물방울만두 8/3/0.37",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.2,
+     "eachPrice": 8.65,
+     "totalPrice": 69.2
+    },
+    {
+     "itemNo": "15647",
+     "brand": "WANG",
+     "description": "왕 찹쌀호떡(8P) 12/480 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "03135",
+     "brand": "WANG",
+     "description": "왕 체다모짜&소세지 반반핫도그",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "34993",
+     "brand": "WANG",
+     "description": "왕 모짜렐라&소세지 반반핫도그",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "14268",
+     "brand": "WANG",
+     "description": "모란각 물냉면, 3인분 6/4.3LB(1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.6,
+     "eachPrice": 11.6,
+     "totalPrice": 69.6
+    },
+    {
+     "itemNo": "16739",
+     "brand": "WANG",
+     "description": "수라상 냉동우동면 8/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.4,
+     "eachPrice": 3.3,
+     "totalPrice": 26.4
+    },
+    {
+     "itemNo": "09612",
+     "brand": "WANG",
+     "description": "수라상 명태채무침 2/10/5.29OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 5.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "10021",
+     "brand": "WANG",
+     "description": "수라상 쌀게무침 2/10/7.05OZ(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 5.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "09336",
+     "brand": "WANG",
+     "description": "왕 유부초밥 2인분 48/5.64 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 2.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "12512",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 칠리 12/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    }
+   ],
+   "itemCount": 18,
+   "source": "KIMCHI HOLLYWOOD INV# 0038862.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038036-IN",
+   "vendor": "Wang",
+   "date": "2025-11-10",
+   "dateDisplay": "11/10/2025",
+   "customer": "",
+   "total": 10873.28,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "05430",
+     "brand": "WANG",
+     "description": "왕 요고베라 패션후르츠 20/16.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "13832",
+     "brand": "WANG",
+     "description": "왕 알로에 드림PET 20/500ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 1.2,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "11348",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 누룽지 4/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "11347",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 다크로스트",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "33251",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 4/6/17.50F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "12476",
+     "brand": "WANG",
+     "description": "하늘청 식혜 4/6/11.83floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 15.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "12503",
+     "brand": "WANG",
+     "description": "하늘청 수정과 4/6/11.83floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 15.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "83256",
+     "brand": "WANG",
+     "description": "동원 전복죽24/287.5g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40 LBS",
+     "size": "",
+     "qty": 30,
+     "unitPrice": 26.0,
+     "eachPrice": 26.0,
+     "totalPrice": 780.0
+    },
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15 LBS",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 15.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "22547",
+     "brand": "WANG",
+     "description": "왕 통고추가루, PET 24/7.05OZ(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 93.6,
+     "eachPrice": 3.9,
+     "totalPrice": 93.6
+    },
+    {
+     "itemNo": "83270",
+     "brand": "WANG",
+     "description": "동원 쎈쿡 100%현미밥 6/3/195g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.2,
+     "eachPrice": 4.2,
+     "totalPrice": 50.4
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "04475",
+     "brand": "WANG",
+     "description": "스키나 야끼노리(10장) 50/25g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 3.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "21586",
+     "brand": "WANG",
+     "description": "올가랜드 유기농스낵김, 12팩 8/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 53.0,
+     "eachPrice": 6.63,
+     "totalPrice": 265.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 156.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04436",
+     "brand": "WANG",
+     "description": "왕 막국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "00818",
+     "brand": "WANG",
+     "description": "왕 우동국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "14951",
+     "brand": "WANG",
+     "description": "왕 메밀막국수 12/3 Lb (1.36 kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "04919",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 12/3 Lb (1.36",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "27495",
+     "brand": "WANG",
+     "description": "왕 불지않는 잔치진당면20/1.5lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "22996",
+     "brand": "WANG",
+     "description": "참당면 10/2 lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 5.3,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "34961",
+     "brand": "WANG",
+     "description": "수라상 전통떡국 용기 6PACK 6",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 15.0,
+     "eachPrice": 2.5,
+     "totalPrice": 75.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88서울 국물떡볶이 용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "81253",
+     "brand": "WANG",
+     "description": "농심R 짜파게티(멀티) 4/4/127g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 16.8,
+     "eachPrice": 4.2,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "82103",
+     "brand": "WANG",
+     "description": "농심R 새우사발면 12/86g",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80401",
+     "brand": "WANG",
+     "description": "농심S 양파링(소) 20/1.76oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "10759",
+     "brand": "WANG",
+     "description": "왕 갈비양념 12/29.63 oz (840 g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "10757",
+     "brand": "WANG",
+     "description": "왕 불고기양념 12/29.63 oz (840",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "83240",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/8.4oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.92,
+     "eachPrice": 2.15,
+     "totalPrice": 38.76
+    },
+    {
+     "itemNo": "83022",
+     "brand": "WANG",
+     "description": "LKK PANDA OS 12/9oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 23.0,
+     "eachPrice": 1.92,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00047",
+     "brand": "WANG",
+     "description": "수라상 쌀조랭이떡 12/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "30922",
+     "brand": "WANG",
+     "description": "수라상 신당동 떡볶이떡 20/907g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 72.0,
+     "eachPrice": 3.6,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "13185",
+     "brand": "WANG",
+     "description": "곰표 사누끼우동 8/2.54LB(1.15K",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.4,
+     "eachPrice": 3.3,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "08591",
+     "brand": "WANG",
+     "description": "왕 생우동짜장 10/2.2 lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 225.0
+    },
+    {
+     "itemNo": "08642",
+     "brand": "WANG",
+     "description": "왕 생소면 10/2.2 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "08641",
+     "brand": "WANG",
+     "description": "왕 생칼국수 10/2.2 Lb (35.2 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 180.6
+    },
+    {
+     "itemNo": "21567",
+     "brand": "WANG",
+     "description": "수라상 큼직한잡채군만두 12/1.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 6.62,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "16738",
+     "brand": "WANG",
+     "description": "왕 고추잡채만두 12/1.49LB(675G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "05600",
+     "brand": "WANG",
+     "description": "김치볶음밥 4/4.4LB(2KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33168",
+     "brand": "WANG",
+     "description": "왕 야채볶음밥 4/4.4 Lb (2kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "10351",
+     "brand": "WANG",
+     "description": "왕 알새우만두 10/1.5LB(680G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 7.2,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "21379",
+     "brand": "WANG",
+     "description": "왕 고등어필렛(5 pc) 12/1.79 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 239.92,
+     "eachPrice": 19.19,
+     "totalPrice": 239.92
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "11982",
+     "brand": "WANG",
+     "description": "왕 종합어묵 12/2 Lb (907 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 73.0,
+     "eachPrice": 6.08,
+     "totalPrice": 73.0
+    },
+    {
+     "itemNo": "23177",
+     "brand": "WANG",
+     "description": "델리팜 꿀버터 냉동식빵 8/13.4o",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 123.0
+    }
+   ],
+   "itemCount": 72,
+   "source": "KIMCHI PEMBROKE PINES INV# 0038036.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038860-IN",
+   "vendor": "Wang",
+   "date": "2025-12-08",
+   "dateDisplay": "12/8/2025",
+   "customer": "",
+   "total": 0,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "18591",
+     "brand": "WANG",
+     "description": "왕 졸음깨는껌 8/6/3.7 oz (105",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 187.2,
+     "eachPrice": 23.4,
+     "totalPrice": 187.2
+    },
+    {
+     "itemNo": "12452",
+     "brand": "WANG",
+     "description": "왕 통밀뻥 30/2.82oz (80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "04177",
+     "brand": "WANG",
+     "description": "롯데제과 빈츠 멀티16/204g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 57.6,
+     "eachPrice": 3.6,
+     "totalPrice": 57.6
+    },
+    {
+     "itemNo": "80834",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 M 9/180g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80835",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 아몬드 M 9/128",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "83037",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 초코쿠키 M 9/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80826",
+     "brand": "WANG",
+     "description": "롯데제과 쌀로별 12/156g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80047",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(대) 6/6.35oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80169",
+     "brand": "WANG",
+     "description": "농심S 꿀꽈배기(대) 6/10.05oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "83227",
+     "brand": "WANG",
+     "description": "농심S 메론킥(대) 6/180g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "15377",
+     "brand": "WANG",
+     "description": "수라상 매운고추장(병) 12/1.1 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "05611",
+     "brand": "WANG",
+     "description": "왕 강초 9/1.8 L (60.87 floz)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 57.0,
+     "eachPrice": 6.33,
+     "totalPrice": 285.0
+    },
+    {
+     "itemNo": "14137",
+     "brand": "WANG",
+     "description": "수라상 김치절임소금 6/6.6 Lb (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 79.2,
+     "eachPrice": 13.2,
+     "totalPrice": 158.4
+    },
+    {
+     "itemNo": "20606",
+     "brand": "WANG",
+     "description": "왕 고운소금 6/5 Lb (2.27 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 34.0,
+     "eachPrice": 5.67,
+     "totalPrice": 34.0
+    },
+    {
+     "itemNo": "34318",
+     "brand": "WANG",
+     "description": "쌈무 18/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.4,
+     "eachPrice": 2.3,
+     "totalPrice": 41.4
+    },
+    {
+     "itemNo": "09716",
+     "brand": "WANG",
+     "description": "왕 김밥용우엉 30/8.82 oz (250",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 3.2,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "00047",
+     "brand": "WANG",
+     "description": "수라상 쌀조랭이떡 12/2LB",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "21379",
+     "brand": "WANG",
+     "description": "왕 고등어필렛(5 pc) 12/1.79 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 239.92,
+     "eachPrice": 19.19,
+     "totalPrice": 239.92
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "08569",
+     "brand": "WANG",
+     "description": "오향 알탕 12/17.6OZ(1.1LB)500G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "14897",
+     "brand": "WANG",
+     "description": "수라상 혼합경단 24/7.05 oz (20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "14896",
+     "brand": "WANG",
+     "description": "수라상 찹쌀떡 24/7.05 oz (200",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "11546",
+     "brand": "WANG",
+     "description": "왕 꼬치어묵 10/2.2 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 80.0,
+     "eachPrice": 8.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "12777",
+     "brand": "WANG",
+     "description": "왕 꼬치사각어묵 30/10.58 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10044",
+     "brand": "WANG",
+     "description": "왕 사각어묵(B-Type) 22 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 54.0,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "00040",
+     "brand": "WANG",
+     "description": "수라상 부추교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00041",
+     "brand": "WANG",
+     "description": "수라상 김치교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "19986",
+     "brand": "WANG",
+     "description": "수라상 부추잡채왕만두,수제,10E",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "18242",
+     "brand": "WANG",
+     "description": "수라상 잡채왕만두, 수제, 10EA",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10029",
+     "brand": "WANG",
+     "description": "수라상 한입 김말이 20/1.1lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.0,
+     "eachPrice": 4.6,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "17434",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김,야채 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "17435",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김, 김치 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "12512",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 칠리 12/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "09613",
+     "brand": "WANG",
+     "description": "스키나 에다마메 24/14 oz (400",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "14266",
+     "brand": "WANG",
+     "description": "왕 생중화면 10/2.2 Lb (1 kg)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "08591",
+     "brand": "WANG",
+     "description": "왕 생우동짜장 10/2.2 lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 225.0
+    },
+    {
+     "itemNo": "09819",
+     "brand": "WANG",
+     "description": "스키나 냉동우동면 8/2.54 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "10338",
+     "brand": "WANG",
+     "description": "이연복의 목란 짜장면 10/2.3 LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.0,
+     "eachPrice": 106.0,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "16045",
+     "brand": "WANG",
+     "description": "수라상 어육비엔나 소세지 24/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 6.67,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "09336",
+     "brand": "WANG",
+     "description": "왕 유부초밥 2인분 48/5.64 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 2.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 180.6
+    },
+    {
+     "itemNo": "31892",
+     "brand": "WANG",
+     "description": "수라상 원할머니 버섯육개장 18/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "29822",
+     "brand": "WANG",
+     "description": "원할머니장어탕20/450g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 120.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "80776",
+     "brand": "WANG",
+     "description": "롯데빙과 설레임 밀크 멀티4/5/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "80777",
+     "brand": "WANG",
+     "description": "롯데빙과 설레임 커피 멀티4/5/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "16713",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "15782",
+     "brand": "WANG",
+     "description": "왕 요고베라 복숭아 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16681",
+     "brand": "WANG",
+     "description": "왕 요고베라 메론 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "11348",
+     "brand": "WANG",
+     "description": "하이트진로 블랙보리 누룽지 4/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8flo",
+     "size": "",
+     "qty": 30,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 570.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 380.0
+    },
+    {
+     "itemNo": "03226",
+     "brand": "WANG",
+     "description": "유어스 카카오망고스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "03227",
+     "brand": "WANG",
+     "description": "유어스 카카오복숭아스무디 24/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "15053",
+     "brand": "WANG",
+     "description": "동화 까스활명수 6/10/75ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81821",
+     "brand": "WANG",
+     "description": "해태 갈배 사이다 24/500 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82356",
+     "brand": "WANG",
+     "description": "정관장 에브리타임 자몽16/30/0.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 800.0,
+     "eachPrice": 50.0,
+     "totalPrice": 800.0
+    },
+    {
+     "itemNo": "82489",
+     "brand": "WANG",
+     "description": "정관장 홍삼진고데일리스틱16/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 528.0,
+     "eachPrice": 33.0,
+     "totalPrice": 528.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "00560",
+     "brand": "WANG",
+     "description": "왕 김치통조림 48/5.64OZ(160G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 76.8,
+     "eachPrice": 1.6,
+     "totalPrice": 76.8
+    },
+    {
+     "itemNo": "17679",
+     "brand": "WANG",
+     "description": "왕 메밀차(통) 12/10.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "03627",
+     "brand": "WANG",
+     "description": "왕 결명자차(병) 12/22oz(625g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "16787",
+     "brand": "WANG",
+     "description": "담터 마가들어간15곡미숫가루 8/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 115.0,
+     "eachPrice": 14.38,
+     "totalPrice": 115.0
+    },
+    {
+     "itemNo": "10863",
+     "brand": "WANG",
+     "description": "맥심 오리지널 커피믹스 8/100/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 140.0,
+     "eachPrice": 17.5,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "10862",
+     "brand": "WANG",
+     "description": "맥심 모카골드 커피믹스 8/100/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 140.0,
+     "eachPrice": 17.5,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "19359",
+     "brand": "WANG",
+     "description": "담터 고구마라떼 20/12T/0.63OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 104.0,
+     "eachPrice": 5.2,
+     "totalPrice": 104.0
+    },
+    {
+     "itemNo": "19360",
+     "brand": "WANG",
+     "description": "담터 미숫가루라떼 20/12T/0.7OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 104.0,
+     "eachPrice": 5.2,
+     "totalPrice": 104.0
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "08271",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/8 oz (22",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08272",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/1LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "07066",
+     "brand": "WANG",
+     "description": "스키나 빵가루 24/7.05 oz(200g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 31.2
+    },
+    {
+     "itemNo": "07734",
+     "brand": "WANG",
+     "description": "왕 특당면 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5LB",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "22152",
+     "brand": "WANG",
+     "description": "왕 올리브간짜장 용기 6PACK/8.2",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 13.6,
+     "eachPrice": 3.4,
+     "totalPrice": 136.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "81254",
+     "brand": "WANG",
+     "description": "농심R 김치라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "80704",
+     "brand": "WANG",
+     "description": "농심R 너구리(멀티) 4/4/120g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 15.5,
+     "eachPrice": 3.88,
+     "totalPrice": 15.5
+    },
+    {
+     "itemNo": "80432",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵) 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80424",
+     "brand": "WANG",
+     "description": "농심R 너구리(컵) 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "80651",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵)-비건 6/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80710",
+     "brand": "WANG",
+     "description": "농심R 돈코츠(큰사발) 6/101g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 13.5,
+     "eachPrice": 2.25,
+     "totalPrice": 135.0
+    },
+    {
+     "itemNo": "80268",
+     "brand": "WANG",
+     "description": "농심R 신건면(멀티) 8/4/3.42oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 56.0,
+     "eachPrice": 7.0,
+     "totalPrice": 112.0
+    },
+    {
+     "itemNo": "33858",
+     "brand": "WANG",
+     "description": "삼양R 불닭볶음면(멀티) 8/5/140",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 48.0,
+     "eachPrice": 6.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "33864",
+     "brand": "WANG",
+     "description": "삼양R 까르보불닭볶음면(멀티) 8",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 48.0,
+     "eachPrice": 6.0,
+     "totalPrice": 960.0
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 136.08
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 45.36
+    },
+    {
+     "itemNo": "83363",
+     "brand": "WANG",
+     "description": "롯데빙과 조이바그레인크럼블6/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "00008",
+     "brand": "WANG",
+     "description": "수라상 쌀선과 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "01070",
+     "brand": "WANG",
+     "description": "왕 콩된장(병) 12/1 Lb (450 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "01071",
+     "brand": "WANG",
+     "description": "왕 콩된장(병) 12/1.98 Lb (900g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "31597",
+     "brand": "WANG",
+     "description": "왕 육개장 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "07756",
+     "brand": "WANG",
+     "description": "왕 새우젓 보급형(KR) 24/1.1LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "07758",
+     "brand": "WANG",
+     "description": "왕 새우젓 보급형(KR) 12/2.2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 142.0,
+     "eachPrice": 11.83,
+     "totalPrice": 142.0
+    },
+    {
+     "itemNo": "23881",
+     "brand": "WANG",
+     "description": "초코모찌파이피넛크림 12/5.29 z",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 95.4
+    },
+    {
+     "itemNo": "23882",
+     "brand": "WANG",
+     "description": "아몬드모찌파이 아몬드초코12/5.",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 31.8,
+     "eachPrice": 2.65,
+     "totalPrice": 95.4
+    }
+   ],
+   "itemCount": 114,
+   "source": "KIMCHI PEMBROKE PINES INV# 0038860.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038452-IN",
+   "vendor": "Wang",
+   "date": "2025-11-24",
+   "dateDisplay": "11/24/2025",
+   "customer": "",
+   "total": 18435.9,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "07624",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 20/16.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "32265",
+     "brand": "WANG",
+     "description": "수라상 홍삼뿌리드링크 5/10/4.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "81339",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 복숭아 4/10/5.07",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81340",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 망고파인 4/10/5.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81341",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 청포도사과 4/10/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81342",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 더블베리4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82730",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 리치 4/10/5.07fz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82099",
+     "brand": "WANG",
+     "description": "정관장 활기력 (병) 12/10/20ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 276.0,
+     "eachPrice": 22.99,
+     "totalPrice": 276.0
+    },
+    {
+     "itemNo": "01422",
+     "brand": "WANG",
+     "description": "수라상 꿀생강모과차 12/2.2LBS(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "11903",
+     "brand": "WANG",
+     "description": "꿀패션후르츠망고차 15/560G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "18313",
+     "brand": "WANG",
+     "description": "수라상 꿀생강유자차 15/20.46OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "41237",
+     "brand": "WANG",
+     "description": "왕 붉은팥 6/4 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 9.98,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "12731",
+     "brand": "WANG",
+     "description": "수라상 튀김가루 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "32721",
+     "brand": "WANG",
+     "description": "왕 생돌김구이, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "04546",
+     "brand": "WANG",
+     "description": "K-BBQ맛 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "00820",
+     "brand": "WANG",
+     "description": "왕 짜장국수 24/16 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00824",
+     "brand": "WANG",
+     "description": "왕 짜장국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "05893",
+     "brand": "WANG",
+     "description": "왕 알뜰잡채당면 24/12oz(340g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "04791",
+     "brand": "WANG",
+     "description": "왕 잔치당면 15/1.5LB(680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "09724",
+     "brand": "WANG",
+     "description": "수라상 간편당면 24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "22152",
+     "brand": "WANG",
+     "description": "왕 올리브간짜장 용기 6PACK/8.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "15211",
+     "brand": "WANG",
+     "description": "왕 해물우동 용기 6PACK 6/6.9",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "34961",
+     "brand": "WANG",
+     "description": "수라상 전통떡국 용기 6PACK 6",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 15.0,
+     "eachPrice": 2.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "01013",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 봉지",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "12960",
+     "brand": "WANG",
+     "description": "스키나 냉우동 12/16.93 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16161",
+     "brand": "WANG",
+     "description": "수라상 죽마고우 봉봉스낵 10/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "16162",
+     "brand": "WANG",
+     "description": "수라상 죽마고우 오란다 10/11.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "16965",
+     "brand": "WANG",
+     "description": "수라상 죽마고우 왕소라형과자 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "14030",
+     "brand": "WANG",
+     "description": "수라상 한입전병-땅콩맛 20/10.5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 2.65,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "15817",
+     "brand": "WANG",
+     "description": "왕 베개팝콘강냉이 6/14.81 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.8,
+     "eachPrice": 7.3,
+     "totalPrice": 43.8
+    },
+    {
+     "itemNo": "15818",
+     "brand": "WANG",
+     "description": "왕 베개삼색볼 6/1.19 Lb ((540",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 3.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "80844",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 바나나 8/12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 3.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "80846",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 흑당 8/12/28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 3.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 22.4
+    },
+    {
+     "itemNo": "80047",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(대) 6/6.35oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "34952",
+     "brand": "WANG",
+     "description": "왕 닭돼지갈비양념12/29.6oz 840",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "22370",
+     "brand": "WANG",
+     "description": "수라상 쌈장소스 12/11.63 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "17197",
+     "brand": "WANG",
+     "description": "왕 마파두부소스-Extra Hot 24/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "21273",
+     "brand": "WANG",
+     "description": "왕 미니소세지-치즈봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "06253",
+     "brand": "WANG",
+     "description": "수라상 남도 대파김치 12/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "10338",
+     "brand": "WANG",
+     "description": "이연복의 목란 짜장면 10/2.3 LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.0,
+     "eachPrice": 106.0,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "10340",
+     "brand": "WANG",
+     "description": "이연복의 목란 짬뽕10/3.18 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 139.0,
+     "eachPrice": 13.9,
+     "totalPrice": 139.0
+    },
+    {
+     "itemNo": "12777",
+     "brand": "WANG",
+     "description": "왕 꼬치사각어묵 30/10.58 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "35093",
+     "brand": "WANG",
+     "description": "수라상 낙지물방울만두 8/3/0.37",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.2,
+     "eachPrice": 8.65,
+     "totalPrice": 69.2
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "12512",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 칠리 12/12oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 129.6
+    }
+   ],
+   "itemCount": 76,
+   "source": "Kimchi Coral Springs INV# 0038452.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040425-IN",
+   "vendor": "Wang",
+   "date": "2026-02-02",
+   "dateDisplay": "2/2/2026",
+   "customer": "",
+   "total": 14473.9,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 79.0,
+     "eachPrice": 6.58,
+     "totalPrice": 158.0
+    },
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15lb",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 16.5,
+     "eachPrice": 16.5,
+     "totalPrice": 247.5
+    },
+    {
+     "itemNo": "12730",
+     "brand": "WANG",
+     "description": "수라상 부침가루 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "12731",
+     "brand": "WANG",
+     "description": "수라상 튀김가루 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "02302",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 용기 16/5.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "80420",
+     "brand": "WANG",
+     "description": "농심R 김치사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80423",
+     "brand": "WANG",
+     "description": "농심 신사발면 12/3.03oz (86g)",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80437",
+     "brand": "WANG",
+     "description": "농심R 매운치킨사발면 12/86g",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 50.4
+    },
+    {
+     "itemNo": "80438",
+     "brand": "WANG",
+     "description": "농심R 매운새우사발면 12/86g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "80454",
+     "brand": "WANG",
+     "description": "농심R 감자면(멀티) 12/4/100g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "80710",
+     "brand": "WANG",
+     "description": "농심R 돈코츠(큰사발) 6/101g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 13.5,
+     "eachPrice": 2.25,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심 신라면(멀티) 4/4/4.23oz (",
+     "size": "",
+     "qty": 7,
+     "unitPrice": 16.0,
+     "eachPrice": 4.0,
+     "totalPrice": 112.0
+    },
+    {
+     "itemNo": "81254",
+     "brand": "WANG",
+     "description": "농심R 김치라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 19.2,
+     "eachPrice": 4.8,
+     "totalPrice": 38.4
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 168.0
+    },
+    {
+     "itemNo": "81402",
+     "brand": "WANG",
+     "description": "농심R 안성탕면(멀티) 4/4/125g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.12,
+     "eachPrice": 4.53,
+     "totalPrice": 36.24
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 50.4
+    },
+    {
+     "itemNo": "82215",
+     "brand": "WANG",
+     "description": "농심R 치킨사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82433",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-레드 6/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 12.0
+    },
+    {
+     "itemNo": "82819",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-툼바 6/10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 25.2
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83352",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-핫&스파이시",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "23870",
+     "brand": "WANG",
+     "description": "수라상 자른순당면12/17.63oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "27495",
+     "brand": "WANG",
+     "description": "왕 불지않는 잔치진당면20/1.5lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "15211",
+     "brand": "WANG",
+     "description": "왕 해물우동 용기 6PACK 6/6.9",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "15250",
+     "brand": "WANG",
+     "description": "왕 삼선짜장 용기 6PACK/7.97OZ(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "22152",
+     "brand": "WANG",
+     "description": "왕 올리브간짜장 용기 6PACK/8.2",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "12544",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 멸치 20/3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김(16팩) 6/16/0.14",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김(16팩) 6/16/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "08578",
+     "brand": "WANG",
+     "description": "수라상 고추장머스타드 12/11.28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "01138",
+     "brand": "WANG",
+     "description": "왕 굵은소금 10/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 6.6,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "01122",
+     "brand": "WANG",
+     "description": "수라상 양념치킨소스 12/12.69 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "10756",
+     "brand": "WANG",
+     "description": "왕 불고기양념 15/16.93 oz(480",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 2.88,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "20602",
+     "brand": "WANG",
+     "description": "수라상 김치 베이스양념 15/16 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 59.5,
+     "eachPrice": 3.97,
+     "totalPrice": 59.5
+    },
+    {
+     "itemNo": "31596",
+     "brand": "WANG",
+     "description": "왕 불고기 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "31597",
+     "brand": "WANG",
+     "description": "왕 육개장 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "31598",
+     "brand": "WANG",
+     "description": "왕 해산물 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "31599",
+     "brand": "WANG",
+     "description": "왕 김치 훠궈소스 20/7.05 oz(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "34952",
+     "brand": "WANG",
+     "description": "왕 닭돼지갈비양념12/29.6oz 840",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "04203",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 카카오8/12/2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.5,
+     "eachPrice": 3.31,
+     "totalPrice": 26.5
+    },
+    {
+     "itemNo": "07027",
+     "brand": "WANG",
+     "description": "왕 쌀로뻥 30/2.82oz(80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "14612",
+     "brand": "WANG",
+     "description": "구겐 갈릭 바게트 스낵 16/3.52",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "15818",
+     "brand": "WANG",
+     "description": "왕 베개삼색볼 6/1.19 Lb ((540",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16027",
+     "brand": "WANG",
+     "description": "왕 베개팝스낵 10/10.58 oz(300",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "17489",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 랜덤달고나",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 124.0,
+     "eachPrice": 31.0,
+     "totalPrice": 248.0
+    },
+    {
+     "itemNo": "18591",
+     "brand": "WANG",
+     "description": "왕 졸음깨는껌 8/6/3.7 oz (105",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 187.2,
+     "eachPrice": 23.4,
+     "totalPrice": 187.2
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.5,
+     "eachPrice": 3.31,
+     "totalPrice": 26.5
+    },
+    {
+     "itemNo": "80845",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 녹차 8/12/28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.5,
+     "eachPrice": 3.31,
+     "totalPrice": 26.5
+    },
+    {
+     "itemNo": "81243",
+     "brand": "WANG",
+     "description": "롯데 말랑카우 멀티 8/158g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.6,
+     "eachPrice": 5.2,
+     "totalPrice": 41.6
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "83618",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, CHOCO 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83620",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, MANT 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "02981",
+     "brand": "WANG",
+     "description": "수라상 88서울 짜장떡볶이(6볼",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "83544",
+     "brand": "WANG",
+     "description": "동원 양반 나주식 곰탕20/460g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.3,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83545",
+     "brand": "WANG",
+     "description": "동원 수라 보양 추어탕20/460 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "83546",
+     "brand": "WANG",
+     "description": "동원 양반 찰진밥 12/210 G",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "10161",
+     "brand": "WANG",
+     "description": "수라상 인삼드링크 5/10/4.05FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "14224",
+     "brand": "WANG",
+     "description": "맥심 오리지널 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "04705",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 15/20.46",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "18313",
+     "brand": "WANG",
+     "description": "수라상 꿀생강유자차 15/20.46OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "83255",
+     "brand": "WANG",
+     "description": "동원 자연산 골뱅이 24/400g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 262.0
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 262.8
+    },
+    {
+     "itemNo": "07031",
+     "brand": "WANG",
+     "description": "수라상 남도식 깍두기 PET(KR) 8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "07032",
+     "brand": "WANG",
+     "description": "수라상 남도식 총각김치 PET(KR)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 7.9,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "01831",
+     "brand": "WANG",
+     "description": "왕 시골 황썬단무지 16/35 oz (1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 6.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    }
+   ],
+   "itemCount": 99,
+   "source": "Kimchi Coral Springs_INV#0040425.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041212-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 7859.67,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.0,
+     "eachPrice": 6.58,
+     "totalPrice": 79.0
+    },
+    {
+     "itemNo": "40832",
+     "brand": "WANG",
+     "description": "스키나 건강잡곡 16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 4.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 6/5.5Lb (2.5kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 24.6
+    },
+    {
+     "itemNo": "33859",
+     "brand": "WANG",
+     "description": "삼양 멀티 핵불닭볶음면 8/5/4.9",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 46.0,
+     "eachPrice": 5.75,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심 육개장사발면 1/12/3.03oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 12.6,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80423",
+     "brand": "WANG",
+     "description": "농심 신사발면 12/3.03oz (86g)",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82820",
+     "brand": "WANG",
+     "description": "삼양R 로제불닭볶음면(멀티) 8/5",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 46.0,
+     "eachPrice": 5.75,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "82821",
+     "brand": "WANG",
+     "description": "삼양R 야끼소바불닭볶음면(멀티)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 46.0,
+     "eachPrice": 5.75,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "82937",
+     "brand": "WANG",
+     "description": "삼양R 맵탱-흑후추소고기(멀티)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.8,
+     "eachPrice": 4.6,
+     "totalPrice": 36.8
+    },
+    {
+     "itemNo": "00826",
+     "brand": "WANG",
+     "description": "왕 막국수 24/1 Lb (453 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "04791",
+     "brand": "WANG",
+     "description": "왕 잔치당면 15/1.5LB(680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "04919",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 12/3 Lb (1.36",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "09724",
+     "brand": "WANG",
+     "description": "수라상 간편당면 24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "15247",
+     "brand": "WANG",
+     "description": "왕 유부우동용기 6PACK 6/7.76OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "21935",
+     "brand": "WANG",
+     "description": "왕 생우동-해물맛w/soup(3P) 12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "14567",
+     "brand": "WANG",
+     "description": "왕 카레맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김(16팩) 6",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김(16팩) 6/16/0.14",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김(16팩) 6/16/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "21586",
+     "brand": "WANG",
+     "description": "올가랜드 유기농스낵김, 12팩 8/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 53.0,
+     "eachPrice": 6.63,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "83499",
+     "brand": "WANG",
+     "description": "동원 들기름올리브복합식탁 10/2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "83196",
+     "brand": "WANG",
+     "description": "LKK PRM SOY SAUCE 12/8.4oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 21.22,
+     "eachPrice": 1.77,
+     "totalPrice": 21.22
+    },
+    {
+     "itemNo": "83242",
+     "brand": "WANG",
+     "description": "LKK ORGANIC PRM SOY 6/8.4oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 12.92,
+     "eachPrice": 2.15,
+     "totalPrice": 12.92
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "10757",
+     "brand": "WANG",
+     "description": "왕 불고기양념 12/29.63oz (840g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "10759",
+     "brand": "WANG",
+     "description": "왕 갈비양념 12/29.63 oz (840 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58oz (300g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "04544",
+     "brand": "WANG",
+     "description": "일광 생강젤리 10/9.87OZ(280G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "05148",
+     "brand": "WANG",
+     "description": "일광 죽염사탕 10/9.87OZ(280G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "16033",
+     "brand": "WANG",
+     "description": "왕 베개쌀튀밥 6/1.43 Lb(650 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 6.67,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "17489",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 랜덤달고나",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 124.0,
+     "eachPrice": 31.0,
+     "totalPrice": 124.0
+    },
+    {
+     "itemNo": "20587",
+     "brand": "WANG",
+     "description": "수라상 죽마고우롤전병, 코코넛",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80838",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 40/47g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 44.0,
+     "eachPrice": 1.1,
+     "totalPrice": 44.0
+    },
+    {
+     "itemNo": "83618",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, CHOCO 15/300g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 61.5
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 61.5
+    },
+    {
+     "itemNo": "83620",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, MANT 15/300g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 61.5
+    },
+    {
+     "itemNo": "34961",
+     "brand": "WANG",
+     "description": "수라상 전통떡국 용기 6PACK 6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 15.0,
+     "eachPrice": 2.5,
+     "totalPrice": 15.0
+    },
+    {
+     "itemNo": "83544",
+     "brand": "WANG",
+     "description": "동원 양반 나주식 곰탕20/460g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.3,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83546",
+     "brand": "WANG",
+     "description": "동원 양반 찰진밥 12/210 G",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "06881",
+     "brand": "WANG",
+     "description": "포카리스웨트 20/16.9 floz (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "07623",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 12/1.5L",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 38.0,
+     "eachPrice": 3.17,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "07624",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 20/16.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "08300",
+     "brand": "WANG",
+     "description": "동아 포카리스웨트(캔) 5/6/8.28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 7.2,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 38.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "17224",
+     "brand": "WANG",
+     "description": "수라상 유기농 녹차20/50/0.04oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.0,
+     "eachPrice": 4.6,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "17225",
+     "brand": "WANG",
+     "description": "수라상 유기농 현미녹차 30/50/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 156.0,
+     "eachPrice": 5.19,
+     "totalPrice": 156.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "11903",
+     "brand": "WANG",
+     "description": "꿀패션후르츠망고차 15/560G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "83254",
+     "brand": "WANG",
+     "description": "동원맛참매콤참기름참치12/4/135",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.2,
+     "eachPrice": 6.6,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "19727",
+     "brand": "WANG",
+     "description": "수라상 서울식 포기김치 2/11",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 157.2
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/30oz (",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 262.8
+    },
+    {
+     "itemNo": "04019",
+     "brand": "WANG",
+     "description": "왕 시골 백단무지(김밥용) 14/2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.4,
+     "eachPrice": 6.6,
+     "totalPrice": 92.4
+    },
+    {
+     "itemNo": "04070",
+     "brand": "WANG",
+     "description": "왕 시골 황썬단무지 30/12.3 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 3.3,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "81339",
+     "brand": "WANG",
+     "description": "테스틀리 곤약젤리, 복숭아 4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81340",
+     "brand": "WANG",
+     "description": "테스틀리 곤약젤리, 망고파인 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81342",
+     "brand": "WANG",
+     "description": "테스틀리 곤약젤리, 더블베리 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82730",
+     "brand": "WANG",
+     "description": "테스틀리 곤약젤리, 리치 4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    }
+   ],
+   "itemCount": 81,
+   "source": "Kimchi Coral Springs_INV#0041212.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041213-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 7859.67,
+   "branchId": "coral_springs",
+   "items": [
+    {
+     "itemNo": "10675",
+     "brand": "WANG",
+     "description": "빙그레 뽕따-소다 4/6/4.4 floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "80775",
+     "brand": "WANG",
+     "description": "롯데빙과 수박바 멀티 6/6/75 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 27.6,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "09151",
+     "brand": "WANG",
+     "description": "왕 김치만두, 50EA 12/23.8OZ(67",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "09152",
+     "brand": "WANG",
+     "description": "왕 야채만두 50EA 12/23.8OZ(67",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "18243",
+     "brand": "WANG",
+     "description": "수라상 유산슬왕만두, 수제, 10E",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09847",
+     "brand": "WANG",
+     "description": "왕 어육 소떡소떡 10/1.06lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.0,
+     "eachPrice": 9.2,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "33190",
+     "brand": "WANG",
+     "description": "왕 부산어묵 10/2.03Lb (920g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 56.6,
+     "eachPrice": 5.66,
+     "totalPrice": 283.0
+    },
+    {
+     "itemNo": "01158",
+     "brand": "WANG",
+     "description": "왕 더 바삭한 감자핫도그 12/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "83407",
+     "brand": "WANG",
+     "description": "동원 더킹 오리지널 10/2/140g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 50.0,
+     "eachPrice": 5.0,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "83409",
+     "brand": "WANG",
+     "description": "동원 로스트 오리지널 10/2/140g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 50.0,
+     "eachPrice": 5.0,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "18464",
+     "brand": "WANG",
+     "description": "왕 냉동 깐생밤(20-22pc) 30/10.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 180.0,
+     "eachPrice": 5.99,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도 감자 10/14.1oz (40",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 108.0
+    }
+   ],
+   "itemCount": 15,
+   "source": "Kimchi Coral Springs_INV#0041213.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038455-IN",
+   "vendor": "Wang",
+   "date": "2025-11-24",
+   "dateDisplay": "11/24/2025",
+   "customer": "",
+   "total": 12298.32,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 285.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "03226",
+     "brand": "WANG",
+     "description": "유어스 카카오망고스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "03227",
+     "brand": "WANG",
+     "description": "유어스 카카오복숭아스무디 24/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "03228",
+     "brand": "WANG",
+     "description": "유어스 카카오애플스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "15782",
+     "brand": "WANG",
+     "description": "왕 요고베라 복숭아 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "08500",
+     "brand": "WANG",
+     "description": "왕 요고베라 구아바 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "34112",
+     "brand": "WANG",
+     "description": "왕 요고베라 수박 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "06881",
+     "brand": "WANG",
+     "description": "포카리스웨트 20/16.9 floz (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33909",
+     "brand": "WANG",
+     "description": "유어스 한라봉스파클링 4/6/12.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 6.5,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "82730",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 리치 4/10/5.07fz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81339",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 복숭아 4/10/5.07",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81340",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 망고파인 4/10/5.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81341",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 청포도사과 4/10/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81342",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 더블베리4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "22596",
+     "brand": "WANG",
+     "description": "왕 요고베라 에이드 메론 5/10/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 9.0,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "22597",
+     "brand": "WANG",
+     "description": "왕 요고베라 에이드 딸기 5/10/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 9.0,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "22598",
+     "brand": "WANG",
+     "description": "왕 요고베라 에이드 망고 5/10/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 9.0,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "83256",
+     "brand": "WANG",
+     "description": "동원 전복죽24/287.5g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "01422",
+     "brand": "WANG",
+     "description": "수라상 꿀생강모과차 12/2.2LBS(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "11903",
+     "brand": "WANG",
+     "description": "꿀패션후르츠망고차 15/560G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "16787",
+     "brand": "WANG",
+     "description": "담터 마가들어간15곡미숫가루 8/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 115.0,
+     "eachPrice": 14.38,
+     "totalPrice": 115.0
+    },
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15 LBS",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 16.5,
+     "eachPrice": 16.5,
+     "totalPrice": 165.0
+    },
+    {
+     "itemNo": "40839",
+     "brand": "WANG",
+     "description": "왕 메주콩 16/2LB(907g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.5,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "14322",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 양념용 24/7.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "83268",
+     "brand": "WANG",
+     "description": "동원 쎈쿡 흑미밥 6/3/210g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.2,
+     "eachPrice": 4.2,
+     "totalPrice": 50.4
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14567",
+     "brand": "WANG",
+     "description": "왕 카레맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "09321",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 해물맛, 용기,",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "09322",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수,돼지고기맛 6PA",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "02302",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 용기 16/5.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16442",
+     "brand": "WANG",
+     "description": "왕 로제 쫄볶이, 봉지 10/12.5OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "08604",
+     "brand": "WANG",
+     "description": "왕 오리지널 국물떡볶이, 봉지 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "19246",
+     "brand": "WANG",
+     "description": "왕 로제 떡볶이 10/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "82456",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-툼바 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 9.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "80432",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵) 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81855",
+     "brand": "WANG",
+     "description": "삼양 핵불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 22.4
+    },
+    {
+     "itemNo": "83354",
+     "brand": "WANG",
+     "description": "농심S 와사비새우깡(소) 20/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80401",
+     "brand": "WANG",
+     "description": "농심S 양파링(소) 20/1.76oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80115",
+     "brand": "WANG",
+     "description": "농심S 고구마깡(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "83021",
+     "brand": "WANG",
+     "description": "롯데제과 오잉 노가리칩 12/120g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "80826",
+     "brand": "WANG",
+     "description": "롯데제과 쌀로별 12/156g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "17870",
+     "brand": "WANG",
+     "description": "콩고물 인절미스낵 12/3.88 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "02524",
+     "brand": "WANG",
+     "description": "수라상 떡볶이소스 15/16.93 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "21273",
+     "brand": "WANG",
+     "description": "왕 미니소세지-치즈봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "09247",
+     "brand": "WANG",
+     "description": "왕 미니소세지-떡볶이봉 12/10/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "08200",
+     "brand": "WANG",
+     "description": "스키나 통단무지1pc 20/17.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.7,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "05021",
+     "brand": "WANG",
+     "description": "스키나 생우동 30/7 oz (200 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 0.8,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치,PET 6/42.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "19727",
+     "brand": "WANG",
+     "description": "수라상 서울식 포기김치 2/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 45.8
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "34320",
+     "brand": "WANG",
+     "description": "싱그람 치킨무 30/0.44 Lb (200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "82680",
+     "brand": "WANG",
+     "description": "하우스 카레소스 mild 3/10/7oz.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 27.5,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "82681",
+     "brand": "WANG",
+     "description": "하우스 카레소스 m/hot 3/10/7oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 27.5,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "82685",
+     "brand": "WANG",
+     "description": "하우스 튜브와사비(L) 6/10/2.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.5,
+     "eachPrice": 32.5,
+     "totalPrice": 32.5
+    },
+    {
+     "itemNo": "82676",
+     "brand": "WANG",
+     "description": "하우스 자바카레 M/HOT6/10/6.52",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 39.0,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "82677",
+     "brand": "WANG",
+     "description": "하우스 자바카레 HOT 6/10/6.52o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 39.0,
+     "totalPrice": 39.0
+    }
+   ],
+   "itemCount": 84,
+   "source": "Kimchi Fort Lauderdale INV# 0038455.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039247-IN",
+   "vendor": "Wang",
+   "date": "2025-12-22",
+   "dateDisplay": "12/22/2025",
+   "customer": "",
+   "total": 26895.29,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "41237",
+     "brand": "WANG",
+     "description": "왕 붉은팥 6/4 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 9.98,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "41238",
+     "brand": "WANG",
+     "description": "왕 붉은팥16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.32,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "02302",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 용기 16/5.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "33886",
+     "brand": "WANG",
+     "description": "삼양 불닭떡볶이(큰컵) 16/185g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 54.4,
+     "eachPrice": 3.4,
+     "totalPrice": 544.0
+    },
+    {
+     "itemNo": "33887",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭떡볶이(큰컵) 16",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 54.4,
+     "eachPrice": 3.4,
+     "totalPrice": 544.0
+    },
+    {
+     "itemNo": "80268",
+     "brand": "WANG",
+     "description": "농심R 신건면(멀티) 8/4/3.42oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 56.0,
+     "eachPrice": 7.0,
+     "totalPrice": 112.0
+    },
+    {
+     "itemNo": "80441",
+     "brand": "WANG",
+     "description": "농심R 랍스터사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80447",
+     "brand": "WANG",
+     "description": "농심R 소고기사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80710",
+     "brand": "WANG",
+     "description": "농심R 돈코츠(큰사발) 6/101g",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 16.0,
+     "eachPrice": 4.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "81529",
+     "brand": "WANG",
+     "description": "삼양R 하바네로불닭볶음면(멀티)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 210.0
+    },
+    {
+     "itemNo": "82937",
+     "brand": "WANG",
+     "description": "삼양R 맵탱-흑후추소고기(멀티)",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 36.8,
+     "eachPrice": 4.6,
+     "totalPrice": 368.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "83352",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-핫&스파이시",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "03281",
+     "brand": "WANG",
+     "description": "왕 특당면 24/12 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.2,
+     "eachPrice": 3.3,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "07734",
+     "brand": "WANG",
+     "description": "왕 특당면 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09723",
+     "brand": "WANG",
+     "description": "수라상 전통당면 20/16oz(453g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 71.0,
+     "eachPrice": 3.55,
+     "totalPrice": 71.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 75.96
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09321",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 해물맛, 용기,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09322",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수,돼지고기맛 6PA",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "15249",
+     "brand": "WANG",
+     "description": "왕 삼선짬뽕용기 6PACK 6/7.93OZ",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "17121",
+     "brand": "WANG",
+     "description": "수라상 얼큰한버섯칼국수, 용기,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14567",
+     "brand": "WANG",
+     "description": "왕 카레맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "18208",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(20장) 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 432.0,
+     "eachPrice": 108.0,
+     "totalPrice": 432.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "83240",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/8.4oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.92,
+     "eachPrice": 2.15,
+     "totalPrice": 64.6
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "00705",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 22/1LB(453",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.3,
+     "eachPrice": 4.84,
+     "totalPrice": 106.3
+    },
+    {
+     "itemNo": "10428",
+     "brand": "WANG",
+     "description": "왕 치즈맛 시즈닝12/5.29oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 54.0,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "12005",
+     "brand": "WANG",
+     "description": "왕 등심구이 쑥소금15/7.05 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 4.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "14137",
+     "brand": "WANG",
+     "description": "수라상 김치절임소금 6/6.6 Lb (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.2,
+     "eachPrice": 13.2,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "14138",
+     "brand": "WANG",
+     "description": "왕 진금함초소금 15/7.05 oz (20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "23442",
+     "brand": "WANG",
+     "description": "왕후추소금,15/7.05oz.(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "03171",
+     "brand": "WANG",
+     "description": "왕 물엿(Brown) 8/6.6 Lb (3 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 8.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "16878",
+     "brand": "WANG",
+     "description": "스키나 미린 15/30.4 floz (0.78",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 49.5
+    },
+    {
+     "itemNo": "83022",
+     "brand": "WANG",
+     "description": "LKK PANDA OS 12/9oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 23.0,
+     "eachPrice": 1.92,
+     "totalPrice": 115.0
+    },
+    {
+     "itemNo": "15475",
+     "brand": "WANG",
+     "description": "왕 잡채양념 15/16.93 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 49.5
+    },
+    {
+     "itemNo": "31598",
+     "brand": "WANG",
+     "description": "왕 해산물 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "08059",
+     "brand": "WANG",
+     "description": "농심S 빵부장-초코빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 1.5,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "10432",
+     "brand": "WANG",
+     "description": "농심S 먹태깡(소)-청양마요 16/2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "12452",
+     "brand": "WANG",
+     "description": "왕 통밀뻥 30/2.82oz (80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "12453",
+     "brand": "WANG",
+     "description": "왕 현미뻥 30/2.82oz (80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80115",
+     "brand": "WANG",
+     "description": "농심S 고구마깡(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80401",
+     "brand": "WANG",
+     "description": "농심S 양파링(소) 20/1.76oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 45.36
+    },
+    {
+     "itemNo": "82263",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-콰트로치즈 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 45.36
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 45.36
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 1.5,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "83226",
+     "brand": "WANG",
+     "description": "농심S 메론킥(소) 20/45g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "12816",
+     "brand": "WANG",
+     "description": "왕 데리야끼떡볶이 용기 6PACK/5",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 0.02,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "22139",
+     "brand": "WANG",
+     "description": "왕 매운 떡볶이 용기 6PACK/6.45",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "03227",
+     "brand": "WANG",
+     "description": "유어스 카카오복숭아스무디 24/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "06291",
+     "brand": "WANG",
+     "description": "유어스 카카오딸기스무디 24/6.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "12747",
+     "brand": "WANG",
+     "description": "종근당 속청 6/10/2.5FLOZ(75ML)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.0,
+     "eachPrice": 7.17,
+     "totalPrice": 43.0
+    },
+    {
+     "itemNo": "15780",
+     "brand": "WANG",
+     "description": "왕 요고베라 파인애플 20/16.89F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "36356",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크-메론 4/6/9.80f",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "83247",
+     "brand": "WANG",
+     "description": "동원 라이트 참치 2호 12/3/250g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 189.6
+    },
+    {
+     "itemNo": "19727",
+     "brand": "WANG",
+     "description": "수라상 서울식 포기김치 2/11",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "08199",
+     "brand": "WANG",
+     "description": "스키나 단무지3pc 14/35 oz (1 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 4.5,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "34319",
+     "brand": "WANG",
+     "description": "쌈무 와사비18/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.4,
+     "eachPrice": 2.3,
+     "totalPrice": 41.4
+    },
+    {
+     "itemNo": "10592",
+     "brand": "WANG",
+     "description": "왕 천사채 30/12 oz (340 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 1.8,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "15147",
+     "brand": "WANG",
+     "description": "왕 유부초밥 4인분 15/11.2 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    }
+   ],
+   "itemCount": 87,
+   "source": "Kimchi Fort Lauderdale INV# 0039247.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039248-IN",
+   "vendor": "Wang",
+   "date": "2025-12-22",
+   "dateDisplay": "12/22/2025",
+   "customer": "",
+   "total": 26895.29,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "00011",
+     "brand": "WANG",
+     "description": "수라상 김치찌개용 묵은지(KR) 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.8,
+     "eachPrice": 4.65,
+     "totalPrice": 55.8
+    },
+    {
+     "itemNo": "10675",
+     "brand": "WANG",
+     "description": "빙그레 뽕따-소다 4/6/4.4 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "16067",
+     "brand": "WANG",
+     "description": "빙그레 메로나-망고 8/8/2.4floz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 65.6
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 98.4
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 4,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 98.4
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "80773",
+     "brand": "WANG",
+     "description": "롯데빙과 죠스바 멀티 6/6/90 ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.6,
+     "eachPrice": 4.6,
+     "totalPrice": 27.6
+    },
+    {
+     "itemNo": "81290",
+     "brand": "WANG",
+     "description": "빙그레 메로나-우베 8/8/2.4floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "02746",
+     "brand": "WANG",
+     "description": "수라상 갈비왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "10350",
+     "brand": "WANG",
+     "description": "왕 새우춘권 10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 7.2,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "11775",
+     "brand": "WANG",
+     "description": "왕 야채춘권10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "44606",
+     "brand": "WANG",
+     "description": "만두촌 쇠고기만두 14/26OZ (737",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.6,
+     "eachPrice": 5.4,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "44607",
+     "brand": "WANG",
+     "description": "만두촌 돼지고기만두 14/26OZ (7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.6,
+     "eachPrice": 5.4,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "07747",
+     "brand": "WANG",
+     "description": "SUNLIT 김치불고기김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10193",
+     "brand": "WANG",
+     "description": "SUNLIT 참치마요김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    }
+   ],
+   "itemCount": 18,
+   "source": "Kimchi Fort Lauderdale INV# 0039248.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040429-IN",
+   "vendor": "Wang",
+   "date": "2026-02-02",
+   "dateDisplay": "2/2/2026",
+   "customer": "",
+   "total": 12483.4,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "41283",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 15Lb (6.8kg)",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 11.0,
+     "eachPrice": 11.0,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "80420",
+     "brand": "WANG",
+     "description": "농심R 김치사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80424",
+     "brand": "WANG",
+     "description": "농심R 너구리(컵) 6/75g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 19.8
+    },
+    {
+     "itemNo": "80437",
+     "brand": "WANG",
+     "description": "농심R 매운치킨사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80438",
+     "brand": "WANG",
+     "description": "농심R 매운새우사발면 12/86g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "80441",
+     "brand": "WANG",
+     "description": "농심R 랍스터사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80710",
+     "brand": "WANG",
+     "description": "농심R 돈코츠(큰사발) 6/101g",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 189.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심 신라면(멀티) 4/4/4.23oz (",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 16.0,
+     "eachPrice": 4.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 300.0
+    },
+    {
+     "itemNo": "82215",
+     "brand": "WANG",
+     "description": "농심R 치킨사발면 12/86g",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83352",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-핫&스파이시",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83427",
+     "brand": "WANG",
+     "description": "농심 짜파게티사발면 사각 6/3.8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 2.1,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "02100",
+     "brand": "WANG",
+     "description": "스키나 도모시라가소면 12/3 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "07734",
+     "brand": "WANG",
+     "description": "왕 특당면 10/2LB",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 49.0,
+     "eachPrice": 4.9,
+     "totalPrice": 245.0
+    },
+    {
+     "itemNo": "23870",
+     "brand": "WANG",
+     "description": "수라상 자른순당면12/17.63oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "13598",
+     "brand": "WANG",
+     "description": "왕 통계피 12/2.99 oz (85 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "83195",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/59oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 159.0
+    },
+    {
+     "itemNo": "01089",
+     "brand": "WANG",
+     "description": "왕 짜장(병) 12/1Lb (450 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "02003",
+     "brand": "WANG",
+     "description": "왕 볶음짜장(병) 12/1.1 Lb (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 27.6,
+     "eachPrice": 2.3,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "14905",
+     "brand": "WANG",
+     "description": "수라상 사과식초 15/30.4 floz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "16878",
+     "brand": "WANG",
+     "description": "스키나 미린 15/30.4 floz (0.78",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 49.5
+    },
+    {
+     "itemNo": "20453",
+     "brand": "WANG",
+     "description": "수라상 매실식초 15/30.4 floz.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "19968",
+     "brand": "WANG",
+     "description": "몬 파인애플월남쌈소스 12/12.8o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "20706",
+     "brand": "WANG",
+     "description": "수라상 김치 핫소스 15/7.78 flo",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 4.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "36100",
+     "brand": "WANG",
+     "description": "삼양 불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "36104",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 3.65,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "82823",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭소스(스틱) 4/50",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "03320",
+     "brand": "WANG",
+     "description": "곡물그대로21 쿠키앤크림 20/5.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 3.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "08857",
+     "brand": "WANG",
+     "description": "수라상 죽마고우 전병세트 8/19",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 58.4,
+     "eachPrice": 7.3,
+     "totalPrice": 58.4
+    },
+    {
+     "itemNo": "20584",
+     "brand": "WANG",
+     "description": "수라상 죽마고우롤전병, 김맛 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "20585",
+     "brand": "WANG",
+     "description": "수라상 죽마고우롤전병, 검은참?",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "20587",
+     "brand": "WANG",
+     "description": "수라상 죽마고우롤전병, 코코넛",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80049",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(대) 6/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80086",
+     "brand": "WANG",
+     "description": "농심S 타코칩(소) 20/2.11oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80112",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(대) 6/9.17oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80593",
+     "brand": "WANG",
+     "description": "농심S 고추장새우깡(소) 20/2.64",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "80838",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 40/47g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 44.0,
+     "eachPrice": 1.1,
+     "totalPrice": 44.0
+    },
+    {
+     "itemNo": "80840",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 크런치 40/39g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 44.0,
+     "eachPrice": 1.1,
+     "totalPrice": 44.0
+    },
+    {
+     "itemNo": "81009",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로화이트쿠키40/32",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 1.3,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 45.36
+    },
+    {
+     "itemNo": "83037",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 초코쿠키 M 9/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "83599",
+     "brand": "WANG",
+     "description": "SKYFLAKES FITA CRACKER 18/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.9,
+     "eachPrice": 2.05,
+     "totalPrice": 36.9
+    },
+    {
+     "itemNo": "83600",
+     "brand": "WANG",
+     "description": "SKYFLAKES BUTTER CKS 20/190g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.2,
+     "eachPrice": 2.06,
+     "totalPrice": 41.2
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 61.5
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "12816",
+     "brand": "WANG",
+     "description": "왕 데리야끼떡볶이 용기 6PACK/5",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 0.02,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06881",
+     "brand": "WANG",
+     "description": "포카리스웨트 20/16.9 floz (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "08500",
+     "brand": "WANG",
+     "description": "왕 요고베라 구아바 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "09768",
+     "brand": "WANG",
+     "description": "구겐 코코넛 주스드링크 4/6/9.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "15782",
+     "brand": "WANG",
+     "description": "왕 요고베라 복숭아 20/16.89FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16681",
+     "brand": "WANG",
+     "description": "왕 요고베라 메론 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "08429",
+     "brand": "WANG",
+     "description": "정관장 홍삼원D 10/10/3.3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 9.9,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "10738",
+     "brand": "WANG",
+     "description": "왕 까망두유 24/6.42 floz.(190",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 13.3,
+     "eachPrice": 0.55,
+     "totalPrice": 26.6
+    },
+    {
+     "itemNo": "11881",
+     "brand": "WANG",
+     "description": "동화 비타천플러스 5/10/4.05FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 7.2,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 30,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 570.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "08039",
+     "brand": "WANG",
+     "description": "맥심 디카페인 커피믹스 8/100/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 20.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "14224",
+     "brand": "WANG",
+     "description": "맥심 오리지널 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "14225",
+     "brand": "WANG",
+     "description": "맥심 모카골드 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "16787",
+     "brand": "WANG",
+     "description": "담터 마가들어15 곡미숫가루 8/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 115.0,
+     "eachPrice": 14.38,
+     "totalPrice": 115.0
+    },
+    {
+     "itemNo": "18583",
+     "brand": "WANG",
+     "description": "담터 호두아몬드율무차 8/50T/0.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 120.0,
+     "eachPrice": 15.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "16305",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 15/20.46OZ(580",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "17010",
+     "brand": "WANG",
+     "description": "수라상 꿀대추차 12/2.2 Lb (1 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "21988",
+     "brand": "WANG",
+     "description": "왕 볶음김치통조림 12/5.64OZ(16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 병김치 12/7.58oz (215g)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "15481",
+     "brand": "WANG",
+     "description": "수라상 청양초 찌개된장 12/15.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "08777",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 복숭아 4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "08778",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 망고 4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "08788",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 딸기&키위 4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "28589",
+     "brand": "WANG",
+     "description": "왕 면장갑(A급) 30/10 pair (45",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 3.33,
+     "totalPrice": 100.0
+    }
+   ],
+   "itemCount": 90,
+   "source": "Kimchi Fort Lauderdale_INV#0040429.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041217-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 12017.06,
+   "branchId": "fort_lauderdale",
+   "items": [
+    {
+     "itemNo": "10675",
+     "brand": "WANG",
+     "description": "빙그레 뽕따-소다 4/6/4.4 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 18.0,
+     "eachPrice": 4.5,
+     "totalPrice": 18.0
+    },
+    {
+     "itemNo": "10681",
+     "brand": "WANG",
+     "description": "롯데빙과 돼지바 6/6/70 ML",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "17681",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-팥 6/4/5.1 floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 123.0
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 123.0
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "80778",
+     "brand": "WANG",
+     "description": "롯데빙과 설레임쿠키&크림멀티4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "80782",
+     "brand": "WANG",
+     "description": "롯데빙과 찰옥수수바 멀티6/5/14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 44.0,
+     "eachPrice": 7.33,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "80783",
+     "brand": "WANG",
+     "description": "롯데빙과 아이스요구르트 멀티4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 6.5,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "81183",
+     "brand": "WANG",
+     "description": "롯데빙과 티코밀크쵸코6/510g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.3,
+     "eachPrice": 6.55,
+     "totalPrice": 39.3
+    },
+    {
+     "itemNo": "81189",
+     "brand": "WANG",
+     "description": "롯데빙과 빼빼로바아몬드멀티6/6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81190",
+     "brand": "WANG",
+     "description": "롯데빙과 빼빼로바피넛멀티6/6/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81309",
+     "brand": "WANG",
+     "description": "롯데빙과그릭요구르트바블루베리",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "81651",
+     "brand": "WANG",
+     "description": "빙그레 메로나-피스타치오 8/8/2",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 65.6
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 123.0
+    },
+    {
+     "itemNo": "09152",
+     "brand": "WANG",
+     "description": "왕 야채만두 50EA 12/23.8OZ(67",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "10367",
+     "brand": "WANG",
+     "description": "왕 점보야채춘권 12/1.98lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "10851",
+     "brand": "WANG",
+     "description": "왕 오징어춘권 10/1.5 Lb (680 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 6.6,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "11775",
+     "brand": "WANG",
+     "description": "왕 야채춘권10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "17958",
+     "brand": "WANG",
+     "description": "수라상 청양초철판군만두 12/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 76.8,
+     "eachPrice": 6.4,
+     "totalPrice": 76.8
+    },
+    {
+     "itemNo": "06378",
+     "brand": "WANG",
+     "description": "델리팜 냉동 식빵 6EA 2CM 8/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "07983",
+     "brand": "WANG",
+     "description": "왕 추억의국화빵 단팥 20/9.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 78.0,
+     "eachPrice": 3.9,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "15647",
+     "brand": "WANG",
+     "description": "왕 찹쌀호떡(8P) 12/480 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "14896",
+     "brand": "WANG",
+     "description": "수라상 찹쌀떡 24/7.05 oz (200",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "14897",
+     "brand": "WANG",
+     "description": "수라상 혼합경단 24/7.05 oz (20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "14898",
+     "brand": "WANG",
+     "description": "수라상 오색경단 24/7.05oz (200",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "04098",
+     "brand": "WANG",
+     "description": "수라상물떡어묵꼬치순한20/470g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 5.5,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "83368",
+     "brand": "WANG",
+     "description": "동원 게맛살 10/1kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 6.36,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "11970",
+     "brand": "WANG",
+     "description": "왕 찰옥수수(2pc) 24/12.69oz (3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도 감자 10/14.1oz (40",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "07745",
+     "brand": "WANG",
+     "description": "SUNLIT 야채김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "07746",
+     "brand": "WANG",
+     "description": "SUNLIT 불고기김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "07747",
+     "brand": "WANG",
+     "description": "SUNLIT 김치불고기김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10193",
+     "brand": "WANG",
+     "description": "SUNLIT 참치마요김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10195",
+     "brand": "WANG",
+     "description": "SUNLIT 풀드포크김밥 24/8.1oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 129.6
+    },
+    {
+     "itemNo": "17434",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김,야채 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "83185",
+     "brand": "WANG",
+     "description": "롯데 고추장비빔밥 삼각김밥 14/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "83187",
+     "brand": "WANG",
+     "description": "롯데 스파이시 튜나 삼각김밥 14",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "11662",
+     "brand": "WANG",
+     "description": "수라상 찬바다 삼치24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 208.0,
+     "eachPrice": 8.67,
+     "totalPrice": 208.0
+    },
+    {
+     "itemNo": "21269",
+     "brand": "WANG",
+     "description": "왕 특대자반갈치 12/1.54 Lb (70",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 167.92,
+     "eachPrice": 13.99,
+     "totalPrice": 167.92
+    },
+    {
+     "itemNo": "33128",
+     "brand": "WANG",
+     "description": "왕) 통통굴비3 PCS 12/1.43lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 118.8,
+     "eachPrice": 9.9,
+     "totalPrice": 118.8
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "17193",
+     "brand": "WANG",
+     "description": "왕 손질한꽃게(6-10) 12/1.5Lb (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 143.9,
+     "eachPrice": 11.99,
+     "totalPrice": 143.9
+    },
+    {
+     "itemNo": "18027",
+     "brand": "WANG",
+     "description": "왕 해물모듬(태국) 24/14oz (397",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 141.6,
+     "eachPrice": 5.9,
+     "totalPrice": 283.2
+    },
+    {
+     "itemNo": "82102",
+     "brand": "WANG",
+     "description": "Eel 2/11 lbs (9 z)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 230.0,
+     "eachPrice": 115.0,
+     "totalPrice": 1150.0
+    }
+   ],
+   "itemCount": 47,
+   "source": "Kimchi Fort Lauderdale_INV#0041217.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038457-IN",
+   "vendor": "Wang",
+   "date": "2025-11-24",
+   "dateDisplay": "11/24/2025",
+   "customer": "",
+   "total": 20735.95,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15 LBS",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 16.5,
+     "eachPrice": 16.5,
+     "totalPrice": 247.5
+    },
+    {
+     "itemNo": "41069",
+     "brand": "WANG",
+     "description": "왕 참깨 16/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.4,
+     "eachPrice": 5.9,
+     "totalPrice": 94.4
+    },
+    {
+     "itemNo": "08271",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/8 oz (22",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "01013",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 봉지",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "02301",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 봉지 6/4/6.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "02302",
+     "brand": "WANG",
+     "description": "유어스 공화춘짜장 용기 16/5.6",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82668",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 복숭아4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82669",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 망고4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82670",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 청포도4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82671",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 한국배4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "05379",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 48/10.58 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 76.8,
+     "eachPrice": 1.6,
+     "totalPrice": 76.8
+    },
+    {
+     "itemNo": "05893",
+     "brand": "WANG",
+     "description": "왕 알뜰잡채당면 24/12oz(340g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "07176",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 20/1.5 Lb (680",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "22996",
+     "brand": "WANG",
+     "description": "왕 참당면 10/2lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 5.3,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "13984",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(100장) 2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 477.6,
+     "eachPrice": 19.92,
+     "totalPrice": 477.6
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14567",
+     "brand": "WANG",
+     "description": "왕 카레맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "00777",
+     "brand": "WANG",
+     "description": "왕 유기농 산모용실미역 20/5 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 4.5,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "82241",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 15/130g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.25,
+     "eachPrice": 1.75,
+     "totalPrice": 26.25
+    },
+    {
+     "itemNo": "82242",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 12/250g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 3.25,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "82250",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 20/600g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 120.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "01089",
+     "brand": "WANG",
+     "description": "왕 짜장(병) 12/1Lb (450 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "08862",
+     "brand": "WANG",
+     "description": "수라상 순창식 고추장, 병 12/17",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 6/5LB(2.26",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 690.0
+    },
+    {
+     "itemNo": "23442",
+     "brand": "WANG",
+     "description": "왕후추소금,15/7.05oz.(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "02524",
+     "brand": "WANG",
+     "description": "수라상 떡볶이소스 15/16.93 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "80049",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(대) 6/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "16442",
+     "brand": "WANG",
+     "description": "왕 로제 쫄볶이, 봉지 10/12.5OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "83257",
+     "brand": "WANG",
+     "description": "동원 쎈쿡 찰진밥6/3/210g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 19.8,
+     "eachPrice": 3.3,
+     "totalPrice": 19.8
+    },
+    {
+     "itemNo": "36354",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크 파인애플 4/6/9",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "36355",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크-딸기 4/6/9.80f",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 340.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "22597",
+     "brand": "WANG",
+     "description": "왕 요고베라 에이드 딸기 5/10/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 9.0,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "22598",
+     "brand": "WANG",
+     "description": "왕 요고베라 에이드 망고 5/10/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.0,
+     "eachPrice": 9.0,
+     "totalPrice": 45.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "08199",
+     "brand": "WANG",
+     "description": "스키나 단무지3pc 14/35 oz (1 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 4.5,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "01070",
+     "brand": "WANG",
+     "description": "왕 콩된장(병) 12/1 Lb (450 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "13085",
+     "brand": "WANG",
+     "description": "왕 미니소세지-미스봉 12/10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "16995",
+     "brand": "WANG",
+     "description": "왕 미니소세지-꽃게봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "18535",
+     "brand": "WANG",
+     "description": "왕 미니소세지-고추봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "81339",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 복숭아 4/10/5.07",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81340",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 망고파인 4/10/5.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "81342",
+     "brand": "WANG",
+     "description": "테스틀리 곤약 더블베리4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    }
+   ],
+   "itemCount": 63,
+   "source": "Kimchi Hollywood INV# 0038457.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039252-IN",
+   "vendor": "Wang",
+   "date": "2025-12-22",
+   "dateDisplay": "12/22/2025",
+   "customer": "",
+   "total": 22274.26,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 15.9,
+     "eachPrice": 3.98,
+     "totalPrice": 159.0
+    },
+    {
+     "itemNo": "81254",
+     "brand": "WANG",
+     "description": "농심R 김치라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "04436",
+     "brand": "WANG",
+     "description": "왕 막국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.2,
+     "eachPrice": 5.3,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "05159",
+     "brand": "WANG",
+     "description": "수라상 전통재래김(전장) 20/4/3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 4.5,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "23048",
+     "brand": "WANG",
+     "description": "스키나 스시 반절김(100장)8/10/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 5.5,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "32721",
+     "brand": "WANG",
+     "description": "왕 생돌김구이, 8+8팩 6/16/0.14",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "05751",
+     "brand": "WANG",
+     "description": "왕 유기농 고금도돌각미역 25/3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 70.0,
+     "eachPrice": 2.8,
+     "totalPrice": 70.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "10075",
+     "brand": "WANG",
+     "description": "왕 찰고추장 12/2.2 Lb (1 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.2,
+     "eachPrice": 6.6,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "00705",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 22/1LB(453",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.3,
+     "eachPrice": 4.84,
+     "totalPrice": 106.3
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 6/5LB(2.26",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 690.0
+    },
+    {
+     "itemNo": "03931",
+     "brand": "WANG",
+     "description": "수라상 유기농 고추가루, PET, ?",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 108.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "08035",
+     "brand": "WANG",
+     "description": "왕 고추가루 양념용 6/5LB(2.27",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 99.0,
+     "eachPrice": 16.5,
+     "totalPrice": 495.0
+    },
+    {
+     "itemNo": "12005",
+     "brand": "WANG",
+     "description": "왕 등심구이 쑥소금15/7.05 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 4.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "14138",
+     "brand": "WANG",
+     "description": "왕 진금함초소금 15/7.05 oz (20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "03171",
+     "brand": "WANG",
+     "description": "왕 물엿(Brown) 8/6.6 Lb (3 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 8.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "15475",
+     "brand": "WANG",
+     "description": "왕 잡채양념 15/16.93 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 247.5
+    },
+    {
+     "itemNo": "36100",
+     "brand": "WANG",
+     "description": "삼양 불닭소스 24/200g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 234.0
+    },
+    {
+     "itemNo": "81855",
+     "brand": "WANG",
+     "description": "삼양 핵불닭소스 24/200g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 156.0
+    },
+    {
+     "itemNo": "81856",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭소스 24/200g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 84.0,
+     "eachPrice": 3.5,
+     "totalPrice": 252.0
+    },
+    {
+     "itemNo": "22734",
+     "brand": "WANG",
+     "description": "수라상 매운맛 쌀전병10/8.81 z",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80111",
+     "brand": "WANG",
+     "description": "농심S 조청유과(대) 10/10.22oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 57.0,
+     "eachPrice": 5.7,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "80401",
+     "brand": "WANG",
+     "description": "농심S 양파링(소) 20/1.76oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 2.5,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "80844",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 바나나 8/12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 2.5,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "80846",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 흑당 8/12/28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 2.5,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "83021",
+     "brand": "WANG",
+     "description": "롯데제과 오잉 노가리칩 12/120g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "02981",
+     "brand": "WANG",
+     "description": "수라상 88서울 짜장떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "17197",
+     "brand": "WANG",
+     "description": "왕 마파두부소스-Extra Hot 24/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06881",
+     "brand": "WANG",
+     "description": "포카리스웨트 20/16.9 floz (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "08499",
+     "brand": "WANG",
+     "description": "왕 요고베라 구아바 12/50.67FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "14781",
+     "brand": "WANG",
+     "description": "왕 요고베라 파인애플 12/50.67F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "15780",
+     "brand": "WANG",
+     "description": "왕 요고베라 파인애플 20/16.89F",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16491",
+     "brand": "WANG",
+     "description": "왕 요고베라 코코넛 12/50.67FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "16680",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 12/50.67FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "16713",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "00117",
+     "brand": "WANG",
+     "description": "수라상 보리차 5/4LB (1.8kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.5,
+     "eachPrice": 9.3,
+     "totalPrice": 46.5
+    },
+    {
+     "itemNo": "00941",
+     "brand": "WANG",
+     "description": "수라상 보리차 12/2LB (907g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "83548",
+     "brand": "WANG",
+     "description": "동원 고추참치150G 원터치48/150",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 120.0,
+     "eachPrice": 2.5,
+     "totalPrice": 600.0
+    },
+    {
+     "itemNo": "03138",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET(KR) 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "04126",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET(KR) 8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 50.0,
+     "eachPrice": 6.25,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "05211",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지[김밥용] 14/2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.4,
+     "eachPrice": 6.6,
+     "totalPrice": 92.4
+    },
+    {
+     "itemNo": "09001",
+     "brand": "WANG",
+     "description": "스키나 식당용단무지 4/8.8 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.5,
+     "eachPrice": 13.63,
+     "totalPrice": 54.5
+    },
+    {
+     "itemNo": "07009",
+     "brand": "WANG",
+     "description": "왕 마늘짱아지(파우치) 24/1 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "10592",
+     "brand": "WANG",
+     "description": "왕 천사채 30/12 oz (340 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 1.8,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "30922",
+     "brand": "WANG",
+     "description": "수라상 신당동 떡볶이떡 20/907g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.6,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    }
+   ],
+   "itemCount": 72,
+   "source": "Kimchi Hollywood INV# 0039252.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039253-IN",
+   "vendor": "Wang",
+   "date": "2025-12-22",
+   "dateDisplay": "12/22/2025",
+   "customer": "",
+   "total": 22274.26,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "01011",
+     "brand": "WANG",
+     "description": "왕 찹쌀약과(L-Type) 24/11.3 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "02232",
+     "brand": "WANG",
+     "description": "왕 약과(A-Type) 24/11.3 oz (32",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "00011",
+     "brand": "WANG",
+     "description": "수라상 김치찌개용 묵은지(KR) 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.8,
+     "eachPrice": 4.65,
+     "totalPrice": 55.8
+    },
+    {
+     "itemNo": "34249",
+     "brand": "WANG",
+     "description": "수라상 남도 갓김치(KR) 12/14.1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.8,
+     "eachPrice": 4.65,
+     "totalPrice": 55.8
+    },
+    {
+     "itemNo": "08634",
+     "brand": "WANG",
+     "description": "왕 신당동떡볶이 12/1.21lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "00040",
+     "brand": "WANG",
+     "description": "수라상 부추교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00041",
+     "brand": "WANG",
+     "description": "수라상 김치교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "09147",
+     "brand": "WANG",
+     "description": "왕 부추만두 50EA 12/23.8OZ(67",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "09861",
+     "brand": "WANG",
+     "description": "왕 부추물만두 L 6/2.2LB(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 10.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10348",
+     "brand": "WANG",
+     "description": "왕 버섯만두 10/1.5LB(680G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 6.6,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "10349",
+     "brand": "WANG",
+     "description": "왕 샥스핀만두 10/1.5LB(680G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 6.6,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "10351",
+     "brand": "WANG",
+     "description": "왕 알새우만두 10/1.5LB(680G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 7.2,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "17964",
+     "brand": "WANG",
+     "description": "수라상 부추만두, 74EA 10/2.2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.5,
+     "eachPrice": 5.25,
+     "totalPrice": 52.5
+    },
+    {
+     "itemNo": "44606",
+     "brand": "WANG",
+     "description": "만두촌 쇠고기만두 14/26OZ (737",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.6,
+     "eachPrice": 5.4,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "44607",
+     "brand": "WANG",
+     "description": "만두촌 돼지고기만두 14/26OZ (7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.6,
+     "eachPrice": 5.4,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "06081",
+     "brand": "WANG",
+     "description": "왕 옥수수찐빵 3EA 12/8.99OZ(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "06087",
+     "brand": "WANG",
+     "description": "왕 야채찐빵 3EA 12/8.99OZ(255",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.8,
+     "eachPrice": 2.4,
+     "totalPrice": 28.8
+    },
+    {
+     "itemNo": "06089",
+     "brand": "WANG",
+     "description": "왕 쑥찐빵(3pc) 12/8.99oz (255g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "15183",
+     "brand": "WANG",
+     "description": "왕 부산야채어묵 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.6,
+     "eachPrice": 5.66,
+     "totalPrice": 56.6
+    },
+    {
+     "itemNo": "36114",
+     "brand": "WANG",
+     "description": "왕 모짜렐라&쌀떡 반반핫도그 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "01158",
+     "brand": "WANG",
+     "description": "왕 더 바삭한 감자핫도그 12/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "04801",
+     "brand": "WANG",
+     "description": "왕 모짜&소세지 반반핫도그 할라",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "34993",
+     "brand": "WANG",
+     "description": "왕 모짜렐라&소세지 반반핫도그",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "14027",
+     "brand": "WANG",
+     "description": "왕 생칼국수-녹차 10/1.76 Lb (8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "29694",
+     "brand": "WANG",
+     "description": "왕 보리생칼국수10/1.76lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "33557",
+     "brand": "WANG",
+     "description": "왕 생칼국수-시금치 10/1.76 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 5.3,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "06786",
+     "brand": "WANG",
+     "description": "왕 생미역(완도) 30/10 oz.(283",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 1.8,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "07846",
+     "brand": "WANG",
+     "description": "왕 해파리 12/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.4,
+     "eachPrice": 8.03,
+     "totalPrice": 96.4
+    },
+    {
+     "itemNo": "17434",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김,야채 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "17435",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김, 김치 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "80062",
+     "brand": "WANG",
+     "description": "통홍합 (23-32pc) 10/1Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    }
+   ],
+   "itemCount": 32,
+   "source": "Kimchi Hollywood INV# 0039253.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039610-IN",
+   "vendor": "Wang",
+   "date": "2026-01-05",
+   "dateDisplay": "1/5/2026",
+   "customer": "",
+   "total": 11381.52,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시라이스12/4.4lbs",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    },
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40Lb (18.14kg)",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 26.0,
+     "eachPrice": 26.0,
+     "totalPrice": 520.0
+    },
+    {
+     "itemNo": "08274",
+     "brand": "WANG",
+     "description": "수라상 볶음통깨 12/2LB (906 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 8.33,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "41684",
+     "brand": "WANG",
+     "description": "왕 메주콩 6/4 Lb (1.81 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 중력분 6/5.5Lb (2.",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "01013",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 봉지",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "33858",
+     "brand": "WANG",
+     "description": "삼양 불닭볶음면(멀티) 8/5/140",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 44.0,
+     "eachPrice": 5.5,
+     "totalPrice": 264.0
+    },
+    {
+     "itemNo": "80225",
+     "brand": "WANG",
+     "description": "농심R 너구리(멀티)-순한맛 8/4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80423",
+     "brand": "WANG",
+     "description": "농심R 신사발면 12/86g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "80447",
+     "brand": "WANG",
+     "description": "농심R 소고기사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심 신라면(멀티) 4/4/4.23oz (",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 15.9,
+     "eachPrice": 3.98,
+     "totalPrice": 159.0
+    },
+    {
+     "itemNo": "81375",
+     "brand": "WANG",
+     "description": "농심R 신라면 10/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 10.0,
+     "eachPrice": 1.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "81516",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-그린 4/4/12",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81529",
+     "brand": "WANG",
+     "description": "삼양R 하바네로불닭볶음면(멀티)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 210.0
+    },
+    {
+     "itemNo": "82215",
+     "brand": "WANG",
+     "description": "농심R 치킨사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "07734",
+     "brand": "WANG",
+     "description": "왕 특당면 10/2LB",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 225.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "05545",
+     "brand": "WANG",
+     "description": "스키나 초사리 와가메 미역2/12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 2.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "02062",
+     "brand": "WANG",
+     "description": "왕 볶음짜장(병) 12/2.2 Lb (1kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "10134",
+     "brand": "WANG",
+     "description": "왕 찰고추장 4/6.6 Lb (3 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.0,
+     "eachPrice": 10.25,
+     "totalPrice": 41.0
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "00705",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 22/1LB(453",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.3,
+     "eachPrice": 4.84,
+     "totalPrice": 106.3
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 굵은고추가루 6/5Lb (2.26kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "03158",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 10/3LB(1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "03928",
+     "brand": "WANG",
+     "description": "수라상 유기농 고추가루, 양념용",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 6.01,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "16921",
+     "brand": "WANG",
+     "description": "태경 고추가루 김치용 6/5LB(2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 180.0,
+     "eachPrice": 30.01,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04456",
+     "brand": "WANG",
+     "description": "왕 굵은소금 3/10 Lb (4.53 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 67.5,
+     "eachPrice": 22.5,
+     "totalPrice": 67.5
+    },
+    {
+     "itemNo": "04474",
+     "brand": "WANG",
+     "description": "왕 고운소금 3/10 Lb (4.53 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.0,
+     "eachPrice": 10.33,
+     "totalPrice": 31.0
+    },
+    {
+     "itemNo": "05611",
+     "brand": "WANG",
+     "description": "왕 강초 9/1.8 L (60.87 floz)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 57.0,
+     "eachPrice": 6.33,
+     "totalPrice": 57.0
+    },
+    {
+     "itemNo": "14904",
+     "brand": "WANG",
+     "description": "수라상 현미식초 15/30.4floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "14905",
+     "brand": "WANG",
+     "description": "수라상 사과식초 15/30.4 floz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "01122",
+     "brand": "WANG",
+     "description": "수라상 양념치킨소스 12/12.69 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "10756",
+     "brand": "WANG",
+     "description": "왕 불고기양념 15/16.93 oz(480",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 2.88,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "10758",
+     "brand": "WANG",
+     "description": "왕 갈비양념 15/16.93 oz (480 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 2.88,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "04170",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 청양마요맛 20/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "05892",
+     "brand": "WANG",
+     "description": "해태 맛동산 8/12.02 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "06780",
+     "brand": "WANG",
+     "description": "빙그레 꽃게랑 16/70g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "17489",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 랜덤달고나",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 124.0,
+     "eachPrice": 31.0,
+     "totalPrice": 124.0
+    },
+    {
+     "itemNo": "22543",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 딱지 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 345.6,
+     "eachPrice": 28.79,
+     "totalPrice": 345.6
+    },
+    {
+     "itemNo": "80049",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(대) 6/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "83092",
+     "brand": "WANG",
+     "description": "SKYFLAKES TUB 8/800g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 44.72,
+     "eachPrice": 5.59,
+     "totalPrice": 44.72
+    },
+    {
+     "itemNo": "83226",
+     "brand": "WANG",
+     "description": "농심S 메론킥(소) 20/45g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "83227",
+     "brand": "WANG",
+     "description": "농심S 메론킥(대) 6/180g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "10800",
+     "brand": "WANG",
+     "description": "수라상 둥굴레차 15/150/0.04 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 195.0,
+     "eachPrice": 13.01,
+     "totalPrice": 195.0
+    },
+    {
+     "itemNo": "08039",
+     "brand": "WANG",
+     "description": "맥심 디카페인 커피믹스 8/100/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 20.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 52.4
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "01831",
+     "brand": "WANG",
+     "description": "왕 시골 황썬단무지 16/35 oz (1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 6.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "04071",
+     "brand": "WANG",
+     "description": "왕 시골 황반절단무지 30/12.3 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 3.3,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "08199",
+     "brand": "WANG",
+     "description": "스키나 단무지3pc 14/35 oz (1 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 4.5,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "08200",
+     "brand": "WANG",
+     "description": "스키나 통단무지1pc 20/17.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.7,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "00255",
+     "brand": "WANG",
+     "description": "왕 콩된장(병) 6/63.5 oz (1.8 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.8,
+     "eachPrice": 7.3,
+     "totalPrice": 43.8
+    },
+    {
+     "itemNo": "08871",
+     "brand": "WANG",
+     "description": "왕 옛날시골된장 4/5.73 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 12.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00047",
+     "brand": "WANG",
+     "description": "수라상 쌀조랭이떡 12/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    }
+   ],
+   "itemCount": 75,
+   "source": "Kimchi Hollywood INV# 0039610.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039611-IN",
+   "vendor": "Wang",
+   "date": "2026-01-05",
+   "dateDisplay": "1/5/2026",
+   "customer": "",
+   "total": 11381.52,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "17681",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-팥 6/4/5.1 fl",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 49.2
+    },
+    {
+     "itemNo": "00040",
+     "brand": "WANG",
+     "description": "수라상 부추교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "14426",
+     "brand": "WANG",
+     "description": "수라상 찹쌀왕만두피, 20~21EA 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 3.0,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "15060",
+     "brand": "WANG",
+     "description": "왕 추억의붕어빵, 10P 12/1.98lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "15647",
+     "brand": "WANG",
+     "description": "왕 찹쌀호떡(8P) 12/480 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "14897",
+     "brand": "WANG",
+     "description": "수라상 혼합경단 24/7.05 oz (20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "14898",
+     "brand": "WANG",
+     "description": "수라상 오색경단 24/7.05oz (200",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "12777",
+     "brand": "WANG",
+     "description": "왕 꼬치사각어묵 30/10.58 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 2.1,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "13125",
+     "brand": "WANG",
+     "description": "왕 순도미살어묵 20/1LB(453G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 5.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "13337",
+     "brand": "WANG",
+     "description": "왕 부산사각어묵(6P) 24/8.5 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 38.4,
+     "eachPrice": 1.6,
+     "totalPrice": 38.4
+    },
+    {
+     "itemNo": "15183",
+     "brand": "WANG",
+     "description": "왕 부산야채어묵 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "17185",
+     "brand": "WANG",
+     "description": "왕 순도미살두부어묵 40/8.4OZ(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 104.0,
+     "eachPrice": 2.6,
+     "totalPrice": 104.0
+    },
+    {
+     "itemNo": "33190",
+     "brand": "WANG",
+     "description": "왕 부산어묵 10/2.03Lb (920g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 56.6,
+     "eachPrice": 5.66,
+     "totalPrice": 283.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도감자 10/14.1OZ(400G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "17434",
+     "brand": "WANG",
+     "description": "수라상 김밥튀김,야채 16/14.1z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "80585",
+     "brand": "WANG",
+     "description": "서울순대(냉동) 12/24oz (680g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 12.0,
+     "totalPrice": 144.0
+    }
+   ],
+   "itemCount": 21,
+   "source": "Kimchi Hollywood INV# 0039611.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040556-IN",
+   "vendor": "Wang",
+   "date": "2026-02-05",
+   "dateDisplay": "2/5/2026",
+   "customer": "",
+   "total": 17493.4,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "41283",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 15Lb (6.8kg)",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 11.0,
+     "eachPrice": 11.0,
+     "totalPrice": 220.0
+    },
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    },
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15lb",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 16.5,
+     "eachPrice": 16.5,
+     "totalPrice": 330.0
+    },
+    {
+     "itemNo": "07066",
+     "brand": "WANG",
+     "description": "스키나 빵가루 24/7.05 oz(200g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 31.2
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 6/5.5Lb (2.5kg)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 21.0,
+     "eachPrice": 3.5,
+     "totalPrice": 105.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심 신라면(멀티) 4/4/4.23oz (",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 15.9,
+     "eachPrice": 3.98,
+     "totalPrice": 159.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "00846",
+     "brand": "WANG",
+     "description": "왕 평양냉면 10/22 oz (624g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 3.3,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "04669",
+     "brand": "WANG",
+     "description": "스키나 도모시라가소면 24/1 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 1.92,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "22086",
+     "brand": "WANG",
+     "description": "왕 불닭볶음우동 12/15.58 oz (4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "29795",
+     "brand": "WANG",
+     "description": "왕 불닭맛볶음우동 용기 6PACK/7",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "04235",
+     "brand": "WANG",
+     "description": "왕 와사비맛 스낵김, 8+8팩 6/16",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "06421",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(30장) 50/2.53",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 300.0,
+     "eachPrice": 6.0,
+     "totalPrice": 300.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14301",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김-녹차 20/2.11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "18208",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(20장) 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 432.0,
+     "eachPrice": 108.0,
+     "totalPrice": 432.0
+    },
+    {
+     "itemNo": "23048",
+     "brand": "WANG",
+     "description": "스키나 스시 반절김(100장)8/10/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 5.5,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "44204",
+     "brand": "WANG",
+     "description": "가도야 참기름(캔) 10/56 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 159.0,
+     "eachPrice": 15.9,
+     "totalPrice": 1590.0
+    },
+    {
+     "itemNo": "02003",
+     "brand": "WANG",
+     "description": "왕 볶음짜장(병) 12/1.1 Lb (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "04511",
+     "brand": "WANG",
+     "description": "움트리 움쉐프의 와사비 초고추?",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 굵은고추가루 6/5Lb (2.26kg)",
+     "size": "",
+     "qty": 7,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 966.0
+    },
+    {
+     "itemNo": "03158",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 10/3LB(1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "03761",
+     "brand": "WANG",
+     "description": "왕 고추가루 양념용 10/3LB(1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "22015",
+     "brand": "WANG",
+     "description": "움트리 강와사비 12/430g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "39438",
+     "brand": "WANG",
+     "description": "움트리 육류N생와사비 12/4.23OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "20602",
+     "brand": "WANG",
+     "description": "수라상 김치 베이스양념 15/16 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 59.5,
+     "eachPrice": 3.97,
+     "totalPrice": 59.5
+    },
+    {
+     "itemNo": "34952",
+     "brand": "WANG",
+     "description": "왕 닭돼지갈비양념12/29.6oz 840",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "14914",
+     "brand": "WANG",
+     "description": "수라상 베개 마카로니 6/14.1 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.8,
+     "eachPrice": 6.3,
+     "totalPrice": 37.8
+    },
+    {
+     "itemNo": "15817",
+     "brand": "WANG",
+     "description": "왕 베개팝콘강냉이 6/14.81 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.8,
+     "eachPrice": 7.3,
+     "totalPrice": 43.8
+    },
+    {
+     "itemNo": "15818",
+     "brand": "WANG",
+     "description": "왕 베개삼색볼 6/1.19 Lb ((540",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16027",
+     "brand": "WANG",
+     "description": "왕 베개팝스낵 10/10.58 oz(300",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "16033",
+     "brand": "WANG",
+     "description": "왕 베개쌀튀밥 6/1.43 Lb(650 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 6.67,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "16043",
+     "brand": "WANG",
+     "description": "왕 베개쌀떡튀김 6/1.01 Lb.(460",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 47.4,
+     "eachPrice": 7.9,
+     "totalPrice": 47.4
+    },
+    {
+     "itemNo": "17489",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 랜덤달고나",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 124.0,
+     "eachPrice": 31.0,
+     "totalPrice": 1240.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80085",
+     "brand": "WANG",
+     "description": "농심S 조청유과(소) 20/2.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80086",
+     "brand": "WANG",
+     "description": "농심S 타코칩(소) 20/2.11oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심 노래방새우깡 6/14.1oz (40",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80593",
+     "brand": "WANG",
+     "description": "농심S 고추장새우깡(소) 20/2.64",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80843",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 오리지날 8/1",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 20.0,
+     "eachPrice": 2.5,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "83227",
+     "brand": "WANG",
+     "description": "농심S 메론킥(대) 6/180g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "08797",
+     "brand": "WANG",
+     "description": "수라상 사골곰탕 3/6/11.8FL",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 11.0,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "19246",
+     "brand": "WANG",
+     "description": "왕 로제 떡볶이 10/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "05430",
+     "brand": "WANG",
+     "description": "왕 요고베라 패션후르츠 20/16.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "06881",
+     "brand": "WANG",
+     "description": "포카리스웨트 20/16.9 floz (500",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "07623",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 12/1.5L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 38.0,
+     "eachPrice": 3.17,
+     "totalPrice": 38.0
+    },
+    {
+     "itemNo": "07624",
+     "brand": "WANG",
+     "description": "웅진 아침햇살 20/16.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "08300",
+     "brand": "WANG",
+     "description": "포카리스웨트(캔) 5/6/8.28 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 7.2,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "08750",
+     "brand": "WANG",
+     "description": "포카리스웨트 12/50.72 floz (1.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "15778",
+     "brand": "WANG",
+     "description": "왕 요고베라 망고 12/50.67FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.8,
+     "eachPrice": 3.4,
+     "totalPrice": 40.8
+    },
+    {
+     "itemNo": "08429",
+     "brand": "WANG",
+     "description": "정관장 홍삼원D 10/10/3.3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 9.9,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 340.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "83349",
+     "brand": "WANG",
+     "description": "빙그레 바닐라맛우유4/6/6.8 fz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "21410",
+     "brand": "WANG",
+     "description": "왕 볶은우엉차(통) 12/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "14224",
+     "brand": "WANG",
+     "description": "맥심 오리지널 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "14225",
+     "brand": "WANG",
+     "description": "맥심 모카골드 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "17744",
+     "brand": "WANG",
+     "description": "맥심 화이트골드 커피믹스 24/20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "04705",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 15/20.46",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "11903",
+     "brand": "WANG",
+     "description": "꿀패션후르츠망고차 15/560G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 400.0
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 400.0
+    },
+    {
+     "itemNo": "18313",
+     "brand": "WANG",
+     "description": "수라상 꿀생강유자차 15/20.46OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 79.5,
+     "eachPrice": 5.3,
+     "totalPrice": 79.5
+    },
+    {
+     "itemNo": "02327",
+     "brand": "WANG",
+     "description": "펭귄 꽁치통조림, 24/14oz.(400g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 108.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "15481",
+     "brand": "WANG",
+     "description": "수라상 청양초 찌개된장 12/15.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    }
+   ],
+   "itemCount": 76,
+   "source": "Kimchi Hollywood_INV#0040556.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040759-IN",
+   "vendor": "Wang",
+   "date": "2026-02-15",
+   "dateDisplay": "2/15/2026",
+   "customer": "",
+   "total": 18532.05,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "40828",
+     "brand": "WANG",
+     "description": "수라상 건강잡곡 8/5LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 66.0,
+     "eachPrice": 8.25,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "40838",
+     "brand": "WANG",
+     "description": "왕 검정콩, 16/2 LBS (907 G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.5,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz (227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "41684",
+     "brand": "WANG",
+     "description": "왕 메주콩 6/4 Lb (1.81 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "41748",
+     "brand": "WANG",
+     "description": "왕 검정콩 6/4 Lb (1.81 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 8.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "07066",
+     "brand": "WANG",
+     "description": "스키나 빵가루 24/7.05 oz(200g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 31.2
+    },
+    {
+     "itemNo": "12731",
+     "brand": "WANG",
+     "description": "수라상 튀김가루 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "40952",
+     "brand": "WANG",
+     "description": "수라상 대추 10/8 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 3.3,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80454",
+     "brand": "WANG",
+     "description": "농심R 감자면(멀티) 12/4/100g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    },
+    {
+     "itemNo": "80704",
+     "brand": "WANG",
+     "description": "농심R 너구리(멀티) 4/4/120g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.6,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "81254",
+     "brand": "WANG",
+     "description": "농심R 김치라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "82456",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-툼바 4/4/13",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 9.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "82819",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-툼바 6/10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "00815",
+     "brand": "WANG",
+     "description": "왕 우동국수 24/16oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00826",
+     "brand": "WANG",
+     "description": "왕 막국수 24/1 Lb (453 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "02100",
+     "brand": "WANG",
+     "description": "스키나 도모시라가소면 12/3 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "10059",
+     "brand": "WANG",
+     "description": "왕 칡냉면 10/22 oz (624g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 3.3,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "05021",
+     "brand": "WANG",
+     "description": "스키나 생우동 30/7 oz (200 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 0.8,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "22086",
+     "brand": "WANG",
+     "description": "왕 불닭볶음우동 12/15.58 oz (4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "24885",
+     "brand": "WANG",
+     "description": "수라상 서울잡채 6/7.21oz (204.",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "24886",
+     "brand": "WANG",
+     "description": "수라상 부산비빔당면 6/7.32 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "04546",
+     "brand": "WANG",
+     "description": "K-BBQ맛 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "00777",
+     "brand": "WANG",
+     "description": "왕 유기농 산모용실미역 20/5 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 4.5,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "00705",
+     "brand": "WANG",
+     "description": "왕 굵은고추가루 22/1Lb (453g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.3,
+     "eachPrice": 4.84,
+     "totalPrice": 106.3
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 굵은고추가루 6/5Lb (2.26kg)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 276.0
+    },
+    {
+     "itemNo": "03158",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 10/3LB(1.3",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 264.0
+    },
+    {
+     "itemNo": "08035",
+     "brand": "WANG",
+     "description": "왕 고운고추가루 6/5Lb (2.27kg)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 99.0,
+     "eachPrice": 16.5,
+     "totalPrice": 495.0
+    },
+    {
+     "itemNo": "14321",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 김치용 24/8O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "14628",
+     "brand": "WANG",
+     "description": "몬 월남쌈소스12/9.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "83092",
+     "brand": "WANG",
+     "description": "SKYFLAKES TUB 8/800g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 44.72,
+     "eachPrice": 5.59,
+     "totalPrice": 44.72
+    },
+    {
+     "itemNo": "83098",
+     "brand": "WANG",
+     "description": "SKYFLAKES SNP, ONION 20/250g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.06,
+     "eachPrice": 1.95,
+     "totalPrice": 39.06
+    },
+    {
+     "itemNo": "83372",
+     "brand": "WANG",
+     "description": "SKYFLAKES SNP,ORIGINAL 20/250g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.06,
+     "eachPrice": 1.95,
+     "totalPrice": 39.06
+    },
+    {
+     "itemNo": "83600",
+     "brand": "WANG",
+     "description": "SKYFLAKES BUTTER CKS 20/190g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.2,
+     "eachPrice": 2.06,
+     "totalPrice": 41.2
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 255.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "83349",
+     "brand": "WANG",
+     "description": "빙그레 바닐라맛우유4/6/6.8 fz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 85.0
+    },
+    {
+     "itemNo": "24568",
+     "brand": "WANG",
+     "description": "왕 여주차통 12/2.12oz(60g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "83252",
+     "brand": "WANG",
+     "description": "동원맛참매콤참기름참치20/4/90g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 120.0,
+     "eachPrice": 6.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 45.8
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 맛김치 6/42.32oz (1.2kg",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 112.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 병김치 12/7.58oz (215g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/30oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 175.2
+    },
+    {
+     "itemNo": "07031",
+     "brand": "WANG",
+     "description": "수라상 남도식 깍두기 PET(KR) 8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "07032",
+     "brand": "WANG",
+     "description": "수라상 남도식 총각김치 PET(KR)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 7.9,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "01238",
+     "brand": "WANG",
+     "description": "왕 시골 백단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 6.28,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "34319",
+     "brand": "WANG",
+     "description": "쌈무 와사비18/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.4,
+     "eachPrice": 2.3,
+     "totalPrice": 41.4
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "30922",
+     "brand": "WANG",
+     "description": "수라상 신당동 떡볶이떡 20/907g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.6,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "22949",
+     "brand": "WANG",
+     "description": "면사랑 잔치국수 소면 4/6.6 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22950",
+     "brand": "WANG",
+     "description": "면사랑 잔치국수 중면 4/6.6 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22951",
+     "brand": "WANG",
+     "description": "면사랑 우동사리 40/7.05 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22952",
+     "brand": "WANG",
+     "description": "면사랑 생스파게티 20/6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "18600",
+     "brand": "WANG",
+     "description": "일광 블루베리젤리 10/9.87OZ(28",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "08777",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 복숭아 4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "08778",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 망고 4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "08781",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 석류 4/10/5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "08788",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 딸기&키위 4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "09580",
+     "brand": "WANG",
+     "description": "슈가로로 곤약젤리, 망고스틴 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    }
+   ],
+   "itemCount": 70,
+   "source": "Kimchi Hollywood_INV#0040759.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041220-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 239.47,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "41311",
+     "brand": "WANG",
+     "description": "왕 현미쌀 15lb",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    },
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40lb",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 26.0,
+     "eachPrice": 26.0,
+     "totalPrice": 520.0
+    },
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz (227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08270",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/1LB(453g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08271",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/8 oz (22",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "08272",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/1LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 6/5.5Lb (2.5kg)",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "80651",
+     "brand": "WANG",
+     "description": "농심R 신라면(컵)-비건 6/2.64oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81402",
+     "brand": "WANG",
+     "description": "농심R 안성탕면(멀티) 4/4/125g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.6,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "82103",
+     "brand": "WANG",
+     "description": "농심R 새우사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82215",
+     "brand": "WANG",
+     "description": "농심R 치킨사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82917",
+     "brand": "WANG",
+     "description": "오뚜기R 진라면(큰컵)-매운맛 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 7.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "82918",
+     "brand": "WANG",
+     "description": "오뚜기R 진라면(컵)-순한맛 6/65",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 5.4,
+     "eachPrice": 0.9,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "02100",
+     "brand": "WANG",
+     "description": "스키나 도모시라가소면 12/3 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "05482",
+     "brand": "WANG",
+     "description": "왕 함흥물냉면 10/22 oz (624g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 3.3,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "20183",
+     "brand": "WANG",
+     "description": "왕 보리냉면 10/22 oz (624g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 33.0,
+     "eachPrice": 3.3,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "03975",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(100장) 24/8.5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 446.0,
+     "eachPrice": 18.6,
+     "totalPrice": 446.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14301",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김-녹차 20/2.11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김(16팩) 6",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04105",
+     "brand": "WANG",
+     "description": "왕 고추장 37.47Lb (17kg)",
+     "size": "",
+     "qty": 6,
+     "unitPrice": 39.0,
+     "eachPrice": 39.0,
+     "totalPrice": 234.0
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 27.6,
+     "eachPrice": 2.3,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "01835",
+     "brand": "WANG",
+     "description": "왕 굵은고추가루 6/5Lb (2.26kg)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 138.0,
+     "eachPrice": 23.0,
+     "totalPrice": 690.0
+    },
+    {
+     "itemNo": "03158",
+     "brand": "WANG",
+     "description": "왕 고추가루 김치용 10/3LB(1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "03761",
+     "brand": "WANG",
+     "description": "왕 고추가루 양념용 10/3LB(1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 13.2,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "14321",
+     "brand": "WANG",
+     "description": "왕 고추가루, PET, 김치용 24/8O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "08951",
+     "brand": "WANG",
+     "description": "오뚜기 미향 6/1.8L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 8.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "80953",
+     "brand": "WANG",
+     "description": "오뚜기 양조식초 6/1.8 L",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "15335",
+     "brand": "WANG",
+     "description": "몬 피넛월남쌈소스 12/8.1oz (23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.8,
+     "eachPrice": 4.31,
+     "totalPrice": 51.8
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "34952",
+     "brand": "WANG",
+     "description": "왕 닭돼지갈비양념12/29.6oz 840",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심 새우깡(소) 20/2.64oz (75g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "80593",
+     "brand": "WANG",
+     "description": "농심S 고추장새우깡(소) 20/2.64",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "83354",
+     "brand": "WANG",
+     "description": "농심S 와사비새우깡(소) 20/75g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 불닭맛 까르보나라떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 18.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "34961",
+     "brand": "WANG",
+     "description": "수라상 전통떡국 용기 6PACK 6",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 15.0,
+     "eachPrice": 2.5,
+     "totalPrice": 75.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 17.0,
+     "eachPrice": 4.25,
+     "totalPrice": 170.0
+    },
+    {
+     "itemNo": "10378",
+     "brand": "WANG",
+     "description": "수라상 현미녹차 15/150/0.04oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 10.01,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "10941",
+     "brand": "WANG",
+     "description": "수라상 녹차 15/100/0.035oz (1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 130.0,
+     "eachPrice": 8.67,
+     "totalPrice": 130.0
+    },
+    {
+     "itemNo": "24566",
+     "brand": "WANG",
+     "description": "왕 볶은율무차(통) 12/7.4 oz (2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "24567",
+     "brand": "WANG",
+     "description": "왕 볶은현미차(통) 12/7.4 oz (2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "16787",
+     "brand": "WANG",
+     "description": "담터 마가들어15 곡미숫가루 8/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 12.38,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "15147",
+     "brand": "WANG",
+     "description": "왕 유부초밥 4인분 15/11.2 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "05528",
+     "brand": "WANG",
+     "description": "왕 나무젓가락 w/커버 40/100 pa",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 2.1,
+     "totalPrice": 84.0
+    }
+   ],
+   "itemCount": 51,
+   "source": "Kimchi Hollywood_INV#0041220.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041221-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 239.47,
+   "branchId": "hollywood",
+   "items": [
+    {
+     "itemNo": "16064",
+     "brand": "WANG",
+     "description": "빙그레 메로나-멜론 8/8/2.37 fl",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "16065",
+     "brand": "WANG",
+     "description": "빙그레 메로나-딸기 8/8/2.37 fl",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "16066",
+     "brand": "WANG",
+     "description": "빙그레 메로나-바나나 8/8/2.37",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "16067",
+     "brand": "WANG",
+     "description": "빙그레 메로나-망고 8/8/2.37 fl",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "17681",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-팥 6/4/5.1 floz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "17956",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-딸기 6/4/5.1 f",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "17957",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-초코 6/4/5.1",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "28361",
+     "brand": "WANG",
+     "description": "빙그레 메로나-코코넛 8/8/2.37",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "80496",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-녹차 6/4/5.1 fz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "80782",
+     "brand": "WANG",
+     "description": "롯데빙과 찰옥수수바 멀티6/5/14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 44.0,
+     "eachPrice": 7.33,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "80785",
+     "brand": "WANG",
+     "description": "롯데빙과 월드콘 5/5/160 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 7.2,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "81290",
+     "brand": "WANG",
+     "description": "빙그레 메로나-우베 8/8/2.37 fl",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "81324",
+     "brand": "WANG",
+     "description": "롯데빙과 돼지콘4/5/160ml",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 29.0,
+     "eachPrice": 7.25,
+     "totalPrice": 29.0
+    },
+    {
+     "itemNo": "81651",
+     "brand": "WANG",
+     "description": "빙그레 메로나-피스타치오 8/8/2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 32.8
+    },
+    {
+     "itemNo": "83183",
+     "brand": "WANG",
+     "description": "빙그레 싸만코-프렌치바닐라 6/4",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "02746",
+     "brand": "WANG",
+     "description": "수라상 갈비왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "10277",
+     "brand": "WANG",
+     "description": "수라상 삼선해물만두 16/1lb(454",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 105.6,
+     "eachPrice": 17.6,
+     "totalPrice": 105.6
+    },
+    {
+     "itemNo": "10367",
+     "brand": "WANG",
+     "description": "왕 점보야채춘권 12/1.98lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "10849",
+     "brand": "WANG",
+     "description": "팥춘권 (왕) 24/285G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 48.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "11775",
+     "brand": "WANG",
+     "description": "왕 야채춘권10/1.5 Lb (680 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "18242",
+     "brand": "WANG",
+     "description": "수라상 잡채왕만두, 수제, 10EA",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "19986",
+     "brand": "WANG",
+     "description": "수라상 부추잡채왕만두,수제,10E",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 7.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "21527",
+     "brand": "WANG",
+     "description": "수라상 찹쌀생만두피, 30EA 18/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 3.34,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "29384",
+     "brand": "WANG",
+     "description": "수라상 쭈꾸미 잎새만두 12/1.32",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 8.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "44607",
+     "brand": "WANG",
+     "description": "만두촌 돼지고기만두 14/26oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 75.6,
+     "eachPrice": 5.4,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "04783",
+     "brand": "WANG",
+     "description": "구겐 두부 티라미수 오리지널",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "04784",
+     "brand": "WANG",
+     "description": "구겐 두부 티라미수 인절미 12/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "04785",
+     "brand": "WANG",
+     "description": "구겐 두부 티라미수 녹차 12/6.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08974",
+     "brand": "WANG",
+     "description": "금흥 꽃빵(15P) 20/1.71 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.0,
+     "eachPrice": 4.6,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "22630",
+     "brand": "WANG",
+     "description": "구겐 두부 티라미수 밤 12/6.35z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "09847",
+     "brand": "WANG",
+     "description": "왕 어육 소떡소떡 10/1.06lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.0,
+     "eachPrice": 9.2,
+     "totalPrice": 92.0
+    },
+    {
+     "itemNo": "04088",
+     "brand": "WANG",
+     "description": "왕 잔치용 김밥게맛살 12/2.2LB(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 7.33,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "10001",
+     "brand": "WANG",
+     "description": "왕 김밥어육햄 20/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 146.0,
+     "eachPrice": 7.3,
+     "totalPrice": 146.0
+    },
+    {
+     "itemNo": "08592",
+     "brand": "WANG",
+     "description": "왕 생메밀 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "14031",
+     "brand": "WANG",
+     "description": "왕 생칼국수-단호박 10/1.76 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "21374",
+     "brand": "WANG",
+     "description": "왕 생칼국수-현미 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "06756",
+     "brand": "WANG",
+     "description": "수라상 우엉조림 2/10/7.05OZ(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 132.0,
+     "eachPrice": 6.6,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "06762",
+     "brand": "WANG",
+     "description": "수라상 마늘쫑무침 2/10/7.05OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 102.0,
+     "eachPrice": 5.1,
+     "totalPrice": 102.0
+    },
+    {
+     "itemNo": "06763",
+     "brand": "WANG",
+     "description": "수라상 고추무침 2/10/7.05OZ(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.0,
+     "eachPrice": 4.5,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06764",
+     "brand": "WANG",
+     "description": "수라상 파래무침 2/10/7.05OZ(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 130.0,
+     "eachPrice": 6.5,
+     "totalPrice": 130.0
+    },
+    {
+     "itemNo": "10089",
+     "brand": "WANG",
+     "description": "수라상 더덕무침 2/10/7.05OZ(20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.0,
+     "eachPrice": 5.3,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "12083",
+     "brand": "WANG",
+     "description": "수라상 도라지무침 2/10/7.05OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 106.0,
+     "eachPrice": 5.3,
+     "totalPrice": 106.0
+    },
+    {
+     "itemNo": "35428",
+     "brand": "WANG",
+     "description": "수라상 명품 새우젓(KR) 24/1.1L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 207.0,
+     "eachPrice": 8.63,
+     "totalPrice": 207.0
+    },
+    {
+     "itemNo": "03981",
+     "brand": "WANG",
+     "description": "왕 토네이도 감자 10/14.1oz (40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 5.4,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "04692",
+     "brand": "WANG",
+     "description": "수라상 매콤오징어튀김 12/12.34",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "12508",
+     "brand": "WANG",
+     "description": "왕 토네이도감자, 갈릭치즈 12/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.8,
+     "eachPrice": 5.4,
+     "totalPrice": 64.8
+    },
+    {
+     "itemNo": "82102",
+     "brand": "WANG",
+     "description": "Eel 2/11 lbs (9 z)",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 230.0,
+     "eachPrice": 115.0,
+     "totalPrice": 690.0
+    }
+   ],
+   "itemCount": 47,
+   "source": "Kimchi Hollywood_INV#0041221.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041218-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 5185.8,
+   "branchId": "miami",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.5,
+     "eachPrice": 26.5,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "04901",
+     "brand": "WANG",
+     "description": "왕 생우동 w/Soup(3P) 12/3/7.4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "13822",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(50장) 40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 11.0,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "19174",
+     "brand": "WANG",
+     "description": "왕 재래조선김(16팩) 6/16/0.14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "20157",
+     "brand": "WANG",
+     "description": "왕 올리브유 녹차김(16팩) 6/16/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "06126",
+     "brand": "WANG",
+     "description": "왕 유기농 고금도돌각미역 10/12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 113.0,
+     "eachPrice": 11.3,
+     "totalPrice": 113.0
+    },
+    {
+     "itemNo": "11672",
+     "brand": "WANG",
+     "description": "수라상 다시마튀각 20/1.8 oz (5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.0,
+     "eachPrice": 2.45,
+     "totalPrice": 49.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "39499",
+     "brand": "WANG",
+     "description": "왕 컵고추장(EN) 12/6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "08035",
+     "brand": "WANG",
+     "description": "왕 고운고추가루 6/5Lb (2.27kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 142.0,
+     "eachPrice": 23.67,
+     "totalPrice": 142.0
+    },
+    {
+     "itemNo": "39438",
+     "brand": "WANG",
+     "description": "움트리 육류N생와사비 12/4.23OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "31596",
+     "brand": "WANG",
+     "description": "왕 불고기 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "31597",
+     "brand": "WANG",
+     "description": "왕 육개장 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이스낵 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "22733",
+     "brand": "WANG",
+     "description": "구겐 구운쌀과자 김맛12/3.52 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 19.2,
+     "eachPrice": 1.6,
+     "totalPrice": 19.2
+    },
+    {
+     "itemNo": "05430",
+     "brand": "WANG",
+     "description": "왕 요고베라 패션후르츠 20/16.8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "36355",
+     "brand": "WANG",
+     "description": "구겐 코코넛밀크-딸기 4/6/9.80f",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 7.5,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "10738",
+     "brand": "WANG",
+     "description": "왕 까망두유 24/6.42 floz.(190",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 13.3,
+     "eachPrice": 0.55,
+     "totalPrice": 13.3
+    },
+    {
+     "itemNo": "83248",
+     "brand": "WANG",
+     "description": "동원 고추참치 3호 12/4/150g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.8,
+     "eachPrice": 7.4,
+     "totalPrice": 88.8
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 병김치 12/7.58oz (215g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "09247",
+     "brand": "WANG",
+     "description": "왕 미니소세지-떡볶이봉 12/10/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "21273",
+     "brand": "WANG",
+     "description": "왕 미니소세지-치즈봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    }
+   ],
+   "itemCount": 31,
+   "source": "Kimchi Miam_INV#0041218.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0038456-IN",
+   "vendor": "Wang",
+   "date": "2025-11-24",
+   "dateDisplay": "11/24/2025",
+   "customer": "",
+   "total": 24650.37,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "81375",
+     "brand": "WANG",
+     "description": "농심R 신라면 10/120g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 9.0,
+     "eachPrice": 0.9,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "80435",
+     "brand": "WANG",
+     "description": "농심R 순라면(멀티) 8/4/112g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 30.4,
+     "eachPrice": 3.8,
+     "totalPrice": 152.0
+    },
+    {
+     "itemNo": "82708",
+     "brand": "WANG",
+     "description": "농심R 오징어짬뽕(멀티) 8/4/124",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "80454",
+     "brand": "WANG",
+     "description": "농심R 감자면(멀티) 12/4/100g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 198.0
+    },
+    {
+     "itemNo": "82456",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-툼바 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 36.0,
+     "eachPrice": 9.0,
+     "totalPrice": 360.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80428",
+     "brand": "WANG",
+     "description": "농심R 새우탕(컵) 6/67g",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82615",
+     "brand": "WANG",
+     "description": "삼양R 탱글청크토마토파스타(컵)",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "01013",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 봉지",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 7.2,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "15818",
+     "brand": "WANG",
+     "description": "왕 베개삼색볼 6/1.19 Lb ((540",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "12452",
+     "brand": "WANG",
+     "description": "왕 통밀뻥 30/2.82oz (80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "04177",
+     "brand": "WANG",
+     "description": "롯데제과 빈츠 멀티16/204g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 57.6,
+     "eachPrice": 3.6,
+     "totalPrice": 57.6
+    },
+    {
+     "itemNo": "80835",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 아몬드 M 9/128",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "83037",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 초코쿠키 M 9/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "08059",
+     "brand": "WANG",
+     "description": "농심S 빵부장-초코빵 16/1.94oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 44.8
+    },
+    {
+     "itemNo": "83104",
+     "brand": "WANG",
+     "description": "농심S 빵부장-소금빵 16/1.94oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 22.4,
+     "eachPrice": 1.4,
+     "totalPrice": 44.8
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80085",
+     "brand": "WANG",
+     "description": "농심S 조청유과(소) 20/2.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80401",
+     "brand": "WANG",
+     "description": "농심S 양파링(소) 20/1.76oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80133",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "80115",
+     "brand": "WANG",
+     "description": "농심S 고구마깡(소) 20/1.94oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 28.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "02981",
+     "brand": "WANG",
+     "description": "수라상 88서울 짜장떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06452",
+     "brand": "WANG",
+     "description": "수라상 88서울 국물라볶이 (6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09321",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 해물맛, 용기,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09322",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수,돼지고기맛 6PA",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "16442",
+     "brand": "WANG",
+     "description": "왕 로제 쫄볶이, 봉지 10/12.5OZ",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 230.0
+    },
+    {
+     "itemNo": "19246",
+     "brand": "WANG",
+     "description": "왕 로제 떡볶이 10/12.69 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 230.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "10738",
+     "brand": "WANG",
+     "description": "왕 까망두유 24/6.42 floz.(190",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 13.3,
+     "eachPrice": 0.55,
+     "totalPrice": 66.5
+    },
+    {
+     "itemNo": "81701",
+     "brand": "WANG",
+     "description": "해태 갈아만든배(PET) 12/1.5L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "83256",
+     "brand": "WANG",
+     "description": "동원 전복죽24/287.5g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "01422",
+     "brand": "WANG",
+     "description": "수라상 꿀생강모과차 12/2.2LBS(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "40845",
+     "brand": "WANG",
+     "description": "왕 쌀보리 16/3LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "40832",
+     "brand": "WANG",
+     "description": "스키나 건강잡곡 16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 4.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "40838",
+     "brand": "WANG",
+     "description": "왕 검정콩, 16/2 LBS (907 G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.5,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "40852",
+     "brand": "WANG",
+     "description": "왕 납작보리 16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.8,
+     "eachPrice": 3.3,
+     "totalPrice": 52.8
+    },
+    {
+     "itemNo": "41238",
+     "brand": "WANG",
+     "description": "왕 붉은팥16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.32,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "40839",
+     "brand": "WANG",
+     "description": "왕 메주콩 16/2LB(907g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.5,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5LB",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "07710",
+     "brand": "WANG",
+     "description": "수라상 순창식 볶음고추장, 병 1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "08862",
+     "brand": "WANG",
+     "description": "수라상 순창식 고추장, 병 12/17",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "08871",
+     "brand": "WANG",
+     "description": "왕 옛날시골된장 4/5.73 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 12.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "15592",
+     "brand": "WANG",
+     "description": "스키나 교자소스 12/7.77FLOZ(23",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "02524",
+     "brand": "WANG",
+     "description": "수라상 떡볶이소스 15/16.93 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "82353",
+     "brand": "WANG",
+     "description": "LKK SRIRACHA MAYO 12/15oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "83022",
+     "brand": "WANG",
+     "description": "LKK PANDA OS 12/9oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 1.92,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치,PET 6/42.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "34320",
+     "brand": "WANG",
+     "description": "싱그람 치킨무 30/0.44 Lb (200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "08014",
+     "brand": "WANG",
+     "description": "왕 물연근 24/12 oz.(340 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "10104",
+     "brand": "WANG",
+     "description": "스키나 기자미쇼가 12/12 oz.(34",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 129.6
+    },
+    {
+     "itemNo": "82241",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 15/130g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.25,
+     "eachPrice": 1.75,
+     "totalPrice": 78.75
+    },
+    {
+     "itemNo": "82242",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 12/250g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 39.0,
+     "eachPrice": 3.25,
+     "totalPrice": 117.0
+    },
+    {
+     "itemNo": "82250",
+     "brand": "WANG",
+     "description": "니신 건강 참기름 20/600g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 120.0,
+     "eachPrice": 6.0,
+     "totalPrice": 600.0
+    },
+    {
+     "itemNo": "06267",
+     "brand": "WANG",
+     "description": "일광 호박엿 캔디 10/250g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 3.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 33.0,
+     "eachPrice": 5.5,
+     "totalPrice": 66.0
+    },
+    {
+     "itemNo": "15335",
+     "brand": "WANG",
+     "description": "몬 피넛월남쌈소스 12/8.1oz (23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "14628",
+     "brand": "WANG",
+     "description": "몬 월남쌈소스12/9.9 floz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "83240",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/8.4oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.92,
+     "eachPrice": 2.15,
+     "totalPrice": 64.6
+    },
+    {
+     "itemNo": "18208",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(20장) 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 432.0,
+     "eachPrice": 108.0,
+     "totalPrice": 432.0
+    },
+    {
+     "itemNo": "13822",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김40/50장",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 11.0,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "11157",
+     "brand": "WANG",
+     "description": "왕 맛김가루 8/17.6oz (500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 136.0,
+     "eachPrice": 17.0,
+     "totalPrice": 136.0
+    },
+    {
+     "itemNo": "41069",
+     "brand": "WANG",
+     "description": "왕 참깨 16/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.4,
+     "eachPrice": 5.9,
+     "totalPrice": 94.4
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04977",
+     "brand": "WANG",
+     "description": "수라상 다시멸치 16/8oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 127.0,
+     "eachPrice": 7.94,
+     "totalPrice": 127.0
+    },
+    {
+     "itemNo": "04979",
+     "brand": "WANG",
+     "description": "수라상 지리멸치 16/8oz.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 180.0,
+     "eachPrice": 11.25,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "17152",
+     "brand": "WANG",
+     "description": "왕 손질한코다리 16/1.5 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 136.0,
+     "eachPrice": 8.5,
+     "totalPrice": 136.0
+    },
+    {
+     "itemNo": "23150",
+     "brand": "WANG",
+     "description": "왕 특대 자반삼치 12/1.04Lb (47",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 120.0,
+     "eachPrice": 10.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "23177",
+     "brand": "WANG",
+     "description": "델리팜 꿀버터 냉동식빵 8/13.4o",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "33190",
+     "brand": "WANG",
+     "description": "부산어묵 10/2.03 LBS",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 56.6,
+     "eachPrice": 5.66,
+     "totalPrice": 283.0
+    },
+    {
+     "itemNo": "12842",
+     "brand": "WANG",
+     "description": "왕 순도미살어묵 10/2.2lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 93.0,
+     "eachPrice": 9.3,
+     "totalPrice": 93.0
+    },
+    {
+     "itemNo": "17185",
+     "brand": "WANG",
+     "description": "왕 순도미살두부어묵 40/8.4OZ(2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 104.0,
+     "eachPrice": 2.6,
+     "totalPrice": 104.0
+    },
+    {
+     "itemNo": "10044",
+     "brand": "WANG",
+     "description": "왕 사각어묵(B-Type) 22 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 54.0,
+     "eachPrice": 54.0,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "10367",
+     "brand": "WANG",
+     "description": "왕 점보야채춘권 12/1.98lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 86.4,
+     "eachPrice": 7.2,
+     "totalPrice": 172.8
+    },
+    {
+     "itemNo": "02232",
+     "brand": "WANG",
+     "description": "왕 약과(A-Type) 24/11.3 oz (32",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "09495",
+     "brand": "WANG",
+     "description": "왕 무말랭이무침 2/8.8LB(4KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 4.77,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "08137",
+     "brand": "WANG",
+     "description": "왕 파래무침 2/8.8LB(4KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 80.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "08135",
+     "brand": "WANG",
+     "description": "왕 마늘쫑무침 2/8.8LB(4KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 114.4,
+     "eachPrice": 57.2,
+     "totalPrice": 114.4
+    },
+    {
+     "itemNo": "14267",
+     "brand": "WANG",
+     "description": "모란각 비빔냉면, 3인분 6/2.5LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.6,
+     "eachPrice": 11.6,
+     "totalPrice": 69.6
+    },
+    {
+     "itemNo": "19446",
+     "brand": "WANG",
+     "description": "모란각 알뜰평양냉면, 3인분 6/3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 6.67,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05360",
+     "brand": "WANG",
+     "description": "수라상 춘하추동매운불밀면 6/3.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 9.2,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "16045",
+     "brand": "WANG",
+     "description": "수라상 어육비엔나 소세지 24/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 6.67,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 90.3
+    },
+    {
+     "itemNo": "29982",
+     "brand": "WANG",
+     "description": "빙그레 비비빅 8/8/2.37fz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16064",
+     "brand": "WANG",
+     "description": "빙그레 메로나-멜론(8입) 8/8/2.",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 164.0
+    },
+    {
+     "itemNo": "16067",
+     "brand": "WANG",
+     "description": "빙그레 메로나-망고(8입) 8/8/2.",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 164.0
+    },
+    {
+     "itemNo": "81290",
+     "brand": "WANG",
+     "description": "빙그레 메로나 우베 8/8/2.4 fz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 164.0
+    },
+    {
+     "itemNo": "81651",
+     "brand": "WANG",
+     "description": "빙그레 메로나 피스타치오 8/8/2",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.8,
+     "eachPrice": 4.1,
+     "totalPrice": 164.0
+    }
+   ],
+   "itemCount": 114,
+   "source": "Kimchi Pembroke Pines INV# 0038456.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039250-IN",
+   "vendor": "Wang",
+   "date": "2025-12-22",
+   "dateDisplay": "12/22/2025",
+   "customer": "",
+   "total": 25416.3,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "33858",
+     "brand": "WANG",
+     "description": "삼양 불닭볶음면 (멀티) 8/5/140",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 45.0,
+     "eachPrice": 5.63,
+     "totalPrice": 225.0
+    },
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81254",
+     "brand": "WANG",
+     "description": "농심R 김치라면(멀티) 4/4/120g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81707",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발) 6/114g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82708",
+     "brand": "WANG",
+     "description": "농심R 오징어짬뽕(멀티) 8/4/124",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "82834",
+     "brand": "WANG",
+     "description": "농심R 오징어짬뽕(큰사발) 12/10",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "83375",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-똠얌 12/1",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "00824",
+     "brand": "WANG",
+     "description": "왕 짜장국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "04919",
+     "brand": "WANG",
+     "description": "스키나 메밀국수 12/3 Lb (1.36",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "07734",
+     "brand": "WANG",
+     "description": "왕 특당면 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "08309",
+     "brand": "WANG",
+     "description": "올가랜드 유기농소면 12/16 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "27495",
+     "brand": "WANG",
+     "description": "왕 불지않는 잔치진당면20/1.5lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.4,
+     "eachPrice": 4.6,
+     "totalPrice": 110.4
+    },
+    {
+     "itemNo": "04546",
+     "brand": "WANG",
+     "description": "K-BBQ맛 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14301",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김-녹차 20/2.11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "32219",
+     "brand": "WANG",
+     "description": "수라상 불닭맛김, 3팩 24/3/0.17",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 1.5,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34942",
+     "brand": "WANG",
+     "description": "왕 엄마손김밥김10sht50/0.81 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 2.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "01089",
+     "brand": "WANG",
+     "description": "왕 짜장(병) 12/1Lb (450 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "02062",
+     "brand": "WANG",
+     "description": "왕 볶음짜장(병) 12/2.2 Lb (1kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "22370",
+     "brand": "WANG",
+     "description": "수라상 쌈장소스 12/11.63 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "83024",
+     "brand": "WANG",
+     "description": "LKK CHAR SIU SAUCE 12/14oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 3.5,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "36100",
+     "brand": "WANG",
+     "description": "삼양 불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "81856",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 3.5,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "06780",
+     "brand": "WANG",
+     "description": "빙그레 꽃게랑 16/70g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "16043",
+     "brand": "WANG",
+     "description": "왕 베개쌀떡튀김 6/1.01 Lb.(460",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 47.4,
+     "eachPrice": 7.9,
+     "totalPrice": 47.4
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "23256",
+     "brand": "WANG",
+     "description": "왕 한가위 보름달 뻥튀기20/3.53",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80108",
+     "brand": "WANG",
+     "description": "농심S 노래방새우깡(특대) 6/14.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "82263",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-콰트로치즈 12",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "10738",
+     "brand": "WANG",
+     "description": "왕 까망두유 24/6.42 floz.(190",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 13.3,
+     "eachPrice": 0.55,
+     "totalPrice": 39.9
+    },
+    {
+     "itemNo": "15041",
+     "brand": "WANG",
+     "description": "빙그레 바나나맛우유 4/6/6.8 fl",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 380.0
+    },
+    {
+     "itemNo": "18532",
+     "brand": "WANG",
+     "description": "빙그레 딸기맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 15,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 285.0
+    },
+    {
+     "itemNo": "20702",
+     "brand": "WANG",
+     "description": "빙그레 메론맛우유 4/6/6.8 f",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "80876",
+     "brand": "WANG",
+     "description": "빙그레 커피맛우유4/ 6/6.8 floz",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "81555",
+     "brand": "WANG",
+     "description": "빙그레 타로맛우유 4/6/6.8 floz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 19.0,
+     "eachPrice": 4.75,
+     "totalPrice": 95.0
+    },
+    {
+     "itemNo": "06031",
+     "brand": "WANG",
+     "description": "왕 황태채(D) 20/5 oz (142 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 8.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "21273",
+     "brand": "WANG",
+     "description": "왕 미니소세지-치즈봉 12/10/1.2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "22154",
+     "brand": "WANG",
+     "description": "왕 미니소세지-바베큐봉 12/10/1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "08197",
+     "brand": "WANG",
+     "description": "왕 대나무젓가락 w/커버 30/100",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 109.8,
+     "eachPrice": 3.66,
+     "totalPrice": 109.8
+    }
+   ],
+   "itemCount": 54,
+   "source": "Kimchi Pembroke Pines INV# 0039250.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039608-IN",
+   "vendor": "Wang",
+   "date": "2026-01-05",
+   "dateDisplay": "1/5/2026",
+   "customer": "",
+   "total": 15213.47,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시라이스12/4.4lbs",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz(227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "07066",
+     "brand": "WANG",
+     "description": "스키나 빵가루 24/7.05 oz(200g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 31.2
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 중력분 6/5.5Lb (2.",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "80225",
+     "brand": "WANG",
+     "description": "농심R 너구리(멀티)-순한맛 8/4/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "80420",
+     "brand": "WANG",
+     "description": "농심R 김치사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82680",
+     "brand": "WANG",
+     "description": "하우스 카레소스 mild 3/10/7oz.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 9.17,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "82681",
+     "brand": "WANG",
+     "description": "하우스 카레소스 m/hot 3/10/7oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 9.17,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "09724",
+     "brand": "WANG",
+     "description": "수라상 간편당면 24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5 Lb",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 759.6
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "20081",
+     "brand": "WANG",
+     "description": "들기름 메밀막국수 12/15.80 OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "06421",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(30장) 50/2.53",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 300.0,
+     "eachPrice": 6.0,
+     "totalPrice": 300.0
+    },
+    {
+     "itemNo": "13984",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(100장) 2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 510.0,
+     "eachPrice": 21.27,
+     "totalPrice": 510.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "13462",
+     "brand": "WANG",
+     "description": "수라상 참기름(병) 20/10.14 flo",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 106.0,
+     "eachPrice": 5.3,
+     "totalPrice": 212.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "16212",
+     "brand": "WANG",
+     "description": "왕 흰물엿 6/2.45 kg",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 38.0,
+     "eachPrice": 6.33,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "20602",
+     "brand": "WANG",
+     "description": "수라상 김치 베이스양념 15/16 o",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 59.5,
+     "eachPrice": 3.97,
+     "totalPrice": 119.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "02228",
+     "brand": "WANG",
+     "description": "해태 허니버터칩20/2.11 z",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "04170",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 청양마요맛 20/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05892",
+     "brand": "WANG",
+     "description": "해태 맛동산 8/12.02 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "06780",
+     "brand": "WANG",
+     "description": "빙그레 꽃게랑 16/70g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "15292",
+     "brand": "WANG",
+     "description": "왕 베개마카로니 12/170G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "35564",
+     "brand": "WANG",
+     "description": "왕 검은콩 깨 보리건빵30/3 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 15.0,
+     "eachPrice": 0.5,
+     "totalPrice": 15.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80133",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(소) 20/1.94oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "83092",
+     "brand": "WANG",
+     "description": "SKYFLAKES TUB 8/800g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 40.0,
+     "eachPrice": 5.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "83618",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, CHOCO 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83620",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, MANT 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "83256",
+     "brand": "WANG",
+     "description": "동원 전복죽24/287.5g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "16223",
+     "brand": "WANG",
+     "description": "담터 쌍화차플러스 20/15T/0.52O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "34312",
+     "brand": "WANG",
+     "description": "싱그람 꼬들 단무지 20/0.48 lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 2.65,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "34320",
+     "brand": "WANG",
+     "description": "싱그람 치킨무 30/0.44 Lb (200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "22701",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 참깨맛24/7.40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "22703",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 말차맛 24/7.40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "05528",
+     "brand": "WANG",
+     "description": "왕 나무젓가락 w/커버 40/100 pa",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 2.1,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "08197",
+     "brand": "WANG",
+     "description": "왕 대나무젓가락 w/커버 30/100",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 109.8,
+     "eachPrice": 3.66,
+     "totalPrice": 109.8
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    }
+   ],
+   "itemCount": 76,
+   "source": "Kimchi Pembroke Pines INV# 0039608(1).pdf"
+  },
+  {
+   "invoiceNumber": "WG-0039608-IN",
+   "vendor": "Wang",
+   "date": "2026-01-05",
+   "dateDisplay": "1/5/2026",
+   "customer": "",
+   "total": 15213.47,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시라이스12/4.4lbs",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "08269",
+     "brand": "WANG",
+     "description": "왕 볶음통깨(PET) 12/8oz(227g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.8,
+     "eachPrice": 3.9,
+     "totalPrice": 46.8
+    },
+    {
+     "itemNo": "07066",
+     "brand": "WANG",
+     "description": "스키나 빵가루 24/7.05 oz(200g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.2,
+     "eachPrice": 1.3,
+     "totalPrice": 31.2
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "33673",
+     "brand": "WANG",
+     "description": "곰표 밀가루 중력분 6/5.5Lb (2.",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.6,
+     "eachPrice": 4.1,
+     "totalPrice": 73.8
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "80225",
+     "brand": "WANG",
+     "description": "농심R 너구리(멀티)-순한맛 8/4/",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 36.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "80420",
+     "brand": "WANG",
+     "description": "농심R 김치사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "80421",
+     "brand": "WANG",
+     "description": "농심R 육개장사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.6,
+     "eachPrice": 1.05,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "82667",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 리치4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82672",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 수박4/10/5.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82673",
+     "brand": "WANG",
+     "description": "EVERYDAZE곤약젤리 요구르트4/10",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 64.0,
+     "eachPrice": 16.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "82680",
+     "brand": "WANG",
+     "description": "하우스 카레소스 mild 3/10/7oz.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 9.17,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "82681",
+     "brand": "WANG",
+     "description": "하우스 카레소스 m/hot 3/10/7oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 27.5,
+     "eachPrice": 9.17,
+     "totalPrice": 27.5
+    },
+    {
+     "itemNo": "09724",
+     "brand": "WANG",
+     "description": "수라상 간편당면 24/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 2.65,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5 Lb",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 759.6
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "20081",
+     "brand": "WANG",
+     "description": "들기름 메밀막국수 12/15.80 OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "10100",
+     "brand": "WANG",
+     "description": "스키나 편강, 스시진져, 핑크 12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 4.5,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "06421",
+     "brand": "WANG",
+     "description": "왕 김밥용구운김(30장) 50/2.53",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 300.0,
+     "eachPrice": 6.0,
+     "totalPrice": 300.0
+    },
+    {
+     "itemNo": "13984",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(100장) 2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 510.0,
+     "eachPrice": 21.27,
+     "totalPrice": 510.0
+    },
+    {
+     "itemNo": "14568",
+     "brand": "WANG",
+     "description": "왕 핫앤스파이시 스낵김, 8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김, 8+8팩 6/16/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "13462",
+     "brand": "WANG",
+     "description": "수라상 참기름(병) 20/10.14 flo",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 106.0,
+     "eachPrice": 5.3,
+     "totalPrice": 212.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "16212",
+     "brand": "WANG",
+     "description": "왕 흰물엿 6/2.45 kg",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 38.0,
+     "eachPrice": 6.33,
+     "totalPrice": 190.0
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 86.4
+    },
+    {
+     "itemNo": "20602",
+     "brand": "WANG",
+     "description": "수라상 김치 베이스양념 15/16 o",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 59.5,
+     "eachPrice": 3.97,
+     "totalPrice": 119.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "02228",
+     "brand": "WANG",
+     "description": "해태 허니버터칩20/2.11 z",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "04169",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 군옥수수맛 20/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "04170",
+     "brand": "WANG",
+     "description": "구겐 미니 콘칩 청양마요맛 20/",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05892",
+     "brand": "WANG",
+     "description": "해태 맛동산 8/12.02 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "06780",
+     "brand": "WANG",
+     "description": "빙그레 꽃게랑 16/70g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "15292",
+     "brand": "WANG",
+     "description": "왕 베개마카로니 12/170G",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "35564",
+     "brand": "WANG",
+     "description": "왕 검은콩 깨 보리건빵30/3 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 15.0,
+     "eachPrice": 0.5,
+     "totalPrice": 15.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "80083",
+     "brand": "WANG",
+     "description": "농심S 매운새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80133",
+     "brand": "WANG",
+     "description": "농심S 오징어칩(소) 20/1.94oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80168",
+     "brand": "WANG",
+     "description": "농심S 알새우칩(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.5,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "83092",
+     "brand": "WANG",
+     "description": "SKYFLAKES TUB 8/800g",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 40.0,
+     "eachPrice": 5.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "83618",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, CHOCO 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83620",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, MANT 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "83256",
+     "brand": "WANG",
+     "description": "동원 전복죽24/287.5g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 2.25,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "16223",
+     "brand": "WANG",
+     "description": "담터 쌍화차플러스 20/15T/0.52O",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 살균병김치, 무첨가 12/7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/16",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "34312",
+     "brand": "WANG",
+     "description": "싱그람 꼬들 단무지 20/0.48 lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 53.0,
+     "eachPrice": 2.65,
+     "totalPrice": 53.0
+    },
+    {
+     "itemNo": "34320",
+     "brand": "WANG",
+     "description": "싱그람 치킨무 30/0.44 Lb (200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 37.5,
+     "eachPrice": 1.25,
+     "totalPrice": 37.5
+    },
+    {
+     "itemNo": "00045",
+     "brand": "WANG",
+     "description": "수라상 쌀 떡국떡12/2Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 216.0
+    },
+    {
+     "itemNo": "22701",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 참깨맛24/7.40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "22703",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 말차맛 24/7.40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "05528",
+     "brand": "WANG",
+     "description": "왕 나무젓가락 w/커버 40/100 pa",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 2.1,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "08197",
+     "brand": "WANG",
+     "description": "왕 대나무젓가락 w/커버 30/100",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 109.8,
+     "eachPrice": 3.66,
+     "totalPrice": 109.8
+    },
+    {
+     "itemNo": "19565",
+     "brand": "WANG",
+     "description": "스키나 미린 6/60.8 floz(0.78%)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 5.3,
+     "totalPrice": 31.8
+    }
+   ],
+   "itemCount": 76,
+   "source": "Kimchi Pembroke Pines INV# 0039608.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040431-IN",
+   "vendor": "Wang",
+   "date": "2026-02-02",
+   "dateDisplay": "2/2/2026",
+   "customer": "",
+   "total": 17025.3,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41283",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 15Lb (6.8kg)",
+     "size": "",
+     "qty": 30,
+     "unitPrice": 11.0,
+     "eachPrice": 11.0,
+     "totalPrice": 330.0
+    },
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "43523",
+     "brand": "WANG",
+     "description": "스키나 스시라이스 15lb",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 15.0,
+     "eachPrice": 15.0,
+     "totalPrice": 300.0
+    },
+    {
+     "itemNo": "80089",
+     "brand": "WANG",
+     "description": "왕 한가위쌀 40lb",
+     "size": "",
+     "qty": 60,
+     "unitPrice": 23.5,
+     "eachPrice": 23.5,
+     "totalPrice": 1410.0
+    },
+    {
+     "itemNo": "08272",
+     "brand": "WANG",
+     "description": "왕 볶음깨소금(PET) 12/1LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "12730",
+     "brand": "WANG",
+     "description": "수라상 부침가루 10/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 31.8,
+     "eachPrice": 3.18,
+     "totalPrice": 31.8
+    },
+    {
+     "itemNo": "01015",
+     "brand": "WANG",
+     "description": "유어스 오모리김치찌개라면 용기",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "80423",
+     "brand": "WANG",
+     "description": "농심 신사발면 12/3.03oz (86g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 12.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80447",
+     "brand": "WANG",
+     "description": "농심R 소고기사발면 12/86g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80949",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵)-김치 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.3,
+     "eachPrice": 1.05,
+     "totalPrice": 31.5
+    },
+    {
+     "itemNo": "81146",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-블랙 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "81222",
+     "brand": "WANG",
+     "description": "농심 신라면(멀티) 4/4/4.23oz (",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 13.6,
+     "eachPrice": 3.4,
+     "totalPrice": 136.0
+    },
+    {
+     "itemNo": "81386",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-블랙 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 280.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "83351",
+     "brand": "WANG",
+     "description": "농심R 생생야끼우동-데리야끼 10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 2.6,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "00815",
+     "brand": "WANG",
+     "description": "왕 우동국수 24/16oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00818",
+     "brand": "WANG",
+     "description": "왕 우동국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "00826",
+     "brand": "WANG",
+     "description": "왕 막국수 24/1 Lb (453 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 1.8,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "04436",
+     "brand": "WANG",
+     "description": "왕 막국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "04669",
+     "brand": "WANG",
+     "description": "스키나 도모시라가소면 24/1 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 1.92,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "14951",
+     "brand": "WANG",
+     "description": "왕 메밀막국수 12/3 Lb (1.36 kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 6.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5 Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "27495",
+     "brand": "WANG",
+     "description": "왕 불지않는 잔치진당면20/1.5lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "09320",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 매운소고기맛,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "09321",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수, 해물맛, 용기,",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "12449",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수 소고기맛 6PACK",
+     "size": "",
+     "qty": 10,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "18245",
+     "brand": "WANG",
+     "description": "왕 데리야끼우동 용기 6PACK/7.7",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "22152",
+     "brand": "WANG",
+     "description": "왕 올리브간짜장 용기 6PACK/8.2",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "28998",
+     "brand": "WANG",
+     "description": "왕 뚝불우동 용기 6PACK 6/8.0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "04546",
+     "brand": "WANG",
+     "description": "K-BBQ맛 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 127.2
+    },
+    {
+     "itemNo": "04989",
+     "brand": "WANG",
+     "description": "왕 김치맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "12544",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 멸치 20/3oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "14301",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김-녹차 20/2.11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "14567",
+     "brand": "WANG",
+     "description": "왕 카레맛 스낵김, 8+8팩 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "21586",
+     "brand": "WANG",
+     "description": "올가랜드 유기농스낵김, 12팩 8/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 53.0,
+     "eachPrice": 6.63,
+     "totalPrice": 265.0
+    },
+    {
+     "itemNo": "23048",
+     "brand": "WANG",
+     "description": "스키나 스시 반절김(100장)8/10/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 440.0,
+     "eachPrice": 5.5,
+     "totalPrice": 2200.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "11157",
+     "brand": "WANG",
+     "description": "왕 맛김가루 8/17.6oz (500 g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 136.0,
+     "eachPrice": 17.0,
+     "totalPrice": 272.0
+    },
+    {
+     "itemNo": "02062",
+     "brand": "WANG",
+     "description": "왕 볶음짜장(병) 12/2.2 Lb (1kg",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "10881",
+     "brand": "WANG",
+     "description": "왕 쌈장 12/6oz (170g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 120.0
+    },
+    {
+     "itemNo": "22371",
+     "brand": "WANG",
+     "description": "수라상 고추장소스 12/12.69 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.6,
+     "eachPrice": 4.3,
+     "totalPrice": 51.6
+    },
+    {
+     "itemNo": "01122",
+     "brand": "WANG",
+     "description": "수라상 양념치킨소스 12/12.69 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.6,
+     "eachPrice": 3.3,
+     "totalPrice": 39.6
+    },
+    {
+     "itemNo": "15475",
+     "brand": "WANG",
+     "description": "왕 잡채양념 15/16.93 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 247.5
+    },
+    {
+     "itemNo": "31596",
+     "brand": "WANG",
+     "description": "왕 불고기 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "34859",
+     "brand": "WANG",
+     "description": "스키나 돈까스소스12/8.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "81855",
+     "brand": "WANG",
+     "description": "삼양 핵불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 78.0,
+     "eachPrice": 3.25,
+     "totalPrice": 78.0
+    },
+    {
+     "itemNo": "81856",
+     "brand": "WANG",
+     "description": "삼양 까르보불닭소스 24/200g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.0,
+     "eachPrice": 3.5,
+     "totalPrice": 84.0
+    },
+    {
+     "itemNo": "00007",
+     "brand": "WANG",
+     "description": "수라상 쌀전병 10/10.58oz (300g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "04203",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 카카오8/12/2",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 26.5,
+     "eachPrice": 3.31,
+     "totalPrice": 132.5
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07027",
+     "brand": "WANG",
+     "description": "왕 쌀로뻥 30/2.82oz(80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07812",
+     "brand": "WANG",
+     "description": "구겐 버터갈릭새우칩 10/4.58OZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 25.0
+    },
+    {
+     "itemNo": "12504",
+     "brand": "WANG",
+     "description": "샌드웨이퍼 요거트15/2.82 z",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 3.2,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "12505",
+     "brand": "WANG",
+     "description": "샌드웨이퍼 블루베리15/2.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 3.2,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "12507",
+     "brand": "WANG",
+     "description": "샌드웨이퍼 딸기 15/2.82 OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 3.2,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "14612",
+     "brand": "WANG",
+     "description": "구겐 갈릭 바게트 스낵 16/3.52",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 32.0,
+     "eachPrice": 2.0,
+     "totalPrice": 64.0
+    },
+    {
+     "itemNo": "80084",
+     "brand": "WANG",
+     "description": "농심S 바나나킥(소) 20/1.58oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "80845",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 녹차 8/12/28",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 24.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "80846",
+     "brand": "WANG",
+     "description": "롯데제과 초코파이 흑당 8/12/28",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 23.0,
+     "eachPrice": 2.88,
+     "totalPrice": 69.0
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "02981",
+     "brand": "WANG",
+     "description": "수라상 88서울 짜장떡볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06452",
+     "brand": "WANG",
+     "description": "수라상 88서울 국물라볶이 (6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "06453",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제라볶이(6볼",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "16322",
+     "brand": "WANG",
+     "description": "왕 마파두부소스 Hot 24/4.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "17196",
+     "brand": "WANG",
+     "description": "왕 마파두부소스-Mild 24/4.58 o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "17197",
+     "brand": "WANG",
+     "description": "왕 마파두부소스-Extra Hot 24/4",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "31269",
+     "brand": "WANG",
+     "description": "수라상 88 서울 국물떡볶이 용?",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "10161",
+     "brand": "WANG",
+     "description": "수라상 인삼드링크 5/10/4.05FLO",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "20451",
+     "brand": "WANG",
+     "description": "동아 데미소다-복숭아(6캔) 5/6/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 4.6,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "20458",
+     "brand": "WANG",
+     "description": "동아 데미소다-레몬(6캔) 5/6/25",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 4.6,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "32265",
+     "brand": "WANG",
+     "description": "수라상 홍삼뿌리드링크 5/10/4.0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 99.0,
+     "eachPrice": 19.8,
+     "totalPrice": 99.0
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 꿀유자차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "17010",
+     "brand": "WANG",
+     "description": "수라상 꿀대추차 12/2.2 Lb (1 k",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "17012",
+     "brand": "WANG",
+     "description": "수라상 꿀생강차 12/2.2LBS(1KG)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "11183",
+     "brand": "WANG",
+     "description": "왕 식당용 포기김치 16kg (32.27",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 66.0,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "19628",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치,PET 6/42.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 56.0,
+     "eachPrice": 9.34,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 병김치 12/7.58oz (215g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 PET 12/30",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "07031",
+     "brand": "WANG",
+     "description": "수라상 남도식 깍두기 PET(KR) 8",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 5.25,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "07032",
+     "brand": "WANG",
+     "description": "수라상 남도식 총각김치 PET(KR)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 7.9,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "01941",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지1pc 20/17.6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 4.0,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "00046",
+     "brand": "WANG",
+     "description": "수라상 쌀떡볶이떡 12/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "15147",
+     "brand": "WANG",
+     "description": "왕 유부초밥 4인분 15/11.2 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 69.0,
+     "eachPrice": 4.6,
+     "totalPrice": 69.0
+    }
+   ],
+   "itemCount": 93,
+   "source": "Kimchi Pembroke Pines_INV#0040431.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040763-IN",
+   "vendor": "Wang",
+   "date": "2026-02-15",
+   "dateDisplay": "2/15/2026",
+   "customer": "",
+   "total": 25862.33,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "41238",
+     "brand": "WANG",
+     "description": "왕 붉은팥16/2 LBS",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 72.0,
+     "eachPrice": 4.32,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "40845",
+     "brand": "WANG",
+     "description": "왕 쌀보리 16/3LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 84.8,
+     "eachPrice": 5.3,
+     "totalPrice": 84.8
+    },
+    {
+     "itemNo": "40839",
+     "brand": "WANG",
+     "description": "왕 메주콩 16/2LB(907g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.4,
+     "eachPrice": 2.65,
+     "totalPrice": 42.4
+    },
+    {
+     "itemNo": "80422",
+     "brand": "WANG",
+     "description": "농심R 순라면(컵) 6/75g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 6.6,
+     "eachPrice": 1.1,
+     "totalPrice": 33.0
+    },
+    {
+     "itemNo": "00824",
+     "brand": "WANG",
+     "description": "왕 짜장국수 12/3 Lb (1.36 kg)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.2,
+     "eachPrice": 4.6,
+     "totalPrice": 55.2
+    },
+    {
+     "itemNo": "22949",
+     "brand": "WANG",
+     "description": "면사랑 잔치국수 소면 4/6.6 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22950",
+     "brand": "WANG",
+     "description": "면사랑 잔치국수 중면 4/6.6 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 10.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22951",
+     "brand": "WANG",
+     "description": "면사랑 우동사리 40/7.05 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 1.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "22952",
+     "brand": "WANG",
+     "description": "면사랑 생스파게티 20/6 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 20.0,
+     "eachPrice": 1.0,
+     "totalPrice": 20.0
+    },
+    {
+     "itemNo": "05021",
+     "brand": "WANG",
+     "description": "스키나 생우동 30/7 oz (200 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 0.8,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 23.0
+    },
+    {
+     "itemNo": "24885",
+     "brand": "WANG",
+     "description": "수라상 서울잡채 6/7.21oz (204.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "24886",
+     "brand": "WANG",
+     "description": "수라상 부산비빔당면 6/7.32 oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "19671",
+     "brand": "WANG",
+     "description": "수라상 삼계탕재료 24/3.17 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 108.0,
+     "eachPrice": 4.5,
+     "totalPrice": 108.0
+    },
+    {
+     "itemNo": "14569",
+     "brand": "WANG",
+     "description": "왕 데리야끼맛 스낵김, 8+8팩 6/",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "82252",
+     "brand": "WANG",
+     "description": "니신 참기름 15/130g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.0,
+     "eachPrice": 2.0,
+     "totalPrice": 30.0
+    },
+    {
+     "itemNo": "83197",
+     "brand": "WANG",
+     "description": "LKK LESS SODIUM SOY 12/8.4oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.11,
+     "eachPrice": 1.51,
+     "totalPrice": 36.22
+    },
+    {
+     "itemNo": "83240",
+     "brand": "WANG",
+     "description": "LKK PRM DARK SOY 6/8.4oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.92,
+     "eachPrice": 2.15,
+     "totalPrice": 25.84
+    },
+    {
+     "itemNo": "08861",
+     "brand": "WANG",
+     "description": "수라상 순창식 고추장, 병 12/35",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "39438",
+     "brand": "WANG",
+     "description": "움트리 육류N생와사비 12/4.23OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 5.2,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "39476",
+     "brand": "WANG",
+     "description": "움트리 냉면막국수N겨자랑 12/12",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "16878",
+     "brand": "WANG",
+     "description": "스키나 미린 15/30.4 floz (0.78",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 49.5,
+     "eachPrice": 3.3,
+     "totalPrice": 49.5
+    },
+    {
+     "itemNo": "15333",
+     "brand": "WANG",
+     "description": "몬 칠리샤브수끼소스 12/11.4oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 51.8,
+     "eachPrice": 4.31,
+     "totalPrice": 51.8
+    },
+    {
+     "itemNo": "15335",
+     "brand": "WANG",
+     "description": "몬 피넛월남쌈소스 12/8.1oz (23",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 55.92,
+     "eachPrice": 4.66,
+     "totalPrice": 55.92
+    },
+    {
+     "itemNo": "18197",
+     "brand": "WANG",
+     "description": "스키나 교자소스, 매운맛 12/7.7",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 43.2,
+     "eachPrice": 3.6,
+     "totalPrice": 43.2
+    },
+    {
+     "itemNo": "00008",
+     "brand": "WANG",
+     "description": "수라상 쌀선과 10/10.58 oz (300",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 3.6,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07027",
+     "brand": "WANG",
+     "description": "왕 쌀로뻥 30/2.82oz(80g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 39.0,
+     "eachPrice": 1.3,
+     "totalPrice": 39.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 로제",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "12505",
+     "brand": "WANG",
+     "description": "샌드웨이퍼 블루베리15/2.82oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 3.2,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "12507",
+     "brand": "WANG",
+     "description": "샌드웨이퍼 딸기 15/2.82 OZ",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 3.2,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "17489",
+     "brand": "WANG",
+     "description": "넷플릭스 오징어게임 랜덤달고나",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 124.0,
+     "eachPrice": 31.0,
+     "totalPrice": 620.0
+    },
+    {
+     "itemNo": "80082",
+     "brand": "WANG",
+     "description": "농심S 새우깡(소) 20/2.64oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 28.0,
+     "eachPrice": 1.4,
+     "totalPrice": 56.0
+    },
+    {
+     "itemNo": "83618",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, CHOCO 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83619",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, COND 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "83620",
+     "brand": "WANG",
+     "description": "SKYFLAKES SAND, MANT 15/300g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 30.75,
+     "eachPrice": 2.05,
+     "totalPrice": 30.75
+    },
+    {
+     "itemNo": "05587",
+     "brand": "WANG",
+     "description": "왕 매운 까르보나라 떡볶이용기",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 18.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "21410",
+     "brand": "WANG",
+     "description": "왕 볶은우엉차(통) 12/7.05oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "24568",
+     "brand": "WANG",
+     "description": "왕 여주차통 12/2.12oz(60g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 5.3,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "01422",
+     "brand": "WANG",
+     "description": "수라상 꿀생강모과차 12/2.2LBS(",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 175.2
+    },
+    {
+     "itemNo": "14224",
+     "brand": "WANG",
+     "description": "맥심 오리지널 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "14225",
+     "brand": "WANG",
+     "description": "맥심 모카골드 커피믹스 24/20/0",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "01630",
+     "brand": "WANG",
+     "description": "수라상 꿀패션후르츠차 12/2.2 L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 94.8
+    },
+    {
+     "itemNo": "16306",
+     "brand": "WANG",
+     "description": "수라상 유자차 12/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 80.0,
+     "eachPrice": 6.66,
+     "totalPrice": 80.0
+    },
+    {
+     "itemNo": "83248",
+     "brand": "WANG",
+     "description": "동원 고추참치 3호 12/4/150g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 88.8,
+     "eachPrice": 7.4,
+     "totalPrice": 444.0
+    },
+    {
+     "itemNo": "83255",
+     "brand": "WANG",
+     "description": "동원 자연산 골뱅이 24/400g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 144.0,
+     "eachPrice": 6.0,
+     "totalPrice": 144.0
+    },
+    {
+     "itemNo": "06031",
+     "brand": "WANG",
+     "description": "왕 황태채(D) 20/5 oz (142 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 160.0,
+     "eachPrice": 8.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "11183",
+     "brand": "WANG",
+     "description": "왕 식당용 포기김치 16kg (32.27",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 66.0,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 45.8
+    },
+    {
+     "itemNo": "27232",
+     "brand": "WANG",
+     "description": "수라상 병김치 12/7.58oz (215g)",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 72.0
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/30oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    },
+    {
+     "itemNo": "00414",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지3pc 14/35 oz (",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 82.0,
+     "eachPrice": 5.85,
+     "totalPrice": 82.0
+    },
+    {
+     "itemNo": "08871",
+     "brand": "WANG",
+     "description": "왕 옛날시골된장 4/5.73 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 48.0,
+     "eachPrice": 12.0,
+     "totalPrice": 48.0
+    },
+    {
+     "itemNo": "22704",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 망고맛 24/7.62",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    },
+    {
+     "itemNo": "22706",
+     "brand": "WANG",
+     "description": "스키나 모찌모찌 메론맛 24/7.62",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 62.4,
+     "eachPrice": 2.6,
+     "totalPrice": 62.4
+    }
+   ],
+   "itemCount": 59,
+   "source": "Kimchi Pembroke Pines_INV#0040763.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0040764-IN",
+   "vendor": "Wang",
+   "date": "2026-02-15",
+   "dateDisplay": "2/15/2026",
+   "customer": "",
+   "total": 25862.33,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "00040",
+     "brand": "WANG",
+     "description": "수라상 부추교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "00042",
+     "brand": "WANG",
+     "description": "수라상 야채교자 16/1LB(454G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 42.0,
+     "eachPrice": 2.63,
+     "totalPrice": 42.0
+    },
+    {
+     "itemNo": "17958",
+     "brand": "WANG",
+     "description": "수라상 청양초철판군만두 12/2LB",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 76.8,
+     "eachPrice": 6.4,
+     "totalPrice": 76.8
+    },
+    {
+     "itemNo": "14896",
+     "brand": "WANG",
+     "description": "수라상 찹쌀떡 24/7.05 oz (200",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.2,
+     "eachPrice": 2.64,
+     "totalPrice": 63.2
+    },
+    {
+     "itemNo": "10044",
+     "brand": "WANG",
+     "description": "왕 사각어묵(B-Type) 22 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 54.0,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "15731",
+     "brand": "WANG",
+     "description": "왕 순도미살어묵, 꼬지 10/2.05L",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 10.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "08591",
+     "brand": "WANG",
+     "description": "왕 생우동짜장 10/2.2 Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 45.0,
+     "eachPrice": 4.5,
+     "totalPrice": 225.0
+    },
+    {
+     "itemNo": "22961",
+     "brand": "WANG",
+     "description": "생라멘 10/2.31 lbs",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "83186",
+     "brand": "WANG",
+     "description": "롯데 튜나마요 삼각김밥 14/330g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 180.6
+    },
+    {
+     "itemNo": "83187",
+     "brand": "WANG",
+     "description": "롯데 스파이시 튜나 삼각김밥 14",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 90.3,
+     "eachPrice": 6.45,
+     "totalPrice": 180.6
+    }
+   ],
+   "itemCount": 10,
+   "source": "Kimchi Pembroke Pines_INV#0040764.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041222-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 8837.03,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "18233",
+     "brand": "WANG",
+     "description": "왕 유기농누드꿀밤(멀티) 30/5/6",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 216.0,
+     "eachPrice": 7.19,
+     "totalPrice": 1080.0
+    },
+    {
+     "itemNo": "81402",
+     "brand": "WANG",
+     "description": "농심R 안성탕면(멀티) 4/4/125g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.6,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81537",
+     "brand": "WANG",
+     "description": "삼양 컵 까르보 불닭볶음면 6/2.",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 8.4,
+     "eachPrice": 8.4,
+     "totalPrice": 168.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "82820",
+     "brand": "WANG",
+     "description": "삼양R 로제불닭볶음면(멀티) 8/5",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 46.0,
+     "eachPrice": 5.75,
+     "totalPrice": 230.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5 Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "09322",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수,돼지고기맛 6PA",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "23071",
+     "brand": "WANG",
+     "description": "왕 뚝불우동, Value Pack 6/229g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "24885",
+     "brand": "WANG",
+     "description": "수라상 서울잡채 6/7.21oz (204.",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "24886",
+     "brand": "WANG",
+     "description": "수라상 부산비빔당면 6/7.32 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.4,
+     "eachPrice": 4.6,
+     "totalPrice": 110.4
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "13822",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(50장) 40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 11.0,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "13984",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(100장) 2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 510.0,
+     "eachPrice": 21.27,
+     "totalPrice": 510.0
+    },
+    {
+     "itemNo": "18208",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(20장) 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 432.0,
+     "eachPrice": 108.0,
+     "totalPrice": 432.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "83512",
+     "brand": "WANG",
+     "description": "동원 양반김 4호,도시락24/8p/3g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "83241",
+     "brand": "WANG",
+     "description": "LKK GLUTEN FREE SOY 6/8.4oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 13.0,
+     "eachPrice": 2.17,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 27.6,
+     "eachPrice": 2.3,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "31597",
+     "brand": "WANG",
+     "description": "왕 육개장 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이스낵 1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80836",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 화이트쿠키 M 9",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 37.8,
+     "eachPrice": 4.2,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "82263",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-콰트로치즈 12",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "83544",
+     "brand": "WANG",
+     "description": "동원 양반 나주식 곰탕20/460g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.3,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83545",
+     "brand": "WANG",
+     "description": "동원 수라 보양 추어탕20/460 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "13831",
+     "brand": "WANG",
+     "description": "왕 알로에드림 12/50.67 floz (1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "15781",
+     "brand": "WANG",
+     "description": "왕 요고베라 망고 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16681",
+     "brand": "WANG",
+     "description": "왕 요고베라 메론 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16713",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "80786",
+     "brand": "WANG",
+     "description": "롯데D 밀키스CAN 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80787",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 딸기 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80788",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 메론5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80790",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 복숭아 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80791",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 바나나 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82488",
+     "brand": "WANG",
+     "description": "롯데 밀키스 포도맛 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "17744",
+     "brand": "WANG",
+     "description": "맥심 화이트골드 커피믹스 24/20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "83247",
+     "brand": "WANG",
+     "description": "동원 라이트 참치 2호 12/3/250g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "83250",
+     "brand": "WANG",
+     "description": "동원 매운고추참치 12/4/135g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/30oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 175.2
+    },
+    {
+     "itemNo": "05211",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지[김밥용] 14/2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.4,
+     "eachPrice": 6.6,
+     "totalPrice": 92.4
+    },
+    {
+     "itemNo": "34318",
+     "brand": "WANG",
+     "description": "쌈무 18/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.4,
+     "eachPrice": 2.3,
+     "totalPrice": 41.4
+    }
+   ],
+   "itemCount": 59,
+   "source": "Kimchi Pembroke Pines_INV#0041222(1).pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041222-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 8837.03,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "41332",
+     "brand": "WANG",
+     "description": "스키나 스시용 쌀 12/4.4 Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 66.0,
+     "eachPrice": 5.5,
+     "totalPrice": 132.0
+    },
+    {
+     "itemNo": "08273",
+     "brand": "WANG",
+     "description": "왕 볶음검정참깨(PET) 12/8oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.0,
+     "eachPrice": 5.25,
+     "totalPrice": 63.0
+    },
+    {
+     "itemNo": "08275",
+     "brand": "WANG",
+     "description": "왕 볶음통깨 10/4 lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 150.0,
+     "eachPrice": 15.0,
+     "totalPrice": 150.0
+    },
+    {
+     "itemNo": "13657",
+     "brand": "WANG",
+     "description": "수라상 빵가루 10/2.2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 4.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "13658",
+     "brand": "WANG",
+     "description": "수라상 빵가루 12/500 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 3.33,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "18233",
+     "brand": "WANG",
+     "description": "왕 유기농누드꿀밤(멀티) 30/5/6",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 216.0,
+     "eachPrice": 7.19,
+     "totalPrice": 1080.0
+    },
+    {
+     "itemNo": "81402",
+     "brand": "WANG",
+     "description": "농심R 안성탕면(멀티) 4/4/125g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 17.6,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "81517",
+     "brand": "WANG",
+     "description": "농심R 신라면(멀티)-골드 4/4/13",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 28.0,
+     "eachPrice": 7.0,
+     "totalPrice": 140.0
+    },
+    {
+     "itemNo": "81537",
+     "brand": "WANG",
+     "description": "삼양 컵 까르보 불닭볶음면 6/2.",
+     "size": "",
+     "qty": 20,
+     "unitPrice": 8.4,
+     "eachPrice": 8.4,
+     "totalPrice": 168.0
+    },
+    {
+     "itemNo": "81657",
+     "brand": "WANG",
+     "description": "농심R 신라면(큰사발)-골드 6/10",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "82820",
+     "brand": "WANG",
+     "description": "삼양R 로제불닭볶음면(멀티) 8/5",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 46.0,
+     "eachPrice": 5.75,
+     "totalPrice": 230.0
+    },
+    {
+     "itemNo": "24769",
+     "brand": "WANG",
+     "description": "왕 진당면 6/5 Lb",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 75.96,
+     "eachPrice": 12.66,
+     "totalPrice": 379.8
+    },
+    {
+     "itemNo": "09322",
+     "brand": "WANG",
+     "description": "왕 베트남쌀국수,돼지고기맛 6PA",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "11191",
+     "brand": "WANG",
+     "description": "스키나 나마우동(3P) 10/3/7.05",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 23.0,
+     "eachPrice": 2.3,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "18244",
+     "brand": "WANG",
+     "description": "수라상 튀김우동 용기 6PACK/7.8",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "23071",
+     "brand": "WANG",
+     "description": "왕 뚝불우동, Value Pack 6/229g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 12.0,
+     "eachPrice": 2.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "24885",
+     "brand": "WANG",
+     "description": "수라상 서울잡채 6/7.21oz (204.",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "24886",
+     "brand": "WANG",
+     "description": "수라상 부산비빔당면 6/7.32 oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "03210",
+     "brand": "WANG",
+     "description": "올가랜드 유기농구운김(24/1.69o",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.4,
+     "eachPrice": 4.6,
+     "totalPrice": 110.4
+    },
+    {
+     "itemNo": "10591",
+     "brand": "WANG",
+     "description": "수라상 자반맛돌김 20/2.11 oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 63.6,
+     "eachPrice": 3.18,
+     "totalPrice": 63.6
+    },
+    {
+     "itemNo": "13822",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(50장) 40",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 440.0,
+     "eachPrice": 11.0,
+     "totalPrice": 440.0
+    },
+    {
+     "itemNo": "13984",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(100장) 2",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 510.0,
+     "eachPrice": 21.27,
+     "totalPrice": 510.0
+    },
+    {
+     "itemNo": "18208",
+     "brand": "WANG",
+     "description": "수라상 말기편한김밥김(20장) 4/",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 432.0,
+     "eachPrice": 108.0,
+     "totalPrice": 432.0
+    },
+    {
+     "itemNo": "34824",
+     "brand": "WANG",
+     "description": "수라상 차차소왕자 스낵김,8+8팩",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "35106",
+     "brand": "WANG",
+     "description": "왕 K-BBQ맛 스낵김(16팩) 6/16/0",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 36.0,
+     "eachPrice": 6.0,
+     "totalPrice": 180.0
+    },
+    {
+     "itemNo": "83512",
+     "brand": "WANG",
+     "description": "동원 양반김 4호,도시락24/8p/3g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 48.0,
+     "eachPrice": 2.0,
+     "totalPrice": 240.0
+    },
+    {
+     "itemNo": "83241",
+     "brand": "WANG",
+     "description": "LKK GLUTEN FREE SOY 6/8.4oz",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 13.0,
+     "eachPrice": 2.17,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "06194",
+     "brand": "WANG",
+     "description": "왕 글루텐프리 고추장 12/6oz",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 27.6,
+     "eachPrice": 2.3,
+     "totalPrice": 138.0
+    },
+    {
+     "itemNo": "16740",
+     "brand": "WANG",
+     "description": "왕 고추장(EN) 8/1.1 Lb (500 g)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 160.0
+    },
+    {
+     "itemNo": "31597",
+     "brand": "WANG",
+     "description": "왕 육개장 훠궈소스 20/7.05 oz(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "05137",
+     "brand": "WANG",
+     "description": "수라상 88서울 떡볶이스낵 16/4.",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07249",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이스낵 1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 26.0,
+     "eachPrice": 1.63,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "07815",
+     "brand": "WANG",
+     "description": "구겐 바질어니언새우칩 10/4.58O",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 25.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "17595",
+     "brand": "WANG",
+     "description": "구겐 불닭다리봉스낵 30/2.11OZ",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 30.0,
+     "eachPrice": 1.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "80836",
+     "brand": "WANG",
+     "description": "롯데제과 빼빼로 화이트쿠키 M 9",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 37.8,
+     "eachPrice": 4.2,
+     "totalPrice": 75.6
+    },
+    {
+     "itemNo": "82262",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-오리지널 12/1",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "82263",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-콰트로치즈 12",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 48.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "82264",
+     "brand": "WANG",
+     "description": "삼양S 불닭감자칩-하바네로라임",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.36,
+     "eachPrice": 3.78,
+     "totalPrice": 90.72
+    },
+    {
+     "itemNo": "02980",
+     "brand": "WANG",
+     "description": "수라상 88서울 로제떡볶이(6볼)",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 18.0,
+     "eachPrice": 3.0,
+     "totalPrice": 90.0
+    },
+    {
+     "itemNo": "83544",
+     "brand": "WANG",
+     "description": "동원 양반 나주식 곰탕20/460g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 26.0,
+     "eachPrice": 1.3,
+     "totalPrice": 26.0
+    },
+    {
+     "itemNo": "83545",
+     "brand": "WANG",
+     "description": "동원 수라 보양 추어탕20/460 g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 88.0,
+     "eachPrice": 4.4,
+     "totalPrice": 88.0
+    },
+    {
+     "itemNo": "13831",
+     "brand": "WANG",
+     "description": "왕 알로에드림 12/50.67 floz (1",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 24.0,
+     "eachPrice": 2.0,
+     "totalPrice": 24.0
+    },
+    {
+     "itemNo": "15781",
+     "brand": "WANG",
+     "description": "왕 요고베라 망고 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16681",
+     "brand": "WANG",
+     "description": "왕 요고베라 메론 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "16713",
+     "brand": "WANG",
+     "description": "왕 요고베라 딸기 20/16.89FLOZ(",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 32.0,
+     "eachPrice": 1.6,
+     "totalPrice": 32.0
+    },
+    {
+     "itemNo": "80786",
+     "brand": "WANG",
+     "description": "롯데D 밀키스CAN 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80787",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 딸기 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80788",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 메론5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80790",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 복숭아 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "80791",
+     "brand": "WANG",
+     "description": "롯데D 밀키스 바나나 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "82488",
+     "brand": "WANG",
+     "description": "롯데 밀키스 포도맛 5/6/250 ml",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 18.0,
+     "eachPrice": 3.6,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "17744",
+     "brand": "WANG",
+     "description": "맥심 화이트골드 커피믹스 24/20",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 4.59,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "83247",
+     "brand": "WANG",
+     "description": "동원 라이트 참치 2호 12/3/250g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "83250",
+     "brand": "WANG",
+     "description": "동원 매운고추참치 12/4/135g",
+     "size": "",
+     "qty": 5,
+     "unitPrice": 94.8,
+     "eachPrice": 7.9,
+     "totalPrice": 474.0
+    },
+    {
+     "itemNo": "19259",
+     "brand": "WANG",
+     "description": "수라상 남도식 포기김치 2/11Lb",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 45.8,
+     "eachPrice": 22.9,
+     "totalPrice": 91.6
+    },
+    {
+     "itemNo": "41736",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/16oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.4,
+     "eachPrice": 4.36,
+     "totalPrice": 104.8
+    },
+    {
+     "itemNo": "41737",
+     "brand": "WANG",
+     "description": "수라상 서울식 맛김치 12/30oz (",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 175.2
+    },
+    {
+     "itemNo": "05211",
+     "brand": "WANG",
+     "description": "왕 시골 황단무지[김밥용] 14/2.",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 92.4,
+     "eachPrice": 6.6,
+     "totalPrice": 92.4
+    },
+    {
+     "itemNo": "34318",
+     "brand": "WANG",
+     "description": "쌈무 18/12oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 41.4,
+     "eachPrice": 2.3,
+     "totalPrice": 41.4
+    }
+   ],
+   "itemCount": 59,
+   "source": "Kimchi Pembroke Pines_INV#0041222.pdf"
+  },
+  {
+   "invoiceNumber": "WG-0041223-IN",
+   "vendor": "Wang",
+   "date": "2026-03-02",
+   "dateDisplay": "3/2/2026",
+   "customer": "",
+   "total": 8837.03,
+   "branchId": "pembroke_pines",
+   "items": [
+    {
+     "itemNo": "02746",
+     "brand": "WANG",
+     "description": "수라상 갈비왕교자 비건 10/1.3",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 60.0,
+     "eachPrice": 6.0,
+     "totalPrice": 60.0
+    },
+    {
+     "itemNo": "29384",
+     "brand": "WANG",
+     "description": "수라상 쭈꾸미 잎새만두 12/1.32",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 8.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "29385",
+     "brand": "WANG",
+     "description": "수라상 낙지잎새만두 12/21.16oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 8.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "83414",
+     "brand": "WANG",
+     "description": "동원 개성쭈꾸미만두 12/2/380g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 98.4,
+     "eachPrice": 8.2,
+     "totalPrice": 98.4
+    },
+    {
+     "itemNo": "83415",
+     "brand": "WANG",
+     "description": "동원 개성채소듬뿍왕만두 8/630g",
+     "size": "",
+     "qty": 2,
+     "unitPrice": 52.8,
+     "eachPrice": 6.6,
+     "totalPrice": 105.6
+    },
+    {
+     "itemNo": "15358",
+     "brand": "WANG",
+     "description": "시루조아 군고구마떡 18/1.1LB(5",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 142.2,
+     "eachPrice": 7.91,
+     "totalPrice": 142.2
+    },
+    {
+     "itemNo": "04098",
+     "brand": "WANG",
+     "description": "수라상물떡어묵꼬치순한20/470g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 5.5,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "04099",
+     "brand": "WANG",
+     "description": "수라상 물떡어묵꼬치얼큰20/470g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 110.0,
+     "eachPrice": 5.5,
+     "totalPrice": 110.0
+    },
+    {
+     "itemNo": "13125",
+     "brand": "WANG",
+     "description": "왕 순도미살어묵 20/1LB(453G)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 100.0,
+     "eachPrice": 5.0,
+     "totalPrice": 100.0
+    },
+    {
+     "itemNo": "83410",
+     "brand": "WANG",
+     "description": "동원바른85%실꼬리돔사각 20/180",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "83411",
+     "brand": "WANG",
+     "description": "동원 바른85%갈치사각 20/180g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 40.0,
+     "eachPrice": 2.0,
+     "totalPrice": 40.0
+    },
+    {
+     "itemNo": "80950",
+     "brand": "WANG",
+     "description": "동원 게맛살 20/10.58oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 50.0,
+     "eachPrice": 2.5,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "83407",
+     "brand": "WANG",
+     "description": "동원 더킹 오리지널 10/2/140g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 50.0,
+     "eachPrice": 5.0,
+     "totalPrice": 50.0
+    },
+    {
+     "itemNo": "05838",
+     "brand": "WANG",
+     "description": "왕 생칼국수 12/1 Lb (453 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 36.0,
+     "eachPrice": 3.0,
+     "totalPrice": 36.0
+    },
+    {
+     "itemNo": "09819",
+     "brand": "WANG",
+     "description": "스키나 냉동우동면 8/2.54 Lb",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 32.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "13185",
+     "brand": "WANG",
+     "description": "곰표 사누끼우동 8/2.54LB(1.15K",
+     "size": "",
+     "qty": 3,
+     "unitPrice": 26.4,
+     "eachPrice": 3.3,
+     "totalPrice": 79.2
+    },
+    {
+     "itemNo": "14031",
+     "brand": "WANG",
+     "description": "왕 생칼국수-단호박 10/1.76 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 46.0,
+     "eachPrice": 4.6,
+     "totalPrice": 46.0
+    },
+    {
+     "itemNo": "07760",
+     "brand": "WANG",
+     "description": "왕 줄기미역 30/10 oz.(283 g)",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 54.0,
+     "eachPrice": 1.8,
+     "totalPrice": 54.0
+    },
+    {
+     "itemNo": "30210",
+     "brand": "WANG",
+     "description": "원할머니 추어탕24/17.98oz",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 96.0,
+     "eachPrice": 4.0,
+     "totalPrice": 96.0
+    },
+    {
+     "itemNo": "33012",
+     "brand": "WANG",
+     "description": "아사리조개(60/80) 10/2 Lb",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 52.0,
+     "eachPrice": 5.2,
+     "totalPrice": 52.0
+    },
+    {
+     "itemNo": "83367",
+     "brand": "WANG",
+     "description": "동원 통살 새우까스 12/480g",
+     "size": "",
+     "qty": 1,
+     "unitPrice": 87.6,
+     "eachPrice": 7.3,
+     "totalPrice": 87.6
+    }
+   ],
+   "itemCount": 21,
+   "source": "Kimchi Pembroke Pines_INV#0041223.pdf"
   }
  ]
 };
