@@ -530,9 +530,14 @@ function openBranch(branchId) {
     const vItems = vInvoices.reduce((a, i) => a + i.itemCount, 0);
     const vTotal = vInvoices.reduce((a, i) => a + i.total, 0);
 
-    content += `<div class="card" style="border-left: 4px solid ${vColor};">`;
-    content += `<div class="card-title" style="color:${vColor}">${vendorName} (${vInvoices.length} invoices / ${vItems} items / $${(vTotal/1000).toFixed(1)}K)</div>`;
+    const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
+    content += `<div class="card" style="border-left: 4px solid ${vColor}; padding:0;">`;
+    content += `<div class="vendor-toggle" onclick="toggleVendorInvoices('${vendorId}')" style="color:${vColor}; cursor:pointer; padding:12px 16px; display:flex; align-items:center; gap:8px; user-select:none;">
+      <span id="arrow_${vendorId}" style="font-size:12px; transition:transform 0.2s;">▶</span>
+      <span style="font-weight:600; flex:1;">${vendorName} (${vInvoices.length} invoices / ${vItems.toLocaleString()} items / $${(vTotal/1000).toFixed(1)}K)</span>
+    </div>`;
 
+    content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
     for (const inv of vInvoices) {
       const hasItems = inv.itemCount > 0;
@@ -547,7 +552,7 @@ function openBranch(branchId) {
         </div>
       </div>`;
     }
-    content += '</div>';
+    content += '</div></div>';
 
     // Price trends PER VENDOR - only compare same vendor's items
     const itemPriceMap = {};
@@ -596,6 +601,19 @@ function openBranch(branchId) {
 
   document.getElementById('branchContent').innerHTML = content;
   showPage('page-branch');
+}
+
+// ===== VENDOR TOGGLE =====
+function toggleVendorInvoices(vendorId) {
+  const list = document.getElementById('vendor_' + vendorId);
+  const arrow = document.getElementById('arrow_' + vendorId);
+  if (list.style.display === 'none') {
+    list.style.display = 'block';
+    arrow.textContent = '▼';
+  } else {
+    list.style.display = 'none';
+    arrow.textContent = '▶';
+  }
 }
 
 // ===== INVOICE DETAIL =====
