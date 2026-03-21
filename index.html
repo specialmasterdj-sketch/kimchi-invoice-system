@@ -631,6 +631,8 @@ function checkCompareReady() {
 document.addEventListener('input', e => {
   if (e.target.id === 'pasteArea') checkCompareReady();
 });
+document.getElementById('pasteArea').addEventListener('input', checkCompareReady);
+document.getElementById('pasteArea').addEventListener('paste', () => setTimeout(checkCompareReady, 100));
 
 // ===== INVOICE PARSER =====
 function parseInvoiceText(text) {
