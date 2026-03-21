@@ -235,6 +235,12 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 
   <div class="branch-grid" id="branchGrid"></div>
 
+  <div class="card" style="margin-top:10px; border-left: 4px solid #FF6F00;">
+    <div class="card-title" style="color:#FF6F00">Cross-Vendor Price Comparison</div>
+    <div class="card-subtitle">Same product, different vendors - who has the best price?</div>
+    <button class="btn" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()">Compare Vendors</button>
+  </div>
+
   <div class="card" style="margin-top:10px;">
     <div class="card-title">Upload New Invoice</div>
     <div class="card-subtitle">Compare against historical data</div>
@@ -334,6 +340,16 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
     <button class="tab" onclick="setCrossFilter('all')">All Items / 전체</button>
   </div>
   <div class="table-wrap" id="crossTableWrap"></div>
+</div>
+
+<!-- ===== PAGE: CROSS-VENDOR COMPARISON ===== -->
+<div class="page" id="page-crossvendor">
+  <div class="card">
+    <div class="card-title" style="color:#B71C1C">Cross-Vendor Price Comparison</div>
+    <div class="card-subtitle">Compare prices for the same product across different vendors</div>
+  </div>
+  <div class="search-box"><input type="text" id="crossVendorSearch" placeholder="Search product name..." oninput="renderCrossVendor()"></div>
+  <div class="table-wrap" id="crossVendorTableWrap"></div>
 </div>
 
 <!-- ===== PAGE: INVOICE DETAIL ===== -->
@@ -450,6 +466,7 @@ function updateHeader() {
     'page-upload': ['Upload Invoice', 'New Invoice Comparison / 새 인보이스 비교'],
     'page-results': ['Comparison Results', 'Price Analysis / 가격 분석'],
     'page-cross': ['Cross-Branch', 'All Branches / 전 지점 비교'],
+    'page-crossvendor': ['Cross-Vendor', 'Same product, different vendor prices'],
     'page-invoice-detail': [currentInvoice ? currentInvoice.invoiceNumber : 'Invoice', 'Invoice Detail / 인보이스 상세']
   };
   const [title, sub] = titles[currentPage] || ['', ''];
@@ -1061,7 +1078,121 @@ const origShowPage = showPage;
 showPage = function(pageId) {
   origShowPage(pageId);
   if (pageId === 'page-cross') renderCrossBranch();
+  if (pageId === 'page-crossvendor') renderCrossVendor();
 };
+
+// ===== CROSS-VENDOR COMPARISON =====
+// Compare same product name across different vendors
+function openCrossVendor() {
+  showPage('page-crossvendor');
+}
+
+function renderCrossVendor() {
+  const search = (document.getElementById('crossVendorSearch')?.value || '').toLowerCase();
+
+  // Build a map: normalized product name -> { vendor: latestPrice }
+  // Use description (product name) as the key, not item number (different vendors use different numbering)
+  const productMap = {};
+
+  for (const inv of SEED_DATA.invoices) {
+    if (!inv.items || inv.items.length === 0) continue;
+    const vendor = inv.vendor || 'Other';
+    const branch = inv.branchId;
+
+    for (const item of inv.items) {
+      if (item.unitPrice <= 2) continue; // skip promo
+
+      // Normalize product name for matching across vendors
+      const rawName = (item.description || '').toUpperCase().trim();
+      if (!rawName || rawName.length < 3) continue;
+
+      // Create a normalized key by removing brand, size info, and standardizing
+      let key = rawName
+        .replace(/\s*\([^)]*\)\s*/g, ' ')  // remove parenthetical (size info)
+        .replace(/\d+[XxX]\d+.*?(OZ|LB|ML|L|G|KG|PC|CT|EA)/gi, '') // remove pack/size specs
+        .replace(/\b(ASSI|RHEECHUN|NONGSHIM|SAMYANG|OTTOGI|DONGWON|LOTTE|ORION|SEMPIO|CJ|BIBIGO|PALDO|WANG|CHORIPDONG|HANSANG|DAIFUKU|LKK|HUYFONG|COCK|THREE\s*ELEPHANTS?|HANKUKMI|GOMPYO|YISSINE|QONE)\b/gi, '') // remove known brand names
+        .replace(/\s+/g, ' ').trim();
+      if (key.length < 3) continue;
+
+      if (!productMap[key]) {
+        productMap[key] = { name: rawName, fullName: item.description, vendors: {} };
+      }
+
+      // Keep latest/highest price per vendor
+      if (!productMap[key].vendors[vendor] || item.unitPrice > productMap[key].vendors[vendor].price) {
+        productMap[key].vendors[vendor] = {
+          price: item.unitPrice,
+          size: item.size,
+          brand: item.brand,
+          itemNo: item.itemNo,
+          date: inv.date,
+          branch: branch
+        };
+      }
+    }
+  }
+
+  // Filter to products that appear in 2+ vendors
+  let items = Object.values(productMap).filter(p => Object.keys(p.vendors).length >= 2);
+
+  // Apply search filter
+  if (search) {
+    items = items.filter(p => p.name.toLowerCase().includes(search) || p.fullName.toLowerCase().includes(search));
+  }
+
+  // Sort by price difference (biggest first)
+  items.sort((a, b) => {
+    const pricesA = Object.values(a.vendors).map(v => v.price);
+    const pricesB = Object.values(b.vendors).map(v => v.price);
+    const diffA = Math.max(...pricesA) - Math.min(...pricesA);
+    const diffB = Math.max(...pricesB) - Math.min(...pricesB);
+    return diffB - diffA;
+  });
+
+  const allVendors = [...new Set(SEED_DATA.invoices.map(i => i.vendor).filter(Boolean))].sort();
+  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1' };
+
+  let html = '';
+  if (items.length > 0) {
+    html += `<div style="padding:8px 0;font-size:0.8rem;color:#666;">${items.length} products found across multiple vendors</div>`;
+    html += '<table class="results-table"><thead><tr><th>Product</th>';
+    for (const v of allVendors) {
+      const vc = vendorColors[v] || '#555';
+      html += `<th style="color:${vc};min-width:80px">${v}</th>`;
+    }
+    html += '<th>Difference</th></tr></thead><tbody>';
+
+    for (const item of items.slice(0, 100)) {
+      const prices = Object.values(item.vendors).map(v => v.price);
+      const minPrice = Math.min(...prices);
+      const maxPrice = Math.max(...prices);
+      const diff = maxPrice - minPrice;
+      const pctDiff = minPrice > 0 ? ((diff / minPrice) * 100) : 0;
+
+      html += '<tr>';
+      html += `<td class="item-desc">${item.fullName}</td>`;
+      for (const v of allVendors) {
+        const vData = item.vendors[v];
+        if (vData) {
+          const isMin = vData.price === minPrice && prices.length > 1;
+          const isMax = vData.price === maxPrice && prices.length > 1 && diff > 0;
+          const style = isMin ? 'color:#1B5E20;font-weight:700;background:#E8F5E9' :
+                        isMax ? 'color:#B71C1C;font-weight:700;background:#FFEBEE' : '';
+          html += `<td style="${style}">$${vData.price.toFixed(2)}<br><span style="font-size:0.65rem;color:#999">${vData.itemNo}</span></td>`;
+        } else {
+          html += '<td style="color:#ccc;text-align:center">-</td>';
+        }
+      }
+      html += `<td><span class="badge ${diff > 0 ? 'badge-red' : ''}" style="font-size:0.75rem">$${diff.toFixed(2)}<br>${pctDiff.toFixed(1)}%</span></td>`;
+      html += '</tr>';
+    }
+    html += '</tbody></table>';
+  } else {
+    html = '<div style="text-align:center;padding:30px;color:#999;">No matching products found across vendors. Upload more invoices from different vendors.</div>';
+  }
+
+  document.getElementById('crossVendorTableWrap').innerHTML = html;
+}
 
 // ===== UTILITY =====
 function showLoading(text) {
