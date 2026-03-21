@@ -511,7 +511,7 @@ function openBranch(branchId) {
   `;
 
   let content = '';
-  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Other': '#555' };
+  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'JFC': '#4A148C', 'FreshPoint': '#2E7D32', 'Sysco': '#01579B', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KC Trading': '#AD1457', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Bandi Foods': '#283593', 'Wei-Chuan': '#1565C0', 'Two Bros Food': '#00838F', 'POCAS': '#558B2F', 'Eastland Food': '#4E342E', 'Buckhead': '#37474F', 'Walong': '#880E4F', 'OCM': '#FF6F00', 'Other': '#555' };
 
   // Render each vendor section separately
   for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
@@ -1217,7 +1217,7 @@ function renderCrossVendor() {
   });
 
   const allVendors = [...new Set(SEED_DATA.invoices.map(i => i.vendor).filter(Boolean))].sort();
-  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1' };
+  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'JFC': '#4A148C', 'FreshPoint': '#2E7D32', 'Sysco': '#01579B', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KC Trading': '#AD1457', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Bandi Foods': '#283593', 'Wei-Chuan': '#1565C0', 'Two Bros Food': '#00838F', 'POCAS': '#558B2F', 'Eastland Food': '#4E342E', 'Buckhead': '#37474F', 'Walong': '#880E4F', 'OCM': '#FF6F00' };
 
   let html = '';
   if (items.length > 0) {
