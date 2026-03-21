@@ -220,25 +220,25 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   <button class="back-btn" id="backBtn" onclick="goBack()">&#8592;</button>
   <div>
     <h1 id="headerTitle">Kimchi Mart Invoice System</h1>
-    <div class="subtitle" id="headerSubtitle">Invoice Comparison / 인보이스 대조 시스템</div>
+    <div class="subtitle" id="headerSubtitle">Invoice Comparison</div>
   </div>
 </div>
 
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
   <div class="stat-grid">
-    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label">Invoices / 인보이스</div></div>
-    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label">Total Items / 총 품목</div></div>
-    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label">Branches / 지점</div></div>
-    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label">Unique Items / 고유 품목</div></div>
+    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label">Invoices</div></div>
+    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label">Total Items</div></div>
+    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label">Branches</div></div>
+    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label">Unique Items</div></div>
   </div>
 
   <div class="branch-grid" id="branchGrid"></div>
 
   <div class="card" style="margin-top:10px;">
-    <div class="card-title">Upload New Invoice / 새 인보이스 업로드</div>
-    <div class="card-subtitle">Compare against historical data / 과거 데이터와 비교</div>
-    <button class="btn btn-primary" onclick="showPage('page-upload')">Upload & Compare / 업로드 및 비교</button>
+    <div class="card-title">Upload New Invoice</div>
+    <div class="card-subtitle">Compare against historical data</div>
+    <button class="btn btn-primary" onclick="showPage('page-upload')">Upload & Compare</button>
   </div>
 </div>
 
@@ -412,13 +412,12 @@ function initApp() {
     const color = branchColors[id] || '#666';
     html += `<div class="branch-card" style="border-left-color:${color}" onclick="openBranch('${id}')">
       <div class="branch-name">${br.name}</div>
-      <div class="branch-name-kr">${br.nameKr || ''}</div>
       <div class="branch-code">${br.code}</div>
       <div class="branch-stats">${brInvoices.length} invoices / ${brItems} items<br>Latest: ${latestDate}</div>
     </div>`;
   }
   html += `<div class="all-branches-btn" onclick="showPage('page-cross')">
-    All Branches Comparison / 전 지점 비교<span>Compare same items across branches / 지점간 동일 품목 가격 비교</span>
+    All Branches Comparison<span>Compare same items across branches</span>
   </div>`;
   grid.innerHTML = html;
 }
@@ -446,7 +445,7 @@ function goBack() {
 
 function updateHeader() {
   const titles = {
-    'page-home': ['Kimchi Mart Invoice System', 'Invoice Comparison / 인보이스 대조 시스템'],
+    'page-home': ['Kimchi Mart Invoice System', 'Invoice Comparison'],
     'page-branch': [currentBranch ? SEED_DATA.branches[currentBranch]?.name : 'Branch', 'Branch Detail / 지점 상세'],
     'page-upload': ['Upload Invoice', 'New Invoice Comparison / 새 인보이스 비교'],
     'page-results': ['Comparison Results', 'Price Analysis / 가격 분석'],
@@ -497,11 +496,19 @@ function openBranch(branchId) {
   content += '</div>';
 
   // Price trends for this branch - find items that appear in multiple invoices
+  // IMPORTANT: Skip promo/credit lines ($2 or less) and deduplicate same item in same invoice (keep highest price)
   const itemPriceMap = {};
   for (const inv of invoices) {
+    const bestPrices = {};
     for (const item of inv.items) {
-      if (!itemPriceMap[item.itemNo]) itemPriceMap[item.itemNo] = [];
-      itemPriceMap[item.itemNo].push({ date: inv.date, price: item.unitPrice, brand: item.brand, desc: item.description });
+      if (item.unitPrice <= 2) continue; // Skip promo/credit lines
+      if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
+        bestPrices[item.itemNo] = item;
+      }
+    }
+    for (const [itemNo, item] of Object.entries(bestPrices)) {
+      if (!itemPriceMap[itemNo]) itemPriceMap[itemNo] = [];
+      itemPriceMap[itemNo].push({ date: inv.date, price: item.unitPrice, brand: item.brand, desc: item.description });
     }
   }
   const changedItems = Object.entries(itemPriceMap)
@@ -747,11 +754,19 @@ function runComparison() {
       ).sort((a, b) => b.date.localeCompare(a.date));
 
       // Build price history map: itemNo -> [{date, price, invoice}]
+      // Skip promo/credit lines ($2 or less), deduplicate same item per invoice (keep highest)
       const priceHistory = {};
       for (const inv of historicalInvoices) {
+        const bestPrices = {};
         for (const item of inv.items) {
-          if (!priceHistory[item.itemNo]) priceHistory[item.itemNo] = [];
-          priceHistory[item.itemNo].push({
+          if (item.unitPrice <= 2) continue; // Skip promo/credit lines
+          if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
+            bestPrices[item.itemNo] = item;
+          }
+        }
+        for (const [itemNo, item] of Object.entries(bestPrices)) {
+          if (!priceHistory[itemNo]) priceHistory[itemNo] = [];
+          priceHistory[itemNo].push({
             date: inv.date, price: item.unitPrice, invoice: inv.invoiceNumber
           });
         }
@@ -945,12 +960,13 @@ function renderCrossBranch() {
   const itemMap = {};
   for (const [bId, inv] of Object.entries(latestByBranch)) {
     for (const item of inv.items) {
+      if (item.unitPrice <= 2) continue; // Skip promo/credit lines
       const key = item.itemNo;
       if (!itemMap[key]) {
         itemMap[key] = { itemNo: key, brand: item.brand, description: item.description, size: item.size, prices: {} };
       }
-      // Use the latest price if item appears multiple times
-      if (!itemMap[key].prices[bId] || item.unitPrice > 0) {
+      // Use the highest price if item appears multiple times (skip promo lines)
+      if (!itemMap[key].prices[bId] || item.unitPrice > itemMap[key].prices[bId]) {
         itemMap[key].prices[bId] = item.unitPrice;
       }
     }

@@ -1,14 +1,14 @@
 // Kimchi Mart Invoice Comparison System - Seed Data
 // Generated from 9 Rhee Bros invoices (9 files, 7 with item data)
 // Generated on: 2026-03-21T05:22:07.806Z
-// Branches: FL116=Miami (Oriental Mart), FL342=Pembroke Pines, FL381=Hollywood, FL417=Coral Springs, FL432=Fort Lauderdale (Palm Beach)
+// Branches: FL116=Miami, FL342=Pembroke Pines, FL381=Hollywood, FL417=Coral Springs, FL432=Fort Lauderdale (Palm Beach)
 
 const SEED_DATA = {
   "branches": {
     "miami": {
       "id": "miami",
-      "name": "Miami (Oriental Mart)",
-      "nameKr": "마이애미 (오리엔탈 마트)",
+      "name": "Miami",
+      "nameKr": "마이애미",
       "code": "FL116"
     },
     "pembroke_pines": {
