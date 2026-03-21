@@ -475,7 +475,7 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 
     <div class="form-group">
       <label class="form-label">Or paste text data / 텍스트 직접 입력</label>
-      <textarea id="manual-text" rows="5" placeholder="Paste pipe-delimited invoice data here...&#10;No|Brand|Description|Size|Qty|UM|Type|Unit|Each|Total" style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.8rem;font-family:monospace;resize:vertical;"></textarea>
+      <textarea id="manual-text" rows="6" placeholder="Paste invoice data here (any format):&#10;&#10;Pipe-delimited: No|Brand|Description|Size|Qty|UM|Type|Unit|Each|Total&#10;Rhee Bros PDF text: 00030D RHEECHUN FANCY VARIETY RICE... 15.50 15.50 620.00&#10;Wang/Choripdong: Item# Name Qty Price Total&#10;Or paste text copied from PDF/email" style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.8rem;font-family:monospace;resize:vertical;"></textarea>
     </div>
 
     <div id="processing-status" style="display:none">
@@ -527,9 +527,17 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
     </table>
   </div>
 
-  <div style="margin-top:12px; display:flex; gap:8px;">
-    <button class="btn btn-success" onclick="exportCSV()" style="flex:1">Export CSV</button>
-    <button class="btn btn-secondary" onclick="saveComparison()" style="flex:1">Save / 저장</button>
+  <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+    <button class="btn btn-success" onclick="exportCSV()" style="flex:1;min-width:120px">Export CSV</button>
+    <button class="btn btn-secondary" onclick="saveComparison()" style="flex:1;min-width:120px">Save / 저장</button>
+  </div>
+  <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+    <button class="btn btn-primary" onclick="exportPriceChangeCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px">Price Changes CSV</button>
+    <button class="btn btn-primary" onclick="exportNewItemsCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px;background:#2196F3">New Items CSV</button>
+    <button class="btn btn-secondary" onclick="exportFullSummaryCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px">Full Summary CSV</button>
+  </div>
+  <div style="margin-top:8px;">
+    <button class="btn btn-secondary" onclick="navigate('rawtext')" style="font-size:0.8rem;padding:10px">View Raw Text / 추출된 텍스트 보기</button>
   </div>
 </div>
 
@@ -584,6 +592,19 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
     <button class="btn btn-secondary" onclick="exportPriceTracker()">
       Export Price Tracker / 가격 추적 내보내기
     </button>
+  </div>
+</div>
+
+<!-- ===== PAGE: RAW TEXT PREVIEW ===== -->
+<div id="page-rawtext" class="page">
+  <div class="card">
+    <div class="card-title">Raw Text Preview / 추출된 텍스트</div>
+    <div class="card-subtitle">Text extracted from the uploaded PDF or file. Use this to debug parsing issues.</div>
+    <textarea id="raw-text-display" rows="20" readonly style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.75rem;font-family:monospace;resize:vertical;background:#fafafa;"></textarea>
+    <div style="margin-top:10px;display:flex;gap:8px;">
+      <button class="btn btn-secondary" onclick="copyRawText()" style="flex:1">Copy Text / 복사</button>
+      <button class="btn btn-primary" onclick="navigate('compare')" style="flex:1">Back to Results / 결과로</button>
+    </div>
   </div>
 </div>
 
@@ -732,6 +753,7 @@ async function processInvoice() {
 
     if (manualText) {
       setProgress(30);
+      window._lastExtractedText = manualText;
       parsedItems = parseTextData(manualText, vendor);
     } else if (currentFile) {
       const ext = currentFile.name.split('.').pop().toLowerCase();
@@ -797,11 +819,18 @@ async function processInvoice() {
     currentFlags = flags;
     setProgress(100);
 
+    // Update raw text preview
+    const rawTextEl = document.getElementById('raw-text-display');
+    if (rawTextEl && window._lastExtractedText) {
+      rawTextEl.value = window._lastExtractedText;
+    }
+
     setTimeout(() => {
       hideLoading();
       displayResults(invoice, flags);
       navigate('compare');
-      showToast(`Found ${flags.filter(f=>f.type!=='UNCHANGED').length} flags in ${parsedItems.length} items`);
+      const flagCount = flags.filter(f=>f.type!=='UNCHANGED').length;
+      showToast(`Found ${flagCount} flags in ${parsedItems.length} items. Download CSVs below.`);
     }, 300);
 
   } catch (err) {
@@ -816,12 +845,87 @@ function parseTextData(text, vendor) {
   const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   const items = [];
 
+  // Store raw text for preview
+  window._lastExtractedText = text;
+
+  // Detect format: pipe-delimited vs space/tab-delimited
+  const hasPipes = lines.filter(l => l.split('|').length >= 5).length >= 2;
+
+  console.log('[PARSE] Vendor:', vendor, '| Lines:', lines.length, '| Has pipes:', hasPipes);
+  console.log('[PARSE] First 3 lines:', lines.slice(0, 3));
+
+  if (hasPipes) {
+    // ===== PIPE-DELIMITED FORMAT (for .txt files) =====
+    return parsePipeDelimited(lines, vendor);
+  }
+
+  // ===== PDF-EXTRACTED or PASTED TEXT (space/tab delimited) =====
+  // Try JSON first for choripdong
+  if (vendor === 'choripdong') {
+    try {
+      const json = JSON.parse(text);
+      for (const [code, item] of Object.entries(json)) {
+        items.push({
+          itemNo: item.item_code || code,
+          brand: 'CHORIPDONG',
+          name: item.en_desc || item.kr_desc || '',
+          krName: item.kr_desc || '',
+          size: item.size_pack || '',
+          qty: item.qty || 0,
+          unitPrice: item.cs_price || 0,
+          each: item.ea_price || 0,
+          total: (item.cs_price || 0) * (item.qty || 0)
+        });
+      }
+      if (items.length > 0) return items;
+    } catch(e) { /* Not JSON, continue with line parsing */ }
+  }
+
   for (const line of lines) {
-    // Skip headers and metadata lines
-    if (line.startsWith('INVOICE:') || line.startsWith('DATE:') || line.startsWith('CUSTOMER:') ||
-        line.startsWith('TOTAL:') || line.startsWith('NOTE:') || line.startsWith('ORDER:') ||
-        line.startsWith('SHIP TO:') || line.startsWith('SALESPERSON:') || line.startsWith('TERMS:') ||
-        line.startsWith('No|') || line.startsWith('No.') || line.startsWith('index|')) continue;
+    // Skip common header/metadata lines
+    if (/^(INVOICE|DATE|CUSTOMER|TOTAL|NOTE|ORDER|SHIP TO|SALESPERSON|TERMS|SOLD TO|P\.?O\.?|BILL TO|No\.|index|Page |Ship Via|Due Date|Printed|Invoice #|Delivery|Subtotal|Tax|Thank you)/i.test(line)) continue;
+    if (/^[-=_*]{3,}/.test(line)) continue; // separator lines
+    if (/^\d+\/\d+\/\d+/.test(line) && !/\d{4,5}[A-Za-z]/.test(line)) continue; // pure date lines
+
+    if (vendor === 'rhee') {
+      const parsed = parseRheeBrosPDFLine(line);
+      if (parsed) {
+        items.push(parsed);
+        continue;
+      }
+    } else if (vendor === 'wang') {
+      const parsed = parseWangPDFLine(line);
+      if (parsed) {
+        items.push(parsed);
+        continue;
+      }
+    } else if (vendor === 'choripdong') {
+      const parsed = parseChoripdongPDFLine(line);
+      if (parsed) {
+        items.push(parsed);
+        continue;
+      }
+    } else {
+      // Generic/Other vendor
+      const parsed = parseGenericLine(line);
+      if (parsed) {
+        items.push(parsed);
+        continue;
+      }
+    }
+  }
+
+  console.log('[PARSE] Total items parsed:', items.length);
+  if (items.length > 0) console.log('[PARSE] First item:', items[0]);
+
+  return items;
+}
+
+// ===== PIPE-DELIMITED PARSING =====
+function parsePipeDelimited(lines, vendor) {
+  const items = [];
+  for (const line of lines) {
+    if (/^(INVOICE|DATE|CUSTOMER|TOTAL|NOTE|ORDER|No\||No\.|index\|)/i.test(line)) continue;
 
     const parts = line.split('|');
 
@@ -830,76 +934,34 @@ function parseTextData(text, vendor) {
       const each = parseFloat(parts[8]) || 0;
       const total = parseFloat(parts[9]) || 0;
       if (unitPrice === 0 && each === 0 && total === 0) continue;
-
       items.push({
-        itemNo: parts[0].trim(),
-        brand: parts[1] ? parts[1].trim() : '',
-        name: parts[2] ? parts[2].trim() : '',
-        size: parts[3] ? parts[3].trim() : '',
-        qty: parseInt(parts[4]) || 0,
-        unitPrice: unitPrice,
-        each: each,
-        total: total
+        itemNo: parts[0].trim(), brand: parts[1] ? parts[1].trim() : '',
+        name: parts[2] ? parts[2].trim() : '', size: parts[3] ? parts[3].trim() : '',
+        qty: parseInt(parts[4]) || 0, unitPrice, each, total
       });
     } else if (vendor === 'wang' && parts.length >= 4) {
       const price = parseFloat(parts[3]) || 0;
       if (price === 0) continue;
       items.push({
-        itemNo: parts[1] ? parts[1].trim() : '',
-        brand: 'WANG',
-        name: parts[2] ? parts[2].trim() : '',
-        size: '',
-        qty: 1,
-        unitPrice: price,
-        each: price,
-        total: price
+        itemNo: parts[1] ? parts[1].trim() : '', brand: 'WANG',
+        name: parts[2] ? parts[2].trim() : '', size: '',
+        qty: 1, unitPrice: price, each: price, total: price
       });
-    } else if (vendor === 'choripdong') {
-      // Try JSON parse for choripdong
-      try {
-        const json = JSON.parse(text);
-        for (const [code, item] of Object.entries(json)) {
-          items.push({
-            itemNo: item.item_code || code,
-            brand: 'CHORIPDONG',
-            name: item.en_desc || item.kr_desc || '',
-            krName: item.kr_desc || '',
-            size: item.size_pack || '',
-            qty: item.qty || 0,
-            unitPrice: item.cs_price || 0,
-            each: item.ea_price || 0,
-            total: (item.cs_price || 0) * (item.qty || 0)
-          });
-        }
-        return items;
-      } catch(e) {
-        // Not JSON, try pipe-delimited
-        if (parts.length >= 4) {
-          items.push({
-            itemNo: parts[0].trim(),
-            brand: 'CHORIPDONG',
-            name: parts[1] ? parts[1].trim() : '',
-            size: parts[2] ? parts[2].trim() : '',
-            qty: parseInt(parts[3]) || 0,
-            unitPrice: parseFloat(parts[4]) || 0,
-            each: parseFloat(parts[5]) || 0,
-            total: parseFloat(parts[6]) || 0
-          });
-        }
-      }
+    } else if (vendor === 'choripdong' && parts.length >= 4) {
+      items.push({
+        itemNo: parts[0].trim(), brand: 'CHORIPDONG',
+        name: parts[1] ? parts[1].trim() : '', size: parts[2] ? parts[2].trim() : '',
+        qty: parseInt(parts[3]) || 0, unitPrice: parseFloat(parts[4]) || 0,
+        each: parseFloat(parts[5]) || 0, total: parseFloat(parts[6]) || 0
+      });
     } else if (vendor === 'other' && parts.length >= 3) {
-      // Generic: try to find numbers
       const nums = line.match(/[\d.]+/g);
       if (nums && nums.length >= 2) {
         items.push({
-          itemNo: parts[0].trim(),
-          brand: '',
-          name: parts[1] ? parts[1].trim() : line.substring(0, 40),
-          size: '',
-          qty: parseInt(nums[0]) || 1,
-          unitPrice: parseFloat(nums[nums.length - 1]) || 0,
-          each: parseFloat(nums[nums.length - 1]) || 0,
-          total: parseFloat(nums[nums.length - 1]) || 0
+          itemNo: parts[0].trim(), brand: '',
+          name: parts[1] ? parts[1].trim() : line.substring(0, 40), size: '',
+          qty: parseInt(nums[0]) || 1, unitPrice: parseFloat(nums[nums.length - 1]) || 0,
+          each: parseFloat(nums[nums.length - 1]) || 0, total: parseFloat(nums[nums.length - 1]) || 0
         });
       }
     }
@@ -907,10 +969,248 @@ function parseTextData(text, vendor) {
   return items;
 }
 
+// ===== RHEE BROS PDF LINE PARSER =====
+function parseRheeBrosPDFLine(line) {
+  // Normalize tabs/multiple spaces to single space for matching
+  const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+
+  // Pattern 1: Full line with item number, description, size, qty, unit type, department, prices
+  // e.g. "00030D RHEECHUN FANCY VARIETY RICE (USA, 15#_NEW) 15 LB 40 Case Dry 15.50 15.50 620.00"
+  // Item number: 4-5 digits + 1-2 letters
+  const rxItemNo = /^(\d{4,5}[A-Za-z]{1,2})\s+/;
+  const itemMatch = normalized.match(rxItemNo);
+  if (!itemMatch) return null;
+
+  const itemNo = itemMatch[1];
+  const rest = normalized.substring(itemMatch[0].length);
+
+  // Extract trailing numbers (prices): look for 2-3 decimal numbers at end
+  // Could be: qty unitType dept unitPrice each total
+  // Or: unitPrice each total
+  const pricePattern = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+  const priceMatch = rest.match(pricePattern);
+  if (!priceMatch) {
+    // Try with just 2 prices at end
+    const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+    const priceMatch2 = rest.match(pricePattern2);
+    if (priceMatch2) {
+      const desc = rest.substring(0, priceMatch2.index).trim();
+      const unitPrice = parseFloat(priceMatch2[1].replace(/,/g, ''));
+      const total = parseFloat(priceMatch2[2].replace(/,/g, ''));
+      const { brand, name, size, qty } = extractRheeDescParts(desc);
+      return {
+        itemNo, brand, name, size, qty: qty || 1,
+        unitPrice, each: unitPrice, total
+      };
+    }
+    return null;
+  }
+
+  const unitPrice = parseFloat(priceMatch[1].replace(/,/g, ''));
+  const each = parseFloat(priceMatch[2].replace(/,/g, ''));
+  const total = parseFloat(priceMatch[3].replace(/,/g, ''));
+  if (unitPrice === 0 && each === 0 && total === 0) return null;
+
+  const descPart = rest.substring(0, priceMatch.index).trim();
+  const { brand, name, size, qty } = extractRheeDescParts(descPart);
+
+  return { itemNo, brand, name, size, qty: qty || 1, unitPrice, each, total };
+}
+
+function extractRheeDescParts(desc) {
+  // Try to extract: BRAND DESCRIPTION SIZE QTY UNIT_TYPE DEPT
+  // Brand is usually the first ALL-CAPS word
+  // Size patterns: "15 LB", "12X17 OZ", "8X5 LB", "24X5.3 OZ"
+  // Unit types: Case, Box, Bag, Each, Pallet
+  // Dept: Dry, Frozen, Refriger, Produce
+
+  let brand = '';
+  let name = desc;
+  let size = '';
+  let qty = 1;
+
+  // Remove trailing unit type and department
+  const unitDeptRx = /\s+(Case|Box|Bag|Each|Pallet|Sack)\s+(Dry|Frozen|Refriger|Produce|Beverag|HBC|Non-Food|Snack)\s*$/i;
+  const udMatch = name.match(unitDeptRx);
+  if (udMatch) {
+    name = name.substring(0, udMatch.index).trim();
+  }
+
+  // Try to extract qty (number before Case/Box/unit type, or standalone number at end)
+  const qtyMatch = name.match(/\s+(\d+)\s*$/);
+  if (qtyMatch) {
+    qty = parseInt(qtyMatch[1]);
+    name = name.substring(0, qtyMatch.index).trim();
+  }
+
+  // Extract size pattern: "12X17 OZ", "15 LB", "8X5X4.9 OZ", "2X8 LB", etc.
+  const sizeRx = /\s+(\d+(?:X\d+(?:\.\d+)?)*(?:X\d+(?:\.\d+)?)?\s*(?:LB|OZ|ML|L|PC|PR|GAL|G|KG|CT|#)(?:\b|$))/i;
+  const sizeMatch = name.match(sizeRx);
+  if (sizeMatch) {
+    size = sizeMatch[1].trim();
+    name = name.substring(0, sizeMatch.index).trim() + name.substring(sizeMatch.index + sizeMatch[0].length).trim();
+    name = name.trim();
+  }
+
+  // Extract brand (first word if ALL CAPS and > 2 chars)
+  const words = name.split(/\s+/);
+  if (words.length > 1 && /^[A-Z]{2,}$/.test(words[0])) {
+    brand = words[0];
+    name = words.slice(1).join(' ');
+  }
+
+  return { brand, name: name.trim(), size, qty };
+}
+
+// ===== WANG PDF LINE PARSER =====
+function parseWangPDFLine(line) {
+  const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+
+  // Wang format varies. Try multiple patterns:
+  // Pattern 1: Item# Description Qty Price Total
+  // Pattern 2: Item# Description Price
+  // Item numbers are usually 3-6 digits
+
+  // Look for line starting with a number (item code)
+  const rxItem = /^(\d{3,6})\s+(.+)/;
+  const match = rxItem.exec(normalized);
+  if (!match) return null;
+
+  const itemNo = match[1];
+  const rest = match[2];
+
+  // Extract trailing prices
+  const pricePattern3 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+  const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+  const pricePattern1 = /([\d,]+\.\d{2})\s*$/;
+
+  let name = rest, qty = 1, unitPrice = 0, each = 0, total = 0;
+
+  const m3 = rest.match(pricePattern3);
+  if (m3) {
+    name = rest.substring(0, m3.index).trim();
+    unitPrice = parseFloat(m3[1].replace(/,/g, ''));
+    each = parseFloat(m3[2].replace(/,/g, ''));
+    total = parseFloat(m3[3].replace(/,/g, ''));
+  } else {
+    const m2 = rest.match(pricePattern2);
+    if (m2) {
+      name = rest.substring(0, m2.index).trim();
+      unitPrice = parseFloat(m2[1].replace(/,/g, ''));
+      total = parseFloat(m2[2].replace(/,/g, ''));
+      each = unitPrice;
+    } else {
+      const m1 = rest.match(pricePattern1);
+      if (m1) {
+        name = rest.substring(0, m1.index).trim();
+        unitPrice = parseFloat(m1[1].replace(/,/g, ''));
+        each = unitPrice;
+        total = unitPrice;
+      } else {
+        return null; // no price found
+      }
+    }
+  }
+
+  if (unitPrice === 0 && total === 0) return null;
+
+  // Extract qty if present before prices
+  const qtyMatch = name.match(/\s+(\d+)\s*$/);
+  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) {
+    qty = parseInt(qtyMatch[1]);
+    name = name.substring(0, qtyMatch.index).trim();
+  }
+
+  return { itemNo, brand: 'WANG', name, size: '', qty, unitPrice, each, total };
+}
+
+// ===== CHORIPDONG PDF LINE PARSER =====
+function parseChoripdongPDFLine(line) {
+  const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+
+  // Choripdong item codes: 2 letters + 4 digits (e.g., EH1103, LB3007, MI1003)
+  const rxItem = /^([A-Z]{2}\d{4})\s+(.+)/;
+  const match = rxItem.exec(normalized);
+  if (!match) {
+    // Also try numeric-only codes
+    const rxNum = /^(\d{4,6})\s+(.+)/;
+    const matchNum = rxNum.exec(normalized);
+    if (!matchNum) return null;
+    return parseChoripdongRest(matchNum[1], matchNum[2]);
+  }
+  return parseChoripdongRest(match[1], match[2]);
+}
+
+function parseChoripdongRest(itemNo, rest) {
+  // Extract trailing prices (2 or 3 numbers at end)
+  const pricePattern3 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+  const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
+
+  let name = rest, qty = 1, unitPrice = 0, each = 0, total = 0;
+
+  const m3 = rest.match(pricePattern3);
+  if (m3) {
+    name = rest.substring(0, m3.index).trim();
+    unitPrice = parseFloat(m3[1].replace(/,/g, ''));
+    each = parseFloat(m3[2].replace(/,/g, ''));
+    total = parseFloat(m3[3].replace(/,/g, ''));
+  } else {
+    const m2 = rest.match(pricePattern2);
+    if (m2) {
+      name = rest.substring(0, m2.index).trim();
+      unitPrice = parseFloat(m2[1].replace(/,/g, ''));
+      total = parseFloat(m2[2].replace(/,/g, ''));
+      each = unitPrice;
+    } else {
+      return null;
+    }
+  }
+
+  if (unitPrice === 0 && total === 0) return null;
+
+  // Extract qty
+  const qtyMatch = name.match(/\s+(\d+)\s*$/);
+  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) {
+    qty = parseInt(qtyMatch[1]);
+    name = name.substring(0, qtyMatch.index).trim();
+  }
+
+  return { itemNo, brand: 'CHORIPDONG', name, size: '', qty, unitPrice, each, total };
+}
+
+// ===== GENERIC LINE PARSER =====
+function parseGenericLine(line) {
+  const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+
+  // Look for any line with a code at start and prices at end
+  const rxItem = /^([A-Za-z0-9]{3,10})\s+(.+)/;
+  const match = rxItem.exec(normalized);
+  if (!match) return null;
+
+  const itemNo = match[1];
+  const rest = match[2];
+
+  const pricePattern = /([\d,]+\.\d{2})\s*$/;
+  const pm = rest.match(pricePattern);
+  if (!pm) return null;
+
+  const price = parseFloat(pm[1].replace(/,/g, ''));
+  if (price === 0) return null;
+  const name = rest.substring(0, pm.index).trim();
+
+  return { itemNo, brand: '', name, size: '', qty: 1, unitPrice: price, each: price, total: price };
+}
+
 // ===== COMPARISON ENGINE =====
 function compareInvoice(newItems, vendor) {
   const flags = [];
   const historicalPrices = buildPriceHistory(vendor);
+  console.log('[COMPARE] Vendor:', vendor);
+  console.log('[COMPARE] Historical price entries:', Object.keys(historicalPrices).length);
+  console.log('[COMPARE] New items to compare:', newItems.length);
+  if (Object.keys(historicalPrices).length > 0) {
+    console.log('[COMPARE] Sample historical keys:', Object.keys(historicalPrices).slice(0, 5));
+  }
 
   for (const item of newItems) {
     const key = item.itemNo.toUpperCase().trim();
@@ -1082,13 +1382,50 @@ async function extractPDFText(file) {
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
   let fullText = '';
 
+  console.log('[PDF] Total pages:', pdf.numPages);
+
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-    const pageText = content.items.map(item => item.str).join(' ');
-    fullText += pageText + '\n';
+
+    // Group text items by Y coordinate to reconstruct lines properly
+    // pdf.js returns individual text fragments with transform[5] = Y position
+    const lineMap = {};
+    for (const item of content.items) {
+      if (!item.str || item.str.trim() === '') continue;
+      // Y coordinate (rounded to nearest 2px to group items on same line)
+      const y = Math.round(item.transform[5] / 2) * 2;
+      const x = item.transform[4];
+      if (!lineMap[y]) lineMap[y] = [];
+      lineMap[y].push({ x: x, text: item.str });
+    }
+
+    // Sort lines by Y descending (PDF Y goes bottom-up), then items by X ascending
+    const sortedYs = Object.keys(lineMap).map(Number).sort((a, b) => b - a);
+    for (const y of sortedYs) {
+      const items = lineMap[y].sort((a, b) => a.x - b.x);
+      // Join with appropriate spacing
+      let lineText = '';
+      for (let j = 0; j < items.length; j++) {
+        if (j > 0) {
+          // If gap between items is large, insert tab; otherwise space
+          const gap = items[j].x - (items[j-1].x + items[j-1].text.length * 4);
+          lineText += gap > 20 ? '\t' : ' ';
+        }
+        lineText += items[j].text;
+      }
+      fullText += lineText.trim() + '\n';
+    }
+
     setProgress(20 + (i / pdf.numPages) * 30);
   }
+
+  console.log('[PDF] Extracted text length:', fullText.length);
+  console.log('[PDF] First 500 chars:', fullText.substring(0, 500));
+
+  // Store raw text for preview
+  window._lastExtractedText = fullText;
+
   return fullText;
 }
 
@@ -1271,6 +1608,97 @@ function downloadCSV(csv, filename) {
   URL.revokeObjectURL(url);
 }
 
+// ===== 3 AUTO-DOWNLOAD CSVs =====
+function exportPriceChangeCSV() {
+  if (!currentFlags.length) { showToast('No data to export'); return; }
+  const changes = currentFlags.filter(f => f.type === 'PRICE_UP' || f.type === 'PRICE_DOWN');
+  if (changes.length === 0) { showToast('No price changes found'); return; }
+
+  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
+  for (const flag of changes) {
+    const item = flag.item;
+    csv += [
+      flag.type === 'PRICE_UP' ? 'UP' : 'DOWN',
+      '"' + (item.itemNo || '') + '"',
+      '"' + (item.brand || '') + '"',
+      '"' + (item.name || '').replace(/"/g, '""') + '"',
+      '"' + (item.size || '') + '"',
+      item.qty || '',
+      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2),
+      flag.pctChange || ''
+    ].join(',') + '\n';
+  }
+  downloadCSV(csv, 'Price_Change_Report.csv');
+  showToast('Price changes exported / 가격 변동 내보내기 완료');
+}
+
+function exportNewItemsCSV() {
+  if (!currentFlags.length) { showToast('No data to export'); return; }
+  const newItems = currentFlags.filter(f => f.type === 'NEW_ITEM');
+  if (newItems.length === 0) { showToast('No new items found'); return; }
+
+  let csv = 'Item No,Brand,Name,Size,Qty,Unit Price,New Price (enter here)\n';
+  for (const flag of newItems) {
+    const item = flag.item;
+    csv += [
+      '"' + (item.itemNo || '') + '"',
+      '"' + (item.brand || '') + '"',
+      '"' + (item.name || '').replace(/"/g, '""') + '"',
+      '"' + (item.size || '') + '"',
+      item.qty || '',
+      flag.newPrice.toFixed(2),
+      ''
+    ].join(',') + '\n';
+  }
+  downloadCSV(csv, 'New_Items_List.csv');
+  showToast('New items exported / 신규 품목 내보내기 완료');
+}
+
+function exportFullSummaryCSV() {
+  if (!currentFlags.length) { showToast('No data to export'); return; }
+
+  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
+  for (const flag of currentFlags) {
+    const item = flag.item;
+    let status = flag.type;
+    if (status === 'PRICE_UP') status = 'UP';
+    else if (status === 'PRICE_DOWN') status = 'DOWN';
+    else if (status === 'NEW_ITEM') status = 'NEW';
+    else if (status === 'UNCHANGED') status = 'OK';
+
+    csv += [
+      status,
+      '"' + (item.itemNo || '') + '"',
+      '"' + (item.brand || '') + '"',
+      '"' + (item.name || '').replace(/"/g, '""') + '"',
+      '"' + (item.size || '') + '"',
+      item.qty || '',
+      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2),
+      flag.pctChange || ''
+    ].join(',') + '\n';
+  }
+  downloadCSV(csv, 'Full_Comparison_Summary.csv');
+  showToast('Full summary exported / 전체 요약 내보내기 완료');
+}
+
+// ===== RAW TEXT HELPERS =====
+function copyRawText() {
+  const rawTextEl = document.getElementById('raw-text-display');
+  if (rawTextEl && rawTextEl.value) {
+    navigator.clipboard.writeText(rawTextEl.value).then(() => {
+      showToast('Text copied / 텍스트 복사됨');
+    }).catch(() => {
+      rawTextEl.select();
+      document.execCommand('copy');
+      showToast('Text copied / 텍스트 복사됨');
+    });
+  } else {
+    showToast('No text to copy');
+  }
+}
+
 // ===== HISTORY =====
 async function renderHistory(filter) {
   const list = document.getElementById('history-list');
@@ -1429,7 +1857,7 @@ function updateDashboard() {
 
   // Count flags from price changes
   const allPrices = {};
-  for (const v of ['rhee']) {
+  for (const v of ['rhee', 'wang', 'choripdong']) {
     const data = HISTORICAL_DATA[v] || [];
     for (const inv of data) {
       for (const item of inv.items) {
