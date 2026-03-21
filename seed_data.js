@@ -1,268 +1,363 @@
 // Kimchi Mart Invoice System - Historical Seed Data
-// Generated from existing invoice files on 2026-03-20
+// Restructured by BRANCH then VENDOR on 2026-03-20
 // Sources: Rhee Bros PSI invoices, Choripdong extracted_items.json, Wang all_products.txt
 
-const HISTORICAL_DATA = {
-  rhee: [
-    {
-      vendor: "Rhee Bros", invoice: "PSI-0171141", date: "2026-03-19",
-      customer: "FL432 - KIMCHI MART PALM BEACH", total: 8878.91,
-      items: [
-        { itemNo: "00024D", brand: "RHEECHUN", name: "PREMIUM GRADE BROWN RICE (2#)", size: "16X2 LB", qty: 1, unitPrice: 31.45, each: 1.97, total: 31.45 },
-        { itemNo: "00025D", brand: "RHEECHUN", name: "PREMIUM SWEET RICE (USA, 15#)", size: "15 LB", qty: 5, unitPrice: 13.00, each: 13.00, total: 65.00 },
-        { itemNo: "03020K", brand: "SEMPIO", name: "NATURALLY BREWED SOY SAUCE LIGHT (860ML)", size: "12X29.08 OZ", qty: 1, unitPrice: 48.60, each: 4.05, total: 48.60 },
-        { itemNo: "03221C", brand: "LKK", name: "SRIRACHA MAYONNAISE", size: "12X15 OZ", qty: 5, unitPrice: 51.30, each: 4.28, total: 256.50 },
-        { itemNo: "03261D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 15.30, each: 2.55, total: 15.30 },
-        { itemNo: "03262D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUTEN FREE_LITE SODIUM)", size: "6X10 OZ", qty: 1, unitPrice: 20.40, each: 3.40, total: 20.40 },
-        { itemNo: "03264D", brand: "SANJ", name: "ORGANIC TAMARI SOY SAUCE (GLUT FREE_LITE SOD)", size: "6X10 OZ", qty: 1, unitPrice: 30.60, each: 5.10, total: 30.60 },
-        { itemNo: "03265D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUT FREE_50PER LITE SODIUM)", size: "6X10 OZ", qty: 1, unitPrice: 21.60, each: 3.60, total: 21.60 },
-        { itemNo: "03266D", brand: "SANJ", name: "THAI PEANUT SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 18.90, each: 3.15, total: 18.90 },
-        { itemNo: "03319T", brand: "HEALTHYBOY", name: "SWEET SOY SAUCE (WHITE LABEL)", size: "12X34.22 OZ", qty: 1, unitPrice: 31.50, each: 2.63, total: 31.50 },
-        { itemNo: "03330C", brand: "HUYFONG", name: "CHILI GARLIC SAUCE (L)", size: "3X8.5 LB", qty: 2, unitPrice: 45.90, each: 15.30, total: 91.80 },
-        { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 6, unitPrice: 38.70, each: 3.23, total: 232.20 },
-        { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 6, unitPrice: 38.00, each: 1.58, total: 228.00 },
-        { itemNo: "03422K", brand: "CHUNGJUNGONE", name: "BROWN RICE HOT PEPPER PASTE (2.2#)", size: "12X2.2 LB", qty: 1, unitPrice: 92.50, each: 7.71, total: 92.50 },
-        { itemNo: "03423K", brand: "CHUNGJUNGONE", name: "BROWN RICE HOT PEPPER PASTE (6.6#)", size: "4X6.6 LB", qty: 1, unitPrice: 78.00, each: 19.50, total: 78.00 },
-        { itemNo: "03702V", brand: "REDBOAT", name: "FISH SAUCE 31N", size: "12X17 OZ", qty: 1, unitPrice: 62.10, each: 5.18, total: 62.10 },
-        { itemNo: "03706T", brand: "TIPAROS", name: "FISH SAUCE (23 OZ_M)", size: "12X23 OZ", qty: 1, unitPrice: 21.50, each: 1.79, total: 21.50 },
-        { itemNo: "03708T", brand: "MAEKRUA", name: "OYSTER SAUCE (11.8 OZ_S)", size: "12X11.8 OZ", qty: 1, unitPrice: 25.00, each: 2.08, total: 25.00 },
-        { itemNo: "05092D", brand: "EVERGREEN", name: "CANOLA OLIVE OIL", size: "8X64 OZ", qty: 1, unitPrice: 59.20, each: 7.40, total: 59.20 },
-        { itemNo: "05148K", brand: "ASSI", name: "SESAME OIL (L_BTL)", size: "12X14.6 OZ", qty: 1, unitPrice: 80.00, each: 6.67, total: 80.00 },
-        { itemNo: "05149K", brand: "ASSI", name: "SESAME OIL (S_BTL)", size: "24X5.48 OZ", qty: 1, unitPrice: 67.50, each: 2.81, total: 67.50 },
-        { itemNo: "05152D", brand: "EVERGREEN", name: "PEANUT OIL", size: "8X64 OZ", qty: 1, unitPrice: 72.00, each: 9.00, total: 72.00 },
-        { itemNo: "05389D", brand: "ASSI", name: "ROASTED SESAME SEEDS (7.5 OZ_BTL)", size: "12X7.5 OZ", qty: 1, unitPrice: 38.25, each: 3.19, total: 38.25 },
-        { itemNo: "05413D", brand: "ASSI", name: "ROASTED WHITE SESAME SEEDS (7.5 OZ_BTL)", size: "12X7.5 OZ", qty: 1, unitPrice: 48.00, each: 4.00, total: 48.00 },
-        { itemNo: "06834T", brand: "PANTAI", name: "SWEET CHILI SAUCE (SUGAR FREE_GB)", size: "12X7.5 OZ", qty: 1, unitPrice: 24.65, each: 2.05, total: 24.65 },
-        { itemNo: "06885T", brand: "PANTAI", name: "SWEETENED CHILI SAUCE FOR SPRING ROLL (L)", size: "12X32.5 OZ", qty: 1, unitPrice: 47.50, each: 3.96, total: 47.50 },
-        { itemNo: "06907T", brand: "AROYD", name: "COCONUT MILK (UHT_ 1L)", size: "12X33.8 OZ", qty: 1, unitPrice: 40.00, each: 3.33, total: 40.00 },
-        { itemNo: "07598K", brand: "DONGWON", name: "TUNA CAN (S_4CAN)", size: "12X4X5.3 OZ", qty: 2, unitPrice: 110.00, each: 9.17, total: 220.00 },
-        { itemNo: "08288K", brand: "OTOKI", name: "KIMCHI RAMEN (5P)", size: "8X5X4.23 OZ", qty: 1, unitPrice: 42.40, each: 5.30, total: 42.40 },
-        { itemNo: "08343K", brand: "OTOKI", name: "ODONGTONG NOODLES (4P_SEAFOOD)", size: "8X4X4.23 OZ", qty: 1, unitPrice: 42.50, each: 5.31, total: 42.50 },
-        { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
-        { itemNo: "08439K", brand: "SAMYANG", name: "QUATTRO CHEESE BULDAK RAMEN (BIG BOWL)", size: "6X3.88 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
-        { itemNo: "08495K", brand: "SAMYANG", name: "CREAM CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X4.23 OZ", qty: 5, unitPrice: 13.50, each: 2.25, total: 67.50 },
-        { itemNo: "08497K", brand: "SAMYANG", name: "TACO BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 5, unitPrice: 13.50, each: 2.25, total: 67.50 },
-        { itemNo: "08529K", brand: "DONGWON", name: "HOT & SPICY TOPOKKI (CUP)", size: "16X4.23 OZ", qty: 1, unitPrice: 34.00, each: 2.13, total: 34.00 },
-        { itemNo: "08638K", brand: "PALDO", name: "GOMTANG MYON (KING CUP, 6P)", size: "6X3.7 OZ", qty: 1, unitPrice: 10.50, each: 1.75, total: 10.50 },
-        { itemNo: "08722K", brand: "PALDO", name: "BIBIMMEN RAMEN (5P)", size: "4X5X4.58 OZ", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
-        { itemNo: "09873K", brand: "PALDO", name: "PORORO DRINK (TROPICAL FRUITS FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 23.00, each: 0.96, total: 23.00 },
-        { itemNo: "10291K", brand: "ASSI", name: "GINGER TEA (LIQUID_2.2#)", size: "12X2.2 LB", qty: 1, unitPrice: 65.00, each: 5.42, total: 65.00 },
-        { itemNo: "10385C", brand: "PENGUIN", name: "FRUIT JELLY (HAPPY DOG)", size: "6X1.85 LB", qty: 1, unitPrice: 38.00, each: 6.33, total: 38.00 },
-        { itemNo: "10386C", brand: "PENGUIN", name: "FRUIT JELLY (HAPPY CAT)", size: "6X1.85 LB", qty: 1, unitPrice: 38.00, each: 6.33, total: 38.00 },
-        { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 3, unitPrice: 36.00, each: 2.57, total: 108.00 },
-        { itemNo: "10537V", brand: "COCOXIM", name: "ORGANIC COCONUT WATER (11.2 OZ)", size: "12X11.2 OZ", qty: 2, unitPrice: 11.30, each: 0.94, total: 22.60 },
-        { itemNo: "10538V", brand: "COCOXIM", name: "ORGANIC COCONUT WATER (1L)", size: "12X1 L", qty: 1, unitPrice: 25.50, each: 2.13, total: 25.50 },
-        { itemNo: "10655T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (APPLE & GRAPE OOLONG TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
-        { itemNo: "10656T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (PASSION FRUIT & MANGO GREEN TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
-        { itemNo: "10657T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (STRAWBERRY & KIWI GREEN TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
-        { itemNo: "10714K", brand: "JARDIN", name: "MATCHA ORIGINAL LATTE", size: "12X6.87 OZ", qty: 1, unitPrice: 77.00, each: 6.42, total: 77.00 },
-        { itemNo: "10855K", brand: "PALDO", name: "PORORO DRINK (PEACH FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 21.00, each: 0.88, total: 21.00 },
-        { itemNo: "10857K", brand: "PALDO", name: "PORORO DRINK (MANGO FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 21.00, each: 0.88, total: 21.00 },
-        { itemNo: "10902K", brand: "ORION", name: "TURTLE CHIPS (FLAMIN LIME FLAVOR)", size: "12X5.65 OZ", qty: 5, unitPrice: 31.50, each: 2.63, total: 157.50 },
-        { itemNo: "10917K", brand: "ORION", name: "TURTLE CHIPS (K-CHICKEN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 34.20, each: 2.85, total: 171.00 },
-        { itemNo: "10918K", brand: "ORION", name: "TURTLE CHIPS (MEXICAN STREET CORN FLAVOR)", size: "12X5.64 OZ", qty: 3, unitPrice: 35.10, each: 2.93, total: 105.30 },
-        { itemNo: "10970T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (ORIGNAL)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
-        { itemNo: "10971T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (SPICY)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
-        { itemNo: "10972T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (SMOKED BBQ)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
-        { itemNo: "12139K", brand: "ASSI", name: "BUTANE GAS (CRV)", size: "7X4 PC", qty: 2, unitPrice: 23.00, each: 3.29, total: 46.00 },
-        { itemNo: "19022J", brand: "HANA", name: "TEZUKURI SHIRO MISO (1#)", size: "20X1 LB", qty: 1, unitPrice: 29.75, each: 1.49, total: 29.75 },
-        { itemNo: "19121J", brand: "HANA", name: "PICKLED GINGER (SUSHI GINGER_S.BTL_5 OZ)", size: "24X5 OZ", qty: 1, unitPrice: 41.40, each: 1.73, total: 41.40 },
-        { itemNo: "19127D", brand: "HANA", name: "PICKLED GINGER (SUSHI GINGER_BTL_12 OZ)", size: "12X12 OZ", qty: 1, unitPrice: 36.00, each: 3.00, total: 36.00 },
-        { itemNo: "19131J", brand: "UNBRANDED", name: "PICKLED GINGER (AMAZU SHOGA_1.1#)", size: "20X1.1 LB", qty: 1, unitPrice: 44.00, each: 2.20, total: 44.00 },
-        { itemNo: "19212K", brand: "ASSI", name: "PICKLED SCALLION (RAKKYO_ BTL_ 18 OZ)", size: "12X18 OZ", qty: 1, unitPrice: 55.25, each: 4.60, total: 55.25 },
-        { itemNo: "19375K", brand: "ASSI", name: "INSTANT UDON NOODLES", size: "12X23.28 OZ", qty: 1, unitPrice: 34.00, each: 2.83, total: 34.00 },
-        { itemNo: "19376K", brand: "ASSI", name: "INSTANT KIMCHI UDON NOODLES", size: "12X22.2 OZ", qty: 1, unitPrice: 38.25, each: 3.19, total: 38.25 },
-        { itemNo: "19410K", brand: "ASSI", name: "SEAWEED JELLY (12 OZ)", size: "24X12 OZ", qty: 1, unitPrice: 34.20, each: 1.43, total: 34.20 },
-        { itemNo: "19901K", brand: "ASSI", name: "KIMCHI SOUP", size: "15X21.16 OZ", qty: 1, unitPrice: 39.95, each: 2.66, total: 39.95 },
-        { itemNo: "19902K", brand: "ASSI", name: "SOFT TOFU SOUP", size: "15X19.4 OZ", qty: 1, unitPrice: 37.80, each: 2.52, total: 37.80 },
-        { itemNo: "19903K", brand: "ASSI", name: "SOYBEAN PASTE SOUP", size: "15X21.16 OZ", qty: 1, unitPrice: 38.00, each: 2.53, total: 38.00 },
-        { itemNo: "19976D", brand: "ASSI", name: "TOPOKKI RICE CAKE (2#)", size: "20X2 LB", qty: 1, unitPrice: 49.00, each: 2.45, total: 49.00 },
-        { itemNo: "19981D", brand: "ASSI", name: "TOFU (FIRM)", size: "12X16 OZ", qty: 2, unitPrice: 16.00, each: 1.33, total: 32.00 },
-        { itemNo: "19982D", brand: "ASSI", name: "TOFU (SOFT)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
-        { itemNo: "20089D", brand: "NEWZEALAND", name: "HALFSHELL MUSSELS (NEW ZEALAND)", size: "12X2 LB", qty: 1, unitPrice: 130.00, each: 10.83, total: 130.00 },
-        { itemNo: "20371J", brand: "UNBRANDED", name: "FRIED FISH CAKE (JAPAN_VEGETABLE_AGE BALL)", size: "24.2 LB", qty: 1, unitPrice: 85.00, each: 3.51, total: 85.00 },
-        { itemNo: "20434K", brand: "ASSI", name: "COMBO FISH CAKE", size: "20X1.1 LB", qty: 1, unitPrice: 88.20, each: 4.41, total: 88.20 },
-        { itemNo: "20460K", brand: "ASSI", name: "RECTANGULAR FISH CAKE (KOREA_22#)", size: "22 LB", qty: 1, unitPrice: 45.00, each: 2.05, total: 45.00 },
-        { itemNo: "20485K", brand: "ASSI", name: "BANCHAN SEASONED PERILLA LEAF (8#)", size: "2X8 LB", qty: 1, unitPrice: 135.00, each: 67.50, total: 135.00 },
-        { itemNo: "20486K", brand: "ASSI", name: "BANCHAN SEASONED GREEN PEPPER (8#)", size: "2X8 LB", qty: 1, unitPrice: 94.50, each: 47.25, total: 94.50 },
-        { itemNo: "20487K", brand: "ASSI", name: "BANCHAN SEASONED GARLIC (8#)", size: "2X8 LB", qty: 1, unitPrice: 105.00, each: 52.50, total: 105.00 },
-        { itemNo: "20497K", brand: "HONGGANE", name: "CHEWY COLD NOODLES (JJOLMYEON)", size: "10X4.4 LB", qty: 1, unitPrice: 35.00, each: 3.50, total: 35.00 },
-        { itemNo: "20514K", brand: "SONGHAK", name: "CHUNCHEON STYLE BUCKWHEAT COLD NOODLES", size: "6X4.4 LB", qty: 1, unitPrice: 30.00, each: 5.00, total: 30.00 },
-        { itemNo: "20571D", brand: "ASSI", name: "PORK DUMPLINGS", size: "20X1.25 LB", qty: 1, unitPrice: 109.00, each: 5.45, total: 109.00 },
-        { itemNo: "20574D", brand: "ASSI", name: "PORK POTSTICKERS", size: "10X1.5 LB", qty: 1, unitPrice: 65.00, each: 6.50, total: 65.00 },
-        { itemNo: "20669K", brand: "SAMLIP", name: "VEGETABLE DUMPLING W/LEEK", size: "12X23.8 OZ", qty: 1, unitPrice: 46.80, each: 3.90, total: 46.80 },
-        { itemNo: "20890J", brand: "OSAKI", name: "CRAB STICK (IMITATION)", size: "20X1.1 LB", qty: 5, unitPrice: 105.00, each: 5.25, total: 525.00 },
-        { itemNo: "20891J", brand: "KABUTO", name: "CRAB STICK (IMITATION)", size: "20X1.1 LB", qty: 1, unitPrice: 60.00, each: 3.00, total: 60.00 },
-        { itemNo: "20937K", brand: "LOTTE", name: "PAPICO CHOCO POPSICLE (6P)", size: "4X6X4.94 OZ", qty: 1, unitPrice: 18.70, each: 4.68, total: 18.70 },
-        { itemNo: "20971K", brand: "LOTTE", name: "OK-SUSU (SWEET CORN 5P)", size: "6X5X4.73 OZ", qty: 3, unitPrice: 35.00, each: 5.83, total: 105.00 },
-        { itemNo: "20979K", brand: "LOTTE", name: "GREEK YOGURT ICE BAR (6P)", size: "6X6X2.8 OZ", qty: 1, unitPrice: 40.00, each: 6.67, total: 40.00 }
-      ]
-    },
-    {
-      vendor: "Rhee Bros", invoice: "PSI-0171139", date: "2026-03-19",
-      customer: "FL381 - KIMCHI MART AT HOLLYWOOD", total: 21428.27,
-      items: [
-        { itemNo: "00004D", brand: "HANKUKMI", name: "EXTRA FANCY RICE (5#_SUSHI RICE)", size: "8X5 LB", qty: 1, unitPrice: 42.40, each: 5.30, total: 42.40 },
-        { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (USA, 18#_NEW)", size: "18 LB", qty: 10, unitPrice: 17.00, each: 17.00, total: 170.00 },
-        { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 15#_NEW)", size: "15 LB", qty: 10, unitPrice: 12.00, each: 12.00, total: 120.00 },
-        { itemNo: "00033D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 40#_NEW)", size: "40 LB", qty: 20, unitPrice: 25.00, each: 25.00, total: 500.00 },
-        { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 6, unitPrice: 38.70, each: 3.23, total: 232.20 },
-        { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 6, unitPrice: 38.00, each: 1.58, total: 228.00 },
-        { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 2, unitPrice: 42.00, each: 14.00, total: 84.00 },
-        { itemNo: "05027D", brand: "ASSI", name: "RED PEPPER POWDER (KIMCHI_5#)", size: "8X5 LB", qty: 5, unitPrice: 118.00, each: 14.75, total: 590.00 },
-        { itemNo: "08027K", brand: "ASSI", name: "SWEET POTATO NOODLES (JAPCHAE_1.5#)", size: "15X1.5 LB", qty: 5, unitPrice: 50.40, each: 3.36, total: 252.00 },
-        { itemNo: "08155K", brand: "SAMYANG", name: "BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 42.00, each: 5.25, total: 210.00 },
-        { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
-        { itemNo: "08444K", brand: "SAMYANG", name: "CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
-        { itemNo: "08465K", brand: "SAMYANG", name: "2X SPICY BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 42.00, each: 5.25, total: 210.00 },
-        { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 65, unitPrice: 42.00, each: 5.25, total: 2730.00 },
-        { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 5, unitPrice: 36.00, each: 2.57, total: 180.00 },
-        { itemNo: "10902K", brand: "ORION", name: "TURTLE CHIPS (FLAMIN LIME FLAVOR)", size: "12X5.65 OZ", qty: 5, unitPrice: 31.50, each: 2.63, total: 157.50 },
-        { itemNo: "10917K", brand: "ORION", name: "TURTLE CHIPS (K-CHICKEN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 34.20, each: 2.85, total: 171.00 },
-        { itemNo: "10918K", brand: "ORION", name: "TURTLE CHIPS (MEXICAN STREET CORN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 35.10, each: 2.93, total: 175.50 },
-        { itemNo: "10998K", brand: "BINGGRAE", name: "VANILLA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
-        { itemNo: "10999K", brand: "BINGGRAE", name: "COFFEE FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
-        { itemNo: "11001K", brand: "BINGGRAE", name: "BANANA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
-        { itemNo: "11025K", brand: "BINGGRAE", name: "STRAWBERRY FLAVORED MILK", size: "4X6X6.8 OZ", qty: 10, unitPrice: 19.00, each: 4.75, total: 190.00 },
-        { itemNo: "19981D", brand: "ASSI", name: "TOFU (FIRM)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
-        { itemNo: "19982D", brand: "ASSI", name: "TOFU (SOFT)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
-        { itemNo: "21202K", brand: "BINGGRAE", name: "MELONA (HONEYDEW MELON)", size: "8X8X2.4 OZ", qty: 1, unitPrice: 34.00, each: 4.25, total: 34.00 },
-        { itemNo: "29097K", brand: "ASSI", name: "CRUSHED RAMEN & MOZZARELLA CORN DOGS", size: "12X12.34 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 },
-        { itemNo: "29100K", brand: "ASSI", name: "CRISPY MOZZARELLA & FISH CAKE CORN DOGS", size: "12X14.1 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 }
-      ]
-    },
-    {
-      vendor: "Rhee Bros", invoice: "PSI-0170145", date: "2026-03-06",
-      customer: "FL381 - KIMCHI MART AT HOLLYWOOD", total: 18349.96,
-      items: [
-        { itemNo: "00007D", brand: "HANKUKMI", name: "PREMIUM MEDIUM GRAIN RICE (USA, 40#_NEW)", size: "40 LB", qty: 5, unitPrice: 29.00, each: 29.00, total: 145.00 },
-        { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (USA, 18#_NEW)", size: "18 LB", qty: 15, unitPrice: 17.00, each: 17.00, total: 255.00 },
-        { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 15#_NEW)", size: "15 LB", qty: 20, unitPrice: 12.00, each: 12.00, total: 240.00 },
-        { itemNo: "03266D", brand: "SANJ", name: "THAI PEANUT SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 19.55, each: 3.26, total: 19.55 },
-        { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 5, unitPrice: 42.00, each: 14.00, total: 210.00 },
-        { itemNo: "08180K", brand: "NONGSHIM", name: "SHIN RAMEN (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 15.00, each: 3.75, total: 75.00 },
-        { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
-        { itemNo: "08444K", brand: "SAMYANG", name: "CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
-        { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 10, unitPrice: 42.00, each: 5.25, total: 420.00 },
-        { itemNo: "29097K", brand: "ASSI", name: "CRUSHED RAMEN & MOZZARELLA CORN DOGS", size: "12X12.34 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 }
-      ]
-    },
-    {
-      vendor: "Rhee Bros", invoice: "PSI-0154059", date: "2025-08-09",
-      customer: "FL342 - KIMCHI MART", total: 32511.75,
-      items: [
-        { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (18#_NEW)", size: "18 LB", qty: 130, unitPrice: 17.00, each: 17.00, total: 2210.00 },
-        { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (15#_NEW)", size: "15 LB", qty: 150, unitPrice: 9.50, each: 9.50, total: 1425.00 },
-        { itemNo: "00033D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (40#_NEW)", size: "40 LB", qty: 100, unitPrice: 21.00, each: 21.00, total: 2100.00 },
-        { itemNo: "03221C", brand: "LKK", name: "SRIRACHA MAYONNAISE", size: "12X15 OZ", qty: 2, unitPrice: 48.45, each: 4.04, total: 96.90 },
-        { itemNo: "03293T", brand: "SQUID", name: "FISH SAUCE (M)", size: "12X25 OZ", qty: 10, unitPrice: 23.00, each: 1.92, total: 230.00 },
-        { itemNo: "03295T", brand: "SQUID", name: "FISH SAUCE (S)", size: "12X10 OZ", qty: 10, unitPrice: 15.00, each: 1.25, total: 150.00 },
-        { itemNo: "03383T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (28 OZ)", size: "12X28 OZ", qty: 30, unitPrice: 38.00, each: 3.17, total: 1140.00 },
-        { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 30, unitPrice: 36.00, each: 3.00, total: 1080.00 },
-        { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 10, unitPrice: 38.00, each: 1.58, total: 380.00 },
-        { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 2, unitPrice: 40.00, each: 13.33, total: 80.00 },
-        { itemNo: "08155K", brand: "SAMYANG", name: "BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 36.00, each: 4.50, total: 180.00 },
-        { itemNo: "08180K", brand: "NONGSHIM", name: "SHIN RAMEN (4P)", size: "4X4X4.2 OZ", qty: 180, unitPrice: 9.00, each: 2.25, total: 1620.00 },
-        { itemNo: "08220K", brand: "NONGSHIM", name: "SHIN RAMEN (CUP_6P)", size: "6X2.64 OZ", qty: 30, unitPrice: 6.50, each: 1.08, total: 195.00 },
-        { itemNo: "08348K", brand: "NONGSHIM", name: "CHAPAGETTI NOODLES (4P)", size: "4X4X4.5 OZ", qty: 180, unitPrice: 15.00, each: 3.75, total: 2700.00 },
-        { itemNo: "08465K", brand: "SAMYANG", name: "2X SPICY BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 36.00, each: 4.50, total: 180.00 },
-        { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 63, unitPrice: 36.00, each: 4.50, total: 2268.00 },
-        { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 5, unitPrice: 33.00, each: 2.36, total: 165.00 },
-        { itemNo: "10999K", brand: "BINGGRAE", name: "COFFEE FLAVORED MILK", size: "4X6X6.8 OZ", qty: 20, unitPrice: 18.00, each: 4.50, total: 360.00 },
-        { itemNo: "11001K", brand: "BINGGRAE", name: "BANANA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 60, unitPrice: 18.00, each: 4.50, total: 1080.00 },
-        { itemNo: "11025K", brand: "BINGGRAE", name: "STRAWBERRY FLAVORED MILK", size: "4X6X6.8 OZ", qty: 30, unitPrice: 18.00, each: 4.50, total: 540.00 }
-      ]
-    },
-    {
-      vendor: "Rhee Bros", invoice: "PSI-0154158", date: "2025-08-11",
-      customer: "FL342 - KIMCHI MART", total: 2713.35,
-      items: [
-        { itemNo: "07434K", brand: "SAMPO", name: "COOKED SILKWORM CHRYSALIS (CAN)", size: "48X4.5 OZ", qty: 1, unitPrice: 52.70, each: 1.10, total: 52.70 },
-        { itemNo: "07598K", brand: "DONGWON", name: "TUNA CAN (S_4CAN)", size: "12X4X5.3 OZ", qty: 1, unitPrice: 94.35, each: 7.86, total: 94.35 },
-        { itemNo: "12139K", brand: "ASSI", name: "BUTANE GAS (CRV)", size: "7X4 PC", qty: 21, unitPrice: 22.00, each: 3.14, total: 462.00 },
-        { itemNo: "13191K", brand: "CLEANWRAP", name: "RUBBER GLOVES (M)", size: "10X10 PR", qty: 1, unitPrice: 173.60, each: 17.36, total: 173.60 },
-        { itemNo: "13192K", brand: "CLEANWRAP", name: "RUBBER GLOVES (L)", size: "10X10 PR", qty: 1, unitPrice: 170.40, each: 17.04, total: 170.40 },
-        { itemNo: "13193K", brand: "CLEANWRAP", name: "RUBBER GLOVES (XL)", size: "10X10 PR", qty: 1, unitPrice: 202.30, each: 20.23, total: 202.30 }
-      ]
-    }
-  ],
-  choripdong: [
-    {
-      vendor: "Choripdong", invoice: "ORDER-2026-03", date: "2026-03-01",
-      customer: "KIMCHI MART", total: 0,
-      items: [
-        { itemNo: "EH1103", name: "HS)RICE CAKE 12/2.2LB(1KG)", krName: "한상)떡국떡", size: "12/2.2LB(1KG)", qty: 2, unitPrice: 28.20, each: 2.35, total: 56.40 },
-        { itemNo: "EH1105", name: "HS)RICE CAKE 20/500g", krName: "한상)떡볶이떡", size: "20/500g", qty: 2, unitPrice: 29.00, each: 1.45, total: 58.00 },
-        { itemNo: "EH1107", name: "HS)RICE CAKE 12/1KG", krName: "한상)떡볶이떡", size: "12/1KG", qty: 10, unitPrice: 28.20, each: 2.35, total: 282.00 },
-        { itemNo: "LB3007", name: "BEANHUT) Strawberry Latte Coffee 20/13.52floz", krName: "BEANHUT) Strawberry Latte Coffee", size: "20/13.52floz", qty: 1, unitPrice: 48.00, each: 2.40, total: 48.00 },
-        { itemNo: "LM1050", name: "Maeil)Coffee Flavor Drink-Macchiato Flavor 10/220ml", krName: "매일)마이 까페라떼 (컵)-카라멜 마끼야또", size: "10/220 ML", qty: 2, unitPrice: 14.50, each: 1.45, total: 29.00 },
-        { itemNo: "LM1059", name: "MAEIL)Brown Sugar Milk Tea Latte 10/220ml", krName: "매일)마이 카페라떼(컵)-브라운슈가 밀크티", size: "10/220ml", qty: 2, unitPrice: 15.00, each: 1.50, total: 30.00 },
-        { itemNo: "LS2001", name: "SEOUL)Coffee Flavored Drink 4/6/190ML", krName: "서울)커피우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
-        { itemNo: "LS2026", name: "Seoul)Chocolate Flavored Milk 4/6/200ML", krName: "서울)초콜릿 우유", size: "6/200ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
-        { itemNo: "LS2027", name: "Seoul)Mango Flavored Milk 4/6/190ML", krName: "서울)망고 우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
-        { itemNo: "LS2028", name: "Seoul)Melon Flavored Milk 4/6/190ML", krName: "서울)메론 우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
-        { itemNo: "LS2035", name: "Seoul)Brown Sugar Flavored Latte 10/250ml", krName: "서울F&B)브라운슈가라떼", size: "10/250ml", qty: 3, unitPrice: 19.00, each: 1.90, total: 57.00 },
-        { itemNo: "LS2036", name: "Seoul)Brown Sugar Flavored Milk Tea 10/250ml", krName: "서울F&B)브라운슈가밀크티", size: "10/250ml", qty: 3, unitPrice: 19.00, each: 1.90, total: 57.00 },
-        { itemNo: "MI1003", name: "Ilgajib)Braised Lotus Roots 20/4.23oz", krName: "일가집)연근조림", size: "20/120g(4.23oz)", qty: 1, unitPrice: 36.00, each: 1.80, total: 36.00 },
-        { itemNo: "MI1004", name: "Ilgajib)Seasoned Dried Radish 20/4.23oz", krName: "일가집)쫄깃무말랭이", size: "20/120g(4.23oz)", qty: 1, unitPrice: 42.00, each: 2.10, total: 42.00 },
-        { itemNo: "MI1005", name: "Ilgajib)Cheongyang Chili Pepper & Cucumber in Soy Sauce 12/8.81oz", krName: "일가집)청량고추오이", size: "12/250g(8.81oz)", qty: 1, unitPrice: 36.00, each: 3.00, total: 36.00 },
-        { itemNo: "CS1144", name: "Sunshine Moonlight(Koshihikari) 8/4.4 LB (NEW CROP)", krName: "일월쌀 (고시히카리)", size: "8/4.4 LB", qty: 1, unitPrice: 62.00, each: 7.75, total: 62.00 },
-        { itemNo: "CS1161", name: "Sunshine Moonlight (Akitakomachi) 8/4.4 LB (NEW CROP)", krName: "일월쌀 (아키타코마찌)", size: "8/4.4 LB", qty: 1, unitPrice: 62.00, each: 7.75, total: 62.00 },
-        { itemNo: "HK1081", name: "G&G)Roased Seaweed for Triangle Kimbop 20/15Sheet/0.63oz", krName: "광천김)달인삼각김밥용김", size: "20/15매", qty: 5, unitPrice: 50.00, each: 2.50, total: 250.00 },
-        { itemNo: "KD0040", name: "DW)Tuna Extract Sauce 16/500g", krName: "동원)참치액", size: "16/500g", qty: 1, unitPrice: 77.00, each: 4.81, total: 77.00 },
-        { itemNo: "KL1003", name: "LOTTE)Mirim(Cooking Wine) 6/1.8 l(2kg)", krName: "롯데)미림", size: "6/1.8 L", qty: 1, unitPrice: 35.10, each: 5.85, total: 35.10 }
-      ]
-    }
-  ],
-  wang: [
-    {
-      vendor: "Wang", invoice: "CATALOG-2026", date: "2026-01-08",
-      customer: "KIMCHI MART (Catalog Prices)", total: 0,
-      items: [
-        { itemNo: "41331", name: "수라상 오분도미 15 LBS", krName: "수라상 오분도미 15 LBS (6.8KG)", size: "15 LBS", qty: 0, unitPrice: 19.90, each: 19.90, total: 0 },
-        { itemNo: "43523", name: "스키나 스시라이스 15 LBS", krName: "스키나 스시라이스 15 LBS", size: "15 LBS", qty: 0, unitPrice: 22.50, each: 22.50, total: 0 },
-        { itemNo: "41315", name: "왕 찹쌀 15 LBS", krName: "왕 찹쌀 15 LBS(6.8 KG)", size: "15 LBS", qty: 0, unitPrice: 18.00, each: 18.00, total: 0 },
-        { itemNo: "80089", name: "왕 한가위쌀 40 LBS", krName: "왕 한가위쌀 40 LBS", size: "40 LBS", qty: 0, unitPrice: 40.00, each: 40.00, total: 0 },
-        { itemNo: "41283", name: "왕 한가위쌀 1/15 LBS", krName: "왕 한가위쌀,1/15 LBS(6.8KG)", size: "15 LBS", qty: 0, unitPrice: 18.00, each: 18.00, total: 0 },
-        { itemNo: "41311", name: "왕 현미쌀 15LBS", krName: "왕 현미쌀 15LBS (6.8KG)", size: "15 LBS", qty: 0, unitPrice: 16.00, each: 16.00, total: 0 },
-        { itemNo: "41332", name: "스키나 스시라이스 12/4.4lbs", krName: "스키나 스시라이스12/4.4lbs", size: "12/4.4lbs", qty: 0, unitPrice: 86.40, each: 7.20, total: 0 },
-        { itemNo: "41738", name: "왕 찹쌀 8/4 Lb", krName: "왕 찹쌀 8/4 Lb (1.81 kg)", size: "8/4 Lb", qty: 0, unitPrice: 42.40, each: 5.30, total: 0 },
-        { itemNo: "5069", name: "흑미 12/2 LBS", krName: "흑미 12/2 LBS", size: "12/2 LBS", qty: 0, unitPrice: 72.00, each: 6.00, total: 0 },
-        { itemNo: "3848", name: "스키나 스시라이스 햇반 12/210", krName: "스키나 스시라이스 햇반 12/210", size: "12/210g", qty: 0, unitPrice: 12.00, each: 1.00, total: 0 },
-        { itemNo: "33673", name: "곰표 밀가루 중력분 6/5.5 LBS", krName: "곰표 밀가루,중력분 6/5.5 LBS", size: "6/5.5 LBS", qty: 0, unitPrice: 27.60, each: 4.60, total: 0 },
-        { itemNo: "12730", name: "수라상 부침가루 10/2 lb", krName: "수라상 부침가루 10/2 lb", size: "10/2 lb", qty: 0, unitPrice: 31.80, each: 3.18, total: 0 },
-        { itemNo: "12731", name: "수라상 튀김가루 10/2 Lb", krName: "수라상 튀김가루 10/2 Lb", size: "10/2 Lb", qty: 0, unitPrice: 31.80, each: 3.18, total: 0 },
-        { itemNo: "7066", name: "스키나 빵가루 24/7.05 oz", krName: "스키나 빵가루 24/7.05 oz(200g)", size: "24/7.05 oz", qty: 0, unitPrice: 31.20, each: 1.30, total: 0 },
-        { itemNo: "7194", name: "샘표 투고간장501 10/200/6 ml", krName: "샘표 투고간장501 10/200/6 ml", size: "10/200ml", qty: 0, unitPrice: 75.00, each: 7.50, total: 0 },
-        { itemNo: "3171", name: "왕 물엿(Brown) 8/6.6 Lb", krName: "왕 물엿(Brown) 8/6.6 Lb (3 kg)", size: "8/6.6 Lb", qty: 0, unitPrice: 64.00, each: 8.00, total: 0 },
-        { itemNo: "10758", name: "왕 갈비양념 15/16.9oz", krName: "왕 갈비양념 15/16.9oz 480g", size: "15/16.9oz", qty: 0, unitPrice: 48.00, each: 3.20, total: 0 },
-        { itemNo: "10759", name: "왕 갈비양념 12/29.6oz", krName: "왕 갈비양념 12/29.6oz 840g", size: "12/29.6oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
-        { itemNo: "10757", name: "왕 불고기양념 12/29.6oz", krName: "왕 불고기양념 12/29.6oz 840g", size: "12/29.6oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
-        { itemNo: "44401", name: "왕 순참기름 24/12 FZ", krName: "왕 순참기름 24/12 FZ", size: "24/12 FZ", qty: 0, unitPrice: 110.40, each: 4.60, total: 0 },
-        { itemNo: "44403", name: "왕 순참기름(캔) 10/56 FZ", krName: "왕 순참기름(캔) 10/56 FZ", size: "10/56 FZ", qty: 0, unitPrice: 166.00, each: 16.60, total: 0 },
-        { itemNo: "3761", name: "왕 고추장고추가루Fine 10/3lb", krName: "왕 고추장고추가루Fine 10/3lb", size: "10/3lb", qty: 0, unitPrice: 133.00, each: 13.30, total: 0 },
-        { itemNo: "3158", name: "왕 김치고추가루Coarse 10/3lb", krName: "왕 김치고추가루Coarse 10/3lb", size: "10/3lb", qty: 0, unitPrice: 133.00, each: 13.30, total: 0 },
-        { itemNo: "1835", name: "왕 김치고추가루coarse 6/5 lb", krName: "왕 김치고추가루coarse6/5 lb", size: "6/5 lb", qty: 0, unitPrice: 132.00, each: 22.00, total: 0 },
-        { itemNo: "8275", name: "왕 볶음통깨 10/4 lb", krName: "왕 볶음통깨 10/4 lb", size: "10/4 lb", qty: 0, unitPrice: 166.00, each: 16.60, total: 0 },
-        { itemNo: "8274", name: "왕 볶음통깨 12/2 lb", krName: "왕 볶음통깨 12/2 lb", size: "12/2 lb", qty: 0, unitPrice: 87.60, each: 7.30, total: 0 },
-        { itemNo: "1145", name: "왕 고운소금(서해)Fine 10/3lb", krName: "왕 고운소금(서해)Fine 10/3lb", size: "10/3lb", qty: 0, unitPrice: 40.00, each: 4.00, total: 0 },
-        { itemNo: "1138", name: "왕 굵은소금(신안)Coarse 10/3lb", krName: "왕 굵은소금(신안)Coarse 10/3lb", size: "10/3lb", qty: 0, unitPrice: 53.00, each: 5.30, total: 0 },
-        { itemNo: "13245", name: "왕 다시마 24/16oz", krName: "왕 다시마 24/16oz(453 g)", size: "24/16oz", qty: 0, unitPrice: 319.20, each: 13.30, total: 0 },
-        { itemNo: "21429", name: "수라상 진공소면 12/3 LBS", krName: "수라상 진공소면 12/3 LBS", size: "12/3 LBS", qty: 0, unitPrice: 63.60, each: 5.30, total: 0 },
-        { itemNo: "826", name: "왕 막국수 24/16 oz", krName: "왕 막국수 24/16 oz", size: "24/16 oz", qty: 0, unitPrice: 43.20, each: 1.80, total: 0 },
-        { itemNo: "818", name: "왕 우동국수 12/3 lb", krName: "왕 우동국수 12/3 lb", size: "12/3 lb", qty: 0, unitPrice: 55.20, each: 4.60, total: 0 },
-        { itemNo: "560", name: "왕 김치통조림 48/5.64oz", krName: "왕 김치통조림 48/5.64oz", size: "48/5.64oz", qty: 0, unitPrice: 76.80, each: 1.60, total: 0 },
-        { itemNo: "16741", name: "왕 컵고추장(EN) 12/2.2 lb", krName: "왕 컵고추장(EN) 12/2.2 lb,1kg", size: "12/2.2 lb", qty: 0, unitPrice: 63.60, each: 5.30, total: 0 },
-        { itemNo: "9484", name: "왕 태양초찰고추장(병) 12/1.1 lb", krName: "왕 태양초찰고추장(병)12/1.1 lb", size: "12/1.1 lb", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
-        { itemNo: "9486", name: "왕 태양초찰고추장(병) 12/2.2 lb", krName: "왕 태양초찰고추장(병)12/2.2 lb", size: "12/2.2 lb", qty: 0, unitPrice: 78.00, each: 6.50, total: 0 },
-        { itemNo: "1070", name: "왕 콩된장(병) 12/16 oz", krName: "왕 콩된장(병) 12/16 oz 450g", size: "12/16 oz", qty: 0, unitPrice: 36.00, each: 3.00, total: 0 },
-        { itemNo: "1071", name: "왕 콩된장(병) 12/32.7oz", krName: "왕 콩된장(병) 12/32.7oz 900g", size: "12/32.7oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
-        { itemNo: "2003", name: "왕 볶음짜장(병) 12/1.1 lb", krName: "왕 볶음짜장(병) 12/1.1 lb 500g", size: "12/1.1 lb", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
-        { itemNo: "1089", name: "왕 짜장(병) 12/16 oz", krName: "왕 짜장(병) 12/16 oz, 450g", size: "12/16 oz", qty: 0, unitPrice: 39.60, each: 3.30, total: 0 }
-      ]
-    }
-  ]
+const BRANCHES = {
+  miami: { name: "Miami", nameKr: "마이애미", code: "FL342", color: "#E91E63" },
+  pembroke: { name: "Pembroke Pines", nameKr: "펨브록 파인스", code: "FL342", color: "#9C27B0" },
+  hollywood: { name: "Hollywood", nameKr: "할리우드", code: "FL381", color: "#F44336" },
+  coral_springs: { name: "Coral Springs", nameKr: "코랄 스프링스", code: "FL417", color: "#4CAF50" },
+  fort_lauderdale: { name: "Fort Lauderdale", nameKr: "포트 로더데일", code: "FL432", color: "#2196F3" }
 };
 
+const VENDORS = {
+  rhee: { name: "Rhee Bros", nameKr: "리브라더스" },
+  wang: { name: "Wang / CJ", nameKr: "왕" },
+  choripdong: { name: "Choripdong", nameKr: "초립동" }
+};
+
+const HISTORICAL_DATA = {
+  miami: {
+    ...BRANCHES.miami,
+    vendors: {
+      rhee: [
+        {
+          vendor: "Rhee Bros", invoice: "PSI-0154059", date: "2025-08-09",
+          customer: "FL342 - KIMCHI MART", total: 32511.75,
+          items: [
+            { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (18#_NEW)", size: "18 LB", qty: 130, unitPrice: 17.00, each: 17.00, total: 2210.00 },
+            { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (15#_NEW)", size: "15 LB", qty: 150, unitPrice: 9.50, each: 9.50, total: 1425.00 },
+            { itemNo: "00033D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (40#_NEW)", size: "40 LB", qty: 100, unitPrice: 21.00, each: 21.00, total: 2100.00 },
+            { itemNo: "03221C", brand: "LKK", name: "SRIRACHA MAYONNAISE", size: "12X15 OZ", qty: 2, unitPrice: 48.45, each: 4.04, total: 96.90 },
+            { itemNo: "03293T", brand: "SQUID", name: "FISH SAUCE (M)", size: "12X25 OZ", qty: 10, unitPrice: 23.00, each: 1.92, total: 230.00 },
+            { itemNo: "03295T", brand: "SQUID", name: "FISH SAUCE (S)", size: "12X10 OZ", qty: 10, unitPrice: 15.00, each: 1.25, total: 150.00 },
+            { itemNo: "03383T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (28 OZ)", size: "12X28 OZ", qty: 30, unitPrice: 38.00, each: 3.17, total: 1140.00 },
+            { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 30, unitPrice: 36.00, each: 3.00, total: 1080.00 },
+            { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 10, unitPrice: 38.00, each: 1.58, total: 380.00 },
+            { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 2, unitPrice: 40.00, each: 13.33, total: 80.00 },
+            { itemNo: "08155K", brand: "SAMYANG", name: "BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 36.00, each: 4.50, total: 180.00 },
+            { itemNo: "08180K", brand: "NONGSHIM", name: "SHIN RAMEN (4P)", size: "4X4X4.2 OZ", qty: 180, unitPrice: 9.00, each: 2.25, total: 1620.00 },
+            { itemNo: "08220K", brand: "NONGSHIM", name: "SHIN RAMEN (CUP_6P)", size: "6X2.64 OZ", qty: 30, unitPrice: 6.50, each: 1.08, total: 195.00 },
+            { itemNo: "08348K", brand: "NONGSHIM", name: "CHAPAGETTI NOODLES (4P)", size: "4X4X4.5 OZ", qty: 180, unitPrice: 15.00, each: 3.75, total: 2700.00 },
+            { itemNo: "08465K", brand: "SAMYANG", name: "2X SPICY BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 36.00, each: 4.50, total: 180.00 },
+            { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 63, unitPrice: 36.00, each: 4.50, total: 2268.00 },
+            { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 5, unitPrice: 33.00, each: 2.36, total: 165.00 },
+            { itemNo: "10999K", brand: "BINGGRAE", name: "COFFEE FLAVORED MILK", size: "4X6X6.8 OZ", qty: 20, unitPrice: 18.00, each: 4.50, total: 360.00 },
+            { itemNo: "11001K", brand: "BINGGRAE", name: "BANANA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 60, unitPrice: 18.00, each: 4.50, total: 1080.00 },
+            { itemNo: "11025K", brand: "BINGGRAE", name: "STRAWBERRY FLAVORED MILK", size: "4X6X6.8 OZ", qty: 30, unitPrice: 18.00, each: 4.50, total: 540.00 }
+          ]
+        },
+        {
+          vendor: "Rhee Bros", invoice: "PSI-0154158", date: "2025-08-11",
+          customer: "FL342 - KIMCHI MART", total: 2713.35,
+          items: [
+            { itemNo: "07434K", brand: "SAMPO", name: "COOKED SILKWORM CHRYSALIS (CAN)", size: "48X4.5 OZ", qty: 1, unitPrice: 52.70, each: 1.10, total: 52.70 },
+            { itemNo: "07598K", brand: "DONGWON", name: "TUNA CAN (S_4CAN)", size: "12X4X5.3 OZ", qty: 1, unitPrice: 94.35, each: 7.86, total: 94.35 },
+            { itemNo: "12139K", brand: "ASSI", name: "BUTANE GAS (CRV)", size: "7X4 PC", qty: 21, unitPrice: 22.00, each: 3.14, total: 462.00 },
+            { itemNo: "13191K", brand: "CLEANWRAP", name: "RUBBER GLOVES (M)", size: "10X10 PR", qty: 1, unitPrice: 173.60, each: 17.36, total: 173.60 },
+            { itemNo: "13192K", brand: "CLEANWRAP", name: "RUBBER GLOVES (L)", size: "10X10 PR", qty: 1, unitPrice: 170.40, each: 17.04, total: 170.40 },
+            { itemNo: "13193K", brand: "CLEANWRAP", name: "RUBBER GLOVES (XL)", size: "10X10 PR", qty: 1, unitPrice: 202.30, each: 20.23, total: 202.30 }
+          ]
+        }
+      ],
+      wang: [
+        {
+          vendor: "Wang", invoice: "CATALOG-2026", date: "2026-01-08",
+          customer: "KIMCHI MART (Catalog Prices)", total: 0,
+          items: [
+            { itemNo: "41331", name: "수라상 오분도미 15 LBS", krName: "수라상 오분도미 15 LBS (6.8KG)", size: "15 LBS", qty: 0, unitPrice: 19.90, each: 19.90, total: 0 },
+            { itemNo: "43523", name: "스키나 스시라이스 15 LBS", krName: "스키나 스시라이스 15 LBS", size: "15 LBS", qty: 0, unitPrice: 22.50, each: 22.50, total: 0 },
+            { itemNo: "41315", name: "왕 찹쌀 15 LBS", krName: "왕 찹쌀 15 LBS(6.8 KG)", size: "15 LBS", qty: 0, unitPrice: 18.00, each: 18.00, total: 0 },
+            { itemNo: "80089", name: "왕 한가위쌀 40 LBS", krName: "왕 한가위쌀 40 LBS", size: "40 LBS", qty: 0, unitPrice: 40.00, each: 40.00, total: 0 },
+            { itemNo: "41283", name: "왕 한가위쌀 1/15 LBS", krName: "왕 한가위쌀,1/15 LBS(6.8KG)", size: "15 LBS", qty: 0, unitPrice: 18.00, each: 18.00, total: 0 },
+            { itemNo: "41311", name: "왕 현미쌀 15LBS", krName: "왕 현미쌀 15LBS (6.8KG)", size: "15 LBS", qty: 0, unitPrice: 16.00, each: 16.00, total: 0 },
+            { itemNo: "41332", name: "스키나 스시라이스 12/4.4lbs", krName: "스키나 스시라이스12/4.4lbs", size: "12/4.4lbs", qty: 0, unitPrice: 86.40, each: 7.20, total: 0 },
+            { itemNo: "41738", name: "왕 찹쌀 8/4 Lb", krName: "왕 찹쌀 8/4 Lb (1.81 kg)", size: "8/4 Lb", qty: 0, unitPrice: 42.40, each: 5.30, total: 0 },
+            { itemNo: "5069", name: "흑미 12/2 LBS", krName: "흑미 12/2 LBS", size: "12/2 LBS", qty: 0, unitPrice: 72.00, each: 6.00, total: 0 },
+            { itemNo: "3848", name: "스키나 스시라이스 햇반 12/210", krName: "스키나 스시라이스 햇반 12/210", size: "12/210g", qty: 0, unitPrice: 12.00, each: 1.00, total: 0 },
+            { itemNo: "33673", name: "곰표 밀가루 중력분 6/5.5 LBS", krName: "곰표 밀가루,중력분 6/5.5 LBS", size: "6/5.5 LBS", qty: 0, unitPrice: 27.60, each: 4.60, total: 0 },
+            { itemNo: "12730", name: "수라상 부침가루 10/2 lb", krName: "수라상 부침가루 10/2 lb", size: "10/2 lb", qty: 0, unitPrice: 31.80, each: 3.18, total: 0 },
+            { itemNo: "12731", name: "수라상 튀김가루 10/2 Lb", krName: "수라상 튀김가루 10/2 Lb", size: "10/2 Lb", qty: 0, unitPrice: 31.80, each: 3.18, total: 0 },
+            { itemNo: "7066", name: "스키나 빵가루 24/7.05 oz", krName: "스키나 빵가루 24/7.05 oz(200g)", size: "24/7.05 oz", qty: 0, unitPrice: 31.20, each: 1.30, total: 0 },
+            { itemNo: "7194", name: "샘표 투고간장501 10/200/6 ml", krName: "샘표 투고간장501 10/200/6 ml", size: "10/200ml", qty: 0, unitPrice: 75.00, each: 7.50, total: 0 },
+            { itemNo: "3171", name: "왕 물엿(Brown) 8/6.6 Lb", krName: "왕 물엿(Brown) 8/6.6 Lb (3 kg)", size: "8/6.6 Lb", qty: 0, unitPrice: 64.00, each: 8.00, total: 0 },
+            { itemNo: "10758", name: "왕 갈비양념 15/16.9oz", krName: "왕 갈비양념 15/16.9oz 480g", size: "15/16.9oz", qty: 0, unitPrice: 48.00, each: 3.20, total: 0 },
+            { itemNo: "10759", name: "왕 갈비양념 12/29.6oz", krName: "왕 갈비양념 12/29.6oz 840g", size: "12/29.6oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
+            { itemNo: "10757", name: "왕 불고기양념 12/29.6oz", krName: "왕 불고기양념 12/29.6oz 840g", size: "12/29.6oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
+            { itemNo: "44401", name: "왕 순참기름 24/12 FZ", krName: "왕 순참기름 24/12 FZ", size: "24/12 FZ", qty: 0, unitPrice: 110.40, each: 4.60, total: 0 },
+            { itemNo: "44403", name: "왕 순참기름(캔) 10/56 FZ", krName: "왕 순참기름(캔) 10/56 FZ", size: "10/56 FZ", qty: 0, unitPrice: 166.00, each: 16.60, total: 0 },
+            { itemNo: "3761", name: "왕 고추장고추가루Fine 10/3lb", krName: "왕 고추장고추가루Fine 10/3lb", size: "10/3lb", qty: 0, unitPrice: 133.00, each: 13.30, total: 0 },
+            { itemNo: "3158", name: "왕 김치고추가루Coarse 10/3lb", krName: "왕 김치고추가루Coarse 10/3lb", size: "10/3lb", qty: 0, unitPrice: 133.00, each: 13.30, total: 0 },
+            { itemNo: "1835", name: "왕 김치고추가루coarse 6/5 lb", krName: "왕 김치고추가루coarse6/5 lb", size: "6/5 lb", qty: 0, unitPrice: 132.00, each: 22.00, total: 0 },
+            { itemNo: "8275", name: "왕 볶음통깨 10/4 lb", krName: "왕 볶음통깨 10/4 lb", size: "10/4 lb", qty: 0, unitPrice: 166.00, each: 16.60, total: 0 },
+            { itemNo: "8274", name: "왕 볶음통깨 12/2 lb", krName: "왕 볶음통깨 12/2 lb", size: "12/2 lb", qty: 0, unitPrice: 87.60, each: 7.30, total: 0 },
+            { itemNo: "1145", name: "왕 고운소금(서해)Fine 10/3lb", krName: "왕 고운소금(서해)Fine 10/3lb", size: "10/3lb", qty: 0, unitPrice: 40.00, each: 4.00, total: 0 },
+            { itemNo: "1138", name: "왕 굵은소금(신안)Coarse 10/3lb", krName: "왕 굵은소금(신안)Coarse 10/3lb", size: "10/3lb", qty: 0, unitPrice: 53.00, each: 5.30, total: 0 },
+            { itemNo: "13245", name: "왕 다시마 24/16oz", krName: "왕 다시마 24/16oz(453 g)", size: "24/16oz", qty: 0, unitPrice: 319.20, each: 13.30, total: 0 },
+            { itemNo: "21429", name: "수라상 진공소면 12/3 LBS", krName: "수라상 진공소면 12/3 LBS", size: "12/3 LBS", qty: 0, unitPrice: 63.60, each: 5.30, total: 0 },
+            { itemNo: "826", name: "왕 막국수 24/16 oz", krName: "왕 막국수 24/16 oz", size: "24/16 oz", qty: 0, unitPrice: 43.20, each: 1.80, total: 0 },
+            { itemNo: "818", name: "왕 우동국수 12/3 lb", krName: "왕 우동국수 12/3 lb", size: "12/3 lb", qty: 0, unitPrice: 55.20, each: 4.60, total: 0 },
+            { itemNo: "560", name: "왕 김치통조림 48/5.64oz", krName: "왕 김치통조림 48/5.64oz", size: "48/5.64oz", qty: 0, unitPrice: 76.80, each: 1.60, total: 0 },
+            { itemNo: "16741", name: "왕 컵고추장(EN) 12/2.2 lb", krName: "왕 컵고추장(EN) 12/2.2 lb,1kg", size: "12/2.2 lb", qty: 0, unitPrice: 63.60, each: 5.30, total: 0 },
+            { itemNo: "9484", name: "왕 태양초찰고추장(병) 12/1.1 lb", krName: "왕 태양초찰고추장(병)12/1.1 lb", size: "12/1.1 lb", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
+            { itemNo: "9486", name: "왕 태양초찰고추장(병) 12/2.2 lb", krName: "왕 태양초찰고추장(병)12/2.2 lb", size: "12/2.2 lb", qty: 0, unitPrice: 78.00, each: 6.50, total: 0 },
+            { itemNo: "1070", name: "왕 콩된장(병) 12/16 oz", krName: "왕 콩된장(병) 12/16 oz 450g", size: "12/16 oz", qty: 0, unitPrice: 36.00, each: 3.00, total: 0 },
+            { itemNo: "1071", name: "왕 콩된장(병) 12/32.7oz", krName: "왕 콩된장(병) 12/32.7oz 900g", size: "12/32.7oz", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
+            { itemNo: "2003", name: "왕 볶음짜장(병) 12/1.1 lb", krName: "왕 볶음짜장(병) 12/1.1 lb 500g", size: "12/1.1 lb", qty: 0, unitPrice: 48.00, each: 4.00, total: 0 },
+            { itemNo: "1089", name: "왕 짜장(병) 12/16 oz", krName: "왕 짜장(병) 12/16 oz, 450g", size: "12/16 oz", qty: 0, unitPrice: 39.60, each: 3.30, total: 0 }
+          ]
+        }
+      ],
+      choripdong: [
+        {
+          vendor: "Choripdong", invoice: "ORDER-2026-03", date: "2026-03-01",
+          customer: "KIMCHI MART", total: 0,
+          items: [
+            { itemNo: "EH1103", name: "HS)RICE CAKE 12/2.2LB(1KG)", krName: "한상)떡국떡", size: "12/2.2LB(1KG)", qty: 2, unitPrice: 28.20, each: 2.35, total: 56.40 },
+            { itemNo: "EH1105", name: "HS)RICE CAKE 20/500g", krName: "한상)떡볶이떡", size: "20/500g", qty: 2, unitPrice: 29.00, each: 1.45, total: 58.00 },
+            { itemNo: "EH1107", name: "HS)RICE CAKE 12/1KG", krName: "한상)떡볶이떡", size: "12/1KG", qty: 10, unitPrice: 28.20, each: 2.35, total: 282.00 },
+            { itemNo: "LB3007", name: "BEANHUT) Strawberry Latte Coffee 20/13.52floz", krName: "BEANHUT) Strawberry Latte Coffee", size: "20/13.52floz", qty: 1, unitPrice: 48.00, each: 2.40, total: 48.00 },
+            { itemNo: "LM1050", name: "Maeil)Coffee Flavor Drink-Macchiato Flavor 10/220ml", krName: "매일)마이 까페라떼 (컵)-카라멜 마끼야또", size: "10/220 ML", qty: 2, unitPrice: 14.50, each: 1.45, total: 29.00 },
+            { itemNo: "LM1059", name: "MAEIL)Brown Sugar Milk Tea Latte 10/220ml", krName: "매일)마이 카페라떼(컵)-브라운슈가 밀크티", size: "10/220ml", qty: 2, unitPrice: 15.00, each: 1.50, total: 30.00 },
+            { itemNo: "LS2001", name: "SEOUL)Coffee Flavored Drink 4/6/190ML", krName: "서울)커피우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
+            { itemNo: "LS2026", name: "Seoul)Chocolate Flavored Milk 4/6/200ML", krName: "서울)초콜릿 우유", size: "6/200ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
+            { itemNo: "LS2027", name: "Seoul)Mango Flavored Milk 4/6/190ML", krName: "서울)망고 우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
+            { itemNo: "LS2028", name: "Seoul)Melon Flavored Milk 4/6/190ML", krName: "서울)메론 우유", size: "6/190ML", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
+            { itemNo: "LS2035", name: "Seoul)Brown Sugar Flavored Latte 10/250ml", krName: "서울F&B)브라운슈가라떼", size: "10/250ml", qty: 3, unitPrice: 19.00, each: 1.90, total: 57.00 },
+            { itemNo: "LS2036", name: "Seoul)Brown Sugar Flavored Milk Tea 10/250ml", krName: "서울F&B)브라운슈가밀크티", size: "10/250ml", qty: 3, unitPrice: 19.00, each: 1.90, total: 57.00 },
+            { itemNo: "MI1003", name: "Ilgajib)Braised Lotus Roots 20/4.23oz", krName: "일가집)연근조림", size: "20/120g(4.23oz)", qty: 1, unitPrice: 36.00, each: 1.80, total: 36.00 },
+            { itemNo: "MI1004", name: "Ilgajib)Seasoned Dried Radish 20/4.23oz", krName: "일가집)쫄깃무말랭이", size: "20/120g(4.23oz)", qty: 1, unitPrice: 42.00, each: 2.10, total: 42.00 },
+            { itemNo: "MI1005", name: "Ilgajib)Cheongyang Chili Pepper & Cucumber in Soy Sauce 12/8.81oz", krName: "일가집)청량고추오이", size: "12/250g(8.81oz)", qty: 1, unitPrice: 36.00, each: 3.00, total: 36.00 },
+            { itemNo: "CS1144", name: "Sunshine Moonlight(Koshihikari) 8/4.4 LB (NEW CROP)", krName: "일월쌀 (고시히카리)", size: "8/4.4 LB", qty: 1, unitPrice: 62.00, each: 7.75, total: 62.00 },
+            { itemNo: "CS1161", name: "Sunshine Moonlight (Akitakomachi) 8/4.4 LB (NEW CROP)", krName: "일월쌀 (아키타코마찌)", size: "8/4.4 LB", qty: 1, unitPrice: 62.00, each: 7.75, total: 62.00 },
+            { itemNo: "HK1081", name: "G&G)Roased Seaweed for Triangle Kimbop 20/15Sheet/0.63oz", krName: "광천김)달인삼각김밥용김", size: "20/15매", qty: 5, unitPrice: 50.00, each: 2.50, total: 250.00 },
+            { itemNo: "KD0040", name: "DW)Tuna Extract Sauce 16/500g", krName: "동원)참치액", size: "16/500g", qty: 1, unitPrice: 77.00, each: 4.81, total: 77.00 },
+            { itemNo: "KL1003", name: "LOTTE)Mirim(Cooking Wine) 6/1.8 l(2kg)", krName: "롯데)미림", size: "6/1.8 L", qty: 1, unitPrice: 35.10, each: 5.85, total: 35.10 }
+          ]
+        }
+      ]
+    }
+  },
+
+  pembroke: {
+    ...BRANCHES.pembroke,
+    vendors: {
+      rhee: [],
+      wang: [],
+      choripdong: []
+    }
+  },
+
+  hollywood: {
+    ...BRANCHES.hollywood,
+    vendors: {
+      rhee: [
+        {
+          vendor: "Rhee Bros", invoice: "PSI-0171139", date: "2026-03-19",
+          customer: "FL381 - KIMCHI MART AT HOLLYWOOD", total: 21428.27,
+          items: [
+            { itemNo: "00004D", brand: "HANKUKMI", name: "EXTRA FANCY RICE (5#_SUSHI RICE)", size: "8X5 LB", qty: 1, unitPrice: 42.40, each: 5.30, total: 42.40 },
+            { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (USA, 18#_NEW)", size: "18 LB", qty: 10, unitPrice: 17.00, each: 17.00, total: 170.00 },
+            { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 15#_NEW)", size: "15 LB", qty: 10, unitPrice: 12.00, each: 12.00, total: 120.00 },
+            { itemNo: "00033D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 40#_NEW)", size: "40 LB", qty: 20, unitPrice: 25.00, each: 25.00, total: 500.00 },
+            { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 6, unitPrice: 38.70, each: 3.23, total: 232.20 },
+            { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 6, unitPrice: 38.00, each: 1.58, total: 228.00 },
+            { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 2, unitPrice: 42.00, each: 14.00, total: 84.00 },
+            { itemNo: "05027D", brand: "ASSI", name: "RED PEPPER POWDER (KIMCHI_5#)", size: "8X5 LB", qty: 5, unitPrice: 118.00, each: 14.75, total: 590.00 },
+            { itemNo: "08027K", brand: "ASSI", name: "SWEET POTATO NOODLES (JAPCHAE_1.5#)", size: "15X1.5 LB", qty: 5, unitPrice: 50.40, each: 3.36, total: 252.00 },
+            { itemNo: "08155K", brand: "SAMYANG", name: "BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 42.00, each: 5.25, total: 210.00 },
+            { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
+            { itemNo: "08444K", brand: "SAMYANG", name: "CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
+            { itemNo: "08465K", brand: "SAMYANG", name: "2X SPICY BULDAK RAMEN (5P)", size: "8X5X4.9 OZ", qty: 5, unitPrice: 42.00, each: 5.25, total: 210.00 },
+            { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 65, unitPrice: 42.00, each: 5.25, total: 2730.00 },
+            { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 5, unitPrice: 36.00, each: 2.57, total: 180.00 },
+            { itemNo: "10902K", brand: "ORION", name: "TURTLE CHIPS (FLAMIN LIME FLAVOR)", size: "12X5.65 OZ", qty: 5, unitPrice: 31.50, each: 2.63, total: 157.50 },
+            { itemNo: "10917K", brand: "ORION", name: "TURTLE CHIPS (K-CHICKEN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 34.20, each: 2.85, total: 171.00 },
+            { itemNo: "10918K", brand: "ORION", name: "TURTLE CHIPS (MEXICAN STREET CORN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 35.10, each: 2.93, total: 175.50 },
+            { itemNo: "10998K", brand: "BINGGRAE", name: "VANILLA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
+            { itemNo: "10999K", brand: "BINGGRAE", name: "COFFEE FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
+            { itemNo: "11001K", brand: "BINGGRAE", name: "BANANA FLAVORED MILK", size: "4X6X6.8 OZ", qty: 5, unitPrice: 19.00, each: 4.75, total: 95.00 },
+            { itemNo: "11025K", brand: "BINGGRAE", name: "STRAWBERRY FLAVORED MILK", size: "4X6X6.8 OZ", qty: 10, unitPrice: 19.00, each: 4.75, total: 190.00 },
+            { itemNo: "19981D", brand: "ASSI", name: "TOFU (FIRM)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
+            { itemNo: "19982D", brand: "ASSI", name: "TOFU (SOFT)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
+            { itemNo: "21202K", brand: "BINGGRAE", name: "MELONA (HONEYDEW MELON)", size: "8X8X2.4 OZ", qty: 1, unitPrice: 34.00, each: 4.25, total: 34.00 },
+            { itemNo: "29097K", brand: "ASSI", name: "CRUSHED RAMEN & MOZZARELLA CORN DOGS", size: "12X12.34 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 },
+            { itemNo: "29100K", brand: "ASSI", name: "CRISPY MOZZARELLA & FISH CAKE CORN DOGS", size: "12X14.1 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 }
+          ]
+        },
+        {
+          vendor: "Rhee Bros", invoice: "PSI-0170145", date: "2026-03-06",
+          customer: "FL381 - KIMCHI MART AT HOLLYWOOD", total: 18349.96,
+          items: [
+            { itemNo: "00007D", brand: "HANKUKMI", name: "PREMIUM MEDIUM GRAIN RICE (USA, 40#_NEW)", size: "40 LB", qty: 5, unitPrice: 29.00, each: 29.00, total: 145.00 },
+            { itemNo: "00009D", brand: "KINMAI", name: "PREMIUM GOLD SHORT GRAIN RICE (USA, 18#_NEW)", size: "18 LB", qty: 15, unitPrice: 17.00, each: 17.00, total: 255.00 },
+            { itemNo: "00030D", brand: "RHEECHUN", name: "FANCY VARIETY RICE (USA, 15#_NEW)", size: "15 LB", qty: 20, unitPrice: 12.00, each: 12.00, total: 240.00 },
+            { itemNo: "03266D", brand: "SANJ", name: "THAI PEANUT SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 19.55, each: 3.26, total: 19.55 },
+            { itemNo: "03387C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (8.5#)", size: "3X8.5 LB", qty: 5, unitPrice: 42.00, each: 14.00, total: 210.00 },
+            { itemNo: "08180K", brand: "NONGSHIM", name: "SHIN RAMEN (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 15.00, each: 3.75, total: 75.00 },
+            { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
+            { itemNo: "08444K", brand: "SAMYANG", name: "CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
+            { itemNo: "08479K", brand: "SAMYANG", name: "CARBO BULDAK RAMEN (5P)", size: "8X5X4.58 OZ", qty: 10, unitPrice: 42.00, each: 5.25, total: 420.00 },
+            { itemNo: "29097K", brand: "ASSI", name: "CRUSHED RAMEN & MOZZARELLA CORN DOGS", size: "12X12.34 OZ", qty: 1, unitPrice: 76.00, each: 6.33, total: 76.00 }
+          ]
+        }
+      ],
+      wang: [],
+      choripdong: []
+    }
+  },
+
+  coral_springs: {
+    ...BRANCHES.coral_springs,
+    vendors: {
+      rhee: [],
+      wang: [],
+      choripdong: []
+    }
+  },
+
+  fort_lauderdale: {
+    ...BRANCHES.fort_lauderdale,
+    vendors: {
+      rhee: [
+        {
+          vendor: "Rhee Bros", invoice: "PSI-0171141", date: "2026-03-19",
+          customer: "FL432 - KIMCHI MART PALM BEACH", total: 8878.91,
+          items: [
+            { itemNo: "00024D", brand: "RHEECHUN", name: "PREMIUM GRADE BROWN RICE (2#)", size: "16X2 LB", qty: 1, unitPrice: 31.45, each: 1.97, total: 31.45 },
+            { itemNo: "00025D", brand: "RHEECHUN", name: "PREMIUM SWEET RICE (USA, 15#)", size: "15 LB", qty: 5, unitPrice: 13.00, each: 13.00, total: 65.00 },
+            { itemNo: "03020K", brand: "SEMPIO", name: "NATURALLY BREWED SOY SAUCE LIGHT (860ML)", size: "12X29.08 OZ", qty: 1, unitPrice: 48.60, each: 4.05, total: 48.60 },
+            { itemNo: "03221C", brand: "LKK", name: "SRIRACHA MAYONNAISE", size: "12X15 OZ", qty: 5, unitPrice: 51.30, each: 4.28, total: 256.50 },
+            { itemNo: "03261D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 15.30, each: 2.55, total: 15.30 },
+            { itemNo: "03262D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUTEN FREE_LITE SODIUM)", size: "6X10 OZ", qty: 1, unitPrice: 20.40, each: 3.40, total: 20.40 },
+            { itemNo: "03264D", brand: "SANJ", name: "ORGANIC TAMARI SOY SAUCE (GLUT FREE_LITE SOD)", size: "6X10 OZ", qty: 1, unitPrice: 30.60, each: 5.10, total: 30.60 },
+            { itemNo: "03265D", brand: "SANJ", name: "TAMARI SOY SAUCE (GLUT FREE_50PER LITE SODIUM)", size: "6X10 OZ", qty: 1, unitPrice: 21.60, each: 3.60, total: 21.60 },
+            { itemNo: "03266D", brand: "SANJ", name: "THAI PEANUT SAUCE (GLUTEN FREE)", size: "6X10 OZ", qty: 1, unitPrice: 18.90, each: 3.15, total: 18.90 },
+            { itemNo: "03319T", brand: "HEALTHYBOY", name: "SWEET SOY SAUCE (WHITE LABEL)", size: "12X34.22 OZ", qty: 1, unitPrice: 31.50, each: 2.63, total: 31.50 },
+            { itemNo: "03330C", brand: "HUYFONG", name: "CHILI GARLIC SAUCE (L)", size: "3X8.5 LB", qty: 2, unitPrice: 45.90, each: 15.30, total: 91.80 },
+            { itemNo: "03384T", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (17 OZ)", size: "12X17 OZ", qty: 6, unitPrice: 38.70, each: 3.23, total: 232.20 },
+            { itemNo: "03386C", brand: "HUYFONG", name: "SRIRACHA CHILI SAUCE (9 OZ)", size: "24X9 OZ", qty: 6, unitPrice: 38.00, each: 1.58, total: 228.00 },
+            { itemNo: "03422K", brand: "CHUNGJUNGONE", name: "BROWN RICE HOT PEPPER PASTE (2.2#)", size: "12X2.2 LB", qty: 1, unitPrice: 92.50, each: 7.71, total: 92.50 },
+            { itemNo: "03423K", brand: "CHUNGJUNGONE", name: "BROWN RICE HOT PEPPER PASTE (6.6#)", size: "4X6.6 LB", qty: 1, unitPrice: 78.00, each: 19.50, total: 78.00 },
+            { itemNo: "03702V", brand: "REDBOAT", name: "FISH SAUCE 31N", size: "12X17 OZ", qty: 1, unitPrice: 62.10, each: 5.18, total: 62.10 },
+            { itemNo: "03706T", brand: "TIPAROS", name: "FISH SAUCE (23 OZ_M)", size: "12X23 OZ", qty: 1, unitPrice: 21.50, each: 1.79, total: 21.50 },
+            { itemNo: "03708T", brand: "MAEKRUA", name: "OYSTER SAUCE (11.8 OZ_S)", size: "12X11.8 OZ", qty: 1, unitPrice: 25.00, each: 2.08, total: 25.00 },
+            { itemNo: "05092D", brand: "EVERGREEN", name: "CANOLA OLIVE OIL", size: "8X64 OZ", qty: 1, unitPrice: 59.20, each: 7.40, total: 59.20 },
+            { itemNo: "05148K", brand: "ASSI", name: "SESAME OIL (L_BTL)", size: "12X14.6 OZ", qty: 1, unitPrice: 80.00, each: 6.67, total: 80.00 },
+            { itemNo: "05149K", brand: "ASSI", name: "SESAME OIL (S_BTL)", size: "24X5.48 OZ", qty: 1, unitPrice: 67.50, each: 2.81, total: 67.50 },
+            { itemNo: "05152D", brand: "EVERGREEN", name: "PEANUT OIL", size: "8X64 OZ", qty: 1, unitPrice: 72.00, each: 9.00, total: 72.00 },
+            { itemNo: "05389D", brand: "ASSI", name: "ROASTED SESAME SEEDS (7.5 OZ_BTL)", size: "12X7.5 OZ", qty: 1, unitPrice: 38.25, each: 3.19, total: 38.25 },
+            { itemNo: "05413D", brand: "ASSI", name: "ROASTED WHITE SESAME SEEDS (7.5 OZ_BTL)", size: "12X7.5 OZ", qty: 1, unitPrice: 48.00, each: 4.00, total: 48.00 },
+            { itemNo: "06834T", brand: "PANTAI", name: "SWEET CHILI SAUCE (SUGAR FREE_GB)", size: "12X7.5 OZ", qty: 1, unitPrice: 24.65, each: 2.05, total: 24.65 },
+            { itemNo: "06885T", brand: "PANTAI", name: "SWEETENED CHILI SAUCE FOR SPRING ROLL (L)", size: "12X32.5 OZ", qty: 1, unitPrice: 47.50, each: 3.96, total: 47.50 },
+            { itemNo: "06907T", brand: "AROYD", name: "COCONUT MILK (UHT_ 1L)", size: "12X33.8 OZ", qty: 1, unitPrice: 40.00, each: 3.33, total: 40.00 },
+            { itemNo: "07598K", brand: "DONGWON", name: "TUNA CAN (S_4CAN)", size: "12X4X5.3 OZ", qty: 2, unitPrice: 110.00, each: 9.17, total: 220.00 },
+            { itemNo: "08288K", brand: "OTOKI", name: "KIMCHI RAMEN (5P)", size: "8X5X4.23 OZ", qty: 1, unitPrice: 42.40, each: 5.30, total: 42.40 },
+            { itemNo: "08343K", brand: "OTOKI", name: "ODONGTONG NOODLES (4P_SEAFOOD)", size: "8X4X4.23 OZ", qty: 1, unitPrice: 42.50, each: 5.31, total: 42.50 },
+            { itemNo: "08344K", brand: "NONGSHIM", name: "SHIN RAMEN BLACK (4P)", size: "4X4X4.2 OZ", qty: 5, unitPrice: 28.00, each: 7.00, total: 140.00 },
+            { itemNo: "08439K", brand: "SAMYANG", name: "QUATTRO CHEESE BULDAK RAMEN (BIG BOWL)", size: "6X3.88 OZ", qty: 10, unitPrice: 13.50, each: 2.25, total: 135.00 },
+            { itemNo: "08495K", brand: "SAMYANG", name: "CREAM CARBONARA BULDAK RAMEN (BIG BOWL)", size: "6X4.23 OZ", qty: 5, unitPrice: 13.50, each: 2.25, total: 67.50 },
+            { itemNo: "08497K", brand: "SAMYANG", name: "TACO BULDAK RAMEN (BIG BOWL)", size: "6X3.7 OZ", qty: 5, unitPrice: 13.50, each: 2.25, total: 67.50 },
+            { itemNo: "08529K", brand: "DONGWON", name: "HOT & SPICY TOPOKKI (CUP)", size: "16X4.23 OZ", qty: 1, unitPrice: 34.00, each: 2.13, total: 34.00 },
+            { itemNo: "08638K", brand: "PALDO", name: "GOMTANG MYON (KING CUP, 6P)", size: "6X3.7 OZ", qty: 1, unitPrice: 10.50, each: 1.75, total: 10.50 },
+            { itemNo: "08722K", brand: "PALDO", name: "BIBIMMEN RAMEN (5P)", size: "4X5X4.58 OZ", qty: 1, unitPrice: 17.00, each: 4.25, total: 17.00 },
+            { itemNo: "09873K", brand: "PALDO", name: "PORORO DRINK (TROPICAL FRUITS FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 23.00, each: 0.96, total: 23.00 },
+            { itemNo: "10291K", brand: "ASSI", name: "GINGER TEA (LIQUID_2.2#)", size: "12X2.2 LB", qty: 1, unitPrice: 65.00, each: 5.42, total: 65.00 },
+            { itemNo: "10385C", brand: "PENGUIN", name: "FRUIT JELLY (HAPPY DOG)", size: "6X1.85 LB", qty: 1, unitPrice: 38.00, each: 6.33, total: 38.00 },
+            { itemNo: "10386C", brand: "PENGUIN", name: "FRUIT JELLY (HAPPY CAT)", size: "6X1.85 LB", qty: 1, unitPrice: 38.00, each: 6.33, total: 38.00 },
+            { itemNo: "10437K", brand: "ORION", name: "TURTLE CHIPS (CHOCO CHURROS)", size: "14X5.65 OZ", qty: 3, unitPrice: 36.00, each: 2.57, total: 108.00 },
+            { itemNo: "10537V", brand: "COCOXIM", name: "ORGANIC COCONUT WATER (11.2 OZ)", size: "12X11.2 OZ", qty: 2, unitPrice: 11.30, each: 0.94, total: 22.60 },
+            { itemNo: "10538V", brand: "COCOXIM", name: "ORGANIC COCONUT WATER (1L)", size: "12X1 L", qty: 1, unitPrice: 25.50, each: 2.13, total: 25.50 },
+            { itemNo: "10655T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (APPLE & GRAPE OOLONG TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
+            { itemNo: "10656T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (PASSION FRUIT & MANGO GREEN TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
+            { itemNo: "10657T", brand: "BUPPOZ", name: "POPZY POPPING BUBBLE TEA (STRAWBERRY & KIWI GREEN TEA)", size: "12X11.33 OZ", qty: 5, unitPrice: 14.30, each: 1.19, total: 71.50 },
+            { itemNo: "10714K", brand: "JARDIN", name: "MATCHA ORIGINAL LATTE", size: "12X6.87 OZ", qty: 1, unitPrice: 77.00, each: 6.42, total: 77.00 },
+            { itemNo: "10855K", brand: "PALDO", name: "PORORO DRINK (PEACH FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 21.00, each: 0.88, total: 21.00 },
+            { itemNo: "10857K", brand: "PALDO", name: "PORORO DRINK (MANGO FLAVOR)", size: "24X7.95 OZ", qty: 1, unitPrice: 21.00, each: 0.88, total: 21.00 },
+            { itemNo: "10902K", brand: "ORION", name: "TURTLE CHIPS (FLAMIN LIME FLAVOR)", size: "12X5.65 OZ", qty: 5, unitPrice: 31.50, each: 2.63, total: 157.50 },
+            { itemNo: "10917K", brand: "ORION", name: "TURTLE CHIPS (K-CHICKEN FLAVOR)", size: "12X5.64 OZ", qty: 5, unitPrice: 34.20, each: 2.85, total: 171.00 },
+            { itemNo: "10918K", brand: "ORION", name: "TURTLE CHIPS (MEXICAN STREET CORN FLAVOR)", size: "12X5.64 OZ", qty: 3, unitPrice: 35.10, each: 2.93, total: 105.30 },
+            { itemNo: "10970T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (ORIGNAL)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
+            { itemNo: "10971T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (SPICY)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
+            { itemNo: "10972T", brand: "TAOKAENOI", name: "HI TEMPURA SEAWEED SNACK (SMOKED BBQ)", size: "12X1.27 OZ", qty: 2, unitPrice: 22.00, each: 1.83, total: 44.00 },
+            { itemNo: "12139K", brand: "ASSI", name: "BUTANE GAS (CRV)", size: "7X4 PC", qty: 2, unitPrice: 23.00, each: 3.29, total: 46.00 },
+            { itemNo: "19022J", brand: "HANA", name: "TEZUKURI SHIRO MISO (1#)", size: "20X1 LB", qty: 1, unitPrice: 29.75, each: 1.49, total: 29.75 },
+            { itemNo: "19121J", brand: "HANA", name: "PICKLED GINGER (SUSHI GINGER_S.BTL_5 OZ)", size: "24X5 OZ", qty: 1, unitPrice: 41.40, each: 1.73, total: 41.40 },
+            { itemNo: "19127D", brand: "HANA", name: "PICKLED GINGER (SUSHI GINGER_BTL_12 OZ)", size: "12X12 OZ", qty: 1, unitPrice: 36.00, each: 3.00, total: 36.00 },
+            { itemNo: "19131J", brand: "UNBRANDED", name: "PICKLED GINGER (AMAZU SHOGA_1.1#)", size: "20X1.1 LB", qty: 1, unitPrice: 44.00, each: 2.20, total: 44.00 },
+            { itemNo: "19212K", brand: "ASSI", name: "PICKLED SCALLION (RAKKYO_ BTL_ 18 OZ)", size: "12X18 OZ", qty: 1, unitPrice: 55.25, each: 4.60, total: 55.25 },
+            { itemNo: "19375K", brand: "ASSI", name: "INSTANT UDON NOODLES", size: "12X23.28 OZ", qty: 1, unitPrice: 34.00, each: 2.83, total: 34.00 },
+            { itemNo: "19376K", brand: "ASSI", name: "INSTANT KIMCHI UDON NOODLES", size: "12X22.2 OZ", qty: 1, unitPrice: 38.25, each: 3.19, total: 38.25 },
+            { itemNo: "19410K", brand: "ASSI", name: "SEAWEED JELLY (12 OZ)", size: "24X12 OZ", qty: 1, unitPrice: 34.20, each: 1.43, total: 34.20 },
+            { itemNo: "19901K", brand: "ASSI", name: "KIMCHI SOUP", size: "15X21.16 OZ", qty: 1, unitPrice: 39.95, each: 2.66, total: 39.95 },
+            { itemNo: "19902K", brand: "ASSI", name: "SOFT TOFU SOUP", size: "15X19.4 OZ", qty: 1, unitPrice: 37.80, each: 2.52, total: 37.80 },
+            { itemNo: "19903K", brand: "ASSI", name: "SOYBEAN PASTE SOUP", size: "15X21.16 OZ", qty: 1, unitPrice: 38.00, each: 2.53, total: 38.00 },
+            { itemNo: "19976D", brand: "ASSI", name: "TOPOKKI RICE CAKE (2#)", size: "20X2 LB", qty: 1, unitPrice: 49.00, each: 2.45, total: 49.00 },
+            { itemNo: "19981D", brand: "ASSI", name: "TOFU (FIRM)", size: "12X16 OZ", qty: 2, unitPrice: 16.00, each: 1.33, total: 32.00 },
+            { itemNo: "19982D", brand: "ASSI", name: "TOFU (SOFT)", size: "12X16 OZ", qty: 1, unitPrice: 16.00, each: 1.33, total: 16.00 },
+            { itemNo: "20089D", brand: "NEWZEALAND", name: "HALFSHELL MUSSELS (NEW ZEALAND)", size: "12X2 LB", qty: 1, unitPrice: 130.00, each: 10.83, total: 130.00 },
+            { itemNo: "20371J", brand: "UNBRANDED", name: "FRIED FISH CAKE (JAPAN_VEGETABLE_AGE BALL)", size: "24.2 LB", qty: 1, unitPrice: 85.00, each: 3.51, total: 85.00 },
+            { itemNo: "20434K", brand: "ASSI", name: "COMBO FISH CAKE", size: "20X1.1 LB", qty: 1, unitPrice: 88.20, each: 4.41, total: 88.20 },
+            { itemNo: "20460K", brand: "ASSI", name: "RECTANGULAR FISH CAKE (KOREA_22#)", size: "22 LB", qty: 1, unitPrice: 45.00, each: 2.05, total: 45.00 },
+            { itemNo: "20485K", brand: "ASSI", name: "BANCHAN SEASONED PERILLA LEAF (8#)", size: "2X8 LB", qty: 1, unitPrice: 135.00, each: 67.50, total: 135.00 },
+            { itemNo: "20486K", brand: "ASSI", name: "BANCHAN SEASONED GREEN PEPPER (8#)", size: "2X8 LB", qty: 1, unitPrice: 94.50, each: 47.25, total: 94.50 },
+            { itemNo: "20487K", brand: "ASSI", name: "BANCHAN SEASONED GARLIC (8#)", size: "2X8 LB", qty: 1, unitPrice: 105.00, each: 52.50, total: 105.00 },
+            { itemNo: "20497K", brand: "HONGGANE", name: "CHEWY COLD NOODLES (JJOLMYEON)", size: "10X4.4 LB", qty: 1, unitPrice: 35.00, each: 3.50, total: 35.00 },
+            { itemNo: "20514K", brand: "SONGHAK", name: "CHUNCHEON STYLE BUCKWHEAT COLD NOODLES", size: "6X4.4 LB", qty: 1, unitPrice: 30.00, each: 5.00, total: 30.00 },
+            { itemNo: "20571D", brand: "ASSI", name: "PORK DUMPLINGS", size: "20X1.25 LB", qty: 1, unitPrice: 109.00, each: 5.45, total: 109.00 },
+            { itemNo: "20574D", brand: "ASSI", name: "PORK POTSTICKERS", size: "10X1.5 LB", qty: 1, unitPrice: 65.00, each: 6.50, total: 65.00 },
+            { itemNo: "20669K", brand: "SAMLIP", name: "VEGETABLE DUMPLING W/LEEK", size: "12X23.8 OZ", qty: 1, unitPrice: 46.80, each: 3.90, total: 46.80 },
+            { itemNo: "20890J", brand: "OSAKI", name: "CRAB STICK (IMITATION)", size: "20X1.1 LB", qty: 5, unitPrice: 105.00, each: 5.25, total: 525.00 },
+            { itemNo: "20891J", brand: "KABUTO", name: "CRAB STICK (IMITATION)", size: "20X1.1 LB", qty: 1, unitPrice: 60.00, each: 3.00, total: 60.00 },
+            { itemNo: "20937K", brand: "LOTTE", name: "PAPICO CHOCO POPSICLE (6P)", size: "4X6X4.94 OZ", qty: 1, unitPrice: 18.70, each: 4.68, total: 18.70 },
+            { itemNo: "20971K", brand: "LOTTE", name: "OK-SUSU (SWEET CORN 5P)", size: "6X5X4.73 OZ", qty: 3, unitPrice: 35.00, each: 5.83, total: 105.00 },
+            { itemNo: "20979K", brand: "LOTTE", name: "GREEK YOGURT ICE BAR (6P)", size: "6X6X2.8 OZ", qty: 1, unitPrice: 40.00, each: 6.67, total: 40.00 }
+          ]
+        }
+      ],
+      wang: [],
+      choripdong: []
+    }
+  }
+};
+
+// Helper: Get all invoices across all branches for a vendor
+function getAllInvoicesForVendor(vendorKey) {
+  const invoices = [];
+  for (const [branchKey, branch] of Object.entries(HISTORICAL_DATA)) {
+    const vendorInvoices = branch.vendors?.[vendorKey] || [];
+    for (const inv of vendorInvoices) {
+      invoices.push({ ...inv, branchKey, branchName: branch.name });
+    }
+  }
+  return invoices;
+}
+
+// Helper: Get all invoices for a specific branch
+function getAllInvoicesForBranch(branchKey) {
+  const branch = HISTORICAL_DATA[branchKey];
+  if (!branch) return [];
+  const invoices = [];
+  for (const [vendorKey, vendorInvoices] of Object.entries(branch.vendors || {})) {
+    for (const inv of vendorInvoices) {
+      invoices.push({ ...inv, vendorKey, branchKey });
+    }
+  }
+  return invoices;
+}
+
+// Helper: Get all invoices flat
+function getAllInvoicesFlat() {
+  const invoices = [];
+  for (const [branchKey, branch] of Object.entries(HISTORICAL_DATA)) {
+    for (const [vendorKey, vendorInvoices] of Object.entries(branch.vendors || {})) {
+      for (const inv of vendorInvoices) {
+        invoices.push({ ...inv, vendorKey, branchKey, branchName: branch.name });
+      }
+    }
+  }
+  return invoices;
+}
+
 // Export for use
-if (typeof module !== 'undefined') module.exports = HISTORICAL_DATA;
+if (typeof module !== 'undefined') module.exports = { BRANCHES, VENDORS, HISTORICAL_DATA };

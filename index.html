@@ -20,7 +20,8 @@ body {
   background: #f5f5f5;
   color: #333;
   min-height: 100vh;
-  padding-bottom: 70px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* ===== HEADER ===== */
@@ -32,50 +33,94 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-.header h1 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-.header .subtitle {
-  font-size: 0.8rem;
-  opacity: 0.85;
-  margin-top: 2px;
-}
-
-/* ===== BOTTOM NAV ===== */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
   display: flex;
-  border-top: 1px solid #ddd;
-  z-index: 100;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
-}
-.nav-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 8px 4px;
-  font-size: 0.65rem;
-  color: #666;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s;
-  -webkit-tap-highlight-color: transparent;
+  gap: 12px;
 }
-.nav-item.active { color: #C62828; }
-.nav-item svg { width: 22px; height: 22px; margin-bottom: 2px; }
-.nav-item span { white-space: nowrap; }
+.header h1 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.header .subtitle { font-size: 0.75rem; opacity: 0.85; margin-top: 2px; }
+.back-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.back-btn.visible { display: flex; }
 
 /* ===== PAGES ===== */
 .page { display: none; padding: 16px; }
 .page.active { display: block; }
+
+/* ===== BRANCH GRID ===== */
+.branch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.branch-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-left: 5px solid #ccc;
+  -webkit-tap-highlight-color: transparent;
+}
+.branch-card:active { transform: scale(0.97); }
+.branch-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.branch-card .branch-name { font-size: 1rem; font-weight: 700; }
+.branch-card .branch-name-kr { font-size: 0.8rem; color: #666; margin-top: 2px; }
+.branch-card .branch-code { font-size: 0.65rem; color: #999; margin-top: 4px; }
+.branch-card .branch-stats { font-size: 0.7rem; color: #888; margin-top: 8px; }
+.branch-card.full-width { grid-column: 1 / -1; }
+
+.all-branches-btn {
+  background: white;
+  border: 2px dashed #999;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  transition: background 0.2s;
+}
+.all-branches-btn:hover { background: #f0f0f0; }
+.all-branches-btn span { font-size: 0.75rem; color: #888; display: block; margin-top: 4px; }
+
+/* ===== VENDOR GRID ===== */
+.vendor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.vendor-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.vendor-card:active { transform: scale(0.97); }
+.vendor-card .vendor-name { font-size: 1rem; font-weight: 700; }
+.vendor-card .vendor-name-kr { font-size: 0.8rem; color: #666; margin-top: 2px; }
+.vendor-card .vendor-stats { font-size: 0.7rem; color: #888; margin-top: 8px; }
 
 /* ===== CARDS ===== */
 .card {
@@ -85,17 +130,8 @@ body {
   margin-bottom: 12px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
-.card-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 8px;
-}
-.card-subtitle {
-  font-size: 0.75rem;
-  color: #888;
-  margin-bottom: 12px;
-}
+.card-title { font-size: 0.95rem; font-weight: 700; color: #333; margin-bottom: 8px; }
+.card-subtitle { font-size: 0.75rem; color: #888; margin-bottom: 12px; }
 
 /* ===== STAT GRID ===== */
 .stat-grid {
@@ -104,23 +140,16 @@ body {
   gap: 10px;
   margin-bottom: 16px;
 }
+.stat-grid.four { grid-template-columns: repeat(4, 1fr); }
 .stat-card {
   background: white;
   border-radius: 12px;
-  padding: 16px;
+  padding: 14px;
   text-align: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 800;
-  line-height: 1;
-}
-.stat-label {
-  font-size: 0.7rem;
-  color: #666;
-  margin-top: 6px;
-}
+.stat-number { font-size: 1.6rem; font-weight: 800; line-height: 1; }
+.stat-label { font-size: 0.65rem; color: #666; margin-top: 4px; }
 .stat-number.red { color: #F44336; }
 .stat-number.green { color: #4CAF50; }
 .stat-number.blue { color: #2196F3; }
@@ -150,13 +179,7 @@ body {
 
 /* ===== FORM ELEMENTS ===== */
 .form-group { margin-bottom: 16px; }
-.form-label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 6px;
-}
+.form-label { display: block; font-size: 0.8rem; font-weight: 600; color: #555; margin-bottom: 6px; }
 select, input[type="text"], input[type="date"] {
   width: 100%;
   padding: 12px 14px;
@@ -178,95 +201,72 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
   transition: border-color 0.2s, background 0.2s;
   background: #fafafa;
 }
-.upload-zone:hover, .upload-zone.dragover {
-  border-color: #C62828;
-  background: #fff5f5;
-}
+.upload-zone:hover, .upload-zone.dragover { border-color: #C62828; background: #fff5f5; }
 .upload-zone svg { width: 48px; height: 48px; color: #999; margin-bottom: 10px; }
 .upload-zone p { color: #666; font-size: 0.85rem; }
 .upload-zone .file-name { color: #C62828; font-weight: 600; margin-top: 8px; }
 
 .camera-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px;
-  border: 2px solid #C62828;
-  border-radius: 10px;
-  background: white;
-  color: #C62828;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px; border: 2px solid #C62828; border-radius: 10px;
+  background: white; color: #C62828; font-size: 0.95rem; font-weight: 600;
+  cursor: pointer; width: 100%; margin-top: 10px;
 }
 .camera-btn svg { width: 24px; height: 24px; }
 
 /* ===== RESULTS TABLE ===== */
-.results-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.75rem;
-}
+.results-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
 .results-table th {
-  background: #f5f5f5;
-  padding: 10px 8px;
-  text-align: left;
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  border-bottom: 2px solid #ddd;
+  background: #f5f5f5; padding: 10px 8px; text-align: left;
+  font-weight: 600; position: sticky; top: 0; border-bottom: 2px solid #ddd;
 }
-.results-table td {
-  padding: 10px 8px;
-  border-bottom: 1px solid #eee;
-  vertical-align: top;
-}
+.results-table td { padding: 10px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
 .results-table tr.price-up { background: #FFEBEE; }
 .results-table tr.price-down { background: #E8F5E9; }
 .results-table tr.new-item { background: #E3F2FD; }
-.results-table tr.duplicate { background: #FFF8E1; }
 
 .badge {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: white;
+  display: inline-block; padding: 3px 8px; border-radius: 12px;
+  font-size: 0.65rem; font-weight: 700; color: white;
 }
 .badge-red { background: #F44336; }
 .badge-green { background: #4CAF50; }
 .badge-blue { background: #2196F3; }
 .badge-yellow { background: #FF9800; }
 
-/* ===== PROGRESS BAR ===== */
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: #e0e0e0;
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 12px 0;
+/* ===== PROGRESS / LOADING ===== */
+.progress-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; margin: 12px 0; }
+.progress-fill { height: 100%; background: #C62828; border-radius: 4px; transition: width 0.3s; width: 0%; }
+.loading-overlay {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 200; justify-content: center; align-items: center;
 }
-.progress-fill {
-  height: 100%;
-  background: #C62828;
-  border-radius: 4px;
-  transition: width 0.3s;
-  width: 0%;
+.loading-overlay.active { display: flex; }
+.loading-box { background: white; border-radius: 16px; padding: 30px; text-align: center; width: 280px; }
+.spinner {
+  width: 40px; height: 40px; border: 4px solid #eee; border-top-color: #C62828;
+  border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px;
 }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border-radius: 12px; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* ===== TABS ===== */
+.tab-bar { display: flex; gap: 4px; margin-bottom: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tab {
+  padding: 8px 14px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;
+  background: #e0e0e0; color: #666; cursor: pointer; white-space: nowrap; border: none;
+}
+.tab.active { background: #C62828; color: white; }
 
 /* ===== HISTORY LIST ===== */
 .history-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid #eee; cursor: pointer;
 }
 .history-item:last-child { border-bottom: none; }
 .history-info h4 { font-size: 0.85rem; font-weight: 600; }
@@ -275,110 +275,31 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 .history-meta .amount { font-size: 0.85rem; font-weight: 700; }
 .history-meta .date { font-size: 0.65rem; color: #888; }
 
-/* ===== LOADING ===== */
-.loading-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 200;
-  justify-content: center;
-  align-items: center;
-}
-.loading-overlay.active { display: flex; }
-.loading-box {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  text-align: center;
-  width: 280px;
-}
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #eee;
-  border-top-color: #C62828;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin: 0 auto 16px;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ===== TABS ===== */
-.tab-bar {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.tab {
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: #e0e0e0;
-  color: #666;
-  cursor: pointer;
-  white-space: nowrap;
-  border: none;
-}
-.tab.active { background: #C62828; color: white; }
-
-/* ===== TABLE WRAPPER ===== */
-.table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-
 /* ===== EMPTY STATE ===== */
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: #999;
-}
-.empty-state svg { width: 64px; height: 64px; margin-bottom: 12px; opacity: 0.4; }
+.empty-state { text-align: center; padding: 40px 20px; color: #999; }
 .empty-state p { font-size: 0.85rem; }
 
 /* ===== TOAST ===== */
 .toast {
-  position: fixed;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: #333;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  z-index: 300;
-  transition: transform 0.3s;
-  white-space: nowrap;
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(100px);
+  background: #333; color: white; padding: 12px 20px; border-radius: 10px;
+  font-size: 0.8rem; z-index: 300; transition: transform 0.3s; white-space: nowrap;
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
 
-/* ===== MANUAL INPUT ===== */
-.manual-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-.manual-row input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.8rem;
-}
+/* ===== CROSS-BRANCH TABLE ===== */
+.cross-branch-table { width: 100%; border-collapse: collapse; font-size: 0.7rem; }
+.cross-branch-table th { background: #f5f5f5; padding: 8px 6px; text-align: center; font-size: 0.65rem; border-bottom: 2px solid #ddd; }
+.cross-branch-table td { padding: 8px 6px; border-bottom: 1px solid #eee; text-align: center; }
+.cross-branch-table td.item-name { text-align: left; font-weight: 600; }
+.cross-branch-table .price-high { background: #FFEBEE; color: #C62828; font-weight: 700; }
+.cross-branch-table .price-low { background: #E8F5E9; color: #2E7D32; font-weight: 700; }
 
 /* ===== RESPONSIVE ===== */
-@media (min-width: 768px) {
-  .stat-grid { grid-template-columns: repeat(4, 1fr); }
-  body { max-width: 800px; margin: 0 auto; }
-  .bottom-nav { max-width: 800px; left: 50%; transform: translateX(-50%); }
+@media (max-width: 480px) {
+  .branch-grid { gap: 10px; }
+  .branch-card { padding: 16px 12px; }
+  .stat-grid.four { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
@@ -386,24 +307,27 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 
 <!-- HEADER -->
 <div class="header">
-  <h1>KIMCHI MART INVOICE SYSTEM</h1>
-  <div class="subtitle">김치마트 인보이스 대조 시스템</div>
+  <button class="back-btn" id="back-btn" onclick="goBack()">&#8592;</button>
+  <div>
+    <h1 id="header-title">KIMCHI MART INVOICE SYSTEM</h1>
+    <div class="subtitle" id="header-subtitle">김치마트 인보이스 대조 시스템</div>
+  </div>
 </div>
 
-<!-- ===== PAGE: DASHBOARD ===== -->
-<div id="page-dashboard" class="page active">
+<!-- ===== PAGE 1: SELECT BRANCH ===== -->
+<div id="page-home" class="page active">
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="stat-number blue" id="stat-invoices">0</div>
+      <div class="stat-number blue" id="stat-branches">5</div>
+      <div class="stat-label">Branches<br>지점</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number orange" id="stat-invoices">0</div>
       <div class="stat-label">Total Invoices<br>전체 인보이스</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number orange" id="stat-items">0</div>
+      <div class="stat-number red" id="stat-items">0</div>
       <div class="stat-label">Total Items<br>전체 품목</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number red" id="stat-flags">0</div>
-      <div class="stat-label">Price Flags<br>가격 알림</div>
     </div>
     <div class="stat-card">
       <div class="stat-number green" id="stat-vendors">3</div>
@@ -411,43 +335,24 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-title">Quick Actions / 빠른 실행</div>
-    <button class="btn btn-primary" onclick="navigate('upload')" style="margin-bottom:10px">
-      Upload New Invoice / 새 인보이스 업로드
-    </button>
-    <button class="btn btn-secondary" onclick="navigate('history')">
-      View History / 기록 보기
-    </button>
-  </div>
+  <div class="branch-grid" id="branch-grid"></div>
+</div>
+
+<!-- ===== PAGE 2: SELECT VENDOR (for branch) ===== -->
+<div id="page-vendor" class="page">
+  <div class="vendor-grid" id="vendor-grid"></div>
 
   <div class="card">
-    <div class="card-title">Recent Comparisons / 최근 비교 결과</div>
-    <div id="recent-comparisons">
-      <div class="empty-state">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-        <p>No comparisons yet<br>아직 비교 결과가 없습니다</p>
-      </div>
-    </div>
+    <div class="card-title">Previous Invoices / 이전 인보이스</div>
+    <div id="branch-invoice-list"></div>
   </div>
 </div>
 
-<!-- ===== PAGE: UPLOAD ===== -->
+<!-- ===== PAGE 3: UPLOAD & COMPARE ===== -->
 <div id="page-upload" class="page">
   <div class="card">
     <div class="card-title">Upload Invoice / 인보이스 업로드</div>
-    <div class="card-subtitle">Upload a PDF or take a photo of an invoice</div>
-
-    <div class="form-group">
-      <label class="form-label">Vendor / 거래처</label>
-      <select id="vendor-select">
-        <option value="">-- Select Vendor --</option>
-        <option value="rhee">Rhee Bros / 리브라더스</option>
-        <option value="wang">Wang / 왕</option>
-        <option value="choripdong">Choripdong / 초립동</option>
-        <option value="other">Other / 기타</option>
-      </select>
-    </div>
+    <div class="card-subtitle" id="upload-context"></div>
 
     <div class="form-group">
       <label class="form-label">Invoice Date / 인보이스 날짜</label>
@@ -475,21 +380,22 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 
     <div class="form-group">
       <label class="form-label">Or paste text data / 텍스트 직접 입력</label>
-      <textarea id="manual-text" rows="6" placeholder="Paste invoice data here (any format):&#10;&#10;Pipe-delimited: No|Brand|Description|Size|Qty|UM|Type|Unit|Each|Total&#10;Rhee Bros PDF text: 00030D RHEECHUN FANCY VARIETY RICE... 15.50 15.50 620.00&#10;Wang/Choripdong: Item# Name Qty Price Total&#10;Or paste text copied from PDF/email" style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.8rem;font-family:monospace;resize:vertical;"></textarea>
-    </div>
-
-    <div id="processing-status" style="display:none">
-      <div class="card-subtitle" id="status-text">Processing...</div>
-      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <textarea id="manual-text" rows="6" placeholder="Paste invoice data here (any format)" style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.8rem;font-family:monospace;resize:vertical;"></textarea>
     </div>
 
     <button class="btn btn-primary" id="btn-process" onclick="processInvoice()">
       Process & Compare / 처리 및 비교
     </button>
   </div>
+
+  <!-- Previous invoices for this branch+vendor -->
+  <div class="card" id="prev-invoices-card">
+    <div class="card-title">Previous Invoices / 이전 인보이스</div>
+    <div id="prev-invoice-list"></div>
+  </div>
 </div>
 
-<!-- ===== PAGE: COMPARE ===== -->
+<!-- ===== PAGE: COMPARE RESULTS ===== -->
 <div id="page-compare" class="page">
   <div class="card">
     <div class="card-title" id="compare-title">Comparison Results / 비교 결과</div>
@@ -505,24 +411,17 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
   </div>
 
   <div class="card" id="compare-summary" style="display:none">
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-number red" id="cmp-up">0</div><div class="stat-label">Price Up<br>가격 상승</div></div>
-      <div class="stat-card"><div class="stat-number green" id="cmp-down">0</div><div class="stat-label">Price Down<br>가격 하락</div></div>
-      <div class="stat-card"><div class="stat-number blue" id="cmp-new">0</div><div class="stat-label">New Items<br>신규 품목</div></div>
-      <div class="stat-card"><div class="stat-number orange" id="cmp-same">0</div><div class="stat-label">Unchanged<br>변동 없음</div></div>
+    <div class="stat-grid four">
+      <div class="stat-card"><div class="stat-number red" id="cmp-up">0</div><div class="stat-label">UP</div></div>
+      <div class="stat-card"><div class="stat-number green" id="cmp-down">0</div><div class="stat-label">DOWN</div></div>
+      <div class="stat-card"><div class="stat-number blue" id="cmp-new">0</div><div class="stat-label">NEW</div></div>
+      <div class="stat-card"><div class="stat-number orange" id="cmp-same">0</div><div class="stat-label">OK</div></div>
     </div>
   </div>
 
   <div class="table-wrap">
     <table class="results-table" id="results-table">
-      <thead>
-        <tr>
-          <th>Status</th>
-          <th>Item</th>
-          <th>Price</th>
-          <th>Change</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Status</th><th>Item</th><th>Price</th><th>Change</th></tr></thead>
       <tbody id="results-body"></tbody>
     </table>
   </div>
@@ -532,66 +431,41 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
     <button class="btn btn-secondary" onclick="saveComparison()" style="flex:1;min-width:120px">Save / 저장</button>
   </div>
   <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
-    <button class="btn btn-primary" onclick="exportPriceChangeCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px">Price Changes CSV</button>
-    <button class="btn btn-primary" onclick="exportNewItemsCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px;background:#2196F3">New Items CSV</button>
-    <button class="btn btn-secondary" onclick="exportFullSummaryCSV()" style="flex:1;min-width:120px;font-size:0.8rem;padding:10px">Full Summary CSV</button>
+    <button class="btn btn-primary" onclick="exportPriceChangeCSV()" style="flex:1;min-width:100px;font-size:0.75rem;padding:10px">Price Changes</button>
+    <button class="btn btn-primary" onclick="exportNewItemsCSV()" style="flex:1;min-width:100px;font-size:0.75rem;padding:10px;background:#2196F3">New Items</button>
+    <button class="btn btn-secondary" onclick="exportFullSummaryCSV()" style="flex:1;min-width:100px;font-size:0.75rem;padding:10px">Full Summary</button>
   </div>
   <div style="margin-top:8px;">
-    <button class="btn btn-secondary" onclick="navigate('rawtext')" style="font-size:0.8rem;padding:10px">View Raw Text / 추출된 텍스트 보기</button>
+    <button class="btn btn-secondary" onclick="navigateTo('rawtext')" style="font-size:0.8rem;padding:10px">View Raw Text / 추출된 텍스트 보기</button>
   </div>
 </div>
 
-<!-- ===== PAGE: HISTORY ===== -->
-<div id="page-history" class="page">
+<!-- ===== PAGE: ALL BRANCHES COMPARISON ===== -->
+<div id="page-allbranches" class="page">
   <div class="card">
-    <div class="card-title">Invoice History / 인보이스 기록</div>
-    <div class="tab-bar">
-      <button class="tab active" onclick="filterHistory('all',this)">All</button>
-      <button class="tab" onclick="filterHistory('rhee',this)">Rhee Bros</button>
-      <button class="tab" onclick="filterHistory('wang',this)">Wang</button>
-      <button class="tab" onclick="filterHistory('choripdong',this)">Choripdong</button>
+    <div class="card-title">Cross-Branch Price Comparison / 전체 지점 가격 비교</div>
+    <div class="card-subtitle">Compare the same product across all branches. Red = highest price, Green = lowest.</div>
+
+    <div class="form-group">
+      <label class="form-label">Filter by Vendor / 거래처 필터</label>
+      <select id="cross-vendor-filter" onchange="renderCrossBranch()">
+        <option value="all">All Vendors / 전체</option>
+        <option value="rhee">Rhee Bros / 리브라더스</option>
+        <option value="wang">Wang / 왕</option>
+        <option value="choripdong">Choripdong / 초립동</option>
+      </select>
     </div>
-    <div id="history-list"></div>
   </div>
-</div>
 
-<!-- ===== PAGE: FLAGS ===== -->
-<div id="page-flags" class="page">
-  <div class="card">
-    <div class="card-title">Price Change Flags / 가격 변동 알림</div>
-    <div class="card-subtitle">Items with significant price changes across all invoices</div>
-  </div>
   <div class="table-wrap">
-    <table class="results-table" id="flags-table">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Vendor</th>
-          <th>Old</th>
-          <th>New</th>
-          <th>%</th>
-        </tr>
-      </thead>
-      <tbody id="flags-body"></tbody>
+    <table class="cross-branch-table" id="cross-branch-table">
+      <thead id="cross-branch-head"></thead>
+      <tbody id="cross-branch-body"></tbody>
     </table>
   </div>
-</div>
 
-<!-- ===== PAGE: EXPORT ===== -->
-<div id="page-export" class="page">
-  <div class="card">
-    <div class="card-title">Export Data / 데이터 내보내기</div>
-    <div class="card-subtitle">Download data as CSV files</div>
-
-    <button class="btn btn-primary" onclick="exportAllHistory()" style="margin-bottom:10px">
-      Export All History / 전체 기록 내보내기
-    </button>
-    <button class="btn btn-secondary" onclick="exportAllFlags()" style="margin-bottom:10px">
-      Export All Flags / 전체 알림 내보내기
-    </button>
-    <button class="btn btn-secondary" onclick="exportPriceTracker()">
-      Export Price Tracker / 가격 추적 내보내기
-    </button>
+  <div style="margin-top:12px;">
+    <button class="btn btn-success" onclick="exportCrossBranchCSV()">Export Cross-Branch CSV</button>
   </div>
 </div>
 
@@ -599,11 +473,10 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 <div id="page-rawtext" class="page">
   <div class="card">
     <div class="card-title">Raw Text Preview / 추출된 텍스트</div>
-    <div class="card-subtitle">Text extracted from the uploaded PDF or file. Use this to debug parsing issues.</div>
     <textarea id="raw-text-display" rows="20" readonly style="width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:10px;font-size:0.75rem;font-family:monospace;resize:vertical;background:#fafafa;"></textarea>
     <div style="margin-top:10px;display:flex;gap:8px;">
-      <button class="btn btn-secondary" onclick="copyRawText()" style="flex:1">Copy Text / 복사</button>
-      <button class="btn btn-primary" onclick="navigate('compare')" style="flex:1">Back to Results / 결과로</button>
+      <button class="btn btn-secondary" onclick="copyRawText()" style="flex:1">Copy / 복사</button>
+      <button class="btn btn-primary" onclick="navigateTo('compare')" style="flex:1">Back to Results</button>
     </div>
   </div>
 </div>
@@ -620,56 +493,23 @@ select:focus, input:focus { outline: none; border-color: #C62828; }
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- BOTTOM NAV -->
-<nav class="bottom-nav">
-  <a class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    <span>Home</span>
-  </a>
-  <a class="nav-item" data-page="upload" onclick="navigate('upload')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-    <span>Upload</span>
-  </a>
-  <a class="nav-item" data-page="compare" onclick="navigate('compare')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
-    <span>Compare</span>
-  </a>
-  <a class="nav-item" data-page="history" onclick="navigate('history')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    <span>History</span>
-  </a>
-  <a class="nav-item" data-page="flags" onclick="navigate('flags')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-    <span>Flags</span>
-  </a>
-  <a class="nav-item" data-page="export" onclick="navigate('export')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    <span>Export</span>
-  </a>
-</nav>
-
 <script>
 // ===== APP STATE =====
 let currentFile = null;
 let currentFlags = [];
-let allComparisons = [];
+let selectedBranch = null;
+let selectedVendor = null;
+let navStack = ['home'];
 let DB = null;
 
 // ===== INDEXEDDB =====
 function openDB() {
   return new Promise((resolve, reject) => {
-    const req = indexedDB.open('KimchiInvoiceDB', 2);
+    const req = indexedDB.open('KimchiInvoiceDB', 3);
     req.onupgradeneeded = (e) => {
       const db = e.target.result;
-      if (!db.objectStoreNames.contains('invoices')) {
-        db.createObjectStore('invoices', { keyPath: 'id', autoIncrement: true });
-      }
-      if (!db.objectStoreNames.contains('comparisons')) {
-        db.createObjectStore('comparisons', { keyPath: 'id', autoIncrement: true });
-      }
-      if (!db.objectStoreNames.contains('flags')) {
-        db.createObjectStore('flags', { keyPath: 'id', autoIncrement: true });
-      }
+      if (!db.objectStoreNames.contains('invoices')) db.createObjectStore('invoices', { keyPath: 'id', autoIncrement: true });
+      if (!db.objectStoreNames.contains('comparisons')) db.createObjectStore('comparisons', { keyPath: 'id', autoIncrement: true });
     };
     req.onsuccess = (e) => { DB = e.target.result; resolve(DB); };
     req.onerror = (e) => reject(e);
@@ -679,8 +519,7 @@ function openDB() {
 function dbAdd(store, data) {
   return new Promise((resolve, reject) => {
     const tx = DB.transaction(store, 'readwrite');
-    const s = tx.objectStore(store);
-    const req = s.add(data);
+    const req = tx.objectStore(store).add(data);
     req.onsuccess = () => resolve(req.result);
     req.onerror = (e) => reject(e);
   });
@@ -689,25 +528,195 @@ function dbAdd(store, data) {
 function dbGetAll(store) {
   return new Promise((resolve, reject) => {
     const tx = DB.transaction(store, 'readonly');
-    const s = tx.objectStore(store);
-    const req = s.getAll();
+    const req = tx.objectStore(store).getAll();
     req.onsuccess = () => resolve(req.result);
     req.onerror = (e) => reject(e);
   });
 }
 
 // ===== NAVIGATION =====
-function navigate(page) {
+function navigateTo(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
-  const navItem = document.querySelector(`.nav-item[data-page="${page}"]`);
-  if (navItem) navItem.classList.add('active');
+  if (page !== navStack[navStack.length - 1]) navStack.push(page);
+  updateHeader();
   window.scrollTo(0, 0);
+}
 
-  if (page === 'history') renderHistory();
-  if (page === 'flags') renderAllFlags();
-  if (page === 'dashboard') updateDashboard();
+function goBack() {
+  if (navStack.length > 1) {
+    navStack.pop();
+    const prev = navStack[navStack.length - 1];
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + prev).classList.add('active');
+    if (prev === 'home') { selectedBranch = null; selectedVendor = null; }
+    else if (prev === 'vendor') { selectedVendor = null; }
+    updateHeader();
+    window.scrollTo(0, 0);
+  }
+}
+
+function updateHeader() {
+  const page = navStack[navStack.length - 1];
+  const backBtn = document.getElementById('back-btn');
+  const title = document.getElementById('header-title');
+  const subtitle = document.getElementById('header-subtitle');
+
+  backBtn.classList.toggle('visible', page !== 'home');
+
+  if (page === 'home') {
+    title.textContent = 'KIMCHI MART INVOICE SYSTEM';
+    subtitle.textContent = '김치마트 인보이스 대조 시스템';
+  } else if (page === 'vendor' && selectedBranch) {
+    const b = BRANCHES[selectedBranch];
+    title.textContent = b.name.toUpperCase();
+    subtitle.textContent = b.nameKr + (b.code ? ' (' + b.code + ')' : '');
+  } else if ((page === 'upload' || page === 'compare') && selectedBranch && selectedVendor) {
+    const b = BRANCHES[selectedBranch];
+    const v = VENDORS[selectedVendor];
+    title.textContent = b.name.toUpperCase() + ' > ' + v.name;
+    subtitle.textContent = b.nameKr + ' > ' + v.nameKr;
+  } else if (page === 'allbranches') {
+    title.textContent = 'ALL BRANCHES';
+    subtitle.textContent = '전체 지점 비교';
+  } else if (page === 'rawtext') {
+    title.textContent = 'RAW TEXT';
+    subtitle.textContent = '추출된 텍스트';
+  }
+}
+
+// ===== PAGE 1: RENDER BRANCHES =====
+function renderBranchGrid() {
+  const grid = document.getElementById('branch-grid');
+  const branchKeys = ['miami', 'pembroke', 'hollywood', 'coral_springs', 'fort_lauderdale'];
+  let html = '';
+
+  for (const key of branchKeys) {
+    const b = BRANCHES[key];
+    const data = HISTORICAL_DATA[key];
+    let invCount = 0;
+    if (data && data.vendors) {
+      for (const v of Object.values(data.vendors)) invCount += v.length;
+    }
+    const isFullWidth = key === 'fort_lauderdale';
+    html += `
+      <div class="branch-card ${isFullWidth ? 'full-width' : ''}" style="border-left-color:${b.color}" onclick="selectBranch('${key}')">
+        <div class="branch-name">${b.name}</div>
+        <div class="branch-name-kr">${b.nameKr}</div>
+        ${b.code ? '<div class="branch-code">' + b.code + '</div>' : ''}
+        <div class="branch-stats">${invCount} invoice${invCount !== 1 ? 's' : ''}</div>
+      </div>
+    `;
+  }
+
+  html += `
+    <div class="all-branches-btn" onclick="showAllBranches()">
+      ALL BRANCHES / 전체 지점 비교
+      <span>Compare prices across all branches</span>
+    </div>
+  `;
+
+  grid.innerHTML = html;
+  updateHomeStats();
+}
+
+function updateHomeStats() {
+  let totalInv = 0, totalItems = 0;
+  for (const branch of Object.values(HISTORICAL_DATA)) {
+    for (const vendorInvs of Object.values(branch.vendors || {})) {
+      totalInv += vendorInvs.length;
+      for (const inv of vendorInvs) totalItems += inv.items.length;
+    }
+  }
+  document.getElementById('stat-invoices').textContent = totalInv;
+  document.getElementById('stat-items').textContent = totalItems;
+}
+
+// ===== PAGE 2: SELECT VENDOR =====
+function selectBranch(branchKey) {
+  selectedBranch = branchKey;
+  renderVendorGrid();
+  navigateTo('vendor');
+}
+
+function renderVendorGrid() {
+  const grid = document.getElementById('vendor-grid');
+  const branch = HISTORICAL_DATA[selectedBranch];
+  if (!branch) return;
+
+  let html = '';
+  for (const [vKey, vInfo] of Object.entries(VENDORS)) {
+    const invoices = branch.vendors?.[vKey] || [];
+    const total = invoices.reduce((s, i) => s + (i.total || 0), 0);
+    html += `
+      <div class="vendor-card" onclick="selectVendor('${vKey}')">
+        <div class="vendor-name">${vInfo.name}</div>
+        <div class="vendor-name-kr">${vInfo.nameKr}</div>
+        <div class="vendor-stats">${invoices.length} invoice${invoices.length !== 1 ? 's' : ''}${total > 0 ? '<br>$' + total.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0}) : ''}</div>
+      </div>
+    `;
+  }
+  grid.innerHTML = html;
+
+  // Render branch invoice history
+  const list = document.getElementById('branch-invoice-list');
+  const allInvs = [];
+  for (const [vKey, vendorInvs] of Object.entries(branch.vendors || {})) {
+    for (const inv of vendorInvs) allInvs.push({ ...inv, vendorKey: vKey });
+  }
+  allInvs.sort((a, b) => b.date.localeCompare(a.date));
+
+  if (allInvs.length === 0) {
+    list.innerHTML = '<div class="empty-state"><p>No invoices yet for this branch</p></div>';
+  } else {
+    list.innerHTML = allInvs.map(inv => `
+      <div class="history-item">
+        <div class="history-info">
+          <h4>${inv.vendor} - ${inv.invoice}</h4>
+          <p>${inv.items.length} items</p>
+        </div>
+        <div class="history-meta">
+          <div class="amount">${inv.total > 0 ? '$' + inv.total.toLocaleString('en-US', {minimumFractionDigits: 2}) : '--'}</div>
+          <div class="date">${inv.date}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+// ===== PAGE 3: UPLOAD & COMPARE =====
+function selectVendor(vendorKey) {
+  selectedVendor = vendorKey;
+  document.getElementById('upload-context').textContent =
+    BRANCHES[selectedBranch].name + ' > ' + VENDORS[selectedVendor].name;
+  document.getElementById('invoice-date').value = new Date().toISOString().split('T')[0];
+  renderPrevInvoices();
+  navigateTo('upload');
+}
+
+function renderPrevInvoices() {
+  const list = document.getElementById('prev-invoice-list');
+  const branch = HISTORICAL_DATA[selectedBranch];
+  const invoices = branch?.vendors?.[selectedVendor] || [];
+
+  if (invoices.length === 0) {
+    list.innerHTML = '<div class="empty-state"><p>No previous invoices</p></div>';
+    return;
+  }
+
+  const sorted = [...invoices].sort((a, b) => b.date.localeCompare(a.date));
+  list.innerHTML = sorted.map(inv => `
+    <div class="history-item">
+      <div class="history-info">
+        <h4>${inv.invoice}</h4>
+        <p>${inv.items.length} items | ${inv.customer || ''}</p>
+      </div>
+      <div class="history-meta">
+        <div class="amount">${inv.total > 0 ? '$' + inv.total.toLocaleString('en-US', {minimumFractionDigits: 2}) : '--'}</div>
+        <div class="date">${inv.date}</div>
+      </div>
+    </div>
+  `).join('');
 }
 
 // ===== FILE HANDLING =====
@@ -715,13 +724,10 @@ function handleFileSelect(event) {
   const file = event.target.files[0];
   if (!file) return;
   currentFile = file;
-  const nameEl = document.getElementById('file-name');
-  nameEl.textContent = file.name;
-  document.getElementById('upload-zone').querySelector('p').textContent = 'File selected / 파일 선택됨';
+  document.getElementById('file-name').textContent = file.name;
   showToast('File loaded: ' + file.name);
 }
 
-// Drag & Drop
 const uploadZone = document.getElementById('upload-zone');
 uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
 uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
@@ -738,14 +744,15 @@ uploadZone.addEventListener('drop', (e) => {
 
 // ===== PROCESS INVOICE =====
 async function processInvoice() {
-  const vendor = document.getElementById('vendor-select').value;
+  if (!selectedBranch || !selectedVendor) { showToast('Please select a branch and vendor first'); return; }
+
+  const vendor = selectedVendor;
   const date = document.getElementById('invoice-date').value;
   const manualText = document.getElementById('manual-text').value.trim();
 
-  if (!vendor) { showToast('Please select a vendor / 거래처를 선택하세요'); return; }
-  if (!currentFile && !manualText) { showToast('Please upload a file or paste data / 파일 업로드 또는 데이터를 입력하세요'); return; }
+  if (!currentFile && !manualText) { showToast('Please upload a file or paste data'); return; }
 
-  showLoading('Processing invoice / 인보이스 처리 중...');
+  showLoading('Processing invoice...');
   setProgress(10);
 
   try {
@@ -757,7 +764,6 @@ async function processInvoice() {
       parsedItems = parseTextData(manualText, vendor);
     } else if (currentFile) {
       const ext = currentFile.name.split('.').pop().toLowerCase();
-
       if (ext === 'txt') {
         setProgress(20);
         const text = await readFileAsText(currentFile);
@@ -765,38 +771,36 @@ async function processInvoice() {
         parsedItems = parseTextData(text, vendor);
       } else if (ext === 'pdf') {
         setProgress(20);
-        updateLoadingText('Extracting PDF text / PDF 텍스트 추출 중...');
+        updateLoadingText('Extracting PDF text...');
         const text = await extractPDFText(currentFile);
         setProgress(50);
-        updateLoadingText('Parsing items / 품목 파싱 중...');
         parsedItems = parseTextData(text, vendor);
       } else if (['jpg', 'jpeg', 'png'].includes(ext)) {
         setProgress(20);
-        updateLoadingText('Running OCR / OCR 실행 중...');
+        updateLoadingText('Running OCR...');
         const text = await runOCR(currentFile);
         setProgress(60);
-        updateLoadingText('Parsing items / 품목 파싱 중...');
         parsedItems = parseTextData(text, vendor);
       }
     }
 
     setProgress(70);
-    updateLoadingText('Comparing prices / 가격 비교 중...');
+    updateLoadingText('Comparing prices...');
 
     if (parsedItems.length === 0) {
       hideLoading();
-      showToast('No items found. Check the data format / 품목을 찾을 수 없습니다');
+      showToast('No items found. Check the data format');
       return;
     }
 
-    // Compare with historical data
-    const flags = compareInvoice(parsedItems, vendor);
+    const flags = compareInvoice(parsedItems, selectedBranch, selectedVendor);
     setProgress(90);
 
-    // Create invoice record
     const invoice = {
+      branch: selectedBranch,
       vendor: vendor,
-      vendorName: getVendorName(vendor),
+      vendorName: VENDORS[vendor]?.name || vendor,
+      branchName: BRANCHES[selectedBranch]?.name || selectedBranch,
       date: date || new Date().toISOString().split('T')[0],
       itemCount: parsedItems.length,
       items: parsedItems,
@@ -804,33 +808,22 @@ async function processInvoice() {
       timestamp: Date.now()
     };
 
-    // Save to IndexedDB
     if (DB) {
       await dbAdd('invoices', invoice);
-      await dbAdd('comparisons', {
-        invoiceVendor: vendor,
-        invoiceDate: invoice.date,
-        flags: flags,
-        itemCount: parsedItems.length,
-        timestamp: Date.now()
-      });
     }
 
     currentFlags = flags;
     setProgress(100);
 
-    // Update raw text preview
     const rawTextEl = document.getElementById('raw-text-display');
-    if (rawTextEl && window._lastExtractedText) {
-      rawTextEl.value = window._lastExtractedText;
-    }
+    if (rawTextEl && window._lastExtractedText) rawTextEl.value = window._lastExtractedText;
 
     setTimeout(() => {
       hideLoading();
       displayResults(invoice, flags);
-      navigate('compare');
-      const flagCount = flags.filter(f=>f.type!=='UNCHANGED').length;
-      showToast(`Found ${flagCount} flags in ${parsedItems.length} items. Download CSVs below.`);
+      navigateTo('compare');
+      const flagCount = flags.filter(f => f.type !== 'UNCHANGED').length;
+      showToast(`Found ${flagCount} flags in ${parsedItems.length} items`);
     }, 300);
 
   } catch (err) {
@@ -844,89 +837,46 @@ async function processInvoice() {
 function parseTextData(text, vendor) {
   const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   const items = [];
-
-  // Store raw text for preview
   window._lastExtractedText = text;
 
-  // Detect format: pipe-delimited vs space/tab-delimited
   const hasPipes = lines.filter(l => l.split('|').length >= 5).length >= 2;
+  if (hasPipes) return parsePipeDelimited(lines, vendor);
 
-  console.log('[PARSE] Vendor:', vendor, '| Lines:', lines.length, '| Has pipes:', hasPipes);
-  console.log('[PARSE] First 3 lines:', lines.slice(0, 3));
-
-  if (hasPipes) {
-    // ===== PIPE-DELIMITED FORMAT (for .txt files) =====
-    return parsePipeDelimited(lines, vendor);
-  }
-
-  // ===== PDF-EXTRACTED or PASTED TEXT (space/tab delimited) =====
-  // Try JSON first for choripdong
   if (vendor === 'choripdong') {
     try {
       const json = JSON.parse(text);
       for (const [code, item] of Object.entries(json)) {
         items.push({
-          itemNo: item.item_code || code,
-          brand: 'CHORIPDONG',
-          name: item.en_desc || item.kr_desc || '',
-          krName: item.kr_desc || '',
-          size: item.size_pack || '',
-          qty: item.qty || 0,
-          unitPrice: item.cs_price || 0,
-          each: item.ea_price || 0,
+          itemNo: item.item_code || code, brand: 'CHORIPDONG',
+          name: item.en_desc || item.kr_desc || '', krName: item.kr_desc || '',
+          size: item.size_pack || '', qty: item.qty || 0,
+          unitPrice: item.cs_price || 0, each: item.ea_price || 0,
           total: (item.cs_price || 0) * (item.qty || 0)
         });
       }
       if (items.length > 0) return items;
-    } catch(e) { /* Not JSON, continue with line parsing */ }
+    } catch(e) {}
   }
 
   for (const line of lines) {
-    // Skip common header/metadata lines
     if (/^(INVOICE|DATE|CUSTOMER|TOTAL|NOTE|ORDER|SHIP TO|SALESPERSON|TERMS|SOLD TO|P\.?O\.?|BILL TO|No\.|index|Page |Ship Via|Due Date|Printed|Invoice #|Delivery|Subtotal|Tax|Thank you)/i.test(line)) continue;
-    if (/^[-=_*]{3,}/.test(line)) continue; // separator lines
-    if (/^\d+\/\d+\/\d+/.test(line) && !/\d{4,5}[A-Za-z]/.test(line)) continue; // pure date lines
+    if (/^[-=_*]{3,}/.test(line)) continue;
+    if (/^\d+\/\d+\/\d+/.test(line) && !/\d{4,5}[A-Za-z]/.test(line)) continue;
 
-    if (vendor === 'rhee') {
-      const parsed = parseRheeBrosPDFLine(line);
-      if (parsed) {
-        items.push(parsed);
-        continue;
-      }
-    } else if (vendor === 'wang') {
-      const parsed = parseWangPDFLine(line);
-      if (parsed) {
-        items.push(parsed);
-        continue;
-      }
-    } else if (vendor === 'choripdong') {
-      const parsed = parseChoripdongPDFLine(line);
-      if (parsed) {
-        items.push(parsed);
-        continue;
-      }
-    } else {
-      // Generic/Other vendor
-      const parsed = parseGenericLine(line);
-      if (parsed) {
-        items.push(parsed);
-        continue;
-      }
-    }
+    let parsed = null;
+    if (vendor === 'rhee') parsed = parseRheeBrosPDFLine(line);
+    else if (vendor === 'wang') parsed = parseWangPDFLine(line);
+    else if (vendor === 'choripdong') parsed = parseChoripdongPDFLine(line);
+    else parsed = parseGenericLine(line);
+    if (parsed) items.push(parsed);
   }
-
-  console.log('[PARSE] Total items parsed:', items.length);
-  if (items.length > 0) console.log('[PARSE] First item:', items[0]);
-
   return items;
 }
 
-// ===== PIPE-DELIMITED PARSING =====
 function parsePipeDelimited(lines, vendor) {
   const items = [];
   for (const line of lines) {
     if (/^(INVOICE|DATE|CUSTOMER|TOTAL|NOTE|ORDER|No\||No\.|index\|)/i.test(line)) continue;
-
     const parts = line.split('|');
 
     if (vendor === 'rhee' && parts.length >= 8) {
@@ -959,7 +909,7 @@ function parsePipeDelimited(lines, vendor) {
       if (nums && nums.length >= 2) {
         items.push({
           itemNo: parts[0].trim(), brand: '',
-          name: parts[1] ? parts[1].trim() : line.substring(0, 40), size: '',
+          name: parts[1] ? parts[1].trim() : '', size: '',
           qty: parseInt(nums[0]) || 1, unitPrice: parseFloat(nums[nums.length - 1]) || 0,
           each: parseFloat(nums[nums.length - 1]) || 0, total: parseFloat(nums[nums.length - 1]) || 0
         });
@@ -969,28 +919,17 @@ function parsePipeDelimited(lines, vendor) {
   return items;
 }
 
-// ===== RHEE BROS PDF LINE PARSER =====
 function parseRheeBrosPDFLine(line) {
-  // Normalize tabs/multiple spaces to single space for matching
   const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-
-  // Pattern 1: Full line with item number, description, size, qty, unit type, department, prices
-  // e.g. "00030D RHEECHUN FANCY VARIETY RICE (USA, 15#_NEW) 15 LB 40 Case Dry 15.50 15.50 620.00"
-  // Item number: 4-5 digits + 1-2 letters
   const rxItemNo = /^(\d{4,5}[A-Za-z]{1,2})\s+/;
   const itemMatch = normalized.match(rxItemNo);
   if (!itemMatch) return null;
-
   const itemNo = itemMatch[1];
   const rest = normalized.substring(itemMatch[0].length);
 
-  // Extract trailing numbers (prices): look for 2-3 decimal numbers at end
-  // Could be: qty unitType dept unitPrice each total
-  // Or: unitPrice each total
   const pricePattern = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
   const priceMatch = rest.match(pricePattern);
   if (!priceMatch) {
-    // Try with just 2 prices at end
     const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
     const priceMatch2 = rest.match(pricePattern2);
     if (priceMatch2) {
@@ -998,10 +937,7 @@ function parseRheeBrosPDFLine(line) {
       const unitPrice = parseFloat(priceMatch2[1].replace(/,/g, ''));
       const total = parseFloat(priceMatch2[2].replace(/,/g, ''));
       const { brand, name, size, qty } = extractRheeDescParts(desc);
-      return {
-        itemNo, brand, name, size, qty: qty || 1,
-        unitPrice, each: unitPrice, total
-      };
+      return { itemNo, brand, name, size, qty: qty || 1, unitPrice, each: unitPrice, total };
     }
     return null;
   }
@@ -1010,129 +946,65 @@ function parseRheeBrosPDFLine(line) {
   const each = parseFloat(priceMatch[2].replace(/,/g, ''));
   const total = parseFloat(priceMatch[3].replace(/,/g, ''));
   if (unitPrice === 0 && each === 0 && total === 0) return null;
-
   const descPart = rest.substring(0, priceMatch.index).trim();
   const { brand, name, size, qty } = extractRheeDescParts(descPart);
-
   return { itemNo, brand, name, size, qty: qty || 1, unitPrice, each, total };
 }
 
 function extractRheeDescParts(desc) {
-  // Try to extract: BRAND DESCRIPTION SIZE QTY UNIT_TYPE DEPT
-  // Brand is usually the first ALL-CAPS word
-  // Size patterns: "15 LB", "12X17 OZ", "8X5 LB", "24X5.3 OZ"
-  // Unit types: Case, Box, Bag, Each, Pallet
-  // Dept: Dry, Frozen, Refriger, Produce
-
-  let brand = '';
-  let name = desc;
-  let size = '';
-  let qty = 1;
-
-  // Remove trailing unit type and department
+  let brand = '', name = desc, size = '', qty = 1;
   const unitDeptRx = /\s+(Case|Box|Bag|Each|Pallet|Sack)\s+(Dry|Frozen|Refriger|Produce|Beverag|HBC|Non-Food|Snack)\s*$/i;
   const udMatch = name.match(unitDeptRx);
-  if (udMatch) {
-    name = name.substring(0, udMatch.index).trim();
-  }
-
-  // Try to extract qty (number before Case/Box/unit type, or standalone number at end)
+  if (udMatch) name = name.substring(0, udMatch.index).trim();
   const qtyMatch = name.match(/\s+(\d+)\s*$/);
-  if (qtyMatch) {
-    qty = parseInt(qtyMatch[1]);
-    name = name.substring(0, qtyMatch.index).trim();
-  }
-
-  // Extract size pattern: "12X17 OZ", "15 LB", "8X5X4.9 OZ", "2X8 LB", etc.
+  if (qtyMatch) { qty = parseInt(qtyMatch[1]); name = name.substring(0, qtyMatch.index).trim(); }
   const sizeRx = /\s+(\d+(?:X\d+(?:\.\d+)?)*(?:X\d+(?:\.\d+)?)?\s*(?:LB|OZ|ML|L|PC|PR|GAL|G|KG|CT|#)(?:\b|$))/i;
   const sizeMatch = name.match(sizeRx);
   if (sizeMatch) {
     size = sizeMatch[1].trim();
     name = name.substring(0, sizeMatch.index).trim() + name.substring(sizeMatch.index + sizeMatch[0].length).trim();
-    name = name.trim();
   }
-
-  // Extract brand (first word if ALL CAPS and > 2 chars)
   const words = name.split(/\s+/);
-  if (words.length > 1 && /^[A-Z]{2,}$/.test(words[0])) {
-    brand = words[0];
-    name = words.slice(1).join(' ');
-  }
-
+  if (words.length > 1 && /^[A-Z]{2,}$/.test(words[0])) { brand = words[0]; name = words.slice(1).join(' '); }
   return { brand, name: name.trim(), size, qty };
 }
 
-// ===== WANG PDF LINE PARSER =====
 function parseWangPDFLine(line) {
   const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-
-  // Wang format varies. Try multiple patterns:
-  // Pattern 1: Item# Description Qty Price Total
-  // Pattern 2: Item# Description Price
-  // Item numbers are usually 3-6 digits
-
-  // Look for line starting with a number (item code)
   const rxItem = /^(\d{3,6})\s+(.+)/;
   const match = rxItem.exec(normalized);
   if (!match) return null;
-
-  const itemNo = match[1];
-  const rest = match[2];
-
-  // Extract trailing prices
-  const pricePattern3 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
-  const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
-  const pricePattern1 = /([\d,]+\.\d{2})\s*$/;
-
+  const itemNo = match[1], rest = match[2];
   let name = rest, qty = 1, unitPrice = 0, each = 0, total = 0;
 
-  const m3 = rest.match(pricePattern3);
+  const m3 = rest.match(/([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/);
   if (m3) {
     name = rest.substring(0, m3.index).trim();
-    unitPrice = parseFloat(m3[1].replace(/,/g, ''));
-    each = parseFloat(m3[2].replace(/,/g, ''));
+    unitPrice = parseFloat(m3[1].replace(/,/g, '')); each = parseFloat(m3[2].replace(/,/g, ''));
     total = parseFloat(m3[3].replace(/,/g, ''));
   } else {
-    const m2 = rest.match(pricePattern2);
+    const m2 = rest.match(/([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/);
     if (m2) {
       name = rest.substring(0, m2.index).trim();
-      unitPrice = parseFloat(m2[1].replace(/,/g, ''));
-      total = parseFloat(m2[2].replace(/,/g, ''));
+      unitPrice = parseFloat(m2[1].replace(/,/g, '')); total = parseFloat(m2[2].replace(/,/g, ''));
       each = unitPrice;
     } else {
-      const m1 = rest.match(pricePattern1);
-      if (m1) {
-        name = rest.substring(0, m1.index).trim();
-        unitPrice = parseFloat(m1[1].replace(/,/g, ''));
-        each = unitPrice;
-        total = unitPrice;
-      } else {
-        return null; // no price found
-      }
+      const m1 = rest.match(/([\d,]+\.\d{2})\s*$/);
+      if (m1) { name = rest.substring(0, m1.index).trim(); unitPrice = parseFloat(m1[1].replace(/,/g, '')); each = unitPrice; total = unitPrice; }
+      else return null;
     }
   }
-
   if (unitPrice === 0 && total === 0) return null;
-
-  // Extract qty if present before prices
   const qtyMatch = name.match(/\s+(\d+)\s*$/);
-  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) {
-    qty = parseInt(qtyMatch[1]);
-    name = name.substring(0, qtyMatch.index).trim();
-  }
-
+  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) { qty = parseInt(qtyMatch[1]); name = name.substring(0, qtyMatch.index).trim(); }
   return { itemNo, brand: 'WANG', name, size: '', qty, unitPrice, each, total };
 }
 
-// ===== CHORIPDONG PDF LINE PARSER =====
 function parseChoripdongPDFLine(line) {
   const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-
-  // Choripdong item codes: 2 letters + 4 digits (e.g., EH1103, LB3007, MI1003)
   const rxItem = /^([A-Z]{2}\d{4})\s+(.+)/;
   const match = rxItem.exec(normalized);
   if (!match) {
-    // Also try numeric-only codes
     const rxNum = /^(\d{4,6})\s+(.+)/;
     const matchNum = rxNum.exec(normalized);
     if (!matchNum) return null;
@@ -1142,144 +1014,78 @@ function parseChoripdongPDFLine(line) {
 }
 
 function parseChoripdongRest(itemNo, rest) {
-  // Extract trailing prices (2 or 3 numbers at end)
-  const pricePattern3 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
-  const pricePattern2 = /([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/;
-
   let name = rest, qty = 1, unitPrice = 0, each = 0, total = 0;
-
-  const m3 = rest.match(pricePattern3);
+  const m3 = rest.match(/([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/);
   if (m3) {
     name = rest.substring(0, m3.index).trim();
-    unitPrice = parseFloat(m3[1].replace(/,/g, ''));
-    each = parseFloat(m3[2].replace(/,/g, ''));
+    unitPrice = parseFloat(m3[1].replace(/,/g, '')); each = parseFloat(m3[2].replace(/,/g, ''));
     total = parseFloat(m3[3].replace(/,/g, ''));
   } else {
-    const m2 = rest.match(pricePattern2);
-    if (m2) {
-      name = rest.substring(0, m2.index).trim();
-      unitPrice = parseFloat(m2[1].replace(/,/g, ''));
-      total = parseFloat(m2[2].replace(/,/g, ''));
-      each = unitPrice;
-    } else {
-      return null;
-    }
+    const m2 = rest.match(/([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$/);
+    if (m2) { name = rest.substring(0, m2.index).trim(); unitPrice = parseFloat(m2[1].replace(/,/g, '')); total = parseFloat(m2[2].replace(/,/g, '')); each = unitPrice; }
+    else return null;
   }
-
   if (unitPrice === 0 && total === 0) return null;
-
-  // Extract qty
   const qtyMatch = name.match(/\s+(\d+)\s*$/);
-  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) {
-    qty = parseInt(qtyMatch[1]);
-    name = name.substring(0, qtyMatch.index).trim();
-  }
-
+  if (qtyMatch && parseInt(qtyMatch[1]) < 1000) { qty = parseInt(qtyMatch[1]); name = name.substring(0, qtyMatch.index).trim(); }
   return { itemNo, brand: 'CHORIPDONG', name, size: '', qty, unitPrice, each, total };
 }
 
-// ===== GENERIC LINE PARSER =====
 function parseGenericLine(line) {
   const normalized = line.replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-
-  // Look for any line with a code at start and prices at end
   const rxItem = /^([A-Za-z0-9]{3,10})\s+(.+)/;
   const match = rxItem.exec(normalized);
   if (!match) return null;
-
-  const itemNo = match[1];
-  const rest = match[2];
-
-  const pricePattern = /([\d,]+\.\d{2})\s*$/;
-  const pm = rest.match(pricePattern);
+  const pm = match[2].match(/([\d,]+\.\d{2})\s*$/);
   if (!pm) return null;
-
   const price = parseFloat(pm[1].replace(/,/g, ''));
   if (price === 0) return null;
-  const name = rest.substring(0, pm.index).trim();
-
-  return { itemNo, brand: '', name, size: '', qty: 1, unitPrice: price, each: price, total: price };
+  const name = match[2].substring(0, pm.index).trim();
+  return { itemNo: match[1], brand: '', name, size: '', qty: 1, unitPrice: price, each: price, total: price };
 }
 
-// ===== COMPARISON ENGINE =====
-function compareInvoice(newItems, vendor) {
+// ===== COMPARISON ENGINE (now branch+vendor scoped) =====
+function compareInvoice(newItems, branchKey, vendorKey) {
   const flags = [];
-  const historicalPrices = buildPriceHistory(vendor);
-  console.log('[COMPARE] Vendor:', vendor);
-  console.log('[COMPARE] Historical price entries:', Object.keys(historicalPrices).length);
-  console.log('[COMPARE] New items to compare:', newItems.length);
-  if (Object.keys(historicalPrices).length > 0) {
-    console.log('[COMPARE] Sample historical keys:', Object.keys(historicalPrices).slice(0, 5));
-  }
+  const historicalPrices = buildPriceHistory(branchKey, vendorKey);
 
   for (const item of newItems) {
     const key = item.itemNo.toUpperCase().trim();
     const history = historicalPrices[key];
 
     if (!history) {
-      flags.push({
-        type: 'NEW_ITEM',
-        item: item,
-        oldPrice: null,
-        newPrice: item.unitPrice,
-        pctChange: null
-      });
+      flags.push({ type: 'NEW_ITEM', item, oldPrice: null, newPrice: item.unitPrice, pctChange: null });
     } else {
       const lastPrice = history.lastPrice;
       const newPrice = item.unitPrice;
-
       if (newPrice > lastPrice * 1.01) {
-        const pctChange = ((newPrice - lastPrice) / lastPrice * 100).toFixed(1);
-        flags.push({
-          type: 'PRICE_UP',
-          item: item,
-          oldPrice: lastPrice,
-          newPrice: newPrice,
-          pctChange: pctChange
-        });
+        flags.push({ type: 'PRICE_UP', item, oldPrice: lastPrice, newPrice,
+          pctChange: ((newPrice - lastPrice) / lastPrice * 100).toFixed(1) });
       } else if (newPrice < lastPrice * 0.99) {
-        const pctChange = ((lastPrice - newPrice) / lastPrice * 100).toFixed(1);
-        flags.push({
-          type: 'PRICE_DOWN',
-          item: item,
-          oldPrice: lastPrice,
-          newPrice: newPrice,
-          pctChange: '-' + pctChange
-        });
+        flags.push({ type: 'PRICE_DOWN', item, oldPrice: lastPrice, newPrice,
+          pctChange: '-' + ((lastPrice - newPrice) / lastPrice * 100).toFixed(1) });
       } else {
-        flags.push({
-          type: 'UNCHANGED',
-          item: item,
-          oldPrice: lastPrice,
-          newPrice: newPrice,
-          pctChange: '0.0'
-        });
+        flags.push({ type: 'UNCHANGED', item, oldPrice: lastPrice, newPrice, pctChange: '0.0' });
       }
     }
   }
 
-  // Sort: PRICE_UP first, then PRICE_DOWN, NEW_ITEM, UNCHANGED
   const order = { PRICE_UP: 0, PRICE_DOWN: 1, NEW_ITEM: 2, UNCHANGED: 3 };
   flags.sort((a, b) => order[a.type] - order[b.type]);
   return flags;
 }
 
-function buildPriceHistory(vendor) {
+function buildPriceHistory(branchKey, vendorKey) {
   const prices = {};
-  const vendorData = HISTORICAL_DATA[vendor] || [];
+  const branch = HISTORICAL_DATA[branchKey];
+  if (!branch) return prices;
+  const vendorInvoices = branch.vendors?.[vendorKey] || [];
 
-  // Also check all vendors for cross-reference
-  const allData = vendor === 'all'
-    ? [...(HISTORICAL_DATA.rhee || []), ...(HISTORICAL_DATA.wang || []), ...(HISTORICAL_DATA.choripdong || [])]
-    : vendorData;
-
-  for (const invoice of allData) {
+  for (const invoice of vendorInvoices) {
     for (const item of invoice.items) {
       const key = (item.itemNo || '').toUpperCase().trim();
       if (!key) continue;
-      if (!prices[key]) {
-        prices[key] = { lastPrice: item.unitPrice, prices: [], name: item.name, brand: item.brand };
-      }
+      if (!prices[key]) prices[key] = { lastPrice: item.unitPrice, prices: [], name: item.name, brand: item.brand };
       prices[key].prices.push({ price: item.unitPrice, date: invoice.date });
       prices[key].lastPrice = item.unitPrice;
       prices[key].name = item.name;
@@ -1291,19 +1097,14 @@ function buildPriceHistory(vendor) {
 // ===== DISPLAY RESULTS =====
 function displayResults(invoice, flags) {
   document.getElementById('compare-title').textContent =
-    `${invoice.vendorName} - ${invoice.date}`;
+    `${invoice.branchName} > ${invoice.vendorName} - ${invoice.date}`;
   document.getElementById('compare-subtitle').textContent =
-    `${invoice.itemCount} items processed / ${invoice.itemCount}개 품목 처리됨`;
+    `${invoice.itemCount} items processed`;
 
-  const upCount = flags.filter(f => f.type === 'PRICE_UP').length;
-  const downCount = flags.filter(f => f.type === 'PRICE_DOWN').length;
-  const newCount = flags.filter(f => f.type === 'NEW_ITEM').length;
-  const sameCount = flags.filter(f => f.type === 'UNCHANGED').length;
-
-  document.getElementById('cmp-up').textContent = upCount;
-  document.getElementById('cmp-down').textContent = downCount;
-  document.getElementById('cmp-new').textContent = newCount;
-  document.getElementById('cmp-same').textContent = sameCount;
+  document.getElementById('cmp-up').textContent = flags.filter(f => f.type === 'PRICE_UP').length;
+  document.getElementById('cmp-down').textContent = flags.filter(f => f.type === 'PRICE_DOWN').length;
+  document.getElementById('cmp-new').textContent = flags.filter(f => f.type === 'NEW_ITEM').length;
+  document.getElementById('cmp-same').textContent = flags.filter(f => f.type === 'UNCHANGED').length;
   document.getElementById('compare-summary').style.display = 'block';
 
   renderFlagTable(flags);
@@ -1315,42 +1116,25 @@ function renderFlagTable(flags) {
 
   for (const flag of flags) {
     const tr = document.createElement('tr');
-
-    let rowClass = '';
-    let badgeClass = '';
-    let badgeText = '';
-
+    let rowClass = '', badgeClass = '', badgeText = '';
     switch (flag.type) {
-      case 'PRICE_UP':
-        rowClass = 'price-up'; badgeClass = 'badge-red'; badgeText = 'UP'; break;
-      case 'PRICE_DOWN':
-        rowClass = 'price-down'; badgeClass = 'badge-green'; badgeText = 'DOWN'; break;
-      case 'NEW_ITEM':
-        rowClass = 'new-item'; badgeClass = 'badge-blue'; badgeText = 'NEW'; break;
-      case 'UNCHANGED':
-        rowClass = ''; badgeClass = 'badge-yellow'; badgeText = 'OK'; break;
+      case 'PRICE_UP': rowClass = 'price-up'; badgeClass = 'badge-red'; badgeText = 'UP'; break;
+      case 'PRICE_DOWN': rowClass = 'price-down'; badgeClass = 'badge-green'; badgeText = 'DOWN'; break;
+      case 'NEW_ITEM': rowClass = 'new-item'; badgeClass = 'badge-blue'; badgeText = 'NEW'; break;
+      case 'UNCHANGED': rowClass = ''; badgeClass = 'badge-yellow'; badgeText = 'OK'; break;
     }
-
     tr.className = rowClass;
     tr.dataset.type = flag.type;
-
     const item = flag.item;
     const nameDisplay = item.name || item.krName || item.itemNo;
-
     tr.innerHTML = `
       <td><span class="badge ${badgeClass}">${badgeText}</span></td>
-      <td>
-        <strong>${item.itemNo}</strong><br>
-        <span style="font-size:0.7rem;color:#555">${nameDisplay}</span>
-        ${item.brand ? '<br><span style="font-size:0.6rem;color:#999">' + item.brand + '</span>' : ''}
-      </td>
-      <td>
-        ${flag.oldPrice !== null ? '<span style="text-decoration:line-through;color:#999;font-size:0.7rem">$' + flag.oldPrice.toFixed(2) + '</span><br>' : ''}
-        <strong>$${flag.newPrice.toFixed(2)}</strong>
-      </td>
+      <td><strong>${item.itemNo}</strong><br><span style="font-size:0.7rem;color:#555">${nameDisplay}</span>
+        ${item.brand ? '<br><span style="font-size:0.6rem;color:#999">' + item.brand + '</span>' : ''}</td>
+      <td>${flag.oldPrice !== null ? '<span style="text-decoration:line-through;color:#999;font-size:0.7rem">$' + flag.oldPrice.toFixed(2) + '</span><br>' : ''}
+        <strong>$${flag.newPrice.toFixed(2)}</strong></td>
       <td style="font-weight:700;color:${flag.type==='PRICE_UP'?'#F44336':flag.type==='PRICE_DOWN'?'#4CAF50':'#666'}">
-        ${flag.pctChange !== null ? flag.pctChange + '%' : '--'}
-      </td>
+        ${flag.pctChange !== null ? flag.pctChange + '%' : '--'}</td>
     `;
     tbody.appendChild(tr);
   }
@@ -1359,56 +1143,126 @@ function renderFlagTable(flags) {
 function filterFlags(type, btn) {
   document.querySelectorAll('#flag-tabs .tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
-
-  const rows = document.querySelectorAll('#results-body tr');
-  rows.forEach(row => {
-    if (type === 'all') {
-      row.style.display = '';
-    } else {
-      row.style.display = row.dataset.type === type ? '' : 'none';
-    }
+  document.querySelectorAll('#results-body tr').forEach(row => {
+    row.style.display = (type === 'all' || row.dataset.type === type) ? '' : 'none';
   });
+}
+
+// ===== ALL BRANCHES COMPARISON =====
+function showAllBranches() {
+  renderCrossBranch();
+  navigateTo('allbranches');
+}
+
+function renderCrossBranch() {
+  const vendorFilter = document.getElementById('cross-vendor-filter').value;
+  const branchKeys = ['miami', 'pembroke', 'hollywood', 'coral_springs', 'fort_lauderdale'];
+
+  // Build price map: itemNo -> { name, branches: { branchKey: price } }
+  const priceMap = {};
+
+  for (const bKey of branchKeys) {
+    const branch = HISTORICAL_DATA[bKey];
+    if (!branch) continue;
+    for (const [vKey, invoices] of Object.entries(branch.vendors || {})) {
+      if (vendorFilter !== 'all' && vKey !== vendorFilter) continue;
+      for (const inv of invoices) {
+        for (const item of inv.items) {
+          const key = item.itemNo.toUpperCase().trim();
+          if (!key || item.unitPrice === 0) continue;
+          if (!priceMap[key]) priceMap[key] = { name: item.name || item.krName || key, brand: item.brand || '', branches: {} };
+          // Use most recent price (latest invoice date)
+          if (!priceMap[key].branches[bKey] || inv.date > (priceMap[key].branches[bKey].date || '')) {
+            priceMap[key].branches[bKey] = { price: item.unitPrice, date: inv.date };
+          }
+        }
+      }
+    }
+  }
+
+  // Filter to items appearing in 2+ branches
+  const multiItems = Object.entries(priceMap)
+    .filter(([, data]) => Object.keys(data.branches).length >= 2)
+    .sort((a, b) => {
+      const aPrices = Object.values(a[1].branches).map(b => b.price);
+      const bPrices = Object.values(b[1].branches).map(b => b.price);
+      const aRange = Math.max(...aPrices) - Math.min(...aPrices);
+      const bRange = Math.max(...bPrices) - Math.min(...bPrices);
+      return bRange - aRange; // Biggest discrepancy first
+    });
+
+  // Render table
+  const thead = document.getElementById('cross-branch-head');
+  thead.innerHTML = `<tr>
+    <th style="text-align:left">Item</th>
+    ${branchKeys.map(k => `<th style="color:${BRANCHES[k].color}">${BRANCHES[k].name.split(' ')[0]}</th>`).join('')}
+    <th>Diff</th>
+  </tr>`;
+
+  const tbody = document.getElementById('cross-branch-body');
+  tbody.innerHTML = '';
+
+  if (multiItems.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="' + (branchKeys.length + 2) + '" style="text-align:center;padding:30px;color:#999">No items found across multiple branches</td></tr>';
+    return;
+  }
+
+  for (const [itemNo, data] of multiItems.slice(0, 200)) {
+    const prices = Object.values(data.branches).map(b => b.price);
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+    const pctDiff = minPrice > 0 ? ((maxPrice - minPrice) / minPrice * 100).toFixed(1) : '0';
+
+    const tr = document.createElement('tr');
+    let html = `<td class="item-name">${itemNo}<br><span style="font-size:0.6rem;color:#888;font-weight:400">${data.name}</span></td>`;
+
+    for (const bKey of branchKeys) {
+      const entry = data.branches[bKey];
+      if (!entry) {
+        html += '<td style="color:#ccc">--</td>';
+      } else {
+        let cls = '';
+        if (prices.length >= 2) {
+          if (entry.price === maxPrice && maxPrice > minPrice) cls = 'price-high';
+          else if (entry.price === minPrice && maxPrice > minPrice) cls = 'price-low';
+        }
+        html += `<td class="${cls}">$${entry.price.toFixed(2)}</td>`;
+      }
+    }
+
+    html += `<td style="font-weight:700;color:${parseFloat(pctDiff) > 5 ? '#C62828' : '#666'}">${pctDiff}%</td>`;
+    tr.innerHTML = html;
+    tbody.appendChild(tr);
+  }
 }
 
 // ===== PDF EXTRACTION =====
 async function extractPDFText(file) {
-  // Load pdf.js if not already loaded
   if (typeof pdfjsLib === 'undefined') {
     await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   }
-
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
   let fullText = '';
 
-  console.log('[PDF] Total pages:', pdf.numPages);
-
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-
-    // Group text items by Y coordinate to reconstruct lines properly
-    // pdf.js returns individual text fragments with transform[5] = Y position
     const lineMap = {};
     for (const item of content.items) {
       if (!item.str || item.str.trim() === '') continue;
-      // Y coordinate (rounded to nearest 2px to group items on same line)
       const y = Math.round(item.transform[5] / 2) * 2;
       const x = item.transform[4];
       if (!lineMap[y]) lineMap[y] = [];
-      lineMap[y].push({ x: x, text: item.str });
+      lineMap[y].push({ x, text: item.str });
     }
-
-    // Sort lines by Y descending (PDF Y goes bottom-up), then items by X ascending
     const sortedYs = Object.keys(lineMap).map(Number).sort((a, b) => b - a);
     for (const y of sortedYs) {
       const items = lineMap[y].sort((a, b) => a.x - b.x);
-      // Join with appropriate spacing
       let lineText = '';
       for (let j = 0; j < items.length; j++) {
         if (j > 0) {
-          // If gap between items is large, insert tab; otherwise space
           const gap = items[j].x - (items[j-1].x + items[j-1].text.length * 4);
           lineText += gap > 20 ? '\t' : ' ';
         }
@@ -1416,16 +1270,9 @@ async function extractPDFText(file) {
       }
       fullText += lineText.trim() + '\n';
     }
-
     setProgress(20 + (i / pdf.numPages) * 30);
   }
-
-  console.log('[PDF] Extracted text length:', fullText.length);
-  console.log('[PDF] First 500 chars:', fullText.substring(0, 500));
-
-  // Store raw text for preview
   window._lastExtractedText = fullText;
-
   return fullText;
 }
 
@@ -1434,48 +1281,29 @@ async function runOCR(file) {
   if (typeof Tesseract === 'undefined') {
     await loadScript('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js');
   }
-
-  updateLoadingText('Loading OCR engine / OCR 엔진 로딩 중...');
+  updateLoadingText('Loading OCR engine...');
   setProgress(25);
-
   const result = await Tesseract.recognize(file, 'eng+kor', {
-    logger: m => {
-      if (m.progress) setProgress(25 + m.progress * 50);
-    }
+    logger: m => { if (m.progress) setProgress(25 + m.progress * 50); }
   });
-
   return result.data.text;
 }
 
 // ===== HELPERS =====
 function loadScript(src) {
   return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
+    const s = document.createElement('script'); s.src = src; s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
   });
 }
 
 function readFileAsText(file) {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsText(file);
+    const r = new FileReader(); r.onload = () => resolve(r.result); r.onerror = reject; r.readAsText(file);
   });
 }
 
-function getVendorName(code) {
-  const names = { rhee: 'Rhee Bros', wang: 'Wang', choripdong: 'Choripdong', other: 'Other' };
-  return names[code] || code;
-}
-
-function showLoading(text) {
-  document.getElementById('loading-text').textContent = text || 'Processing...';
-  document.getElementById('loading').classList.add('active');
-}
+function showLoading(text) { document.getElementById('loading-text').textContent = text || 'Processing...'; document.getElementById('loading').classList.add('active'); }
 function hideLoading() { document.getElementById('loading').classList.remove('active'); }
 function updateLoadingText(text) { document.getElementById('loading-text').textContent = text; }
 function setProgress(pct) { document.getElementById('loading-progress').style.width = pct + '%'; }
@@ -1487,341 +1315,119 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
-// ===== EXPORT CSV =====
+function copyRawText() {
+  const el = document.getElementById('raw-text-display');
+  if (el && el.value) {
+    navigator.clipboard.writeText(el.value).then(() => showToast('Copied!')).catch(() => { el.select(); document.execCommand('copy'); showToast('Copied!'); });
+  }
+}
+
+// ===== EXPORT CSV (branch+vendor specific filenames) =====
+function getBranchVendorSuffix() {
+  const b = selectedBranch ? BRANCHES[selectedBranch]?.name.replace(/\s+/g, '') : '';
+  const v = selectedVendor ? VENDORS[selectedVendor]?.name.replace(/[\s\/]+/g, '') : '';
+  return (b && v) ? `_${b}_${v}` : '';
+}
+
 function exportCSV() {
   if (!currentFlags.length) { showToast('No data to export'); return; }
-
   let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
   for (const flag of currentFlags) {
     const item = flag.item;
-    csv += [
-      flag.type,
-      '"' + (item.itemNo || '') + '"',
-      '"' + (item.brand || '') + '"',
-      '"' + (item.name || '').replace(/"/g, '""') + '"',
-      '"' + (item.size || '') + '"',
-      item.qty || '',
-      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
-      flag.newPrice.toFixed(2),
-      flag.pctChange || ''
-    ].join(',') + '\n';
+    csv += [flag.type, q(item.itemNo), q(item.brand), q(item.name), q(item.size),
+      item.qty || '', flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2), flag.pctChange || ''].join(',') + '\n';
   }
-
-  downloadCSV(csv, 'invoice_comparison_' + new Date().toISOString().split('T')[0] + '.csv');
+  downloadCSV(csv, 'Invoice_Comparison' + getBranchVendorSuffix() + '.csv');
 }
 
-function exportAllHistory() {
-  const allInvoices = [...(HISTORICAL_DATA.rhee || []), ...(HISTORICAL_DATA.wang || []), ...(HISTORICAL_DATA.choripdong || [])];
-  let csv = 'Vendor,Invoice,Date,Item No,Brand,Name,Size,Qty,Unit Price,Total\n';
-
-  for (const inv of allInvoices) {
-    for (const item of inv.items) {
-      csv += [
-        '"' + inv.vendor + '"',
-        '"' + inv.invoice + '"',
-        inv.date,
-        '"' + (item.itemNo || '') + '"',
-        '"' + (item.brand || '') + '"',
-        '"' + (item.name || '').replace(/"/g, '""') + '"',
-        '"' + (item.size || '') + '"',
-        item.qty || '',
-        item.unitPrice || '',
-        item.total || ''
-      ].join(',') + '\n';
-    }
+function exportPriceChangeCSV() {
+  if (!currentFlags.length) { showToast('No data'); return; }
+  const changes = currentFlags.filter(f => f.type === 'PRICE_UP' || f.type === 'PRICE_DOWN');
+  if (!changes.length) { showToast('No price changes'); return; }
+  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
+  for (const flag of changes) {
+    const item = flag.item;
+    csv += [flag.type === 'PRICE_UP' ? 'UP' : 'DOWN', q(item.itemNo), q(item.brand), q(item.name), q(item.size),
+      item.qty || '', flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2), flag.pctChange || ''].join(',') + '\n';
   }
-  downloadCSV(csv, 'all_invoice_history_' + new Date().toISOString().split('T')[0] + '.csv');
-  showToast('History exported / 기록 내보내기 완료');
+  downloadCSV(csv, 'Price_Change' + getBranchVendorSuffix() + '.csv');
 }
 
-function exportAllFlags() {
-  const allPrices = {};
-  const vendors = ['rhee', 'wang', 'choripdong'];
+function exportNewItemsCSV() {
+  if (!currentFlags.length) { showToast('No data'); return; }
+  const newItems = currentFlags.filter(f => f.type === 'NEW_ITEM');
+  if (!newItems.length) { showToast('No new items'); return; }
+  let csv = 'Item No,Brand,Name,Size,Qty,Unit Price\n';
+  for (const flag of newItems) {
+    const item = flag.item;
+    csv += [q(item.itemNo), q(item.brand), q(item.name), q(item.size),
+      item.qty || '', flag.newPrice.toFixed(2)].join(',') + '\n';
+  }
+  downloadCSV(csv, 'New_Items' + getBranchVendorSuffix() + '.csv');
+}
 
-  for (const v of vendors) {
-    const data = HISTORICAL_DATA[v] || [];
-    for (const inv of data) {
-      for (const item of inv.items) {
-        const key = item.itemNo;
-        if (!allPrices[key]) allPrices[key] = { items: [], vendor: inv.vendor };
-        allPrices[key].items.push({ price: item.unitPrice, date: inv.date, name: item.name, brand: item.brand });
+function exportFullSummaryCSV() {
+  if (!currentFlags.length) { showToast('No data'); return; }
+  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
+  for (const flag of currentFlags) {
+    const item = flag.item;
+    const status = { PRICE_UP: 'UP', PRICE_DOWN: 'DOWN', NEW_ITEM: 'NEW', UNCHANGED: 'OK' }[flag.type] || flag.type;
+    csv += [status, q(item.itemNo), q(item.brand), q(item.name), q(item.size),
+      item.qty || '', flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
+      flag.newPrice.toFixed(2), flag.pctChange || ''].join(',') + '\n';
+  }
+  downloadCSV(csv, 'Full_Summary' + getBranchVendorSuffix() + '.csv');
+}
+
+function exportCrossBranchCSV() {
+  const vendorFilter = document.getElementById('cross-vendor-filter').value;
+  const branchKeys = ['miami', 'pembroke', 'hollywood', 'coral_springs', 'fort_lauderdale'];
+  const priceMap = {};
+
+  for (const bKey of branchKeys) {
+    const branch = HISTORICAL_DATA[bKey];
+    if (!branch) continue;
+    for (const [vKey, invoices] of Object.entries(branch.vendors || {})) {
+      if (vendorFilter !== 'all' && vKey !== vendorFilter) continue;
+      for (const inv of invoices) {
+        for (const item of inv.items) {
+          const key = item.itemNo.toUpperCase().trim();
+          if (!key || item.unitPrice === 0) continue;
+          if (!priceMap[key]) priceMap[key] = { name: item.name || '', branches: {} };
+          if (!priceMap[key].branches[bKey] || inv.date > (priceMap[key].branches[bKey].date || ''))
+            priceMap[key].branches[bKey] = { price: item.unitPrice, date: inv.date };
+        }
       }
     }
   }
 
-  let csv = 'Item No,Brand,Name,Vendor,Min Price,Max Price,Last Price,Price Range %\n';
-  for (const [key, data] of Object.entries(allPrices)) {
-    if (data.items.length < 2) continue;
-    const prices = data.items.map(i => i.price).filter(p => p > 0);
-    if (prices.length < 2) continue;
-    const min = Math.min(...prices);
-    const max = Math.max(...prices);
-    const last = prices[prices.length - 1];
-    const range = ((max - min) / min * 100).toFixed(1);
-    if (parseFloat(range) < 1) continue;
-
-    const lastItem = data.items[data.items.length - 1];
-    csv += [key, '"' + (lastItem.brand || '') + '"', '"' + (lastItem.name || '').replace(/"/g, '""') + '"',
-      '"' + data.vendor + '"', min.toFixed(2), max.toFixed(2), last.toFixed(2), range].join(',') + '\n';
+  let csv = 'Item No,Name,' + branchKeys.map(k => BRANCHES[k].name).join(',') + ',Max Diff %\n';
+  for (const [itemNo, data] of Object.entries(priceMap)) {
+    if (Object.keys(data.branches).length < 2) continue;
+    const prices = Object.values(data.branches).map(b => b.price);
+    const min = Math.min(...prices), max = Math.max(...prices);
+    const diff = min > 0 ? ((max - min) / min * 100).toFixed(1) : '0';
+    csv += q(itemNo) + ',' + q(data.name);
+    for (const bKey of branchKeys) {
+      csv += ',' + (data.branches[bKey] ? data.branches[bKey].price.toFixed(2) : '');
+    }
+    csv += ',' + diff + '\n';
   }
-  downloadCSV(csv, 'price_flags_' + new Date().toISOString().split('T')[0] + '.csv');
-  showToast('Flags exported / 알림 내보내기 완료');
+  downloadCSV(csv, 'Cross_Branch_Comparison' + (vendorFilter !== 'all' ? '_' + vendorFilter : '') + '.csv');
 }
 
-function exportPriceTracker() {
-  const allPrices = {};
-  const vendors = ['rhee', 'wang', 'choripdong'];
-
-  for (const v of vendors) {
-    const data = HISTORICAL_DATA[v] || [];
-    for (const inv of data) {
-      for (const item of inv.items) {
-        const key = item.itemNo + '|' + (item.name || '');
-        if (!allPrices[key]) allPrices[key] = [];
-        allPrices[key].push({ price: item.unitPrice, date: inv.date, vendor: inv.vendor, brand: item.brand });
-      }
-    }
-  }
-
-  let csv = 'Item No,Name,Brand,Vendor,Date,Price\n';
-  for (const [key, records] of Object.entries(allPrices)) {
-    const [itemNo, name] = key.split('|');
-    for (const r of records) {
-      csv += ['"' + itemNo + '"', '"' + (name || '').replace(/"/g, '""') + '"', '"' + (r.brand || '') + '"',
-        '"' + r.vendor + '"', r.date, r.price.toFixed(2)].join(',') + '\n';
-    }
-  }
-  downloadCSV(csv, 'price_tracker_' + new Date().toISOString().split('T')[0] + '.csv');
-  showToast('Price tracker exported / 가격 추적 내보내기 완료');
-}
+function q(s) { return '"' + ((s || '') + '').replace(/"/g, '""') + '"'; }
 
 function downloadCSV(csv, filename) {
-  const BOM = '\uFEFF';
-  const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
   const a = document.createElement('a');
-  a.href = url;
+  a.href = URL.createObjectURL(blob);
   a.download = filename;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-
-// ===== 3 AUTO-DOWNLOAD CSVs =====
-function exportPriceChangeCSV() {
-  if (!currentFlags.length) { showToast('No data to export'); return; }
-  const changes = currentFlags.filter(f => f.type === 'PRICE_UP' || f.type === 'PRICE_DOWN');
-  if (changes.length === 0) { showToast('No price changes found'); return; }
-
-  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
-  for (const flag of changes) {
-    const item = flag.item;
-    csv += [
-      flag.type === 'PRICE_UP' ? 'UP' : 'DOWN',
-      '"' + (item.itemNo || '') + '"',
-      '"' + (item.brand || '') + '"',
-      '"' + (item.name || '').replace(/"/g, '""') + '"',
-      '"' + (item.size || '') + '"',
-      item.qty || '',
-      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
-      flag.newPrice.toFixed(2),
-      flag.pctChange || ''
-    ].join(',') + '\n';
-  }
-  downloadCSV(csv, 'Price_Change_Report.csv');
-  showToast('Price changes exported / 가격 변동 내보내기 완료');
-}
-
-function exportNewItemsCSV() {
-  if (!currentFlags.length) { showToast('No data to export'); return; }
-  const newItems = currentFlags.filter(f => f.type === 'NEW_ITEM');
-  if (newItems.length === 0) { showToast('No new items found'); return; }
-
-  let csv = 'Item No,Brand,Name,Size,Qty,Unit Price,New Price (enter here)\n';
-  for (const flag of newItems) {
-    const item = flag.item;
-    csv += [
-      '"' + (item.itemNo || '') + '"',
-      '"' + (item.brand || '') + '"',
-      '"' + (item.name || '').replace(/"/g, '""') + '"',
-      '"' + (item.size || '') + '"',
-      item.qty || '',
-      flag.newPrice.toFixed(2),
-      ''
-    ].join(',') + '\n';
-  }
-  downloadCSV(csv, 'New_Items_List.csv');
-  showToast('New items exported / 신규 품목 내보내기 완료');
-}
-
-function exportFullSummaryCSV() {
-  if (!currentFlags.length) { showToast('No data to export'); return; }
-
-  let csv = 'Status,Item No,Brand,Name,Size,Qty,Old Price,New Price,Change %\n';
-  for (const flag of currentFlags) {
-    const item = flag.item;
-    let status = flag.type;
-    if (status === 'PRICE_UP') status = 'UP';
-    else if (status === 'PRICE_DOWN') status = 'DOWN';
-    else if (status === 'NEW_ITEM') status = 'NEW';
-    else if (status === 'UNCHANGED') status = 'OK';
-
-    csv += [
-      status,
-      '"' + (item.itemNo || '') + '"',
-      '"' + (item.brand || '') + '"',
-      '"' + (item.name || '').replace(/"/g, '""') + '"',
-      '"' + (item.size || '') + '"',
-      item.qty || '',
-      flag.oldPrice !== null ? flag.oldPrice.toFixed(2) : '',
-      flag.newPrice.toFixed(2),
-      flag.pctChange || ''
-    ].join(',') + '\n';
-  }
-  downloadCSV(csv, 'Full_Comparison_Summary.csv');
-  showToast('Full summary exported / 전체 요약 내보내기 완료');
-}
-
-// ===== RAW TEXT HELPERS =====
-function copyRawText() {
-  const rawTextEl = document.getElementById('raw-text-display');
-  if (rawTextEl && rawTextEl.value) {
-    navigator.clipboard.writeText(rawTextEl.value).then(() => {
-      showToast('Text copied / 텍스트 복사됨');
-    }).catch(() => {
-      rawTextEl.select();
-      document.execCommand('copy');
-      showToast('Text copied / 텍스트 복사됨');
-    });
-  } else {
-    showToast('No text to copy');
-  }
-}
-
-// ===== HISTORY =====
-async function renderHistory(filter) {
-  const list = document.getElementById('history-list');
-
-  // Combine seed data and IndexedDB data
-  let allInvoices = [];
-
-  // Seed data
-  for (const v of ['rhee', 'wang', 'choripdong']) {
-    const data = HISTORICAL_DATA[v] || [];
-    for (const inv of data) {
-      allInvoices.push({
-        vendor: v,
-        vendorName: inv.vendor,
-        invoice: inv.invoice,
-        date: inv.date,
-        total: inv.total,
-        itemCount: inv.items.length,
-        customer: inv.customer
-      });
-    }
-  }
-
-  // IndexedDB data
-  if (DB) {
-    try {
-      const dbInvoices = await dbGetAll('invoices');
-      for (const inv of dbInvoices) {
-        allInvoices.push({
-          vendor: inv.vendor,
-          vendorName: inv.vendorName,
-          invoice: 'Uploaded',
-          date: inv.date,
-          total: inv.items.reduce((sum, i) => sum + (i.total || 0), 0),
-          itemCount: inv.itemCount,
-          customer: 'Uploaded Invoice'
-        });
-      }
-    } catch(e) {}
-  }
-
-  // Sort by date descending
-  allInvoices.sort((a, b) => b.date.localeCompare(a.date));
-
-  // Filter
-  if (filter && filter !== 'all') {
-    allInvoices = allInvoices.filter(inv => inv.vendor === filter);
-  }
-
-  if (allInvoices.length === 0) {
-    list.innerHTML = '<div class="empty-state"><p>No invoices found</p></div>';
-    return;
-  }
-
-  list.innerHTML = allInvoices.map(inv => `
-    <div class="history-item">
-      <div class="history-info">
-        <h4>${inv.vendorName} - ${inv.invoice}</h4>
-        <p>${inv.customer || ''} | ${inv.itemCount} items</p>
-      </div>
-      <div class="history-meta">
-        <div class="amount">${inv.total > 0 ? '$' + inv.total.toLocaleString('en-US', {minimumFractionDigits: 2}) : '--'}</div>
-        <div class="date">${inv.date}</div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function filterHistory(filter, btn) {
-  document.querySelectorAll('#page-history .tab').forEach(t => t.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  renderHistory(filter);
-}
-
-// ===== ALL FLAGS =====
-function renderAllFlags() {
-  const allPrices = {};
-
-  for (const v of ['rhee', 'wang', 'choripdong']) {
-    const data = HISTORICAL_DATA[v] || [];
-    for (const inv of data) {
-      for (const item of inv.items) {
-        const key = item.itemNo;
-        if (!allPrices[key]) allPrices[key] = { records: [], vendor: inv.vendor, name: item.name, brand: item.brand };
-        allPrices[key].records.push({ price: item.unitPrice, date: inv.date });
-      }
-    }
-  }
-
-  const tbody = document.getElementById('flags-body');
-  tbody.innerHTML = '';
-
-  const flaggedItems = [];
-  for (const [key, data] of Object.entries(allPrices)) {
-    if (data.records.length < 2) continue;
-    const prices = data.records.map(r => r.price).filter(p => p > 0);
-    if (prices.length < 2) continue;
-    const oldPrice = prices[0];
-    const newPrice = prices[prices.length - 1];
-    const pct = ((newPrice - oldPrice) / oldPrice * 100);
-    if (Math.abs(pct) < 1) continue;
-
-    flaggedItems.push({ key, ...data, oldPrice, newPrice, pct });
-  }
-
-  flaggedItems.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
-
-  for (const item of flaggedItems.slice(0, 100)) {
-    const tr = document.createElement('tr');
-    tr.className = item.pct > 0 ? 'price-up' : 'price-down';
-    tr.innerHTML = `
-      <td><strong>${item.key}</strong><br><span style="font-size:0.65rem;color:#666">${item.name || ''}</span></td>
-      <td style="font-size:0.7rem">${item.vendor}</td>
-      <td>$${item.oldPrice.toFixed(2)}</td>
-      <td>$${item.newPrice.toFixed(2)}</td>
-      <td style="font-weight:700;color:${item.pct>0?'#F44336':'#4CAF50'}">${item.pct>0?'+':''}${item.pct.toFixed(1)}%</td>
-    `;
-    tbody.appendChild(tr);
-  }
-
-  if (flaggedItems.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:20px;color:#999">No significant price changes detected</td></tr>';
-  }
 }
 
 // ===== SAVE COMPARISON =====
@@ -1829,72 +1435,18 @@ async function saveComparison() {
   if (!currentFlags.length) { showToast('No comparison to save'); return; }
   if (DB) {
     await dbAdd('comparisons', {
-      flags: currentFlags,
-      timestamp: Date.now(),
+      branch: selectedBranch, vendor: selectedVendor,
+      flags: currentFlags, timestamp: Date.now(),
       date: new Date().toISOString().split('T')[0]
     });
-    showToast('Comparison saved / 비교 결과 저장됨');
-  } else {
-    showToast('Database not available');
+    showToast('Comparison saved!');
   }
-}
-
-// ===== DASHBOARD =====
-function updateDashboard() {
-  let totalInvoices = 0;
-  let totalItems = 0;
-
-  for (const v of ['rhee', 'wang', 'choripdong']) {
-    const data = HISTORICAL_DATA[v] || [];
-    totalInvoices += data.length;
-    for (const inv of data) {
-      totalItems += inv.items.length;
-    }
-  }
-
-  document.getElementById('stat-invoices').textContent = totalInvoices;
-  document.getElementById('stat-items').textContent = totalItems;
-
-  // Count flags from price changes
-  const allPrices = {};
-  for (const v of ['rhee', 'wang', 'choripdong']) {
-    const data = HISTORICAL_DATA[v] || [];
-    for (const inv of data) {
-      for (const item of inv.items) {
-        const key = item.itemNo;
-        if (!allPrices[key]) allPrices[key] = [];
-        allPrices[key].push(item.unitPrice);
-      }
-    }
-  }
-
-  let flagCount = 0;
-  for (const prices of Object.values(allPrices)) {
-    if (prices.length >= 2) {
-      const first = prices[0];
-      const last = prices[prices.length - 1];
-      if (Math.abs((last - first) / first) > 0.01) flagCount++;
-    }
-  }
-  document.getElementById('stat-flags').textContent = flagCount;
 }
 
 // ===== INIT =====
 async function init() {
-  // Set today's date
-  document.getElementById('invoice-date').value = new Date().toISOString().split('T')[0];
-
-  // Open IndexedDB
-  try {
-    await openDB();
-  } catch(e) {
-    console.warn('IndexedDB not available:', e);
-  }
-
-  // Update dashboard
-  updateDashboard();
-
-  // Register service worker
+  try { await openDB(); } catch(e) { console.warn('IndexedDB not available:', e); }
+  renderBranchGrid();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(e => console.log('SW registration failed:', e));
   }
