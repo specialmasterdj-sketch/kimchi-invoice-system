@@ -584,7 +584,7 @@ function openBranch(branchId) {
       for (const item of changedItems.slice(0, 30)) {
         const cls = item.diff > 0 ? 'price-up' : 'price-down';
         const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
-        content += `<tr class="${cls}"><td class="item-desc">${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
+        content += `<tr class="${cls}"><td class="item-desc">${item.itemNo} ${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
       }
       content += '</table></div></div>';
     }
@@ -1105,48 +1105,76 @@ showPage = function(pageId) {
   if (pageId === 'page-crossvendor') renderCrossVendor();
 };
 
+// ===== TESSERACT.JS LOADER =====
+function loadTesseract(callback) {
+  if (window.Tesseract) { callback(); return; }
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+  script.onload = function() {
+    if (window.Tesseract) { callback(); }
+    else { callback(new Error('Tesseract failed to initialize after script load')); }
+  };
+  script.onerror = function() {
+    callback(new Error('Failed to load Tesseract.js from CDN'));
+  };
+  document.head.appendChild(script);
+}
+
+function runOCR(imageData, onProgress) {
+  return Tesseract.recognize(imageData, 'eng+kor', {
+    logger: function(m) {
+      if (m.status === 'recognizing text' && onProgress) {
+        onProgress(Math.round(m.progress * 100));
+      }
+    }
+  });
+}
+
+function applyOCRResult(text) {
+  pendingText = text;
+  var pa = document.getElementById('pasteArea');
+  if (pa) pa.value = text;
+  inputMethod = 'paste';
+  if (typeof setInputMethod === 'function') setInputMethod('paste');
+  document.querySelectorAll('#inputMethodTabs .tab').forEach(function(t) { t.classList.remove('active'); });
+  var tabs = document.querySelectorAll('#inputMethodTabs .tab');
+  if (tabs[0]) tabs[0].classList.add('active');
+  var inputPaste = document.getElementById('input-paste');
+  if (inputPaste) inputPaste.style.display = 'block';
+  var inputFile = document.getElementById('input-file');
+  if (inputFile) inputFile.style.display = 'none';
+  var inputPdf = document.getElementById('input-pdf');
+  if (inputPdf) inputPdf.style.display = 'none';
+  var inputPhoto = document.getElementById('input-photo');
+  if (inputPhoto) inputPhoto.style.display = 'none';
+  checkCompareReady();
+}
+
 // ===== PHOTO UPLOAD OCR (inside Upload page) =====
 function handlePhotoUpload(input) {
   if (!input.files || !input.files[0]) return;
-  const file = input.files[0];
+  var file = input.files[0];
   document.getElementById('photoFileName').textContent = file.name;
   showLoading('Scanning image with OCR...');
 
-  const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js';
-  script.onload = function() {
-    const reader = new FileReader();
+  loadTesseract(function(err) {
+    if (err) { hideLoading(); showToast('OCR load error: ' + err.message, 'error'); return; }
+    var reader = new FileReader();
     reader.onload = function(e) {
-      Tesseract.recognize(e.target.result, 'eng', {
-        logger: m => {
-          if (m.status === 'recognizing text') {
-            const pct = Math.round(m.progress * 100);
-            document.getElementById('loadingText').textContent = 'OCR: ' + pct + '%';
-          }
-        }
-      }).then(({ data: { text } }) => {
+      runOCR(e.target.result, function(pct) {
+        var lt = document.getElementById('loadingText');
+        if (lt) lt.textContent = 'OCR: ' + pct + '%';
+      }).then(function(result) {
         hideLoading();
-        pendingText = text;
-        // Also put in paste area so user can see/edit
-        document.getElementById('pasteArea').value = text;
-        inputMethod = 'paste';
-        setInputMethod('paste');
-        document.querySelectorAll('#inputMethodTabs .tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('#inputMethodTabs .tab')[0].classList.add('active');
-        checkCompareReady();
+        applyOCRResult(result.data.text);
         showToast('OCR complete! Review text then click Compare.', 'success');
-      }).catch(err => {
+      }).catch(function(err) {
         hideLoading();
         showToast('OCR failed: ' + err.message, 'error');
       });
     };
     reader.readAsDataURL(file);
-  };
-  if (!window.Tesseract) {
-    document.head.appendChild(script);
-  } else {
-    script.onload();
-  }
+  });
   input.value = '';
 }
 
@@ -1157,59 +1185,58 @@ function openScanInvoice() {
 
 function handleCameraCapture(input) {
   if (!input.files || !input.files[0]) return;
-  const file = input.files[0];
+  var file = input.files[0];
 
-  // Show loading
-  const loadingDiv = document.createElement('div');
+  // Show loading overlay
+  var loadingDiv = document.createElement('div');
   loadingDiv.id = 'scanLoading';
   loadingDiv.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;';
-  loadingDiv.innerHTML = '<div style="font-size:2rem;margin-bottom:10px;">📸</div><div style="font-size:1.1rem;font-weight:700;">Scanning Invoice...</div><div style="font-size:0.8rem;margin-top:8px;color:#aaa;">OCR processing may take 30-60 seconds</div><div style="margin-top:15px;width:60px;height:60px;border:4px solid #555;border-top:4px solid #fff;border-radius:50%;animation:spin 1s linear infinite;"></div>';
+  loadingDiv.innerHTML = '<div style="font-size:2rem;margin-bottom:10px;">📸</div><div id="scanStatusText" style="font-size:1.1rem;font-weight:700;">Loading OCR engine...</div><div id="scanProgressText" style="font-size:0.8rem;margin-top:8px;color:#aaa;">This may take 30-60 seconds on first use</div><div style="margin-top:15px;width:60px;height:60px;border:4px solid #555;border-top:4px solid #fff;border-radius:50%;animation:spin 1s linear infinite;"></div>';
   document.body.appendChild(loadingDiv);
 
-  // Use Tesseract.js for OCR
-  const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js';
-  script.onload = function() {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      Tesseract.recognize(e.target.result, 'eng', {
-        logger: m => {
-          if (m.status === 'recognizing text') {
-            const pct = Math.round(m.progress * 100);
-            const ld = document.getElementById('scanLoading');
-            if (ld) ld.querySelector('div:nth-child(3)').textContent = 'Processing: ' + pct + '%';
-          }
-        }
-      }).then(({ data: { text } }) => {
-        const ld = document.getElementById('scanLoading');
-        if (ld) ld.remove();
+  function removeScanLoading() {
+    var ld = document.getElementById('scanLoading');
+    if (ld) ld.remove();
+  }
 
-        // Pre-fill the upload page with extracted text
+  loadTesseract(function(err) {
+    if (err) {
+      removeScanLoading();
+      showToast('OCR load error: ' + err.message, 'error');
+      return;
+    }
+    var st = document.getElementById('scanStatusText');
+    if (st) st.textContent = 'Scanning Invoice...';
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      runOCR(e.target.result, function(pct) {
+        var pt = document.getElementById('scanProgressText');
+        if (pt) pt.textContent = 'Processing: ' + pct + '%';
+      }).then(function(result) {
+        removeScanLoading();
+        var text = result.data.text;
+
+        // Navigate to upload page and fill in the text
         showPage('page-upload');
-        // Wait for DOM then set text and enable compare
-        setTimeout(function() {
-          const pa = document.getElementById('pasteArea');
-          if (pa) pa.value = text;
-          inputMethod = 'paste';
-          pendingText = text;
-          document.querySelectorAll('#inputMethodTabs .tab').forEach(t => t.classList.remove('active'));
-          document.querySelectorAll('#inputMethodTabs .tab')[0].classList.add('active');
-          document.getElementById('input-paste').style.display = 'block';
-          document.getElementById('input-file').style.display = 'none';
-          document.getElementById('input-pdf').style.display = 'none';
-          document.getElementById('input-photo').style.display = 'none';
-          checkCompareReady();
-          showToast('Invoice scanned! Review the text and click Compare.', 'success');
-        }, 300);
-      }).catch(err => {
-        const ld = document.getElementById('scanLoading');
-        if (ld) ld.remove();
+        // Use requestAnimationFrame + setTimeout to ensure DOM is ready
+        requestAnimationFrame(function() {
+          setTimeout(function() {
+            applyOCRResult(text);
+            showToast('Invoice scanned! Review the text and click Compare.', 'success');
+          }, 100);
+        });
+      }).catch(function(err) {
+        removeScanLoading();
         showToast('Scan failed: ' + err.message, 'error');
       });
     };
+    reader.onerror = function() {
+      removeScanLoading();
+      showToast('Failed to read image file', 'error');
+    };
     reader.readAsDataURL(file);
-  };
-  document.head.appendChild(script);
+  });
   input.value = '';
 }
 
