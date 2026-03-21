@@ -1129,8 +1129,12 @@ function handleCameraCapture(input) {
 
         // Pre-fill the upload page with extracted text
         showPage('page-upload');
-        const ta = document.getElementById('invoiceText');
-        if (ta) ta.value = text;
+        // Set paste area text and enable compare button
+        const pa = document.getElementById('pasteArea');
+        if (pa) pa.value = text;
+        inputMethod = 'paste';
+        pendingText = text;
+        checkCompareReady();
         showToast('Invoice scanned! Review the text and click Compare.', 'success');
       }).catch(err => {
         const ld = document.getElementById('scanLoading');
