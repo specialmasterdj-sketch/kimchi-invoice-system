@@ -273,9 +273,20 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   <div class="card">
     <div class="card-title">Input Method / 입력 방식</div>
     <div class="input-method" id="inputMethodTabs">
-      <button class="tab active" onclick="setInputMethod('paste')">Text Paste / 텍스트</button>
-      <button class="tab" onclick="setInputMethod('file')">File Upload / 파일</button>
-      <button class="tab" onclick="setInputMethod('pdf')">PDF Upload</button>
+      <button class="tab active" onclick="setInputMethod('paste')">Text / 텍스트</button>
+      <button class="tab" onclick="setInputMethod('file')">File / 파일</button>
+      <button class="tab" onclick="setInputMethod('pdf')">PDF</button>
+      <button class="tab" onclick="setInputMethod('photo')">📸 Photo / 사진</button>
+    </div>
+
+    <!-- PHOTO UPLOAD (OCR) -->
+    <div id="input-photo" style="display:none">
+      <div class="upload-zone" id="photoZone" onclick="document.getElementById('photoInput').click()">
+        <div class="upload-icon">📸</div>
+        <p>Tap to take photo or select image<br>사진 촬영 또는 이미지 선택</p>
+        <div class="file-name" id="photoFileName"></div>
+      </div>
+      <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none" onchange="handlePhotoUpload(this)">
     </div>
 
     <!-- TEXT PASTE -->
@@ -625,6 +636,7 @@ function setInputMethod(method) {
   document.getElementById('input-paste').style.display = method === 'paste' ? 'block' : 'none';
   document.getElementById('input-file').style.display = method === 'file' ? 'block' : 'none';
   document.getElementById('input-pdf').style.display = method === 'pdf' ? 'block' : 'none';
+  document.getElementById('input-photo').style.display = method === 'photo' ? 'block' : 'none';
   checkCompareReady();
 }
 
@@ -1093,6 +1105,51 @@ showPage = function(pageId) {
   if (pageId === 'page-crossvendor') renderCrossVendor();
 };
 
+// ===== PHOTO UPLOAD OCR (inside Upload page) =====
+function handlePhotoUpload(input) {
+  if (!input.files || !input.files[0]) return;
+  const file = input.files[0];
+  document.getElementById('photoFileName').textContent = file.name;
+  showLoading('Scanning image with OCR...');
+
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js';
+  script.onload = function() {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      Tesseract.recognize(e.target.result, 'eng', {
+        logger: m => {
+          if (m.status === 'recognizing text') {
+            const pct = Math.round(m.progress * 100);
+            document.getElementById('loadingText').textContent = 'OCR: ' + pct + '%';
+          }
+        }
+      }).then(({ data: { text } }) => {
+        hideLoading();
+        pendingText = text;
+        // Also put in paste area so user can see/edit
+        document.getElementById('pasteArea').value = text;
+        inputMethod = 'paste';
+        setInputMethod('paste');
+        document.querySelectorAll('#inputMethodTabs .tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('#inputMethodTabs .tab')[0].classList.add('active');
+        checkCompareReady();
+        showToast('OCR complete! Review text then click Compare.', 'success');
+      }).catch(err => {
+        hideLoading();
+        showToast('OCR failed: ' + err.message, 'error');
+      });
+    };
+    reader.readAsDataURL(file);
+  };
+  if (!window.Tesseract) {
+    document.head.appendChild(script);
+  } else {
+    script.onload();
+  }
+  input.value = '';
+}
+
 // ===== SCAN PHYSICAL INVOICE (CAMERA) =====
 function openScanInvoice() {
   document.getElementById('cameraInput').click();
@@ -1129,13 +1186,21 @@ function handleCameraCapture(input) {
 
         // Pre-fill the upload page with extracted text
         showPage('page-upload');
-        // Set paste area text and enable compare button
-        const pa = document.getElementById('pasteArea');
-        if (pa) pa.value = text;
-        inputMethod = 'paste';
-        pendingText = text;
-        checkCompareReady();
-        showToast('Invoice scanned! Review the text and click Compare.', 'success');
+        // Wait for DOM then set text and enable compare
+        setTimeout(function() {
+          const pa = document.getElementById('pasteArea');
+          if (pa) pa.value = text;
+          inputMethod = 'paste';
+          pendingText = text;
+          document.querySelectorAll('#inputMethodTabs .tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('#inputMethodTabs .tab')[0].classList.add('active');
+          document.getElementById('input-paste').style.display = 'block';
+          document.getElementById('input-file').style.display = 'none';
+          document.getElementById('input-pdf').style.display = 'none';
+          document.getElementById('input-photo').style.display = 'none';
+          checkCompareReady();
+          showToast('Invoice scanned! Review the text and click Compare.', 'success');
+        }, 300);
       }).catch(err => {
         const ld = document.getElementById('scanLoading');
         if (ld) ld.remove();
