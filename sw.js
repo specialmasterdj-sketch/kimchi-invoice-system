@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kimchi-invoice-v18';
+const CACHE_NAME = 'kimchi-invoice-v19';
 const ASSETS = [
   './',
   './index.html',
