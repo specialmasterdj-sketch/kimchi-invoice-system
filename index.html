@@ -1252,7 +1252,8 @@ async function handlePdfFile(file) {
 }
 
 function checkCompareReady() {
-  const hasBranch = document.getElementById('uploadBranch').value !== '';
+  const branchId = document.getElementById('uploadBranch').value;
+  const hasBranch = branchId !== '';
   const vendorSel = document.getElementById('uploadVendor').value;
   const customVendor = (document.getElementById('customVendorInput')?.value || '').trim();
   const hasVendor = vendorSel === '__new__' ? customVendor.length > 0 : vendorSel !== '';
@@ -1263,6 +1264,47 @@ function checkCompareReady() {
     hasData = pendingText.length > 20;
   }
   document.getElementById('compareBtn').disabled = !(hasBranch && hasVendor && hasData);
+
+  // Update comparison banner for custom vendor input
+  if (vendorSel === '__new__' && customVendor.length > 0 && hasBranch) {
+    const banner = document.getElementById('uploadComparisonBanner');
+    const normalized = normalizeVendor(customVendor);
+    const existing = SEED_DATA.invoices.filter(i => i.branchId === branchId && i.vendor === normalized && i.items.length > 0);
+    if (existing.length > 0) {
+      const latest = existing.sort((a,b) => b.date.localeCompare(a.date))[0];
+      const ld = latest.date.split('-');
+      const ldStr = ld[1]+'/'+ld[2]+'/'+ld[0].slice(2);
+      banner.innerHTML = `
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="font-size:2rem;">📊</div>
+          <div>
+            <div style="font-weight:700;font-size:1rem;color:#2E7D32;">비교 모드 / Comparison Mode</div>
+            <div style="font-size:0.85rem;color:#333;margin-top:2px;">
+              "${normalized}" 기존 <strong>${existing.length}개</strong> 인보이스와 가격 비교됩니다<br>
+              <span style="color:#666;">Your new invoice will be compared against ${existing.length} existing invoice${existing.length > 1 ? 's' : ''} (latest: ${ldStr})</span>
+            </div>
+          </div>
+        </div>`;
+      banner.style.background = 'linear-gradient(135deg,#E8F5E9,#C8E6C9)';
+      banner.style.borderColor = '#4CAF50';
+      banner.style.display = 'block';
+    } else {
+      banner.innerHTML = `
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="font-size:2rem;">🆕</div>
+          <div>
+            <div style="font-weight:700;font-size:1rem;color:#E65100;">첫 인보이스 / First Invoice</div>
+            <div style="font-size:0.85rem;color:#333;margin-top:2px;">
+              "${normalized}" 이 인보이스가 기준이 됩니다. 다음 업로드부터 가격 비교가 시작됩니다.<br>
+              <span style="color:#666;">This will be the baseline. Price comparison starts from your next upload.</span>
+            </div>
+          </div>
+        </div>`;
+      banner.style.background = 'linear-gradient(135deg,#FFF3E0,#FFE0B2)';
+      banner.style.borderColor = '#FF9800';
+      banner.style.display = 'block';
+    }
+  }
 }
 
 // Listen for paste area changes
