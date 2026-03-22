@@ -552,8 +552,6 @@ function openBranch(branchId) {
         </div>
       </div>`;
     }
-    content += '</div></div>';
-
     // Price trends PER VENDOR - only compare same vendor's items
     const itemPriceMap = {};
     for (const inv of vInvoices) {
@@ -583,8 +581,7 @@ function openBranch(branchId) {
       .sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
 
     if (changedItems.length > 0) {
-      content += `<div class="card" style="border-left: 4px solid ${vColor};">`;
-      content += `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes</div>`;
+      content += `<div style="margin-top:8px;"><div class="card-title" style="color:${vColor}">${vendorName} - Price Changes</div>`;
       content += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
       for (const item of changedItems.slice(0, 30)) {
         const cls = item.diff > 0 ? 'price-up' : 'price-down';
@@ -593,6 +590,8 @@ function openBranch(branchId) {
       }
       content += '</table></div></div>';
     }
+
+    content += '</div></div>';
   }
 
   if (Object.keys(vendorGroups).length === 0) {
