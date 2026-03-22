@@ -576,17 +576,22 @@ function openBranch(branchId) {
 
     content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
-    // Comparison range selector
-    const vWithItems = vInvoices.filter(i => i.itemCount > 0);
-    if (vWithItems.length >= 2) {
+    // Comparison range selector - use date groups (merges split invoices on same date)
+    const dateGroups = getVendorDateGroups(branchId, vendorId);
+    if (dateGroups.length >= 2) {
       const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-      const fmtOpt = inv => `${inv.invoiceNumber} (${fmtD(inv.date)}) - $${inv.total.toLocaleString()}`;
-      // Find default old invoice: first with a different date than newest
+      const fmtOpt = g => {
+        const label = g.invoiceNumbers.length > 1
+          ? `${fmtD(g.date)} (${g.invoiceNumbers.length} invoices combined)`
+          : `${g.invoiceNumbers[0]} (${fmtD(g.date)})`;
+        return `${label} - ${g.itemCount} items - $${g.total.toLocaleString()}`;
+      };
+      // Default old: first group with a different date than newest
       let defaultOldIdx = 1;
-      for (let i = 1; i < vWithItems.length; i++) {
-        if (vWithItems[i].date !== vWithItems[0].date) { defaultOldIdx = i; break; }
+      for (let i = 1; i < dateGroups.length; i++) {
+        if (dateGroups[i].date !== dateGroups[0].date) { defaultOldIdx = i; break; }
       }
-      let opts = vWithItems.map((inv, idx) => `<option value="${idx}">${fmtOpt(inv)}</option>`).join('');
+      let opts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
       content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
       content += `<label>New Invoice</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts}</select>`;
       content += `<label>Old Invoice</label><select id="compOld_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts.replace(`value="${defaultOldIdx}"`, `value="${defaultOldIdx}" selected`)}</select>`;
@@ -624,11 +629,11 @@ function openBranch(branchId) {
 
   document.getElementById('branchContent').innerHTML = content;
 
-  // Trigger initial comparison render for each vendor that has >= 2 invoices
+  // Trigger initial comparison render for each vendor that has >= 2 date groups
   for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
     const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
-    const vWithItems = vInvoices.filter(i => i.itemCount > 0);
-    if (vWithItems.length >= 2) {
+    const dGroups = getVendorDateGroups(branchId, vendorId);
+    if (dGroups.length >= 2) {
       updateComparison(branchId, vendorId);
     }
   }
@@ -636,7 +641,57 @@ function openBranch(branchId) {
   showPage('page-branch');
 }
 
+// ===== ITEM MATCH KEY =====
+// Returns a stable key for matching items across invoices.
+// Uses itemNo when available; falls back to normalized description.
+function getMatchKey(item) {
+  if (item.itemNo && item.itemNo.trim() !== '') return 'NUM:' + item.itemNo.trim();
+  // Fallback: normalize description for fuzzy matching
+  const desc = (item.description || item.name || '').trim().toUpperCase().replace(/\s+/g, ' ');
+  if (desc) return 'DESC:' + desc;
+  return '';
+}
+
 // ===== COMPARISON RANGE SELECTOR =====
+// Groups invoices by date and merges items from same-date invoices.
+// This handles vendors that split orders into multiple invoices per delivery.
+function getVendorDateGroups(branchId, vendorId) {
+  const invoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
+  const vendorGroups = {};
+  for (const inv of invoices) {
+    const v = inv.vendor || 'Other';
+    if (!vendorGroups[v]) vendorGroups[v] = [];
+    vendorGroups[v].push(inv);
+  }
+  for (const [vName, vInvs] of Object.entries(vendorGroups)) {
+    const vId = vName.replace(/[^a-zA-Z0-9]/g, '_');
+    if (vId === vendorId) {
+      // Group by date and merge items
+      const dateMap = {};
+      for (const inv of vInvs) {
+        if (inv.itemCount === 0) continue;
+        if (!dateMap[inv.date]) {
+          dateMap[inv.date] = {
+            date: inv.date,
+            invoiceNumbers: [],
+            items: [],
+            total: 0,
+            itemCount: 0
+          };
+        }
+        dateMap[inv.date].invoiceNumbers.push(inv.invoiceNumber);
+        dateMap[inv.date].items.push(...inv.items);
+        dateMap[inv.date].total += inv.total;
+        dateMap[inv.date].itemCount += inv.itemCount;
+      }
+      const groups = Object.values(dateMap);
+      groups.sort((a, b) => b.date.localeCompare(a.date));
+      return groups;
+    }
+  }
+  return [];
+}
+
 function getVendorInvoicesWithItems(branchId, vendorId) {
   const invoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
   const vendorGroups = {};
@@ -661,33 +716,33 @@ function setCompPeriod(branchId, vendorId, period, btnEl) {
   parent.querySelectorAll('.comp-period-btn').forEach(b => b.classList.remove('active'));
   btnEl.classList.add('active');
 
-  const vWithItems = getVendorInvoicesWithItems(branchId, vendorId);
-  if (vWithItems.length < 2) return;
+  const dateGroups = getVendorDateGroups(branchId, vendorId);
+  if (dateGroups.length < 2) return;
 
   const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
   const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
 
   if (period === 'all') {
-    // Reset: newest vs first invoice with a different date
+    // Reset: newest vs first group with a different date
     newSel.selectedIndex = 0;
     let defOld = 1;
-    for (let i = 1; i < vWithItems.length; i++) {
-      if (vWithItems[i].date !== vWithItems[0].date) { defOld = i; break; }
+    for (let i = 1; i < dateGroups.length; i++) {
+      if (dateGroups[i].date !== dateGroups[0].date) { defOld = i; break; }
     }
     oldSel.selectedIndex = defOld;
   } else {
     // Calculate cutoff date
-    const now = new Date(vWithItems[0].date);
+    const now = new Date(dateGroups[0].date);
     let cutoff;
     if (period === '3m') cutoff = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
     else if (period === '6m') cutoff = new Date(now.getFullYear(), now.getMonth() - 6, now.getDate());
     else if (period === '1y') cutoff = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
     const cutoffStr = cutoff.toISOString().slice(0, 10);
 
-    // Find oldest invoice within range
+    // Find oldest group within range
     let oldIdx = 1;
-    for (let i = 1; i < vWithItems.length; i++) {
-      if (vWithItems[i].date >= cutoffStr) oldIdx = i;
+    for (let i = 1; i < dateGroups.length; i++) {
+      if (dateGroups[i].date >= cutoffStr) oldIdx = i;
       else break;
     }
     newSel.selectedIndex = 0;
@@ -698,8 +753,8 @@ function setCompPeriod(branchId, vendorId, period, btnEl) {
 }
 
 function updateComparison(branchId, vendorId) {
-  const vWithItems = getVendorInvoicesWithItems(branchId, vendorId);
-  if (vWithItems.length < 2) return;
+  const dateGroups = getVendorDateGroups(branchId, vendorId);
+  if (dateGroups.length < 2) return;
 
   const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
   const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
@@ -709,47 +764,57 @@ function updateComparison(branchId, vendorId) {
 
   const newIdx = parseInt(newSel.value);
   const oldIdx = parseInt(oldSel.value);
-  const newInv = vWithItems[newIdx];
-  const oldInv = vWithItems[oldIdx];
+  const newGroup = dateGroups[newIdx];
+  const oldGroup = dateGroups[oldIdx];
 
-  if (!newInv || !oldInv || newIdx === oldIdx) {
+  if (!newGroup || !oldGroup || newIdx === oldIdx) {
     tableDiv.innerHTML = '';
-    if (infoDiv) infoDiv.textContent = 'Select two different invoices to compare.';
+    if (infoDiv) infoDiv.textContent = 'Select two different dates to compare.';
     return;
   }
 
   const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-  if (infoDiv) infoDiv.innerHTML = `Comparing: ${newInv.invoiceNumber} (${fmtD(newInv.date)}) vs ${oldInv.invoiceNumber} (${fmtD(oldInv.date)})`;
+  const newLabel = newGroup.invoiceNumbers.length > 1
+    ? `${fmtD(newGroup.date)} (${newGroup.invoiceNumbers.length} invoices, ${newGroup.itemCount} items)`
+    : `${newGroup.invoiceNumbers[0]} (${fmtD(newGroup.date)})`;
+  const oldLabel = oldGroup.invoiceNumbers.length > 1
+    ? `${fmtD(oldGroup.date)} (${oldGroup.invoiceNumbers.length} invoices, ${oldGroup.itemCount} items)`
+    : `${oldGroup.invoiceNumbers[0]} (${fmtD(oldGroup.date)})`;
+  if (infoDiv) infoDiv.innerHTML = `Comparing: ${newLabel} vs ${oldLabel}`;
 
-  // Build price map from old invoice
+  // Build price map from old date group using getMatchKey
   const oldPrices = {};
-  for (const rawItem of oldInv.items) {
+  for (const rawItem of oldGroup.items) {
     const item = normalizeItem(rawItem);
-    if (item.unitPrice <= 2) continue;
-    if (!oldPrices[item.itemNo] || item.unitPrice > oldPrices[item.itemNo]) {
-      oldPrices[item.itemNo] = item.unitPrice;
+    if (item.unitPrice <= 0) continue;
+    const key = getMatchKey(item);
+    if (!key) continue;
+    if (!oldPrices[key] || item.unitPrice > oldPrices[key]) {
+      oldPrices[key] = item.unitPrice;
     }
   }
 
-  // Build price map from new invoice and compare
+  // Build price map from new date group and compare
   const newPrices = {};
-  for (const rawItem of newInv.items) {
+  for (const rawItem of newGroup.items) {
     const item = normalizeItem(rawItem);
-    if (item.unitPrice <= 2) continue;
-    if (!newPrices[item.itemNo] || item.unitPrice > newPrices[item.itemNo].unitPrice) {
-      newPrices[item.itemNo] = item;
+    if (item.unitPrice <= 0) continue;
+    const key = getMatchKey(item);
+    if (!key) continue;
+    if (!newPrices[key] || item.unitPrice > newPrices[key].unitPrice) {
+      newPrices[key] = item;
     }
   }
 
   const changedItems = [];
-  for (const [itemNo, item] of Object.entries(newPrices)) {
-    if (oldPrices[itemNo] !== undefined) {
-      const oldP = oldPrices[itemNo];
+  for (const [key, item] of Object.entries(newPrices)) {
+    if (oldPrices[key] !== undefined) {
+      const oldP = oldPrices[key];
       const newP = item.unitPrice;
       const diff = newP - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
       if (Math.abs(pct) > 1) {
-        changedItems.push({ itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct });
+        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct });
       }
     }
   }
@@ -764,7 +829,8 @@ function updateComparison(branchId, vendorId) {
     for (const item of changedItems.slice(0, 30)) {
       const cls = item.diff > 0 ? 'price-up' : 'price-down';
       const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
-      html += `<tr class="${cls}"><td class="item-desc">${item.itemNo} ${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
+      const itemLabel = item.itemNo ? `${item.itemNo} ${item.brand} ${item.desc}` : `${item.brand} ${item.desc}`;
+      html += `<tr class="${cls}"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
     }
     html += '</table></div>';
     tableDiv.innerHTML = html;
@@ -773,7 +839,7 @@ function updateComparison(branchId, vendorId) {
     const totalNew = Object.keys(newPrices).length;
     const totalOld = Object.keys(oldPrices).length;
     tableDiv.innerHTML = `<div style="text-align:center;padding:12px;color:#666;font-size:12px;">
-      ✅ No price changes detected<br>
+      No price changes detected<br>
       <span style="font-size:11px;color:#999;">${overlapCount} matching items compared (New: ${totalNew} items / Old: ${totalOld} items)</span>
     </div>`;
   }
@@ -1007,21 +1073,23 @@ function runComparison() {
         i.branchId === newInvoice.branchId && i.vendor === newInvoice.vendor && i.items.length > 0
       ).sort((a, b) => b.date.localeCompare(a.date));
 
-      // Build price history map: itemNo -> [{date, price, invoice}]
-      // Skip promo/credit lines ($2 or less), deduplicate same item per invoice (keep highest)
+      // Build price history map: matchKey -> [{date, price, invoice}]
+      // Skip zero-price lines, deduplicate same item per invoice (keep highest)
       const priceHistory = {};
       for (const inv of historicalInvoices) {
         const bestPrices = {};
         for (const rawItem of inv.items) {
           const item = normalizeItem(rawItem);
-          if (item.unitPrice <= 2) continue; // Skip promo/credit lines
-          if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
-            bestPrices[item.itemNo] = item;
+          if (item.unitPrice <= 0) continue;
+          const key = getMatchKey(item);
+          if (!key) continue;
+          if (!bestPrices[key] || item.unitPrice > bestPrices[key].unitPrice) {
+            bestPrices[key] = item;
           }
         }
-        for (const [itemNo, item] of Object.entries(bestPrices)) {
-          if (!priceHistory[itemNo]) priceHistory[itemNo] = [];
-          priceHistory[itemNo].push({
+        for (const [key, item] of Object.entries(bestPrices)) {
+          if (!priceHistory[key]) priceHistory[key] = [];
+          priceHistory[key].push({
             date: inv.date, price: item.unitPrice, invoice: inv.invoiceNumber
           });
         }
@@ -1033,7 +1101,7 @@ function runComparison() {
       const results = [];
       for (const rawItem of newInvoice.items) {
         const item = normalizeItem(rawItem);
-        const history = priceHistory[item.itemNo];
+        const history = priceHistory[getMatchKey(item)];
         let status, oldPrice, diff, pct, lastInvoice, lastDate;
 
         if (!history || history.length === 0) {

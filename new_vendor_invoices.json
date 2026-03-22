@@ -1,0 +1,7371 @@
+[
+ {
+  "invoiceNumber": "WIS-15448081",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 132.0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448115",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "04308",
+    "brand": "WISMETTAC",
+    "description": "CAN IWASHI/SARDINE AJITSUKE NISSUI",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "07031",
+    "brand": "WISMETTAC",
+    "description": "CAN BEANCURD INARIZUSHI NO MOTO 14P SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 91.2,
+    "eachPrice": 91.2,
+    "totalPrice": 91.2
+   },
+   {
+    "itemNo": "08801",
+    "brand": "WISMETTAC",
+    "description": "CAN BEAN PASTE OGURA AN 15.16OZ MORINAGA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 78.0,
+    "eachPrice": 78.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "162580",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN MANGO-ORANGE DRINK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "16466",
+    "brand": "WISMETTAC",
+    "description": "SAUCE TERIYAKI 18OZ SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "eachPrice": 41.4,
+    "totalPrice": 41.4
+   },
+   {
+    "itemNo": "16467",
+    "brand": "WISMETTAC",
+    "description": "SAUCE OYSTER 18OZ SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "eachPrice": 41.4,
+    "totalPrice": 41.4
+   },
+   {
+    "itemNo": "16468",
+    "brand": "WISMETTAC",
+    "description": "SAUCE TONKATSU 18OZ SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "eachPrice": 41.4,
+    "totalPrice": 41.4
+   },
+   {
+    "itemNo": "16470",
+    "brand": "WISMETTAC",
+    "description": "SUSHI SAUCE EEL 18OZ SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "eachPrice": 41.4,
+    "totalPrice": 41.4
+   },
+   {
+    "itemNo": "166695",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN PASS-O-GUAVA NECTAR",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "167600",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN ORANGE PASSION",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "167646",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN STRAWBERRY-GUAVA NECTAR",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "167655",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN LILIKOI STRAWBERRY",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "17015",
+    "brand": "WISMETTAC",
+    "description": "TONKATSU SAUCE 500ML BULLDOG",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 80.0,
+    "eachPrice": 80.0,
+    "totalPrice": 80.0
+   },
+   {
+    "itemNo": "18396",
+    "brand": "WISMETTAC",
+    "description": "SOY SAUCE YAMASA LESS SALT 33.8FLOZ",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 35.4,
+    "eachPrice": 35.4,
+    "totalPrice": 70.8
+   },
+   {
+    "itemNo": "19881",
+    "brand": "WISMETTAC",
+    "description": "SAUCE SUKIYAKI SENKA 17FLOZ YAMASA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 114.0,
+    "eachPrice": 114.0,
+    "totalPrice": 114.0
+   },
+   {
+    "itemNo": "20033",
+    "brand": "WISMETTAC",
+    "description": "MAYONNAISE 12OZ QP",
+    "size": "CS",
+    "qty": 4,
+    "unitPrice": 23.4,
+    "eachPrice": 23.4,
+    "totalPrice": 93.6
+   },
+   {
+    "itemNo": "20510A",
+    "brand": "WISMETTAC",
+    "description": "DRESSING DEEP ROASTED SESAME QP",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.4,
+    "eachPrice": 20.4,
+    "totalPrice": 40.8
+   },
+   {
+    "itemNo": "21315A",
+    "brand": "WISMETTAC",
+    "description": "MAYONNAISE 15.72FLOZ QP NEW",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 83.0,
+    "eachPrice": 83.0,
+    "totalPrice": 830.0
+   },
+   {
+    "itemNo": "23141",
+    "brand": "WISMETTAC",
+    "description": "VINEGAR RICE ORGANIC MARUKAN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "23235",
+    "brand": "WISMETTAC",
+    "description": "VINEGAR RICE GENUINE BREWED 12OZ MARUKAN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.6,
+    "eachPrice": 24.6,
+    "totalPrice": 24.6
+   },
+   {
+    "itemNo": "23236",
+    "brand": "WISMETTAC",
+    "description": "VINEGAR RICE GENUINE BREWED 24OZ MARUKAN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "25041",
+    "brand": "WISMETTAC",
+    "description": "OIL RAYU CHILI OIL 1.1OZ #2030 S&B",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "25084A",
+    "brand": "WISMETTAC",
+    "description": "OIL RAYU W/CRUNCHY GARLIC #18724 S&B NEW",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "25555",
+    "brand": "WISMETTAC",
+    "description": "MISO SK WHITE CUP 1.65 LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 25.5,
+    "eachPrice": 25.5,
+    "totalPrice": 25.5
+   }
+  ],
+  "itemCount": 24,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448115",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "27912A",
+    "brand": "WISMETTAC",
+    "description": "MISO SK WHITE BAG 2.2LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "31068",
+    "brand": "WISMETTAC",
+    "description": "WASABI NAMA SUSHI WASABI 1.52OZ#2003 S&B",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 2.5,
+    "eachPrice": 2.5,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "32055",
+    "brand": "WISMETTAC",
+    "description": "MUSTARD POWDER 3OZ 6003 S&B",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 3.05,
+    "eachPrice": 3.05,
+    "totalPrice": 36.6
+   },
+   {
+    "itemNo": "32062",
+    "brand": "WISMETTAC",
+    "description": "WASABI NERI WASABI TUBE 1.52OZ #2002 S&B",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 1.85,
+    "eachPrice": 1.85,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "32083",
+    "brand": "WISMETTAC",
+    "description": "WASABI SAUCE #201 S&B",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 3.25,
+    "eachPrice": 3.25,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "32115",
+    "brand": "WISMETTAC",
+    "description": "PASTE YUZU SPICY CITRUS 43G S&B",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 1.85,
+    "eachPrice": 1.85,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "32200",
+    "brand": "WISMETTAC",
+    "description": "OIL RAYU CRUNCHY GARLIC SPICY #18725 S&B",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 8.0,
+    "eachPrice": 8.0,
+    "totalPrice": 96.0
+   },
+   {
+    "itemNo": "35259",
+    "brand": "WISMETTAC",
+    "description": "RICE COOKED WHITE MUKIN GOHAN SK",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 15.6,
+    "eachPrice": 15.6,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "37811",
+    "brand": "WISMETTAC",
+    "description": "SAUCE KIMCHEE NO MOTO PET 1.2KG MOMOYA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 172.5,
+    "eachPrice": 172.5,
+    "totalPrice": 172.5
+   },
+   {
+    "itemNo": "38002",
+    "brand": "WISMETTAC",
+    "description": "FURIKAKE NORI KOUMI JP 55G",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 3.5,
+    "eachPrice": 3.5,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "38004",
+    "brand": "WISMETTAC",
+    "description": "FURIKAKE AJINORI 55G JPN",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 3.5,
+    "eachPrice": 3.5,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "38173",
+    "brand": "WISMETTAC",
+    "description": "FURIKAKE WASABI 70G TAKAOKAYA",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 3.5,
+    "eachPrice": 3.5,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "39636",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST GOKUUMA CUP YAKISOBA SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.8,
+    "eachPrice": 28.8,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "39980",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST CUP UDON AKAI KITSUNE REG",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 25.8,
+    "eachPrice": 25.8,
+    "totalPrice": 25.8
+   },
+   {
+    "itemNo": "39981",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST CUP SOBA MIDORI NO TANUKI R.",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 25.8,
+    "eachPrice": 25.8,
+    "totalPrice": 25.8
+   },
+   {
+    "itemNo": "40040",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST 5P SAPPORO ICHIBAN MISO",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "40041",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST 5P SAPPORO ICHIBAN SHIO",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "40088",
+    "brand": "WISMETTAC",
+    "description": "NOODLE INST 5P SAPPORO ICH CHICKEN",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 64.8
+   },
+   {
+    "itemNo": "45030",
+    "brand": "WISMETTAC",
+    "description": "NOODLE FRZ UDON SANUKIYA 5PC SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 64.0
+   },
+   {
+    "itemNo": "49039",
+    "brand": "WISMETTAC",
+    "description": "SEAWEED SALAD N SP 4.4LB CHN SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 70.0,
+    "eachPrice": 70.0,
+    "totalPrice": 140.0
+   },
+   {
+    "itemNo": "58500",
+    "brand": "WISMETTAC",
+    "description": "SESAME SEED BTL BLACK 8.5OZ SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "61185",
+    "brand": "WISMETTAC",
+    "description": "TEA LEAF RYOKUCHA 150G ITOEN 297",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 78.0,
+    "eachPrice": 78.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "61326",
+    "brand": "WISMETTAC",
+    "description": "TEA KIN NO OOLONG 2LT ITOEN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "62513",
+    "brand": "WISMETTAC",
+    "description": "RICE COOKED MUKIN GOHAN 3PC SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "63373",
+    "brand": "WISMETTAC",
+    "description": "HI-CHEW BAG SODA POP RAMUNE&COLA #45690",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 12.0,
+    "eachPrice": 12.0,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "64031",
+    "brand": "WISMETTAC",
+    "description": "MARSHMALLOW HELLO KITTY MANGO EIWA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.4,
+    "eachPrice": 26.4,
+    "totalPrice": 26.4
+   },
+   {
+    "itemNo": "64033",
+    "brand": "WISMETTAC",
+    "description": "MARSHMALLOW HELLO KITTY STRAWBERRY EIWA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.4,
+    "eachPrice": 26.4,
+    "totalPrice": 26.4
+   }
+  ],
+  "itemCount": 27,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448115",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "64386A",
+    "brand": "WISMETTAC",
+    "description": "CHOCOLATE MILK MEIJI",
+    "size": "CS",
+    "qty": 6,
+    "unitPrice": 3.2,
+    "eachPrice": 3.2,
+    "totalPrice": 19.2
+   },
+   {
+    "itemNo": "66301A",
+    "brand": "WISMETTAC",
+    "description": "HI CHEW STRAWBERRY (ENG) #10150 NEW",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 0.95,
+    "eachPrice": 0.95,
+    "totalPrice": 28.5
+   },
+   {
+    "itemNo": "66302A",
+    "brand": "WISMETTAC",
+    "description": "HI CHEW GREEN APPLE (ENG) #10160 NEW",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 0.95,
+    "eachPrice": 0.95,
+    "totalPrice": 28.5
+   },
+   {
+    "itemNo": "66380A",
+    "brand": "WISMETTAC",
+    "description": "HI CHEW MANGO (ENG) #10170 MORINAGA NEW",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 0.95,
+    "eachPrice": 0.95,
+    "totalPrice": 28.5
+   },
+   {
+    "itemNo": "67892",
+    "brand": "WISMETTAC",
+    "description": "POCKY STRAWBERRY FAMILY PACK GLICO",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 52.0,
+    "eachPrice": 52.0,
+    "totalPrice": 52.0
+   },
+   {
+    "itemNo": "69283",
+    "brand": "WISMETTAC",
+    "description": "SWEETS CASTELLA ORIGINAL 7PC IMURAYA F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "69341A",
+    "brand": "WISMETTAC",
+    "description": "CHOCOLATE BLACK CHOCOLATE MEIJI",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 11.0
+   },
+   {
+    "itemNo": "69920A",
+    "brand": "WISMETTAC",
+    "description": "CHOCOLATE MACADEMIA MEIJI",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "70914",
+    "brand": "WISMETTAC",
+    "description": "POCKY CHOCOLATE (ENG) GLICO",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 1.65,
+    "eachPrice": 1.65,
+    "totalPrice": 33.0
+   },
+   {
+    "itemNo": "71321",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM STRAWBERRY SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "71322",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM BLACK SESAME SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "71323",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM MANGO SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "71324",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM MATCHA SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "71481",
+    "brand": "WISMETTAC",
+    "description": "SWEETS DAIFUKU RICE CAKE RED SK 1P F",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 1.25,
+    "eachPrice": 1.25,
+    "totalPrice": 12.5
+   },
+   {
+    "itemNo": "71482",
+    "brand": "WISMETTAC",
+    "description": "SWEETS DAIFUKU RICE CAKE GREEN SK 1P F",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 1.25,
+    "eachPrice": 1.25,
+    "totalPrice": 12.5
+   },
+   {
+    "itemNo": "74043",
+    "brand": "WISMETTAC",
+    "description": "POCKY COOKIES & CREAM GLICO",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 1.65,
+    "eachPrice": 1.65,
+    "totalPrice": 33.0
+   },
+   {
+    "itemNo": "74179",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE MILK COFFEE 300ML POKKA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.4,
+    "eachPrice": 26.4,
+    "totalPrice": 26.4
+   },
+   {
+    "itemNo": "74186",
+    "brand": "WISMETTAC",
+    "description": "TEA GREEN TEA 300ML POKKA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "76200A",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE O-I OCHA MATCHA GNTEA ITOEN NEW",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 30.6,
+    "eachPrice": 30.6,
+    "totalPrice": 30.6
+   },
+   {
+    "itemNo": "76650",
+    "brand": "WISMETTAC",
+    "description": "TEA KOI AJI 2LT ITOEN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "77067",
+    "brand": "WISMETTAC",
+    "description": "HI-CHEW STICK BLUE RASPBERRY 1.76OZ",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 0.95,
+    "eachPrice": 0.95,
+    "totalPrice": 28.5
+   },
+   {
+    "itemNo": "77069",
+    "brand": "WISMETTAC",
+    "description": "SNACK BABY STAR TINY TONKOTSU 2.46OZ",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "77072",
+    "brand": "WISMETTAC",
+    "description": "SNACK BABY STAR TINY GARLIC 2.46OZ",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "77073",
+    "brand": "WISMETTAC",
+    "description": "SNACK BABY STAR TINY ORIGINAL SOY 2.46OZ",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "77114",
+    "brand": "WISMETTAC",
+    "description": "SWEETS CASTELLA MATCHA 2PC IMURAYA F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "eachPrice": 21.0,
+    "totalPrice": 21.0
+   },
+   {
+    "itemNo": "77179",
+    "brand": "WISMETTAC",
+    "description": "HAWAIIAN SUN LILIKOI LYCHEE",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "77273",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM VANILLA SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "77274",
+    "brand": "WISMETTAC",
+    "description": "MOCHI ICE CREAM CHOCOLATE SK F",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 20.0,
+    "eachPrice": 20.0,
+    "totalPrice": 40.0
+   }
+  ],
+  "itemCount": 28,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448115",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "77285",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE CALPICO MANGO 1.5LT",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "77287",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE CALPICO STRAWBERRY 1.5LT",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "77316",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE CALPICO PET LYCHEE 500ML",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 48.0,
+    "eachPrice": 48.0,
+    "totalPrice": 48.0
+   },
+   {
+    "itemNo": "77367",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE O-I OCHA CAN 10.65FLOZ ITOEN",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.6,
+    "eachPrice": 15.6,
+    "totalPrice": 15.6
+   },
+   {
+    "itemNo": "78021",
+    "brand": "WISMETTAC",
+    "description": "POCKY ALMOND CRUSH 2P GLICO",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 1.65,
+    "eachPrice": 1.65,
+    "totalPrice": 49.5
+   },
+   {
+    "itemNo": "78100",
+    "brand": "WISMETTAC",
+    "description": "BEVERAGE CALPICO MELON 1.5LT",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "78239",
+    "brand": "WISMETTAC",
+    "description": "COOKIES BUTTER NO BRAND",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.8,
+    "eachPrice": 28.8,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "78389",
+    "brand": "WISMETTAC",
+    "description": "POCKY COOKIE & CREAM F-PACK 5.4OZ GLICO",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 52.0,
+    "eachPrice": 52.0,
+    "totalPrice": 52.0
+   },
+   {
+    "itemNo": "78682",
+    "brand": "WISMETTAC",
+    "description": "SWEETS VANILLA ROLL CAKE MILK 5P ENG F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "78683",
+    "brand": "WISMETTAC",
+    "description": "SWEETS DOUBLE CHOCO ROLL CAKE 5P ENG F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "78684",
+    "brand": "WISMETTAC",
+    "description": "SWEETS STRAWBERRY ROLL CAKE 5P ENG F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "78685",
+    "brand": "WISMETTAC",
+    "description": "SWEETS HOKKAIDO MILK ROLL CAKE 5P ENG F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "78941A",
+    "brand": "WISMETTAC",
+    "description": "CHOCOLATE CHOCOBABY JUMBO MEIJI",
+    "size": "CS",
+    "qty": 6,
+    "unitPrice": 3.1,
+    "eachPrice": 3.1,
+    "totalPrice": 18.6
+   },
+   {
+    "itemNo": "78967",
+    "brand": "WISMETTAC",
+    "description": "COOKIE CHOCOCHIP NO BRAND",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.8,
+    "eachPrice": 28.8,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "79002",
+    "brand": "WISMETTAC",
+    "description": "TOFU EXTRA FIRM 12OZ #01111 HOUSE",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 360.0
+   },
+   {
+    "itemNo": "80412A",
+    "brand": "WISMETTAC",
+    "description": "KONNYAKU SHIMONITA BLACK SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "80417A",
+    "brand": "WISMETTAC",
+    "description": "SHIRATAKI SHIMONITA WHITE TOKUYO SK",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 20.4,
+    "eachPrice": 20.4,
+    "totalPrice": 20.4
+   },
+   {
+    "itemNo": "80441A",
+    "brand": "WISMETTAC",
+    "description": "SHIRATAKI SHIMONITA KOMUSUBI SK",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "85059",
+    "brand": "WISMETTAC",
+    "description": "EEL UNAGI KABAYAKI 10OZ CHN LOCAL F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 240.0,
+    "eachPrice": 240.0,
+    "totalPrice": 240.0
+   },
+   {
+    "itemNo": "85060",
+    "brand": "WISMETTAC",
+    "description": "EEL UNAGI KABAYAKI 11OZ CHN LOCAL F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 240.0,
+    "eachPrice": 240.0,
+    "totalPrice": 240.0
+   },
+   {
+    "itemNo": "85061",
+    "brand": "WISMETTAC",
+    "description": "EEL UNAGI KABAYAKI 12OZ CHN LOCAL F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 230.0,
+    "eachPrice": 230.0,
+    "totalPrice": 230.0
+   },
+   {
+    "itemNo": "85457",
+    "brand": "WISMETTAC",
+    "description": "GYOZA GLUTEN FREE/NO ANIMAL 30P SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 55.0,
+    "eachPrice": 55.0,
+    "totalPrice": 55.0
+   },
+   {
+    "itemNo": "85781",
+    "brand": "WISMETTAC",
+    "description": "SEAWEED SALAD ORIGINAL KOR SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 75.0,
+    "eachPrice": 75.0,
+    "totalPrice": 75.0
+   },
+   {
+    "itemNo": "85809",
+    "brand": "WISMETTAC",
+    "description": "ESCOLAR SAKU TAIWAN SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 230.0,
+    "eachPrice": 230.0,
+    "totalPrice": 230.0
+   },
+   {
+    "itemNo": "91009",
+    "brand": "WISMETTAC",
+    "description": "WRAPPER WONTON WRAP 90MMX0.8MM SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 18.0
+   }
+  ],
+  "itemCount": 25,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448115",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 9078.1,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "91010",
+    "brand": "WISMETTAC",
+    "description": "WRAPPER DUMPLING SKIN 90MMX0.8MM SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "93112",
+    "brand": "WISMETTAC",
+    "description": "GYOZA PORK 21OZ (APPRX 28PC) SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "93114",
+    "brand": "WISMETTAC",
+    "description": "GYOZA CHICKEN 21OZ (APPRX 28PC) F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "93965V",
+    "brand": "WISMETTAC",
+    "description": "NATTO ORGANIC MINI-3 SK (08SEP2026) F",
+    "size": "CS",
+    "qty": 48,
+    "unitPrice": 2.0,
+    "eachPrice": 2.0,
+    "totalPrice": 96.0
+   },
+   {
+    "itemNo": "94063",
+    "brand": "WISMETTAC",
+    "description": "GYOZA NIRA & PORK 21OZ (APPRX 28PC) F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "94091A",
+    "brand": "WISMETTAC",
+    "description": "NATTO GOKU KOTSUBU MINI-3 OKAME F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 25.2,
+    "eachPrice": 25.2,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "94191",
+    "brand": "WISMETTAC",
+    "description": "NATTO SUGOI S903 3PC OKAME F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 21.6,
+    "eachPrice": 21.6,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "94861",
+    "brand": "WISMETTAC",
+    "description": "NATTO KAZOKU KOTSUBU MINI-4 OKAME F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 33.0,
+    "eachPrice": 33.0,
+    "totalPrice": 33.0
+   },
+   {
+    "itemNo": "97082",
+    "brand": "WISMETTAC",
+    "description": "EDAMAME TAIWAN PREMIUM 400G SK F",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 48.0,
+    "eachPrice": 48.0,
+    "totalPrice": 48.0
+   },
+   {
+    "itemNo": "98755",
+    "brand": "WISMETTAC",
+    "description": "IMITATION CRAB KANI KAMA KANI-GORO SK F",
+    "size": "CS",
+    "qty": 6,
+    "unitPrice": 70.0,
+    "eachPrice": 70.0,
+    "totalPrice": 420.0
+   },
+   {
+    "itemNo": "98817",
+    "brand": "WISMETTAC",
+    "description": "FISH CAKE NARUTOMAKI SHIRO 135G SK F",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 60.0
+   }
+  ],
+  "itemCount": 11,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "WIS-15448147",
+  "vendor": "Wismettac",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "KIMCHI MART AT HOLLYWOOD",
+  "total": 756.0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "00100",
+    "brand": "WISMETTAC",
+    "description": "SAKE JUNMAI YAEGAKI 1.5L",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 48.0,
+    "eachPrice": 48.0,
+    "totalPrice": 240.0
+   },
+   {
+    "itemNo": "05452",
+    "brand": "WISMETTAC",
+    "description": "SAKE LYCHEE NIGORI HOMARE 300ML -70",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "06545",
+    "brand": "WISMETTAC",
+    "description": "SAKE STRAWBERRY NIGORI HOMARE 300ML -100",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "07938",
+    "brand": "WISMETTAC",
+    "description": "SAKE JUNMAI DAIGINJO ROGA 750ML",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 180.0,
+    "eachPrice": 180.0,
+    "totalPrice": 360.0
+   }
+  ],
+  "itemCount": 4,
+  "source": "wismettac_pdf"
+ },
+ {
+  "invoiceNumber": "FP-2778329837",
+  "vendor": "FreshPoint",
+  "date": "2026-03-13",
+  "dateDisplay": "03/13/26",
+  "customer": "KIMCHI MART CORAL SPRINGS",
+  "total": 1780.5,
+  "branchId": "coral_springs",
+  "items": [
+   {
+    "itemNo": "123460",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT CHINESE 30 LB",
+    "size": "30 LB",
+    "qty": 2,
+    "unitPrice": 35.9,
+    "eachPrice": 35.9,
+    "totalPrice": 71.8
+   },
+   {
+    "itemNo": "137645",
+    "brand": "FRESHPOINT",
+    "description": "JICAMA 35 LB",
+    "size": "35 LB",
+    "qty": 1,
+    "unitPrice": 26.9,
+    "eachPrice": 26.9,
+    "totalPrice": 26.9
+   },
+   {
+    "itemNo": "180660",
+    "brand": "FRESHPOINT",
+    "description": "MALANGA EDDO",
+    "size": "30 LB",
+    "qty": 1,
+    "unitPrice": 28.9,
+    "eachPrice": 28.9,
+    "totalPrice": 28.9
+   },
+   {
+    "itemNo": "100935",
+    "brand": "FRESHPOINT",
+    "description": "APPLE PINK LADY 9/3 POUCH BAG",
+    "size": "9/3 LB",
+    "qty": 1,
+    "unitPrice": 28.9,
+    "eachPrice": 28.9,
+    "totalPrice": 28.9
+   },
+   {
+    "itemNo": "104680",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED WX FANCY 72 CT",
+    "size": "40 LB",
+    "qty": 1,
+    "unitPrice": 35.9,
+    "eachPrice": 35.9,
+    "totalPrice": 35.9
+   },
+   {
+    "itemNo": "100840",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GALA 12/3 LB",
+    "size": "12/3 LB",
+    "qty": 1,
+    "unitPrice": 26.9,
+    "eachPrice": 26.9,
+    "totalPrice": 26.9
+   },
+   {
+    "itemNo": "106855",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS GREEN 60 CT",
+    "size": "60 CT",
+    "qty": 1,
+    "unitPrice": 36.9,
+    "eachPrice": 36.9,
+    "totalPrice": 36.9
+   },
+   {
+    "itemNo": "107320",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN",
+    "size": "40 LB",
+    "qty": 3,
+    "unitPrice": 20.9,
+    "eachPrice": 20.9,
+    "totalPrice": 62.7
+   },
+   {
+    "itemNo": "110260",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLUEBERRY 12/6 OZ",
+    "size": "12 PK",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "113320",
+    "brand": "FRESHPOINT",
+    "description": "CABBAGE RED",
+    "size": "45 LB",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "116680",
+    "brand": "FRESHPOINT",
+    "description": "CAULIFLOWER 12 CT",
+    "size": "12 CT",
+    "qty": 1,
+    "unitPrice": 35.9,
+    "eachPrice": 35.9,
+    "totalPrice": 35.9
+   },
+   {
+    "itemNo": "117870",
+    "brand": "FRESHPOINT",
+    "description": "CELERY SLEEVED DOLE 30 CT",
+    "size": "30 CT",
+    "qty": 1,
+    "unitPrice": 65.9,
+    "eachPrice": 65.9,
+    "totalPrice": 65.9
+   },
+   {
+    "itemNo": "119165",
+    "brand": "FRESHPOINT",
+    "description": "COCONUT W/STRAW 12 CT",
+    "size": "12 CT",
+    "qty": 1,
+    "unitPrice": 27.9,
+    "eachPrice": 27.9,
+    "totalPrice": 27.9
+   },
+   {
+    "itemNo": "119860",
+    "brand": "FRESHPOINT",
+    "description": "CORN BI-COLOR",
+    "size": "45 CT",
+    "qty": 1,
+    "unitPrice": 74.9,
+    "eachPrice": 74.9,
+    "totalPrice": 74.9
+   },
+   {
+    "itemNo": "905240",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL EUROPEAN CUCUMBER 12 CT",
+    "size": "12 CT",
+    "qty": 10,
+    "unitPrice": 19.9,
+    "eachPrice": 19.9,
+    "totalPrice": 199.0
+   },
+   {
+    "itemNo": "120590",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN RETAIL 20#",
+    "size": "20 LB",
+    "qty": 2,
+    "unitPrice": 40.9,
+    "eachPrice": 40.9,
+    "totalPrice": 81.8
+   },
+   {
+    "itemNo": "121835",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT RED FLESH 7-9 CT",
+    "size": "10 LB",
+    "qty": 2,
+    "unitPrice": 35.5,
+    "eachPrice": 35.5,
+    "totalPrice": 71.0
+   },
+   {
+    "itemNo": "121845",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT WHITE FLESH 7-9 CT",
+    "size": "10 LB",
+    "qty": 2,
+    "unitPrice": 22.9,
+    "eachPrice": 22.9,
+    "totalPrice": 45.8
+   },
+   {
+    "itemNo": "417200",
+    "brand": "FRESHPOINT",
+    "description": "EGG ORGANIC LG BRW CAGE FREE",
+    "size": "15/1 DZ",
+    "qty": 1,
+    "unitPrice": 67.9,
+    "eachPrice": 67.9,
+    "totalPrice": 67.9
+   },
+   {
+    "itemNo": "123340",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT BABY/INDIAN 10 LB",
+    "size": "10 LB",
+    "qty": 1,
+    "unitPrice": 33.0,
+    "eachPrice": 33.0,
+    "totalPrice": 33.0
+   },
+   {
+    "itemNo": "128680",
+    "brand": "FRESHPOINT",
+    "description": "GARLIC JUMBO 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unitPrice": 53.0,
+    "eachPrice": 53.0,
+    "totalPrice": 53.0
+   },
+   {
+    "itemNo": "132283",
+    "brand": "FRESHPOINT",
+    "description": "GUAVA THAI 20 LB",
+    "size": "20 LB",
+    "qty": 1,
+    "unitPrice": 80.9,
+    "eachPrice": 80.9,
+    "totalPrice": 80.9
+   },
+   {
+    "itemNo": "141040",
+    "brand": "FRESHPOINT",
+    "description": "LEMON CHOICE 165 CT",
+    "size": "165 CT",
+    "qty": 1,
+    "unitPrice": 32.9,
+    "eachPrice": 32.9,
+    "totalPrice": 32.9
+   },
+   {
+    "itemNo": "147880",
+    "brand": "FRESHPOINT",
+    "description": "MELON CANTALOUPE 12 CT",
+    "size": "12 CT",
+    "qty": 1,
+    "unitPrice": 10.9,
+    "eachPrice": 10.9,
+    "totalPrice": 10.9
+   },
+   {
+    "itemNo": "148960",
+    "brand": "FRESHPOINT",
+    "description": "MELON HONEYDEW 6 CT",
+    "size": "6 CT",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "161680",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA GREEN",
+    "size": "32 LB",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "161740",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA LARGE (RED) TAINUNG",
+    "size": "30 LB",
+    "qty": 1,
+    "unitPrice": 29.9,
+    "eachPrice": 29.9,
+    "totalPrice": 29.9
+   },
+   {
+    "itemNo": "169200",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RED 11 LB RETAIL",
+    "size": "11 LB",
+    "qty": 1,
+    "unitPrice": 22.9,
+    "eachPrice": 22.9,
+    "totalPrice": 22.9
+   },
+   {
+    "itemNo": "170440",
+    "brand": "FRESHPOINT",
+    "description": "PERSIMMON FUYU 12 CT",
+    "size": "12 CT",
+    "qty": 5,
+    "unitPrice": 20.9,
+    "eachPrice": 20.9,
+    "totalPrice": 104.5
+   },
+   {
+    "itemNo": "177820",
+    "brand": "FRESHPOINT",
+    "description": "POTATO WHITE 10/5 LB",
+    "size": "10/5 LB",
+    "qty": 1,
+    "unitPrice": 17.9,
+    "eachPrice": 17.9,
+    "totalPrice": 17.9
+   },
+   {
+    "itemNo": "905310",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BERRY STRAWBERRY 8/1 LB",
+    "size": "8/1 LB",
+    "qty": 2,
+    "unitPrice": 13.9,
+    "eachPrice": 13.9,
+    "totalPrice": 27.8
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT",
+    "size": "7 CT",
+    "qty": 1,
+    "unitPrice": 11.9,
+    "eachPrice": 11.9,
+    "totalPrice": 11.9
+   },
+   {
+    "itemNo": "171350",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL PINEAPPLE 6 CT",
+    "size": "6 CT",
+    "qty": 1,
+    "unitPrice": 16.9,
+    "eachPrice": 16.9,
+    "totalPrice": 16.9
+   },
+   {
+    "itemNo": "160960",
+    "brand": "FRESHPOINT",
+    "description": "TANGERINE(MADARINES)55/60'S",
+    "size": "22 LB",
+    "qty": 3,
+    "unitPrice": 33.9,
+    "eachPrice": 33.9,
+    "totalPrice": 101.7
+   },
+   {
+    "itemNo": "194905",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL TOMATO ROMA/PLUM",
+    "size": "25 LB",
+    "qty": 1,
+    "unitPrice": 29.9,
+    "eachPrice": 29.9,
+    "totalPrice": 29.9
+   },
+   {
+    "itemNo": "893730",
+    "brand": "FRESHPOINT",
+    "description": "TURMERIC 5 LB",
+    "size": "5 LB",
+    "qty": 1,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 32.0
+   },
+   {
+    "itemNo": "154720",
+    "brand": "FRESHPOINT",
+    "description": "MUSHROOM 1/4\" THICK SLICED",
+    "size": "10 LB",
+    "qty": 1,
+    "unitPrice": 26.5,
+    "eachPrice": 26.5,
+    "totalPrice": 26.5
+   },
+   {
+    "itemNo": "118665",
+    "brand": "FRESHPOINT",
+    "description": "CLEMENTINES 10/3 LB",
+    "size": "10/3 LB",
+    "qty": 1,
+    "unitPrice": 38.9,
+    "eachPrice": 38.9,
+    "totalPrice": 38.9
+   }
+  ],
+  "itemCount": 38,
+  "source": "freshpoint_pdf"
+ },
+ {
+  "invoiceNumber": "EDEN-SQ145079",
+  "vendor": "Eden",
+  "date": "2025-04-29",
+  "dateDisplay": "04/29/25",
+  "customer": "KIMCHI MART HOLLYWOOD",
+  "total": 4674.05,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "eden_pdf",
+  "note": "Sales quotation - housewares and kitchen supplies"
+ },
+ {
+  "invoiceNumber": "KC-2502003",
+  "vendor": "KC Trading",
+  "date": "2025-02-10",
+  "dateDisplay": "02/10/25",
+  "customer": "KIMCHI MART PEMBROKE PINES",
+  "total": 4826.7,
+  "branchId": "pembroke_pines",
+  "items": [
+   {
+    "itemNo": "AG1010",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-BLACK CAVIAR(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1012",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-CERAMIDE(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1013",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-GOLD BIRD'S NEST(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1014",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-GOLD&PEPTIDE(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1015-A",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-CARROT(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1015-B",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-CICA(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1015-C",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-HYALURONIC ACID(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AG1015-D",
+    "brand": "KC TRADING",
+    "description": "VERACLARA MASK SHEET-RED PROPOLIS(10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.5,
+    "eachPrice": 0.5,
+    "totalPrice": 10.0
+   },
+   {
+    "itemNo": "AH1401",
+    "brand": "KC TRADING",
+    "description": "99% ALOE SOOTHING GEL (6)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 6.0,
+    "eachPrice": 6.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "BSR6F72",
+    "brand": "KC TRADING",
+    "description": "BIGEN SPEEDY REFILL #6 (12/72)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 4.2,
+    "eachPrice": 4.2,
+    "totalPrice": 50.4
+   },
+   {
+    "itemNo": "BSR7F72",
+    "brand": "KC TRADING",
+    "description": "BIGEN SPEEDY REFILL #7 (12/72)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 4.2,
+    "eachPrice": 4.2,
+    "totalPrice": 50.4
+   },
+   {
+    "itemNo": "BSR8F72",
+    "brand": "KC TRADING",
+    "description": "BIGEN SPEEDY REFILL #8 (12/72)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 4.2,
+    "eachPrice": 4.2,
+    "totalPrice": 50.4
+   },
+   {
+    "itemNo": "DSSH",
+    "brand": "KC TRADING",
+    "description": "동성 쌍화원 (몸살감기) (10/120)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "DSSK",
+    "brand": "KC TRADING",
+    "description": "동성 쌍기원 (기침감기) (10/120)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FB1018-A",
+    "brand": "KC TRADING",
+    "description": "세원 망사 수세미 - 3PCS (10/320)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FC1001",
+    "brand": "KC TRADING",
+    "description": "가든 리프 공기 - 4\" (8)",
+    "size": "EA",
+    "qty": 8,
+    "unitPrice": 2.2,
+    "eachPrice": 2.2,
+    "totalPrice": 17.6
+   },
+   {
+    "itemNo": "FC1018",
+    "brand": "KC TRADING",
+    "description": "가든 리프 머그 (6)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FC4201",
+    "brand": "KC TRADING",
+    "description": "쁘띠 멜라민 원형종지 - 6CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 7.2
+   },
+   {
+    "itemNo": "FC4202",
+    "brand": "KC TRADING",
+    "description": "쁘띠 멜라민 원형종지 - 6.5CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 8.4
+   },
+   {
+    "itemNo": "FC4210",
+    "brand": "KC TRADING",
+    "description": "쁘띠 멜라민 손잡이 종지 - 6.5CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 7.2
+   },
+   {
+    "itemNo": "FC4215",
+    "brand": "KC TRADING",
+    "description": "쁘띠 멜라민 원형 종지 (2절) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 8.4
+   },
+   {
+    "itemNo": "FC4221",
+    "brand": "KC TRADING",
+    "description": "쁘띠 멜라민 사각 종지 (2절) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "FC5001",
+    "brand": "KC TRADING",
+    "description": "도자기 (카이젠) 공기 - 3.75\" (16)",
+    "size": "EA",
+    "qty": 16,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "FC5002",
+    "brand": "KC TRADING",
+    "description": "도자기 (카이젠) 공기 - 4.75\" (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FC5003",
+    "brand": "KC TRADING",
+    "description": "도자기 (카이젠) 공기 - 6.0\" (8)",
+    "size": "EA",
+    "qty": 8,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "FC5010",
+    "brand": "KC TRADING",
+    "description": "도자기 (카이젠) 찬기 - 3.25\" (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 14.0
+   },
+   {
+    "itemNo": "FC5084",
+    "brand": "KC TRADING",
+    "description": "도자기 (화이트) - 티스푼 4PCS (13CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 8.4
+   },
+   {
+    "itemNo": "FK2011",
+    "brand": "KC TRADING",
+    "description": "엘라스틴 퓨어브리즈 퍼퓸 린스 600ML (12)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 7.2,
+    "eachPrice": 7.2,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "FK2012",
+    "brand": "KC TRADING",
+    "description": "엘라스틴 러브미 퍼퓸 샴푸 600ML (12)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 7.2,
+    "eachPrice": 7.2,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "FK2013",
+    "brand": "KC TRADING",
+    "description": "엘라스틴 러브미 퍼퓸 린스 600ML (12)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 7.2,
+    "eachPrice": 7.2,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "FK2074",
+    "brand": "KC TRADING",
+    "description": "온더바디 퍼퓸 바디로션-해피브리즈 400ML (6)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "FP1206",
+    "brand": "KC TRADING",
+    "description": "깔대기 - S (10/600)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 14.0
+   },
+   {
+    "itemNo": "FP1210",
+    "brand": "KC TRADING",
+    "description": "슬라이드 채반 (연회색) (10/60)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 21.0
+   },
+   {
+    "itemNo": "FP1214",
+    "brand": "KC TRADING",
+    "description": "만능 파칼 (12/144)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "FP1370",
+    "brand": "KC TRADING",
+    "description": "점보 분무기 1050ML (10/100)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 10.5
+   },
+   {
+    "itemNo": "FP1408",
+    "brand": "KC TRADING",
+    "description": "FELIZ 분무기 (300ML) (5/150)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 5.0
+   },
+   {
+    "itemNo": "FP2025",
+    "brand": "KC TRADING",
+    "description": "앞머리 롱 헤어롤 -왕 (42MM) (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 5.0
+   },
+   {
+    "itemNo": "FP2026",
+    "brand": "KC TRADING",
+    "description": "앞머리 롱 헤어롤 -대 (32MM) (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 5.0
+   },
+   {
+    "itemNo": "FP2031",
+    "brand": "KC TRADING",
+    "description": "고양이 밥주걱 (20/80)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FP2391",
+    "brand": "KC TRADING",
+    "description": "브니엘야채볼 대 (84)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FP2392",
+    "brand": "KC TRADING",
+    "description": "브니엘야채볼 중 (75)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 10.5
+   },
+   {
+    "itemNo": "FP2393",
+    "brand": "KC TRADING",
+    "description": "브니엘야채볼 소 (72)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 9.0
+   },
+   {
+    "itemNo": "FP2639",
+    "brand": "KC TRADING",
+    "description": "싹싹솔 (30/150)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FQ1084",
+    "brand": "KC TRADING",
+    "description": "손잡이 소주잔 세트 (2PCS) (8/56)",
+    "size": "EA",
+    "qty": 8,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 9.6
+   },
+   {
+    "itemNo": "FQ1162-B",
+    "brand": "KC TRADING",
+    "description": "무궁화 알로에 비누 (100g) (48)",
+    "size": "EA",
+    "qty": 24,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "FQ1375",
+    "brand": "KC TRADING",
+    "description": "전기 주전자 (유럽식) 1.7L (8)",
+    "size": "EA",
+    "qty": 4,
+    "unitPrice": 13.0,
+    "eachPrice": 13.0,
+    "totalPrice": 52.0
+   },
+   {
+    "itemNo": "FQ1377-A",
+    "brand": "KC TRADING",
+    "description": "전기 주전자 (유리) 1.7L (6)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 108.0
+   },
+   {
+    "itemNo": "FQ1643",
+    "brand": "KC TRADING",
+    "description": "K-손톱깎이(대) (5)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 16.0
+   },
+   {
+    "itemNo": "FQ1644",
+    "brand": "KC TRADING",
+    "description": "K-손톱깎이(중) (5)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "FQ1664",
+    "brand": "KC TRADING",
+    "description": "러블리 곱창 헤어밴드 (5)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FS0019",
+    "brand": "KC TRADING",
+    "description": "GGOMI 지갑 회 칼 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 3.6,
+    "eachPrice": 3.6,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "FS0026",
+    "brand": "KC TRADING",
+    "description": "다용도 사각 식도 (20)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "FS1055",
+    "brand": "KC TRADING",
+    "description": "뉴로즈 - 집과도 (10/120)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FS1089",
+    "brand": "KC TRADING",
+    "description": "스텐 타공 샐러드 집게 - 대 (28CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "FS1090",
+    "brand": "KC TRADING",
+    "description": "스텐 타공 샐러드 집게 - 중 (23CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "FS1091",
+    "brand": "KC TRADING",
+    "description": "스텐 타공 샐러드 집게 - 소 (13CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "FS1094",
+    "brand": "KC TRADING",
+    "description": "악어집게 (40CM) - 특대 (12)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 8.4
+   },
+   {
+    "itemNo": "FS1095",
+    "brand": "KC TRADING",
+    "description": "악어집게 (30CM) - 대 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "FS1096",
+    "brand": "KC TRADING",
+    "description": "악어집게 (25CM) - 중 (12)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 6.0
+   },
+   {
+    "itemNo": "FS1125",
+    "brand": "KC TRADING",
+    "description": "카이젠 다용도 집게 (특대) - 25.5CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 13.2
+   },
+   {
+    "itemNo": "FS1135",
+    "brand": "KC TRADING",
+    "description": "카이젠 스테이크 집게 - 특대 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "FS1159",
+    "brand": "KC TRADING",
+    "description": "삼덕 접는과도 (10/300)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.3,
+    "eachPrice": 1.3,
+    "totalPrice": 13.0
+   },
+   {
+    "itemNo": "L0008",
+    "brand": "KC TRADING",
+    "description": "김발 - 속대 (10/420)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.55,
+    "eachPrice": 0.55,
+    "totalPrice": 27.5
+   },
+   {
+    "itemNo": "L0009",
+    "brand": "KC TRADING",
+    "description": "김발 - 겉대 (10/200,260)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.65,
+    "eachPrice": 0.65,
+    "totalPrice": 32.5
+   },
+   {
+    "itemNo": "L0019-A",
+    "brand": "KC TRADING",
+    "description": "삼정 철수세미 3PCS (20G) (120)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 0.8,
+    "eachPrice": 0.8,
+    "totalPrice": 8.0
+   },
+   {
+    "itemNo": "L0019-B",
+    "brand": "KC TRADING",
+    "description": "삼정 철수세미 2PCS (30G) (120)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 7.0
+   },
+   {
+    "itemNo": "L0029",
+    "brand": "KC TRADING",
+    "description": "반짝이 수세미 5P (10/200)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "L0031",
+    "brand": "KC TRADING",
+    "description": "깔깔이 수세미 5P (10/200)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "L0062",
+    "brand": "KC TRADING",
+    "description": "GLASS 미니 양념통 (W/HANDLE)-120ML(15)",
+    "size": "EA",
+    "qty": 15,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 9.0
+   },
+   {
+    "itemNo": "L0062-A",
+    "brand": "KC TRADING",
+    "description": "GLASS MINI JAR (200ML) - L (12/96)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 7.2
+   },
+   {
+    "itemNo": "L0079-B",
+    "brand": "KC TRADING",
+    "description": "식초/기름병 (250ML)-1PCS (12/200)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "L0081-B",
+    "brand": "KC TRADING",
+    "description": "간장병(무지) - 소 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L0162",
+    "brand": "KC TRADING",
+    "description": "P/L 사각 비누각",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 6.0
+   },
+   {
+    "itemNo": "L0209",
+    "brand": "KC TRADING",
+    "description": "CUTTER KNIFE (6PCS) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.8,
+    "eachPrice": 0.8,
+    "totalPrice": 9.6
+   },
+   {
+    "itemNo": "L0284-A",
+    "brand": "KC TRADING",
+    "description": "대나무 수저받침세트 (단풍 A) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L0284-B",
+    "brand": "KC TRADING",
+    "description": "대나무 수저받침세트 (단풍 B) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L0309",
+    "brand": "KC TRADING",
+    "description": "옻칠 나무 수저 세트 - 23CM (12/200)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "L0312-B",
+    "brand": "KC TRADING",
+    "description": "옻칠 2P 나무 스푼 23CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "L0312-D",
+    "brand": "KC TRADING",
+    "description": "옻칠 6P 나무 스푼 23CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 4.2,
+    "eachPrice": 4.2,
+    "totalPrice": 50.4
+   },
+   {
+    "itemNo": "L0315",
+    "brand": "KC TRADING",
+    "description": "옻칠 나무 롱 티스푼 (19.5 CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L0555",
+    "brand": "KC TRADING",
+    "description": "스텐 진공 튀김젓가락 (2PCS) 33CM (20/500)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "L0569-C",
+    "brand": "KC TRADING",
+    "description": "원형 면 찜기 시트 (28CM) - 5PCS (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 11.0
+   },
+   {
+    "itemNo": "L0670",
+    "brand": "KC TRADING",
+    "description": "계량표기 투명 오일병-520ML (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "L0810",
+    "brand": "KC TRADING",
+    "description": "학습용 젓가락 (고양이) (10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 28.0
+   },
+   {
+    "itemNo": "L0811",
+    "brand": "KC TRADING",
+    "description": "어린이 학습 젓가락-윙크 토끼(16/160)",
+    "size": "EA",
+    "qty": 16,
+    "unitPrice": 1.7,
+    "eachPrice": 1.7,
+    "totalPrice": 27.2
+   },
+   {
+    "itemNo": "L0812",
+    "brand": "KC TRADING",
+    "description": "어린이 학습 젓가락-아기 몽키(16/160)",
+    "size": "EA",
+    "qty": 16,
+    "unitPrice": 1.7,
+    "eachPrice": 1.7,
+    "totalPrice": 27.2
+   },
+   {
+    "itemNo": "L0813",
+    "brand": "KC TRADING",
+    "description": "어린이 학습 젓가락-빨강 호랑이(16)",
+    "size": "EA",
+    "qty": 16,
+    "unitPrice": 1.7,
+    "eachPrice": 1.7,
+    "totalPrice": 27.2
+   },
+   {
+    "itemNo": "L0817",
+    "brand": "KC TRADING",
+    "description": "어린이 학습 젓가락-아기 꿀돼지(16/176)",
+    "size": "EA",
+    "qty": 16,
+    "unitPrice": 1.7,
+    "eachPrice": 1.7,
+    "totalPrice": 27.2
+   },
+   {
+    "itemNo": "L0966",
+    "brand": "KC TRADING",
+    "description": "스텐 채칼 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L0967",
+    "brand": "KC TRADING",
+    "description": "스텐 야채칼 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L0968",
+    "brand": "KC TRADING",
+    "description": "스텐 양배추칼 - 대형 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "L1010",
+    "brand": "KC TRADING",
+    "description": "카이젠 럭셔리 갈비 가위 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "L1013",
+    "brand": "KC TRADING",
+    "description": "다용도 가위 (12/120)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "L1015",
+    "brand": "KC TRADING",
+    "description": "타이타늄 분리형 주방가위 (12/120)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.6,
+    "eachPrice": 2.6,
+    "totalPrice": 31.2
+   },
+   {
+    "itemNo": "L1047",
+    "brand": "KC TRADING",
+    "description": "파스텔 자루바가지 - 소",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 0.8,
+    "eachPrice": 0.8,
+    "totalPrice": 4.0
+   },
+   {
+    "itemNo": "L1062",
+    "brand": "KC TRADING",
+    "description": "세라믹 찬기 (고양이) - 10 CM (24)",
+    "size": "EA",
+    "qty": 24,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "L1137",
+    "brand": "KC TRADING",
+    "description": "멀티 종합 오프너 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 13.2
+   },
+   {
+    "itemNo": "L1151",
+    "brand": "KC TRADING",
+    "description": "화이트 멜라민 종지 (1절) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "L1152",
+    "brand": "KC TRADING",
+    "description": "화이트 멜라민 종지 (2절) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L1221",
+    "brand": "KC TRADING",
+    "description": "면봉 (원형) - 나무 (6/96)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "L1901",
+    "brand": "KC TRADING",
+    "description": "스텐 건지기 (타공) -12CM (10/240)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "L1903",
+    "brand": "KC TRADING",
+    "description": "스텐 건지기 (타공) -16CM (10/120)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 21.0
+   },
+   {
+    "itemNo": "L1905",
+    "brand": "KC TRADING",
+    "description": "스텐 건지기 (타공) -20CM (10/120)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "L1995",
+    "brand": "KC TRADING",
+    "description": "다솜 샤워타올 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 16.0
+   },
+   {
+    "itemNo": "L1997",
+    "brand": "KC TRADING",
+    "description": "카이젠 남성용 샤워타올 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 16.0
+   },
+   {
+    "itemNo": "L2003",
+    "brand": "KC TRADING",
+    "description": "노벨 샤워 타올 (10/300)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "L2026",
+    "brand": "KC TRADING",
+    "description": "젓가락 - 42CM (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.7,
+    "eachPrice": 0.7,
+    "totalPrice": 14.0
+   },
+   {
+    "itemNo": "L2051",
+    "brand": "KC TRADING",
+    "description": "스폰지 수세미(퀸스 크리너)-4P(10/100)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 9.0
+   },
+   {
+    "itemNo": "L2052-C",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 미녀도 5PCS (20/200)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2052-D",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 전나무 5PCS (20/200)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2052-F",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 상감 5PCS (20/200)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2052-J",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 사각 5PCS (20/200)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2052-K",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 부엉이 5PCS (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2053-B",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 나비 5PCS (20/200)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2053-C",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 고양이 5PCS (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2053-F",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 검은 라인 (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2053-K",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 행운의 고양이 5PCS (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "L2054",
+    "brand": "KC TRADING",
+    "description": "고급 대나무 냄비 받침 - 사각 (5/150)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 8.0
+   },
+   {
+    "itemNo": "L2146",
+    "brand": "KC TRADING",
+    "description": "젓가락 - 45CM (20/500)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 0.65,
+    "eachPrice": 0.65,
+    "totalPrice": 6.5
+   },
+   {
+    "itemNo": "L2179-C",
+    "brand": "KC TRADING",
+    "description": "토시 - 방수 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "L2216-A",
+    "brand": "KC TRADING",
+    "description": "대나무 티스푼 5PCS - 16CM (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L2227",
+    "brand": "KC TRADING",
+    "description": "민속 핸드폰 고리 - 장구 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 14.0
+   },
+   {
+    "itemNo": "L2235",
+    "brand": "KC TRADING",
+    "description": "먼지킬러 PVC (5/100)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 7.5
+   },
+   {
+    "itemNo": "L2339-A",
+    "brand": "KC TRADING",
+    "description": "민속 복주머니 핸드폰 고리 A (10/1000)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 16.0
+   },
+   {
+    "itemNo": "L2339-B",
+    "brand": "KC TRADING",
+    "description": "민속 복주머니 핸드폰 고리 B (10/900)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 16.0
+   },
+   {
+    "itemNo": "L2460",
+    "brand": "KC TRADING",
+    "description": "멜라민 스푼 (L) - 손잡이 전사 (72/1152)",
+    "size": "EA",
+    "qty": 36,
+    "unitPrice": 0.4,
+    "eachPrice": 0.4,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L2475",
+    "brand": "KC TRADING",
+    "description": "민속 자석 캔 오프너 (한복 B) (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 8.0
+   },
+   {
+    "itemNo": "L2477",
+    "brand": "KC TRADING",
+    "description": "민속 열쇠고리 (장구) (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 1.6,
+    "eachPrice": 1.6,
+    "totalPrice": 8.0
+   },
+   {
+    "itemNo": "L2533-F",
+    "brand": "KC TRADING",
+    "description": "원목 표주박 (20CM) (12/144)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L2668-A",
+    "brand": "KC TRADING",
+    "description": "멜라민 중국 스푼 (RED)-대 (12/24/480)",
+    "size": "EA",
+    "qty": 24,
+    "unitPrice": 0.75,
+    "eachPrice": 0.75,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L2669-A",
+    "brand": "KC TRADING",
+    "description": "멜라민 중국 스푼 (ORANGE)(0102) (12/800)",
+    "size": "EA",
+    "qty": 48,
+    "unitPrice": 0.45,
+    "eachPrice": 0.45,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "L2669-C",
+    "brand": "KC TRADING",
+    "description": "멜라민 중국 스푼 (BLACK)(0102) (60/720)",
+    "size": "EA",
+    "qty": 48,
+    "unitPrice": 0.45,
+    "eachPrice": 0.45,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "L2670-A",
+    "brand": "KC TRADING",
+    "description": "멜라민 국자 (RED) - 소 (72)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 7.2
+   },
+   {
+    "itemNo": "L2770",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 사각 (12/240)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "L2771",
+    "brand": "KC TRADING",
+    "description": "대나무 젓가락 - 레드 (12/240)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "L2954",
+    "brand": "KC TRADING",
+    "description": "S/S SOUP SCOOP-W/HOLE 28CM (XL) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.6,
+    "eachPrice": 3.6,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "L2954-A",
+    "brand": "KC TRADING",
+    "description": "S/S SOUP SCOOP-W/HOLE (L) 25CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.3,
+    "eachPrice": 3.3,
+    "totalPrice": 39.6
+   },
+   {
+    "itemNo": "L2955-A",
+    "brand": "KC TRADING",
+    "description": "S/S SOUP SCOOP (L) 24CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.3,
+    "eachPrice": 3.3,
+    "totalPrice": 39.6
+   },
+   {
+    "itemNo": "L2955-B",
+    "brand": "KC TRADING",
+    "description": "S/S SOUP SCOOP (M) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "L3092-A",
+    "brand": "KC TRADING",
+    "description": "스텐 4P 포크 (20)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "L3141-B",
+    "brand": "KC TRADING",
+    "description": "바베큐 꼬치 (38CM) -10PCS (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 21.6
+   },
+   {
+    "itemNo": "L3177-A",
+    "brand": "KC TRADING",
+    "description": "고급형 누비 슬리퍼 (여성용) (10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 3.3,
+    "eachPrice": 3.3,
+    "totalPrice": 66.0
+   },
+   {
+    "itemNo": "L3177-B",
+    "brand": "KC TRADING",
+    "description": "고급형 누비 슬리퍼 (남성용) (10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 3.3,
+    "eachPrice": 3.3,
+    "totalPrice": 66.0
+   },
+   {
+    "itemNo": "L3415",
+    "brand": "KC TRADING",
+    "description": "스텐 미니 만두 건지기 (대) - 10CM(12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "L3416",
+    "brand": "KC TRADING",
+    "description": "스텐 미니 만두 건지기 (중) - 8.0 CM(12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L3771",
+    "brand": "KC TRADING",
+    "description": "스텐 튀김 원형 핸들형 채반 (30CM) (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 4.0,
+    "eachPrice": 4.0,
+    "totalPrice": 20.0
+   },
+   {
+    "itemNo": "L4003",
+    "brand": "KC TRADING",
+    "description": "티크우드 뒤지개(W/구멍)-34CM (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.6,
+    "eachPrice": 3.6,
+    "totalPrice": 43.2
+   },
+   {
+    "itemNo": "LG102214",
+    "brand": "KC TRADING",
+    "description": "EMPIRE TUMBLER (13.5 OZ) (6/72)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 6.0
+   },
+   {
+    "itemNo": "LG103006",
+    "brand": "KC TRADING",
+    "description": "계량컵 (140ML) (12/72)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "LG103009",
+    "brand": "KC TRADING",
+    "description": "텀블러 클래식 (8.7 OZ) (6/72)",
+    "size": "EA",
+    "qty": 6,
+    "unitPrice": 0.8,
+    "eachPrice": 0.8,
+    "totalPrice": 4.8
+   },
+   {
+    "itemNo": "MR536",
+    "brand": "KC TRADING",
+    "description": "적투톤 공기 (15.5CM) - 536 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.5,
+    "eachPrice": 2.5,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "MR537",
+    "brand": "KC TRADING",
+    "description": "적투톤 대접 (19.0CM) - 537 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "MR601",
+    "brand": "KC TRADING",
+    "description": "적투톤 민2반 (7.0CM) - 601 (24)",
+    "size": "EA",
+    "qty": 24,
+    "unitPrice": 0.4,
+    "eachPrice": 0.4,
+    "totalPrice": 9.6
+   },
+   {
+    "itemNo": "MR941",
+    "brand": "KC TRADING",
+    "description": "적투톤 쌍초장 (14.8CM) - 941 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.0,
+    "eachPrice": 1.0,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "PM1001",
+    "brand": "KC TRADING",
+    "description": "MALIE ALOE ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PM1002",
+    "brand": "KC TRADING",
+    "description": "MALIE COLLAGEN ESSENCE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PM1003",
+    "brand": "KC TRADING",
+    "description": "MALIE COENZYME Q10 ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PM1005",
+    "brand": "KC TRADING",
+    "description": "MALIE GREEN TEA ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PM1006",
+    "brand": "KC TRADING",
+    "description": "MALIE PEARL ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 7.0
+   },
+   {
+    "itemNo": "PM1013",
+    "brand": "KC TRADING",
+    "description": "MALIE SNAIL ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PM1015",
+    "brand": "KC TRADING",
+    "description": "MALIE STEM CELL ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 7.0
+   },
+   {
+    "itemNo": "PM1016",
+    "brand": "KC TRADING",
+    "description": "MALIE VITAMIN ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1001",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES ALOE AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1002",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES BLUEBERRY AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 30,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 10.5
+   },
+   {
+    "itemNo": "PO1004",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES CUCUMBER AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1007",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES PEARL AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1008",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES ROYALJELLY AMPOULE",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1009",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES TEA TREE AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "AC0128",
+    "brand": "KC TRADING",
+    "description": "스토마신 (100)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 4.0,
+    "eachPrice": 4.0,
+    "totalPrice": 80.0
+   },
+   {
+    "itemNo": "BAKN103",
+    "brand": "KC TRADING",
+    "description": "레모나 (2GX20PK) (10/40)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 4.6,
+    "eachPrice": 4.6,
+    "totalPrice": 46.0
+   },
+   {
+    "itemNo": "DSST",
+    "brand": "KC TRADING",
+    "description": "동성 실키 치약 (60)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 2.9,
+    "eachPrice": 2.9,
+    "totalPrice": 58.0
+   },
+   {
+    "itemNo": "FK2030-A",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 와인갈색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FK2031",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 흑색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FK2032",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 흑갈색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FK2033",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 짙은갈색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FK2034",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 밝은갈색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FK2035",
+    "brand": "KC TRADING",
+    "description": "리엔 흑모비책 크림120G - 자연갈색 (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "eachPrice": 7.0,
+    "totalPrice": 35.0
+   },
+   {
+    "itemNo": "FP1005",
+    "brand": "KC TRADING",
+    "description": "실리콘 김밥말이 (1/54)",
+    "size": "EA",
+    "qty": 26,
+    "unitPrice": 4.5,
+    "eachPrice": 4.5,
+    "totalPrice": 117.0
+   },
+   {
+    "itemNo": "FP1296-A",
+    "brand": "KC TRADING",
+    "description": "계량컵 (특대) - 1000ML (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 2.7,
+    "eachPrice": 2.7,
+    "totalPrice": 13.5
+   },
+   {
+    "itemNo": "FP1526",
+    "brand": "KC TRADING",
+    "description": "P/P 다라이 (재래식) 원형 (XL) 왕 74*26",
+    "size": "EA",
+    "qty": 2,
+    "unitPrice": 19.0,
+    "eachPrice": 19.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "FQ1250",
+    "brand": "KC TRADING",
+    "description": "뉴 P 식도 (5/60)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 3.0,
+    "eachPrice": 3.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "FQ1299",
+    "brand": "KC TRADING",
+    "description": "홍삼대보(10병입)-75ML (3)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 16.0,
+    "eachPrice": 16.0,
+    "totalPrice": 192.0
+   },
+   {
+    "itemNo": "FQ1582",
+    "brand": "KC TRADING",
+    "description": "때비누150g-삼백초 (100)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "FQ1583",
+    "brand": "KC TRADING",
+    "description": "때비누150g-라벤다 (100)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "FQ1588",
+    "brand": "KC TRADING",
+    "description": "때비누150g-홍삼 (100)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "FQ1589",
+    "brand": "KC TRADING",
+    "description": "때비누150g-로즈 (100)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "FS0002",
+    "brand": "KC TRADING",
+    "description": "스텐 스폰지 병솔(대) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FS0016",
+    "brand": "KC TRADING",
+    "description": "GGOMI 데바칼 (대) -34CM (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 11.0,
+    "eachPrice": 11.0,
+    "totalPrice": 55.0
+   },
+   {
+    "itemNo": "FS0017",
+    "brand": "KC TRADING",
+    "description": "GGOMI 데바칼 (소) -29CM (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 8.0,
+    "eachPrice": 8.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "FS0025",
+    "brand": "KC TRADING",
+    "description": "GGOMI 고급 사각 식도 (GG370) (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "FS1245",
+    "brand": "KC TRADING",
+    "description": "알루미늄 찜기 - 16CM (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 3.5,
+    "eachPrice": 3.5,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "FS1246",
+    "brand": "KC TRADING",
+    "description": "알루미늄 찜기 - 18CM (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 4.5,
+    "eachPrice": 4.5,
+    "totalPrice": 22.5
+   },
+   {
+    "itemNo": "FS1247",
+    "brand": "KC TRADING",
+    "description": "알루미늄 찜기 - 20CM (5)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 25.0
+   },
+   {
+    "itemNo": "FS1257",
+    "brand": "KC TRADING",
+    "description": "알루미늄 직사각 쟁반(소)-21X17CM (20)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 3.6,
+    "eachPrice": 3.6,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "FS1258",
+    "brand": "KC TRADING",
+    "description": "알루미늄 직사각 쟁반(중)-27X21CM (20)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 4.6,
+    "eachPrice": 4.6,
+    "totalPrice": 23.0
+   },
+   {
+    "itemNo": "FS1259",
+    "brand": "KC TRADING",
+    "description": "알루미늄 직사각 쟁반(대)-32X25CM (20)",
+    "size": "EA",
+    "qty": 5,
+    "unitPrice": 6.0,
+    "eachPrice": 6.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "L0080",
+    "brand": "KC TRADING",
+    "description": "SYRUP DISPENSER (220ML) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.4,
+    "eachPrice": 2.4,
+    "totalPrice": 28.8
+   },
+   {
+    "itemNo": "L0409",
+    "brand": "KC TRADING",
+    "description": "2 IN 1 오일병 (스프레이 겸용)-16OZ (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "L0533",
+    "brand": "KC TRADING",
+    "description": "실리콘 주방 싱크 받침대 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 21.0
+   },
+   {
+    "itemNo": "L0534",
+    "brand": "KC TRADING",
+    "description": "실리콘 목욕비누 받침대 (10)",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.1,
+    "eachPrice": 1.1,
+    "totalPrice": 11.0
+   },
+   {
+    "itemNo": "L0860",
+    "brand": "KC TRADING",
+    "description": "카이젠 내열유리 계량컵 - 500ML (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "L0960",
+    "brand": "KC TRADING",
+    "description": "스텐 미니 강판 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 2.1,
+    "eachPrice": 2.1,
+    "totalPrice": 25.2
+   },
+   {
+    "itemNo": "L1016",
+    "brand": "KC TRADING",
+    "description": "올스텐 분리형 가위 (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 5.0,
+    "eachPrice": 5.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "L1061",
+    "brand": "KC TRADING",
+    "description": "세라믹 찬기 (고양이) - 7.5CM (20)",
+    "size": "EA",
+    "qty": 20,
+    "unitPrice": 0.6,
+    "eachPrice": 0.6,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "L1071",
+    "brand": "KC TRADING",
+    "description": "S/S 원형찬기 - 특대 (11.5CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L1072",
+    "brand": "KC TRADING",
+    "description": "S/S 원형찬기 - 대 (10.5CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.4,
+    "eachPrice": 1.4,
+    "totalPrice": 16.8
+   },
+   {
+    "itemNo": "L1073",
+    "brand": "KC TRADING",
+    "description": "S/S 원형찬기 - 중 (8.5CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 1.2,
+    "eachPrice": 1.2,
+    "totalPrice": 14.4
+   },
+   {
+    "itemNo": "L1074",
+    "brand": "KC TRADING",
+    "description": "S/S 원형찬기 - 소 (7.5CM) (12)",
+    "size": "EA",
+    "qty": 12,
+    "unitPrice": 0.9,
+    "eachPrice": 0.9,
+    "totalPrice": 10.8
+   },
+   {
+    "itemNo": "L1621",
+    "brand": "KC TRADING",
+    "description": "고급 탄화 대나무 젓가락(10PCS) - 무지",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L1622",
+    "brand": "KC TRADING",
+    "description": "고급 탄화 대나무 젓가락(10PCS) - 금붕어",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "L1623",
+    "brand": "KC TRADING",
+    "description": "고급 탄화 대나무 젓가락(10PCS) - 복주머니",
+    "size": "EA",
+    "qty": 10,
+    "unitPrice": 1.8,
+    "eachPrice": 1.8,
+    "totalPrice": 18.0
+   },
+   {
+    "itemNo": "PM1012",
+    "brand": "KC TRADING",
+    "description": "MALIE SEAWEED ESSENSE MASK 25G (10)",
+    "size": "EA",
+    "qty": 50,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 17.5
+   },
+   {
+    "itemNo": "PO1010",
+    "brand": "KC TRADING",
+    "description": "ORANGEROSES VITAMIN AMPOULE MASK(10)",
+    "size": "EA",
+    "qty": 30,
+    "unitPrice": 0.35,
+    "eachPrice": 0.35,
+    "totalPrice": 10.5
+   }
+  ],
+  "itemCount": 213,
+  "source": "kc_trading_pdf"
+ },
+ {
+  "invoiceNumber": "KOCO-92410",
+  "vendor": "KOCO Trading",
+  "date": "2024-02-29",
+  "dateDisplay": "02/29/24",
+  "customer": "KIMCHI MARKET #2 PEMBROKE PINES",
+  "total": 0,
+  "branchId": "pembroke_pines",
+  "items": [],
+  "itemCount": 0,
+  "source": "koco_pdf",
+  "note": "Housewares and kitchen supplies"
+ },
+ {
+  "invoiceNumber": "NDM-87376",
+  "vendor": "Namdaemun",
+  "date": "2020-01-13",
+  "dateDisplay": "01/13/20",
+  "customer": "KIMCHI MART",
+  "total": 5215.29,
+  "branchId": "miami",
+  "items": [
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SRIRACHA CHILI SAUCE 28OZ/12",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 160.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "GREEN ONION 파",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 170.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BROWN RICE 15LB 현미",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 12.9,
+    "eachPrice": 12.9,
+    "totalPrice": 64.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "COOKED RICE CJ *12",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 12.5,
+    "eachPrice": 12.5,
+    "totalPrice": 125.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BBG MANDU PORK&VEG 32OZ/12 왕교자만두 #176156",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 76.0,
+    "eachPrice": 76.0,
+    "totalPrice": 76.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BBG MANDU BEEF &VEG 24OZ/12 #182050",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 76.0,
+    "eachPrice": 76.0,
+    "totalPrice": 76.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJ MULMANDOO 28OZ/12 #152885",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 74.0,
+    "eachPrice": 74.0,
+    "totalPrice": 74.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PORK MULMANDOO 돼지고기 물만두 28OZ/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 66.0,
+    "eachPrice": 66.0,
+    "totalPrice": 66.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "MINI WONTON CUCUMBER 28OZ/12 생오이 물만두",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 74.0,
+    "eachPrice": 74.0,
+    "totalPrice": 74.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO JUMBO KIMCHI & PORK DUMPLING 630G/12 김치",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 78.0,
+    "eachPrice": 78.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "GOHYANG DUMPLING 567G/10",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.5,
+    "eachPrice": 37.5,
+    "totalPrice": 37.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "GOHYANG DUMPLING 6/1350G",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BEEF DUMPLING HT 3.2LB/6",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 69.0,
+    "eachPrice": 69.0,
+    "totalPrice": 69.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DRIED PERSIMMON 3LB/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 109.0,
+    "eachPrice": 109.0,
+    "totalPrice": 109.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO KATSUO UDON 2PK 17.4OZ/16",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO RICE CAKE 16.9OZ/12 #130301 순쌀 떡볶이",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.4,
+    "eachPrice": 50.4,
+    "totalPrice": 50.4
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "UDONG JJAJANG NOODLE FZ 2.2LB/10 **NDM",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SRS KIMCHI ( NAMDO)11LB/2 #19259",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.9,
+    "eachPrice": 27.9,
+    "totalPrice": 27.9
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PICKLE RADISH (FOR KIMBOB) 2.2LB/14 #224125",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "HCD MIXED BEAN P. 12/1KG사계절 쌈장",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 57.9,
+    "eachPrice": 57.9,
+    "totalPrice": 57.9
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DADAM SOFT BEANCURD STEW 140G순두부 찌개 양념",
+    "size": "CS",
+    "qty": 12,
+    "unitPrice": 1.69,
+    "eachPrice": 1.69,
+    "totalPrice": 20.28
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHIN RAMYUN *4/6",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 17.5,
+    "eachPrice": 17.5,
+    "totalPrice": 52.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS CHAPAGETI MULTI *4/6",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 19.5,
+    "eachPrice": 19.5,
+    "totalPrice": 58.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS ANSUNGTANG MYUN *4/6 안성탕면",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 17.9,
+    "eachPrice": 17.9,
+    "totalPrice": 53.7
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS NEOGURI *4/6",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 17.9,
+    "eachPrice": 17.9,
+    "totalPrice": 53.7
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NONG SHIM SOON VEGGIE NDLE 8/4PK",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 25.0,
+    "eachPrice": 25.0,
+    "totalPrice": 125.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHIN SMALL CUP *6",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 5.5,
+    "eachPrice": 5.5,
+    "totalPrice": 55.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG JIN RAMEN *6CUP (MILD)",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 4.5,
+    "eachPrice": 4.5,
+    "totalPrice": 22.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG JIN RAMEN *6CUP (HOT )",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 4.5,
+    "eachPrice": 4.5,
+    "totalPrice": 22.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "HONEY BUTTER CHIP 16/60G",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 22.59,
+    "eachPrice": 22.59,
+    "totalPrice": 67.77
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CRISPY SEAWEED SNACK 70G/12 섬마을 김자반",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 28.29,
+    "eachPrice": 28.29,
+    "totalPrice": 84.87
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CRISPY SEWEED SNACK SHRIMP 50G/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.29,
+    "eachPrice": 28.29,
+    "totalPrice": 28.29
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CRISPY SEWEED SNACK BBQ 50G/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.29,
+    "eachPrice": 28.29,
+    "totalPrice": 28.29
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "TENDON 도가니",
+    "size": "CS",
+    "qty": 22,
+    "unitPrice": 3.99,
+    "eachPrice": 3.99,
+    "totalPrice": 87.78
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PIKE MACKEREL 꽁치",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 32.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SQUID 400/600 66.14LB/2.95",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 195.11,
+    "eachPrice": 195.11,
+    "totalPrice": 195.11
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "TUBE SQUID U5 22LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 52.0,
+    "eachPrice": 52.0,
+    "totalPrice": 52.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PEANUT (RED SHELL)110LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 140.0,
+    "eachPrice": 140.0,
+    "totalPrice": 140.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SOY BEAN 메주콩 60LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 34.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "WHOLE MUNG BEAN 55LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 75.0,
+    "eachPrice": 75.0,
+    "totalPrice": 75.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LT SACSAC ORANGE *12/6",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LT PODO SACSAC PODO *12/6",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR BANANA MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 112.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR MELON MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 67.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR STRAWBERRY MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 67.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "YOGURT 5/4/6",
+    "size": "CS",
+    "qty": 15,
+    "unitPrice": 14.9,
+    "eachPrice": 14.9,
+    "totalPrice": 223.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "MAXIM COFFEE MIX (MOCHA) *100/8",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 99.0,
+    "eachPrice": 99.0,
+    "totalPrice": 99.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LOTTE CUSTARD CREAM CAKES 9.73 OZ/8",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 23.5,
+    "eachPrice": 23.5,
+    "totalPrice": 23.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "MONCHER DREAM 8/384G",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 24.9,
+    "eachPrice": 24.9,
+    "totalPrice": 49.8
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PRODUCE BAG(12*20/875/RL)(80/PL) 10/450R",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 49.0,
+    "eachPrice": 49.0,
+    "totalPrice": 49.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PERSIMMON 단감 TRAY",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 8.9,
+    "eachPrice": 8.9,
+    "totalPrice": 89.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "YOUNG RADISH *50",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BABY NAPA 풋배추 *50",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "TWIST PEPPER 꽈리고추 20LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "eachPrice": 45.0,
+    "totalPrice": 45.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN PEPPER 풋고추 20LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.0,
+    "eachPrice": 29.0,
+    "totalPrice": 29.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KABOCHA",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 19.0,
+    "eachPrice": 19.0,
+    "totalPrice": 95.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN SWEET POTATO 고구마 40lb",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 45.0,
+    "eachPrice": 45.0,
+    "totalPrice": 135.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KING ONION 대파 *30",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 84.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOBO 우엉 22lb",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KING OYSTER MUSHROOM 새송이 PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 81.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SESAME LEAVES 깻잎*100",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "FUJI APPLE L\"",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "eachPrice": 45.0,
+    "totalPrice": 45.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN PEAR 3PC/8",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 40.0,
+    "eachPrice": 40.0,
+    "totalPrice": 200.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SPINACH 시금치",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 90.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO FIRM TOFU 부침두부 16OZ/12",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SILKEN TOFU 연두부 16OZ/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SOFT TOFU 찌개 두부 16OZ/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 15.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SP NATURALLY BREWED SOY SAUCE LIGHT",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 56.0,
+    "eachPrice": 56.0,
+    "totalPrice": 56.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NINETY NINE COOKIES 12/180G",
+    "size": "CS",
+    "qty": 11,
+    "unitPrice": 22.0,
+    "eachPrice": 22.0,
+    "totalPrice": 242.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ORO TURTLE CHIP -CORN 10/160G",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 22.0,
+    "eachPrice": 22.0,
+    "totalPrice": 22.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DW RICE PORRIDGE W/ABALONE 24/285G",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 62.0,
+    "eachPrice": 62.0,
+    "totalPrice": 62.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DW RICE PORRIDGE PUMPKIN 24/285G",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 62.0,
+    "eachPrice": 62.0,
+    "totalPrice": 62.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DW RICE PORRIDGE W/RED BEAN ,CHESTNUT",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 62.0,
+    "eachPrice": 62.0,
+    "totalPrice": 62.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "DW RICE PORRIDGE W/ VEGE 24/285G",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 62.0,
+    "eachPrice": 62.0,
+    "totalPrice": 62.0
+   }
+  ],
+  "itemCount": 74,
+  "source": "namdaemun_pdf"
+ },
+ {
+  "invoiceNumber": "NDM-96382",
+  "vendor": "Namdaemun",
+  "date": "2020-07-14",
+  "dateDisplay": "07/14/20",
+  "customer": "KIMCHI MART",
+  "total": 7960.95,
+  "branchId": "pembroke_pines",
+  "items": [
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CFC RICE 15LB 장수미",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 9.9,
+    "eachPrice": 9.9,
+    "totalPrice": 198.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJ GOLD RICE 40LB 황금쌀",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 24.9,
+    "eachPrice": 24.9,
+    "totalPrice": 249.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHINRAMYUN *16 신라면",
+    "size": "CS",
+    "qty": 30,
+    "unitPrice": 11.9,
+    "eachPrice": 11.9,
+    "totalPrice": 357.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG JIN RAMEN *6CUP (MILD)",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 4.5,
+    "eachPrice": 4.5,
+    "totalPrice": 45.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NONG SHIM SOON CUP 6PK 6/2.64OZ",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 5.5,
+    "eachPrice": 5.5,
+    "totalPrice": 110.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS BOWL NOODLE 12/3.03OZ *HOT&SPICY",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 9.9,
+    "eachPrice": 9.9,
+    "totalPrice": 99.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS BOWL NOODLE 12/3.03OZ *LOBATER",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 9.9,
+    "eachPrice": 9.9,
+    "totalPrice": 49.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS BOWL NOODLE *12 *SPICY SHRIMP",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 9.9,
+    "eachPrice": 9.9,
+    "totalPrice": 49.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SAMYANG HOT CHICKEN RAMEN BIG BOWL 105 G/16",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 24.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SAMYANG HOT CHICKEN RAMEN 6/65G",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 6.9,
+    "eachPrice": 6.9,
+    "totalPrice": 69.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO NON -FRIED RAMYUN MILD 416G/8",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 40.0,
+    "eachPrice": 40.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NONG SHIM SOON VEGGIE NDLE 8/4PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 25.0,
+    "eachPrice": 25.0,
+    "totalPrice": 75.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS CHAPAGETI MULTI *4/6",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 19.5,
+    "eachPrice": 19.5,
+    "totalPrice": 97.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHRIMP CRACKER 20/75GR",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHRIMP CRACKER 20/75GR *SPICY",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LOTTE CHOCO PIE *12/8 GREEN TEA",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 54.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LOTTE CHOCO PIE *12/8 CACAOC",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 18.0,
+    "eachPrice": 18.0,
+    "totalPrice": 54.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BIRAK CINNERMON PUNCH *12/6 비락 수정과",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BIRAK RICE PUNCH 비락 식혜 *12/6",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LT PODO SACSAC PODO *12/6",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG JINJJA JJOLMYUN 150G/4/8진짜 쫄면",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PALDO JJAJANG NOODLE 4/4/200G 일품짜장",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 16.0,
+    "eachPrice": 16.0,
+    "totalPrice": 32.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG BEIJING SPICY SEAFOOD NOODLE *5/8 북경짬뽕",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 31.0,
+    "eachPrice": 31.0,
+    "totalPrice": 31.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS BLACK SHIN - 4PK /6 블랙신",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 96.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS SHIN SMALL CUP *6",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 5.5,
+    "eachPrice": 5.5,
+    "totalPrice": 110.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS BOWL NOODLE 12/3.03OZ *SHIN",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 9.9,
+    "eachPrice": 9.9,
+    "totalPrice": 198.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PALDO BUL JJAJANG *4/8 불짜장",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SAMYANG HOT CHICKEN RAMEN 140G/5/8 2X",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS KIMCHI RAMYUN MULTI 6/4PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 17.9,
+    "eachPrice": 17.9,
+    "totalPrice": 53.7
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NONG SHIM SHIN RAMYUN LIGHT 4/8/",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 68.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS KALGUKSU SPICY SEAFOOD 8/4/103 얼큰 장 칼국수",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 78.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SQUID SAUCE *12",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 135.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PEANUT (RED SHELL)110LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 159.0,
+    "eachPrice": 159.0,
+    "totalPrice": 159.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BLACK MUSHROOM 10KG",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 352.0,
+    "eachPrice": 352.0,
+    "totalPrice": 352.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJ SALTED MACKEREL 255G/36 고등어",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 124.0,
+    "eachPrice": 124.0,
+    "totalPrice": 124.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJ SEASONED BELT FISH 36/227G 갈치",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 145.0,
+    "eachPrice": 145.0,
+    "totalPrice": 145.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJ SEASONED SPANISH MACKEREL 255 G/36",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 129.0,
+    "eachPrice": 129.0,
+    "totalPrice": 129.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "JY FZ CUT POLLACK 17.65OZ/20 토막동태",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 62.5,
+    "eachPrice": 62.5,
+    "totalPrice": 62.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NAPA 배추",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 27.99,
+    "eachPrice": 27.99,
+    "totalPrice": 559.8
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "RADISH",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 22.99,
+    "eachPrice": 22.99,
+    "totalPrice": 114.95
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BABY RADISH *24",
+    "size": "CS",
+    "qty": 4,
+    "unitPrice": 12.0,
+    "eachPrice": 12.0,
+    "totalPrice": 48.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BABY NAPA 풋배추 *24",
+    "size": "CS",
+    "qty": 4,
+    "unitPrice": 12.0,
+    "eachPrice": 12.0,
+    "totalPrice": 48.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "YOUNG RADISH *50",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN PEPPER 풋고추 20LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 34.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "TWIST PEPPER 꽈리고추 20LB",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.0,
+    "eachPrice": 29.0,
+    "totalPrice": 29.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SESAME LEAVES 깻잎*100",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "eachPrice": 45.0,
+    "totalPrice": 45.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SPINACH",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 21.0,
+    "eachPrice": 21.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "FRESH GINSENG 수삼",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "GOLDEN KIWI 2LB/8",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 52.0,
+    "eachPrice": 52.0,
+    "totalPrice": 260.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ORGINIC SOY BEAN SPROUT 1.5lb",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KING OYSTER MUSHROOM 새송이 PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 81.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ENOKI MUSHROOM 이노끼 150G/34",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 111.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KING ONION 대파 *30",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 29.0,
+    "eachPrice": 29.0,
+    "totalPrice": 58.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OYSTER MUSHROOM 느타리 PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SHITAKE MUSHROOM 생표고버섯 PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 24.0,
+    "eachPrice": 24.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN SWEET POTATO 고구마 40lb",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 170.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KABOCHA",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 28.0,
+    "eachPrice": 28.0,
+    "totalPrice": 140.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PREMIUM ROASTED SEASONED SEAWEED A+ 30/*6",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 129.5,
+    "eachPrice": 129.5,
+    "totalPrice": 259.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ROASTED SEASONED SEAWEED 6/*24",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 40.0,
+    "eachPrice": 40.0,
+    "totalPrice": 80.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PERILLA-OIL ROASTED SEASONED SEAWEED 8/*16",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.5,
+    "eachPrice": 37.5,
+    "totalPrice": 37.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ROASTED SEAWEED OLIVE OIL 8/*16 올리브 도시락",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "RICE CAKE W/SAUCE 어묵 떡볶이 465G/15",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 57.0,
+    "eachPrice": 57.0,
+    "totalPrice": 57.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CWR COLD NOODLE 12/990G 청우림 평양식 물냉면",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 40.0,
+    "eachPrice": 40.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CWR COLE NOODEL (W/ HOT SAUCE) 12/216G청우림",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CWR COLD NOODLE (BIBIM +MUL ) 12/358G *2",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CWR JJOLMYUN 12/430G 청우림 쫄면",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NAGAIMO 마 22lb",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 69.0,
+    "eachPrice": 69.0,
+    "totalPrice": 69.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOBO 우엉 22lb",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ENOKI MUSHROOM 이노끼 150G/34",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 32.0,
+    "eachPrice": 32.0,
+    "totalPrice": 96.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KING OYSTER MUSHROOM 새송이 PK",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 81.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "TWAIN SPINACH",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO FIRM TOFU 부침두부 16OZ/12",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 16.0,
+    "eachPrice": 16.0,
+    "totalPrice": 160.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SOFT TOFU 찌개 두부 16OZ/12",
+    "size": "CS",
+    "qty": 7,
+    "unitPrice": 16.0,
+    "eachPrice": 16.0,
+    "totalPrice": 112.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SILKEN TOFU 연두부 16OZ/12",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 16.0,
+    "eachPrice": 16.0,
+    "totalPrice": 80.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO EXTRA SOFT TOFU 10OZ/30",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 90.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO FIRM TOFU (ORGANIC) 15.OZ/12",
+    "size": "CS",
+    "qty": 4,
+    "unitPrice": 19.0,
+    "eachPrice": 19.0,
+    "totalPrice": 76.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SOFT TOFU (ORGANIC) 15OZ/12",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 19.0,
+    "eachPrice": 19.0,
+    "totalPrice": 57.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO SILKEN TOFU (ORGANIC) 15OZ/12",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 19.0,
+    "eachPrice": 19.0,
+    "totalPrice": 57.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "QUAIL EGG 24PC/20",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR BANANA MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 112.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR STRAWBERRY MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 112.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "BGR MELON MILK 4/6/6.8OZ",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 22.5,
+    "eachPrice": 22.5,
+    "totalPrice": 112.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NDM KALGUKSU 칼국수 2.2LB/10",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NDM SOMYUN FZ 10/1KG #415028",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "ORGINIC SOY BEAN SPROUT 1.5lb",
+    "size": "CS",
+    "qty": 60,
+    "unitPrice": 1.5,
+    "eachPrice": 1.5,
+    "totalPrice": 90.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SOY BEAN SPROUT 10lb",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 6.0,
+    "eachPrice": 6.0,
+    "totalPrice": 12.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "MUNG BEAN SPROUT 10lb",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 5.5,
+    "eachPrice": 5.5,
+    "totalPrice": 16.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CRISPY SEAWEED SNACK 70G/12 섬마을 김자반",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 28.5,
+    "eachPrice": 28.5,
+    "totalPrice": 57.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LT 2% DRINK *6/5",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 16.5,
+    "eachPrice": 16.5,
+    "totalPrice": 16.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "LOTTE CIDER *6/5",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 16.5,
+    "eachPrice": 16.5,
+    "totalPrice": 16.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "GREEN PLUM DRINK 12/1.5L 초록매실",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 68.0
+   }
+  ],
+  "itemCount": 91,
+  "source": "namdaemun_pdf"
+ },
+ {
+  "invoiceNumber": "NDM-156769",
+  "vendor": "Namdaemun",
+  "date": "2022-12-13",
+  "dateDisplay": "12/13/22",
+  "customer": "KIMCHI #3 HOLLYWOOD",
+  "total": 2436.0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "JONGGA SPICY KIMCHI RAMEN *4/6 종가 김치 라면",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 28.0,
+    "eachPrice": 28.0,
+    "totalPrice": 56.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG JIN RAMYUN *18PK MILD",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.0,
+    "eachPrice": 15.0,
+    "totalPrice": 45.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SOW SEAFOOD PANCAKE 20/300G 해물전",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 76.0,
+    "eachPrice": 76.0,
+    "totalPrice": 152.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SOW KIMCHI PANCAKE 20/300G 김치전",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 76.0,
+    "eachPrice": 76.0,
+    "totalPrice": 152.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "HT HONEY BUTTER CHIP 10/120G *허니 버터칩",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 43.5,
+    "eachPrice": 43.5,
+    "totalPrice": 217.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN PEAR 8\"",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 25.0,
+    "eachPrice": 25.0,
+    "totalPrice": 500.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN PEAR 7\"",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 25.0,
+    "eachPrice": 25.0,
+    "totalPrice": 500.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREA PEAR 9\"",
+    "size": "CS",
+    "qty": 20,
+    "unitPrice": 25.0,
+    "eachPrice": 25.0,
+    "totalPrice": 500.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SESAME LEAVES *100",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 60.0,
+    "eachPrice": 60.0,
+    "totalPrice": 60.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN ZUCCHINI LONG",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PEPPER ORANGE BELL",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.0,
+    "eachPrice": 29.0,
+    "totalPrice": 29.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG HOT SAUCE FOR FISH STEW 20/110G 얼큰비법 매운탕 양념",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 40.0,
+    "eachPrice": 40.0,
+    "totalPrice": 40.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO BEIJING STYLE NOODLE W/BLACK BEAN 660G/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 66.0,
+    "eachPrice": 66.0,
+    "totalPrice": 66.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "SP CANNED BRAISED ANCHOVY W/ SPICY 24/50G 고추장",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 76.5,
+    "eachPrice": 76.5,
+    "totalPrice": 76.5
+   }
+  ],
+  "itemCount": 14,
+  "source": "namdaemun_duluth_pdf"
+ },
+ {
+  "invoiceNumber": "NDM-158857",
+  "vendor": "Namdaemun",
+  "date": "2023-01-03",
+  "dateDisplay": "01/03/23",
+  "customer": "KIMCHI #3 HOLLYWOOD",
+  "total": 228.9,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "FERMENTED GARLIC 12/250G 진주 흑마늘",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 129.9,
+    "eachPrice": 129.9,
+    "totalPrice": 129.9
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "JY BAKED BISQUIT RED BEAN 10/300G 단팥 모나카",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 49.5,
+    "eachPrice": 49.5,
+    "totalPrice": 49.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "JY BAKED BISQUIT CHEST NUT 10/300G 밤 모나카",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 49.5,
+    "eachPrice": 49.5,
+    "totalPrice": 49.5
+   }
+  ],
+  "itemCount": 3,
+  "source": "namdaemun_duluth_pdf"
+ },
+ {
+  "invoiceNumber": "NDM-158858",
+  "vendor": "Namdaemun",
+  "date": "2023-01-03",
+  "dateDisplay": "01/03/23",
+  "customer": "KIMCHI #3 HOLLYWOOD",
+  "total": 736.5,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KKM SOY SAUCE L- SODIUM 12/20oz",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 61.0,
+    "eachPrice": 61.0,
+    "totalPrice": 61.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "CJO SUNCHANG SOY BEAN PASTE 1kg/12 안심 콩된장",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 74.0,
+    "eachPrice": 74.0,
+    "totalPrice": 74.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS NEOGURI *4/8 *****",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 31.0,
+    "eachPrice": 31.0,
+    "totalPrice": 62.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "NS NEOGURI 6CUP",
+    "size": "CS",
+    "qty": 5,
+    "unitPrice": 7.5,
+    "eachPrice": 7.5,
+    "totalPrice": 37.5
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "OTG KIMCHI RAMYUN *5/8",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 39.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KIMCHI *WHOLE NAPA 5GL 포기김치 WHITE",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 112.0,
+    "eachPrice": 112.0,
+    "totalPrice": 112.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO TOFU ORG. SPROUT FIRM 14OZ/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO TOFU ORG. SPROUT SOFT 14OZ/12",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN SWEET POTATO 10LB",
+    "size": "CS",
+    "qty": 10,
+    "unitPrice": 17.5,
+    "eachPrice": 17.5,
+    "totalPrice": 175.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "KOREAN ZUCCHINI",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "",
+    "brand": "NAMDAEMUN",
+    "description": "PMO KIMCHI HOT POT UDONG *16/3.97OZ 김치 뚝배기 우동",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 80.0,
+    "eachPrice": 80.0,
+    "totalPrice": 80.0
+   }
+  ],
+  "itemCount": 11,
+  "source": "namdaemun_duluth_pdf"
+ },
+ {
+  "invoiceNumber": "SYSCO-519823",
+  "vendor": "Sysco",
+  "date": "2026-03-10",
+  "dateDisplay": "03/10/26",
+  "customer": "BB.Q CHICKEN KIMCHI MART FORT LAUDERDALE",
+  "total": 1604.56,
+  "branchId": "fort_lauderdale",
+  "items": [
+   {
+    "itemNo": "7792187",
+    "brand": "SYSCO",
+    "description": "CHICKEN CVP THIGH BNLS SKLS",
+    "size": "CS",
+    "qty": 7,
+    "unitPrice": 77.08,
+    "eachPrice": 77.08,
+    "totalPrice": 539.56
+   },
+   {
+    "itemNo": "9556481",
+    "brand": "SYSCO",
+    "description": "CHICKEN CVP WING 1&2JT JB 4-7",
+    "size": "CS",
+    "qty": 14,
+    "unitPrice": 75.65,
+    "eachPrice": 75.65,
+    "totalPrice": 1059.1
+   }
+  ],
+  "itemCount": 2,
+  "source": "sysco_pdf"
+ },
+ {
+  "invoiceNumber": "WL-394428",
+  "vendor": "Well Luck",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 1894.0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "91571",
+    "brand": "WELL LUCK",
+    "description": "HUNSTY 10/40PCS/25G VEGETABLE SPRING ROL (합시, 소춘권)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 111.0
+   },
+   {
+    "itemNo": "91573",
+    "brand": "WELL LUCK",
+    "description": "HUNSTY 10/20PCS/50G VEGETABLE SPRING ROL (합시, 소춘권)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 39.0,
+    "eachPrice": 39.0,
+    "totalPrice": 117.0
+   },
+   {
+    "itemNo": "91531",
+    "brand": "WELL LUCK",
+    "description": "SAVORY EXPRESS 20/20PCS/25G SHRIMP HAUKAU (호미쾌차, 하교)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 98.0,
+    "eachPrice": 98.0,
+    "totalPrice": 294.0
+   },
+   {
+    "itemNo": "94434",
+    "brand": "WELL LUCK",
+    "description": "PEKING #22 30/4 PC CABBAGE PORK BUN STE (백채저육포, 북경)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 68.0,
+    "eachPrice": 68.0,
+    "totalPrice": 136.0
+   },
+   {
+    "itemNo": "94435",
+    "brand": "WELL LUCK",
+    "description": "PEKING #23 30/4 PC PORK BUN STEAMED (저육포, 북경)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 68.0,
+    "eachPrice": 68.0,
+    "totalPrice": 136.0
+   },
+   {
+    "itemNo": "94436",
+    "brand": "WELL LUCK",
+    "description": "PEKING #24 30/4 PC LEEK CABBAGE PORK BU (구채저육포, 북경)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 68.0,
+    "eachPrice": 68.0,
+    "totalPrice": 136.0
+   },
+   {
+    "itemNo": "91545",
+    "brand": "WELL LUCK",
+    "description": "SAVORY EXPRESS 20/20PCS/25G ASSORTED DIM SUM (점심병반, 호미쾌차)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 98.0,
+    "eachPrice": 98.0,
+    "totalPrice": 98.0
+   },
+   {
+    "itemNo": "94467",
+    "brand": "WELL LUCK",
+    "description": "PEKING #61PK 12/15 PCS STEAMED CAKES (FOR P (합자(북경압용), 북경)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 57.0,
+    "eachPrice": 57.0,
+    "totalPrice": 171.0
+   },
+   {
+    "itemNo": "91353",
+    "brand": "WELL LUCK",
+    "description": "C.P 6/4/9.1 02 SHRIMP WONTON SOUP W (새우 완탕 수프)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 65.0,
+    "eachPrice": 65.0,
+    "totalPrice": 195.0
+   },
+   {
+    "itemNo": "91351",
+    "brand": "WELL LUCK",
+    "description": "C.P 10/50 PCS RAW SHRIMP WONTON (냉동 새우 완탕)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 125.0,
+    "eachPrice": 125.0,
+    "totalPrice": 250.0
+   },
+   {
+    "itemNo": "91217",
+    "brand": "WELL LUCK",
+    "description": "(32414) O'TASTY 10/24 OZ (8PC) VEG & CHICKEN BAO (전미, 계육포)",
+    "size": "CB",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "91216",
+    "brand": "WELL LUCK",
+    "description": "(32313) O'TASTY 10/24OZ (8PC) VEGE & PORK BAO (전미, 채육포)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 100.0
+   },
+   {
+    "itemNo": "91215",
+    "brand": "WELL LUCK",
+    "description": "(32111) O'TASTY 10/24OZ (8PC) B.B.Q.PORK BAO (전미, 차소포)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 100.0
+   }
+  ],
+  "itemCount": 13,
+  "source": "wellluck_xlsx"
+ },
+ {
+  "invoiceNumber": "WL-394427",
+  "vendor": "Well Luck",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 2106.0,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "91325",
+    "brand": "WELL LUCK",
+    "description": "SPRING HOME 24/5 PC ROTI PARATHA ONION (인도전병(양파로병), 제1가)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "92121",
+    "brand": "WELL LUCK",
+    "description": "GOURMET MASTER 30/300G WONTON WRAPPER LARGE (미장, 대운툰피)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "eachPrice": 42.0,
+    "totalPrice": 42.0
+   },
+   {
+    "itemNo": "94240",
+    "brand": "WELL LUCK",
+    "description": "HUNSTY 20/16 OZ GREEN SOYBEAN POD (합시패, 모두협)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 48.0,
+    "eachPrice": 48.0,
+    "totalPrice": 48.0
+   },
+   {
+    "itemNo": "91732",
+    "brand": "WELL LUCK",
+    "description": "SHAO MEI 6/4 PCS ICE BAR ROSE & PEACH (소미, 장미밀도 설고)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "91194",
+    "brand": "WELL LUCK",
+    "description": "(45111) O'TASTY RED 8/32 OZ PRE COOK PORK (전미, 즉식저육곽첩)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "91195",
+    "brand": "WELL LUCK",
+    "description": "(45515) O'TASTY YEL 8/32 OZ PRE COOK CHIC (전미, 즉식계육곽첩)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "91184",
+    "brand": "WELL LUCK",
+    "description": "(44925) O'TASTY 12/20 OZ DUMPLING PORK (전미, 옥미저육수교)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "eachPrice": 43.0,
+    "totalPrice": 43.0
+   },
+   {
+    "itemNo": "91180",
+    "brand": "WELL LUCK",
+    "description": "(44101) O'TASTY RED 12/30 PC G PORK & VEGE (전미, 저육수교)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "eachPrice": 43.0,
+    "totalPrice": 43.0
+   },
+   {
+    "itemNo": "91845",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI COFFE (감감, 커피마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91844",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI CHOCO (감감, 초콜릿 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91843",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI VANIL (감감, 향초 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91841",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI STRAW (감감, 초매 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91840",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI MANGO (감감, 망과 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91838",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI RED B (감감, 홍두 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91837",
+    "brand": "WELL LUCK",
+    "description": "SWEETY 6/6 PC ICE CREAM MOJI UBE P (감감, 자서 마서빙기림)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "91600",
+    "brand": "WELL LUCK",
+    "description": "HUNSTY 10/10 PC SCALLION PAN CAKE (합시패, 총유조병)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 54.0
+   },
+   {
+    "itemNo": "91531",
+    "brand": "WELL LUCK",
+    "description": "SAVORY EXPRESS 20/20PCS/25G SHRIMP HAUKAU (호미쾌차, 하교)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 98.0,
+    "eachPrice": 98.0,
+    "totalPrice": 98.0
+   },
+   {
+    "itemNo": "91532",
+    "brand": "WELL LUCK",
+    "description": "SAVORY EXPRESS 20/20PCS/25G SHRIMP SHAOMAI (호미쾌차, 하소매)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 98.0,
+    "eachPrice": 98.0,
+    "totalPrice": 196.0
+   },
+   {
+    "itemNo": "94434",
+    "brand": "WELL LUCK",
+    "description": "PEKING #22 30/4 PC CABBAGE PORK BUN STE (북경, 백채저육포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "94435",
+    "brand": "WELL LUCK",
+    "description": "PEKING #23 30/4 PC PORK BUN STEAMED (북경, 저육포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "94437",
+    "brand": "WELL LUCK",
+    "description": "PEKING #25 30/4 PC (97109) VEGETABLE BUN STEAME (북경, 소채포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "94438",
+    "brand": "WELL LUCK",
+    "description": "PEKING #26 30/4 PC(97105) CHASHUBOW STEAM OYST (북경, 증차소포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 72.0,
+    "eachPrice": 72.0,
+    "totalPrice": 72.0
+   },
+   {
+    "itemNo": "91545",
+    "brand": "WELL LUCK",
+    "description": "SAVORY EXPRESS 20/20PCS/25G ASSORTED DIM SUM (호미쾌차, 점심병반)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 98.0,
+    "eachPrice": 98.0,
+    "totalPrice": 196.0
+   },
+   {
+    "itemNo": "94455",
+    "brand": "WELL LUCK",
+    "description": "PEKING #74 12/6 PC XO STEAMED SEAFOOD & (북경, 해황해선포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 61.0,
+    "eachPrice": 61.0,
+    "totalPrice": 61.0
+   },
+   {
+    "itemNo": "91564",
+    "brand": "WELL LUCK",
+    "description": "GOURMET MASTER 10/2 LB LANZHOU FRESH NOODLE (미장, 란주라면)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "eachPrice": 41.0,
+    "totalPrice": 41.0
+   },
+   {
+    "itemNo": "91562",
+    "brand": "WELL LUCK",
+    "description": "GOURMET MASTER 10/2 LB SHANXI FRESH NOODLE (미장, 산서도삭면)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "eachPrice": 41.0,
+    "totalPrice": 41.0
+   },
+   {
+    "itemNo": "91561",
+    "brand": "WELL LUCK",
+    "description": "GOURMET MASTER 10/2 LB TAIWAN FRESH NOODLE (미장, 대만광면)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "eachPrice": 41.0,
+    "totalPrice": 41.0
+   },
+   {
+    "itemNo": "94466",
+    "brand": "WELL LUCK",
+    "description": "PEKING #95 12/6 PCS STEAMED BUNS W/CK&TE (북경, 일식소즙계포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 61.0,
+    "eachPrice": 61.0,
+    "totalPrice": 61.0
+   },
+   {
+    "itemNo": "94454",
+    "brand": "WELL LUCK",
+    "description": "PEKING #94 12/6 PC (06179) STEAMED BUNS W/PORK& (북경, 구불리저육포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 61.0,
+    "eachPrice": 61.0,
+    "totalPrice": 61.0
+   },
+   {
+    "itemNo": "91565",
+    "brand": "WELL LUCK",
+    "description": "GOURMET MASTER 10/2 LB FRESH LONGEVITY NOOD (미장, 장수면)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "eachPrice": 41.0,
+    "totalPrice": 41.0
+   },
+   {
+    "itemNo": "91351",
+    "brand": "WELL LUCK",
+    "description": "C.P 10/50 PCS RAW SHRIMP WONTON (냉동 새우 완탕)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 125.0,
+    "eachPrice": 125.0,
+    "totalPrice": 125.0
+   },
+   {
+    "itemNo": "91347",
+    "brand": "WELL LUCK",
+    "description": "C.P 8/5 PCS COOKED SHRIMP WONTON (새우 완탕)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.0,
+    "eachPrice": 28.0,
+    "totalPrice": 28.0
+   },
+   {
+    "itemNo": "91228",
+    "brand": "WELL LUCK",
+    "description": "O'TASTY 266802 8/6 PCS FILIPINO CHICKEN & C (전미, 필리핀 계육)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 100.0
+   },
+   {
+    "itemNo": "91217",
+    "brand": "WELL LUCK",
+    "description": "(32414) O'TASTY 10/24 OZ (8PC) VEG & CHICKEN BAO (전미, 계육포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "91216",
+    "brand": "WELL LUCK",
+    "description": "(32313) O'TASTY 10/24OZ (8PC) VEGE & PORK BAO (전미, 채육포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "91215",
+    "brand": "WELL LUCK",
+    "description": "(32111) O'TASTY 10/24OZ (8PC) B.B.Q.PORK BAO (전미, 차소포)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   }
+  ],
+  "itemCount": 36,
+  "source": "wellluck_xlsx"
+ },
+ {
+  "invoiceNumber": "WL-394426",
+  "vendor": "Well Luck",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 4577.09,
+  "branchId": "hollywood",
+  "items": [
+   {
+    "itemNo": "2526",
+    "brand": "WELL LUCK",
+    "description": "KOKUHO RICE 15LB (POLY) KOKUHO YELLOW (국보, 황국보미)",
+    "size": "BG",
+    "qty": 40,
+    "unitPrice": 9.5,
+    "eachPrice": 9.5,
+    "totalPrice": 380.0
+   },
+   {
+    "itemNo": "2528",
+    "brand": "WELL LUCK",
+    "description": "KOKUHO ROSE 15LB (POLY) KOKUHO PINK (국보, 홍국보미)",
+    "size": "BG",
+    "qty": 20,
+    "unitPrice": 17.5,
+    "eachPrice": 17.5,
+    "totalPrice": 350.0
+   },
+   {
+    "itemNo": "2532",
+    "brand": "WELL LUCK",
+    "description": "KOKUHO RICE 6/4.4 LB KOKUHO YELLOW CALROS (국보, 황국보미)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 22.0,
+    "eachPrice": 22.0,
+    "totalPrice": 44.0
+   },
+   {
+    "itemNo": "2538",
+    "brand": "WELL LUCK",
+    "description": "KOKUHO RICE 8/5LBS KOKUHO PINK (국보, 홍국보미)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 48.0,
+    "eachPrice": 48.0,
+    "totalPrice": 96.0
+   },
+   {
+    "itemNo": "5225",
+    "brand": "WELL LUCK",
+    "description": "ARGO 24/1 LB CORN STARCH (본지 율미분)",
+    "size": "CS",
+    "qty": 18,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 486.0
+   },
+   {
+    "itemNo": "22012",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/10 OZ WJS LITE SOY SAUCE (만가향, 저염간장)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 54.0
+   },
+   {
+    "itemNo": "22016",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/16.9 OZ WJS SOY SAUCE PASTE (만가향, 장유고)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "eachPrice": 37.0,
+    "totalPrice": 37.0
+   },
+   {
+    "itemNo": "22021",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/20 OZ WJS RICE VINEGAR (만가향, 미초)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "22022",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/10 OZ WJS RICE VINEGAR (만가향, 미초)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "eachPrice": 26.0,
+    "totalPrice": 26.0
+   },
+   {
+    "itemNo": "22025",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/10 OZ WJS WORCESTER SHIRE (만가향, 오초)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "eachPrice": 27.0,
+    "totalPrice": 27.0
+   },
+   {
+    "itemNo": "22032",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/10 OZ WJS ORGANIC TERIYAKI (만가향, 유기소고장)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "22061",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/16.9 OZ WJS SOY SAUCE LITE (만가향, 저염간장)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "22087",
+    "brand": "WELL LUCK",
+    "description": "MAEPLOY 12/730 ML SWEET CHILI SAUCE FO (MAEPLOY 태국, 계지조미장)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 34.0,
+    "eachPrice": 34.0,
+    "totalPrice": 68.0
+   },
+   {
+    "itemNo": "22101",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/6.7 OZ WJS ORGANIC TAMARI G (만가향, 유기대두감염간장 탁상병)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 38.0
+   },
+   {
+    "itemNo": "22104",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/20 OZ WJS PREMIUM RICE VIN (만가향, 진량 백미초)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 38.0,
+    "eachPrice": 38.0,
+    "totalPrice": 76.0
+   },
+   {
+    "itemNo": "22108",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/6.7 OZ WJS ORGANIC TAMARI G (만가향, 유기대두간장 탁상병)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "22109",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/6.7 OZ WJS ORGANIC DUMPLING (만가향, 유기 수교 점장)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "22110",
+    "brand": "WELL LUCK",
+    "description": "WANJASHAN 12/6.7 OZ WJS ORGANIC DUMPLING (만가향, 유기 수교 점장 라미)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "eachPrice": 36.0,
+    "totalPrice": 36.0
+   },
+   {
+    "itemNo": "23649",
+    "brand": "WELL LUCK",
+    "description": "PANTAI #SW03 12/730ML SWEET CHILI SAUCE FO (반태노화성, 점계첨랄장)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "eachPrice": 43.0,
+    "totalPrice": 43.0
+   },
+   {
+    "itemNo": "23651",
+    "brand": "WELL LUCK",
+    "description": "PANTAI #SP0B 24/300ML SWEETEN CHILI SAUCE (반태노화성, 춘권)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 44.0,
+    "eachPrice": 44.0,
+    "totalPrice": 44.0
+   },
+   {
+    "itemNo": "24767",
+    "brand": "WELL LUCK",
+    "description": "GOURMET TASTE 12/750 ML RICE COOKING WINE (가양원, 향미 료주)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "24769",
+    "brand": "WELL LUCK",
+    "description": "GOURMET TASTE 12/750 ML SHAO XING COOKING WI (가양원, 소흥 료주)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 30.0,
+    "eachPrice": 30.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "33201",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2034 6/20 CT FOIL TEABAG IMMUNE NATURA",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33204",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2037 6/20 CT FOIL TEABAG DIGEST NATURA",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33205",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2038 6/20 CT FOIL TEABAG SLEEP NATURAL",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33206",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2039 6/20 CT FOIL TEABAG BEAUTY NATURA",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 15.75
+   },
+   {
+    "itemNo": "33228",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #551 6/20 CT FOIL AHMAD TEA EARL GREY (아만, 영식 백작 홍차)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 15.75
+   },
+   {
+    "itemNo": "33229",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #555 6/20 CT FOIL BAGS AHMAD TEA ENGLISH BR (아만, 영국 조찬 홍차)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33230",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #694 6/20 CT FOIL AHMAD TEA APPLE (아만, 영식 평과 홍차)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33231",
+    "brand": "WELL LUCK",
+    "description": "AHMAD 6/20 BAGS #953 CT FOIL AHMAD TEA APRICOT",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33232",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #710 6/20 CT FOIL BAGS AHMAD TEA BLACKCURRA (아만, 영식 흑가륜 홍차)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33233",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #695 6/20 CT FOIL BAGS AHMAD TEA CINNAMON",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33234",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #697 6/20 CT FOIL BAGS AHMAD TEA LEMON & LI",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33235",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #698 6/20 CT FOIL BAGS AHMAD TEA MANGO",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33236",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #699 6/20 CT FOIL BAGS AHMAD TEA PEACH & PA (아만, 영식 밀도 백향과 홍차)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33237",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #952 6/20 CT FOIL BAGS AHMAD TEA RASPBERRY (아만, 영식 복분매 홍차)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33238",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #700 6/20 CT FOIL BAGS AHMAD TEA STRAWBERRY",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33240",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #001 6/20 CT FOIL BAGS AHMAD TEA ROOIBOS&CI",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33241",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #002 6/20 CT FOIL BAGS AHMAD TEA PEPPERMINT (아만, 영식 박하 영문 화과차)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33242",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #003 6/20 CT FOIL BAGS AHMAD TEA ROSEHIP&CH",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33244",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #005 6/20 CT FOIL BAGS AHMAD TEA MIXED BERR (아만, 영식 종합매 화과차)",
+    "size": "CS",
+    "qty": 4,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 63.0
+   },
+   {
+    "itemNo": "33245",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #006 6/20 CT FOIL BAGS AHMAD TEA CAMOMILE &",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33251",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #616 6/20 CT FOIL BAGS AHMAD TEA ENGLISH #1 (아만, 영식 영국차#1)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33253",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #894 6/20 CT FOIL BAGS AHMAD TEA GREEN TEA (아만, 녹차)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33254",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #399 6/20 CT FOIL BAGS AHMAD FRUIT TEA SELE (아만, 과일차)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33258",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #1242 6/20 CT FOIL BAGS AHMAD TEA RASPBERRY",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33260",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #847 6/20 CT FOIL BAGS AHMAD TEA DECAFF EVE (아만, 디카페인)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33276",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #1786 6/20 CT FOIL BAGS GREEN TEA MANG",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33290",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2019 6/20 CT FOIL BAGS AHMAD PEACH & RASPBE",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 47.25
+   },
+   {
+    "itemNo": "33291",
+    "brand": "WELL LUCK",
+    "description": "AHMAD #2492R 6/20 CT FOIL BAGS AHMAD CLOVE TEA",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 15.75,
+    "eachPrice": 15.75,
+    "totalPrice": 31.5
+   },
+   {
+    "itemNo": "33526",
+    "brand": "WELL LUCK",
+    "description": "WANG DERM 12/2.8 OZ AUTHENTIC THAI TEA (WANG DERM, 태식 밀크티)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "eachPrice": 50.0,
+    "totalPrice": 50.0
+   },
+   {
+    "itemNo": "42919",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 12/109 GM INT/NDL ART/M/CHICKE (금맥랑, 향고돈계 통면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42921",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 12/116 GM INT/NDL ART/STEW POR (금맥랑, 상탕 배골 통면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42922",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG JML 12/119 GM INT/NDL ART/SPICY BE (금맥랑, 경랄 우육 통면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42969",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 12/120 GM INT/NDL ART/BEFF W/ (금맥랑, 노산채 우육 통면)",
+    "size": "CS",
+    "qty": 3,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 59.37
+   },
+   {
+    "itemNo": "42970",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/JML 6/5/121G INT/NDL ART. BEEF W/ (금맥랑, 우육면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42971",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/109G INT/NDL CHICKEN W/ M (금맥랑, 진품 향고돈계면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42973",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/110G INT/NDL STEW BEEF FL (금맥랑, 진품 홍소 우육면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42974",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/113G INT/NDL STEW PORK FL (금맥랑, 진품 총소 배골면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42975",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/117G INT/NDL SPICY BEEF F (금맥랑, 진품 향랄 우육면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42977",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/104G INT/NDL SEAFOOD FLAV (금맥랑, 선하 어판면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42976",
+    "brand": "WELL LUCK",
+    "description": "HUA LONG/ JML 6/5/111G INT/NDL SPICY HOT BE (금맥랑, 진품 마랄 우육면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42764",
+    "brand": "WELL LUCK",
+    "description": "JML FOOD T IN CHINA 6/5/104G SHANXI DAO XIAO NOOD (금맥랑, 산서 도삭면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42763",
+    "brand": "WELL LUCK",
+    "description": "JML FOOD T IN CHINA 6/5/100G LANZHOU RAMEN CLASSI (금맥랑, 란주 라면)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 19.79,
+    "eachPrice": 19.79,
+    "totalPrice": 39.58
+   },
+   {
+    "itemNo": "42765",
+    "brand": "WELL LUCK",
+    "description": "JML FOOD T IN CHINA 6/5/108G HENAN BRAISED NOODLE (금맥랑, 하남 회면)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 26.5,
+    "eachPrice": 26.5,
+    "totalPrice": 53.0
+   },
+   {
+    "itemNo": "43593",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/250 GM SUNFLOWER SEED (흡흡, 향과자)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.88,
+    "eachPrice": 36.88,
+    "totalPrice": 36.88
+   },
+   {
+    "itemNo": "43594",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/250 GM SUNFLOWER SEED W/COC (흡흡, 야향 과자)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.88,
+    "eachPrice": 36.88,
+    "totalPrice": 36.88
+   },
+   {
+    "itemNo": "43595",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/250 GM SUNFLOWER SEED W/ORI (흡흡, 원미 과자)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.88,
+    "eachPrice": 36.88,
+    "totalPrice": 36.88
+   },
+   {
+    "itemNo": "43660",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/160 GM SUNFLOWER SEED CARAM (흡흡, 초당 과자)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.88,
+    "eachPrice": 36.88,
+    "totalPrice": 36.88
+   },
+   {
+    "itemNo": "43699",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/160 GM SUNFLOWER SEEDS BLAC (흡흡, 송로 과자)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 36.88,
+    "eachPrice": 36.88,
+    "totalPrice": 36.88
+   },
+   {
+    "itemNo": "43661",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 18/160 GM SUNFLOWER SEED CHINE (흡흡, 산핵도미 과자)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 29.17,
+    "eachPrice": 29.17,
+    "totalPrice": 58.34
+   },
+   {
+    "itemNo": "43731",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 4/12/51 G POTATO CRACKER ORIGI (흡흡, 극지취 원미)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 29.17,
+    "eachPrice": 29.17,
+    "totalPrice": 58.34
+   },
+   {
+    "itemNo": "43732",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 4/12/51 G POTATO CRACKER BBQ F (흡흡, 극지취 소고미)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.17,
+    "eachPrice": 29.17,
+    "totalPrice": 29.17
+   },
+   {
+    "itemNo": "43734",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 4/12/51 G POTATO CRACKER WASAB (흡흡, 극지취 개말미)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.17,
+    "eachPrice": 29.17,
+    "totalPrice": 29.17
+   },
+   {
+    "itemNo": "43735",
+    "brand": "WELL LUCK",
+    "description": "CHACHA 4/12/51 G POTATO CRACKER SCALL (흡흡, 극지취 향총미)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 29.17,
+    "eachPrice": 29.17,
+    "totalPrice": 29.17
+   },
+   {
+    "itemNo": "46303",
+    "brand": "WELL LUCK",
+    "description": "OKF 24/350 ML SPARKLING PCAN LEMON (OKF, 영문 기포수)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.57,
+    "eachPrice": 18.57,
+    "totalPrice": 18.57
+   },
+   {
+    "itemNo": "46302",
+    "brand": "WELL LUCK",
+    "description": "OKF 24/350 ML SPARKLING PCAN GRAPE (OKF, 포도 기포수)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.57,
+    "eachPrice": 18.57,
+    "totalPrice": 18.57
+   },
+   {
+    "itemNo": "46301",
+    "brand": "WELL LUCK",
+    "description": "OKF 24/350 ML SPARKLING PCAN MELON (OKF, 밀과 기포수)",
+    "size": "CS",
+    "qty": 2,
+    "unitPrice": 18.57,
+    "eachPrice": 18.57,
+    "totalPrice": 37.14
+   },
+   {
+    "itemNo": "46300",
+    "brand": "WELL LUCK",
+    "description": "OKF 24/350 ML SPARKLING PCAN STRAW (OKF, 초매 기포수)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.57,
+    "eachPrice": 18.57,
+    "totalPrice": 18.57
+   },
+   {
+    "itemNo": "46304",
+    "brand": "WELL LUCK",
+    "description": "OKF 24/350 ML SPARKLING PCAN WATER (OKF, 서과 기포수)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 18.57,
+    "eachPrice": 18.57,
+    "totalPrice": 18.57
+   },
+   {
+    "itemNo": "46270",
+    "brand": "WELL LUCK",
+    "description": "OKF 20/390 ML BLACK SUGAR MATCHA L (OKF, 흑당 말차 밀크티)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.0,
+    "eachPrice": 28.0,
+    "totalPrice": 28.0
+   },
+   {
+    "itemNo": "46271",
+    "brand": "WELL LUCK",
+    "description": "OKF 20/390 ML BLACK SUGAR MILK TEA (OKF, 흑당 밀크티)",
+    "size": "CS",
+    "qty": 1,
+    "unitPrice": 28.0,
+    "eachPrice": 28.0,
+    "totalPrice": 28.0
+   },
+   {
+    "itemNo": "99064",
+    "brand": "WELL LUCK",
+    "description": "40\"X48\" PALLET / SPL. INSTR",
+    "size": "EA",
+    "qty": 3,
+    "unitPrice": 10.0,
+    "eachPrice": 10.0,
+    "totalPrice": 30.0
+   },
+   {
+    "itemNo": "-",
+    "brand": "WELL LUCK",
+    "description": "Freight Charges-GA",
+    "size": "-",
+    "qty": 1,
+    "unitPrice": 0,
+    "eachPrice": 0,
+    "totalPrice": 220.0
+   }
+  ],
+  "itemCount": 84,
+  "source": "wellluck_xlsx"
+ },
+ {
+  "invoiceNumber": "JFC-1065350",
+  "vendor": "JFC",
+  "date": "2026-02-23",
+  "dateDisplay": "02/23/26",
+  "customer": "KIMCHI MART HOLLYWOOD",
+  "total": 5750.86,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "jfc_statement",
+  "note": "From JFC statement - grocery items"
+ },
+ {
+  "invoiceNumber": "JFC-1065351",
+  "vendor": "JFC",
+  "date": "2026-02-23",
+  "dateDisplay": "02/23/26",
+  "customer": "KIMCHI MART HOLLYWOOD",
+  "total": 330.7,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "jfc_statement",
+  "note": "From JFC statement - liquor"
+ },
+ {
+  "invoiceNumber": "BANDI-001",
+  "vendor": "Bandi Foods",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - PDF pending"
+ },
+ {
+  "invoiceNumber": "WEICHUAN-001",
+  "vendor": "Wei-Chuan",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - PDF pending"
+ },
+ {
+  "invoiceNumber": "TWOBROSFOOD-001",
+  "vendor": "Two Bros Food",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - catalogs available"
+ },
+ {
+  "invoiceNumber": "POCAS-001",
+  "vendor": "POCAS",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - offer sheets available"
+ },
+ {
+  "invoiceNumber": "EASTLAND-001",
+  "vendor": "Eastland Food",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - PDF pending"
+ },
+ {
+  "invoiceNumber": "BUCKHEAD-001",
+  "vendor": "Buckhead",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - PDF pending"
+ },
+ {
+  "invoiceNumber": "WALONG-001",
+  "vendor": "Walong",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - PDF pending"
+ },
+ {
+  "invoiceNumber": "OCM-001",
+  "vendor": "OCM",
+  "date": "2026-03-01",
+  "dateDisplay": "03/01/26",
+  "customer": "KIMCHI MART",
+  "total": 0,
+  "branchId": "hollywood",
+  "items": [],
+  "itemCount": 0,
+  "source": "gmail_search",
+  "note": "Vendor identified from Gmail - catalog available"
+ }
+]

@@ -1,0 +1,2648 @@
+[
+  {
+    "itemNo": "00002D",
+    "brand": "HANKUKMI",
+    "name": "PREMIUM MEDIUM GRAIN RICE (USA, 15 LB",
+    "qty": 4,
+    "unitPrice": 13.0,
+    "each": 13.0,
+    "total": 52.0
+  },
+  {
+    "itemNo": "00004D",
+    "brand": "HANKUKMI",
+    "name": "EXTRA FANCY RICE (5#_SUSHI RICE) 8X5 LB",
+    "qty": 1,
+    "unitPrice": 41.6,
+    "each": 5.2,
+    "total": 41.6
+  },
+  {
+    "itemNo": "00007D",
+    "brand": "HANKUKMI",
+    "name": "PREMIUM MEDIUM GRAIN RICE (USA, 40 LB",
+    "qty": 3,
+    "unitPrice": 27.0,
+    "each": 27.0,
+    "total": 81.0
+  },
+  {
+    "itemNo": "00009D",
+    "brand": "KINMAI",
+    "name": "PREMIUM GOLD SHORT GRAIN RICE (USA, 18 LB",
+    "qty": 2,
+    "unitPrice": 17.0,
+    "each": 17.0,
+    "total": 34.0
+  },
+  {
+    "itemNo": "00024D",
+    "brand": "RHEECHUN",
+    "name": "PREMIUM GRADE BROWN RICE (2#) 16X2 LB",
+    "qty": 1,
+    "unitPrice": 31.45,
+    "each": 1.97,
+    "total": 31.45
+  },
+  {
+    "itemNo": "00030D",
+    "brand": "RHEECHUN",
+    "name": "FANCY VARIETY RICE (USA, 15#_NEW) 15 LB",
+    "qty": 12,
+    "unitPrice": 10.2,
+    "each": 10.2,
+    "total": 122.4
+  },
+  {
+    "itemNo": "00033D",
+    "brand": "RHEECHUN",
+    "name": "FANCY VARIETY RICE (USA, 40#_NEW) 40 LB",
+    "qty": 5,
+    "unitPrice": 24.0,
+    "each": 24.0,
+    "total": 120.0
+  },
+  {
+    "itemNo": "01020D",
+    "brand": "THREEELEPHANT",
+    "name": "THAI SWEET RICE (5#) 10X5 LB",
+    "qty": 1,
+    "unitPrice": 43.2,
+    "each": 4.32,
+    "total": 43.2
+  },
+  {
+    "itemNo": "01029D",
+    "brand": "THREEELEPHANT",
+    "name": "THAI JASMINE RICE (THAILAND, 20#) 20 LB",
+    "qty": 2,
+    "unitPrice": 13.5,
+    "each": 13.5,
+    "total": 27.0
+  },
+  {
+    "itemNo": "01033D",
+    "brand": "THREEELEPHANT",
+    "name": "THAI JASMINE RICE (5#) 10X5 LB",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "each": 3.6,
+    "total": 36.0
+  },
+  {
+    "itemNo": "01045D",
+    "brand": "ASSI",
+    "name": "12 GRAIN RICE (OHAENG JABGOK_30 OZ) 24X30 OZ",
+    "qty": 1,
+    "unitPrice": 94.0,
+    "each": 3.92,
+    "total": 94.0
+  },
+  {
+    "itemNo": "01113K",
+    "brand": "ASSI",
+    "name": "ROASTED SESAME SEEDS (4#) 10X4 LB",
+    "qty": 1,
+    "unitPrice": 165.0,
+    "each": 16.5,
+    "total": 165.0
+  },
+  {
+    "itemNo": "01117D",
+    "brand": "ASSI",
+    "name": "BLACK SESAME SEEDS (4#) 10X4 LB",
+    "qty": 1,
+    "unitPrice": 165.0,
+    "each": 16.5,
+    "total": 165.0
+  },
+  {
+    "itemNo": "02022T",
+    "brand": "VINHTHUAN",
+    "name": "FLOUR FOR WET RICE PAPER 20X14.1 OZ",
+    "qty": 1,
+    "unitPrice": 36.555,
+    "each": 1.83,
+    "total": 36.56
+  },
+  {
+    "itemNo": "02024T",
+    "brand": "VINHTHUAN",
+    "name": "CRISP FRIED POWDER MIX 60X5.3 OZ",
+    "qty": 1,
+    "unitPrice": 45.9,
+    "each": 0.77,
+    "total": 45.9
+  },
+  {
+    "itemNo": "02054K",
+    "brand": "GOMPYO",
+    "name": "STRONG WHEAT FLOUR (5.5#) 6X5.5 LB",
+    "qty": 1,
+    "unitPrice": 25.5,
+    "each": 4.25,
+    "total": 25.5
+  },
+  {
+    "itemNo": "02150K",
+    "brand": "YISSINE",
+    "name": "PREMIUM TEMPURA BATTER MIX 10X2.2 LB",
+    "qty": 1,
+    "unitPrice": 23.0,
+    "each": 2.3,
+    "total": 23.0
+  },
+  {
+    "itemNo": "02192K",
+    "brand": "QONE",
+    "name": "BROWN SUGAR 16X2.2 LB",
+    "qty": 1,
+    "unitPrice": 35.0,
+    "each": 2.19,
+    "total": 35.0
+  },
+  {
+    "itemNo": "03026K",
+    "brand": "SEMPIO",
+    "name": "BREWED SOY SAUCE PREMIUM 501 12X29 OZ",
+    "qty": 1,
+    "unitPrice": 58.0,
+    "each": 4.83,
+    "total": 58.0
+  },
+  {
+    "itemNo": "03101C",
+    "brand": "OM",
+    "name": "WHITE COOKING WINE (08009) 12X20 OZ",
+    "qty": 1,
+    "unitPrice": 43.2,
+    "each": 3.6,
+    "total": 43.2
+  },
+  {
+    "itemNo": "03103C",
+    "brand": "EMPEROR",
+    "name": "COOKING WINE (YELLOW_20 OZ) 12X20 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 2.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "03156C",
+    "brand": "LKK",
+    "name": "CHAR SIU SAUCE (B.B.Q. SAUCE) 12X14 OZ",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 3.5,
+    "total": 42.0
+  },
+  {
+    "itemNo": "03162C",
+    "brand": "LKK",
+    "name": "SHRIMP SAUCE (FINELY GROUND_L) 12X12 OZ",
+    "qty": 1,
+    "unitPrice": 71.4,
+    "each": 5.95,
+    "total": 71.4
+  },
+  {
+    "itemNo": "03169C",
+    "brand": "LKK",
+    "name": "PANDA OYSTER SAUCE (32 OZ) 12X32 OZ",
+    "qty": 1,
+    "unitPrice": 50.15,
+    "each": 4.18,
+    "total": 50.15
+  },
+  {
+    "itemNo": "03172C",
+    "brand": "LKK",
+    "name": "PANDA OYSTER SAUCE (9 OZ) 12X9 OZ",
+    "qty": 1,
+    "unitPrice": 23.4,
+    "each": 1.95,
+    "total": 23.4
+  },
+  {
+    "itemNo": "03190C",
+    "brand": "DATUPUTI",
+    "name": "VINEGAR & SOY SAUCE 6X2X33.81",
+    "qty": 1,
+    "unitPrice": 26.35,
+    "each": 4.39,
+    "total": 26.35
+  },
+  {
+    "itemNo": "03202C",
+    "brand": "LKK",
+    "name": "SPICY BEAN SAUCE (MA PO SAUCE) 12X8 OZ",
+    "qty": 1,
+    "unitPrice": 36.8,
+    "each": 3.07,
+    "total": 36.8
+  },
+  {
+    "itemNo": "03221C",
+    "brand": "LKK",
+    "name": "SRIRACHA MAYONNAISE 12X15 OZ",
+    "qty": 1,
+    "unitPrice": 48.6,
+    "each": 4.05,
+    "total": 48.6
+  },
+  {
+    "itemNo": "03228C",
+    "brand": "LKK",
+    "name": "CHILI BEAN SAUCE (L) 12X13 OZ",
+    "qty": 1,
+    "unitPrice": 42.3,
+    "each": 3.53,
+    "total": 42.3
+  },
+  {
+    "itemNo": "03231C",
+    "brand": "LKK",
+    "name": "BLACK BEAN GARLIC SAUCE 12X13 OZ",
+    "qty": 1,
+    "unitPrice": 42.3,
+    "each": 3.53,
+    "total": 42.3
+  },
+  {
+    "itemNo": "03242D",
+    "brand": "KABUTO",
+    "name": "LESS SODIUM SOY SAUCE 12X10 OZ",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "each": 2.17,
+    "total": 26.0
+  },
+  {
+    "itemNo": "03244D",
+    "brand": "KABUTO",
+    "name": "STIR-FRY SAUCE 12X10 OZ",
+    "qty": 1,
+    "unitPrice": 22.0,
+    "each": 1.83,
+    "total": 22.0
+  },
+  {
+    "itemNo": "03249P",
+    "brand": "DATUPUTI",
+    "name": "SOY SAUCE 12X1 L",
+    "qty": 1,
+    "unitPrice": 26.35,
+    "each": 2.2,
+    "total": 26.35
+  },
+  {
+    "itemNo": "03250C",
+    "brand": "LKK",
+    "name": "CHIU CHOW STYLE CHILI OIL 12X7.2 OZ",
+    "qty": 1,
+    "unitPrice": 45.05,
+    "each": 3.75,
+    "total": 45.05
+  },
+  {
+    "itemNo": "03293T",
+    "brand": "SQUID",
+    "name": "FISH SAUCE (M) 12X25 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 2.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "03295T",
+    "brand": "SQUID",
+    "name": "FISH SAUCE (S) 12X10 OZ",
+    "qty": 1,
+    "unitPrice": 18.0,
+    "each": 1.5,
+    "total": 18.0
+  },
+  {
+    "itemNo": "03297C",
+    "brand": "LKK",
+    "name": "PREMIUM DARK SOY SAUCE 12X16.9 OZ",
+    "qty": 1,
+    "unitPrice": 29.75,
+    "each": 2.48,
+    "total": 29.75
+  },
+  {
+    "itemNo": "03315T",
+    "brand": "THREECRABS",
+    "name": "FISH SAUCE (S) 24X10.14 OZ",
+    "qty": 1,
+    "unitPrice": 95.0,
+    "each": 3.96,
+    "total": 95.0
+  },
+  {
+    "itemNo": "03331C",
+    "brand": "HUYFONG",
+    "name": "CHILI GARLIC SAUCE (M) 12X18 OZ",
+    "qty": 1,
+    "unitPrice": 44.0,
+    "each": 3.67,
+    "total": 44.0
+  },
+  {
+    "itemNo": "03332C",
+    "brand": "HUYFONG",
+    "name": "CHILI GARLIC SAUCE (S) 24X8 OZ",
+    "qty": 1,
+    "unitPrice": 44.0,
+    "each": 1.83,
+    "total": 44.0
+  },
+  {
+    "itemNo": "03353K",
+    "brand": "ASSI",
+    "name": "LESS SODIUM SOY SAUCE 12X28.4 OZ",
+    "qty": 1,
+    "unitPrice": 25.2,
+    "each": 2.1,
+    "total": 25.2
+  },
+  {
+    "itemNo": "03376C",
+    "brand": "LKK",
+    "name": "PREMIUM SOY SAUCE 6X59 OZ",
+    "qty": 1,
+    "unitPrice": 33.3,
+    "each": 5.55,
+    "total": 33.3
+  },
+  {
+    "itemNo": "03377C",
+    "brand": "LKK",
+    "name": "PANDA OYSTER SAUCE (18OZ) 12X18 OZ",
+    "qty": 1,
+    "unitPrice": 28.9,
+    "each": 2.41,
+    "total": 28.9
+  },
+  {
+    "itemNo": "03383T",
+    "brand": "HUYFONG",
+    "name": "SRIRACHA CHILI SAUCE (28 OZ) 12X28 OZ",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "each": 3.17,
+    "total": 38.0
+  },
+  {
+    "itemNo": "03384T",
+    "brand": "HUYFONG",
+    "name": "SRIRACHA CHILI SAUCE (17 OZ) 12X17 OZ",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "each": 3.17,
+    "total": 38.0
+  },
+  {
+    "itemNo": "03386C",
+    "brand": "HUYFONG",
+    "name": "SRIRACHA CHILI SAUCE (9 OZ) 24X9 OZ",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "each": 1.58,
+    "total": 38.0
+  },
+  {
+    "itemNo": "03394D",
+    "brand": "LAOGANMA",
+    "name": "CHILI OIL WITH FERMENTED SOYBEANS 24X9.88 OZ",
+    "qty": 1,
+    "unitPrice": 91.5,
+    "each": 3.81,
+    "total": 91.5
+  },
+  {
+    "itemNo": "03395D",
+    "brand": "LAOGANMA",
+    "name": "SPICY CHILI CRISP 24X7.41 OZ",
+    "qty": 1,
+    "unitPrice": 92.7,
+    "each": 3.86,
+    "total": 92.7
+  },
+  {
+    "itemNo": "03398C",
+    "brand": "ASSI",
+    "name": "RED CHILI HOT OIL (12 OZ) 12X12 OZ",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "each": 3.17,
+    "total": 38.0
+  },
+  {
+    "itemNo": "04131K",
+    "brand": "ASSI",
+    "name": "DUMPLING SAUCE 12X10 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 2.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "04137K",
+    "brand": "ASSI",
+    "name": "BEEF BROTH FOR NAENGMYEON 30X11.6 OZ",
+    "qty": 1,
+    "unitPrice": 14.0,
+    "each": 0.47,
+    "total": 14.0
+  },
+  {
+    "itemNo": "04138K",
+    "brand": "ASSI",
+    "name": "BEEF BROTH FOR NAENGMYEON 30X11.6 OZ",
+    "qty": 1,
+    "unitPrice": 14.0,
+    "each": 0.47,
+    "total": 14.0
+  },
+  {
+    "itemNo": "04151J",
+    "brand": "AJINOMOTO",
+    "name": "SOUP STOCK (BONITO HONDASHI_ 2.2#) 12X2.2 LB",
+    "qty": 1,
+    "unitPrice": 212.5,
+    "each": 17.71,
+    "total": 212.5
+  },
+  {
+    "itemNo": "04304K",
+    "brand": "ASSI",
+    "name": "BEEF SOUP STOCK (1.1#) 20X1.1 LB",
+    "qty": 1,
+    "unitPrice": 68.0,
+    "each": 3.4,
+    "total": 68.0
+  },
+  {
+    "itemNo": "05000J",
+    "brand": "KADOYA",
+    "name": "SESAME OIL (11 OZ) 12X11 OZ",
+    "qty": 2,
+    "unitPrice": 58.0,
+    "each": 4.83,
+    "total": 116.0
+  },
+  {
+    "itemNo": "05077K",
+    "brand": "ASSI",
+    "name": "SESAME OIL (L_52 OZ_CAN) 10X52 OZ",
+    "qty": 1,
+    "unitPrice": 165.5,
+    "each": 16.55,
+    "total": 165.5
+  },
+  {
+    "itemNo": "05081J",
+    "brand": "KADOYA",
+    "name": "SESAME OIL (CAN_56 OZ) 10X56 OZ",
+    "qty": 1,
+    "unitPrice": 170.0,
+    "each": 17.0,
+    "total": 170.0
+  },
+  {
+    "itemNo": "05082J",
+    "brand": "KADOYA",
+    "name": "SESAME OIL (22.1 OZ) 12X22.1 OZ",
+    "qty": 2,
+    "unitPrice": 111.35,
+    "each": 9.28,
+    "total": 222.7
+  },
+  {
+    "itemNo": "05084J",
+    "brand": "KADOYA",
+    "name": "SESAME OIL (5.5 OZ) 24X5.5 OZ",
+    "qty": 2,
+    "unitPrice": 68.0,
+    "each": 2.83,
+    "total": 136.0
+  },
+  {
+    "itemNo": "05194K",
+    "brand": "ASSI",
+    "name": "KOREAN BBQ MARINADE&SAUCE FOR 12X17.6 OZ",
+    "qty": 1,
+    "unitPrice": 32.0,
+    "each": 2.67,
+    "total": 32.0
+  },
+  {
+    "itemNo": "05211K",
+    "brand": "ASSI",
+    "name": "KOREAN BBQ MARINADE&SAUCE FOR RIBS 12X1.85 LB",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 3.5,
+    "total": 42.0
+  },
+  {
+    "itemNo": "05217K",
+    "brand": "ASSI",
+    "name": "KOREAN BBQ MARINADE&SAUCE FOR 12X1.85 LB",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 3.5,
+    "total": 42.0
+  },
+  {
+    "itemNo": "05309K",
+    "brand": "ASSI",
+    "name": "APPLE VINEGAR (900ML) 12X30.4 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "05388D",
+    "brand": "ASSI",
+    "name": "ROASTED SESAME SEEDS CRUSHED (7.5 12X7.5 OZ",
+    "qty": 1,
+    "unitPrice": 38.7,
+    "each": 3.23,
+    "total": 38.7
+  },
+  {
+    "itemNo": "05390D",
+    "brand": "ASSI",
+    "name": "ROASTED SESAME SEEDS (16 OZ_BTL) 12X16 OZ",
+    "qty": 1,
+    "unitPrice": 68.4,
+    "each": 5.7,
+    "total": 68.4
+  },
+  {
+    "itemNo": "05396D",
+    "brand": "ASSI",
+    "name": "ROASTED SESAME SEEDS CRUSHED (16 12X16 OZ",
+    "qty": 1,
+    "unitPrice": 62.05,
+    "each": 5.17,
+    "total": 62.05
+  },
+  {
+    "itemNo": "05403C",
+    "brand": "YISSINE",
+    "name": "SEA SALT (COARSE_3#) 16X3 LB",
+    "qty": 1,
+    "unitPrice": 18.9,
+    "each": 1.18,
+    "total": 18.9
+  },
+  {
+    "itemNo": "05405C",
+    "brand": "YISSINE",
+    "name": "SEA SALT (COARSE_6#) 8X6 LB",
+    "qty": 1,
+    "unitPrice": 18.9,
+    "each": 2.36,
+    "total": 18.9
+  },
+  {
+    "itemNo": "06048K",
+    "brand": "ASSI",
+    "name": "DRIED SLICED SHIITAKE MUSHROOM (3 20X3 OZ",
+    "qty": 1,
+    "unitPrice": 105.0,
+    "each": 5.25,
+    "total": 105.0
+  },
+  {
+    "itemNo": "06062C",
+    "brand": "ASSI",
+    "name": "DRIED SHIITAKE MUSHROOM (1#) 20X1 LB",
+    "qty": 1,
+    "unitPrice": 320.0,
+    "each": 16.0,
+    "total": 320.0
+  },
+  {
+    "itemNo": "06201C",
+    "brand": "ASSI",
+    "name": "ORGANIC PEELED ROASTED CHESTNUTS 40X3.5 OZ",
+    "qty": 1,
+    "unitPrice": 57.6,
+    "each": 1.44,
+    "total": 57.6
+  },
+  {
+    "itemNo": "06600D",
+    "brand": "ROSHNI",
+    "name": "RAW PEANUT W/SKIN 10X56 OZ",
+    "qty": 2,
+    "unitPrice": 52.2,
+    "each": 5.22,
+    "total": 104.4
+  },
+  {
+    "itemNo": "06622T",
+    "brand": "AROYD",
+    "name": "ORGANIC COCONUT MILK (14 OZ) 24X14 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 1.88,
+    "total": 45.0
+  },
+  {
+    "itemNo": "06624T",
+    "brand": "PIGEONBRAND",
+    "name": "RAMBUTAN IN SYRUP 24X20 OZ",
+    "qty": 1,
+    "unitPrice": 57.0,
+    "each": 2.38,
+    "total": 57.0
+  },
+  {
+    "itemNo": "06680T",
+    "brand": "MAEPLOY",
+    "name": "CHICKEN SWEET CHILI SAUCE (S) 24X12 OZ",
+    "qty": 1,
+    "unitPrice": 29.7,
+    "each": 1.24,
+    "total": 29.7
+  },
+  {
+    "itemNo": "06716T",
+    "brand": "COCK",
+    "name": "TAPIOCA PEARL (S) 50X14 OZ",
+    "qty": 1,
+    "unitPrice": 50.0,
+    "each": 1.0,
+    "total": 50.0
+  },
+  {
+    "itemNo": "06767T",
+    "brand": "THREEELEPHANT",
+    "name": "GLUTINOUS RICE FLOUR 24X16 OZ",
+    "qty": 1,
+    "unitPrice": 22.5,
+    "each": 0.94,
+    "total": 22.5
+  },
+  {
+    "itemNo": "06779T",
+    "brand": "PANTAI",
+    "name": "PAD THAI SAUCE (L) 12X35 OZ",
+    "qty": 1,
+    "unitPrice": 46.0,
+    "each": 3.83,
+    "total": 46.0
+  },
+  {
+    "itemNo": "06780T",
+    "brand": "PANTAI",
+    "name": "SWEET & SOUR SAUCE 12X29 OZ",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "each": 3.58,
+    "total": 43.0
+  },
+  {
+    "itemNo": "06838T",
+    "brand": "THREEELEPHANT",
+    "name": "BAMBOO SHOOT STRIP (PKG_16 OZ) 36X16 OZ",
+    "qty": 1,
+    "unitPrice": 57.6,
+    "each": 1.6,
+    "total": 57.6
+  },
+  {
+    "itemNo": "06867T",
+    "brand": "SAVOY",
+    "name": "COCONUT CREAM 24X13.5 OZ",
+    "qty": 2,
+    "unitPrice": 46.0,
+    "each": 1.92,
+    "total": 92.0
+  },
+  {
+    "itemNo": "06891T",
+    "brand": "AROYD",
+    "name": "COCONUT MILK 24X14 OZ",
+    "qty": 1,
+    "unitPrice": 39.6,
+    "each": 1.65,
+    "total": 39.6
+  },
+  {
+    "itemNo": "06907T",
+    "brand": "AROYD",
+    "name": "COCONUT MILK (UHT_ 1L) 12X33.8 OZ",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 3.5,
+    "total": 42.0
+  },
+  {
+    "itemNo": "07086K",
+    "brand": "ASSI",
+    "name": "DRIED SEAWEED (SANMOYOUNG_S) 30X3 OZ",
+    "qty": 1,
+    "unitPrice": 105.0,
+    "each": 3.5,
+    "total": 105.0
+  },
+  {
+    "itemNo": "07129K",
+    "brand": "KWANGCHEON",
+    "name": "ROASTED & SEASONED LAVER (8+2P) 10X10X0.17",
+    "qty": 2,
+    "unitPrice": 36.0,
+    "each": 3.6,
+    "total": 72.0
+  },
+  {
+    "itemNo": "07148K",
+    "brand": "KWANGCHEON",
+    "name": "ROASTED & SEASONED LAVER (8+2P) 10X10X0.17",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "each": 4.2,
+    "total": 84.0
+  },
+  {
+    "itemNo": "07196K",
+    "brand": "KWANGCHEON",
+    "name": "ROASTED & SEASONED LAVER (16P) 8X16X0.14",
+    "qty": 1,
+    "unitPrice": 43.2,
+    "each": 5.4,
+    "total": 43.2
+  },
+  {
+    "itemNo": "07199K",
+    "brand": "KWANGCHEON",
+    "name": "ROASTED & SEASONED LAVER (AVOCADO 8X16X0.14",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "each": 5.18,
+    "total": 41.4
+  },
+  {
+    "itemNo": "07300K",
+    "brand": "ASSI",
+    "name": "ROASTED & SEASONED LAVER (16+4P) 10X20X0.14",
+    "qty": 1,
+    "unitPrice": 54.0,
+    "each": 5.4,
+    "total": 54.0
+  },
+  {
+    "itemNo": "07301K",
+    "brand": "ASSI",
+    "name": "ROASTED & SEASONED LAVER (16+4P) 10X20X0.14",
+    "qty": 1,
+    "unitPrice": 55.8,
+    "each": 5.58,
+    "total": 55.8
+  },
+  {
+    "itemNo": "07307K",
+    "brand": "DONGWON",
+    "name": "ROASTED & SEASONED LAVER (PERILLA 10X12X0.16",
+    "qty": 1,
+    "unitPrice": 41.65,
+    "each": 4.17,
+    "total": 41.65
+  },
+  {
+    "itemNo": "07309K",
+    "brand": "GOMPYO",
+    "name": "FRIED CALAMARI SNACK 24X2.82 OZ",
+    "qty": 1,
+    "unitPrice": 135.0,
+    "each": 5.63,
+    "total": 135.0
+  },
+  {
+    "itemNo": "07322K",
+    "brand": "FRIED",
+    "name": "SEA CAJUN CRISPY SQUID SNACK 24X1.5 OZ",
+    "qty": 1,
+    "unitPrice": 93.0,
+    "each": 3.88,
+    "total": 93.0
+  },
+  {
+    "itemNo": "08001D",
+    "brand": "SAPPORO",
+    "name": "ICHIBAN RAMEN (ORIGINAL US24) 24X3.5 OZ",
+    "qty": 1,
+    "unitPrice": 16.0,
+    "each": 0.67,
+    "total": 16.0
+  },
+  {
+    "itemNo": "08021K",
+    "brand": "ASSI",
+    "name": "JAPCHAE NOODLES (L) 8X4 LB",
+    "qty": 2,
+    "unitPrice": 71.1,
+    "each": 8.89,
+    "total": 142.2
+  },
+  {
+    "itemNo": "08024K",
+    "brand": "ASSI",
+    "name": "SWEET POTATO NOODLES (JANGTEO) 44X12 OZ",
+    "qty": 1,
+    "unitPrice": 73.1,
+    "each": 1.66,
+    "total": 73.1
+  },
+  {
+    "itemNo": "08027K",
+    "brand": "ASSI",
+    "name": "SWEET POTATO NOODLES (JAPCHAE_1.5#) 15X1.5 LB",
+    "qty": 2,
+    "unitPrice": 50.4,
+    "each": 3.36,
+    "total": 100.8
+  },
+  {
+    "itemNo": "08038K",
+    "brand": "SAMYANG",
+    "name": "SAMYANG RAMEN (CUP_ 6P) 6X2.29 OZ",
+    "qty": 2,
+    "unitPrice": 7.0,
+    "each": 1.17,
+    "total": 14.0
+  },
+  {
+    "itemNo": "08055D",
+    "brand": "SAPPORO",
+    "name": "SHIO RAMEN (5P) 6X5X3.6 OZ",
+    "qty": 3,
+    "unitPrice": 23.0,
+    "each": 3.83,
+    "total": 69.0
+  },
+  {
+    "itemNo": "08087T",
+    "brand": "MAMA",
+    "name": "SHRIMP TOM YUM NOODLES (CUP) 12X2.47 OZ",
+    "qty": 1,
+    "unitPrice": 12.0,
+    "each": 1.0,
+    "total": 12.0
+  },
+  {
+    "itemNo": "08088T",
+    "brand": "MAMA",
+    "name": "CHICKEN NOODLES (CUP) 12X2.47 OZ",
+    "qty": 1,
+    "unitPrice": 12.0,
+    "each": 1.0,
+    "total": 12.0
+  },
+  {
+    "itemNo": "08089T",
+    "brand": "MAMA",
+    "name": "PORK NOODLES (CUP) 12X2.47 OZ",
+    "qty": 1,
+    "unitPrice": 12.0,
+    "each": 1.0,
+    "total": 12.0
+  },
+  {
+    "itemNo": "08110K",
+    "brand": "ASSI",
+    "name": "MAK-GUKSOO NOODLES (4#) 9X4 LB",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "each": 4.56,
+    "total": 41.0
+  },
+  {
+    "itemNo": "08111K",
+    "brand": "ASSI",
+    "name": "JJA-JANG NOODLES (4#) 9X4 LB",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "each": 4.56,
+    "total": 41.0
+  },
+  {
+    "itemNo": "08112K",
+    "brand": "ASSI",
+    "name": "UDON NOODLES (4#) 9X4 LB",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "each": 4.56,
+    "total": 41.0
+  },
+  {
+    "itemNo": "08118K",
+    "brand": "ASSI",
+    "name": "KAL-GUKSOO NOODLES (4#) 9X4 LB",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "each": 4.56,
+    "total": 41.0
+  },
+  {
+    "itemNo": "08142J",
+    "brand": "SAPPORO",
+    "name": "ICHIBAN RAMEN (BEEF) 24X3.5 OZ",
+    "qty": 1,
+    "unitPrice": 16.0,
+    "each": 0.67,
+    "total": 16.0
+  },
+  {
+    "itemNo": "08155K",
+    "brand": "SAMYANG",
+    "name": "BULDAK RAMEN (5P) 8X5X4.9 OZ",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 84.0
+  },
+  {
+    "itemNo": "08157K",
+    "brand": "SAMYANG",
+    "name": "BULDAK RAMEN (CUP_6P) 6X2.47 OZ",
+    "qty": 3,
+    "unitPrice": 9.0,
+    "each": 1.5,
+    "total": 27.0
+  },
+  {
+    "itemNo": "08179K",
+    "brand": "SAMYANG",
+    "name": "CHEESE BULDAK RAMEN (5P) 8X5X4.94 OZ",
+    "qty": 12,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 504.0
+  },
+  {
+    "itemNo": "08180K",
+    "brand": "NONGSHIM",
+    "name": "SHIN RAMEN (4P) 4X4X4.2 OZ",
+    "qty": 5,
+    "unitPrice": 16.0,
+    "each": 4.0,
+    "total": 80.0
+  },
+  {
+    "itemNo": "08185K",
+    "brand": "PALDO",
+    "name": "NAMJA RAMEN (5P) 4X5X4.06 OZ",
+    "qty": 2,
+    "unitPrice": 18.0,
+    "each": 4.5,
+    "total": 36.0
+  },
+  {
+    "itemNo": "08193K",
+    "brand": "NONGSHIM",
+    "name": "SHIN RAMEN BLACK (CUP_6P) 6X3.5 OZ",
+    "qty": 4,
+    "unitPrice": 12.5,
+    "each": 2.08,
+    "total": 50.0
+  },
+  {
+    "itemNo": "08206K",
+    "brand": "NONGSHIM",
+    "name": "TEMPURA UDON (CUP_6P) 6X2.64 OZ",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "each": 1.17,
+    "total": 35.0
+  },
+  {
+    "itemNo": "08220K",
+    "brand": "NONGSHIM",
+    "name": "SHIN RAMEN (CUP_6P) 6X2.64 OZ",
+    "qty": 5,
+    "unitPrice": 7.0,
+    "each": 1.17,
+    "total": 35.0
+  },
+  {
+    "itemNo": "08224K",
+    "brand": "NONGSHIM",
+    "name": "KIMCHI RAMEN (BOWL) 12X3.03 OZ",
+    "qty": 2,
+    "unitPrice": 13.0,
+    "each": 1.08,
+    "total": 26.0
+  },
+  {
+    "itemNo": "08225K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP RAMEN (CUP_6P) 6X2.3 OZ",
+    "qty": 4,
+    "unitPrice": 7.0,
+    "each": 1.17,
+    "total": 28.0
+  },
+  {
+    "itemNo": "08286K",
+    "brand": "NONGSHIM",
+    "name": "SOON RAMEN (CUP_6P) 6X2.64 OZ",
+    "qty": 8,
+    "unitPrice": 7.0,
+    "each": 1.17,
+    "total": 56.0
+  },
+  {
+    "itemNo": "08288K",
+    "brand": "OTOKI",
+    "name": "KIMCHI RAMEN (5P) 8X5X4.23 OZ",
+    "qty": 1,
+    "unitPrice": 45.05,
+    "each": 5.63,
+    "total": 45.05
+  },
+  {
+    "itemNo": "08293K",
+    "brand": "NONGSHIM",
+    "name": "CHICKEN RAMEN (BOWL_MILD) 12X3.03 OZ",
+    "qty": 2,
+    "unitPrice": 13.0,
+    "each": 1.08,
+    "total": 26.0
+  },
+  {
+    "itemNo": "08324K",
+    "brand": "OTOKI",
+    "name": "JIN RAMEN CUP (SPICY) 6X2.29 OZ",
+    "qty": 4,
+    "unitPrice": 6.39,
+    "each": 1.07,
+    "total": 25.56
+  },
+  {
+    "itemNo": "08325K",
+    "brand": "OTOKI",
+    "name": "JIN RAMEN CUP (MILD) 6X2.29 OZ",
+    "qty": 4,
+    "unitPrice": 6.39,
+    "each": 1.07,
+    "total": 25.56
+  },
+  {
+    "itemNo": "08344K",
+    "brand": "NONGSHIM",
+    "name": "SHIN RAMEN BLACK (4P) 4X4X4.2 OZ",
+    "qty": 5,
+    "unitPrice": 28.0,
+    "each": 7.0,
+    "total": 140.0
+  },
+  {
+    "itemNo": "08345K",
+    "brand": "NONGSHIM",
+    "name": "NEOGURI UDON (4P_SPICY SEAFOOD) 4X4X4.2 OZ",
+    "qty": 2,
+    "unitPrice": 18.0,
+    "each": 4.5,
+    "total": 36.0
+  },
+  {
+    "itemNo": "08348K",
+    "brand": "NONGSHIM",
+    "name": "CHAPAGETTI NOODLES (4P) 4X4X4.5 OZ",
+    "qty": 5,
+    "unitPrice": 18.0,
+    "each": 4.5,
+    "total": 90.0
+  },
+  {
+    "itemNo": "08389K",
+    "brand": "NONGSHIM",
+    "name": "TONKOTSU KUROMAYU (BIG BOWL) 6X3.56 OZ",
+    "qty": 5,
+    "unitPrice": 13.5,
+    "each": 2.25,
+    "total": 67.5
+  },
+  {
+    "itemNo": "08407K",
+    "brand": "OTOKI",
+    "name": "CHEDDAR CHEESY RAMEN (4P) 8X4X3.92 OZ",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 84.0
+  },
+  {
+    "itemNo": "08408K",
+    "brand": "OTOKI",
+    "name": "SPICY CHEESY RAMEN (4P) 8X4X3.92 OZ",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 84.0
+  },
+  {
+    "itemNo": "08444K",
+    "brand": "SAMYANG",
+    "name": "CARBONARA BULDAK RAMEN (BIG BOWL) 6X3.7 OZ",
+    "qty": 10,
+    "unitPrice": 13.5,
+    "each": 2.25,
+    "total": 135.0
+  },
+  {
+    "itemNo": "08454K",
+    "brand": "PALDO",
+    "name": "LOBSTER RAMEN 4X4X4.23 OZ",
+    "qty": 2,
+    "unitPrice": 17.0,
+    "each": 4.25,
+    "total": 34.0
+  },
+  {
+    "itemNo": "08465K",
+    "brand": "SAMYANG",
+    "name": "2X SPICY BULDAK RAMEN (5P) 8X5X4.9 OZ",
+    "qty": 10,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 420.0
+  },
+  {
+    "itemNo": "08478K",
+    "brand": "SAMYANG",
+    "name": "BULDAK RAMEN 2X SPICY (CUP_ 6P) 6X2.46 OZ",
+    "qty": 4,
+    "unitPrice": 9.0,
+    "each": 1.5,
+    "total": 36.0
+  },
+  {
+    "itemNo": "08482K",
+    "brand": "SAMYANG",
+    "name": "QUATTRO CHEESE BULDAK RAMEN (5P) 8X5X5.11 OZ",
+    "qty": 17,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 714.0
+  },
+  {
+    "itemNo": "08484K",
+    "brand": "SAMYANG",
+    "name": "CARBO BULDAK RAMEN (CUP_6P) 6X2.82 OZ",
+    "qty": 10,
+    "unitPrice": 9.0,
+    "each": 1.5,
+    "total": 90.0
+  },
+  {
+    "itemNo": "08496K",
+    "brand": "SAMYANG",
+    "name": "SWICY BULDAK RAMEN (BIG BOWL) 6X3.7 OZ",
+    "qty": 4,
+    "unitPrice": 13.5,
+    "each": 2.25,
+    "total": 54.0
+  },
+  {
+    "itemNo": "08497K",
+    "brand": "SAMYANG",
+    "name": "TACO BULDAK RAMEN (BIG BOWL) 6X3.7 OZ",
+    "qty": 4,
+    "unitPrice": 13.5,
+    "each": 2.25,
+    "total": 54.0
+  },
+  {
+    "itemNo": "08499K",
+    "brand": "SAMYANG",
+    "name": "BULDAK TOPOKKI (BIG BOWL) 16X6.35 OZ",
+    "qty": 2,
+    "unitPrice": 55.0,
+    "each": 3.44,
+    "total": 110.0
+  },
+  {
+    "itemNo": "08500K",
+    "brand": "SAMYANG",
+    "name": "CARBONARA BULDAK TOPOKKI (BIG BOWL)16X6.31 OZ",
+    "qty": 5,
+    "unitPrice": 55.0,
+    "each": 3.44,
+    "total": 275.0
+  },
+  {
+    "itemNo": "08525K",
+    "brand": "DONGWON",
+    "name": "SPICY & SWEET TOPOKKI 16X8.47 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 2.81,
+    "total": 45.0
+  },
+  {
+    "itemNo": "08526K",
+    "brand": "DONGWON",
+    "name": "CHEESE TOPOKKI 16X8.47 OZ",
+    "qty": 1,
+    "unitPrice": 46.8,
+    "each": 2.93,
+    "total": 46.8
+  },
+  {
+    "itemNo": "08527K",
+    "brand": "DONGWON",
+    "name": "HOT & SPICY TOPOKKI 16X8.47 OZ",
+    "qty": 1,
+    "unitPrice": 48.0,
+    "each": 3.0,
+    "total": 48.0
+  },
+  {
+    "itemNo": "08543K",
+    "brand": "DONGWON",
+    "name": "ROSE TOPOKKI 10X14.11 OZ",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "each": 4.3,
+    "total": 43.0
+  },
+  {
+    "itemNo": "08577K",
+    "brand": "ASSI",
+    "name": "SPICY & SWEET RAPOKKI 6X5.11 OZ",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "each": 2.5,
+    "total": 15.0
+  },
+  {
+    "itemNo": "08578K",
+    "brand": "ASSI",
+    "name": "JJAJANG RAPOKKI 6X5.11 OZ",
+    "qty": 1,
+    "unitPrice": 15.0,
+    "each": 2.5,
+    "total": 15.0
+  },
+  {
+    "itemNo": "08607V",
+    "brand": "VIETWAY",
+    "name": "RICE NOODLES (S) 30X14 OZ",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "each": 1.43,
+    "total": 43.0
+  },
+  {
+    "itemNo": "08638K",
+    "brand": "PALDO",
+    "name": "GOMTANG MYON (KING CUP, 6P) 6X3.7 OZ",
+    "qty": 3,
+    "unitPrice": 10.26,
+    "each": 1.71,
+    "total": 30.78
+  },
+  {
+    "itemNo": "08646K",
+    "brand": "SAMYANG",
+    "name": "YAKISOBA BULDAK RAMEN (5P) 8X5X4.4 OZ",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 42.0
+  },
+  {
+    "itemNo": "08647K",
+    "brand": "SAMYANG",
+    "name": "ROSE BULDAK RAMEN (5P) 8X5X4.93 OZ",
+    "qty": 2,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 84.0
+  },
+  {
+    "itemNo": "08649K",
+    "brand": "OTOKI",
+    "name": "JIN RAMEN BIG BOWL (SPICY) 6X3.88 OZ",
+    "qty": 4,
+    "unitPrice": 7.7,
+    "each": 1.28,
+    "total": 30.8
+  },
+  {
+    "itemNo": "08650K",
+    "brand": "OTOKI",
+    "name": "JIN RAMEN BIG BOWL (MILD) 6X3.88 OZ",
+    "qty": 4,
+    "unitPrice": 8.19,
+    "each": 1.37,
+    "total": 32.76
+  },
+  {
+    "itemNo": "08653K",
+    "brand": "SAMYANG",
+    "name": "TANGLE GARLIC OIL PASTA 8X4X3.52 OZ",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 5.25,
+    "total": 42.0
+  },
+  {
+    "itemNo": "08656K",
+    "brand": "PALDO",
+    "name": "VOLCANO CHICKEN NOODLE (4P) 4X4X4.93 OZ",
+    "qty": 1,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 19.0
+  },
+  {
+    "itemNo": "08657K",
+    "brand": "PALDO",
+    "name": "VOLCANO CHICKEN NOODLE KING CUP 6X3.88 OZ",
+    "qty": 2,
+    "unitPrice": 10.5,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "08671K",
+    "brand": "PALDO",
+    "name": "VOLCANO CARBONARA CHICKEN NOODLE 6X3.7 OZ",
+    "qty": 2,
+    "unitPrice": 10.8,
+    "each": 1.8,
+    "total": 21.6
+  },
+  {
+    "itemNo": "08714K",
+    "brand": "PALDO",
+    "name": "JJAJANG RAMEN (KING CUP_BLACK BEAN) 12X6.7 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "08717K",
+    "brand": "PALDO",
+    "name": "JJAJANG RAMEN (4P) 8X4X7.16 OZ",
+    "qty": 1,
+    "unitPrice": 42.3,
+    "each": 5.29,
+    "total": 42.3
+  },
+  {
+    "itemNo": "08722K",
+    "brand": "PALDO",
+    "name": "BIBIMMEN RAMEN (5P) 4X5X4.58 OZ",
+    "qty": 2,
+    "unitPrice": 17.1,
+    "each": 4.28,
+    "total": 34.2
+  },
+  {
+    "itemNo": "08724K",
+    "brand": "PALDO",
+    "name": "GOMTANG NOODLES (5P) 4X5X3.59 OZ",
+    "qty": 2,
+    "unitPrice": 17.0,
+    "each": 4.25,
+    "total": 34.0
+  },
+  {
+    "itemNo": "08729K",
+    "brand": "OTOKI",
+    "name": "JIN JJAJANG (4P) 8X4X4.76 OZ",
+    "qty": 1,
+    "unitPrice": 45.6,
+    "each": 5.7,
+    "total": 45.6
+  },
+  {
+    "itemNo": "08734K",
+    "brand": "PALDO",
+    "name": "JJAJANG RAMEN (4P_BLACK BEAN) 4X4X7.05 OZ",
+    "qty": 2,
+    "unitPrice": 18.9,
+    "each": 4.73,
+    "total": 37.8
+  },
+  {
+    "itemNo": "08736K",
+    "brand": "PALDO",
+    "name": "SEAFOOD RAMEN (5P) 4X5X4.23 OZ",
+    "qty": 1,
+    "unitPrice": 19.8,
+    "each": 4.95,
+    "total": 19.8
+  },
+  {
+    "itemNo": "08791T",
+    "brand": "EVERGREEN",
+    "name": "COCONUT MILK DRINK W/JELLY (ORGINAL)24X9.8 OZ",
+    "qty": 1,
+    "unitPrice": 23.0,
+    "each": 0.96,
+    "total": 23.0
+  },
+  {
+    "itemNo": "08792T",
+    "brand": "EVERGREEN",
+    "name": "COCONUT MILK DRINK W/JELLY (MANGO) 24X9.8 OZ",
+    "qty": 1,
+    "unitPrice": 23.0,
+    "each": 0.96,
+    "total": 23.0
+  },
+  {
+    "itemNo": "08794T",
+    "brand": "EVERGREEN",
+    "name": "COCONUT MILK DRINK W/JELLY (BANANA)24X9.8 OZ",
+    "qty": 1,
+    "unitPrice": 23.0,
+    "each": 0.96,
+    "total": 23.0
+  },
+  {
+    "itemNo": "08805K",
+    "brand": "PALDO",
+    "name": "PREMIUM GOMTANG RAMEN (4P) 8X4X4.41 OZ",
+    "qty": 1,
+    "unitPrice": 40.5,
+    "each": 5.06,
+    "total": 40.5
+  },
+  {
+    "itemNo": "08827K",
+    "brand": "NONGSHIM",
+    "name": "FRESH UDON (BOWL_ 5P) 5X9.73 OZ",
+    "qty": 1,
+    "unitPrice": 19.5,
+    "each": 3.9,
+    "total": 19.5
+  },
+  {
+    "itemNo": "08888K",
+    "brand": "LOTTE",
+    "name": "PEPERO (L) 9X6.35 OZ",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "each": 4.0,
+    "total": 36.0
+  },
+  {
+    "itemNo": "08911K",
+    "brand": "YOUNGPOONG",
+    "name": "TOPOKKI RICE CAKE W/ SAUCE (CUP) 30X4.9 OZ",
+    "qty": 1,
+    "unitPrice": 43.2,
+    "each": 1.44,
+    "total": 43.2
+  },
+  {
+    "itemNo": "08913K",
+    "brand": "YOUNGPOONG",
+    "name": "TOPOKKI RICE CAKE W/ BLACK BEAN 30X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "each": 1.43,
+    "total": 43.0
+  },
+  {
+    "itemNo": "08915K",
+    "brand": "NONGSHIM",
+    "name": "BANANA FLAVORED SNACK (L) 6X6.34 OZ",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "each": 6.0,
+    "total": 36.0
+  },
+  {
+    "itemNo": "08960K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP CRACKER (S) 20X2.64 OZ",
+    "qty": 1,
+    "unitPrice": 28.8,
+    "each": 1.44,
+    "total": 28.8
+  },
+  {
+    "itemNo": "08961K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP CRACKER (HOT & SPICY) 20X2.64 OZ",
+    "qty": 1,
+    "unitPrice": 29.0,
+    "each": 1.45,
+    "total": 29.0
+  },
+  {
+    "itemNo": "08962K",
+    "brand": "NONGSHIM",
+    "name": "BANANA FLAVORED SNACK (S) 20X1.58 OZ",
+    "qty": 1,
+    "unitPrice": 28.8,
+    "each": 1.44,
+    "total": 28.8
+  },
+  {
+    "itemNo": "09227C",
+    "brand": "UNCLEPOP",
+    "name": "HIGHLAND BARLEY RICE STICK (SESAME) 10X14.1 OZ",
+    "qty": 1,
+    "unitPrice": 32.0,
+    "each": 3.2,
+    "total": 32.0
+  },
+  {
+    "itemNo": "09302C",
+    "brand": "HONGYUAN",
+    "name": "GUAVA CANDY 30X12.33 OZ",
+    "qty": 1,
+    "unitPrice": 62.0,
+    "each": 2.07,
+    "total": 62.0
+  },
+  {
+    "itemNo": "09362K",
+    "brand": "KABUTO",
+    "name": "GINGER CANDY (LEMON) 30X3.53 OZ",
+    "qty": 1,
+    "unitPrice": 39.6,
+    "each": 1.32,
+    "total": 39.6
+  },
+  {
+    "itemNo": "09404K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP CRACKER (L) 6X14.1 OZ",
+    "qty": 1,
+    "unitPrice": 38.0,
+    "each": 6.33,
+    "total": 38.0
+  },
+  {
+    "itemNo": "09463K",
+    "brand": "LOTTE",
+    "name": "WHITE COOKIE PEPERO (S) 40X1.13 OZ",
+    "qty": 1,
+    "unitPrice": 44.0,
+    "each": 1.1,
+    "total": 44.0
+  },
+  {
+    "itemNo": "09497K",
+    "brand": "LOTTE",
+    "name": "BUTTER COCONUT BISCUIT (L) 12X10.58 OZ",
+    "qty": 1,
+    "unitPrice": 48.0,
+    "each": 4.0,
+    "total": 48.0
+  },
+  {
+    "itemNo": "09513C",
+    "brand": "ROYALFAMILY",
+    "name": "TARO MOCHI 24X7.4 OZ",
+    "qty": 1,
+    "unitPrice": 35.0,
+    "each": 1.46,
+    "total": 35.0
+  },
+  {
+    "itemNo": "09552C",
+    "brand": "ROYALFAMILY",
+    "name": "LYCHEE MOCHI (6P) 24X7.41 OZ",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "each": 1.54,
+    "total": 37.0
+  },
+  {
+    "itemNo": "09554C",
+    "brand": "ROYALFAMILY",
+    "name": "MANGO MOCHI (6P) 24X7.41 OZ",
+    "qty": 1,
+    "unitPrice": 37.0,
+    "each": 1.54,
+    "total": 37.0
+  },
+  {
+    "itemNo": "09665K",
+    "brand": "ORION",
+    "name": "POCA CHIP (ORIGINAL_L) 12X4.59 OZ",
+    "qty": 1,
+    "unitPrice": 35.0,
+    "each": 2.92,
+    "total": 35.0
+  },
+  {
+    "itemNo": "09673K",
+    "brand": "ORION",
+    "name": "SWING CHIP (HOT PEPPER PASTE_L) 12X4.37 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 2.83,
+    "total": 34.0
+  },
+  {
+    "itemNo": "09700J",
+    "brand": "KABUTO",
+    "name": "RICE CRACKERS (SHELLY SENBEI) 10X11.3 OZ",
+    "qty": 3,
+    "unitPrice": 30.6,
+    "each": 3.06,
+    "total": 91.8
+  },
+  {
+    "itemNo": "09743K",
+    "brand": "ORION",
+    "name": "PEANUT CRUNCH (L) 18X5.89 OZ",
+    "qty": 1,
+    "unitPrice": 47.7,
+    "each": 2.65,
+    "total": 47.7
+  },
+  {
+    "itemNo": "09746K",
+    "brand": "KABUTO",
+    "name": "CORN CHIP 10X8.4 OZ",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "each": 2.7,
+    "total": 27.0
+  },
+  {
+    "itemNo": "09845K",
+    "brand": "NONGSHIM",
+    "name": "CUTTLEFISH SNACK (L) 6X9.17 OZ",
+    "qty": 1,
+    "unitPrice": 41.0,
+    "each": 6.83,
+    "total": 41.0
+  },
+  {
+    "itemNo": "09986K",
+    "brand": "LOTTE",
+    "name": "SOFT DRINK 2PER (PEACH_1.5 L) 12X1.5 L",
+    "qty": 1,
+    "unitPrice": 43.35,
+    "each": 3.61,
+    "total": 43.35
+  },
+  {
+    "itemNo": "10437K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (CHOCO CHURROS) 14X5.65 OZ",
+    "qty": 3,
+    "unitPrice": 36.0,
+    "each": 2.57,
+    "total": 108.0
+  },
+  {
+    "itemNo": "10459K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP CRACKER (WASABI_S) 20X2.64 OZ",
+    "qty": 1,
+    "unitPrice": 30.6,
+    "each": 1.53,
+    "total": 30.6
+  },
+  {
+    "itemNo": "10460K",
+    "brand": "NONGSHIM",
+    "name": "PPANG BUJANG SALTED BUTTER ROLL 16X1.94OZ",
+    "qty": 1,
+    "unitPrice": 25.0,
+    "each": 1.56,
+    "total": 25.0
+  },
+  {
+    "itemNo": "10461K",
+    "brand": "NONGSHIM",
+    "name": "PPANG BUJANG CHOCOLATE FLAVORED 16X1.94OZ",
+    "qty": 1,
+    "unitPrice": 25.0,
+    "each": 1.56,
+    "total": 25.0
+  },
+  {
+    "itemNo": "10464K",
+    "brand": "NONGSHIM",
+    "name": "MELON KICK (L) 6X6.35 OZ",
+    "qty": 1,
+    "unitPrice": 32.0,
+    "each": 5.33,
+    "total": 32.0
+  },
+  {
+    "itemNo": "10532T",
+    "brand": "STAR",
+    "name": "LITCHI FLAVOURED DRINK 6X1.5 L",
+    "qty": 1,
+    "unitPrice": 13.0,
+    "each": 2.17,
+    "total": 13.0
+  },
+  {
+    "itemNo": "10606K",
+    "brand": "LOTTE",
+    "name": "MILKIS DRINK (BANANA_ 6 CAN) 5X6X8.45 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 4.2,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10608K",
+    "brand": "LOTTE",
+    "name": "MILKIS DRINK (STRAWBERRY_6 CAN) 5X6X8.45 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 4.2,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10616W",
+    "brand": "EVERGREEN",
+    "name": "BUBBLE MILK TEA (MATCHA W/ BOBA 24X16.2 OZ",
+    "qty": 1,
+    "unitPrice": 30.0,
+    "each": 1.25,
+    "total": 30.0
+  },
+  {
+    "itemNo": "10655T",
+    "brand": "BUPPOZ",
+    "name": "POPZY POPPING BUBBLE TEA (APPLE & 12X11.33 OZ",
+    "qty": 1,
+    "unitPrice": 12.3,
+    "each": 1.03,
+    "total": 12.3
+  },
+  {
+    "itemNo": "10657T",
+    "brand": "BUPPOZ",
+    "name": "POPZY POPPING BUBBLE TEA 12X11.33 OZ",
+    "qty": 1,
+    "unitPrice": 12.3,
+    "each": 1.03,
+    "total": 12.3
+  },
+  {
+    "itemNo": "10675K",
+    "brand": "LOTTE",
+    "name": "MILKIS DRINK (LOW CALORIES_6 CAN) 5X6X8.45 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 4.2,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10835K",
+    "brand": "LOTTE",
+    "name": "CHOCO PIE GREEN TEA 8X11.85 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 3.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "10836K",
+    "brand": "LOTTE",
+    "name": "CHOCO PIE BANANA 8X11.85 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 3.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "10847K",
+    "brand": "LOTTE",
+    "name": "CHOCO PIE BLACK SUGAR MILK TEA 8X11.85 OZ",
+    "qty": 1,
+    "unitPrice": 24.0,
+    "each": 3.0,
+    "total": 24.0
+  },
+  {
+    "itemNo": "10849K",
+    "brand": "NONGSHIM",
+    "name": "SHRIMP CRACKERS (GOCHUJANG FLAVOR)20X2.64 OZ",
+    "qty": 1,
+    "unitPrice": 27.0,
+    "each": 1.35,
+    "total": 27.0
+  },
+  {
+    "itemNo": "10901K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (SWEET CORN FLAVOR) 12X5.65 OZ",
+    "qty": 2,
+    "unitPrice": 31.5,
+    "each": 2.63,
+    "total": 63.0
+  },
+  {
+    "itemNo": "10902K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (FLAMIN LIME FLAVOR) 12X5.65 OZ",
+    "qty": 2,
+    "unitPrice": 31.5,
+    "each": 2.63,
+    "total": 63.0
+  },
+  {
+    "itemNo": "10903K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (SEAWEED FLAVOR) 12X5.65 OZ",
+    "qty": 2,
+    "unitPrice": 31.5,
+    "each": 2.63,
+    "total": 63.0
+  },
+  {
+    "itemNo": "10904K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (TRUFFLE FLAVOR) 12X5.65 OZ",
+    "qty": 2,
+    "unitPrice": 31.5,
+    "each": 2.63,
+    "total": 63.0
+  },
+  {
+    "itemNo": "10915K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (CARAMEL POPCORN 12X5.64 OZ",
+    "qty": 2,
+    "unitPrice": 32.3,
+    "each": 2.69,
+    "total": 64.6
+  },
+  {
+    "itemNo": "10916K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (STEAK WASABI FLAVOR) 10X5.64 OZ",
+    "qty": 2,
+    "unitPrice": 28.8,
+    "each": 2.88,
+    "total": 57.6
+  },
+  {
+    "itemNo": "10917K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (K-CHICKEN FLAVOR) 12X5.64 OZ",
+    "qty": 2,
+    "unitPrice": 34.2,
+    "each": 2.85,
+    "total": 68.4
+  },
+  {
+    "itemNo": "10918K",
+    "brand": "ORION",
+    "name": "TURTLE CHIPS (MEXICAN STREET CORN 12X5.64 OZ",
+    "qty": 2,
+    "unitPrice": 35.1,
+    "each": 2.93,
+    "total": 70.2
+  },
+  {
+    "itemNo": "10951C",
+    "brand": "ROYALFAMILY",
+    "name": "MOCHI (COCONUT CREAM) 12X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10952C",
+    "brand": "ROYALFAMILY",
+    "name": "MOCHI (SALTED CARAMEL) 12X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10955C",
+    "brand": "ROYALFAMILY",
+    "name": "MOCHI (VANILLA CREME) 12X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10957C",
+    "brand": "ROYALFAMILY",
+    "name": "MOCHI (CREAMY MATCHA LATTE) 12X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10958C",
+    "brand": "ROYALFAMILY",
+    "name": "MOCHI (MAPLE PANCAKE) 12X4.2 OZ",
+    "qty": 1,
+    "unitPrice": 21.0,
+    "each": 1.75,
+    "total": 21.0
+  },
+  {
+    "itemNo": "10998K",
+    "brand": "BINGGRAE",
+    "name": "VANILLA FLAVORED MILK 4X6X6.8 OZ",
+    "qty": 4,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 76.0
+  },
+  {
+    "itemNo": "11001K",
+    "brand": "BINGGRAE",
+    "name": "BANANA FLAVORED MILK 4X6X6.8 OZ",
+    "qty": 2,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 38.0
+  },
+  {
+    "itemNo": "11024K",
+    "brand": "BINGGRAE",
+    "name": "TARO FLAVORED MILK 4X6X6.8 OZ",
+    "qty": 2,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 38.0
+  },
+  {
+    "itemNo": "11025K",
+    "brand": "BINGGRAE",
+    "name": "STRAWBERRY FLAVORED MILK 4X6X6.8 OZ",
+    "qty": 2,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 38.0
+  },
+  {
+    "itemNo": "11026K",
+    "brand": "BINGGRAE",
+    "name": "MELON FLAVORED MILK 4X6X6.8 OZ",
+    "qty": 2,
+    "unitPrice": 19.0,
+    "each": 4.75,
+    "total": 38.0
+  },
+  {
+    "itemNo": "11049C",
+    "brand": "TRENZYGAHM",
+    "name": "MILK CLASSIC RICE SNACK 16X5.30 OZ",
+    "qty": 1,
+    "unitPrice": 58.0,
+    "each": 3.63,
+    "total": 58.0
+  },
+  {
+    "itemNo": "11050C",
+    "brand": "TRENZYGAHM",
+    "name": "MILK CLASSIC RICE SNACK (BANANA 16X8.53 OZ",
+    "qty": 1,
+    "unitPrice": 54.0,
+    "each": 3.38,
+    "total": 54.0
+  },
+  {
+    "itemNo": "11051C",
+    "brand": "TRENZYGAHM",
+    "name": "MILK CLASSIC RICE SNACK (CHEESE 16X8.53 OZ",
+    "qty": 1,
+    "unitPrice": 56.0,
+    "each": 3.5,
+    "total": 56.0
+  },
+  {
+    "itemNo": "12165C",
+    "brand": "UNBRANDED",
+    "name": "STEAMER (BAMBOO_6\") 60X3 PC",
+    "qty": 2,
+    "unitPrice": 7.57,
+    "each": 7.57,
+    "total": 15.14
+  },
+  {
+    "itemNo": "12168C",
+    "brand": "UNBRANDED",
+    "name": "STEAMER (BAMBOO_12\") 12X3 PC",
+    "qty": 2,
+    "unitPrice": 18.7,
+    "each": 18.7,
+    "total": 37.4
+  },
+  {
+    "itemNo": "12169C",
+    "brand": "UNBRANDED",
+    "name": "STEAMER (BAMBOO_10\") 24X3 PC",
+    "qty": 3,
+    "unitPrice": 14.4,
+    "each": 14.4,
+    "total": 43.2
+  },
+  {
+    "itemNo": "19121J",
+    "brand": "HANA",
+    "name": "PICKLED GINGER (SUSHI GINGER_S.BTL_5 24X5 OZ",
+    "qty": 1,
+    "unitPrice": 41.4,
+    "each": 1.73,
+    "total": 41.4
+  },
+  {
+    "itemNo": "19376K",
+    "brand": "ASSI",
+    "name": "INSTANT KIMCHI UDON NOODLES 12X22.2 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 2.83,
+    "total": 34.0
+  },
+  {
+    "itemNo": "19901K",
+    "brand": "ASSI",
+    "name": "KIMCHI SOUP 15X21.16 OZ",
+    "qty": 1,
+    "unitPrice": 37.6,
+    "each": 2.51,
+    "total": 37.6
+  },
+  {
+    "itemNo": "19956K",
+    "brand": "YISSINE",
+    "name": "TOPOKKI RICE CAKE (2.75#) 10X2.75 LB",
+    "qty": 1,
+    "unitPrice": 33.15,
+    "each": 3.32,
+    "total": 33.15
+  },
+  {
+    "itemNo": "19976D",
+    "brand": "ASSI",
+    "name": "TOPOKKI RICE CAKE (2#) 20X2 LB",
+    "qty": 1,
+    "unitPrice": 49.0,
+    "each": 2.45,
+    "total": 49.0
+  },
+  {
+    "itemNo": "19981D",
+    "brand": "ASSI",
+    "name": "TOFU (FIRM) 12X16 OZ",
+    "qty": 1,
+    "unitPrice": 16.0,
+    "each": 1.33,
+    "total": 16.0
+  },
+  {
+    "itemNo": "19983D",
+    "brand": "ASSI",
+    "name": "TOFU (SILKEN) 12X16 OZ",
+    "qty": 1,
+    "unitPrice": 16.0,
+    "each": 1.33,
+    "total": 16.0
+  },
+  {
+    "itemNo": "19984D",
+    "brand": "ASSI",
+    "name": "TOFU (EX-SILKEN) 12X16 OZ",
+    "qty": 1,
+    "unitPrice": 16.0,
+    "each": 1.33,
+    "total": 16.0
+  },
+  {
+    "itemNo": "20015J",
+    "brand": "HANA",
+    "name": "FRIED BEAN CURD (SUSHI AGE) 2X21X3.5 OZ",
+    "qty": 1,
+    "unitPrice": 51.0,
+    "each": 2.43,
+    "total": 51.0
+  },
+  {
+    "itemNo": "20172K",
+    "brand": "ASSI",
+    "name": "KOREAN STYLE SALTED MACKEREL 15X2.2 LB",
+    "qty": 1,
+    "unitPrice": 242.1,
+    "each": 16.14,
+    "total": 242.1
+  },
+  {
+    "itemNo": "20371J",
+    "brand": "UNBRANDED",
+    "name": "FRIED FISH CAKE (JAPAN_VEGETABLE_AGE 24.2 LB",
+    "qty": 1,
+    "unitPrice": 85.0,
+    "each": 3.51,
+    "total": 85.0
+  },
+  {
+    "itemNo": "20378J",
+    "brand": "UNBRANDED",
+    "name": "FRIED FISH CAKE 24.2 LB",
+    "qty": 1,
+    "unitPrice": 85.0,
+    "each": 3.51,
+    "total": 85.0
+  },
+  {
+    "itemNo": "20434K",
+    "brand": "ASSI",
+    "name": "COMBO FISH CAKE 20X1.1 LB",
+    "qty": 1,
+    "unitPrice": 80.1,
+    "each": 4.01,
+    "total": 80.1
+  },
+  {
+    "itemNo": "20457K",
+    "brand": "ASSI",
+    "name": "BUSAN STYLE FISH CAKE 12X1.98 LB",
+    "qty": 1,
+    "unitPrice": 56.0,
+    "each": 4.67,
+    "total": 56.0
+  },
+  {
+    "itemNo": "20487K",
+    "brand": "ASSI",
+    "name": "BANCHAN SEASONED GARLIC (8#) 2X8 LB",
+    "qty": 1,
+    "unitPrice": 96.0,
+    "each": 48.0,
+    "total": 96.0
+  },
+  {
+    "itemNo": "20490K",
+    "brand": "ASSI",
+    "name": "BANCHAN SEASONED SQUID (8#) 2X8 LB",
+    "qty": 1,
+    "unitPrice": 111.0,
+    "each": 55.5,
+    "total": 111.0
+  },
+  {
+    "itemNo": "20538D",
+    "brand": "YISSINE",
+    "name": "DUMPLING WRAPPER 24X14 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 1.88,
+    "total": 45.0
+  },
+  {
+    "itemNo": "20554K",
+    "brand": "ASSI",
+    "name": "VEGETABLE DUMPLINGS 12X23.8 OZ",
+    "qty": 1,
+    "unitPrice": 46.75,
+    "each": 3.9,
+    "total": 46.75
+  },
+  {
+    "itemNo": "20555K",
+    "brand": "ASSI",
+    "name": "VEGETABLE DUMPLINGS 12X23.8 OZ",
+    "qty": 1,
+    "unitPrice": 35.1,
+    "each": 2.93,
+    "total": 35.1
+  },
+  {
+    "itemNo": "20556K",
+    "brand": "ASSI",
+    "name": "VEGETABLE DUMPLINGS (SAEDAEK) 12X23.8 OZ",
+    "qty": 1,
+    "unitPrice": 36.0,
+    "each": 3.0,
+    "total": 36.0
+  },
+  {
+    "itemNo": "20558K",
+    "brand": "ASSI",
+    "name": "VEGETABLE DUMPLING W/LEEK 12X23.8 OZ",
+    "qty": 1,
+    "unitPrice": 42.0,
+    "each": 3.5,
+    "total": 42.0
+  },
+  {
+    "itemNo": "20575D",
+    "brand": "ASSI",
+    "name": "PORK WONTONS 14X1 LB",
+    "qty": 1,
+    "unitPrice": 66.0,
+    "each": 4.71,
+    "total": 66.0
+  },
+  {
+    "itemNo": "20663D",
+    "brand": "OTASTY",
+    "name": "B.B.Q. PORK BAO 10X24 OZ",
+    "qty": 1,
+    "unitPrice": 58.0,
+    "each": 5.8,
+    "total": 58.0
+  },
+  {
+    "itemNo": "20725K",
+    "brand": "WILDSEA",
+    "name": "OCTOPUS CUT 24X5.65 OZ",
+    "qty": 1,
+    "unitPrice": 167.45,
+    "each": 6.98,
+    "total": 167.45
+  },
+  {
+    "itemNo": "20740K",
+    "brand": "WILDSEA",
+    "name": "SQUID CUT (20P) 24X5.65 OZ",
+    "qty": 1,
+    "unitPrice": 95.0,
+    "each": 3.96,
+    "total": 95.0
+  },
+  {
+    "itemNo": "20749K",
+    "brand": "SAMLIP",
+    "name": "CASTELLA CREAM CAKE 30X3.35 OZ",
+    "qty": 1,
+    "unitPrice": 30.0,
+    "each": 1.0,
+    "total": 30.0
+  },
+  {
+    "itemNo": "20777K",
+    "brand": "YISSINE",
+    "name": "VEGETABLE DUMPLING (NO MSG) 12X1.48 LB",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "each": 3.25,
+    "total": 39.0
+  },
+  {
+    "itemNo": "20778K",
+    "brand": "YISSINE",
+    "name": "VEGETABLE DUMPLING (KIMCHI_NO MSG) 12X1.48 LB",
+    "qty": 1,
+    "unitPrice": 39.0,
+    "each": 3.25,
+    "total": 39.0
+  },
+  {
+    "itemNo": "20852K",
+    "brand": "SAMLIP",
+    "name": "CHEESE CAKE ORIGINAL 30X1.76 OZ",
+    "qty": 2,
+    "unitPrice": 19.8,
+    "each": 0.66,
+    "total": 39.6
+  },
+  {
+    "itemNo": "20906K",
+    "brand": "BINGGRAE",
+    "name": "COFFEE ICE BAR (5P) 6X5X5.1 OZ",
+    "qty": 2,
+    "unitPrice": 24.0,
+    "each": 4.0,
+    "total": 48.0
+  },
+  {
+    "itemNo": "20937K",
+    "brand": "LOTTE",
+    "name": "PAPICO CHOCO POPSICLE (6P) 4X6X4.94 OZ",
+    "qty": 1,
+    "unitPrice": 22.0,
+    "each": 5.5,
+    "total": 22.0
+  },
+  {
+    "itemNo": "20947K",
+    "brand": "LOTTE",
+    "name": "SEOLEIM MILK SHAKE (5P) 4X5X5.41 OZ",
+    "qty": 1,
+    "unitPrice": 22.1,
+    "each": 5.53,
+    "total": 22.1
+  },
+  {
+    "itemNo": "20971K",
+    "brand": "LOTTE",
+    "name": "OK-SUSU (SWEET CORN 5P) 6X5X4.73 OZ",
+    "qty": 3,
+    "unitPrice": 35.0,
+    "each": 5.83,
+    "total": 105.0
+  },
+  {
+    "itemNo": "21043J",
+    "brand": "TOYO",
+    "name": "SUPER BIKURI SOFT ICE CREAM 16X6.76 OZ",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "each": 1.63,
+    "total": 26.0
+  },
+  {
+    "itemNo": "21044J",
+    "brand": "TOYO",
+    "name": "SUPER BIKURI SOFT ICE CREAM W/CHOCO 16X6.76 OZ",
+    "qty": 1,
+    "unitPrice": 26.0,
+    "each": 1.63,
+    "total": 26.0
+  },
+  {
+    "itemNo": "21097K",
+    "brand": "LOTTE",
+    "name": "OK ICE BAR 6X6X2.47 OZ",
+    "qty": 1,
+    "unitPrice": 32.5,
+    "each": 5.42,
+    "total": 32.5
+  },
+  {
+    "itemNo": "21113K",
+    "brand": "HAITAI",
+    "name": "POLLAPO ICE SLUSH (GRAPE) 7X5X4.1 OZ",
+    "qty": 1,
+    "unitPrice": 25.2,
+    "each": 3.6,
+    "total": 25.2
+  },
+  {
+    "itemNo": "21121K",
+    "brand": "HAITAI",
+    "name": "POLLAPO ICE SLUSH (PEACH) 7X5X4.1 OZ",
+    "qty": 1,
+    "unitPrice": 25.0,
+    "each": 3.57,
+    "total": 25.0
+  },
+  {
+    "itemNo": "21161D",
+    "brand": "MAVENS",
+    "name": "DURIAN ICE CREAM (6P) 6X14 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 7.5,
+    "total": 45.0
+  },
+  {
+    "itemNo": "21162D",
+    "brand": "MAVENS",
+    "name": "PASSION FRUIT MANGO ICE CREAM (6P) 6X14 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 7.5,
+    "total": 45.0
+  },
+  {
+    "itemNo": "21191K",
+    "brand": "BINGGRAE",
+    "name": "SAMANCO (RED BEAN JAM, 4P) 6X4X5.1 OZ",
+    "qty": 2,
+    "unitPrice": 25.0,
+    "each": 4.17,
+    "total": 50.0
+  },
+  {
+    "itemNo": "21192K",
+    "brand": "BINGGRAE",
+    "name": "SAMANCO (MATCHA, 4P) 6X4X5.1 OZ",
+    "qty": 2,
+    "unitPrice": 25.0,
+    "each": 4.17,
+    "total": 50.0
+  },
+  {
+    "itemNo": "21193K",
+    "brand": "BINGGRAE",
+    "name": "SAMANCO (CHOCOLATE, 4P) 6X4X5.1 OZ",
+    "qty": 3,
+    "unitPrice": 25.0,
+    "each": 4.17,
+    "total": 75.0
+  },
+  {
+    "itemNo": "21194K",
+    "brand": "BINGGRAE",
+    "name": "SAMANCO (STRAWBERRY, 4P) 6X4X5.1 OZ",
+    "qty": 2,
+    "unitPrice": 25.0,
+    "each": 4.17,
+    "total": 50.0
+  },
+  {
+    "itemNo": "21195K",
+    "brand": "BINGGRAE",
+    "name": "SAMANCO (FRENCH VANILLA, 4P) 6X4X5.1 OZ",
+    "qty": 2,
+    "unitPrice": 25.0,
+    "each": 4.17,
+    "total": 50.0
+  },
+  {
+    "itemNo": "21202K",
+    "brand": "BINGGRAE",
+    "name": "MELONA (HONEYDEW MELON) 8X8X2.4 OZ",
+    "qty": 2,
+    "unitPrice": 34.0,
+    "each": 4.25,
+    "total": 68.0
+  },
+  {
+    "itemNo": "21203K",
+    "brand": "BINGGRAE",
+    "name": "MELONA (STRAWBERRY) 8X8X2.4 OZ",
+    "qty": 2,
+    "unitPrice": 34.0,
+    "each": 4.25,
+    "total": 68.0
+  },
+  {
+    "itemNo": "21204K",
+    "brand": "BINGGRAE",
+    "name": "MELONA (BANANA) 8X8X2.4 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 4.25,
+    "total": 34.0
+  },
+  {
+    "itemNo": "21205K",
+    "brand": "BINGGRAE",
+    "name": "MELONA (MANGO) 8X8X2.4 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 4.25,
+    "total": 34.0
+  },
+  {
+    "itemNo": "21280K",
+    "brand": "SAMLIP",
+    "name": "FRESH MILK CREAM BUN(1P) 18X4.76 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 1.89,
+    "total": 34.0
+  },
+  {
+    "itemNo": "21281K",
+    "brand": "SAMLIP",
+    "name": "CHOCOLATE CREAM BUN(1P) 18X4.76 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 1.89,
+    "total": 34.0
+  },
+  {
+    "itemNo": "21282K",
+    "brand": "SAMLIP",
+    "name": "STRAWBERRY CREAM BUN(1P) 18X4.76 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 1.89,
+    "total": 34.0
+  },
+  {
+    "itemNo": "21283K",
+    "brand": "SAMLIP",
+    "name": "MATCHA CREAM BUN(1P) 18X4.76 OZ",
+    "qty": 1,
+    "unitPrice": 34.0,
+    "each": 1.89,
+    "total": 34.0
+  },
+  {
+    "itemNo": "24032K",
+    "brand": "SAMYANG",
+    "name": "BULDAK DUMPLINGS 10X24.69 OZ",
+    "qty": 1,
+    "unitPrice": 58.5,
+    "each": 5.85,
+    "total": 58.5
+  },
+  {
+    "itemNo": "24108K",
+    "brand": "ASSI",
+    "name": "BANCHAN SEASONED DRIED RADISH 4X2.2 LB",
+    "qty": 1,
+    "unitPrice": 46.0,
+    "each": 11.5,
+    "total": 46.0
+  },
+  {
+    "itemNo": "27777K",
+    "brand": "SUNLIT",
+    "name": "BULGOGI KIMBAP 24X8.1 OZ",
+    "qty": 1,
+    "unitPrice": 54.0,
+    "each": 2.25,
+    "total": 54.0
+  },
+  {
+    "itemNo": "27778K",
+    "brand": "SUNLIT",
+    "name": "KIMCHI SPICY BULGOGI KIMBAP 24X8.1 OZ",
+    "qty": 1,
+    "unitPrice": 54.0,
+    "each": 2.25,
+    "total": 54.0
+  },
+  {
+    "itemNo": "40130K",
+    "brand": "LOTTE",
+    "name": "O-ING (POLLACK FLAVORED CHIPS_L) 12X4.23 OZ",
+    "qty": 1,
+    "unitPrice": 40.0,
+    "each": 3.33,
+    "total": 40.0
+  },
+  {
+    "itemNo": "50001L",
+    "brand": "LKK",
+    "name": "PEANUT SAUCE 12X8 OZ",
+    "qty": 1,
+    "unitPrice": 34.4,
+    "each": 2.87,
+    "total": 34.4
+  },
+  {
+    "itemNo": "50603L",
+    "brand": "ERAWAN",
+    "name": "GLUTINOUS RICE FLOUR 24X16 OZ",
+    "qty": 4,
+    "unitPrice": 28.0,
+    "each": 1.17,
+    "total": 112.0
+  },
+  {
+    "itemNo": "50604L",
+    "brand": "ERAWAN",
+    "name": "TAPIOCA STARCH 24X16 OZ",
+    "qty": 5,
+    "unitPrice": 24.3,
+    "each": 1.01,
+    "total": 121.5
+  },
+  {
+    "itemNo": "51004L",
+    "brand": "MYSAN",
+    "name": "SKY FLAKES CRACKERS 8X28.21 OZ",
+    "qty": 1,
+    "unitPrice": 45.0,
+    "each": 5.63,
+    "total": 45.0
+  },
+  {
+    "itemNo": "51009L",
+    "brand": "CHACHA",
+    "name": "SUNFLOWER SEED (SPICED) 18X8.82 OZ",
+    "qty": 1,
+    "unitPrice": 41.6,
+    "each": 2.31,
+    "total": 41.6
+  },
+  {
+    "itemNo": "51043L",
+    "brand": "CHACHA",
+    "name": "SUNFLOWER SEED (NATURAL) 18X8.82 OZ",
+    "qty": 1,
+    "unitPrice": 43.0,
+    "each": 2.39,
+    "total": 43.0
+  },
+  {
+    "itemNo": "56195L",
+    "brand": "SINCERE",
+    "name": "PHO (VIETNAMESE RICE NOODLES_1#) 30X1 LB",
+    "qty": 1,
+    "unitPrice": 40.0,
+    "each": 1.33,
+    "total": 40.0
+  }
+]
