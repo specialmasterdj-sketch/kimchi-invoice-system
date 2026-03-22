@@ -1,0 +1,2337 @@
+[
+ {
+  "invoiceNumber": "FP-18973722",
+  "date": "2025-12-29",
+  "dateDisplay": "12/29/25",
+  "branchId": "fort_lauderdale",
+  "vendor": "FreshPoint",
+  "total": 2963.75,
+  "itemCount": 71,
+  "items": [
+   {
+    "itemNo": "108220",
+    "brand": "FRESHPOINT",
+    "description": "BEAN GREEN 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 29,
+    "lineTotal": 29
+   },
+   {
+    "itemNo": "180660",
+    "brand": "FRESHPOINT",
+    "description": "MALANGA EDDO 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 26.9,
+    "lineTotal": 26.9
+   },
+   {
+    "itemNo": "174230",
+    "brand": "FRESHPOINT",
+    "description": "POTATO BAKING 50 CT 50 CT",
+    "size": "50 CT 50 CT",
+    "qty": 1,
+    "unit": "50 CT 50 CT",
+    "unitPrice": 20.75,
+    "lineTotal": 20.75
+   },
+   {
+    "itemNo": "175360",
+    "brand": "FRESHPOINT",
+    "description": "POTATO RED RETAIL 10/5 10/5 LB",
+    "size": "5 LB",
+    "qty": 1,
+    "unit": "5 LB",
+    "unitPrice": 19.9,
+    "lineTotal": 19.9
+   },
+   {
+    "itemNo": "100780",
+    "brand": "FRESHPOINT",
+    "description": "APPLE FUJI WXF 72 CT 40 LB",
+    "size": "72 CT 40 LB",
+    "qty": 1,
+    "unit": "72 CT 40 LB",
+    "unitPrice": 37.9,
+    "lineTotal": 37.9
+   },
+   {
+    "itemNo": "101200",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GALA WXF 72 CT 40 LB",
+    "size": "72 CT 40 LB",
+    "qty": 1,
+    "unit": "72 CT 40 LB",
+    "unitPrice": 43.9,
+    "lineTotal": 43.9
+   },
+   {
+    "itemNo": "101500",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GOLD 64 72 CT 64-72CT",
+    "size": "72CT",
+    "qty": 1,
+    "unit": "72CT",
+    "unitPrice": 46.9,
+    "lineTotal": 46.9
+   },
+   {
+    "itemNo": "104680",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED WX FANCY 72 CT 40 LB",
+    "size": "72 CT 40 LB",
+    "qty": 1,
+    "unit": "72 CT 40 LB",
+    "unitPrice": 32.9,
+    "lineTotal": 32.9
+   },
+   {
+    "itemNo": "701920",
+    "brand": "FRESHPOINT",
+    "description": "ORGANIC AVOCADO HASS 48 CT 48 CT",
+    "size": "48 CT 48 CT",
+    "qty": 8,
+    "unit": "48 CT 48 CT",
+    "unitPrice": 39,
+    "lineTotal": 312
+   },
+   {
+    "itemNo": "107320",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN 40 LB",
+    "size": "40 LB",
+    "qty": 2,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 41.8
+   },
+   {
+    "itemNo": "109780",
+    "brand": "FRESHPOINT",
+    "description": "BEET RED BULK 25 LB 25 LB",
+    "size": "25 LB 25 LB",
+    "qty": 1,
+    "unit": "25 LB 25 LB",
+    "unitPrice": 15.9,
+    "lineTotal": 15.9
+   },
+   {
+    "itemNo": "110200",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLACKBERRY 12/6 OZ 12/6OZ",
+    "size": "6 OZ 12/6OZ",
+    "qty": 1,
+    "unit": "6 OZ 12/6OZ",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "110260",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLUEBERRY 12/6 OZ 12 PK",
+    "size": "6 OZ 12 PK",
+    "qty": 1,
+    "unit": "6 OZ 12 PK",
+    "unitPrice": 23,
+    "lineTotal": 23
+   },
+   {
+    "itemNo": "110440",
+    "brand": "FRESHPOINT",
+    "description": "BERRY GOLDEN 12/6 OZ 12/6 OZ",
+    "size": "6 OZ 12/6 OZ",
+    "qty": 1,
+    "unit": "6 OZ 12/6 OZ",
+    "unitPrice": 30.9,
+    "lineTotal": 30.9
+   },
+   {
+    "itemNo": "113860",
+    "brand": "FRESHPOINT",
+    "description": "CARAMBOLA (STAR FRUIT) 5/6 LB",
+    "size": "6 LB",
+    "qty": 1,
+    "unit": "6 LB",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "905326",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL CARROT CELLO 48/1 LB 48/1 LB",
+    "size": "1 LB 48/1 LB",
+    "qty": 1,
+    "unit": "1 LB 48/1 LB",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "116680",
+    "brand": "FRESHPOINT",
+    "description": "CAULIFLOWER 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 1,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 28.9,
+    "lineTotal": 28.9
+   },
+   {
+    "itemNo": "117940",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL CELERY SLVD 36 CT 36 CT",
+    "size": "36 CT 36 CT",
+    "qty": 1,
+    "unit": "36 CT 36 CT",
+    "unitPrice": 57.9,
+    "lineTotal": 57.9
+   },
+   {
+    "itemNo": "118230",
+    "brand": "FRESHPOINT",
+    "description": "CHERRIES 11 LB JUMBO 11 LB",
+    "size": "11 LB JUMBO 11 LB",
+    "qty": 1,
+    "unit": "11 LB JUMBO 11 LB",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "118665",
+    "brand": "FRESHPOINT",
+    "description": "CLEMENTINES 10/3 LB 10/3 LB",
+    "size": "3 LB 10/3 LB",
+    "qty": 1,
+    "unit": "3 LB 10/3 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 33.9
+   },
+   {
+    "itemNo": "119160",
+    "brand": "FRESHPOINT",
+    "description": "COCONUT EASY OPEN THAI 9CT 9 CT",
+    "size": "9CT 9 CT",
+    "qty": 1,
+    "unit": "9CT 9 CT",
+    "unitPrice": 17.9,
+    "lineTotal": 17.9
+   },
+   {
+    "itemNo": "119165",
+    "brand": "FRESHPOINT",
+    "description": "COCONUT W/STRAW 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 1,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 27.9
+   },
+   {
+    "itemNo": "120460",
+    "brand": "FRESHPOINT",
+    "description": "CORN YELLOW 45 CT",
+    "size": "45 CT",
+    "qty": 1,
+    "unit": "45 CT",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "120590",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN RETAIL 20# 20 LB",
+    "size": "20 LB",
+    "qty": 1,
+    "unit": "20 LB",
+    "unitPrice": 37.9,
+    "lineTotal": 37.9
+   },
+   {
+    "itemNo": "708330",
+    "brand": "FRESHPOINT",
+    "description": "ORGANIC CUCUMBER SDLS EURO 12 CT",
+    "size": "12 CT",
+    "qty": 15,
+    "unit": "12 CT",
+    "unitPrice": 15.25,
+    "lineTotal": 228.75
+   },
+   {
+    "itemNo": "121835",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT RED FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 2,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 34.25,
+    "lineTotal": 68.5
+   },
+   {
+    "itemNo": "121845",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT WHITE FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 1,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 11.9
+   },
+   {
+    "itemNo": "121850",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT YELLOW 6 8 CT 5.5 LB",
+    "size": "8 CT 5.5 LB",
+    "qty": 1,
+    "unit": "8 CT 5.5 LB",
+    "unitPrice": 23.9,
+    "lineTotal": 23.9
+   },
+   {
+    "itemNo": "119860",
+    "brand": "FRESHPOINT",
+    "description": "CORN BI COLOR 45 CT",
+    "size": "45 CT",
+    "qty": 1,
+    "unit": "45 CT",
+    "unitPrice": 19.9,
+    "lineTotal": 19.9
+   },
+   {
+    "itemNo": "123340",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT BABY/INDIAN 10 LB 10 LB",
+    "size": "10 LB 10 LB",
+    "qty": 1,
+    "unit": "10 LB 10 LB",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "129340",
+    "brand": "FRESHPOINT",
+    "description": "GARLIC PEELED 20/1 LB 20/1 LB",
+    "size": "1 LB 20/1 LB",
+    "qty": 1,
+    "unit": "1 LB 20/1 LB",
+    "unitPrice": 69.9,
+    "lineTotal": 69.9
+   },
+   {
+    "itemNo": "130840",
+    "brand": "FRESHPOINT",
+    "description": "GRAPE GREEN SEEDLESS X LARGE 19 LB",
+    "size": "19 LB",
+    "qty": 1,
+    "unit": "19 LB",
+    "unitPrice": 45.9,
+    "lineTotal": 45.9
+   },
+   {
+    "itemNo": "131140",
+    "brand": "FRESHPOINT",
+    "description": "GRAPE RED SEEDLESS XL 19 LB",
+    "size": "19 LB",
+    "qty": 1,
+    "unit": "19 LB",
+    "unitPrice": 44.9,
+    "lineTotal": 44.9
+   },
+   {
+    "itemNo": "132283",
+    "brand": "FRESHPOINT",
+    "description": "GUAVA THAI 20 LB 20 LB",
+    "size": "20 LB 20 LB",
+    "qty": 1,
+    "unit": "20 LB 20 LB",
+    "unitPrice": 50.9,
+    "lineTotal": 50.9
+   },
+   {
+    "itemNo": "139772",
+    "brand": "FRESHPOINT",
+    "description": "KIWI GOLD CLAMSHELL 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 1,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 33.9
+   },
+   {
+    "itemNo": "140370",
+    "brand": "FRESHPOINT",
+    "description": "LEAF ALOE 18/20 CT 18/20CT",
+    "size": "20 CT 18/20CT",
+    "qty": 1,
+    "unit": "20 CT 18/20CT",
+    "unitPrice": 15.5,
+    "lineTotal": 15.5
+   },
+   {
+    "itemNo": "140680",
+    "brand": "FRESHPOINT",
+    "description": "LEEK 12 CT",
+    "size": "12 CT",
+    "qty": 1,
+    "unit": "12 CT",
+    "unitPrice": 37.9,
+    "lineTotal": 37.9
+   },
+   {
+    "itemNo": "140980",
+    "brand": "FRESHPOINT",
+    "description": "LEMON CHOICE 140 CT 140 CT",
+    "size": "140 CT 140 CT",
+    "qty": 1,
+    "unit": "140 CT 140 CT",
+    "unitPrice": 35.5,
+    "lineTotal": 35.5
+   },
+   {
+    "itemNo": "142180",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE GREEN LEAF 24 CT",
+    "size": "24 CT",
+    "qty": 1,
+    "unit": "24 CT",
+    "unitPrice": 34.75,
+    "lineTotal": 34.75
+   },
+   {
+    "itemNo": "144220",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE ROMAINE HEARTS 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 1,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 34.9,
+    "lineTotal": 34.9
+   },
+   {
+    "itemNo": "145000",
+    "brand": "FRESHPOINT",
+    "description": "LIME 150CT 150 CT",
+    "size": "150CT 150 CT",
+    "qty": 1,
+    "unit": "150CT 150 CT",
+    "unitPrice": 36.5,
+    "lineTotal": 36.5
+   },
+   {
+    "itemNo": "147820",
+    "brand": "FRESHPOINT",
+    "description": "MELON BITTER INDIAN 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 25.9,
+    "lineTotal": 25.9
+   },
+   {
+    "itemNo": "156040",
+    "brand": "FRESHPOINT",
+    "description": "OKRA 11-13LB",
+    "size": "13LB",
+    "qty": 1,
+    "unit": "13LB",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "160000",
+    "brand": "FRESHPOINT",
+    "description": "ORANGE BAG 10/4 LB CALI 10/4 LB",
+    "size": "4 LB CALI 10/4 LB",
+    "qty": 1,
+    "unit": "4 LB CALI 10/4 LB",
+    "unitPrice": 37.9,
+    "lineTotal": 37.9
+   },
+   {
+    "itemNo": "161680",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA GREEN 32 LB",
+    "size": "32 LB",
+    "qty": 1,
+    "unit": "32 LB",
+    "unitPrice": 23.75,
+    "lineTotal": 23.75
+   },
+   {
+    "itemNo": "161740",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA LARGE (RED) TAINUNG 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 33.9
+   },
+   {
+    "itemNo": "168340",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER ORANGE 11 LB 11 LB",
+    "size": "11 LB 11 LB",
+    "qty": 1,
+    "unit": "11 LB 11 LB",
+    "unitPrice": 24.75,
+    "lineTotal": 24.75
+   },
+   {
+    "itemNo": "167650",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RAINBOW 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 2,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 55.8
+   },
+   {
+    "itemNo": "169200",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RED 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 2,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 21.9,
+    "lineTotal": 43.8
+   },
+   {
+    "itemNo": "168220",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER VEGGIE MINI SWEEET 12/1 LB 12/1 LB",
+    "size": "1 LB 12/1 LB",
+    "qty": 1,
+    "unit": "1 LB 12/1 LB",
+    "unitPrice": 21.9,
+    "lineTotal": 21.9
+   },
+   {
+    "itemNo": "170140",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER YELLOW HOTHOUSE 11 LB 11 LB",
+    "size": "11 LB 11 LB",
+    "qty": 1,
+    "unit": "11 LB 11 LB",
+    "unitPrice": 26,
+    "lineTotal": 26
+   },
+   {
+    "itemNo": "171700",
+    "brand": "FRESHPOINT",
+    "description": "PLANTAIN GREEN 50 LB",
+    "size": "50 LB",
+    "qty": 1,
+    "unit": "50 LB",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "171880",
+    "brand": "FRESHPOINT",
+    "description": "PLUM BLACK LARGE TP 16 LB",
+    "size": "16 LB",
+    "qty": 1,
+    "unit": "16 LB",
+    "unitPrice": 60.9,
+    "lineTotal": 60.9
+   },
+   {
+    "itemNo": "177880",
+    "brand": "FRESHPOINT",
+    "description": "POTATO IDAHO 12/4 LB 12/4 LB",
+    "size": "4 LB 12/4 LB",
+    "qty": 1,
+    "unit": "4 LB 12/4 LB",
+    "unitPrice": 18.9,
+    "lineTotal": 18.9
+   },
+   {
+    "itemNo": "173755",
+    "brand": "FRESHPOINT",
+    "description": "POTATO YUKON GOLD 10/5 LB 10/5 LB",
+    "size": "5 LB 10/5 LB",
+    "qty": 1,
+    "unit": "5 LB 10/5 LB",
+    "unitPrice": 19.9,
+    "lineTotal": 19.9
+   },
+   {
+    "itemNo": "905310",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BERRY STRAWBERRY 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 2,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 23.8
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT 7 CT",
+    "size": "7 CT 7 CT",
+    "qty": 6,
+    "unit": "7 CT 7 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 89.4
+   },
+   {
+    "itemNo": "171350",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL PINEAPPLE 6 CT 6 CT",
+    "size": "6 CT 6 CT",
+    "qty": 2,
+    "unit": "6 CT 6 CT",
+    "unitPrice": 15.9,
+    "lineTotal": 31.8
+   },
+   {
+    "itemNo": "184600",
+    "brand": "FRESHPOINT",
+    "description": "SPINACH CALIFORNIA 10 OZ 12/10OZ",
+    "size": "10 OZ 12/10OZ",
+    "qty": 1,
+    "unit": "10 OZ 12/10OZ",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "722400",
+    "brand": "FRESHPOINT",
+    "description": "ORGANIC SQUASH BUTTERNUT 35 LB",
+    "size": "35 LB",
+    "qty": 1,
+    "unit": "35 LB",
+    "unitPrice": 30.75,
+    "lineTotal": 30.75
+   },
+   {
+    "itemNo": "186520",
+    "brand": "FRESHPOINT",
+    "description": "SQUASH CALABAZA BAG BAG",
+    "size": "CASE",
+    "qty": 1,
+    "unit": "CASE",
+    "unitPrice": 14.5,
+    "lineTotal": 14.5
+   },
+   {
+    "itemNo": "187420",
+    "brand": "FRESHPOINT",
+    "description": "SQUASH SPAGHETTI (APPROX. 10 CT) 40 LB",
+    "size": "40 LB",
+    "qty": 1,
+    "unit": "40 LB",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "110980",
+    "brand": "FRESHPOINT",
+    "description": "BERRY STRAWBERRY FL/PREMIUM 8/1 LB",
+    "size": "1 LB",
+    "qty": 2,
+    "unit": "1 LB",
+    "unitPrice": 17.75,
+    "lineTotal": 35.5
+   },
+   {
+    "itemNo": "140260",
+    "brand": "FRESHPOINT",
+    "description": "KUMQUAT 10 LB",
+    "size": "10 LB",
+    "qty": 1,
+    "unit": "10 LB",
+    "unitPrice": 66.25,
+    "lineTotal": 66.25
+   },
+   {
+    "itemNo": "417910",
+    "brand": "FRESHPOINT",
+    "description": "EGG LARGE 18 PACK CARTON 18/1.5",
+    "size": "CASE",
+    "qty": 2,
+    "unit": "CASE",
+    "unitPrice": 45.9,
+    "lineTotal": 91.8
+   },
+   {
+    "itemNo": "137000",
+    "brand": "FRESHPOINT",
+    "description": "JACK FRUIT SO 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 34.25,
+    "lineTotal": 34.25
+   },
+   {
+    "itemNo": "433750",
+    "brand": "FRESHPOINT",
+    "description": "MILK 2 1/2 GAL (MCARTHUR) 9/.5 GL",
+    "size": "5 GL",
+    "qty": 1,
+    "unit": "5 GL",
+    "unitPrice": 32,
+    "lineTotal": 32
+   },
+   {
+    "itemNo": "434645",
+    "brand": "FRESHPOINT",
+    "description": "MILK ALMOND 6/.5GL",
+    "size": "5GL",
+    "qty": 1,
+    "unit": "5GL",
+    "unitPrice": 23.25,
+    "lineTotal": 23.25
+   },
+   {
+    "itemNo": "435450",
+    "brand": "FRESHPOINT",
+    "description": "MILK WHOLE 1/2 GAL (MCARTHUR) 9/.5 GL",
+    "size": "5 GL",
+    "qty": 2,
+    "unit": "5 GL",
+    "unitPrice": 32.5,
+    "lineTotal": 65
+   },
+   {
+    "itemNo": "435840",
+    "brand": "FRESHPOINT",
+    "description": "MILK WHOLE GALLON 4/1GAL",
+    "size": "1GAL",
+    "qty": 2,
+    "unit": "1GAL",
+    "unitPrice": 22.5,
+    "lineTotal": 45
+   },
+   {
+    "itemNo": "413440",
+    "brand": "FRESHPOINT",
+    "description": "CREAM HEAVY 36 12/1QT",
+    "size": "1QT",
+    "qty": 1,
+    "unit": "1QT",
+    "unitPrice": 53,
+    "lineTotal": 53
+   }
+  ]
+ },
+ {
+  "invoiceNumber": "FP-18967196",
+  "date": "2025-12-26",
+  "dateDisplay": "12/26/25",
+  "branchId": "hollywood",
+  "vendor": "FreshPoint",
+  "total": 2954.1,
+  "itemCount": 47,
+  "items": [
+   {
+    "itemNo": "435840",
+    "brand": "FRESHPOINT",
+    "description": "MILK WHOLE GALLON 4/1GAL",
+    "size": "1GAL",
+    "qty": 2,
+    "unit": "1GAL",
+    "unitPrice": 22.5,
+    "lineTotal": 45
+   },
+   {
+    "itemNo": "434650",
+    "brand": "FRESHPOINT",
+    "description": "MILK ALMOND UNSWEETENED 6/.5GL",
+    "size": "5GL",
+    "qty": 1,
+    "unit": "5GL",
+    "unitPrice": 23.25,
+    "lineTotal": 23.25
+   },
+   {
+    "itemNo": "100600",
+    "brand": "FRESHPOINT",
+    "description": "APPLE FUJI BAG 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "100840",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GALA 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "101740",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GOLD X FANCY 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "104680",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED WX FANCY 72 CT 40 LB",
+    "size": "72 CT 40 LB",
+    "qty": 1,
+    "unit": "72 CT 40 LB",
+    "unitPrice": 32.9,
+    "lineTotal": 32.9
+   },
+   {
+    "itemNo": "104560",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED X FANCY 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "106845",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS GREEN 48 CT 48 CT",
+    "size": "48 CT 48 CT",
+    "qty": 10,
+    "unit": "48 CT 48 CT",
+    "unitPrice": 28.9,
+    "lineTotal": 289
+   },
+   {
+    "itemNo": "107320",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN 40 LB",
+    "size": "40 LB",
+    "qty": 1,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "107380",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN TIP 40 LB",
+    "size": "40 LB",
+    "qty": 1,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "606020",
+    "brand": "FRESHPOINT",
+    "description": "BANANA RETAIL 40 LB",
+    "size": "40 LB",
+    "qty": 2,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 41.8
+   },
+   {
+    "itemNo": "110200",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLACKBERRY 12/6 OZ 12/6OZ",
+    "size": "6 OZ 12/6OZ",
+    "qty": 1,
+    "unit": "6 OZ 12/6OZ",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "110260",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLUEBERRY 12/6 OZ 12 PK",
+    "size": "6 OZ 12 PK",
+    "qty": 1,
+    "unit": "6 OZ 12 PK",
+    "unitPrice": 24.25,
+    "lineTotal": 24.25
+   },
+   {
+    "itemNo": "110620",
+    "brand": "FRESHPOINT",
+    "description": "BERRY RASPBERRY PREMIUM 12/6OZ 12/6OZ",
+    "size": "6OZ 12/6OZ",
+    "qty": 1,
+    "unit": "6OZ 12/6OZ",
+    "unitPrice": 35.5,
+    "lineTotal": 35.5
+   },
+   {
+    "itemNo": "113320",
+    "brand": "FRESHPOINT",
+    "description": "CABBAGE RED 45 LB",
+    "size": "45 LB",
+    "qty": 1,
+    "unit": "45 LB",
+    "unitPrice": 26,
+    "lineTotal": 26
+   },
+   {
+    "itemNo": "113860",
+    "brand": "FRESHPOINT",
+    "description": "CARAMBOLA (STAR FRUIT) 5/6 LB",
+    "size": "6 LB",
+    "qty": 1,
+    "unit": "6 LB",
+    "unitPrice": 23.75,
+    "lineTotal": 23.75
+   },
+   {
+    "itemNo": "118665",
+    "brand": "FRESHPOINT",
+    "description": "CLEMENTINES 10/3 LB 10/3 LB",
+    "size": "3 LB 10/3 LB",
+    "qty": 1,
+    "unit": "3 LB 10/3 LB",
+    "unitPrice": 35.9,
+    "lineTotal": 35.9
+   },
+   {
+    "itemNo": "119165",
+    "brand": "FRESHPOINT",
+    "description": "COCONUT W/STRAW 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 6,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 167.4
+   },
+   {
+    "itemNo": "600060",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN 12/6 CT 12/6 CT",
+    "size": "6 CT 12/6 CT",
+    "qty": 12,
+    "unit": "6 CT 12/6 CT",
+    "unitPrice": 32.9,
+    "lineTotal": 394.8
+   },
+   {
+    "itemNo": "120700",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER EUROPEAN 12CT CASE",
+    "size": "12CT CASE",
+    "qty": 15,
+    "unit": "12CT CASE",
+    "unitPrice": 16.5,
+    "lineTotal": 247.5
+   },
+   {
+    "itemNo": "121845",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT WHITE FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 2,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 23.8
+   },
+   {
+    "itemNo": "121850",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT YELLOW 6 8 CT 5.5 LB",
+    "size": "8 CT 5.5 LB",
+    "qty": 6,
+    "unit": "8 CT 5.5 LB",
+    "unitPrice": 22.9,
+    "lineTotal": 137.4
+   },
+   {
+    "itemNo": "123460",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT CHINESE 30 LB 30 LB",
+    "size": "30 LB 30 LB",
+    "qty": 1,
+    "unit": "30 LB 30 LB",
+    "unitPrice": 25.9,
+    "lineTotal": 25.9
+   },
+   {
+    "itemNo": "129340",
+    "brand": "FRESHPOINT",
+    "description": "GARLIC PEELED 20/1 LB 20/1 LB",
+    "size": "1 LB 20/1 LB",
+    "qty": 1,
+    "unit": "1 LB 20/1 LB",
+    "unitPrice": 73.9,
+    "lineTotal": 73.9
+   },
+   {
+    "itemNo": "139772",
+    "brand": "FRESHPOINT",
+    "description": "KIWI GOLD CLAMSHELL 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 2,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 67.8
+   },
+   {
+    "itemNo": "139775",
+    "brand": "FRESHPOINT",
+    "description": "KIWI 18/1 LB CLAM SHELL 18/1 LB",
+    "size": "1 LB CLAM SHELL 18/1 LB",
+    "qty": 1,
+    "unit": "1 LB CLAM SHELL 18/1 LB",
+    "unitPrice": 53.75,
+    "lineTotal": 53.75
+   },
+   {
+    "itemNo": "140980",
+    "brand": "FRESHPOINT",
+    "description": "LEMON CHOICE 140 CT 140 CT",
+    "size": "140 CT 140 CT",
+    "qty": 3,
+    "unit": "140 CT 140 CT",
+    "unitPrice": 35.5,
+    "lineTotal": 106.5
+   },
+   {
+    "itemNo": "145000",
+    "brand": "FRESHPOINT",
+    "description": "LIME 150CT 150 CT",
+    "size": "150CT 150 CT",
+    "qty": 3,
+    "unit": "150CT 150 CT",
+    "unitPrice": 35.5,
+    "lineTotal": 106.5
+   },
+   {
+    "itemNo": "148960",
+    "brand": "FRESHPOINT",
+    "description": "MELON HONEYDEW 6 CT 6 CT",
+    "size": "6 CT 6 CT",
+    "qty": 2,
+    "unit": "6 CT 6 CT",
+    "unitPrice": 21.25,
+    "lineTotal": 42.5
+   },
+   {
+    "itemNo": "161680",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA GREEN 32 LB",
+    "size": "32 LB",
+    "qty": 3,
+    "unit": "32 LB",
+    "unitPrice": 23.75,
+    "lineTotal": 71.25
+   },
+   {
+    "itemNo": "161740",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA LARGE (RED) TAINUNG 30 LB",
+    "size": "30 LB",
+    "qty": 3,
+    "unit": "30 LB",
+    "unitPrice": 35.9,
+    "lineTotal": 107.7
+   },
+   {
+    "itemNo": "169620",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RAINBOW 8/3 CT 8/3 CT",
+    "size": "3 CT 8/3 CT",
+    "qty": 1,
+    "unit": "3 CT 8/3 CT",
+    "unitPrice": 29.9,
+    "lineTotal": 29.9
+   },
+   {
+    "itemNo": "169200",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RED 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 1,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 29.9,
+    "lineTotal": 29.9
+   },
+   {
+    "itemNo": "169650",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER YELLOW 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 1,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 29.9,
+    "lineTotal": 29.9
+   },
+   {
+    "itemNo": "905310",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BERRY STRAWBERRY 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 6,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 12.9,
+    "lineTotal": 77.4
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT 7 CT",
+    "size": "7 CT 7 CT",
+    "qty": 10,
+    "unit": "7 CT 7 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 149
+   },
+   {
+    "itemNo": "171350",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL PINEAPPLE 6 CT 6 CT",
+    "size": "6 CT 6 CT",
+    "qty": 2,
+    "unit": "6 CT 6 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 29.8
+   },
+   {
+    "itemNo": "194905",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL TOMATO ROMA/PLUM 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 23.9,
+    "lineTotal": 23.9
+   },
+   {
+    "itemNo": "194480",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL TOMATO 5/6 BULK 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 15.9,
+    "lineTotal": 15.9
+   },
+   {
+    "itemNo": "193170",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO CAMPARI RETAIL 10/1 LB 10/1 LB",
+    "size": "1 LB 10/1 LB",
+    "qty": 1,
+    "unit": "1 LB 10/1 LB",
+    "unitPrice": 4.9,
+    "lineTotal": 4.9
+   },
+   {
+    "itemNo": "192875",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO CAMPARI 20/1 LB RETAIL 20/1 LB",
+    "size": "1 LB RETAIL 20/1 LB",
+    "qty": 1,
+    "unit": "1 LB RETAIL 20/1 LB",
+    "unitPrice": 7.9,
+    "lineTotal": 7.9
+   },
+   {
+    "itemNo": "192760",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO CAMPARI 8X2# 8X2LB",
+    "size": "2LB",
+    "qty": 2,
+    "unit": "2LB",
+    "unitPrice": 45.9,
+    "lineTotal": 91.8
+   },
+   {
+    "itemNo": "193780",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO GREEN 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 24.75,
+    "lineTotal": 24.75
+   },
+   {
+    "itemNo": "194350",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO WILD WONDER 10/12 OZ RETAIL 10/12OZ",
+    "size": "12 OZ RETAIL 10/12OZ",
+    "qty": 1,
+    "unit": "12 OZ RETAIL 10/12OZ",
+    "unitPrice": 7.9,
+    "lineTotal": 7.9
+   },
+   {
+    "itemNo": "192880",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO WILD WONDER 15/1 PT 15/1 PT",
+    "size": "1 PT 15/1 PT",
+    "qty": 1,
+    "unit": "1 PT 15/1 PT",
+    "unitPrice": 7.9,
+    "lineTotal": 7.9
+   },
+   {
+    "itemNo": "192640",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO WILD WONDER 6/1.5 LB 6/1.5#",
+    "size": "CASE",
+    "qty": 2,
+    "unit": "CASE",
+    "unitPrice": 8.9,
+    "lineTotal": 17.8
+   },
+   {
+    "itemNo": "893730",
+    "brand": "FRESHPOINT",
+    "description": "TURMERIC 5 LB 5 LB",
+    "size": "5 LB 5 LB",
+    "qty": 3,
+    "unit": "5 LB 5 LB",
+    "unitPrice": 18.25,
+    "lineTotal": 54.75
+   }
+  ]
+ },
+ {
+  "invoiceNumber": "FP-18951374",
+  "date": "2025-12-19",
+  "dateDisplay": "12/19/25",
+  "branchId": "hollywood",
+  "vendor": "FreshPoint",
+  "total": 3519.1,
+  "itemCount": 57,
+  "items": [
+   {
+    "itemNo": "435840",
+    "brand": "FRESHPOINT",
+    "description": "MILK WHOLE GALLON 4/1GAL",
+    "size": "1GAL",
+    "qty": 3,
+    "unit": "1GAL",
+    "unitPrice": 22.5,
+    "lineTotal": 67.5
+   },
+   {
+    "itemNo": "120700",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER EUROPEAN 12CT CASE",
+    "size": "12CT CASE",
+    "qty": 20,
+    "unit": "12CT CASE",
+    "unitPrice": 16.5,
+    "lineTotal": 330
+   },
+   {
+    "itemNo": "100600",
+    "brand": "FRESHPOINT",
+    "description": "APPLE FUJI BAG 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "100840",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GALA 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "101740",
+    "brand": "FRESHPOINT",
+    "description": "APPLE GOLD X FANCY 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "103890",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED PREMIUM 64CT 40 LB",
+    "size": "64CT 40 LB",
+    "qty": 1,
+    "unit": "64CT 40 LB",
+    "unitPrice": 37.25,
+    "lineTotal": 37.25
+   },
+   {
+    "itemNo": "104560",
+    "brand": "FRESHPOINT",
+    "description": "APPLE RED X FANCY 12/3 LB 12/3 LB",
+    "size": "3 LB 12/3 LB",
+    "qty": 1,
+    "unit": "3 LB 12/3 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "106845",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS GREEN 48 CT 48 CT",
+    "size": "48 CT 48 CT",
+    "qty": 10,
+    "unit": "48 CT 48 CT",
+    "unitPrice": 28.9,
+    "lineTotal": 289
+   },
+   {
+    "itemNo": "107320",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN 40 LB",
+    "size": "40 LB",
+    "qty": 1,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "107380",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN TIP 40 LB",
+    "size": "40 LB",
+    "qty": 1,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "606020",
+    "brand": "FRESHPOINT",
+    "description": "BANANA RETAIL 40 LB",
+    "size": "40 LB",
+    "qty": 2,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 41.8
+   },
+   {
+    "itemNo": "110260",
+    "brand": "FRESHPOINT",
+    "description": "BERRY BLUEBERRY 12/6 OZ 12 PK",
+    "size": "6 OZ 12 PK",
+    "qty": 1,
+    "unit": "6 OZ 12 PK",
+    "unitPrice": 23.75,
+    "lineTotal": 23.75
+   },
+   {
+    "itemNo": "110620",
+    "brand": "FRESHPOINT",
+    "description": "BERRY RASPBERRY PREMIUM 12/6OZ 12/6OZ",
+    "size": "6OZ 12/6OZ",
+    "qty": 1,
+    "unit": "6OZ 12/6OZ",
+    "unitPrice": 35.5,
+    "lineTotal": 35.5
+   },
+   {
+    "itemNo": "113860",
+    "brand": "FRESHPOINT",
+    "description": "CARAMBOLA (STAR FRUIT) 5/6 LB",
+    "size": "6 LB",
+    "qty": 1,
+    "unit": "6 LB",
+    "unitPrice": 23.75,
+    "lineTotal": 23.75
+   },
+   {
+    "itemNo": "118665",
+    "brand": "FRESHPOINT",
+    "description": "CLEMENTINES 10/3 LB 10/3 LB",
+    "size": "3 LB 10/3 LB",
+    "qty": 1,
+    "unit": "3 LB 10/3 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 33.9
+   },
+   {
+    "itemNo": "119165",
+    "brand": "FRESHPOINT",
+    "description": "COCONUT W/STRAW 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 10,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 279
+   },
+   {
+    "itemNo": "120350",
+    "brand": "FRESHPOINT",
+    "description": "CORN TRAY PACK 12/4 CT 12/4 CT",
+    "size": "4 CT 12/4 CT",
+    "qty": 1,
+    "unit": "4 CT 12/4 CT",
+    "unitPrice": 28.9,
+    "lineTotal": 28.9
+   },
+   {
+    "itemNo": "121845",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT WHITE FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 4,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 47.6
+   },
+   {
+    "itemNo": "121850",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT YELLOW 6 8 CT 5.5 LB",
+    "size": "8 CT 5.5 LB",
+    "qty": 10,
+    "unit": "8 CT 5.5 LB",
+    "unitPrice": 21.9,
+    "lineTotal": 219
+   },
+   {
+    "itemNo": "129340",
+    "brand": "FRESHPOINT",
+    "description": "GARLIC PEELED 20/1 LB 20/1 LB",
+    "size": "1 LB 20/1 LB",
+    "qty": 1,
+    "unit": "1 LB 20/1 LB",
+    "unitPrice": 67.9,
+    "lineTotal": 67.9
+   },
+   {
+    "itemNo": "130610",
+    "brand": "FRESHPOINT",
+    "description": "GRAPE GREEN SEDLSS CLMSHL 10/2 LB 10/2 LB",
+    "size": "2 LB 10/2 LB",
+    "qty": 2,
+    "unit": "2 LB 10/2 LB",
+    "unitPrice": 44.9,
+    "lineTotal": 89.8
+   },
+   {
+    "itemNo": "130609",
+    "brand": "FRESHPOINT",
+    "description": "GRAPE RED SEDLSS CLAMSHL 10/2 LB 10/2 LB",
+    "size": "2 LB 10/2 LB",
+    "qty": 2,
+    "unit": "2 LB 10/2 LB",
+    "unitPrice": 44.9,
+    "lineTotal": 89.8
+   },
+   {
+    "itemNo": "132290",
+    "brand": "FRESHPOINT",
+    "description": "GUAVA MEXICAN 16/14 OZ 16/14OZ",
+    "size": "14 OZ 16/14OZ",
+    "qty": 1,
+    "unit": "14 OZ 16/14OZ",
+    "unitPrice": 44.9,
+    "lineTotal": 44.9
+   },
+   {
+    "itemNo": "139772",
+    "brand": "FRESHPOINT",
+    "description": "KIWI GOLD CLAMSHELL 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 2,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 31.9,
+    "lineTotal": 63.8
+   },
+   {
+    "itemNo": "139775",
+    "brand": "FRESHPOINT",
+    "description": "KIWI 18/1 LB CLAM SHELL 18/1 LB",
+    "size": "1 LB CLAM SHELL 18/1 LB",
+    "qty": 1,
+    "unit": "1 LB CLAM SHELL 18/1 LB",
+    "unitPrice": 54.25,
+    "lineTotal": 54.25
+   },
+   {
+    "itemNo": "141040",
+    "brand": "FRESHPOINT",
+    "description": "LEMON CHOICE 165 CT 165 CT",
+    "size": "165 CT 165 CT",
+    "qty": 3,
+    "unit": "165 CT 165 CT",
+    "unitPrice": 33.9,
+    "lineTotal": 101.7
+   },
+   {
+    "itemNo": "144220",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE ROMAINE HEARTS 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 1,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 38.9,
+    "lineTotal": 38.9
+   },
+   {
+    "itemNo": "145000",
+    "brand": "FRESHPOINT",
+    "description": "LIME 150CT 150 CT",
+    "size": "150CT 150 CT",
+    "qty": 3,
+    "unit": "150CT 150 CT",
+    "unitPrice": 30.75,
+    "lineTotal": 92.25
+   },
+   {
+    "itemNo": "145540",
+    "brand": "FRESHPOINT",
+    "description": "LYCHEE 10 LB 10 LB",
+    "size": "10 LB 10 LB",
+    "qty": 3,
+    "unit": "10 LB 10 LB",
+    "unitPrice": 61.9,
+    "lineTotal": 185.7
+   },
+   {
+    "itemNo": "157720",
+    "brand": "FRESHPOINT",
+    "description": "ONION RED JUMBO 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 14.9,
+    "lineTotal": 14.9
+   },
+   {
+    "itemNo": "158260",
+    "brand": "FRESHPOINT",
+    "description": "ONION YELLOW JUMBO 50 LB",
+    "size": "50 LB",
+    "qty": 2,
+    "unit": "50 LB",
+    "unitPrice": 18.9,
+    "lineTotal": 37.8
+   },
+   {
+    "itemNo": "161680",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA GREEN 32 LB",
+    "size": "32 LB",
+    "qty": 2,
+    "unit": "32 LB",
+    "unitPrice": 23.75,
+    "lineTotal": 47.5
+   },
+   {
+    "itemNo": "161740",
+    "brand": "FRESHPOINT",
+    "description": "PAPAYA LARGE (RED) TAINUNG 30 LB",
+    "size": "30 LB",
+    "qty": 2,
+    "unit": "30 LB",
+    "unitPrice": 32.9,
+    "lineTotal": 65.8
+   },
+   {
+    "itemNo": "167380",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER GREEN X LARGE CASE",
+    "size": "CASE",
+    "qty": 2,
+    "unit": "CASE",
+    "unitPrice": 23,
+    "lineTotal": 46
+   },
+   {
+    "itemNo": "169960",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER ORANGE 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 2,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 23.8
+   },
+   {
+    "itemNo": "169200",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RED 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 2,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 30.9,
+    "lineTotal": 61.8
+   },
+   {
+    "itemNo": "169650",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER YELLOW 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 2,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 29.9,
+    "lineTotal": 59.8
+   },
+   {
+    "itemNo": "171700",
+    "brand": "FRESHPOINT",
+    "description": "PLANTAIN GREEN 50 LB",
+    "size": "50 LB",
+    "qty": 1,
+    "unit": "50 LB",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "172660",
+    "brand": "FRESHPOINT",
+    "description": "POMEGRANATE 20/22 CT 20/22CT",
+    "size": "22 CT 20/22CT",
+    "qty": 1,
+    "unit": "22 CT 20/22CT",
+    "unitPrice": 44.9,
+    "lineTotal": 44.9
+   },
+   {
+    "itemNo": "180160",
+    "brand": "FRESHPOINT",
+    "description": "RAMBUTAN 5 LB 5 LB",
+    "size": "5 LB 5 LB",
+    "qty": 4,
+    "unit": "5 LB 5 LB",
+    "unitPrice": 19.9,
+    "lineTotal": 79.6
+   },
+   {
+    "itemNo": "905310",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BERRY STRAWBERRY 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 4,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 15.9,
+    "lineTotal": 63.6
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT 7 CT",
+    "size": "7 CT 7 CT",
+    "qty": 10,
+    "unit": "7 CT 7 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 149
+   },
+   {
+    "itemNo": "171350",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL PINEAPPLE 6 CT 6 CT",
+    "size": "6 CT 6 CT",
+    "qty": 1,
+    "unit": "6 CT 6 CT",
+    "unitPrice": 13.9,
+    "lineTotal": 13.9
+   },
+   {
+    "itemNo": "194480",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL TOMATO 5/6 BULK 25 LB",
+    "size": "25 LB",
+    "qty": 2,
+    "unit": "25 LB",
+    "unitPrice": 15.9,
+    "lineTotal": 31.8
+   },
+   {
+    "itemNo": "186340",
+    "brand": "FRESHPOINT",
+    "description": "SQUASH BUTTERNUT (APPROX. 15 CT) 35 LB",
+    "size": "35 LB",
+    "qty": 1,
+    "unit": "35 LB",
+    "unitPrice": 23.5,
+    "lineTotal": 23.5
+   },
+   {
+    "itemNo": "187190",
+    "brand": "FRESHPOINT",
+    "description": "SQUASH LONG 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 27.9,
+    "lineTotal": 27.9
+   },
+   {
+    "itemNo": "195230",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO ANGEL SWEET 15/1 PT 15/1 PT",
+    "size": "1 PT 15/1 PT",
+    "qty": 1,
+    "unit": "1 PT 15/1 PT",
+    "unitPrice": 5.9,
+    "lineTotal": 5.9
+   },
+   {
+    "itemNo": "193170",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO CAMPARI RETAIL 10/1 LB 10/1 LB",
+    "size": "1 LB 10/1 LB",
+    "qty": 2,
+    "unit": "1 LB 10/1 LB",
+    "unitPrice": 4.9,
+    "lineTotal": 9.8
+   },
+   {
+    "itemNo": "192760",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO CAMPARI 8X2# 8X2LB",
+    "size": "2LB",
+    "qty": 1,
+    "unit": "2LB",
+    "unitPrice": 45.9,
+    "lineTotal": 45.9
+   },
+   {
+    "itemNo": "192840",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO FLAVOR BOMB RETAIL 8/12 OZ 8/12 OZ",
+    "size": "12 OZ 8/12 OZ",
+    "qty": 1,
+    "unit": "12 OZ 8/12 OZ",
+    "unitPrice": 9.9,
+    "lineTotal": 9.9
+   },
+   {
+    "itemNo": "193780",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO GREEN 25 LB",
+    "size": "25 LB",
+    "qty": 1,
+    "unit": "25 LB",
+    "unitPrice": 24.75,
+    "lineTotal": 24.75
+   },
+   {
+    "itemNo": "194045",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO KUMATO 10/1 LB RETAIL 10/1 LB",
+    "size": "1 LB RETAIL 10/1 LB",
+    "qty": 1,
+    "unit": "1 LB RETAIL 10/1 LB",
+    "unitPrice": 14.9,
+    "lineTotal": 14.9
+   },
+   {
+    "itemNo": "192880",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO WILD WONDER 15/1 PT 15/1 PT",
+    "size": "1 PT 15/1 PT",
+    "qty": 1,
+    "unit": "1 PT 15/1 PT",
+    "unitPrice": 8.9,
+    "lineTotal": 8.9
+   },
+   {
+    "itemNo": "192640",
+    "brand": "FRESHPOINT",
+    "description": "TOMATO WILD WONDER 6/1.5 LB 6/1.5#",
+    "size": "CASE",
+    "qty": 1,
+    "unit": "CASE",
+    "unitPrice": 6.9,
+    "lineTotal": 6.9
+   },
+   {
+    "itemNo": "893730",
+    "brand": "FRESHPOINT",
+    "description": "TURMERIC 5 LB 5 LB",
+    "size": "5 LB 5 LB",
+    "qty": 5,
+    "unit": "5 LB 5 LB",
+    "unitPrice": 19.5,
+    "lineTotal": 97.5
+   },
+   {
+    "itemNo": "196840",
+    "brand": "FRESHPOINT",
+    "description": "WATERCRESS 24 CT 24 CT",
+    "size": "24 CT 24 CT",
+    "qty": 1,
+    "unit": "24 CT 24 CT",
+    "unitPrice": 25.9,
+    "lineTotal": 25.9
+   },
+   {
+    "itemNo": "120590",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN RETAIL 20# 20 LB",
+    "size": "20 LB",
+    "qty": 1,
+    "unit": "20 LB",
+    "unitPrice": 33.9,
+    "lineTotal": 33.9
+   }
+  ]
+ },
+ {
+  "invoiceNumber": "FP-18970953",
+  "date": "2025-12-28",
+  "dateDisplay": "12/28/25",
+  "branchId": "pembroke_pines",
+  "vendor": "FreshPoint",
+  "total": 1348.6,
+  "itemCount": 19,
+  "items": [
+   {
+    "itemNo": "106845",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS GREEN 48 CT 48 CT",
+    "size": "48 CT 48 CT",
+    "qty": 4,
+    "unit": "48 CT 48 CT",
+    "unitPrice": 32.9,
+    "lineTotal": 131.6
+   },
+   {
+    "itemNo": "106840",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS PREMIUM (RIPE) 40/48CT 40/48CT",
+    "size": "48CT 40/48CT",
+    "qty": 2,
+    "unit": "48CT 40/48CT",
+    "unitPrice": 35.25,
+    "lineTotal": 70.5
+   },
+   {
+    "itemNo": "106865",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS 18/4 CT MEX 18/4 CT",
+    "size": "4 CT MEX 18/4 CT",
+    "qty": 2,
+    "unit": "4 CT MEX 18/4 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 55.8
+   },
+   {
+    "itemNo": "600060",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN 12/6 CT 12/6 CT",
+    "size": "6 CT 12/6 CT",
+    "qty": 2,
+    "unit": "6 CT 12/6 CT",
+    "unitPrice": 32.9,
+    "lineTotal": 65.8
+   },
+   {
+    "itemNo": "905240",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL EUROPEAN CUCUMBER 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 12,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 12.9,
+    "lineTotal": 154.8
+   },
+   {
+    "itemNo": "417200",
+    "brand": "FRESHPOINT",
+    "description": "EGG ORGANIC LG BRW CAGE FREE 15/1 DZ",
+    "size": "1 DZ",
+    "qty": 2,
+    "unit": "1 DZ",
+    "unitPrice": 68.9,
+    "lineTotal": 137.8
+   },
+   {
+    "itemNo": "621121980",
+    "brand": "FRESHPOINT",
+    "description": "EGG JUMBO CARTON 24 DZN 24/1DZ",
+    "size": "24 DZN 24/1DZ",
+    "qty": 2,
+    "unit": "24 DZN 24/1DZ",
+    "unitPrice": 42.9,
+    "lineTotal": 85.8
+   },
+   {
+    "itemNo": "123460",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT CHINESE 30 LB 30 LB",
+    "size": "30 LB 30 LB",
+    "qty": 2,
+    "unit": "30 LB 30 LB",
+    "unitPrice": 25.9,
+    "lineTotal": 51.8
+   },
+   {
+    "itemNo": "121835",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT RED FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 3,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 34.25,
+    "lineTotal": 102.75
+   },
+   {
+    "itemNo": "121850",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT YELLOW 6 8 CT 5.5 LB",
+    "size": "8 CT 5.5 LB",
+    "qty": 1,
+    "unit": "8 CT 5.5 LB",
+    "unitPrice": 22.9,
+    "lineTotal": 22.9
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT 7 CT",
+    "size": "7 CT 7 CT",
+    "qty": 4,
+    "unit": "7 CT 7 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 59.6
+   },
+   {
+    "itemNo": "130120",
+    "brand": "FRESHPOINT",
+    "description": "GINGER FRESH 28/30 LB 28 LB",
+    "size": "30 LB 28 LB",
+    "qty": 2,
+    "unit": "30 LB 28 LB",
+    "unitPrice": 37.9,
+    "lineTotal": 75.8
+   },
+   {
+    "itemNo": "129340",
+    "brand": "FRESHPOINT",
+    "description": "GARLIC PEELED 20/1 LB 20/1 LB",
+    "size": "1 LB 20/1 LB",
+    "qty": 1,
+    "unit": "1 LB 20/1 LB",
+    "unitPrice": 71.9,
+    "lineTotal": 71.9
+   },
+   {
+    "itemNo": "167650",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RAINBOW 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 3,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 83.7
+   },
+   {
+    "itemNo": "144970",
+    "brand": "FRESHPOINT",
+    "description": "LIME 110 CT CASE",
+    "size": "110 CT CASE",
+    "qty": 1,
+    "unit": "110 CT CASE",
+    "unitPrice": 36.5,
+    "lineTotal": 36.5
+   },
+   {
+    "itemNo": "140920",
+    "brand": "FRESHPOINT",
+    "description": "LEMON FANCY 115 CT 115 CT",
+    "size": "115 CT 115 CT",
+    "qty": 1,
+    "unit": "115 CT 115 CT",
+    "unitPrice": 43.75,
+    "lineTotal": 43.75
+   },
+   {
+    "itemNo": "111775",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BROCCOLI 14 CT 14 CT",
+    "size": "14 CT 14 CT",
+    "qty": 1,
+    "unit": "14 CT 14 CT",
+    "unitPrice": 31.9,
+    "lineTotal": 31.9
+   },
+   {
+    "itemNo": "116740",
+    "brand": "FRESHPOINT",
+    "description": "CAULIFLOWER 16 CT 16 CT",
+    "size": "16 CT 16 CT",
+    "qty": 1,
+    "unit": "16 CT 16 CT",
+    "unitPrice": 29,
+    "lineTotal": 29
+   },
+   {
+    "itemNo": "144220",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE ROMAINE HEARTS 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 1,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 36.9,
+    "lineTotal": 36.9
+   }
+  ]
+ },
+ {
+  "invoiceNumber": "FP-18971040",
+  "date": "2025-12-28",
+  "dateDisplay": "12/28/25",
+  "branchId": "coral_springs",
+  "vendor": "FreshPoint",
+  "total": 1133.75,
+  "itemCount": 34,
+  "items": [
+   {
+    "itemNo": "106855",
+    "brand": "FRESHPOINT",
+    "description": "AVOCADO HASS GREEN 60 CT 60 CT",
+    "size": "60 CT 60 CT",
+    "qty": 1,
+    "unit": "60 CT 60 CT",
+    "unitPrice": 29.9,
+    "lineTotal": 29.9
+   },
+   {
+    "itemNo": "107320",
+    "brand": "FRESHPOINT",
+    "description": "BANANA GREEN 40 LB",
+    "size": "40 LB",
+    "qty": 2,
+    "unit": "40 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 41.8
+   },
+   {
+    "itemNo": "113860",
+    "brand": "FRESHPOINT",
+    "description": "CARAMBOLA (STAR FRUIT) 5/6 LB",
+    "size": "6 LB",
+    "qty": 1,
+    "unit": "6 LB",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "116680",
+    "brand": "FRESHPOINT",
+    "description": "CAULIFLOWER 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 1,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 28.9,
+    "lineTotal": 28.9
+   },
+   {
+    "itemNo": "119800",
+    "brand": "FRESHPOINT",
+    "description": "CORN BABY 100CT PEELED 100CT",
+    "size": "100CT PEELED 100CT",
+    "qty": 1,
+    "unit": "100CT PEELED 100CT",
+    "unitPrice": 23.75,
+    "lineTotal": 23.75
+   },
+   {
+    "itemNo": "905240",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL EUROPEAN CUCUMBER 12 CT 12 CT",
+    "size": "12 CT 12 CT",
+    "qty": 8,
+    "unit": "12 CT 12 CT",
+    "unitPrice": 12.9,
+    "lineTotal": 103.2
+   },
+   {
+    "itemNo": "120590",
+    "brand": "FRESHPOINT",
+    "description": "CUCUMBER PERSIAN RETAIL 20# 20 LB",
+    "size": "20 LB",
+    "qty": 2,
+    "unit": "20 LB",
+    "unitPrice": 37.9,
+    "lineTotal": 75.8
+   },
+   {
+    "itemNo": "121835",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT RED FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 2,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 34.25,
+    "lineTotal": 68.5
+   },
+   {
+    "itemNo": "121845",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT WHITE FLESH 7 9 CT 10 LB",
+    "size": "9 CT 10 LB",
+    "qty": 2,
+    "unit": "9 CT 10 LB",
+    "unitPrice": 11.9,
+    "lineTotal": 23.8
+   },
+   {
+    "itemNo": "121850",
+    "brand": "FRESHPOINT",
+    "description": "DRAGONFRUIT YELLOW 6 8 CT 5.5 LB",
+    "size": "8 CT 5.5 LB",
+    "qty": 1,
+    "unit": "8 CT 5.5 LB",
+    "unitPrice": 22.9,
+    "lineTotal": 22.9
+   },
+   {
+    "itemNo": "123340",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT BABY/INDIAN 10 LB 10 LB",
+    "size": "10 LB 10 LB",
+    "qty": 1,
+    "unit": "10 LB 10 LB",
+    "unitPrice": 21.25,
+    "lineTotal": 21.25
+   },
+   {
+    "itemNo": "123460",
+    "brand": "FRESHPOINT",
+    "description": "EGGPLANT CHINESE 30 LB 30 LB",
+    "size": "30 LB 30 LB",
+    "qty": 1,
+    "unit": "30 LB 30 LB",
+    "unitPrice": 25.9,
+    "lineTotal": 25.9
+   },
+   {
+    "itemNo": "132283",
+    "brand": "FRESHPOINT",
+    "description": "GUAVA THAI 20 LB 20 LB",
+    "size": "20 LB 20 LB",
+    "qty": 1,
+    "unit": "20 LB 20 LB",
+    "unitPrice": 50.9,
+    "lineTotal": 50.9
+   },
+   {
+    "itemNo": "180660",
+    "brand": "FRESHPOINT",
+    "description": "MALANGA EDDO 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 26.9,
+    "lineTotal": 26.9
+   },
+   {
+    "itemNo": "156040",
+    "brand": "FRESHPOINT",
+    "description": "OKRA 11-13LB",
+    "size": "13LB",
+    "qty": 2,
+    "unit": "13LB",
+    "unitPrice": 31.9,
+    "lineTotal": 63.8
+   },
+   {
+    "itemNo": "163540",
+    "brand": "FRESHPOINT",
+    "description": "PEA SUGAR SNAP DECALYXED 10 LB",
+    "size": "10 LB",
+    "qty": 1,
+    "unit": "10 LB",
+    "unitPrice": 34.25,
+    "lineTotal": 34.25
+   },
+   {
+    "itemNo": "167565",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER HABANERO MIXED COLOR 8 LB",
+    "size": "8 LB",
+    "qty": 1,
+    "unit": "8 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "167650",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RAINBOW 12/3 CT 12/3 CT",
+    "size": "3 CT 12/3 CT",
+    "qty": 1,
+    "unit": "3 CT 12/3 CT",
+    "unitPrice": 27.9,
+    "lineTotal": 27.9
+   },
+   {
+    "itemNo": "169200",
+    "brand": "FRESHPOINT",
+    "description": "PEPPER RED 11 LB RETAIL 11 LB",
+    "size": "11 LB RETAIL 11 LB",
+    "qty": 1,
+    "unit": "11 LB RETAIL 11 LB",
+    "unitPrice": 27.9,
+    "lineTotal": 27.9
+   },
+   {
+    "itemNo": "173755",
+    "brand": "FRESHPOINT",
+    "description": "POTATO YUKON GOLD 10/5 LB 10/5 LB",
+    "size": "5 LB 10/5 LB",
+    "qty": 1,
+    "unit": "5 LB 10/5 LB",
+    "unitPrice": 20.9,
+    "lineTotal": 20.9
+   },
+   {
+    "itemNo": "905310",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL BERRY STRAWBERRY 8/1 LB 8/1 LB",
+    "size": "1 LB 8/1 LB",
+    "qty": 1,
+    "unit": "1 LB 8/1 LB",
+    "unitPrice": 12.9,
+    "lineTotal": 12.9
+   },
+   {
+    "itemNo": "196840",
+    "brand": "FRESHPOINT",
+    "description": "WATERCRESS 24 CT 24 CT",
+    "size": "24 CT 24 CT",
+    "qty": 1,
+    "unit": "24 CT 24 CT",
+    "unitPrice": 25.9,
+    "lineTotal": 25.9
+   },
+   {
+    "itemNo": "146030",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL MANGO 7 CT 7 CT",
+    "size": "7 CT 7 CT",
+    "qty": 2,
+    "unit": "7 CT 7 CT",
+    "unitPrice": 14.9,
+    "lineTotal": 29.8
+   },
+   {
+    "itemNo": "171350",
+    "brand": "FRESHPOINT",
+    "description": "RETAIL PINEAPPLE 6 CT 6 CT",
+    "size": "6 CT 6 CT",
+    "qty": 1,
+    "unit": "6 CT 6 CT",
+    "unitPrice": 15.9,
+    "lineTotal": 15.9
+   },
+   {
+    "itemNo": "184600",
+    "brand": "FRESHPOINT",
+    "description": "SPINACH CALIFORNIA 10 OZ 12/10OZ",
+    "size": "10 OZ 12/10OZ",
+    "qty": 1,
+    "unit": "10 OZ 12/10OZ",
+    "unitPrice": 21.9,
+    "lineTotal": 21.9
+   },
+   {
+    "itemNo": "142180",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE GREEN LEAF 24 CT",
+    "size": "24 CT",
+    "qty": 1,
+    "unit": "24 CT",
+    "unitPrice": 34.75,
+    "lineTotal": 34.75
+   },
+   {
+    "itemNo": "143620",
+    "brand": "FRESHPOINT",
+    "description": "LETTUCE RED LEAF 24 CT",
+    "size": "24 CT",
+    "qty": 1,
+    "unit": "24 CT",
+    "unitPrice": 37.25,
+    "lineTotal": 37.25
+   },
+   {
+    "itemNo": "132285",
+    "brand": "FRESHPOINT",
+    "description": "GUAVA PINK FLORIDA 10 LB",
+    "size": "10 LB",
+    "qty": 1,
+    "unit": "10 LB",
+    "unitPrice": 43.75,
+    "lineTotal": 43.75
+   },
+   {
+    "itemNo": "186820",
+    "brand": "FRESHPOINT",
+    "description": "SQUASH CHAYOTE BB 29-31LB",
+    "size": "31LB",
+    "qty": 1,
+    "unit": "31LB",
+    "unitPrice": 17.9,
+    "lineTotal": 17.9
+   },
+   {
+    "itemNo": "893730",
+    "brand": "FRESHPOINT",
+    "description": "TURMERIC 5 LB 5 LB",
+    "size": "5 LB 5 LB",
+    "qty": 1,
+    "unit": "5 LB 5 LB",
+    "unitPrice": 19.5,
+    "lineTotal": 19.5
+   },
+   {
+    "itemNo": "164860",
+    "brand": "FRESHPOINT",
+    "description": "PEAR CACTUS GREEN FULL BOX 30 LB",
+    "size": "30 LB",
+    "qty": 1,
+    "unit": "30 LB",
+    "unitPrice": 34.9,
+    "lineTotal": 34.9
+   },
+   {
+    "itemNo": "184960",
+    "brand": "FRESHPOINT",
+    "description": "SPROUT ALFALFA 8/4OZ 4OZ",
+    "size": "4OZ 4OZ",
+    "qty": 1,
+    "unit": "4OZ 4OZ",
+    "unitPrice": 18.25,
+    "lineTotal": 18.25
+   },
+   {
+    "itemNo": "179920",
+    "brand": "FRESHPOINT",
+    "description": "RADISH RED CELLO 30/6 OZ 30/6 OZ",
+    "size": "6 OZ 30/6 OZ",
+    "qty": 1,
+    "unit": "6 OZ 30/6 OZ",
+    "unitPrice": 17.75,
+    "lineTotal": 17.75
+   },
+   {
+    "itemNo": "621121980",
+    "brand": "FRESHPOINT",
+    "description": "EGG JUMBO CARTON 24 DZN 24/1DZ",
+    "size": "24 DZN 24/1DZ",
+    "qty": 1,
+    "unit": "24 DZN 24/1DZ",
+    "unitPrice": 42.9,
+    "lineTotal": 42.9
+   }
+  ]
+ }
+]
