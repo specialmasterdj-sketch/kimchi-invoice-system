@@ -318,6 +318,12 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   <div id="branchContent"></div>
 </div>
 
+<!-- ===== PAGE: VENDOR ===== -->
+<div class="page" id="page-vendor">
+  <div class="card" id="vendorInfo"></div>
+  <div id="vendorContent"></div>
+</div>
+
 <!-- ===== PAGE: UPLOAD ===== -->
 <div class="page" id="page-upload">
   <!-- STEP 1: Branch & Vendor Selection -->
@@ -532,7 +538,8 @@ function normalizeItem(item) {
 let currentPage = 'page-home';
 let pageHistory = [];
 let currentBranch = null;
-let _poppingState = false; // prevent re-entrant history pushes
+let currentVendor = null;
+let _ignoredPopstates = 0; // count of popstate events to ignore (fired by in-app goBack())
 let currentFilter = 'all';
 let crossFilter = 'diff';
 let comparisonResults = [];
@@ -632,8 +639,8 @@ function showPage(pageId) {
   updateHeader();
   window.scrollTo(0, 0);
   if (pageId === 'page-upload') initUploadSelectors();
-  // Sync browser history so back button and ESC work
-  if (!_poppingState && isNewPage) {
+  // Sync browser history so browser back button fires popstate
+  if (isNewPage) {
     history.pushState({ page: pageId, appHistory: [...pageHistory] }, '');
   }
 }
@@ -769,11 +776,14 @@ function handleVendorChange() {
 
 function goBack() {
   if (pageHistory.length === 0) return;
-  // Prefer browser history.back() so the URL/state stays in sync
+  // Use app-internal stack directly for reliability (browser history.back() can skip steps in PWA)
+  _doGoBack();
+  // Also sync browser history so browser URL stays consistent
+  _ignoredPopstates++;
   history.back();
 }
 
-// Browser back button / ESC / swipe all funnel through here
+// All back mechanisms (FAB, ESC, swipe, browser back) funnel through here
 function _doGoBack() {
   if (pageHistory.length === 0) return;
   const prev = pageHistory.pop();
@@ -785,9 +795,14 @@ function _doGoBack() {
   window.scrollTo(0, 0);
 }
 
-// Handle browser back/forward navigation
+// Handle browser native back button
 window.addEventListener('popstate', (e) => {
-  _poppingState = true;
+  // If goBack() already handled this via _doGoBack(), ignore the popstate
+  if (_ignoredPopstates > 0) {
+    _ignoredPopstates--;
+    return;
+  }
+  // Browser native back: restore from browser history state
   if (e.state && e.state.page) {
     pageHistory = e.state.appHistory || [];
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -806,7 +821,6 @@ window.addEventListener('popstate', (e) => {
     updateHeader();
     window.scrollTo(0, 0);
   }
-  _poppingState = false;
 });
 
 // ESC key to go back
@@ -832,6 +846,7 @@ function updateHeader() {
   const titles = {
     'page-home': ['Kimchi Mart Invoice System', 'Invoice Comparison'],
     'page-branch': [currentBranch ? SEED_DATA.branches[currentBranch]?.name : 'Branch', 'Branch Detail / 지점 상세'],
+    'page-vendor': [currentVendor || 'Vendor', 'Vendor Detail / 벤더 상세'],
     'page-upload': ['Upload Invoice', 'New Invoice Comparison / 새 인보이스 비교'],
     'page-results': ['Comparison Results', 'Price Analysis / 가격 분석'],
     'page-cross': ['Cross-Branch', 'All Branches / 전 지점 비교'],
@@ -841,6 +856,79 @@ function updateHeader() {
   const [title, sub] = titles[currentPage] || ['', ''];
   document.getElementById('headerTitle').textContent = title;
   document.getElementById('headerSubtitle').textContent = sub;
+}
+
+// ===== VENDOR COLORS (shared between branch and vendor pages) =====
+const VENDOR_COLORS = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'JFC': '#4A148C', 'FreshPoint': '#2E7D32', 'Sysco': '#01579B', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KC Trading': '#AD1457', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Bandi Foods': '#283593', 'Wei-Chuan': '#1565C0', 'Two Bros Food': '#00838F', 'POCAS': '#558B2F', 'Eastland Food': '#4E342E', 'Buckhead': '#37474F', 'Walong': '#880E4F', 'OCM': '#FF6F00', 'Other': '#555' };
+
+// ===== VENDOR PAGE =====
+function openVendor(branchId, vendorName) {
+  currentVendor = vendorName;
+  renderVendorPage(branchId, vendorName);
+  showPage('page-vendor');
+}
+
+function renderVendorPage(branchId, vendorName) {
+  const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
+  const vInvoices = SEED_DATA.invoices.filter(i => i.branchId === branchId && (i.vendor || 'Other') === vendorName);
+  vInvoices.sort((a, b) => b.date.localeCompare(a.date));
+  const vTotal = vInvoices.reduce((a, i) => a + i.total, 0);
+  const vItems = vInvoices.reduce((a, i) => a + i.itemCount, 0);
+  const vColor = VENDOR_COLORS[vendorName] || '#555';
+
+  document.getElementById('vendorInfo').innerHTML = `
+    <div class="card-title" style="color:${vColor}">${vendorName}</div>
+    <div class="card-subtitle">${vInvoices.length} invoices / ${vItems.toLocaleString()} items / $${(vTotal/1000).toFixed(1)}K | ${SEED_DATA.branches[branchId]?.name || branchId}</div>
+  `;
+
+  let content = '';
+  const dateGroups = getVendorDateGroups(branchId, vendorId);
+  if (dateGroups.length === 1) {
+    content += `<div style="background:#E3F2FD;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:8px;">
+      📌 <strong>첫 번째 인보이스</strong> — 앞으로 업로드되는 인보이스와 가격이 비교됩니다.<br>
+      <span style="color:#666;">First invoice on record. Upload more invoices to enable price comparison.</span>
+    </div>`;
+  } else if (dateGroups.length >= 2) {
+    const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
+    const fmtOpt = g => {
+      const label = g.invoiceNumbers.length > 1
+        ? `${fmtD(g.date)} (${g.invoiceNumbers.length} invoices combined)`
+        : `${g.invoiceNumbers[0]} (${fmtD(g.date)})`;
+      return `${label} - ${g.itemCount} items - $${g.total.toLocaleString()}`;
+    };
+    const newOpts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
+    content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
+    content += `<label>New Invoice (latest)</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${newOpts}</select>`;
+    content += `<div class="comp-period-btns">`;
+    content += `<span class="comp-period-btn active" data-period="all" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
+    content += `<span class="comp-period-btn" data-period="3m" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
+    content += `<span class="comp-period-btn" data-period="6m" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
+    content += `<span class="comp-period-btn" data-period="1y" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
+    content += `</div>`;
+    content += `<div class="comp-info" id="compInfo_${branchId}_${vendorId}"></div>`;
+    content += `</div>`;
+  }
+
+  for (const inv of vInvoices) {
+    const hasItems = inv.itemCount > 0;
+    content += `<div class="history-item" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
+      <div class="history-info">
+        <h4>${inv.invoiceNumber}</h4>
+        <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
+      </div>
+      <div class="history-meta">
+        <div class="amount">$${inv.total.toLocaleString()}</div>
+        <div class="date">${inv.dateDisplay}</div>
+      </div>
+    </div>`;
+  }
+
+  content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
+  document.getElementById('vendorContent').innerHTML = content;
+
+  if (dateGroups.length >= 2) {
+    updateComparison(branchId, vendorId);
+  }
 }
 
 // ===== BRANCH PAGE =====
@@ -868,75 +956,21 @@ function openBranch(branchId) {
   `;
 
   let content = '';
-  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'JFC': '#4A148C', 'FreshPoint': '#2E7D32', 'Sysco': '#01579B', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KC Trading': '#AD1457', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Bandi Foods': '#283593', 'Wei-Chuan': '#1565C0', 'Two Bros Food': '#00838F', 'POCAS': '#558B2F', 'Eastland Food': '#4E342E', 'Buckhead': '#37474F', 'Walong': '#880E4F', 'OCM': '#FF6F00', 'Other': '#555' };
 
-  // Render each vendor section separately
+  // Render each vendor as a navigation card (tap to go to vendor detail page)
   for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
-    const vColor = vendorColors[vendorName] || '#555';
+    const vColor = VENDOR_COLORS[vendorName] || '#555';
     const vItems = vInvoices.reduce((a, i) => a + i.itemCount, 0);
     const vTotal = vInvoices.reduce((a, i) => a + i.total, 0);
     const vLatestDate = vInvoices.reduce((latest, inv) => inv.date > latest ? inv.date : latest, '');
     const vLatestDisplay = vLatestDate ? (() => { const [y,m,d] = vLatestDate.split('-'); return `${m}/${d}/${y.slice(2)}`; })() : '';
 
-    const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
     content += `<div class="card" style="border-left: 4px solid ${vColor}; padding:0;">`;
-    content += `<div class="vendor-toggle" onclick="toggleVendorInvoices('${vendorId}')" style="color:${vColor}; cursor:pointer; padding:12px 16px; display:flex; align-items:center; gap:8px; user-select:none;">
-      <span id="arrow_${vendorId}" style="font-size:12px; transition:transform 0.2s;">▶</span>
+    content += `<div class="vendor-toggle" onclick="openVendor('${branchId}','${vendorName.replace(/'/g, "\\'")}')" style="color:${vColor}; cursor:pointer; padding:12px 16px; display:flex; align-items:center; gap:8px; user-select:none;">
+      <span style="font-size:12px;">❯</span>
       <span style="font-weight:600; flex:1;">${vendorName} (${vInvoices.length} invoices / ${vItems.toLocaleString()} items / $${(vTotal/1000).toFixed(1)}K / Latest: ${vLatestDisplay})</span>
     </div>`;
-
-    content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
-    vInvoices.sort((a, b) => b.date.localeCompare(a.date));
-    // Comparison: New Invoice vs ALL historical prices
-    const dateGroups = getVendorDateGroups(branchId, vendorId);
-    if (dateGroups.length === 1) {
-      content += `<div style="background:#E3F2FD;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:8px;">
-        📌 <strong>첫 번째 인보이스</strong> — 앞으로 업로드되는 인보이스와 가격이 비교됩니다.<br>
-        <span style="color:#666;">First invoice on record. Upload more invoices to enable price comparison.</span>
-      </div>`;
-    } else if (dateGroups.length >= 2) {
-      const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-      const fmtOpt = g => {
-        const label = g.invoiceNumbers.length > 1
-          ? `${fmtD(g.date)} (${g.invoiceNumbers.length} invoices combined)`
-          : `${g.invoiceNumbers[0]} (${fmtD(g.date)})`;
-        return `${label} - ${g.itemCount} items - $${g.total.toLocaleString()}`;
-      };
-      let newOpts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
-      // Old = ALL historical data (everything except the selected new invoice date)
-      const oldestDate = fmtD(dateGroups[dateGroups.length - 1].date);
-      const newestOldDate = fmtD(dateGroups.length > 1 ? dateGroups[1].date : dateGroups[0].date);
-      const totalOldInvoices = dateGroups.slice(1).reduce((a, g) => a + g.invoiceNumbers.length, 0);
-      const totalOldItems = dateGroups.slice(1).reduce((a, g) => a + g.itemCount, 0);
-
-      content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
-      content += `<label>New Invoice (latest)</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${newOpts}</select>`;
-      content += `<div class="comp-period-btns">`;
-      content += `<span class="comp-period-btn active" data-period="all" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
-      content += `<span class="comp-period-btn" data-period="3m" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
-      content += `<span class="comp-period-btn" data-period="6m" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
-      content += `<span class="comp-period-btn" data-period="1y" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
-      content += `</div>`;
-      content += `<div class="comp-info" id="compInfo_${branchId}_${vendorId}"></div>`;
-      content += `</div>`;
-    }
-    for (const inv of vInvoices) {
-      const hasItems = inv.itemCount > 0;
-      content += `<div class="history-item" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
-        <div class="history-info">
-          <h4>${inv.invoiceNumber}</h4>
-          <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
-        </div>
-        <div class="history-meta">
-          <div class="amount">$${inv.total.toLocaleString()}</div>
-          <div class="date">${inv.dateDisplay}</div>
-        </div>
-      </div>`;
-    }
-    // Price changes container (rendered dynamically)
-    content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
-
-    content += '</div></div>';
+    content += '</div>';
   }
 
   if (Object.keys(vendorGroups).length === 0) {
@@ -944,16 +978,6 @@ function openBranch(branchId) {
   }
 
   document.getElementById('branchContent').innerHTML = content;
-
-  // Trigger initial comparison render for each vendor that has >= 2 date groups
-  for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
-    const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
-    const dGroups = getVendorDateGroups(branchId, vendorId);
-    if (dGroups.length >= 2) {
-      updateComparison(branchId, vendorId);
-    }
-  }
-
   showPage('page-branch');
 }
 
@@ -1251,19 +1275,6 @@ function showCompFilter(uid, filter) {
     if (btn) btn.style.borderColor = '#C62828';
     const sec = document.getElementById(`${uid}_sec_${filter}`);
     if (sec) sec.style.display = 'block';
-  }
-}
-
-// ===== VENDOR TOGGLE =====
-function toggleVendorInvoices(vendorId) {
-  const list = document.getElementById('vendor_' + vendorId);
-  const arrow = document.getElementById('arrow_' + vendorId);
-  if (list.style.display === 'none') {
-    list.style.display = 'block';
-    arrow.textContent = '▼';
-  } else {
-    list.style.display = 'none';
-    arrow.textContent = '▶';
   }
 }
 
@@ -1794,21 +1805,12 @@ function goToBranchFromResult() {
   const branchId = btn.dataset.branchId;
   const vendor = btn.dataset.vendor;
   if (branchId) {
-    openBranch(branchId);
-    // Auto-expand the vendor section
     if (vendor) {
-      const vendorId = vendor.replace(/[^a-zA-Z0-9]/g, '_');
-      setTimeout(() => {
-        const list = document.getElementById('vendor_' + vendorId);
-        const arrow = document.getElementById('arrow_' + vendorId);
-        if (list && list.style.display === 'none') {
-          list.style.display = 'block';
-          if (arrow) arrow.textContent = '▼';
-        }
-        // Scroll to the vendor section
-        const vendorEl = document.getElementById('vendor_' + vendorId);
-        if (vendorEl) vendorEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 300);
+      // Navigate directly to the vendor page
+      openBranch(branchId);
+      openVendor(branchId, vendor);
+    } else {
+      openBranch(branchId);
     }
   }
 }
