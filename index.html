@@ -560,10 +560,15 @@ function openBranch(branchId) {
     if (vWithItems.length >= 2) {
       const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
       const fmtOpt = inv => `${inv.invoiceNumber} (${fmtD(inv.date)}) - $${inv.total.toLocaleString()}`;
+      // Find default old invoice: first with a different date than newest
+      let defaultOldIdx = 1;
+      for (let i = 1; i < vWithItems.length; i++) {
+        if (vWithItems[i].date !== vWithItems[0].date) { defaultOldIdx = i; break; }
+      }
       let opts = vWithItems.map((inv, idx) => `<option value="${idx}">${fmtOpt(inv)}</option>`).join('');
       content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
       content += `<label>New Invoice</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts}</select>`;
-      content += `<label>Old Invoice</label><select id="compOld_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts.replace('value="1"', 'value="1" selected')}</select>`;
+      content += `<label>Old Invoice</label><select id="compOld_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts.replace(`value="${defaultOldIdx}"`, `value="${defaultOldIdx}" selected`)}</select>`;
       content += `<div class="comp-period-btns">`;
       content += `<span class="comp-period-btn active" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
       content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
@@ -642,9 +647,13 @@ function setCompPeriod(branchId, vendorId, period, btnEl) {
   const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
 
   if (period === 'all') {
-    // Reset: newest vs 2nd newest
+    // Reset: newest vs first invoice with a different date
     newSel.selectedIndex = 0;
-    oldSel.selectedIndex = 1;
+    let defOld = 1;
+    for (let i = 1; i < vWithItems.length; i++) {
+      if (vWithItems[i].date !== vWithItems[0].date) { defOld = i; break; }
+    }
+    oldSel.selectedIndex = defOld;
   } else {
     // Calculate cutoff date
     const now = new Date(vWithItems[0].date);
