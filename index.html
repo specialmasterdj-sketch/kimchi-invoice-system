@@ -529,12 +529,14 @@ function openBranch(branchId) {
     const vColor = vendorColors[vendorName] || '#555';
     const vItems = vInvoices.reduce((a, i) => a + i.itemCount, 0);
     const vTotal = vInvoices.reduce((a, i) => a + i.total, 0);
+    const vLatestDate = vInvoices.reduce((latest, inv) => inv.date > latest ? inv.date : latest, '');
+    const vLatestDisplay = vLatestDate ? (() => { const [y,m,d] = vLatestDate.split('-'); return `${m}/${d}/${y.slice(2)}`; })() : '';
 
     const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
     content += `<div class="card" style="border-left: 4px solid ${vColor}; padding:0;">`;
     content += `<div class="vendor-toggle" onclick="toggleVendorInvoices('${vendorId}')" style="color:${vColor}; cursor:pointer; padding:12px 16px; display:flex; align-items:center; gap:8px; user-select:none;">
       <span id="arrow_${vendorId}" style="font-size:12px; transition:transform 0.2s;">▶</span>
-      <span style="font-weight:600; flex:1;">${vendorName} (${vInvoices.length} invoices / ${vItems.toLocaleString()} items / $${(vTotal/1000).toFixed(1)}K)</span>
+      <span style="font-weight:600; flex:1;">${vendorName} (${vInvoices.length} invoices / ${vItems.toLocaleString()} items / $${(vTotal/1000).toFixed(1)}K / Latest: ${vLatestDisplay})</span>
     </div>`;
 
     content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
