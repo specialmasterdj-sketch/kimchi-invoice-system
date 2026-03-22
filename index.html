@@ -410,6 +410,27 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
 <div class="toast" id="toast"></div>
 
 <script>
+// ===== ITEM NORMALIZATION =====
+// Different vendors use different field names for the same data.
+// This helper normalizes them so comparison logic works across all vendors.
+function normalizeItem(item) {
+  return {
+    itemNo: item.itemNo || item.itemNumber || '',
+    brand: item.brand || '',
+    name: item.name || item.description || item.desc || '',
+    description: item.name || item.description || item.desc || '',
+    unitPrice: item.unitPrice || item.unit_price || 0,
+    each: item.each || item.eachPrice || item.each_price || 0,
+    eachPrice: item.each || item.eachPrice || item.each_price || 0,
+    total: item.total || item.totalPrice || item.total_price || 0,
+    totalPrice: item.total || item.totalPrice || item.total_price || 0,
+    qty: item.qty || item.quantity || 0,
+    size: item.size || '',
+    um: item.um || '',
+    type: item.type || ''
+  };
+}
+
 // ===== STATE =====
 let currentPage = 'page-home';
 let pageHistory = [];
@@ -702,7 +723,8 @@ function updateComparison(branchId, vendorId) {
 
   // Build price map from old invoice
   const oldPrices = {};
-  for (const item of oldInv.items) {
+  for (const rawItem of oldInv.items) {
+    const item = normalizeItem(rawItem);
     if (item.unitPrice <= 2) continue;
     if (!oldPrices[item.itemNo] || item.unitPrice > oldPrices[item.itemNo]) {
       oldPrices[item.itemNo] = item.unitPrice;
@@ -711,7 +733,8 @@ function updateComparison(branchId, vendorId) {
 
   // Build price map from new invoice and compare
   const newPrices = {};
-  for (const item of newInv.items) {
+  for (const rawItem of newInv.items) {
+    const item = normalizeItem(rawItem);
     if (item.unitPrice <= 2) continue;
     if (!newPrices[item.itemNo] || item.unitPrice > newPrices[item.itemNo].unitPrice) {
       newPrices[item.itemNo] = item;
@@ -782,7 +805,7 @@ function renderInvoiceDetail() {
     ${inv.note ? `<div style="font-size:0.7rem;color:#FF9800;margin-top:4px;">${inv.note}</div>` : ''}
   `;
 
-  let items = inv.items;
+  let items = inv.items.map(normalizeItem);
   if (search) items = items.filter(it => `${it.brand} ${it.description} ${it.itemNo}`.toLowerCase().includes(search));
 
   let html = '<table class="results-table"><tr><th>#</th><th>Brand</th><th>Description</th><th>Size</th><th>Qty</th><th>Unit$</th><th>Total</th></tr>';
@@ -983,7 +1006,8 @@ function runComparison() {
       const priceHistory = {};
       for (const inv of historicalInvoices) {
         const bestPrices = {};
-        for (const item of inv.items) {
+        for (const rawItem of inv.items) {
+          const item = normalizeItem(rawItem);
           if (item.unitPrice <= 2) continue; // Skip promo/credit lines
           if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
             bestPrices[item.itemNo] = item;
@@ -1001,7 +1025,8 @@ function runComparison() {
 
       // Compare each item in new invoice
       const results = [];
-      for (const item of newInvoice.items) {
+      for (const rawItem of newInvoice.items) {
+        const item = normalizeItem(rawItem);
         const history = priceHistory[item.itemNo];
         let status, oldPrice, diff, pct, lastInvoice, lastDate;
 
@@ -1184,7 +1209,8 @@ function renderCrossBranch() {
   // Build item -> {branchId: price} map
   const itemMap = {};
   for (const [bId, inv] of Object.entries(latestByBranch)) {
-    for (const item of inv.items) {
+    for (const rawItem of inv.items) {
+      const item = normalizeItem(rawItem);
       if (item.unitPrice <= 2) continue; // Skip promo/credit lines
       const key = item.itemNo;
       if (!itemMap[key]) {
@@ -1423,7 +1449,8 @@ function renderCrossVendor() {
     const vendor = inv.vendor || 'Other';
     const branch = inv.branchId;
 
-    for (const item of inv.items) {
+    for (const rawItem of inv.items) {
+      const item = normalizeItem(rawItem);
       if (item.unitPrice <= 2) continue; // skip promo
 
       // Normalize product name for matching across vendors
