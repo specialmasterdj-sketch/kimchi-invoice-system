@@ -260,7 +260,7 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   <div class="card" style="margin-top:10px; border-left: 4px solid #00897B;">
     <div class="card-title" style="color:#00897B">📸 Scan Physical Invoice</div>
     <div class="card-subtitle">Take a photo of a paper invoice to compare prices instantly</div>
-    <button class="btn" style="background:#00897B;color:#fff;" onclick="openScanInvoice()">Scan with Camera</button>
+    <button class="btn" style="background:#00897B;color:#fff;" onclick="showPage('page-upload'); setTimeout(()=>setInputMethod('photo'),100);">Scan with Camera</button>
     <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleCameraCapture(this)">
   </div>
 
@@ -284,8 +284,29 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 
 <!-- ===== PAGE: UPLOAD ===== -->
 <div class="page" id="page-upload">
-  <div class="card">
-    <div class="card-title">Input Method / 입력 방식</div>
+  <!-- STEP 1: Branch & Vendor Selection -->
+  <div class="card" style="border-left:4px solid #C62828;">
+    <div class="card-title">Step 1: Select Branch & Vendor / 지점 및 벤더 선택</div>
+    <div class="card-subtitle">Which branch and vendor is this invoice for? / 어느 지점, 어느 벤더의 인보이스인가요?</div>
+    <div class="form-group">
+      <label class="form-label">Branch / 지점 *</label>
+      <select id="uploadBranch" class="form-select" onchange="updateUploadVendors()" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;">
+        <option value="">-- Select Branch / 지점 선택 --</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Vendor / 벤더 *</label>
+      <select id="uploadVendor" class="form-select" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;">
+        <option value="">-- Select Vendor / 벤더 선택 --</option>
+      </select>
+    </div>
+    <div id="uploadContext" style="display:none; margin-top:8px; padding:10px; background:#FFF3E0; border-radius:8px; font-size:0.75rem;">
+    </div>
+  </div>
+
+  <!-- STEP 2: Upload Invoice -->
+  <div class="card" style="border-left:4px solid #2196F3;">
+    <div class="card-title">Step 2: Upload Invoice / 인보이스 업로드</div>
     <div class="input-method" id="inputMethodTabs">
       <button class="tab active" onclick="setInputMethod('paste')">Text / 텍스트</button>
       <button class="tab" onclick="setInputMethod('file')">File / 파일</button>
@@ -340,7 +361,7 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
 
     <div style="margin-top:14px;">
       <button class="btn btn-primary" id="compareBtn" onclick="runComparison()" disabled>
-        Compare / 비교 시작
+        Step 3: Compare / 비교 시작
       </button>
     </div>
   </div>
@@ -505,6 +526,72 @@ function showPage(pageId) {
   document.getElementById('backBtn').classList.toggle('visible', pageHistory.length > 0);
   updateHeader();
   window.scrollTo(0, 0);
+  if (pageId === 'page-upload') initUploadSelectors();
+}
+
+function initUploadSelectors() {
+  const brSel = document.getElementById('uploadBranch');
+  if (brSel.options.length <= 1) {
+    for (const [id, br] of Object.entries(SEED_DATA.branches)) {
+      const opt = document.createElement('option');
+      opt.value = id;
+      opt.textContent = br.name;
+      brSel.appendChild(opt);
+    }
+  }
+}
+
+function updateUploadVendors() {
+  const branchId = document.getElementById('uploadBranch').value;
+  const vSel = document.getElementById('uploadVendor');
+  vSel.innerHTML = '<option value="">-- Select Vendor / 벤더 선택 --</option>';
+  const ctx = document.getElementById('uploadContext');
+  ctx.style.display = 'none';
+
+  if (!branchId) return;
+
+  // Find all vendors that have invoices for this branch
+  const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
+  const vendors = {};
+  for (const inv of brInvoices) {
+    const v = inv.vendor || 'Other';
+    if (!vendors[v]) vendors[v] = {count: 0, items: 0, latest: ''};
+    vendors[v].count++;
+    vendors[v].items += inv.items.length;
+    if (inv.date > vendors[v].latest) vendors[v].latest = inv.date;
+  }
+
+  // Also add common vendors even if no invoices yet
+  const commonVendors = ['Rhee Bros', 'Choripdong', 'Wang', 'Namdaemun', 'Sysco', 'FreshPoint', 'JFC', 'Wismettac', 'KC Trading', 'Well Luck', 'Eden', 'Eastland Food', 'Buckhead', 'Two Bros Food', 'Wei-Chuan', 'POCAS', 'Walong', 'OCM', 'Bandi Foods', 'KOCO Trading'];
+  for (const v of commonVendors) {
+    if (!vendors[v]) vendors[v] = {count: 0, items: 0, latest: ''};
+  }
+
+  for (const [name, info] of Object.entries(vendors).sort((a,b) => b[1].count - a[1].count)) {
+    const opt = document.createElement('option');
+    opt.value = name;
+    const historyText = info.count > 0 ? ` (${info.count} past invoices, ${info.items} items)` : ' (no history yet)';
+    opt.textContent = name + historyText;
+    vSel.appendChild(opt);
+  }
+
+  vSel.onchange = function() {
+    const vendor = this.value;
+    if (!vendor) { ctx.style.display = 'none'; return; }
+    const vInvs = brInvoices.filter(i => i.vendor === vendor).sort((a,b) => b.date.localeCompare(a.date));
+    if (vInvs.length > 0) {
+      const latest = vInvs[0];
+      const ld = latest.date.split('-'); const ldStr = ld[1]+'/'+ld[2]+'/'+ld[0].slice(2);
+      ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId].name}</strong><br>` +
+        `📊 ${vInvs.length} historical invoices | Latest: ${ldStr}<br>` +
+        `✅ New invoice will be compared against these ${vInvs.length} invoices`;
+      ctx.style.display = 'block';
+    } else {
+      ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId].name}</strong><br>` +
+        `⚠️ No historical invoices found. This will be the first one recorded.`;
+      ctx.style.display = 'block';
+    }
+  };
 }
 
 function goBack() {
@@ -945,13 +1032,15 @@ async function handlePdfFile(file) {
 }
 
 function checkCompareReady() {
-  let ready = false;
+  const hasBranch = document.getElementById('uploadBranch').value !== '';
+  const hasVendor = document.getElementById('uploadVendor').value !== '';
+  let hasData = false;
   if (inputMethod === 'paste') {
-    ready = document.getElementById('pasteArea').value.trim().length > 20;
+    hasData = document.getElementById('pasteArea').value.trim().length > 20;
   } else {
-    ready = pendingText.length > 20;
+    hasData = pendingText.length > 20;
   }
-  document.getElementById('compareBtn').disabled = !ready;
+  document.getElementById('compareBtn').disabled = !(hasBranch && hasVendor && hasData);
 }
 
 // Listen for paste area changes
@@ -1043,6 +1132,13 @@ function parseInvoiceText(text) {
 
 // ===== COMPARISON ENGINE =====
 function runComparison() {
+  // Get user-selected branch and vendor
+  const selBranch = document.getElementById('uploadBranch').value;
+  const selVendor = document.getElementById('uploadVendor').value;
+
+  if (!selBranch) { showToast('Please select a branch / 지점을 선택하세요'); return; }
+  if (!selVendor) { showToast('Please select a vendor / 벤더를 선택하세요'); return; }
+
   let text;
   if (inputMethod === 'paste') {
     text = document.getElementById('pasteArea').value;
@@ -1065,12 +1161,16 @@ function runComparison() {
         return;
       }
 
+      // Override branch and vendor with user selection
+      newInvoice.branchId = selBranch;
+      newInvoice.vendor = selVendor;
+
       comparisonInvoice = newInvoice;
       updateProgress(30);
 
       // Find historical prices for same branch AND same vendor only
       const historicalInvoices = SEED_DATA.invoices.filter(i =>
-        i.branchId === newInvoice.branchId && i.vendor === newInvoice.vendor && i.items.length > 0
+        i.branchId === selBranch && i.vendor === selVendor && i.items.length > 0
       ).sort((a, b) => b.date.localeCompare(a.date));
 
       // Build price history map: matchKey -> [{date, price, invoice}]
