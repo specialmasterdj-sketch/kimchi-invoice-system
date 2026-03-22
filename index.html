@@ -2175,7 +2175,12 @@ function showToast(msg) {
 
 // ===== SERVICE WORKER =====
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  // updateViaCache: 'none' prevents browser from caching sw.js itself,
+  // ensuring the latest service worker is always loaded.
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(reg => {
+    // Force update check on every page load
+    reg.update();
+  }).catch(() => {});
 }
 
 // ===== PDF.JS WORKER =====

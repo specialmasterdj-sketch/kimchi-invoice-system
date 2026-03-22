@@ -1,49 +1,37 @@
-const CACHE_NAME = 'kimchi-invoice-v40';
-const ASSETS = [
-  './',
-  './index.html',
-  './seed_data.js',
-  './manifest.json',
-  './icon-192.png',
-  './icon-512.png'
-];
+const CDN_CACHE = 'kimchi-cdn-v1';
 
-// Install - cache core assets
+// Install - nothing to pre-cache (local assets always fetched from network)
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ASSETS);
-    })
-  );
   self.skipWaiting();
 });
 
-// Activate - clean old caches
+// Activate - clean up old caches
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(
-        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+        keys.filter(key => key !== CDN_CACHE).map(key => caches.delete(key))
       );
     })
   );
   self.clients.claim();
 });
 
-// Fetch - network first, fall back to cache
+// Fetch - local assets: always network (no cache)
+//         CDN resources: cache-first (they never change)
 self.addEventListener('fetch', event => {
-  // Skip non-GET requests
   if (event.request.method !== 'GET') return;
 
-  // For CDN resources (pdf.js, tesseract.js), use cache-first
-  if (event.request.url.includes('cdnjs.cloudflare.com') ||
-      event.request.url.includes('cdn.jsdelivr.net')) {
+  const url = event.request.url;
+
+  // CDN resources: cache-first (stable, versioned URLs)
+  if (url.includes('cdnjs.cloudflare.com') || url.includes('cdn.jsdelivr.net')) {
     event.respondWith(
       caches.match(event.request).then(cached => {
         if (cached) return cached;
         return fetch(event.request).then(response => {
           const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          caches.open(CDN_CACHE).then(cache => cache.put(event.request, clone));
           return response;
         });
       })
@@ -51,14 +39,7 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // For local assets, network first with cache fallback
-  event.respondWith(
-    fetch(event.request).then(response => {
-      const clone = response.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
-      return response;
-    }).catch(() => {
-      return caches.match(event.request);
-    })
-  );
+  // Local assets: always go to network, never cache
+  // (ensures code changes reflect immediately on all devices)
+  event.respondWith(fetch(event.request));
 });
