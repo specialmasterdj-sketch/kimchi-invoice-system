@@ -225,6 +225,39 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   .results-table { font-size: 0.65rem; }
   .results-table th, .results-table td { padding: 6px 4px; }
 }
+
+/* ===== FLOATING BACK BUTTON (mobile only) ===== */
+.fab-back {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #C62828;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s, opacity 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+.fab-back.visible {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+.fab-back:active { transform: scale(0.90); }
+@media (min-width: 600px) {
+  .fab-back { display: none !important; }
+}
 </style>
 </head>
 <body>
@@ -237,6 +270,9 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
     <div class="subtitle" id="headerSubtitle">Invoice Comparison</div>
   </div>
 </div>
+
+<!-- ===== FLOATING BACK BUTTON (mobile only) ===== -->
+<button class="fab-back" id="fabBack" onclick="goBack()" aria-label="뒤로가기">&#8592;</button>
 
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
@@ -496,6 +532,7 @@ function normalizeItem(item) {
 let currentPage = 'page-home';
 let pageHistory = [];
 let currentBranch = null;
+let _poppingState = false; // prevent re-entrant history pushes
 let currentFilter = 'all';
 let crossFilter = 'diff';
 let comparisonResults = [];
@@ -524,6 +561,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+  // Set initial browser history state so popstate always has a baseline
+  history.replaceState({ page: 'page-home', appHistory: [] }, '');
+
   // Load persisted uploaded invoices from localStorage
   try {
     const saved = localStorage.getItem('kimchi_uploaded_invoices');
@@ -576,15 +616,26 @@ function initApp() {
 }
 
 // ===== NAVIGATION =====
+function updateNavBtns() {
+  const hasHistory = pageHistory.length > 0;
+  document.getElementById('backBtn').classList.toggle('visible', hasHistory);
+  document.getElementById('fabBack').classList.toggle('visible', hasHistory);
+}
+
 function showPage(pageId) {
-  if (currentPage !== pageId) pageHistory.push(currentPage);
+  const isNewPage = currentPage !== pageId;
+  if (isNewPage) pageHistory.push(currentPage);
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
   currentPage = pageId;
-  document.getElementById('backBtn').classList.toggle('visible', pageHistory.length > 0);
+  updateNavBtns();
   updateHeader();
   window.scrollTo(0, 0);
   if (pageId === 'page-upload') initUploadSelectors();
+  // Sync browser history so back button and ESC work
+  if (!_poppingState && isNewPage) {
+    history.pushState({ page: pageId, appHistory: [...pageHistory] }, '');
+  }
 }
 
 function initUploadSelectors() {
@@ -718,13 +769,64 @@ function handleVendorChange() {
 
 function goBack() {
   if (pageHistory.length === 0) return;
+  // Prefer browser history.back() so the URL/state stays in sync
+  history.back();
+}
+
+// Browser back button / ESC / swipe all funnel through here
+function _doGoBack() {
+  if (pageHistory.length === 0) return;
   const prev = pageHistory.pop();
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(prev).classList.add('active');
   currentPage = prev;
-  document.getElementById('backBtn').classList.toggle('visible', pageHistory.length > 0);
+  updateNavBtns();
   updateHeader();
+  window.scrollTo(0, 0);
 }
+
+// Handle browser back/forward navigation
+window.addEventListener('popstate', (e) => {
+  _poppingState = true;
+  if (e.state && e.state.page) {
+    pageHistory = e.state.appHistory || [];
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(e.state.page).classList.add('active');
+    currentPage = e.state.page;
+    updateNavBtns();
+    updateHeader();
+    window.scrollTo(0, 0);
+  } else {
+    // Went back before app start — show home
+    pageHistory = [];
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-home').classList.add('active');
+    currentPage = 'page-home';
+    updateNavBtns();
+    updateHeader();
+    window.scrollTo(0, 0);
+  }
+  _poppingState = false;
+});
+
+// ESC key to go back
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && pageHistory.length > 0) goBack();
+});
+
+// Swipe right from left edge to go back (mobile)
+let _swipeStartX = 0, _swipeStartY = 0;
+document.addEventListener('touchstart', (e) => {
+  _swipeStartX = e.touches[0].clientX;
+  _swipeStartY = e.touches[0].clientY;
+}, { passive: true });
+document.addEventListener('touchend', (e) => {
+  const dx = e.changedTouches[0].clientX - _swipeStartX;
+  const dy = e.changedTouches[0].clientY - _swipeStartY;
+  if (dx > 72 && Math.abs(dx) > Math.abs(dy) * 1.5 && _swipeStartX < 50 && pageHistory.length > 0) {
+    goBack();
+  }
+}, { passive: true });
 
 function updateHeader() {
   const titles = {
