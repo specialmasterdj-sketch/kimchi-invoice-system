@@ -769,7 +769,13 @@ function updateComparison(branchId, vendorId) {
     html += '</table></div>';
     tableDiv.innerHTML = html;
   } else {
-    tableDiv.innerHTML = `<div style="text-align:center;padding:12px;color:#999;font-size:12px;">No price changes between selected invoices</div>`;
+    const overlapCount = Object.keys(newPrices).filter(k => oldPrices[k] !== undefined).length;
+    const totalNew = Object.keys(newPrices).length;
+    const totalOld = Object.keys(oldPrices).length;
+    tableDiv.innerHTML = `<div style="text-align:center;padding:12px;color:#666;font-size:12px;">
+      ✅ No price changes detected<br>
+      <span style="font-size:11px;color:#999;">${overlapCount} matching items compared (New: ${totalNew} items / Old: ${totalOld} items)</span>
+    </div>`;
   }
 }
 
