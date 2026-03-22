@@ -205,6 +205,20 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 .input-method { display: flex; gap: 6px; margin-bottom: 12px; }
 .input-method .tab { flex: 1; text-align: center; padding: 10px 8px; font-size: 0.75rem; }
 
+/* ===== COMPARISON RANGE SELECTOR ===== */
+.comp-range { padding: 8px 12px; background: #f8f9fa; border-radius: 6px; margin-bottom: 8px; }
+.comp-range label { font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 3px; }
+.comp-range select { width: 100%; font-size: 13px; padding: 5px 8px; border: 1px solid #ddd; border-radius: 4px; background: white; margin-bottom: 6px; }
+.comp-range select:focus { outline: none; border-color: #C62828; }
+.comp-period-btns { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 2px; }
+.comp-period-btn {
+  padding: 3px 10px; border: 1px solid #ccc; border-radius: 12px; font-size: 11px;
+  font-weight: 600; cursor: pointer; background: white; color: #555; transition: all 0.15s;
+}
+.comp-period-btn:hover { border-color: #C62828; color: #C62828; }
+.comp-period-btn.active { background: #C62828; color: white; border-color: #C62828; }
+.comp-range .comp-info { font-size: 11px; color: #888; margin-top: 6px; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
   .stat-grid.four { grid-template-columns: repeat(2, 1fr); }
@@ -541,14 +555,23 @@ function openBranch(branchId) {
 
     content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
-    // Comparison context info
+    // Comparison range selector
     const vWithItems = vInvoices.filter(i => i.itemCount > 0);
     if (vWithItems.length >= 2) {
-      const newest = vWithItems[0];
-      const previous = vWithItems[1];
-      const oldest = vWithItems[vWithItems.length - 1];
       const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-      content += `<div style="padding:8px 12px;font-size:12px;color:#666;background:#f8f9fa;border-radius:4px;margin-bottom:8px;">📊 Compared: ${newest.invoiceNumber} (${fmtD(newest.date)}) vs ${previous.invoiceNumber} (${fmtD(previous.date)})<br>📅 Data Range: ${fmtD(oldest.date)} ~ ${fmtD(newest.date)} (${vWithItems.length} invoices)</div>`;
+      const fmtOpt = inv => `${inv.invoiceNumber} (${fmtD(inv.date)}) - $${inv.total.toLocaleString()}`;
+      let opts = vWithItems.map((inv, idx) => `<option value="${idx}">${fmtOpt(inv)}</option>`).join('');
+      content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
+      content += `<label>New Invoice</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts}</select>`;
+      content += `<label>Old Invoice</label><select id="compOld_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts.replace('value="1"', 'value="1" selected')}</select>`;
+      content += `<div class="comp-period-btns">`;
+      content += `<span class="comp-period-btn active" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
+      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
+      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
+      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
+      content += `</div>`;
+      content += `<div class="comp-info" id="compInfo_${branchId}_${vendorId}"></div>`;
+      content += `</div>`;
     }
     for (const inv of vInvoices) {
       const hasItems = inv.itemCount > 0;
@@ -563,44 +586,8 @@ function openBranch(branchId) {
         </div>
       </div>`;
     }
-    // Price trends PER VENDOR - only compare same vendor's items
-    const itemPriceMap = {};
-    for (const inv of vInvoices) {
-      const bestPrices = {};
-      for (const item of inv.items) {
-        if (item.unitPrice <= 2) continue;
-        if (!bestPrices[item.itemNo] || item.unitPrice > bestPrices[item.itemNo].unitPrice) {
-          bestPrices[item.itemNo] = item;
-        }
-      }
-      for (const [itemNo, item] of Object.entries(bestPrices)) {
-        if (!itemPriceMap[itemNo]) itemPriceMap[itemNo] = [];
-        itemPriceMap[itemNo].push({ date: inv.date, price: item.unitPrice, brand: item.brand, desc: item.description });
-      }
-    }
-    const changedItems = Object.entries(itemPriceMap)
-      .filter(([_, entries]) => entries.length > 1)
-      .map(([itemNo, entries]) => {
-        entries.sort((a, b) => a.date.localeCompare(b.date));
-        const oldP = entries[0].price;
-        const newP = entries[entries.length - 1].price;
-        const diff = newP - oldP;
-        const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
-        return { itemNo, brand: entries[0].brand, desc: entries[0].desc, oldPrice: oldP, newPrice: newP, diff, pct };
-      })
-      .filter(i => Math.abs(i.pct) > 1)
-      .sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
-
-    if (changedItems.length > 0) {
-      content += `<div style="margin-top:8px;"><div class="card-title" style="color:${vColor}">${vendorName} - Price Changes</div>`;
-      content += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
-      for (const item of changedItems.slice(0, 30)) {
-        const cls = item.diff > 0 ? 'price-up' : 'price-down';
-        const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
-        content += `<tr class="${cls}"><td class="item-desc">${item.itemNo} ${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
-      }
-      content += '</table></div></div>';
-    }
+    // Price changes container (rendered dynamically)
+    content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
 
     content += '</div></div>';
   }
@@ -610,7 +597,148 @@ function openBranch(branchId) {
   }
 
   document.getElementById('branchContent').innerHTML = content;
+
+  // Trigger initial comparison render for each vendor that has >= 2 invoices
+  for (const [vendorName, vInvoices] of Object.entries(vendorGroups)) {
+    const vendorId = vendorName.replace(/[^a-zA-Z0-9]/g, '_');
+    const vWithItems = vInvoices.filter(i => i.itemCount > 0);
+    if (vWithItems.length >= 2) {
+      updateComparison(branchId, vendorId);
+    }
+  }
+
   showPage('page-branch');
+}
+
+// ===== COMPARISON RANGE SELECTOR =====
+function getVendorInvoicesWithItems(branchId, vendorId) {
+  const invoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
+  const vendorGroups = {};
+  for (const inv of invoices) {
+    const v = inv.vendor || 'Other';
+    if (!vendorGroups[v]) vendorGroups[v] = [];
+    vendorGroups[v].push(inv);
+  }
+  for (const [vName, vInvs] of Object.entries(vendorGroups)) {
+    const vId = vName.replace(/[^a-zA-Z0-9]/g, '_');
+    if (vId === vendorId) {
+      vInvs.sort((a, b) => b.date.localeCompare(a.date));
+      return vInvs.filter(i => i.itemCount > 0);
+    }
+  }
+  return [];
+}
+
+function setCompPeriod(branchId, vendorId, period, btnEl) {
+  // Highlight selected button
+  const parent = btnEl.parentElement;
+  parent.querySelectorAll('.comp-period-btn').forEach(b => b.classList.remove('active'));
+  btnEl.classList.add('active');
+
+  const vWithItems = getVendorInvoicesWithItems(branchId, vendorId);
+  if (vWithItems.length < 2) return;
+
+  const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
+  const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
+
+  if (period === 'all') {
+    // Reset: newest vs 2nd newest
+    newSel.selectedIndex = 0;
+    oldSel.selectedIndex = 1;
+  } else {
+    // Calculate cutoff date
+    const now = new Date(vWithItems[0].date);
+    let cutoff;
+    if (period === '3m') cutoff = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
+    else if (period === '6m') cutoff = new Date(now.getFullYear(), now.getMonth() - 6, now.getDate());
+    else if (period === '1y') cutoff = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+    const cutoffStr = cutoff.toISOString().slice(0, 10);
+
+    // Find oldest invoice within range
+    let oldIdx = 1;
+    for (let i = 1; i < vWithItems.length; i++) {
+      if (vWithItems[i].date >= cutoffStr) oldIdx = i;
+      else break;
+    }
+    newSel.selectedIndex = 0;
+    oldSel.selectedIndex = oldIdx;
+  }
+
+  updateComparison(branchId, vendorId);
+}
+
+function updateComparison(branchId, vendorId) {
+  const vWithItems = getVendorInvoicesWithItems(branchId, vendorId);
+  if (vWithItems.length < 2) return;
+
+  const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
+  const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
+  const tableDiv = document.getElementById(`compTable_${branchId}_${vendorId}`);
+  const infoDiv = document.getElementById(`compInfo_${branchId}_${vendorId}`);
+  if (!newSel || !oldSel || !tableDiv) return;
+
+  const newIdx = parseInt(newSel.value);
+  const oldIdx = parseInt(oldSel.value);
+  const newInv = vWithItems[newIdx];
+  const oldInv = vWithItems[oldIdx];
+
+  if (!newInv || !oldInv || newIdx === oldIdx) {
+    tableDiv.innerHTML = '';
+    if (infoDiv) infoDiv.textContent = 'Select two different invoices to compare.';
+    return;
+  }
+
+  const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
+  if (infoDiv) infoDiv.innerHTML = `Comparing: ${newInv.invoiceNumber} (${fmtD(newInv.date)}) vs ${oldInv.invoiceNumber} (${fmtD(oldInv.date)})`;
+
+  // Build price map from old invoice
+  const oldPrices = {};
+  for (const item of oldInv.items) {
+    if (item.unitPrice <= 2) continue;
+    if (!oldPrices[item.itemNo] || item.unitPrice > oldPrices[item.itemNo]) {
+      oldPrices[item.itemNo] = item.unitPrice;
+    }
+  }
+
+  // Build price map from new invoice and compare
+  const newPrices = {};
+  for (const item of newInv.items) {
+    if (item.unitPrice <= 2) continue;
+    if (!newPrices[item.itemNo] || item.unitPrice > newPrices[item.itemNo].unitPrice) {
+      newPrices[item.itemNo] = item;
+    }
+  }
+
+  const changedItems = [];
+  for (const [itemNo, item] of Object.entries(newPrices)) {
+    if (oldPrices[itemNo] !== undefined) {
+      const oldP = oldPrices[itemNo];
+      const newP = item.unitPrice;
+      const diff = newP - oldP;
+      const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
+      if (Math.abs(pct) > 1) {
+        changedItems.push({ itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct });
+      }
+    }
+  }
+  changedItems.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
+
+  const vendorName = tableDiv.dataset.vendor;
+  const vColor = tableDiv.dataset.color;
+
+  if (changedItems.length > 0) {
+    let html = `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes (${changedItems.length})</div>`;
+    html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
+    for (const item of changedItems.slice(0, 30)) {
+      const cls = item.diff > 0 ? 'price-up' : 'price-down';
+      const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
+      html += `<tr class="${cls}"><td class="item-desc">${item.itemNo} ${item.brand} ${item.desc}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
+    }
+    html += '</table></div>';
+    tableDiv.innerHTML = html;
+  } else {
+    tableDiv.innerHTML = `<div style="text-align:center;padding:12px;color:#999;font-size:12px;">No price changes between selected invoices</div>`;
+  }
 }
 
 // ===== VENDOR TOGGLE =====
