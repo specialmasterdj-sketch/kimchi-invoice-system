@@ -541,6 +541,15 @@ function openBranch(branchId) {
 
     content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
+    // Comparison context info
+    const vWithItems = vInvoices.filter(i => i.itemCount > 0);
+    if (vWithItems.length >= 2) {
+      const newest = vWithItems[0];
+      const previous = vWithItems[1];
+      const oldest = vWithItems[vWithItems.length - 1];
+      const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
+      content += `<div style="padding:8px 12px;font-size:12px;color:#666;background:#f8f9fa;border-radius:4px;margin-bottom:8px;">📊 Compared: ${newest.invoiceNumber} (${fmtD(newest.date)}) vs ${previous.invoiceNumber} (${fmtD(previous.date)})<br>📅 Data Range: ${fmtD(oldest.date)} ~ ${fmtD(newest.date)} (${vWithItems.length} invoices)</div>`;
+    }
     for (const inv of vInvoices) {
       const hasItems = inv.itemCount > 0;
       content += `<div class="history-item" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
