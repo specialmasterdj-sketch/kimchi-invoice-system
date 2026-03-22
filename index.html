@@ -663,7 +663,7 @@ function openBranch(branchId) {
 
     content += `<div id="vendor_${vendorId}" style="display:none; padding:0 16px 12px;">`;
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
-    // Comparison range selector - use date groups (merges split invoices on same date)
+    // Comparison: New Invoice vs ALL historical prices
     const dateGroups = getVendorDateGroups(branchId, vendorId);
     if (dateGroups.length >= 2) {
       const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
@@ -673,20 +673,20 @@ function openBranch(branchId) {
           : `${g.invoiceNumbers[0]} (${fmtD(g.date)})`;
         return `${label} - ${g.itemCount} items - $${g.total.toLocaleString()}`;
       };
-      // Default old: first group with a different date than newest
-      let defaultOldIdx = 1;
-      for (let i = 1; i < dateGroups.length; i++) {
-        if (dateGroups[i].date !== dateGroups[0].date) { defaultOldIdx = i; break; }
-      }
-      let opts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
+      let newOpts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
+      // Old = ALL historical data (everything except the selected new invoice date)
+      const oldestDate = fmtD(dateGroups[dateGroups.length - 1].date);
+      const newestOldDate = fmtD(dateGroups.length > 1 ? dateGroups[1].date : dateGroups[0].date);
+      const totalOldInvoices = dateGroups.slice(1).reduce((a, g) => a + g.invoiceNumbers.length, 0);
+      const totalOldItems = dateGroups.slice(1).reduce((a, g) => a + g.itemCount, 0);
+
       content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
-      content += `<label>New Invoice</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts}</select>`;
-      content += `<label>Old Invoice</label><select id="compOld_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${opts.replace(`value="${defaultOldIdx}"`, `value="${defaultOldIdx}" selected`)}</select>`;
+      content += `<label>New Invoice (latest)</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${newOpts}</select>`;
       content += `<div class="comp-period-btns">`;
-      content += `<span class="comp-period-btn active" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
-      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
-      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
-      content += `<span class="comp-period-btn" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
+      content += `<span class="comp-period-btn active" data-period="all" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
+      content += `<span class="comp-period-btn" data-period="3m" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
+      content += `<span class="comp-period-btn" data-period="6m" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
+      content += `<span class="comp-period-btn" data-period="1y" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
       content += `</div>`;
       content += `<div class="comp-info" id="compInfo_${branchId}_${vendorId}"></div>`;
       content += `</div>`;
@@ -798,44 +798,12 @@ function getVendorInvoicesWithItems(branchId, vendorId) {
 }
 
 function setCompPeriod(branchId, vendorId, period, btnEl) {
-  // Highlight selected button
   const parent = btnEl.parentElement;
   parent.querySelectorAll('.comp-period-btn').forEach(b => b.classList.remove('active'));
   btnEl.classList.add('active');
-
-  const dateGroups = getVendorDateGroups(branchId, vendorId);
-  if (dateGroups.length < 2) return;
-
+  // Store selected period and re-run comparison
   const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
-  const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
-
-  if (period === 'all') {
-    // Reset: newest vs first group with a different date
-    newSel.selectedIndex = 0;
-    let defOld = 1;
-    for (let i = 1; i < dateGroups.length; i++) {
-      if (dateGroups[i].date !== dateGroups[0].date) { defOld = i; break; }
-    }
-    oldSel.selectedIndex = defOld;
-  } else {
-    // Calculate cutoff date
-    const now = new Date(dateGroups[0].date);
-    let cutoff;
-    if (period === '3m') cutoff = new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
-    else if (period === '6m') cutoff = new Date(now.getFullYear(), now.getMonth() - 6, now.getDate());
-    else if (period === '1y') cutoff = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
-    const cutoffStr = cutoff.toISOString().slice(0, 10);
-
-    // Find oldest group within range
-    let oldIdx = 1;
-    for (let i = 1; i < dateGroups.length; i++) {
-      if (dateGroups[i].date >= cutoffStr) oldIdx = i;
-      else break;
-    }
-    newSel.selectedIndex = 0;
-    oldSel.selectedIndex = oldIdx;
-  }
-
+  if (newSel) newSel.dataset.period = period;
   updateComparison(branchId, vendorId);
 }
 
@@ -844,44 +812,69 @@ function updateComparison(branchId, vendorId) {
   if (dateGroups.length < 2) return;
 
   const newSel = document.getElementById(`compNew_${branchId}_${vendorId}`);
-  const oldSel = document.getElementById(`compOld_${branchId}_${vendorId}`);
   const tableDiv = document.getElementById(`compTable_${branchId}_${vendorId}`);
   const infoDiv = document.getElementById(`compInfo_${branchId}_${vendorId}`);
-  if (!newSel || !oldSel || !tableDiv) return;
+  if (!newSel || !tableDiv) return;
 
   const newIdx = parseInt(newSel.value);
-  const oldIdx = parseInt(oldSel.value);
   const newGroup = dateGroups[newIdx];
-  const oldGroup = dateGroups[oldIdx];
+  if (!newGroup) return;
 
-  if (!newGroup || !oldGroup || newIdx === oldIdx) {
-    tableDiv.innerHTML = '';
-    if (infoDiv) infoDiv.textContent = 'Select two different dates to compare.';
+  // Get selected period filter
+  const period = newSel.dataset.period || 'all';
+
+  // OLD = other date groups filtered by period
+  let oldGroups = dateGroups.filter((g, i) => i !== newIdx);
+
+  if (period !== 'all') {
+    const newDate = new Date(newGroup.date);
+    let cutoff;
+    if (period === '3m') cutoff = new Date(newDate.getFullYear(), newDate.getMonth() - 3, newDate.getDate());
+    else if (period === '6m') cutoff = new Date(newDate.getFullYear(), newDate.getMonth() - 6, newDate.getDate());
+    else if (period === '1y') cutoff = new Date(newDate.getFullYear() - 1, newDate.getMonth(), newDate.getDate());
+    const cutoffStr = cutoff.toISOString().slice(0, 10);
+    oldGroups = oldGroups.filter(g => g.date >= cutoffStr);
+  }
+
+  if (oldGroups.length === 0) {
+    tableDiv.innerHTML = '<div style="text-align:center;padding:12px;color:#999;font-size:12px;">No historical invoices found in this period / 해당 기간에 과거 인보이스가 없습니다</div>';
     return;
   }
 
   const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-  const newLabel = newGroup.invoiceNumbers.length > 1
-    ? `${fmtD(newGroup.date)} (${newGroup.invoiceNumbers.length} invoices, ${newGroup.itemCount} items)`
-    : `${newGroup.invoiceNumbers[0]} (${fmtD(newGroup.date)})`;
-  const oldLabel = oldGroup.invoiceNumbers.length > 1
-    ? `${fmtD(oldGroup.date)} (${oldGroup.invoiceNumbers.length} invoices, ${oldGroup.itemCount} items)`
-    : `${oldGroup.invoiceNumbers[0]} (${fmtD(oldGroup.date)})`;
-  if (infoDiv) infoDiv.innerHTML = `Comparing: ${newLabel} vs ${oldLabel}`;
 
-  // Build price map from old date group using getMatchKey
+  // Build price map from ALL old groups - use most recent price per item
+  // oldGroups is already sorted newest first
   const oldPrices = {};
-  for (const rawItem of oldGroup.items) {
-    const item = normalizeItem(rawItem);
-    if (item.unitPrice <= 0) continue;
-    const key = getMatchKey(item);
-    if (!key) continue;
-    if (!oldPrices[key] || item.unitPrice > oldPrices[key]) {
-      oldPrices[key] = item.unitPrice;
+  const oldPriceSource = {}; // track which date the price came from
+  for (const group of oldGroups) {
+    for (const rawItem of group.items) {
+      const item = normalizeItem(rawItem);
+      if (item.unitPrice <= 0) continue;
+      const key = getMatchKey(item);
+      if (!key) continue;
+      // Only keep the MOST RECENT price (first occurrence since sorted newest first)
+      if (!oldPrices[key]) {
+        oldPrices[key] = item.unitPrice;
+        oldPriceSource[key] = group.date;
+      }
     }
   }
 
-  // Build price map from new date group and compare
+  const oldDateRange = `${fmtD(oldGroups[oldGroups.length-1].date)} ~ ${fmtD(oldGroups[0].date)}`;
+  const totalOldInvoices = oldGroups.reduce((a, g) => a + g.invoiceNumbers.length, 0);
+  const periodLabels = {'all': 'All Time / 전체', '3m': 'Last 3 Months / 최근 3개월', '6m': 'Last 6 Months / 최근 6개월', '1y': 'Last 1 Year / 최근 1년'};
+
+  if (infoDiv) {
+    infoDiv.innerHTML = `<div style="background:#FFF3E0;padding:10px;border-radius:8px;font-size:12px;">
+      <strong>📊 ${periodLabels[period] || 'All'}</strong><br>
+      New: <strong>${fmtD(newGroup.date)}</strong> (${newGroup.itemCount} items)<br>
+      Old: <strong>${totalOldInvoices} invoices</strong> (${oldDateRange})<br>
+      <span style="color:#666;">각 아이템의 가장 최근 과거 가격과 비교 / Most recent price per item</span>
+    </div>`;
+  }
+
+  // Build price map from new date group
   const newPrices = {};
   for (const rawItem of newGroup.items) {
     const item = normalizeItem(rawItem);
@@ -894,42 +887,55 @@ function updateComparison(branchId, vendorId) {
   }
 
   const changedItems = [];
+  const unchangedCount = { count: 0 };
+  const newItemCount = { count: 0 };
   for (const [key, item] of Object.entries(newPrices)) {
     if (oldPrices[key] !== undefined) {
       const oldP = oldPrices[key];
       const newP = item.unitPrice;
       const diff = newP - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
-      if (Math.abs(pct) > 1) {
-        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct });
+      if (Math.abs(pct) > 0.5) {
+        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct, oldDate: oldPriceSource[key] });
+      } else {
+        unchangedCount.count++;
       }
+    } else {
+      newItemCount.count++;
     }
   }
   changedItems.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
 
   const vendorName = tableDiv.dataset.vendor;
   const vColor = tableDiv.dataset.color;
+  const overlapCount = Object.keys(newPrices).filter(k => oldPrices[k] !== undefined).length;
+  const totalNew = Object.keys(newPrices).length;
+  const totalOld = Object.keys(oldPrices).length;
+
+  let html = '';
+
+  // Summary stats
+  html += `<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:10px;">
+    <div style="text-align:center;padding:8px;background:#FFEBEE;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#C62828;">🔴 ${changedItems.filter(i=>i.diff>0).length}</div><div style="font-size:10px;color:#666;">Price Up</div></div>
+    <div style="text-align:center;padding:8px;background:#E8F5E9;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#2E7D32;">🟢 ${changedItems.filter(i=>i.diff<0).length}</div><div style="font-size:10px;color:#666;">Price Down</div></div>
+    <div style="text-align:center;padding:8px;background:#E3F2FD;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#1565C0;">🔵 ${newItemCount.count}</div><div style="font-size:10px;color:#666;">New Items</div></div>
+    <div style="text-align:center;padding:8px;background:#F5F5F5;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#666;">⚪ ${unchangedCount.count}</div><div style="font-size:10px;color:#666;">Unchanged</div></div>
+  </div>`;
+  html += `<div style="text-align:center;font-size:11px;color:#999;margin-bottom:8px;">${overlapCount} matching items found (New: ${totalNew} / Historical: ${totalOld} unique items)</div>`;
 
   if (changedItems.length > 0) {
-    let html = `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes (${changedItems.length})</div>`;
+    html += `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes (${changedItems.length})</div>`;
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
-    for (const item of changedItems.slice(0, 30)) {
+    for (const item of changedItems.slice(0, 50)) {
       const cls = item.diff > 0 ? 'price-up' : 'price-down';
       const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
-      const itemLabel = item.itemNo ? `${item.itemNo} ${item.brand} ${item.desc}` : `${item.brand} ${item.desc}`;
+      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
       html += `<tr class="${cls}"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
     }
     html += '</table></div>';
-    tableDiv.innerHTML = html;
-  } else {
-    const overlapCount = Object.keys(newPrices).filter(k => oldPrices[k] !== undefined).length;
-    const totalNew = Object.keys(newPrices).length;
-    const totalOld = Object.keys(oldPrices).length;
-    tableDiv.innerHTML = `<div style="text-align:center;padding:12px;color:#666;font-size:12px;">
-      No price changes detected<br>
-      <span style="font-size:11px;color:#999;">${overlapCount} matching items compared (New: ${totalNew} items / Old: ${totalOld} items)</span>
-    </div>`;
   }
+
+  tableDiv.innerHTML = html;
 }
 
 // ===== VENDOR TOGGLE =====

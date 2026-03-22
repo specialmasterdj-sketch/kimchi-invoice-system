@@ -1,397 +1,347 @@
-import pdfplumber
-import json
-import re
+"""
+Parse ALL Rhee Bros invoice PDFs into structured JSON.
+Skips Statement PDFs and SR-prefixed files.
+"""
+
 import os
+import re
+import json
 import sys
+import pdfplumber
 
 # Force UTF-8 output
 sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8', errors='replace', buffering=1)
 
-PDF_DIR = r'C:\Users\speci\OneDrive\Desktop\kimchi-invoice-system\rhee_pdfs'
-OUTPUT_FILE = r'C:\Users\speci\OneDrive\Desktop\kimchi-invoice-system\rhee_parsed.json'
+PDF_DIR = r"C:\Users\speci\OneDrive\Desktop\kimchi-invoice-system\rhee_pdfs"
+OUTPUT_FILE = r"C:\Users\speci\OneDrive\Desktop\kimchi-invoice-system\rhee_parsed_all.json"
 
 BRANCH_MAP = {
-    'FL116': 'miami',
-    'FL342': 'pembroke_pines',
-    'FL381': 'hollywood',
-    'FL417': 'coral_springs',
-    'FL432': 'fort_lauderdale',
+    "FL116": "miami",
+    "FL342": "pembroke_pines",
+    "FL381": "hollywood",
+    "FL417": "coral_springs",
+    "FL432": "ft_lauderdale",
 }
 
-BRANCH_NAMES = {
-    'miami': 'KIMCHI MART AT MIAMI',
-    'pembroke_pines': 'KIMCHI MART',
-    'hollywood': 'KIMCHI MART AT HOLLYWOOD',
-    'coral_springs': 'KIMCHI MART AT CORAL SPRINGS',
-    'fort_lauderdale': 'KIMCHI MART AT FT. LAUDERDALE',
-}
+# Regex patterns
+ITEM_NO_RE = re.compile(r'^(\d{4,5}[A-Z0-9]{1,2})\s+')
+INVOICE_NO_RE = re.compile(r'Invoice No[.,]?\s*(PSI-\d+)')
+DATE_RE = re.compile(r'Invoice Date:\s*(\d{2}/\d{2}/\d{2,4})')
+CUSTOMER_RE = re.compile(r'Customer No\.\s*(FL\d{3})')
+TOTAL_RE = re.compile(r'Total\s+\$?([\d,]+\.\d{2})')
+PRICE_TRIPLE_RE = re.compile(r'([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$')
+TYPE_RE = re.compile(r'\s+(Dry|Ref|Frz)\s*$', re.IGNORECASE)
+UM_RE = re.compile(
+    r'\s+(Case|Bag|Box|Each|Pail|Bucket|Drum|Pack|Sack|Tray|Pair|Set|Roll|Can|Bottle|Jar|Pallet|PC|Bunch|Bundle|Pound|Unit|Tub|Pcs)\s*$',
+    re.IGNORECASE
+)
+QTY_RE = re.compile(r'\s+(\d+(?:\.\d+)?)\s*$')
+UNITS_STR = r'LB|OZ|GAL|ML|L|G|KG|CT|SHT|PC|EA|LITER|FL OZ'
+SIZE_RE = re.compile(
+    r'\s+((?:\d+X)*\d+(?:\.\d+)?\s*(?:' + UNITS_STR + r'))\s*$',
+    re.IGNORECASE
+)
+# Korean character detection
+KOREAN_RE = re.compile(r'^[\uac00-\ud7af\u3130-\u318f\u1100-\u11ff]')
+# Shipping line
+SHIPPING_RE = re.compile(r'^Shipping.*?(\d[\d,]*\.\d{2})\s*$')
 
-# Pattern for item lines: starts with item number (digits + letters)
-ITEM_NO_PATTERN = re.compile(r'^(\d{4,5}[A-Z]{1,2})\s+')
 
-# Pattern for invoice number
-INVOICE_PATTERN = re.compile(r'PSI-(\d{7})')
-
-# Pattern for date
-DATE_PATTERN = re.compile(r'Invoice Date:\s*(\d{2}/\d{2}/\d{2,4})')
-
-# Pattern for customer number
-CUSTOMER_PATTERN = re.compile(r'Customer No\.\s*(FL\d{3})')
-
-# Pattern for total
-TOTAL_PATTERN = re.compile(r'Total\s+\$?([\d,]+\.\d{2})')
-
-
-def parse_price(s):
-    """Parse a price string like '1,125.00' to float."""
+def parse_money(s):
     try:
-        return float(s.replace(',', ''))
+        return float(s.replace(",", ""))
     except (ValueError, AttributeError):
         return 0.0
 
 
-def parse_int_safe(s):
-    """Parse an integer safely."""
-    try:
-        return int(s)
-    except (ValueError, TypeError):
-        return 0
+def parse_date(s):
+    parts = s.strip().split("/")
+    if len(parts) == 3:
+        month, day, year = parts
+        if len(year) == 2:
+            year = "20" + year
+        return f"{year}-{month}-{day}"
+    return s.strip()
+
+
+def extract_brand_desc_size(text):
+    """From 'BRAND DESC... SIZE', extract brand, description, size."""
+    size = ""
+    # Try to find size pattern at end
+    sm = SIZE_RE.search(text)
+    if sm:
+        size = sm.group(1).strip()
+        text = text[:sm.start()].strip()
+    else:
+        # Try size without unit (has X separator like 8X16X0.14)
+        no_unit = re.search(r'\s+((?:\d+X)+\d+(?:\.\d+)?)\s*$', text)
+        if no_unit:
+            size = no_unit.group(1).strip()
+            text = text[:no_unit.start()].strip()
+
+    # Split brand (first word) and description (rest)
+    parts = text.split(None, 1)
+    brand = parts[0] if parts else ""
+    description = parts[1] if len(parts) > 1 else ""
+
+    return brand, description, size
 
 
 def parse_item_line(line):
-    """Parse a single item line from the invoice.
-    Format: ItemNo Brand Description Size Qty UM Type UnitPrice EachPrice Total
-
-    The challenge is that Description can contain spaces and Size can contain spaces.
-    We parse from both ends - item number from left, prices from right, then work inward.
-    """
-    m = ITEM_NO_PATTERN.match(line)
+    """Parse a single item line. Returns dict or None."""
+    m = ITEM_NO_RE.match(line)
     if not m:
         return None
 
     item_no = m.group(1)
     rest = line[m.end():].strip()
 
-    # Skip shipping/freight/fuel lines
-    if 'Shipping' in rest or 'Fuel' in rest or 'Freight' in rest or 'Delivery' in rest:
-        return None
-
-    # Parse prices from the right side
-    # The last 3 numbers are: Unit Price, Each Price, Total
-    # Pattern: ... Type UnitPrice EachPrice Total
-    # Prices can have commas: 1,125.00
-    price_pattern = re.compile(
-        r'([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})\s*$'
-    )
-    pm = price_pattern.search(rest)
+    # Must have 3 price columns at end
+    pm = PRICE_TRIPLE_RE.search(rest)
     if not pm:
         return None
 
-    unit_price = parse_price(pm.group(1))
-    each_price = parse_price(pm.group(2))
-    total_price = parse_price(pm.group(3))
+    unit_price = parse_money(pm.group(1))
+    each_price = parse_money(pm.group(2))
+    line_total = parse_money(pm.group(3))
 
     before_prices = rest[:pm.start()].strip()
 
-    # Now parse: Brand Description Size Qty UM Type
-    # Type is usually: Dry, Ref, Frz (last word before prices)
-    # UM is usually: Case, Bag, Box, Each, Pail, Drum, Roll, Pack, Tray, Bundle, Bottle, Jar, Pcs, Set, Tub, Can
-    # Qty is a number
-    # We parse from right: Type UM Qty ... then the rest is Brand Description Size
-
-    type_pattern = re.compile(r'\s+(Dry|Ref|Frz|dry|ref|frz|DRY|REF|FRZ)\s*$')
-    tm = type_pattern.search(before_prices)
-    item_type = ''
+    # Extract Type (Dry/Ref/Frz) from end
+    tm = TYPE_RE.search(before_prices)
     if tm:
-        item_type = tm.group(1).capitalize()
-        if item_type == 'Ref':
-            item_type = 'Ref'
         before_prices = before_prices[:tm.start()].strip()
 
-    # Now parse UM (unit of measure)
-    um_pattern = re.compile(r'\s+(Case|Bag|Box|Each|Pail|Drum|Roll|Pack|Tray|Bundle|Bottle|Jar|Pcs|Set|Tub|Can|Unit|Sack|Bucket|Pound|case|bag|box|pound)\s*$', re.IGNORECASE)
-    um_match = um_pattern.search(before_prices)
-    um = ''
-    if um_match:
-        um = um_match.group(1).capitalize()
-        before_prices = before_prices[:um_match.start()].strip()
+    # Extract Unit of Measure from end
+    um = UM_RE.search(before_prices)
+    unit = ""
+    if um:
+        unit = um.group(1)
+        before_prices = before_prices[:um.start()].strip()
 
-    # Now parse Qty (number at end) - can be decimal for Pound items
-    qty_pattern = re.compile(r'\s+(\d+(?:\.\d+)?)\s*$')
-    qty_match = qty_pattern.search(before_prices)
+    # Extract Qty from end
+    qm = QTY_RE.search(before_prices)
     qty = 0
-    if qty_match:
-        qty_val = float(qty_match.group(1))
+    if qm:
+        qty_val = float(qm.group(1))
         qty = int(qty_val) if qty_val == int(qty_val) else qty_val
-        before_prices = before_prices[:qty_match.start()].strip()
+        before_prices = before_prices[:qm.start()].strip()
 
-    # What remains is: Brand Description Size
-    # Size is typically at the end, patterns like: 8X5 LB, 12X29.08 OZ, 40 LB, 22 LB, etc.
-    # Size pattern: number(Xnumber)? (LB|OZ|GAL|ML|L|G|KG|CT|SHT|PC|EA)
-    # But size can be complex like "4X6X6.8 OZ" or "2X30X0.56 OZ"
-    UNITS = r'LB|OZ|GAL|ML|L|G|KG|CT|SHT|PC|EA|LITER|FL OZ|PR|#'
-    size_pattern = re.compile(
-        r'\s+('
-        r'(?:\d+X)*\d+(?:\.\d+)?\s*(?:' + UNITS + r')'
-        r')\s*$',
-        re.IGNORECASE
-    )
-    size_match = size_pattern.search(before_prices)
-    size = ''
-    if size_match:
-        size = size_match.group(1).strip()
-        before_prices = before_prices[:size_match.start()].strip()
-
-    # Also try to find size glued to end of text with no space, e.g., "(BANANA_ 6P)20X9.1 OZ"
-    # or "(15#_NEW)15 LB" or "(40#)40 LB" or "RADISH20X24.7 OZ"
-    if not size:
-        glued_size = re.compile(
-            r'([)\w])((?:\d+X)*\d+(?:\.\d+)?\s*(?:' + UNITS + r'))\s*$',
-            re.IGNORECASE
-        )
-        gm = glued_size.search(before_prices)
-        if gm:
-            size = gm.group(2).strip()
-            before_prices = before_prices[:gm.start() + 1].strip()  # keep the char before size
-
-    # Try size at end without unit (unit was on next PDF line), e.g., "8X16X0.14"
-    if not size:
-        no_unit_size = re.compile(
-            r'\s+((?:\d+X)+\d+(?:\.\d+)?)\s*$'
-        )
-        num = no_unit_size.search(before_prices)
-        if num:
-            # Only match if it looks like a size (has X separator)
-            size = num.group(1).strip()
-            before_prices = before_prices[:num.start()].strip()
-
-    # Now split Brand (first word) and Description (rest)
-    parts = before_prices.split(None, 1)
-    brand = parts[0] if parts else ''
-    description = parts[1] if len(parts) > 1 else ''
-
-    # If no size was found, the description might contain it - try broader match
-    if not size and description:
-        # Try to find size-like pattern at end of description
-        broad_size = re.compile(
-            r'\s+('
-            r'(?:\d+X)*\d+(?:\.\d+)?\s*(?:' + UNITS + r')'
-            r')\s*$',
-            re.IGNORECASE
-        )
-        bm = broad_size.search(description)
-        if bm:
-            size = bm.group(1).strip()
-            description = description[:bm.start()].strip()
-
-    # Also try glued size in description
-    if not size and description:
-        glued_size2 = re.compile(
-            r'([)\w])((?:\d+X)*\d+(?:\.\d+)?\s*(?:' + UNITS + r'))\s*$',
-            re.IGNORECASE
-        )
-        gm2 = glued_size2.search(description)
-        if gm2:
-            size = gm2.group(2).strip()
-            description = description[:gm2.start() + 1].strip()
+    brand, description, size = extract_brand_desc_size(before_prices)
 
     return {
-        'itemNo': item_no,
-        'brand': brand,
-        'description': description,
-        'size': size,
-        'qty': qty,
-        'unitPrice': unit_price,
-        'eachPrice': each_price,
-        'totalPrice': total_price,
+        "itemNo": item_no,
+        "brand": brand,
+        "description": description,
+        "size": size,
+        "qty": qty,
+        "unit": unit,
+        "unitPrice": unit_price,
+        "lineTotal": line_total,
     }
 
 
-def parse_invoice(pdf_path):
+def parse_invoice(filepath):
     """Parse a single Rhee Bros invoice PDF."""
-    filename = os.path.basename(pdf_path)
-
-    # Skip statement PDFs and SR- files
-    if 'Statement' in filename or filename.startswith('SR-'):
-        return None
-
-    try:
-        pdf = pdfplumber.open(pdf_path)
-    except Exception as e:
-        print(f"  ERROR opening {filename}: {e}")
-        return None
-
-    all_text = ''
     all_lines = []
-
     try:
-        for page in pdf.pages:
-            text = page.extract_text()
-            if text:
-                all_text += text + '\n'
-                all_lines.extend(text.split('\n'))
+        with pdfplumber.open(filepath) as pdf:
+            for page in pdf.pages:
+                text = page.extract_text()
+                if text:
+                    all_lines.extend(text.split("\n"))
     except Exception as e:
-        print(f"  ERROR reading pages of {filename}: {e}")
-        pdf.close()
-        return None
+        return None, str(e)
 
-    pdf.close()
+    if not all_lines:
+        return None, "No text extracted"
 
-    # Extract invoice number
-    inv_match = INVOICE_PATTERN.search(all_text)
+    all_text = "\n".join(all_lines)
+
+    # Extract header info
+    inv_match = INVOICE_NO_RE.search(all_text)
     if not inv_match:
-        print(f"  WARNING: No invoice number found in {filename}")
-        return None
-    invoice_number = f"PSI-{inv_match.group(1)}"
+        return None, "No invoice number found"
 
-    # Extract date
-    date_match = DATE_PATTERN.search(all_text)
-    date_display = ''
-    date_iso = ''
-    if date_match:
-        date_display = date_match.group(1)
-        # Convert to ISO format
-        parts = date_display.split('/')
-        month, day = parts[0], parts[1]
-        year = parts[2]
-        if len(year) == 2:
-            year = '20' + year
-        date_iso = f"{year}-{month}-{day}"
+    invoice_number = inv_match.group(1)
 
-    # Extract customer number
-    cust_match = CUSTOMER_PATTERN.search(all_text)
-    customer_code = ''
-    branch_id = ''
-    customer_name = ''
+    date_match = DATE_RE.search(all_text)
+    date_str = parse_date(date_match.group(1)) if date_match else ""
+
+    cust_match = CUSTOMER_RE.search(all_text)
+    branch_id = ""
     if cust_match:
-        customer_code = cust_match.group(1)
-        branch_id = BRANCH_MAP.get(customer_code, customer_code.lower())
-        customer_name = BRANCH_NAMES.get(branch_id, customer_code)
+        fl_code = cust_match.group(1)
+        branch_id = BRANCH_MAP.get(fl_code, fl_code)
 
-    # Extract total
+    # Extract total from last occurrence
     total = 0.0
-    total_match = TOTAL_PATTERN.search(all_text)
-    if total_match:
-        total = parse_price(total_match.group(1))
+    for m in TOTAL_RE.finditer(all_text):
+        total = parse_money(m.group(1))  # last one wins
 
     # Parse line items
     items = []
-    items_by_no = {}  # Track items by item number to handle duplicates
+    i = 0
+    while i < len(all_lines):
+        line = all_lines[i].strip()
 
-    for line in all_lines:
-        line = line.strip()
-        if not line:
+        # Skip empty, Korean, header/footer lines
+        if not line or KOREAN_RE.match(line):
+            i += 1
             continue
 
+        # Handle Shipping line
+        ship_m = SHIPPING_RE.match(line)
+        if ship_m:
+            items.append({
+                "itemNo": "SHIPPING",
+                "brand": "",
+                "description": "Shipping (Fuel) Charge - Delivery",
+                "size": "",
+                "qty": 1,
+                "unit": "Each",
+                "unitPrice": parse_money(ship_m.group(1)),
+                "lineTotal": parse_money(ship_m.group(1)),
+            })
+            i += 1
+            continue
+
+        # Check if line starts with item number
+        item_start = ITEM_NO_RE.match(line)
+        if not item_start:
+            i += 1
+            continue
+
+        # Try parsing this line directly
         item = parse_item_line(line)
-        if item is None:
+        if item:
+            items.append(item)
+            i += 1
             continue
 
-        # Skip promo/credit lines (unit price $2 or less)
-        if item['unitPrice'] <= 2.0:
-            continue
+        # Line might be split across multiple lines - collect continuations
+        full_line = line
+        j = i + 1
+        while j < len(all_lines) and j <= i + 4:
+            next_line = all_lines[j].strip()
+            if not next_line:
+                j += 1
+                continue
+            # Stop if Korean text
+            if KOREAN_RE.match(next_line):
+                j += 1
+                continue
+            # Stop if new item or known header/footer
+            if ITEM_NO_RE.match(next_line) or next_line.startswith("No. Brand") or \
+               next_line.startswith("PSI-") or next_line.startswith("All Units") or \
+               next_line.startswith("Received") or next_line.startswith("Shipping") or \
+               next_line.startswith("Subtotal") or next_line.startswith("Check#") or \
+               next_line.startswith("NOTICE") or next_line.startswith("Note:") or \
+               next_line.startswith("TERMS") or next_line.startswith("These"):
+                break
+            # Append continuation
+            full_line = full_line + " " + next_line
+            j += 1
+            # Try parsing the extended line
+            item = parse_item_line(full_line)
+            if item:
+                items.append(item)
+                break
 
-        item_no = item['itemNo']
+        i += 1
 
-        # Handle duplicate items - keep the one with higher unit price
-        if item_no in items_by_no:
-            existing = items_by_no[item_no]
-            if item['unitPrice'] > existing['unitPrice']:
-                items_by_no[item_no] = item
-            # else keep existing (higher price)
-        else:
-            items_by_no[item_no] = item
+    # Deduplicate items by (itemNo, qty, lineTotal) - same item on page boundary
+    seen = set()
+    unique_items = []
+    for item in items:
+        key = (item["itemNo"], item["qty"], item["lineTotal"])
+        if key not in seen:
+            seen.add(key)
+            unique_items.append(item)
+    items = unique_items
 
-    items = list(items_by_no.values())
-
-    result = {
-        'invoiceNumber': invoice_number,
-        'vendor': 'Rhee Bros',
-        'date': date_iso,
-        'dateDisplay': date_display,
-        'customer': customer_name,
-        'total': total,
-        'branchId': branch_id,
-        'items': items,
-        'itemCount': len(items),
-        'source': filename,
+    invoice = {
+        "invoiceNumber": invoice_number,
+        "date": date_str,
+        "branchId": branch_id,
+        "vendor": "Rhee Bros",
+        "total": total,
+        "items": items,
     }
 
-    return result
+    return invoice, None
 
 
 def main():
     pdf_files = sorted([
         f for f in os.listdir(PDF_DIR)
-        if f.lower().endswith('.pdf')
+        if f.lower().endswith(".pdf")
+        and f.startswith("Sales Invoice PSI-")
     ])
 
-    print(f"Found {len(pdf_files)} PDF files to process")
+    print(f"Found {len(pdf_files)} invoice PDFs to parse (skipping Statement/SR files)")
 
-    results = []
+    all_invoices = []
     errors = []
-    skipped = []
 
-    for i, filename in enumerate(pdf_files):
+    for idx, filename in enumerate(pdf_files):
         filepath = os.path.join(PDF_DIR, filename)
 
-        if (i + 1) % 10 == 0:
-            print(f"  Progress: {i + 1}/{len(pdf_files)} PDFs processed...")
+        invoice, err = parse_invoice(filepath)
+        if err:
+            errors.append((filename, err))
+        elif invoice:
+            all_invoices.append(invoice)
+        else:
+            errors.append((filename, "Unknown error"))
 
-        result = parse_invoice(filepath)
+        if (idx + 1) % 10 == 0:
+            print(f"  Processed {idx + 1}/{len(pdf_files)} files...")
 
-        if result is None:
-            skipped.append(filename)
-            continue
-
-        if result['itemCount'] == 0:
-            print(f"  WARNING: No items parsed from {filename}")
-            errors.append(filename)
-
-        results.append(result)
-
-    # Save results
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+    # Save JSON
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(all_invoices, f, indent=2, ensure_ascii=False)
 
     # Summary
-    print(f"\n{'='*60}")
-    print(f"PARSING COMPLETE")
-    print(f"{'='*60}")
-    print(f"Total PDFs found: {len(pdf_files)}")
-    print(f"Successfully parsed: {len(results)}")
-    print(f"Skipped (not invoices): {len(skipped)}")
-    print(f"Warnings (0 items): {len(errors)}")
-
-    total_items = sum(r['itemCount'] for r in results)
-    print(f"Total line items: {total_items}")
-
-    # Branch breakdown
+    total_items = sum(len(inv["items"]) for inv in all_invoices)
     branch_counts = {}
-    for r in results:
-        bid = r['branchId']
-        if bid not in branch_counts:
-            branch_counts[bid] = {'invoices': 0, 'items': 0, 'total': 0.0}
-        branch_counts[bid]['invoices'] += 1
-        branch_counts[bid]['items'] += r['itemCount']
-        branch_counts[bid]['total'] += r['total']
+    branch_totals = {}
+    for inv in all_invoices:
+        b = inv["branchId"]
+        branch_counts[b] = branch_counts.get(b, 0) + 1
+        branch_totals[b] = branch_totals.get(b, 0) + inv["total"]
 
-    print(f"\nBranch breakdown:")
-    for bid, counts in sorted(branch_counts.items()):
-        print(f"  {bid}: {counts['invoices']} invoices, {counts['items']} items, ${counts['total']:,.2f}")
+    print(f"\n{'='*60}")
+    print(f"SUMMARY")
+    print(f"{'='*60}")
+    print(f"Total invoices parsed: {len(all_invoices)}")
+    print(f"Total line items extracted: {total_items}")
+
+    print(f"\nInvoices per branch:")
+    for b in sorted(branch_counts.keys()):
+        print(f"  {b}: {branch_counts[b]} invoices, ${branch_totals[b]:,.2f} total")
+
+    if errors:
+        print(f"\nErrors/Warnings ({len(errors)}):")
+        for fn, err in errors:
+            print(f"  {fn}: {err}")
 
     # Date range
-    dates = [r['date'] for r in results if r['date']]
+    dates = [inv["date"] for inv in all_invoices if inv["date"]]
     if dates:
         print(f"\nDate range: {min(dates)} to {max(dates)}")
 
-    if skipped:
-        print(f"\nSkipped files: {skipped}")
-    if errors:
-        print(f"\nFiles with 0 items: {errors}")
+    # Items per invoice stats
+    item_counts = [len(inv["items"]) for inv in all_invoices]
+    if item_counts:
+        avg_items = sum(item_counts) / len(item_counts)
+        print(f"Avg items per invoice: {avg_items:.1f}")
+        zero_items = sum(1 for c in item_counts if c == 0)
+        if zero_items:
+            print(f"WARNING: {zero_items} invoices with 0 items parsed")
 
     print(f"\nOutput saved to: {OUTPUT_FILE}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
