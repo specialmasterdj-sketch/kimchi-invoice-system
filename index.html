@@ -843,17 +843,19 @@ function updateComparison(branchId, vendorId) {
 
   const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
 
-  // Build price map from ALL old groups - use most recent price per item
-  // oldGroups is already sorted newest first
+  // Build price map from ALL old groups
+  // For each item, find the OLDEST price in range (maximum price difference detection)
+  // oldGroups is sorted newest first, so iterate in reverse for oldest-first
   const oldPrices = {};
-  const oldPriceSource = {}; // track which date the price came from
-  for (const group of oldGroups) {
+  const oldPriceSource = {};
+  for (let gi = oldGroups.length - 1; gi >= 0; gi--) {
+    const group = oldGroups[gi];
     for (const rawItem of group.items) {
       const item = normalizeItem(rawItem);
       if (item.unitPrice <= 0) continue;
       const key = getMatchKey(item);
       if (!key) continue;
-      // Only keep the MOST RECENT price (first occurrence since sorted newest first)
+      // Keep the OLDEST price (first write wins since we iterate oldest-first)
       if (!oldPrices[key]) {
         oldPrices[key] = item.unitPrice;
         oldPriceSource[key] = group.date;
