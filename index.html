@@ -1191,25 +1191,105 @@ function parseInvoiceText(text) {
     }
   }
 
-  // If no structured header found, try to detect from PDF text (space-separated)
+  // If no structured header found, try to detect from PDF text
   if (items.length === 0 && !headerDone) {
-    // Try PDF format detection: look for patterns like PSI-XXXXXX
+    // --- RHEE BROS PDF PARSER ---
     const psiMatch = text.match(/PSI-(\d+)/);
     if (psiMatch) invoiceNumber = 'PSI-' + psiMatch[1];
     const flMatch = text.match(/FL(\d{3})/);
     if (flMatch) branchCode = 'FL' + flMatch[1];
-    const dateMatch = text.match(/(\d{2}\/\d{2}\/\d{2})/);
+    const dateMatch = text.match(/(\d{2}\/\d{2}\/\d{2,4})/);
     if (dateMatch) {
       dateDisplay = dateMatch[1];
       const parts = dateDisplay.split('/');
-      const yr = parseInt(parts[2]) < 50 ? '20' + parts[2] : '19' + parts[2];
+      let yr = parts[2];
+      if (yr.length === 2) yr = parseInt(yr) < 50 ? '20' + yr : '19' + yr;
       date = `${yr}-${parts[0].padStart(2,'0')}-${parts[1].padStart(2,'0')}`;
+    }
+    const totalMatch = text.match(/Total\s*\$?([\d,]+\.?\d*)/i);
+    if (totalMatch) total = parseFloat(totalMatch[1].replace(/,/g, '')) || 0;
+
+    // Try to parse line items from PDF text using item number patterns
+    // Rhee Bros: 5-digit + letter pattern like 00030D, 08180K, 19121J
+    const itemPattern = /(\d{5}[A-Z])\s+([A-Z][A-Z\s&'\-\.]+?)\s+(\d+)\s*(CS|EA|BX|PK|BG|BT|PC|CT|DZ|PL|JR|TB|GL|LB)\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+(\d+[\d,]*\.?\d*)/g;
+    let m;
+    while ((m = itemPattern.exec(text)) !== null) {
+      const itemNo = m[1];
+      const rawDesc = m[2].trim();
+      const qty = parseInt(m[3]) || 0;
+      const um = m[4];
+      const unitPrice = parseFloat(m[5]) || 0;
+      const eachPrice = parseFloat(m[6]) || 0;
+      const totalPrice = parseFloat(m[7].replace(/,/g, '')) || 0;
+      // Split brand from description (first word usually)
+      const descParts = rawDesc.split(/\s+/);
+      const brand = descParts[0] || '';
+      const description = descParts.slice(1).join(' ') || rawDesc;
+      if (unitPrice > 0) {
+        items.push({ itemNo, brand, description: rawDesc, size: '', qty, um, type: um, unitPrice, eachPrice, totalPrice });
+      }
+    }
+
+    // --- GENERIC PDF PARSER (for KOCO, Choripdong, Wang, etc.) ---
+    if (items.length === 0) {
+      // Try invoice number patterns
+      if (!invoiceNumber) {
+        const invMatch = text.match(/(?:Invoice|INV|Inv)[#:\s]*([A-Z0-9\-]+)/i);
+        if (invMatch) invoiceNumber = invMatch[1];
+      }
+      if (!invoiceNumber) {
+        const poMatch = text.match(/PO#?\s*(\d+)/i);
+        if (poMatch) invoiceNumber = 'PO-' + poMatch[1];
+      }
+      // Try date
+      if (!date) {
+        const dMatch = text.match(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);
+        if (dMatch) {
+          let yr = dMatch[3]; if (yr.length === 2) yr = '20' + yr;
+          date = `${yr}-${dMatch[1].padStart(2,'0')}-${dMatch[2].padStart(2,'0')}`;
+          dateDisplay = `${dMatch[1]}/${dMatch[2]}/${dMatch[3]}`;
+        }
+      }
+      // Generic line item parser: look for lines with price patterns ($XX.XX or just XX.XX)
+      const priceLines = text.split(/\n/);
+      for (const line of priceLines) {
+        // Pattern: quantity + description + price (flexible)
+        const gMatch = line.match(/(\d+)\s+(.{5,50}?)\s+\$?([\d,]+\.\d{2})\s+\$?([\d,]+\.\d{2})/);
+        if (gMatch) {
+          items.push({
+            itemNo: '', brand: '', description: gMatch[2].trim(), size: '',
+            qty: parseInt(gMatch[1]) || 1, um: 'EA', type: 'EA',
+            unitPrice: parseFloat(gMatch[3].replace(/,/g, '')) || 0,
+            eachPrice: parseFloat(gMatch[4].replace(/,/g, '')) || 0,
+            totalPrice: parseFloat(gMatch[4].replace(/,/g, '')) || 0
+          });
+        }
+      }
+      // Try even simpler: description + single price
+      if (items.length === 0) {
+        for (const line of priceLines) {
+          const sMatch = line.match(/([A-Za-z][\w\s\-\(\)]{3,40})\s+\$?([\d,]+\.\d{2})/);
+          if (sMatch && !sMatch[1].match(/total|subtotal|tax|shipping|balance|amount|due|payment/i)) {
+            items.push({
+              itemNo: '', brand: '', description: sMatch[1].trim(), size: '',
+              qty: 1, um: 'EA', type: 'EA',
+              unitPrice: parseFloat(sMatch[2].replace(/,/g, '')) || 0,
+              eachPrice: parseFloat(sMatch[2].replace(/,/g, '')) || 0,
+              totalPrice: parseFloat(sMatch[2].replace(/,/g, '')) || 0
+            });
+          }
+        }
+      }
     }
   }
 
   // Detect vendor
   let vendor = 'unknown';
   if (invoiceNumber.includes('PSI')) vendor = 'rhee_bros';
+  else if (text.match(/koco|KOCO/i)) vendor = 'koco_trading';
+  else if (text.match(/seoul\s*trading|choripdong|hansang/i)) vendor = 'choripdong';
+  else if (text.match(/wang|WG\-/i)) vendor = 'wang';
+  else if (text.match(/namdaemun/i)) vendor = 'namdaemun';
 
   // Detect branch
   let branchId = 'unknown';
@@ -1248,9 +1328,25 @@ function runComparison() {
   setTimeout(() => {
     try {
       const newInvoice = parseInvoiceText(text);
+
+      // If parsing found 0 items, show extracted text for debugging
       if (newInvoice.items.length === 0) {
         hideLoading();
-        showToast('No items found in invoice text');
+        const preview = text.substring(0, 500).replace(/</g, '&lt;');
+        showToast('No items found. PDF text preview logged to console.');
+        console.log('=== PDF TEXT (first 2000 chars) ===\n' + text.substring(0, 2000));
+        // Still allow saving as header-only invoice
+        if (newInvoice.invoiceNumber || confirm('No line items found. Save as header-only invoice?')) {
+          // Save header-only to seed data for future reference
+          const headerInv = {
+            invoiceNumber: newInvoice.invoiceNumber || 'UPLOAD-' + Date.now(),
+            vendor: selVendor, branchId: selBranch,
+            date: newInvoice.date || new Date().toISOString().split('T')[0],
+            total: newInvoice.total || 0, itemCount: 0, items: []
+          };
+          SEED_DATA.invoices.push(headerInv);
+          showToast('Saved invoice header (no line items detected)');
+        }
         return;
       }
 
@@ -1329,6 +1425,23 @@ function runComparison() {
       });
 
       comparisonResults = results;
+
+      // Auto-save this invoice to seed data so it's available for future comparisons
+      const savedInv = {
+        invoiceNumber: newInvoice.invoiceNumber || 'UPLOAD-' + Date.now(),
+        vendor: selVendor, branchId: selBranch,
+        date: newInvoice.date || new Date().toISOString().split('T')[0],
+        total: newInvoice.total || 0,
+        itemCount: newInvoice.items.length,
+        items: newInvoice.items
+      };
+      // Check for duplicates
+      const exists = SEED_DATA.invoices.some(i => i.invoiceNumber === savedInv.invoiceNumber && i.branchId === selBranch);
+      if (!exists) {
+        SEED_DATA.invoices.push(savedInv);
+        console.log('Auto-saved invoice:', savedInv.invoiceNumber, 'with', savedInv.items.length, 'items');
+      }
+
       updateProgress(100);
 
       setTimeout(() => {
