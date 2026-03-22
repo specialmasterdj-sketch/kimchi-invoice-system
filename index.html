@@ -914,30 +914,115 @@ function updateComparison(branchId, vendorId) {
   const totalNew = Object.keys(newPrices).length;
   const totalOld = Object.keys(oldPrices).length;
 
+  // Collect all categories
+  const priceUpItems = changedItems.filter(i => i.diff > 0);
+  const priceDownItems = changedItems.filter(i => i.diff < 0);
+  const newItems = [];
+  const unchangedItems = [];
+  for (const [key, item] of Object.entries(newPrices)) {
+    if (oldPrices[key] !== undefined) {
+      const oldP = oldPrices[key];
+      const diff = item.unitPrice - oldP;
+      const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
+      if (Math.abs(pct) <= 0.5) {
+        unchangedItems.push({ itemNo: item.itemNo, desc: item.description, price: item.unitPrice });
+      }
+    } else {
+      newItems.push({ itemNo: item.itemNo, desc: item.description, price: item.unitPrice });
+    }
+  }
+
+  const uid = `${branchId}_${vendorId}_comp`;
   let html = '';
 
-  // Summary stats
+  // Summary stats - clickable
   html += `<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:10px;">
-    <div style="text-align:center;padding:8px;background:#FFEBEE;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#C62828;">🔴 ${changedItems.filter(i=>i.diff>0).length}</div><div style="font-size:10px;color:#666;">Price Up</div></div>
-    <div style="text-align:center;padding:8px;background:#E8F5E9;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#2E7D32;">🟢 ${changedItems.filter(i=>i.diff<0).length}</div><div style="font-size:10px;color:#666;">Price Down</div></div>
-    <div style="text-align:center;padding:8px;background:#E3F2FD;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#1565C0;">🔵 ${newItemCount.count}</div><div style="font-size:10px;color:#666;">New Items</div></div>
-    <div style="text-align:center;padding:8px;background:#F5F5F5;border-radius:8px;"><div style="font-size:1.2rem;font-weight:800;color:#666;">⚪ ${unchangedCount.count}</div><div style="font-size:10px;color:#666;">Unchanged</div></div>
+    <div onclick="showCompFilter('${uid}','up')" style="cursor:pointer;text-align:center;padding:8px;background:#FFEBEE;border-radius:8px;border:2px solid transparent;" id="${uid}_btn_up"><div style="font-size:1.2rem;font-weight:800;color:#C62828;">🔴 ${priceUpItems.length}</div><div style="font-size:10px;color:#666;">Price Up</div></div>
+    <div onclick="showCompFilter('${uid}','down')" style="cursor:pointer;text-align:center;padding:8px;background:#E8F5E9;border-radius:8px;border:2px solid transparent;" id="${uid}_btn_down"><div style="font-size:1.2rem;font-weight:800;color:#2E7D32;">🟢 ${priceDownItems.length}</div><div style="font-size:10px;color:#666;">Price Down</div></div>
+    <div onclick="showCompFilter('${uid}','new')" style="cursor:pointer;text-align:center;padding:8px;background:#E3F2FD;border-radius:8px;border:2px solid transparent;" id="${uid}_btn_new"><div style="font-size:1.2rem;font-weight:800;color:#1565C0;">🔵 ${newItems.length}</div><div style="font-size:10px;color:#666;">New Items</div></div>
+    <div onclick="showCompFilter('${uid}','same')" style="cursor:pointer;text-align:center;padding:8px;background:#F5F5F5;border-radius:8px;border:2px solid transparent;" id="${uid}_btn_same"><div style="font-size:1.2rem;font-weight:800;color:#666;">⚪ ${unchangedItems.length}</div><div style="font-size:10px;color:#666;">Unchanged</div></div>
   </div>`;
-  html += `<div style="text-align:center;font-size:11px;color:#999;margin-bottom:8px;">${overlapCount} matching items found (New: ${totalNew} / Historical: ${totalOld} unique items)</div>`;
+  html += `<div style="text-align:center;font-size:11px;color:#999;margin-bottom:8px;">${overlapCount} matching items found (New: ${totalNew} / Historical: ${totalOld} unique items) — Click cards above to filter</div>`;
 
-  if (changedItems.length > 0) {
-    html += `<div class="card-title" style="color:${vColor}">${vendorName} - Price Changes (${changedItems.length})</div>`;
+  // All sections - Price Up
+  html += `<div id="${uid}_sec_up" style="display:${priceUpItems.length > 0 ? 'block' : 'none'};">`;
+  html += `<div class="card-title" style="color:#C62828">🔴 Price Up (${priceUpItems.length})</div>`;
+  if (priceUpItems.length > 0) {
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
-    for (const item of changedItems.slice(0, 50)) {
-      const cls = item.diff > 0 ? 'price-up' : 'price-down';
-      const badge = item.diff > 0 ? `<span class="badge badge-red">+${item.pct.toFixed(1)}%</span>` : `<span class="badge badge-green">${item.pct.toFixed(1)}%</span>`;
+    for (const item of priceUpItems) {
       const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
-      html += `<tr class="${cls}"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td>${badge}</td></tr>`;
+      html += `<tr class="price-up"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td><span class="badge badge-red">+${item.pct.toFixed(1)}%</span></td></tr>`;
     }
     html += '</table></div>';
   }
+  html += '</div>';
+
+  // Price Down
+  html += `<div id="${uid}_sec_down" style="display:none;">`;
+  html += `<div class="card-title" style="color:#2E7D32">🟢 Price Down (${priceDownItems.length})</div>`;
+  if (priceDownItems.length > 0) {
+    html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
+    for (const item of priceDownItems) {
+      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      html += `<tr class="price-down"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td><span class="badge badge-green">${item.pct.toFixed(1)}%</span></td></tr>`;
+    }
+    html += '</table></div>';
+  } else { html += '<div style="text-align:center;padding:12px;color:#999;">No price decreases</div>'; }
+  html += '</div>';
+
+  // New Items
+  html += `<div id="${uid}_sec_new" style="display:none;">`;
+  html += `<div class="card-title" style="color:#1565C0">🔵 New Items (${newItems.length})</div>`;
+  if (newItems.length > 0) {
+    html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Price</th></tr>';
+    for (const item of newItems) {
+      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      html += `<tr><td class="item-desc">${itemLabel}</td><td>$${item.price.toFixed(2)}</td></tr>`;
+    }
+    html += '</table></div>';
+  } else { html += '<div style="text-align:center;padding:12px;color:#999;">No new items</div>'; }
+  html += '</div>';
+
+  // Unchanged
+  html += `<div id="${uid}_sec_same" style="display:none;">`;
+  html += `<div class="card-title" style="color:#666">⚪ Unchanged (${unchangedItems.length})</div>`;
+  if (unchangedItems.length > 0) {
+    html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Price</th></tr>';
+    for (const item of unchangedItems) {
+      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      html += `<tr><td class="item-desc">${itemLabel}</td><td>$${item.price.toFixed(2)}</td></tr>`;
+    }
+    html += '</table></div>';
+  } else { html += '<div style="text-align:center;padding:12px;color:#999;">No unchanged items</div>'; }
+  html += '</div>';
 
   tableDiv.innerHTML = html;
+}
+
+// ===== COMPARISON FILTER (click stat cards) =====
+function showCompFilter(uid, filter) {
+  const sections = ['up', 'down', 'new', 'same'];
+  const btns = sections.map(s => document.getElementById(`${uid}_btn_${s}`));
+  const secs = sections.map(s => document.getElementById(`${uid}_sec_${s}`));
+
+  // Check if this filter is already active (toggle off = show all)
+  const btn = document.getElementById(`${uid}_btn_${filter}`);
+  const isActive = btn && btn.style.borderColor === 'rgb(198, 40, 40)';
+
+  if (isActive) {
+    // Deselect - show price up by default (or all changed)
+    btns.forEach(b => { if(b) b.style.borderColor = 'transparent'; });
+    secs.forEach(s => { if(s) s.style.display = 'none'; });
+    const upSec = document.getElementById(`${uid}_sec_up`);
+    if (upSec) upSec.style.display = 'block';
+  } else {
+    // Select this filter
+    btns.forEach(b => { if(b) b.style.borderColor = 'transparent'; });
+    secs.forEach(s => { if(s) s.style.display = 'none'; });
+    if (btn) btn.style.borderColor = '#C62828';
+    const sec = document.getElementById(`${uid}_sec_${filter}`);
+    if (sec) sec.style.display = 'block';
+  }
 }
 
 // ===== VENDOR TOGGLE =====
