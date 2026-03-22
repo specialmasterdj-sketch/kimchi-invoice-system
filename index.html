@@ -296,11 +296,16 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
     </div>
     <div class="form-group">
       <label class="form-label">Vendor / 벤더 *</label>
-      <select id="uploadVendor" class="form-select" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;">
+      <select id="uploadVendor" class="form-select" onchange="handleVendorChange()" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;">
         <option value="">-- Select Vendor / 벤더 선택 --</option>
       </select>
+      <input type="text" id="customVendorInput" placeholder="새 벤더 이름 입력 / Type new vendor name" oninput="checkCompareReady()"
+        style="display:none;width:100%;margin-top:6px;padding:10px;border:1px solid #C62828;border-radius:8px;font-size:0.9rem;">
     </div>
     <div id="uploadContext" style="display:none; margin-top:8px; padding:10px; background:#FFF3E0; border-radius:8px; font-size:0.75rem;">
+    </div>
+    <!-- Comparison Mode Banner - shows clearly when this upload will be compared -->
+    <div id="uploadComparisonBanner" style="display:none; margin-top:10px; padding:14px 16px; background:linear-gradient(135deg,#E8F5E9,#C8E6C9); border-radius:12px; border:2px solid #4CAF50;">
     </div>
   </div>
 
@@ -385,6 +390,14 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
     <button class="btn btn-sm btn-secondary" onclick="downloadCSV('new')">New Items CSV</button>
     <button class="btn btn-sm btn-secondary" onclick="downloadCSV('full')">Full Report CSV</button>
   </div>
+  <div id="resultActions" style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
+    <button class="btn btn-primary" id="resultGoToBranch" style="display:none;flex:1;" onclick="goToBranchFromResult()">
+      📊 지점 상세에서 비교 보기 / View in Branch Detail
+    </button>
+    <button class="btn btn-primary" style="flex:1;background:#00897B;" onclick="showPage('page-upload')">
+      📤 다른 인보이스 업로드 / Upload Another
+    </button>
+  </div>
 </div>
 
 <!-- ===== PAGE: CROSS-BRANCH ===== -->
@@ -434,6 +447,33 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
 // ===== ITEM NORMALIZATION =====
 // Different vendors use different field names for the same data.
 // This helper normalizes them so comparison logic works across all vendors.
+// Normalize vendor names to canonical form
+function normalizeVendor(name) {
+  if (!name) return 'Other';
+  const lower = name.toLowerCase().replace(/[_\-\s]+/g, ' ').trim();
+  if (lower.match(/^koco|koco\s*trading/)) return 'KOCO Trading';
+  if (lower.match(/^rhee|rhee\s*bros/)) return 'Rhee Bros';
+  if (lower.match(/^choripdong|seoul\s*trading|hansang/)) return 'Choripdong';
+  if (lower.match(/^wang/)) return 'Wang';
+  if (lower.match(/^wismettac/)) return 'Wismettac';
+  if (lower.match(/^freshpoint/)) return 'FreshPoint';
+  if (lower.match(/^sysco/)) return 'Sysco';
+  if (lower.match(/^namdaemun/)) return 'Namdaemun';
+  if (lower.match(/^eden/)) return 'Eden';
+  if (lower.match(/^kc\s*trading/)) return 'KC Trading';
+  if (lower.match(/^jfc/)) return 'JFC';
+  if (lower.match(/^well\s*luck/)) return 'Well Luck';
+  if (lower.match(/^bandi/)) return 'Bandi Foods';
+  if (lower.match(/^wei.?chuan/)) return 'Wei-Chuan';
+  if (lower.match(/^two\s*bros/)) return 'Two Bros Food';
+  if (lower.match(/^pocas/)) return 'POCAS';
+  if (lower.match(/^eastland/)) return 'Eastland Food';
+  if (lower.match(/^buckhead/)) return 'Buckhead';
+  if (lower.match(/^walong/)) return 'Walong';
+  if (lower.match(/^ocm/)) return 'OCM';
+  return name; // Keep original if no match
+}
+
 function normalizeItem(item) {
   return {
     itemNo: item.itemNo || item.itemNumber || '',
@@ -484,6 +524,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+  // Load persisted uploaded invoices from localStorage
+  try {
+    const saved = localStorage.getItem('kimchi_uploaded_invoices');
+    if (saved) {
+      const savedInvoices = JSON.parse(saved);
+      for (const inv of savedInvoices) {
+        if (!SEED_DATA.invoices.some(i => i.invoiceNumber === inv.invoiceNumber && i.branchId === inv.branchId)) {
+          SEED_DATA.invoices.push(inv);
+        }
+      }
+    }
+  } catch(e) { console.warn('localStorage load error:', e); }
+
+  // Normalize all vendor names for consistency
+  for (const inv of SEED_DATA.invoices) {
+    inv.vendor = normalizeVendor(inv.vendor);
+  }
+
   const data = SEED_DATA;
   // Home stats
   const invoices = data.invoices || [];
@@ -544,54 +602,118 @@ function initUploadSelectors() {
 function updateUploadVendors() {
   const branchId = document.getElementById('uploadBranch').value;
   const vSel = document.getElementById('uploadVendor');
+  const customInput = document.getElementById('customVendorInput');
   vSel.innerHTML = '<option value="">-- Select Vendor / 벤더 선택 --</option>';
+  customInput.style.display = 'none';
+  customInput.value = '';
   const ctx = document.getElementById('uploadContext');
   ctx.style.display = 'none';
 
   if (!branchId) return;
 
-  // Find all vendors that have invoices for this branch
-  const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
-  const vendors = {};
-  for (const inv of brInvoices) {
+  // Collect all vendors from ALL invoices (not just this branch) for suggestions
+  const allVendors = {};
+  for (const inv of SEED_DATA.invoices) {
     const v = inv.vendor || 'Other';
-    if (!vendors[v]) vendors[v] = {count: 0, items: 0, latest: ''};
-    vendors[v].count++;
-    vendors[v].items += inv.items.length;
-    if (inv.date > vendors[v].latest) vendors[v].latest = inv.date;
+    if (!allVendors[v]) allVendors[v] = {count: 0, items: 0, latest: '', branches: new Set()};
+    allVendors[v].branches.add(inv.branchId);
+    if (inv.branchId === branchId) {
+      allVendors[v].count++;
+      allVendors[v].items += inv.items.length;
+      if (inv.date > allVendors[v].latest) allVendors[v].latest = inv.date;
+    }
   }
 
-  // Also add common vendors even if no invoices yet
-  const commonVendors = ['Rhee Bros', 'Choripdong', 'Wang', 'Namdaemun', 'Sysco', 'FreshPoint', 'JFC', 'Wismettac', 'KC Trading', 'Well Luck', 'Eden', 'Eastland Food', 'Buckhead', 'Two Bros Food', 'Wei-Chuan', 'POCAS', 'Walong', 'OCM', 'Bandi Foods', 'KOCO Trading'];
-  for (const v of commonVendors) {
-    if (!vendors[v]) vendors[v] = {count: 0, items: 0, latest: ''};
-  }
-
-  for (const [name, info] of Object.entries(vendors).sort((a,b) => b[1].count - a[1].count)) {
+  // Sort: vendors with history for this branch first, then others
+  const sorted = Object.entries(allVendors).sort((a, b) => b[1].count - a[1].count);
+  for (const [name, info] of sorted) {
     const opt = document.createElement('option');
     opt.value = name;
-    const historyText = info.count > 0 ? ` (${info.count} past invoices, ${info.items} items)` : ' (no history yet)';
-    opt.textContent = name + historyText;
+    if (info.count > 0) {
+      opt.textContent = `${name} (${info.count} invoices, ${info.items} items)`;
+    } else {
+      opt.textContent = `${name} (other branches)`;
+    }
     vSel.appendChild(opt);
   }
 
-  vSel.onchange = function() {
-    const vendor = this.value;
-    if (!vendor) { ctx.style.display = 'none'; return; }
-    const vInvs = brInvoices.filter(i => i.vendor === vendor).sort((a,b) => b.date.localeCompare(a.date));
-    if (vInvs.length > 0) {
-      const latest = vInvs[0];
-      const ld = latest.date.split('-'); const ldStr = ld[1]+'/'+ld[2]+'/'+ld[0].slice(2);
-      ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId].name}</strong><br>` +
-        `📊 ${vInvs.length} historical invoices | Latest: ${ldStr}<br>` +
-        `✅ New invoice will be compared against these ${vInvs.length} invoices`;
-      ctx.style.display = 'block';
-    } else {
-      ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId].name}</strong><br>` +
-        `⚠️ No historical invoices found. This will be the first one recorded.`;
-      ctx.style.display = 'block';
-    }
-  };
+  // Add option to type a new vendor name
+  const newOpt = document.createElement('option');
+  newOpt.value = '__new__';
+  newOpt.textContent = '+ 새 벤더 추가 / Add New Vendor...';
+  vSel.appendChild(newOpt);
+
+  const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
+  vSel.onchange = function() { handleVendorChange(); };
+  // Also update context if branch changes
+}
+
+function handleVendorChange() {
+  const branchId = document.getElementById('uploadBranch').value;
+  const vSel = document.getElementById('uploadVendor');
+  const customInput = document.getElementById('customVendorInput');
+  const ctx = document.getElementById('uploadContext');
+  const banner = document.getElementById('uploadComparisonBanner');
+  const vendor = vSel.value;
+
+  if (vendor === '__new__') {
+    customInput.style.display = 'block';
+    customInput.focus();
+    ctx.innerHTML = `<strong>새 벤더</strong> - 위에 벤더 이름을 입력하세요.<br>⚠️ 첫 인보이스로 저장됩니다. 향후 업로드 시 비교 기준이 됩니다.`;
+    ctx.style.display = 'block';
+    banner.style.display = 'none';
+    checkCompareReady();
+    return;
+  }
+
+  customInput.style.display = 'none';
+  customInput.value = '';
+
+  if (!vendor) { ctx.style.display = 'none'; banner.style.display = 'none'; checkCompareReady(); return; }
+
+  const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === branchId);
+  const vInvs = brInvoices.filter(i => i.vendor === vendor).sort((a,b) => b.date.localeCompare(a.date));
+  const vInvsWithItems = vInvs.filter(i => i.items.length > 0);
+  if (vInvsWithItems.length > 0) {
+    const latest = vInvs[0];
+    const ld = latest.date.split('-'); const ldStr = ld[1]+'/'+ld[2]+'/'+ld[0].slice(2);
+    ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId]?.name || branchId}</strong><br>` +
+      `📊 ${vInvs.length} historical invoices (${vInvsWithItems.length} with items) | Latest: ${ldStr}`;
+    ctx.style.display = 'block';
+    // Show prominent comparison banner
+    banner.innerHTML = `
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="font-size:2rem;">📊</div>
+        <div>
+          <div style="font-weight:700;font-size:1rem;color:#2E7D32;">비교 모드 / Comparison Mode</div>
+          <div style="font-size:0.85rem;color:#333;margin-top:2px;">
+            기존 <strong>${vInvsWithItems.length}개</strong> 인보이스와 가격 비교됩니다<br>
+            <span style="color:#666;">Your new invoice will be compared against ${vInvsWithItems.length} existing invoice${vInvsWithItems.length > 1 ? 's' : ''} (latest: ${ldStr})</span>
+          </div>
+        </div>
+      </div>`;
+    banner.style.display = 'block';
+  } else {
+    ctx.innerHTML = `<strong>${vendor}</strong> at <strong>${SEED_DATA.branches[branchId]?.name || branchId}</strong><br>` +
+      `⚠️ No historical invoices with items for this branch.`;
+    ctx.style.display = 'block';
+    // Show baseline banner
+    banner.innerHTML = `
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="font-size:2rem;">🆕</div>
+        <div>
+          <div style="font-weight:700;font-size:1rem;color:#E65100;">첫 인보이스 / First Invoice</div>
+          <div style="font-size:0.85rem;color:#333;margin-top:2px;">
+            이 인보이스가 기준이 됩니다. 다음 업로드부터 가격 비교가 시작됩니다.<br>
+            <span style="color:#666;">This will be the baseline. Price comparison starts from your next upload.</span>
+          </div>
+        </div>
+      </div>`;
+    banner.style.background = 'linear-gradient(135deg,#FFF3E0,#FFE0B2)';
+    banner.style.borderColor = '#FF9800';
+    banner.style.display = 'block';
+  }
+  checkCompareReady();
 }
 
 function goBack() {
@@ -665,7 +787,12 @@ function openBranch(branchId) {
     vInvoices.sort((a, b) => b.date.localeCompare(a.date));
     // Comparison: New Invoice vs ALL historical prices
     const dateGroups = getVendorDateGroups(branchId, vendorId);
-    if (dateGroups.length >= 2) {
+    if (dateGroups.length === 1) {
+      content += `<div style="background:#E3F2FD;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:8px;">
+        📌 <strong>첫 번째 인보이스</strong> — 앞으로 업로드되는 인보이스와 가격이 비교됩니다.<br>
+        <span style="color:#666;">First invoice on record. Upload more invoices to enable price comparison.</span>
+      </div>`;
+    } else if (dateGroups.length >= 2) {
       const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
       const fmtOpt = g => {
         const label = g.invoiceNumbers.length > 1
@@ -1126,7 +1253,9 @@ async function handlePdfFile(file) {
 
 function checkCompareReady() {
   const hasBranch = document.getElementById('uploadBranch').value !== '';
-  const hasVendor = document.getElementById('uploadVendor').value !== '';
+  const vendorSel = document.getElementById('uploadVendor').value;
+  const customVendor = (document.getElementById('customVendorInput')?.value || '').trim();
+  const hasVendor = vendorSel === '__new__' ? customVendor.length > 0 : vendorSel !== '';
   let hasData = false;
   if (inputMethod === 'paste') {
     hasData = document.getElementById('pasteArea').value.trim().length > 20;
@@ -1307,7 +1436,14 @@ function parseInvoiceText(text) {
 function runComparison() {
   // Get user-selected branch and vendor
   const selBranch = document.getElementById('uploadBranch').value;
-  const selVendor = document.getElementById('uploadVendor').value;
+  let selVendor = document.getElementById('uploadVendor').value;
+
+  // Handle new vendor typed by user
+  if (selVendor === '__new__') {
+    const custom = (document.getElementById('customVendorInput')?.value || '').trim();
+    if (!custom) { showToast('Please enter a vendor name / 벤더 이름을 입력하세요'); return; }
+    selVendor = custom;
+  }
 
   if (!selBranch) { showToast('Please select a branch / 지점을 선택하세요'); return; }
   if (!selVendor) { showToast('Please select a vendor / 벤더를 선택하세요'); return; }
@@ -1350,9 +1486,9 @@ function runComparison() {
         return;
       }
 
-      // Override branch and vendor with user selection
+      // Override branch and vendor with user selection (normalized)
       newInvoice.branchId = selBranch;
-      newInvoice.vendor = selVendor;
+      newInvoice.vendor = normalizeVendor(selVendor);
 
       comparisonInvoice = newInvoice;
       updateProgress(30);
@@ -1427,19 +1563,33 @@ function runComparison() {
       comparisonResults = results;
 
       // Auto-save this invoice to seed data so it's available for future comparisons
+      const savedDate = newInvoice.date || new Date().toISOString().split('T')[0];
+      const savedDateDisplay = newInvoice.dateDisplay || (() => {
+        const [y, m, d] = savedDate.split('-');
+        return `${m}/${d}/${y.slice(2)}`;
+      })();
       const savedInv = {
         invoiceNumber: newInvoice.invoiceNumber || 'UPLOAD-' + Date.now(),
-        vendor: selVendor, branchId: selBranch,
-        date: newInvoice.date || new Date().toISOString().split('T')[0],
+        vendor: normalizeVendor(selVendor), branchId: selBranch,
+        date: savedDate,
+        dateDisplay: savedDateDisplay,
+        customer: newInvoice.customer || '',
         total: newInvoice.total || 0,
         itemCount: newInvoice.items.length,
         items: newInvoice.items
       };
-      // Check for duplicates
+      // Check for duplicates and save
       const exists = SEED_DATA.invoices.some(i => i.invoiceNumber === savedInv.invoiceNumber && i.branchId === selBranch);
       if (!exists) {
         SEED_DATA.invoices.push(savedInv);
         console.log('Auto-saved invoice:', savedInv.invoiceNumber, 'with', savedInv.items.length, 'items');
+        // Persist to localStorage so uploads survive page refresh
+        try {
+          const lsKey = 'kimchi_uploaded_invoices';
+          const existing = JSON.parse(localStorage.getItem(lsKey) || '[]');
+          existing.push(savedInv);
+          localStorage.setItem(lsKey, JSON.stringify(existing));
+        } catch(e) { console.warn('localStorage save error:', e); }
       }
 
       updateProgress(100);
@@ -1482,7 +1632,41 @@ function showResults() {
   document.querySelectorAll('#resultTabs .tab').forEach(t => t.classList.remove('active'));
   document.querySelector('#resultTabs .tab').classList.add('active');
   filterResults('all');
+
+  // Show "Go to Branch Detail" button
+  const goBtn = document.getElementById('resultGoToBranch');
+  if (goBtn && inv.branchId) {
+    goBtn.style.display = 'block';
+    goBtn.dataset.branchId = inv.branchId;
+    goBtn.dataset.vendor = inv.vendor;
+  }
+
   showPage('page-results');
+}
+
+function goToBranchFromResult() {
+  const btn = document.getElementById('resultGoToBranch');
+  if (!btn) return;
+  const branchId = btn.dataset.branchId;
+  const vendor = btn.dataset.vendor;
+  if (branchId) {
+    openBranch(branchId);
+    // Auto-expand the vendor section
+    if (vendor) {
+      const vendorId = vendor.replace(/[^a-zA-Z0-9]/g, '_');
+      setTimeout(() => {
+        const list = document.getElementById('vendor_' + vendorId);
+        const arrow = document.getElementById('arrow_' + vendorId);
+        if (list && list.style.display === 'none') {
+          list.style.display = 'block';
+          if (arrow) arrow.textContent = '▼';
+        }
+        // Scroll to the vendor section
+        const vendorEl = document.getElementById('vendor_' + vendorId);
+        if (vendorEl) vendorEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }
 }
 
 function filterResults(filter) {
