@@ -1277,7 +1277,11 @@ function updateComparison(branchId, vendorId) {
       const diff = newP - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
       if (Math.abs(pct) > 0.5) {
-        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description, oldPrice: oldP, newPrice: newP, diff, pct, oldDate: oldPriceSource[key] });
+        // Try to find POS product name for richer display
+        const posMatch = findPOSMatch(item, vendorName);
+        const posName = posMatch ? posMatch.pos.nm : '';
+        const displayName = item.description || posName || '';
+        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: displayName, posName, oldPrice: oldP, newPrice: newP, diff, pct, oldDate: oldPriceSource[key] });
       } else {
         unchangedCount.count++;
       }
@@ -1304,10 +1308,12 @@ function updateComparison(branchId, vendorId) {
       const diff = item.unitPrice - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
       if (Math.abs(pct) <= 0.5) {
-        unchangedItems.push({ itemNo: item.itemNo, desc: item.description, price: item.unitPrice });
+        const posM2 = findPOSMatch(item, vendorName);
+        unchangedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || (posM2 ? posM2.pos.nm : ''), price: item.unitPrice });
       }
     } else {
-      newItems.push({ itemNo: item.itemNo, desc: item.description, price: item.unitPrice });
+      const posM3 = findPOSMatch(item, vendorName);
+      newItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || (posM3 ? posM3.pos.nm : ''), price: item.unitPrice });
     }
   }
 
@@ -1329,7 +1335,7 @@ function updateComparison(branchId, vendorId) {
   if (priceUpItems.length > 0) {
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
     for (const item of priceUpItems) {
-      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      const itemLabel = [item.brand, item.desc].filter(Boolean).join(' ') || item.posName || item.itemNo;
       html += `<tr class="price-up"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td><span class="badge badge-red">+${item.pct.toFixed(1)}%</span></td></tr>`;
     }
     html += '</table></div>';
@@ -1342,7 +1348,7 @@ function updateComparison(branchId, vendorId) {
   if (priceDownItems.length > 0) {
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Old</th><th>New</th><th>Change</th></tr>';
     for (const item of priceDownItems) {
-      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      const itemLabel = [item.brand, item.desc].filter(Boolean).join(' ') || item.posName || item.itemNo;
       html += `<tr class="price-down"><td class="item-desc">${itemLabel}</td><td>$${item.oldPrice.toFixed(2)}</td><td>$${item.newPrice.toFixed(2)}</td><td><span class="badge badge-green">${item.pct.toFixed(1)}%</span></td></tr>`;
     }
     html += '</table></div>';
@@ -1355,7 +1361,7 @@ function updateComparison(branchId, vendorId) {
   if (newItems.length > 0) {
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Price</th></tr>';
     for (const item of newItems) {
-      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      const itemLabel = [item.brand, item.desc].filter(Boolean).join(' ') || item.posName || item.itemNo;
       html += `<tr><td class="item-desc">${itemLabel}</td><td>$${item.price.toFixed(2)}</td></tr>`;
     }
     html += '</table></div>';
@@ -1368,7 +1374,7 @@ function updateComparison(branchId, vendorId) {
   if (unchangedItems.length > 0) {
     html += '<div class="table-wrap"><table class="results-table"><tr><th>Item</th><th>Price</th></tr>';
     for (const item of unchangedItems) {
-      const itemLabel = item.itemNo ? `${item.itemNo} ${item.desc}` : `${item.desc}`;
+      const itemLabel = [item.brand, item.desc].filter(Boolean).join(' ') || item.posName || item.itemNo;
       html += `<tr><td class="item-desc">${itemLabel}</td><td>$${item.price.toFixed(2)}</td></tr>`;
     }
     html += '</table></div>';
@@ -1416,19 +1422,99 @@ function renderInvoiceDetail() {
   const inv = currentInvoice;
   if (!inv) return;
   const search = (document.getElementById('invoiceSearch')?.value || '').toLowerCase();
-
-  document.getElementById('invoiceDetailInfo').innerHTML = `
-    <div class="card-title">${inv.invoiceNumber}</div>
-    <div class="card-subtitle">${inv.customer} | ${inv.dateDisplay} | $${inv.total.toLocaleString()} | ${inv.itemCount} items</div>
-    ${inv.note ? `<div style="font-size:0.7rem;color:#FF9800;margin-top:4px;">${inv.note}</div>` : ''}
-  `;
+  const vendor = inv.vendor || '';
 
   let items = inv.items.map(normalizeItem);
   if (search) items = items.filter(it => `${it.brand} ${it.description} ${it.itemNo}`.toLowerCase().includes(search));
 
-  let html = '<table class="results-table"><tr><th>#</th><th>Brand</th><th>Description</th><th>Size</th><th>Qty</th><th>Unit$</th><th>Total</th></tr>';
-  for (const it of items) {
-    html += `<tr><td>${it.itemNo}</td><td>${it.brand}</td><td class="item-desc">${it.description}</td><td>${it.size}</td><td>${it.qty}</td><td>$${it.unitPrice.toFixed(2)}</td><td>$${it.totalPrice.toFixed(2)}</td></tr>`;
+  // POS match all items
+  let posMatched = 0, alertCount = 0, watchCount = 0, goodCount = 0;
+  let totalMargin = 0, totalOverpay = 0;
+  const enriched = items.map(it => {
+    const m = findPOSMatch(it, vendor);
+    const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '' };
+    if (m) {
+      posMatched++;
+      r.posCost = m.pos.co || 0;
+      r.posPrice = m.pos.pr || 0;
+      r.posName = m.pos.nm || '';
+      if (r.posCost > 0) {
+        r.posDiffPct = ((it.unitPrice - r.posCost) / r.posCost) * 100;
+        r.posStatus = getPOSStatus(it.unitPrice, r.posCost);
+        if (r.posStatus === 'pos-alert') alertCount++;
+        else if (r.posStatus === 'pos-watch') watchCount++;
+        else goodCount++;
+        if (it.unitPrice > r.posCost) totalOverpay += (it.unitPrice - r.posCost) * (it.qty || 1);
+      }
+      if (r.posPrice > 0) {
+        r.posMargin = r.posPrice - it.unitPrice;
+        totalMargin += r.posMargin * (it.qty || 1);
+      }
+    }
+    return r;
+  });
+
+  const marginColor = totalMargin >= 0 ? '#2E7D32' : '#C62828';
+
+  document.getElementById('invoiceDetailInfo').innerHTML = `
+    <div class="card-title">${inv.invoiceNumber}</div>
+    <div class="card-subtitle">${inv.customer || vendor} | ${inv.dateDisplay} | $${inv.total.toLocaleString()} | ${inv.itemCount} items</div>
+    ${inv.note ? `<div style="font-size:0.7rem;color:#FF9800;margin-top:4px;">${inv.note}</div>` : ''}
+    <div class="pos-summary" style="margin-top:10px;">
+      <div class="stat-card" style="border-left:3px solid #2196F3">
+        <div class="stat-number blue" style="font-size:1rem">${posMatched}/${items.length}</div>
+        <div class="stat-label">POS 매칭</div>
+      </div>
+      <div class="stat-card" style="border-left:3px solid #F44336">
+        <div class="stat-number red" style="font-size:1rem">${alertCount}</div>
+        <div class="stat-label">🔴 초과</div>
+      </div>
+      <div class="stat-card" style="border-left:3px solid ${marginColor}">
+        <div class="stat-number" style="font-size:1rem;color:${marginColor}">$${totalMargin.toFixed(0)}</div>
+        <div class="stat-label">예상 마진</div>
+      </div>
+    </div>
+  `;
+
+  // Sort: alerts first
+  enriched.sort((a, b) => {
+    const order = { 'pos-alert': 0, 'pos-watch': 1, 'pos-ok': 2, 'pos-good': 3, 'no-pos': 4 };
+    return (order[a.posStatus] ?? 5) - (order[b.posStatus] ?? 5);
+  });
+
+  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>수량</th><th>인보이스$</th><th>POS원가</th><th>vs기준</th><th>마진</th></tr>';
+  for (const r of enriched) {
+    let badge;
+    if (r.posStatus === 'pos-alert') badge = '<span class="badge badge-red">🔴</span>';
+    else if (r.posStatus === 'pos-watch') badge = '<span class="badge badge-orange">🟡</span>';
+    else if (r.posStatus === 'pos-ok' || r.posStatus === 'pos-good') badge = '<span class="badge badge-green">🟢</span>';
+    else badge = '<span class="badge badge-gray">-</span>';
+
+    const name = [r.brand, r.description].filter(Boolean).join(' ') || r.posName || r.itemNo;
+    const posInfo = r.posName && r.posName !== r.description ? `<br><span class="pos-match-info">POS: ${r.posName}</span>` : '';
+
+    let vsPOS = '-';
+    if (r.posDiffPct !== null) {
+      const sign = r.posDiffPct > 0 ? '+' : '';
+      const color = r.posDiffPct > 0 ? '#C62828' : '#2E7D32';
+      vsPOS = `<span style="color:${color};font-weight:700">${sign}${r.posDiffPct.toFixed(1)}%</span>`;
+    }
+
+    let marginText = '-';
+    if (r.posMargin !== null) {
+      const mColor = r.posMargin >= 0 ? '#2E7D32' : '#C62828';
+      marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
+    }
+
+    html += `<tr class="${r.posStatus}">
+      <td>${badge}</td>
+      <td class="item-desc">${name}${posInfo}</td>
+      <td>${r.qty}</td>
+      <td style="font-weight:700">$${r.unitPrice.toFixed(2)}</td>
+      <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
+      <td>${vsPOS}</td>
+      <td>${marginText}</td>
+    </tr>`;
   }
   html += '</table>';
   document.getElementById('invoiceDetailTable').innerHTML = html;
