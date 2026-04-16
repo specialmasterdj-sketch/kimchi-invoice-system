@@ -1037,15 +1037,51 @@ function renderVendorPage(branchId, vendorName) {
 
   for (const inv of vInvoices) {
     const hasItems = inv.itemCount > 0;
-    content += `<div class="history-item" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
-      <div class="history-info">
-        <h4>${inv.invoiceNumber}</h4>
-        <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
+    // POS comparison stats for each invoice
+    let posStats = '';
+    if (hasItems && typeof POS_DATA !== 'undefined') {
+      let al=0, wa=0, gd=0, nm=0;
+      for (const rawIt of inv.items) {
+        const it = normalizeItem(rawIt);
+        const m = findPOSMatch(it, vendorName);
+        if (m && m.pos.co > 0) {
+          const st = getPOSStatus(it.unitPrice, m.pos.co);
+          if (st==='pos-alert') al++;
+          else if (st==='pos-watch') wa++;
+          else gd++;
+        } else { nm++; }
+      }
+      posStats = `<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
+        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#FFEBEE;border-radius:8px;">
+          <div style="font-size:0.85rem;font-weight:800;color:#C62828;">🔴 ${al}</div>
+          <div style="font-size:0.5rem;color:#999;">초과</div>
+        </div>
+        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#FFF8E1;border-radius:8px;">
+          <div style="font-size:0.85rem;font-weight:800;color:#F57F17;">🟡 ${wa}</div>
+          <div style="font-size:0.5rem;color:#999;">주의</div>
+        </div>
+        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#E8F5E9;border-radius:8px;">
+          <div style="font-size:0.85rem;font-weight:800;color:#2E7D32;">🟢 ${gd}</div>
+          <div style="font-size:0.5rem;color:#999;">정상</div>
+        </div>
+        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#F5F5F5;border-radius:8px;">
+          <div style="font-size:0.85rem;font-weight:800;color:#999;">⚪ ${nm}</div>
+          <div style="font-size:0.5rem;color:#999;">미매칭</div>
+        </div>
+      </div>`;
+    }
+    content += `<div class="history-item" style="flex-direction:column;align-items:stretch;gap:4px;cursor:${hasItems?'pointer':'default'}" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="history-info">
+          <h4>${inv.invoiceNumber}</h4>
+          <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
+        </div>
+        <div class="history-meta">
+          <div class="amount">$${inv.total.toLocaleString()}</div>
+          <div class="date">${inv.dateDisplay}</div>
+        </div>
       </div>
-      <div class="history-meta">
-        <div class="amount">$${inv.total.toLocaleString()}</div>
-        <div class="date">${inv.dateDisplay}</div>
-      </div>
+      ${posStats}
     </div>`;
   }
 
