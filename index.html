@@ -2799,106 +2799,91 @@ function openCrossVendor() {
 function renderCrossVendor() {
   const search = (document.getElementById('crossVendorSearch')?.value || '').toLowerCase();
 
-  // Build a map: normalized product name -> { vendor: latestPrice }
-  // Use description (product name) as the key, not item number (different vendors use different numbering)
+  // Build POS-based product map: posKey → { vendor: price }
   const productMap = {};
 
   for (const inv of SEED_DATA.invoices) {
     if (!inv.items || inv.items.length === 0) continue;
     const vendor = inv.vendor || 'Other';
-    const branch = inv.branchId;
 
     for (const rawItem of inv.items) {
       const item = normalizeItem(rawItem);
-      if (item.unitPrice <= 2) continue; // skip promo
+      if (item.unitPrice <= 2) continue;
 
-      // Normalize product name for matching across vendors
-      const rawName = (item.description || '').toUpperCase().trim();
-      if (!rawName || rawName.length < 3) continue;
+      // Match to POS product
+      const posMatch = findPOSMatch(item, vendor);
+      const posKey = posMatch ? (posMatch.pos.bc || posMatch.pos.nm) : null;
+      if (!posKey) continue; // Skip items without POS match
 
-      // Create a normalized key by removing brand, size info, and standardizing
-      let key = rawName
-        .replace(/\s*\([^)]*\)\s*/g, ' ')  // remove parenthetical (size info)
-        .replace(/\d+[XxX]\d+.*?(OZ|LB|ML|L|G|KG|PC|CT|EA)/gi, '') // remove pack/size specs
-        .replace(/\b(ASSI|RHEECHUN|NONGSHIM|SAMYANG|OTTOGI|DONGWON|LOTTE|ORION|SEMPIO|CJ|BIBIGO|PALDO|WANG|CHORIPDONG|HANSANG|DAIFUKU|LKK|HUYFONG|COCK|THREE\s*ELEPHANTS?|HANKUKMI|GOMPYO|YISSINE|QONE)\b/gi, '') // remove known brand names
-        .replace(/\s+/g, ' ').trim();
-      if (key.length < 3) continue;
+      const posName = posMatch.pos.nm || '';
+      const posCat = posMatch.pos.ct || '';
 
-      if (!productMap[key]) {
-        productMap[key] = { name: rawName, fullName: item.description, vendors: {} };
+      // Convert to per-unit price
+      const cq = extractCaseQty(item.description || item.name || '', item.unitPrice, posMatch.pos.co);
+      const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
+
+      if (!productMap[posKey]) {
+        productMap[posKey] = { posName, posCat, catGroup: getCategoryGroup(posCat), vendors: {} };
       }
 
-      // Keep latest/highest price per vendor
-      if (!productMap[key].vendors[vendor] || item.unitPrice > productMap[key].vendors[vendor].price) {
-        productMap[key].vendors[vendor] = {
-          price: item.unitPrice,
-          size: item.size,
-          brand: item.brand,
-          itemNo: item.itemNo,
-          date: inv.date,
-          branch: branch
-        };
+      // Keep latest price per vendor
+      if (!productMap[posKey].vendors[vendor] || inv.date > (productMap[posKey].vendors[vendor].date || '')) {
+        productMap[posKey].vendors[vendor] = { price: unitP, date: inv.date };
       }
     }
   }
 
-  // Filter to products that appear in 2+ vendors
+  // Filter to products in 2+ vendors
   let items = Object.values(productMap).filter(p => Object.keys(p.vendors).length >= 2);
 
-  // Apply search filter
-  if (search) {
-    items = items.filter(p => p.name.toLowerCase().includes(search) || p.fullName.toLowerCase().includes(search));
-  }
+  if (search) items = items.filter(p => p.posName.toLowerCase().includes(search));
 
-  // Sort by price difference (biggest first)
+  // Sort by price difference
   items.sort((a, b) => {
-    const pricesA = Object.values(a.vendors).map(v => v.price);
-    const pricesB = Object.values(b.vendors).map(v => v.price);
-    const diffA = Math.max(...pricesA) - Math.min(...pricesA);
-    const diffB = Math.max(...pricesB) - Math.min(...pricesB);
-    return diffB - diffA;
+    const pA = Object.values(a.vendors).map(v => v.price);
+    const pB = Object.values(b.vendors).map(v => v.price);
+    return (Math.max(...pB) - Math.min(...pB)) - (Math.max(...pA) - Math.min(...pA));
   });
 
-  const allVendors = [...new Set(SEED_DATA.invoices.map(i => i.vendor).filter(Boolean))].sort();
-  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'JFC': '#4A148C', 'FreshPoint': '#2E7D32', 'Sysco': '#01579B', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KC Trading': '#AD1457', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Bandi Foods': '#283593', 'Wei-Chuan': '#1565C0', 'Two Bros Food': '#00838F', 'POCAS': '#558B2F', 'Eastland Food': '#4E342E', 'Buckhead': '#37474F', 'Walong': '#880E4F', 'OCM': '#FF6F00' };
+  // Only show vendors that appear in filtered results
+  const activeVendors = [...new Set(items.flatMap(it => Object.keys(it.vendors)))].sort();
+  const vendorColors = { 'Rhee Bros': '#B71C1C', 'Choripdong': '#1B5E20', 'Wang': '#0D47A1', 'Wismettac': '#4A148C', 'FreshPoint': '#2E7D32', 'Namdaemun': '#E65100', 'Eden': '#00695C', 'KOCO Trading': '#6A1B9A', 'Well Luck': '#C62828', 'Eastland Food': '#4E342E', 'OCM': '#FF6F00' };
 
   let html = '';
   if (items.length > 0) {
-    html += `<div style="padding:8px 0;font-size:0.8rem;color:#666;">${items.length} products found across multiple vendors</div>`;
-    html += '<table class="results-table"><thead><tr><th>Product</th>';
-    for (const v of allVendors) {
+    html += `<div style="padding:8px 0;font-size:0.75rem;color:#666;">${items.length}개 제품 · ${activeVendors.length}개 벤더 비교</div>`;
+    html += '<table class="results-table"><thead><tr><th style="min-width:130px;">제품</th>';
+    for (const v of activeVendors) {
       const vc = vendorColors[v] || '#555';
-      html += `<th style="color:${vc};min-width:80px">${v}</th>`;
+      const short = v.split(' ')[0].substring(0, 8);
+      html += `<th style="color:${vc};font-size:0.6rem;">${short}</th>`;
     }
-    html += '<th>Difference</th></tr></thead><tbody>';
+    html += '<th>차이</th></tr></thead><tbody>';
 
-    for (const item of items.slice(0, 100)) {
+    for (const item of items.slice(0, 150)) {
       const prices = Object.values(item.vendors).map(v => v.price);
-      const minPrice = Math.min(...prices);
-      const maxPrice = Math.max(...prices);
-      const diff = maxPrice - minPrice;
-      const pctDiff = minPrice > 0 ? ((diff / minPrice) * 100) : 0;
+      const minP = Math.min(...prices);
+      const maxP = Math.max(...prices);
+      const diff = maxP - minP;
 
-      html += '<tr>';
-      html += `<td class="item-desc">${item.fullName}</td>`;
-      for (const v of allVendors) {
-        const vData = item.vendors[v];
-        if (vData) {
-          const isMin = vData.price === minPrice && prices.length > 1;
-          const isMax = vData.price === maxPrice && prices.length > 1 && diff > 0;
+      html += `<tr><td class="item-desc" style="font-size:0.65rem;"><strong>${item.posName}</strong></td>`;
+      for (const v of activeVendors) {
+        const vd = item.vendors[v];
+        if (vd) {
+          const isMin = vd.price === minP && prices.length > 1 && diff > 0;
+          const isMax = vd.price === maxP && prices.length > 1 && diff > 0;
           const style = isMin ? 'color:#1B5E20;font-weight:700;background:#E8F5E9' :
                         isMax ? 'color:#B71C1C;font-weight:700;background:#FFEBEE' : '';
-          html += `<td style="${style}">$${vData.price.toFixed(2)}<br><span style="font-size:0.65rem;color:#999">${vData.itemNo}</span></td>`;
+          html += `<td style="${style};font-size:0.7rem;">$${vd.price.toFixed(2)}</td>`;
         } else {
-          html += '<td style="color:#ccc;text-align:center">-</td>';
+          html += '<td style="color:#ccc;text-align:center;">-</td>';
         }
       }
-      html += `<td><span class="badge ${diff > 0 ? 'badge-red' : ''}" style="font-size:0.75rem">$${diff.toFixed(2)}<br>${pctDiff.toFixed(1)}%</span></td>`;
-      html += '</tr>';
+      html += `<td style="font-weight:700;color:#C62828;font-size:0.7rem;">$${diff.toFixed(2)}</td></tr>`;
     }
     html += '</tbody></table>';
   } else {
-    html = '<div style="text-align:center;padding:30px;color:#999;">No matching products found across vendors. Upload more invoices from different vendors.</div>';
+    html = '<div style="text-align:center;padding:30px;color:#999;">벤더 간 비교 가능한 제품 없음</div>';
   }
 
   document.getElementById('crossVendorTableWrap').innerHTML = html;
