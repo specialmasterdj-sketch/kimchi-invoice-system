@@ -653,6 +653,31 @@ function findPOSMatch(item, invoiceVendor) {
   return best;
 }
 
+// Extract case/pack quantity from invoice item description
+function extractCaseQty(desc) {
+  if (!desc) return 1;
+  const d = desc.toUpperCase();
+  // Pattern: "12/20OZ", "24/14.1 OZ", "20/1LB" → number before /size
+  let m = d.match(/\b(\d+)\s*\/\s*[\d.]+\s*(OZ|LB|G|KG|ML|L|GAL|FLOZ|PC|EA|PK)\b/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "14OZ/12", "1KG/12", "500G/12" → size/number at end
+  m = d.match(/[\d.]+(OZ|LB|G|KG|ML)\s*\/\s*(\d+)\s*$/);
+  if (m && parseInt(m[2]) > 1) return parseInt(m[2]);
+  // Pattern: "12X23", "6X5.11", "10X21.16" → NNX at end (Rhee Bros format)
+  m = d.match(/\b(\d+)\s*X\s*[\d.]+\s*$/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "*4/8", "*16/3.97OZ" → after asterisk
+  m = d.match(/\*\s*(\d+)\s*\//);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "NNXNNXweight" → first number (4X4X4.5 = 4 cases)
+  m = d.match(/\b(\d+)\s*X\s*\d+\s*X/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern ends with "/NN"
+  m = d.match(/\/\s*(\d+)\s*$/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  return 1;
+}
+
 // POS-based status classification
 function getPOSStatus(invoicePrice, posCost) {
   if (!posCost || posCost <= 0) return 'no-pos';
@@ -1183,7 +1208,9 @@ function renderVendorPage(branchId, vendorName) {
         const it = normalizeItem(rawIt);
         const m = findPOSMatch(it, vendorName);
         if (m && m.pos.co > 0) {
-          const st = getPOSStatus(it.unitPrice, m.pos.co);
+          const cq = extractCaseQty(it.description || it.name || '');
+          const uc = cq > 1 ? it.unitPrice / cq : it.unitPrice;
+          const st = getPOSStatus(uc, m.pos.co);
           if (st==='pos-alert') al++;
           else if (st==='pos-watch') wa++;
           else gd++;
@@ -1422,11 +1449,8 @@ function updateComparison(branchId, vendorId) {
       const diff = newP - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
       if (Math.abs(pct) > 0.5) {
-        // Try to find POS product name for richer display
-        const posMatch = findPOSMatch(item, vendorName);
-        const posName = posMatch ? posMatch.pos.nm : '';
-        const displayName = item.description || posName || '';
-        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: displayName, posName, oldPrice: oldP, newPrice: newP, diff, pct, oldDate: oldPriceSource[key] });
+        const displayName = item.description || item.brand || item.itemNo;
+        changedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: displayName, oldPrice: oldP, newPrice: newP, diff, pct, oldDate: oldPriceSource[key] });
       } else {
         unchangedCount.count++;
       }
@@ -1453,12 +1477,10 @@ function updateComparison(branchId, vendorId) {
       const diff = item.unitPrice - oldP;
       const pct = oldP > 0 ? ((diff / oldP) * 100) : 0;
       if (Math.abs(pct) <= 0.5) {
-        const posM2 = findPOSMatch(item, vendorName);
-        unchangedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || (posM2 ? posM2.pos.nm : ''), price: item.unitPrice });
+        unchangedItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || item.brand || item.itemNo, price: item.unitPrice });
       }
     } else {
-      const posM3 = findPOSMatch(item, vendorName);
-      newItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || (posM3 ? posM3.pos.nm : ''), price: item.unitPrice });
+      newItems.push({ itemNo: item.itemNo, brand: item.brand, desc: item.description || item.brand || item.itemNo, price: item.unitPrice });
     }
   }
 
@@ -1577,22 +1599,25 @@ function renderInvoiceDetail() {
   let totalMargin = 0, totalOverpay = 0;
   const enriched = items.map(it => {
     const m = findPOSMatch(it, vendor);
-    const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '' };
+    const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '', caseQty: 1, unitCost: it.unitPrice };
     if (m) {
       posMatched++;
       r.posCost = m.pos.co || 0;
       r.posPrice = m.pos.pr || 0;
       r.posName = m.pos.nm || '';
+      // Convert box price to per-unit cost
+      r.caseQty = extractCaseQty(it.description || it.name || '');
+      r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
       if (r.posCost > 0) {
-        r.posDiffPct = ((it.unitPrice - r.posCost) / r.posCost) * 100;
-        r.posStatus = getPOSStatus(it.unitPrice, r.posCost);
+        r.posDiffPct = ((r.unitCost - r.posCost) / r.posCost) * 100;
+        r.posStatus = getPOSStatus(r.unitCost, r.posCost);
         if (r.posStatus === 'pos-alert') alertCount++;
         else if (r.posStatus === 'pos-watch') watchCount++;
         else goodCount++;
-        if (it.unitPrice > r.posCost) totalOverpay += (it.unitPrice - r.posCost) * (it.qty || 1);
+        if (r.unitCost > r.posCost) totalOverpay += (r.unitCost - r.posCost) * (it.qty || 1);
       }
       if (r.posPrice > 0) {
-        r.posMargin = r.posPrice - it.unitPrice;
+        r.posMargin = r.posPrice - r.unitCost;
         totalMargin += r.posMargin * (it.qty || 1);
       }
     }
@@ -1627,7 +1652,7 @@ function renderInvoiceDetail() {
     return (order[a.posStatus] ?? 5) - (order[b.posStatus] ?? 5);
   });
 
-  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>수량</th><th>인보이스$</th><th>POS원가</th><th>vs기준</th><th>마진</th></tr>';
+  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>수량</th><th>개별원가</th><th>POS원가</th><th>vs기준</th><th>마진</th></tr>';
   for (const r of enriched) {
     let badge;
     if (r.posStatus === 'pos-alert') badge = '<span class="badge badge-red">🔴</span>';
@@ -1651,11 +1676,15 @@ function renderInvoiceDetail() {
       marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
 
+    // Per-unit cost with case breakdown
+    const uc = r.unitCost || r.unitPrice;
+    const caseInfo = r.caseQty > 1 ? `<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>` : '';
+
     html += `<tr class="${r.posStatus}">
       <td>${badge}</td>
       <td class="item-desc">${name}${posInfo}</td>
       <td>${r.qty}</td>
-      <td style="font-weight:700">$${r.unitPrice.toFixed(2)}</td>
+      <td style="font-weight:700">$${uc.toFixed(2)}${caseInfo}</td>
       <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
       <td>${vsPOS}</td>
       <td>${marginText}</td>
@@ -2065,6 +2094,7 @@ function runComparison() {
         const posMatch = findPOSMatch(item, normalizeVendor(selVendor));
         let posCost = null, posPrice = null, posMargin = null, posMarginPct = null;
         let posStatus = 'no-pos', posMethod = '', posDiff = null, posDiffPct = null, posName = '';
+        let caseQty = 1, unitCost = item.unitPrice;
 
         if (posMatch) {
           posMatchCount++;
@@ -2073,17 +2103,21 @@ function runComparison() {
           posName = posMatch.pos.nm || '';
           posMethod = posMatch.method;
 
-          // Invoice price vs POS cost (are we paying more/less than baseline?)
+          // Extract case quantity and calculate per-unit cost
+          caseQty = extractCaseQty(item.description || item.name || '');
+          unitCost = caseQty > 1 ? item.unitPrice / caseQty : item.unitPrice;
+
+          // Per-unit invoice cost vs POS cost
           if (posCost > 0) {
-            posDiff = item.unitPrice - posCost;
+            posDiff = unitCost - posCost;
             posDiffPct = (posDiff / posCost) * 100;
           }
-          // Margin: selling price - invoice price
+          // Margin: selling price - per-unit invoice cost
           if (posPrice > 0) {
-            posMargin = posPrice - item.unitPrice;
+            posMargin = posPrice - unitCost;
             posMarginPct = (posMargin / posPrice) * 100;
           }
-          posStatus = getPOSStatus(item.unitPrice, posCost);
+          posStatus = getPOSStatus(unitCost, posCost);
         }
 
         // Primary status is now POS-based (if matched), historical as fallback
@@ -2095,6 +2129,8 @@ function runComparison() {
           histStatus, oldPrice, diff, pct, lastInvoice, lastDate,
           // POS baseline comparison
           posCost, posPrice, posMargin, posMarginPct, posStatus, posMethod, posDiff, posDiffPct, posName,
+          // Case/unit conversion
+          caseQty, unitCost,
           // Combined status
           status
         });
@@ -2293,7 +2329,7 @@ function filterResults(filter) {
   }
 
   // POS baseline comparison table (primary view)
-  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>인보이스$</th><th>POS원가</th><th>vs기준</th><th>판매가</th><th>마진</th></tr>';
+  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>개별원가</th><th>POS원가</th><th>vs기준</th><th>판매가</th><th>마진</th></tr>';
   for (const r of items) {
     let badge;
     if (r.posStatus === 'pos-alert') badge = '<span class="badge badge-red">🔴 초과</span>';
@@ -2310,17 +2346,21 @@ function filterResults(filter) {
       vsPOS = `<span style="color:${color};font-weight:700">${sign}${r.posDiffPct.toFixed(1)}%</span>`;
     }
 
-    // Margin
+    // Margin per unit
     let marginText = '-';
     if (r.posMargin !== null) {
       const mColor = r.posMargin >= 0 ? '#2E7D32' : '#C62828';
-      marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}<br>(${r.posMarginPct.toFixed(0)}%)</span>`;
+      marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
+
+    // Show per-unit cost with case info
+    const uc = r.unitCost || r.unitPrice;
+    const caseInfo = r.caseQty > 1 ? `<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>` : '';
 
     html += `<tr class="${r.status}">
       <td>${badge}</td>
       <td class="item-desc"><strong>${r.brand || ''}</strong><br>${r.description}${r.posName && r.posMethod !== 'name-exact' ? '<br><span class="pos-match-info">POS: ' + r.posName + '</span>' : ''}</td>
-      <td style="font-weight:700">$${r.unitPrice.toFixed(2)}</td>
+      <td style="font-weight:700">$${uc.toFixed(2)}${caseInfo}</td>
       <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
       <td>${vsPOS}</td>
       <td>${r.posPrice !== null && r.posPrice > 0 ? '$' + r.posPrice.toFixed(2) : '-'}</td>
