@@ -606,31 +606,52 @@ function buildPOSIndex() {
 
 // Korean → English product keyword dictionary for cross-language POS matching
 const KO_EN_MAP = {
-  // Brands
-  '동원':'DONGWON','농심':'NONGSHIM','삼양':'SAMYANG','오뚜기':'OTTOGI','롯데':'LOTTE',
-  '왕':'WANG','수라상':'SURASANG','비비고':'BIBIGO','곰표':'GOMPYO','팔도':'PALDO',
-  '한상':'HANSANG','빙그레':'BINGGRAE','삼립':'SAMLIP','크라운':'CROWN','해태':'HAITAI',
-  '매일':'MAEIL','청우':'CHUNGWOO','칠갑':'CHILKAB','이롬':'EROM','태경':'TAEKYUNG',
-  '초':'CHORIPDONG','스키나':'SKIENA','구겐':'GUGEN','올가':'ORGA',
-  // Product types
-  '라면':'RAMEN','라멘':'RAMEN','우동':'UDON','칼국수':'KALGUKSU','냉면':'NAENGMYUN',
-  '국수':'NOODLE','당면':'GLASS NOODLE','쌀국수':'RICE NOODLE','짜장':'JJAJANG',
-  '김치':'KIMCHI','만두':'DUMPLING','교자':'GYOZA','왕교자':'GYOZA',
-  '참치':'TUNA','고등어':'MACKEREL','새우':'SHRIMP','게맛살':'CRAB STICK',
-  '두유':'SOYMILK','라떼':'LATTE','커피':'COFFEE',
-  '떡볶이':'TTEOKBOKKI','떡':'RICE CAKE','어묵':'FISH CAKE',
-  '김':'SEAWEED','김밥':'KIMBAP','미역':'SEAWEED',
+  // Brands (full + POS abbreviations)
+  '동원':'DONGWON DW','농심':'NONGSHIM NS','삼양':'SAMYANG','오뚜기':'OTTOGI OTG','롯데':'LOTTE LT',
+  '왕':'WANG','수라상':'SURASANG BS','비비고':'BIBIGO','곰표':'GOMPYO','팔도':'PALDO',
+  '한상':'HANSANG HS','빙그레':'BINGGRAE','삼립':'SAMLIP','크라운':'CROWN','해태':'HAITAI',
+  '매일':'MAEIL','청우':'CHUNGWOO','칠갑':'CHILKAB CRD','이롬':'EROM','태경':'TAEKYUNG',
+  '초':'CRD CHORIPDONG','스키나':'SKIENA','구겐':'GUGEN','올가':'ORGA',
+  '풀무원':'PULMUONE PMO','씨제이':'CJ','오리온':'ORION','서울':'SEOUL',
+  '풀그린':'FULLGREEN','롯데제과':'LOTTE',
+  // Proteins & Seafood
+  '새우':'SHRIMP','게맛살':'CRAB STICK','참치':'TUNA','고등어':'MACKEREL',
+  '오징어':'SQUID','문어':'OCTOPUS','연어':'SALMON','꽃게':'CRAB',
+  '돼지':'PORK','소고기':'BEEF','쇠고기':'BEEF','닭':'CHICKEN','오리':'DUCK',
+  '소세지':'SAUSAGE','핫도그':'HOTDOG',
+  // Dumplings & Noodles
+  '만두':'DUMPLING','교자':'GYOZA','왕교자':'BIG GYOZA','군만두':'FRIED DUMPLING',
+  '물만두':'BOILED DUMPLING','찐만두':'STEAMED DUMPLING',
+  '라면':'RAMEN','라멘':'RAMEN','우동':'UDON','칼국수':'KALGUKSU NOODLE',
+  '냉면':'NAENGMYUN','국수':'NOODLE','당면':'VERMICELLI','쌀국수':'RICE NOODLE',
+  '짜장':'JJAJANG','짬뽕':'JJAMPPONG','볶음면':'STIR FRY NOODLE',
+  // Korean foods
+  '김치':'KIMCHI','떡볶이':'TTEOKBOKKI TOPOKKI','떡':'RICE CAKE','어묵':'FISH CAKE',
+  '김':'SEAWEED','김밥':'KIMBAP','미역':'SEAWEED','송편':'SONGPYUN',
+  '잡채':'JAPCHAE','비빔밥':'BIBIMBAP','삼각김밥':'TRIANGLE KIMBAP',
+  '호떡':'HOTTEOK','호두과자':'WALNUT CAKE',
+  // Condiments & Sauces
   '고추장':'GOCHUJANG','된장':'SOYBEAN PASTE','간장':'SOY SAUCE',
   '고춧가루':'RED PEPPER','참깨':'SESAME','소금':'SALT',
-  '소세지':'SAUSAGE','핫도그':'HOTDOG','빵':'BREAD',
-  '아이스크림':'ICE CREAM','빼빼로':'PEPERO','과자':'SNACK','감자칩':'POTATO CHIP',
-  '캔디':'CANDY','초코':'CHOCOLATE','쿠키':'COOKIE',
-  '조개':'CLAM','고구마':'SWEET POTATO','감자':'POTATO','호박':'ZUCCHINI',
-  '쌀':'RICE','콩':'BEAN','차':'TEA','꿀':'HONEY','매실':'PLUM',
   '소스':'SAUCE','식초':'VINEGAR','기름':'OIL','단무지':'PICKLED RADISH',
+  '새우젓':'SALTED SHRIMP','젓갈':'SALTED','양념':'SEASONING',
+  // Vegetables & Fruits
+  '야채':'VEGETABLE','채소':'VEGETABLE','부추':'CHIVE LEEK',
+  '조개':'CLAM','고구마':'SWEET POTATO','감자':'POTATO','호박':'ZUCCHINI SQUASH',
+  '쌀':'RICE','콩':'BEAN','두부':'TOFU','무':'RADISH','배추':'NAPA CABBAGE',
+  // Drinks & Dairy
+  '두유':'SOYMILK','라떼':'LATTE','커피':'COFFEE','우유':'MILK',
+  '차':'TEA','꿀':'HONEY','매실':'PLUM','에이드':'ADE',
+  '포도':'GRAPE','오렌지':'ORANGE','딸기':'STRAWBERRY','망고':'MANGO','바나나':'BANANA',
+  // Snacks & Sweets
+  '아이스크림':'ICE CREAM','빼빼로':'PEPERO','과자':'SNACK','감자칩':'POTATO CHIP',
+  '캔디':'CANDY','초코':'CHOCOLATE','쿠키':'COOKIE','빵':'BREAD','크림빵':'CREAM BREAD',
+  '샤벳':'SHERBET SORBET','모찌':'MOCHI',
+  // Cooking & Misc
   '추어탕':'SOUP','육개장':'SOUP','볶음밥':'FRIED RICE','비빔':'BIBIM',
-  '치즈':'CHEESE','크림':'CREAM','딸기':'STRAWBERRY','포도':'GRAPE','오렌지':'ORANGE',
-  '멀티':'MULTI','번들':'BUNDLE','용기':'CUP','봉지':'BAG',
+  '치즈':'CHEESE','크림':'CREAM','빵가루':'BREAD CRUMB PANKO',
+  '우리밀':'WHEAT','통밀':'WHOLE WHEAT','유기농':'ORGANIC',
+  '멀티':'MULTI','번들':'BUNDLE','용기':'CUP','봉지':'BAG','캔':'CAN',
 };
 
 function translateKoToEn(desc) {
