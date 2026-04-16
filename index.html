@@ -754,9 +754,15 @@ function extractCaseQty(desc, invoicePrice, posCost) {
   // Pattern ends with "/NN"
   m = d.match(/\/\s*(\d+)\s*$/);
   if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "6CT", "12CS", "24PK" → count units
+  m = d.match(/\b(\d+)\s*(CT|CS|PK|PKS|CASE|BOX|SET|UNIT|CNT)\b/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
   // Pattern: leading "NN/" like "12/1.1 LB" at start or after brand
   m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.]+/);
   if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) return parseInt(m[1]);
+  // Pattern: just "NN/" anywhere
+  m = d.match(/\b(\d+)\s*\//);
+  if (m && parseInt(m[1]) >= 4 && parseInt(m[1]) <= 100) return parseInt(m[1]);
   // Fallback: estimate from price ratio if POS cost available
   return _estimateCaseQty(invoicePrice, posCost);
 }
@@ -764,18 +770,11 @@ function extractCaseQty(desc, invoicePrice, posCost) {
 function _estimateCaseQty(invoicePrice, posCost) {
   if (!invoicePrice || !posCost || posCost <= 0) return 1;
   const ratio = invoicePrice / posCost;
-  if (ratio < 2.5) return 1; // Likely per-unit already
-  // Find closest common case qty: 4,6,8,10,12,16,20,24,30,36,40,48
-  const common = [4,6,8,10,12,16,20,24,30,36,40,48];
-  let best = 1, bestDiff = ratio;
-  for (const cq of common) {
-    const diff = Math.abs(ratio - cq);
-    if (diff < bestDiff) { bestDiff = diff; best = cq; }
-  }
-  // Only use estimate if it's reasonably close (within 20%)
-  if (bestDiff / best < 0.2) return best;
-  // Use rounded ratio as last resort
-  return Math.round(ratio);
+  if (ratio < 1.8) return 1; // Likely per-unit already
+  // Just use the rounded ratio - it's the most reliable
+  const rounded = Math.round(ratio);
+  if (rounded >= 2) return rounded;
+  return 1;
 }
 
 // POS-based status classification
