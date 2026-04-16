@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="seed_data.js"></script>
+<script src="pos_data.js"></script>
 <style>
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -123,11 +124,20 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
   position: sticky; top: 0; border-bottom: 2px solid #ddd; white-space: nowrap;
 }
 .results-table td { padding: 8px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
+/* POS-based row colors */
+.results-table tr.pos-alert { background: #FFEBEE; }
+.results-table tr.pos-watch { background: #FFF8E1; }
+.results-table tr.pos-ok { background: #F1F8E9; }
+.results-table tr.pos-good { background: #E8F5E9; }
 .results-table tr.price-up { background: #FFEBEE; }
 .results-table tr.price-down { background: #E8F5E9; }
 .results-table tr.new-item { background: #E3F2FD; }
+.results-table tr.no-pos { background: #FAFAFA; }
 .results-table tr:hover { background: rgba(0,0,0,0.04); }
-.results-table .item-desc { max-width: 180px; word-wrap: break-word; }
+.results-table .item-desc { max-width: 160px; word-wrap: break-word; }
+.results-table .margin-pos { color: #2E7D32; font-weight: 700; }
+.results-table .margin-neg { color: #C62828; font-weight: 700; }
+.results-table .pos-match-info { font-size: 0.55rem; color: #999; }
 
 .badge {
   display: inline-block; padding: 2px 7px; border-radius: 10px;
@@ -137,6 +147,14 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 .badge-green { background: #4CAF50; }
 .badge-blue { background: #2196F3; }
 .badge-gray { background: #9E9E9E; }
+.badge-orange { background: #FF9800; }
+.badge-lime { background: #8BC34A; }
+
+/* POS summary cards */
+.pos-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 10px; }
+.pos-summary .stat-card { padding: 10px 8px; }
+.margin-bar { height: 6px; border-radius: 3px; margin-top: 4px; }
+.margin-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
 
 /* ===== PROGRESS / LOADING ===== */
 .progress-bar { width: 100%; height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; margin: 10px 0; }
@@ -266,8 +284,8 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 <div class="header">
   <button class="back-btn" id="backBtn" onclick="goBack()">&#8592;</button>
   <div>
-    <h1 id="headerTitle">Kimchi Mart Invoice System</h1>
-    <div class="subtitle" id="headerSubtitle">Invoice Comparison</div>
+    <h1 id="headerTitle">김치마트 인보이스 시스템</h1>
+    <div class="subtitle" id="headerSubtitle">POS 기준 가격 비교</div>
   </div>
 </div>
 
@@ -277,25 +295,25 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
   <div class="stat-grid">
-    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label">Invoices</div></div>
-    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label">Total Items</div></div>
-    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label">Branches</div></div>
-    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label">Unique Items</div></div>
+    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label">인보이스</div></div>
+    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label">총 아이템</div></div>
+    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label">지점</div></div>
+    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label">POS SKU</div></div>
   </div>
 
   <div class="branch-grid" id="branchGrid"></div>
 
   <!-- Upload New Invoice -->
   <div class="card" style="margin-top:14px;">
-    <div class="card-title">📄 Upload New Invoice</div>
-    <div class="card-subtitle">Upload PDF/Excel invoice to compare against historical data</div>
-    <button class="btn btn-primary" onclick="showPage('page-upload')">Upload & Compare</button>
+    <div class="card-title">📄 인보이스 업로드</div>
+    <div class="card-subtitle">PDF/텍스트 인보이스를 POS 기준 가격과 비교 (21,296 SKU 기준)</div>
+    <button class="btn btn-primary" onclick="showPage('page-upload')">업로드 & 비교</button>
   </div>
 
   <!-- Scan Physical Invoice - CAMERA -->
   <div class="card" style="margin-top:10px; border-left: 4px solid #00897B;">
-    <div class="card-title" style="color:#00897B">📸 Scan Physical Invoice</div>
-    <div class="card-subtitle">Take a photo of a paper invoice to compare prices instantly</div>
+    <div class="card-title" style="color:#00897B">📸 인보이스 촬영</div>
+    <div class="card-subtitle">종이 인보이스를 촬영하여 POS 가격과 즉시 비교</div>
     <button class="btn" style="background:#00897B;color:#fff;" onclick="showPage('page-upload'); setTimeout(()=>setInputMethod('photo'),100);">Scan with Camera</button>
     <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleCameraCapture(this)">
   </div>
@@ -419,18 +437,19 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
   <div class="stat-grid four" id="resultStats"></div>
   <div class="card" id="resultInfo"></div>
   <div class="tab-bar" id="resultTabs">
-    <button class="tab active" onclick="filterResults('all')">All / 전체</button>
-    <button class="tab" onclick="filterResults('price-up')">Price Up / 인상</button>
-    <button class="tab" onclick="filterResults('price-down')">Price Down / 인하</button>
-    <button class="tab" onclick="filterResults('new-item')">New / 신규</button>
-    <button class="tab" onclick="filterResults('unchanged')">Same / 동일</button>
+    <button class="tab active" onclick="filterResults('all')">전체</button>
+    <button class="tab" onclick="filterResults('pos-alert')">🔴 15%+</button>
+    <button class="tab" onclick="filterResults('pos-watch')">🟡 5-15%</button>
+    <button class="tab" onclick="filterResults('pos-good')">🟢 정상</button>
+    <button class="tab" onclick="filterResults('no-pos')">미매칭</button>
+    <button class="tab" onclick="filterResults('history')">이력비교</button>
   </div>
   <div class="search-box"><input type="text" id="resultSearch" placeholder="Search items / 품목 검색..." oninput="filterResults(currentFilter)"></div>
   <div class="table-wrap" id="resultTableWrap"></div>
   <div class="btn-row" style="margin-top:12px;">
-    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('changes')">Price Changes CSV</button>
-    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('new')">New Items CSV</button>
-    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('full')">Full Report CSV</button>
+    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('alerts')">Alert Items CSV</button>
+    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('new')">미매칭 CSV</button>
+    <button class="btn btn-sm btn-secondary" onclick="downloadCSV('full')">전체 리포트 CSV</button>
   </div>
   <div id="resultActions" style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
     <button class="btn btn-primary" id="resultGoToBranch" style="display:none;flex:1;" onclick="goToBranchFromResult()">
@@ -534,6 +553,110 @@ function normalizeItem(item) {
   };
 }
 
+// ===== POS DATA INDEX =====
+const POS_BY_BARCODE = {};
+const POS_BY_NAME = {};
+const POS_WORD_INDEX = {};
+const POS_BY_VENDOR = {};
+
+// Vendor name mapping: invoice vendor → POS vendor
+const VENDOR_MAP_TO_POS = {
+  'Rhee Bros': 'RHEE BROS', 'Choripdong': 'SEOULTRADING', 'Wang': 'WANG HANMI',
+  'FreshPoint': 'FRESHPOINT', 'Eden': 'EDEN', 'KC Trading': 'K.C TRADING',
+  'JFC': 'JFC', 'Well Luck': 'WELL LUCK', 'Bandi Foods': 'BANDI FOOD',
+  'Wei-Chuan': 'WEI CHUAN', 'Two Bros Food': 'TWO BROS', 'POCAS': 'POCAS',
+  'Eastland Food': 'EASTLAND', 'Walong': 'WALONG', 'OCM': 'OCM',
+  'KOCO Trading': 'KOCO', 'Wismettac': 'WISMETTAC', 'Namdaemun': 'NDM',
+  'Buckhead': 'BUCKHEAD', 'Sysco': 'SYSCO', 'Asia Vegetable': 'ASIA VEGE'
+};
+
+function buildPOSIndex() {
+  if (typeof POS_DATA === 'undefined') return;
+  for (const p of POS_DATA) {
+    // Barcode index
+    if (p.bc) {
+      POS_BY_BARCODE[p.bc] = p;
+      // Also index without leading zeros
+      const trimmed = p.bc.replace(/^0+/, '');
+      if (trimmed && trimmed !== p.bc) POS_BY_BARCODE[trimmed] = p;
+    }
+    // Normalized name index
+    const nameKey = (p.nm || '').toUpperCase().trim().replace(/\s+/g, ' ');
+    if (nameKey) POS_BY_NAME[nameKey] = p;
+    // Word-based inverted index (for fuzzy matching)
+    const words = nameKey.replace(/[^A-Z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+    for (const w of words) {
+      if (!POS_WORD_INDEX[w]) POS_WORD_INDEX[w] = [];
+      POS_WORD_INDEX[w].push(p);
+    }
+    // Vendor-grouped index
+    if (p.vd) {
+      const vd = p.vd.toUpperCase();
+      if (!POS_BY_VENDOR[vd]) POS_BY_VENDOR[vd] = [];
+      POS_BY_VENDOR[vd].push(p);
+    }
+  }
+}
+
+function findPOSMatch(item, invoiceVendor) {
+  // 1. Barcode match (highest confidence)
+  const itemNo = (item.itemNo || '').trim();
+  if (itemNo) {
+    const digits = itemNo.replace(/\D/g, '');
+    if (digits.length >= 8) {
+      const m = POS_BY_BARCODE[digits] || POS_BY_BARCODE[itemNo];
+      if (m) return { pos: m, method: 'barcode', confidence: 1.0 };
+    }
+  }
+
+  // 2. Exact name match
+  const desc = (item.description || item.name || '').toUpperCase().trim().replace(/\s+/g, ' ');
+  if (!desc || desc.length < 3) return null;
+  if (POS_BY_NAME[desc]) return { pos: POS_BY_NAME[desc], method: 'name-exact', confidence: 0.95 };
+
+  // 3. Word-overlap matching (weighted by vendor match)
+  const descClean = desc.replace(/[^A-Z0-9\s]/g, ' ');
+  const words = descClean.split(/\s+/).filter(w => w.length > 2);
+  if (words.length === 0) return null;
+
+  const posVendor = invoiceVendor ? (VENDOR_MAP_TO_POS[invoiceVendor] || invoiceVendor).toUpperCase() : '';
+  const candidates = new Map();
+
+  for (const w of words) {
+    const matches = POS_WORD_INDEX[w] || [];
+    for (const p of matches) {
+      const key = p.bc || p.nm;
+      if (!candidates.has(key)) candidates.set(key, { pos: p, score: 0 });
+      candidates.get(key).score++;
+    }
+  }
+
+  let best = null;
+  let bestScore = 0;
+  for (const c of candidates.values()) {
+    const posWords = (c.pos.nm || '').toUpperCase().replace(/[^A-Z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+    const ratio = c.score / Math.max(words.length, posWords.length, 1);
+    // Boost score if same vendor
+    const vendorBoost = (posVendor && c.pos.vd && c.pos.vd.toUpperCase() === posVendor) ? 0.15 : 0;
+    const finalScore = ratio + vendorBoost;
+    if (finalScore > bestScore && ratio >= 0.4) {
+      bestScore = finalScore;
+      best = { pos: c.pos, method: 'name-fuzzy', confidence: Math.min(ratio, 0.9) };
+    }
+  }
+  return best;
+}
+
+// POS-based status classification
+function getPOSStatus(invoicePrice, posCost) {
+  if (!posCost || posCost <= 0) return 'no-pos';
+  const pct = ((invoicePrice - posCost) / posCost) * 100;
+  if (pct <= 0) return 'pos-good';       // At or below POS cost
+  if (pct <= 5) return 'pos-ok';          // Within 5%
+  if (pct <= 15) return 'pos-watch';      // 5-15% above
+  return 'pos-alert';                      // 15%+ above
+}
+
 // ===== STATE =====
 let currentPage = 'page-home';
 let pageHistory = [];
@@ -568,6 +691,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+  // Build POS product index for baseline comparison
+  buildPOSIndex();
+
   // Set initial browser history state so popstate always has a baseline
   history.replaceState({ page: 'page-home', appHistory: [] }, '');
 
@@ -600,7 +726,7 @@ function initApp() {
   document.getElementById('totalInvoices').textContent = invoices.length;
   document.getElementById('totalItems').textContent = allItems.toLocaleString();
   document.getElementById('totalBranches').textContent = Object.keys(branches).length;
-  document.getElementById('uniqueItems').textContent = uniqueSet.size.toLocaleString();
+  document.getElementById('uniqueItems').textContent = (typeof POS_DATA !== 'undefined' ? POS_DATA.length : uniqueSet.size).toLocaleString();
 
   // Branch grid
   const grid = document.getElementById('branchGrid');
@@ -1677,42 +1803,81 @@ function runComparison() {
 
       updateProgress(60);
 
-      // Compare each item in new invoice
+      // Compare each item in new invoice against BOTH POS baseline and historical invoices
       const results = [];
+      let posMatchCount = 0;
       for (const rawItem of newInvoice.items) {
         const item = normalizeItem(rawItem);
+
+        // --- Historical invoice comparison (existing logic) ---
         const history = priceHistory[getMatchKey(item)];
-        let status, oldPrice, diff, pct, lastInvoice, lastDate;
+        let histStatus, oldPrice, diff, pct, lastInvoice, lastDate;
 
         if (!history || history.length === 0) {
-          status = 'new-item';
+          histStatus = 'new-item';
           oldPrice = null; diff = 0; pct = 0; lastInvoice = ''; lastDate = '';
         } else {
-          // Most recent historical price
-          const latest = history[0]; // already sorted newest first
+          const latest = history[0];
           oldPrice = latest.price;
           diff = item.unitPrice - oldPrice;
           pct = oldPrice > 0 ? ((diff / oldPrice) * 100) : 0;
           lastInvoice = latest.invoice;
           lastDate = latest.date;
-
           if (Math.abs(pct) > 1) {
-            status = diff > 0 ? 'price-up' : 'price-down';
+            histStatus = diff > 0 ? 'price-up' : 'price-down';
           } else {
-            status = 'unchanged';
+            histStatus = 'unchanged';
           }
         }
 
+        // --- POS baseline comparison (NEW) ---
+        const posMatch = findPOSMatch(item, normalizeVendor(selVendor));
+        let posCost = null, posPrice = null, posMargin = null, posMarginPct = null;
+        let posStatus = 'no-pos', posMethod = '', posDiff = null, posDiffPct = null, posName = '';
+
+        if (posMatch) {
+          posMatchCount++;
+          posCost = posMatch.pos.co || 0;
+          posPrice = posMatch.pos.pr || 0;
+          posName = posMatch.pos.nm || '';
+          posMethod = posMatch.method;
+
+          // Invoice price vs POS cost (are we paying more/less than baseline?)
+          if (posCost > 0) {
+            posDiff = item.unitPrice - posCost;
+            posDiffPct = (posDiff / posCost) * 100;
+          }
+          // Margin: selling price - invoice price
+          if (posPrice > 0) {
+            posMargin = posPrice - item.unitPrice;
+            posMarginPct = (posMargin / posPrice) * 100;
+          }
+          posStatus = getPOSStatus(item.unitPrice, posCost);
+        }
+
+        // Primary status is now POS-based (if matched), historical as fallback
+        const status = posStatus !== 'no-pos' ? posStatus : histStatus;
+
         results.push({
-          ...item, status, oldPrice, diff, pct, lastInvoice, lastDate
+          ...item,
+          // Historical comparison
+          histStatus, oldPrice, diff, pct, lastInvoice, lastDate,
+          // POS baseline comparison
+          posCost, posPrice, posMargin, posMarginPct, posStatus, posMethod, posDiff, posDiffPct, posName,
+          // Combined status
+          status
         });
       }
 
-      // Sort: biggest % change first
+      // Sort: POS alerts first, then by cost difference
       results.sort((a, b) => {
-        const order = { 'price-up': 0, 'price-down': 1, 'new-item': 2, 'unchanged': 3 };
-        if (order[a.status] !== order[b.status]) return order[a.status] - order[b.status];
-        return Math.abs(b.pct) - Math.abs(a.pct);
+        const order = { 'pos-alert': 0, 'pos-watch': 1, 'price-up': 2, 'pos-ok': 3, 'pos-good': 4, 'price-down': 5, 'new-item': 6, 'unchanged': 7, 'no-pos': 8 };
+        const oa = order[a.status] ?? 9, ob = order[b.status] ?? 9;
+        if (oa !== ob) return oa - ob;
+        // Within same status, sort by POS diff % (biggest first), fallback to historical
+        const aDiff = Math.abs(a.posDiffPct || a.pct || 0);
+        const bDiff = Math.abs(b.posDiffPct || b.pct || 0);
+        return bDiff - aDiff;
       });
 
       comparisonResults = results;
@@ -1765,22 +1930,53 @@ function showResults() {
   const results = comparisonResults;
   const inv = comparisonInvoice;
 
-  const ups = results.filter(r => r.status === 'price-up');
-  const downs = results.filter(r => r.status === 'price-down');
-  const news = results.filter(r => r.status === 'new-item');
-  const same = results.filter(r => r.status === 'unchanged');
+  // POS-based stats
+  const alerts = results.filter(r => r.posStatus === 'pos-alert');
+  const watches = results.filter(r => r.posStatus === 'pos-watch');
+  const goods = results.filter(r => r.posStatus === 'pos-good' || r.posStatus === 'pos-ok');
+  const noPos = results.filter(r => r.posStatus === 'no-pos');
+  const posMatched = results.filter(r => r.posStatus !== 'no-pos');
+
+  // Margin calculation
+  const withMargin = results.filter(r => r.posMargin !== null);
+  const totalMargin = withMargin.reduce((s, r) => s + (r.posMargin * (r.qty || 1)), 0);
+  const avgMarginPct = withMargin.length > 0
+    ? withMargin.reduce((s, r) => s + (r.posMarginPct || 0), 0) / withMargin.length : 0;
+
+  // Cost difference from POS baseline
+  const abovePOS = results.filter(r => r.posDiff !== null && r.posDiff > 0.01);
+  const totalOverpay = abovePOS.reduce((s, r) => s + (r.posDiff * (r.qty || 1)), 0);
 
   document.getElementById('resultStats').innerHTML = `
-    <div class="stat-card"><div class="stat-number red">${ups.length}</div><div class="stat-label">Price Up / 인상</div></div>
-    <div class="stat-card"><div class="stat-number green">${downs.length}</div><div class="stat-label">Price Down / 인하</div></div>
-    <div class="stat-card"><div class="stat-number blue">${news.length}</div><div class="stat-label">New Items / 신규</div></div>
-    <div class="stat-card"><div class="stat-number">${same.length}</div><div class="stat-label">Unchanged / 동일</div></div>
+    <div class="stat-card"><div class="stat-number red">${alerts.length}</div><div class="stat-label">15%+ 초과 / Alert</div></div>
+    <div class="stat-card"><div class="stat-number orange">${watches.length}</div><div class="stat-label">5-15% 초과 / Watch</div></div>
+    <div class="stat-card"><div class="stat-number green">${goods.length}</div><div class="stat-label">정상 / Good</div></div>
+    <div class="stat-card"><div class="stat-number blue">${noPos.length}</div><div class="stat-label">POS 미매칭</div></div>
   `;
 
   const brName = SEED_DATA.branches[inv.branchId]?.name || inv.branchCode;
+
+  // POS summary info
+  const marginColor = totalMargin >= 0 ? '#2E7D32' : '#C62828';
+  const overpayColor = totalOverpay > 0 ? '#C62828' : '#2E7D32';
+
   document.getElementById('resultInfo').innerHTML = `
     <div class="card-title">${inv.invoiceNumber || 'New Invoice'}</div>
     <div class="card-subtitle">${brName} | ${inv.dateDisplay} | ${results.length} items | $${inv.total.toLocaleString()}</div>
+    <div class="pos-summary" style="margin-top:10px;">
+      <div class="stat-card" style="border-left:3px solid #2196F3">
+        <div class="stat-number blue" style="font-size:1.1rem">${posMatched.length}/${results.length}</div>
+        <div class="stat-label">POS 매칭</div>
+      </div>
+      <div class="stat-card" style="border-left:3px solid ${marginColor}">
+        <div class="stat-number" style="font-size:1.1rem;color:${marginColor}">$${totalMargin.toFixed(0)}</div>
+        <div class="stat-label">예상 마진</div>
+      </div>
+      <div class="stat-card" style="border-left:3px solid ${overpayColor}">
+        <div class="stat-number" style="font-size:1.1rem;color:${overpayColor}">${totalOverpay > 0 ? '+$' + totalOverpay.toFixed(0) : '$0'}</div>
+        <div class="stat-label">기준 초과분</div>
+      </div>
+    </div>
   `;
 
   currentFilter = 'all';
@@ -1825,38 +2021,83 @@ function filterResults(filter) {
 
   const search = (document.getElementById('resultSearch')?.value || '').toLowerCase();
   let items = comparisonResults;
-  if (filter !== 'all') items = items.filter(r => r.status === filter);
-  if (search) items = items.filter(r => `${r.brand} ${r.description} ${r.itemNo}`.toLowerCase().includes(search));
 
-  let html = '<table class="results-table"><tr><th>Status</th><th>Item</th><th>Size</th><th>Qty</th><th>Old$</th><th>New$</th><th>Change</th></tr>';
+  // Filter by tab
+  if (filter === 'pos-alert') items = items.filter(r => r.posStatus === 'pos-alert');
+  else if (filter === 'pos-watch') items = items.filter(r => r.posStatus === 'pos-watch');
+  else if (filter === 'pos-good') items = items.filter(r => r.posStatus === 'pos-good' || r.posStatus === 'pos-ok');
+  else if (filter === 'no-pos') items = items.filter(r => r.posStatus === 'no-pos');
+  else if (filter === 'history') items = items.filter(r => r.histStatus === 'price-up' || r.histStatus === 'price-down');
+
+  if (search) items = items.filter(r => `${r.brand} ${r.description} ${r.itemNo} ${r.posName}`.toLowerCase().includes(search));
+
+  // Show history view or POS view
+  const isHistoryView = (filter === 'history');
+
+  if (isHistoryView) {
+    // Historical comparison table (legacy view)
+    let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>수량</th><th>이전$</th><th>현재$</th><th>변동</th></tr>';
+    for (const r of items) {
+      let badge, changeText;
+      if (r.histStatus === 'price-up') {
+        badge = '<span class="badge badge-red">인상</span>';
+        changeText = `<span style="color:#C62828;font-weight:700">+$${r.diff.toFixed(2)} (+${r.pct.toFixed(1)}%)</span>`;
+      } else {
+        badge = '<span class="badge badge-green">인하</span>';
+        changeText = `<span style="color:#2E7D32;font-weight:700">-$${Math.abs(r.diff).toFixed(2)} (${r.pct.toFixed(1)}%)</span>`;
+      }
+      html += `<tr class="${r.histStatus}">
+        <td>${badge}</td>
+        <td class="item-desc"><strong>${r.brand}</strong><br>${r.description}</td>
+        <td>${r.qty}</td>
+        <td>${r.oldPrice !== null ? '$' + r.oldPrice.toFixed(2) : '-'}</td>
+        <td>$${r.unitPrice.toFixed(2)}</td>
+        <td>${changeText}</td>
+      </tr>`;
+    }
+    html += '</table>';
+    if (items.length === 0) html = '<div style="text-align:center;padding:30px;color:#999;">가격 변동 항목 없음</div>';
+    document.getElementById('resultTableWrap').innerHTML = html;
+    return;
+  }
+
+  // POS baseline comparison table (primary view)
+  let html = '<table class="results-table"><tr><th>상태</th><th>제품</th><th>인보이스$</th><th>POS원가</th><th>vs기준</th><th>판매가</th><th>마진</th></tr>';
   for (const r of items) {
-    let badge, changeText;
-    if (r.status === 'price-up') {
-      badge = `<span class="badge badge-red">UP</span>`;
-      changeText = `<span style="color:#C62828;font-weight:700">+$${r.diff.toFixed(2)}<br>(+${r.pct.toFixed(1)}%)</span>`;
-    } else if (r.status === 'price-down') {
-      badge = `<span class="badge badge-green">DOWN</span>`;
-      changeText = `<span style="color:#2E7D32;font-weight:700">-$${Math.abs(r.diff).toFixed(2)}<br>(${r.pct.toFixed(1)}%)</span>`;
-    } else if (r.status === 'new-item') {
-      badge = `<span class="badge badge-blue">NEW</span>`;
-      changeText = '-';
-    } else {
-      badge = `<span class="badge badge-gray">SAME</span>`;
-      changeText = '-';
+    let badge;
+    if (r.posStatus === 'pos-alert') badge = '<span class="badge badge-red">🔴 초과</span>';
+    else if (r.posStatus === 'pos-watch') badge = '<span class="badge badge-orange">🟡 주의</span>';
+    else if (r.posStatus === 'pos-ok') badge = '<span class="badge badge-lime">OK</span>';
+    else if (r.posStatus === 'pos-good') badge = '<span class="badge badge-green">🟢 양호</span>';
+    else badge = '<span class="badge badge-gray">-</span>';
+
+    // vs POS cost difference
+    let vsPOS = '-';
+    if (r.posDiffPct !== null) {
+      const sign = r.posDiff > 0 ? '+' : '';
+      const color = r.posDiff > 0 ? '#C62828' : '#2E7D32';
+      vsPOS = `<span style="color:${color};font-weight:700">${sign}${r.posDiffPct.toFixed(1)}%</span>`;
+    }
+
+    // Margin
+    let marginText = '-';
+    if (r.posMargin !== null) {
+      const mColor = r.posMargin >= 0 ? '#2E7D32' : '#C62828';
+      marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}<br>(${r.posMarginPct.toFixed(0)}%)</span>`;
     }
 
     html += `<tr class="${r.status}">
       <td>${badge}</td>
-      <td class="item-desc"><strong>${r.brand}</strong><br>${r.description}</td>
-      <td>${r.size}</td>
-      <td>${r.qty}</td>
-      <td>${r.oldPrice !== null ? '$' + r.oldPrice.toFixed(2) : '-'}</td>
-      <td>$${r.unitPrice.toFixed(2)}</td>
-      <td>${changeText}</td>
+      <td class="item-desc"><strong>${r.brand || ''}</strong><br>${r.description}${r.posName && r.posMethod !== 'name-exact' ? '<br><span class="pos-match-info">POS: ' + r.posName + '</span>' : ''}</td>
+      <td style="font-weight:700">$${r.unitPrice.toFixed(2)}</td>
+      <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
+      <td>${vsPOS}</td>
+      <td>${r.posPrice !== null && r.posPrice > 0 ? '$' + r.posPrice.toFixed(2) : '-'}</td>
+      <td>${marginText}</td>
     </tr>`;
   }
   html += '</table>';
-  if (items.length === 0) html = '<div style="text-align:center;padding:30px;color:#999;">No items match this filter</div>';
+  if (items.length === 0) html = '<div style="text-align:center;padding:30px;color:#999;">해당 필터에 맞는 항목 없음</div>';
   document.getElementById('resultTableWrap').innerHTML = html;
 }
 
@@ -1865,24 +2106,33 @@ function downloadCSV(type) {
   let items = comparisonResults;
   let filename;
 
-  if (type === 'changes') {
-    items = items.filter(r => r.status === 'price-up' || r.status === 'price-down');
-    filename = `price_changes_${comparisonInvoice.invoiceNumber || 'report'}.csv`;
+  if (type === 'changes' || type === 'alerts') {
+    items = items.filter(r => r.posStatus === 'pos-alert' || r.posStatus === 'pos-watch');
+    filename = `price_alerts_${comparisonInvoice.invoiceNumber || 'report'}.csv`;
   } else if (type === 'new') {
-    items = items.filter(r => r.status === 'new-item');
-    filename = `new_items_${comparisonInvoice.invoiceNumber || 'report'}.csv`;
+    items = items.filter(r => r.posStatus === 'no-pos');
+    filename = `unmatched_items_${comparisonInvoice.invoiceNumber || 'report'}.csv`;
   } else {
     filename = `full_report_${comparisonInvoice.invoiceNumber || 'report'}.csv`;
   }
 
-  const headers = ['Status', 'Item No', 'Brand', 'Description', 'Size', 'Qty', 'Unit', 'Old Price', 'New Price', 'Diff $', 'Diff %'];
+  const headers = ['POS Status', 'Item No', 'Brand', 'Description', 'Size', 'Qty',
+    'Invoice Price', 'POS Cost', 'vs POS %', 'Selling Price', 'Margin $', 'Margin %',
+    'Hist Old Price', 'Hist Diff $', 'Hist Diff %', 'POS Match Method', 'POS Product Name'];
   const rows = items.map(r => [
-    r.status.replace('-', ' ').toUpperCase(),
-    r.itemNo, r.brand, `"${r.description}"`, r.size, r.qty, r.um,
-    r.oldPrice !== null ? r.oldPrice.toFixed(2) : '',
+    r.posStatus.replace('pos-', '').toUpperCase(),
+    r.itemNo, r.brand, `"${r.description}"`, r.size, r.qty,
     r.unitPrice.toFixed(2),
-    r.diff.toFixed(2),
-    r.pct.toFixed(1) + '%'
+    r.posCost !== null ? r.posCost.toFixed(2) : '',
+    r.posDiffPct !== null ? r.posDiffPct.toFixed(1) + '%' : '',
+    r.posPrice !== null ? r.posPrice.toFixed(2) : '',
+    r.posMargin !== null ? r.posMargin.toFixed(2) : '',
+    r.posMarginPct !== null ? r.posMarginPct.toFixed(1) + '%' : '',
+    r.oldPrice !== null ? r.oldPrice.toFixed(2) : '',
+    r.diff ? r.diff.toFixed(2) : '',
+    r.pct ? r.pct.toFixed(1) + '%' : '',
+    r.posMethod || '',
+    `"${r.posName || ''}"`
   ]);
 
   const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
