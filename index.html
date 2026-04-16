@@ -2560,9 +2560,11 @@ function renderCrossBranch() {
       if (!itemMap[key]) {
         itemMap[key] = { itemNo: item.itemNo, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {}, vendors: {} };
       }
-      // Keep highest price per branch, track vendor
-      if (!itemMap[key].prices[bId] || item.unitPrice > itemMap[key].prices[bId]) {
-        itemMap[key].prices[bId] = item.unitPrice;
+      // Convert box price to per-unit, then store per branch
+      const cq = extractCaseQty(item.description || item.name || '', item.unitPrice, posMatch ? posMatch.pos.co : 0);
+      const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
+      if (!itemMap[key].prices[bId] || unitP > itemMap[key].prices[bId]) {
+        itemMap[key].prices[bId] = unitP;
         itemMap[key].vendors[bId] = inv.vendor;
       }
     }
