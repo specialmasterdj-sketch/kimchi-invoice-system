@@ -755,25 +755,12 @@ function extractCaseQty(desc, invoicePrice, posCost) {
   m = d.match(/\/\s*(\d+)\s*$/);
   if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
   // Pattern: "6CT", "12CS", "24PK" → count units
-  m = d.match(/\b(\d+)\s*(CT|CS|PK|PKS|CASE|BOX|SET|UNIT|CNT)\b/);
+  m = d.match(/\b(\d+)\s*(CT|CS|PK|PKS|CASE|BOX|SET|CNT)\b/);
   if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // Pattern: leading "NN/" like "12/1.1 LB" at start or after brand
-  m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.]+/);
+  // Pattern: leading "NN/" like "12/1.1 LB" or "6/ 2.87LB"
+  m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.]/);
   if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) return parseInt(m[1]);
-  // Pattern: just "NN/" anywhere
-  m = d.match(/\b(\d+)\s*\//);
-  if (m && parseInt(m[1]) >= 4 && parseInt(m[1]) <= 100) return parseInt(m[1]);
-  // Fallback: estimate from price ratio if POS cost available
-  return _estimateCaseQty(invoicePrice, posCost);
-}
-
-function _estimateCaseQty(invoicePrice, posCost) {
-  if (!invoicePrice || !posCost || posCost <= 0) return 1;
-  const ratio = invoicePrice / posCost;
-  if (ratio < 1.8) return 1; // Likely per-unit already
-  // Just use the rounded ratio - it's the most reliable
-  const rounded = Math.round(ratio);
-  if (rounded >= 2) return rounded;
+  // No reliable case qty found from description - return 1 (show as-is)
   return 1;
 }
 
