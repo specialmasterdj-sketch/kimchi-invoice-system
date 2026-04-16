@@ -667,7 +667,33 @@ function translateKoToEn(desc) {
   return translated.length > 0 ? translated.join(' ') : null;
 }
 
+// Cache for consistent matching: vendor:itemNo → match result
+const MATCH_CACHE = {};
+// User corrections stored in localStorage: vendor:itemNo → POS barcode
+let USER_CORRECTIONS = {};
+try { USER_CORRECTIONS = JSON.parse(localStorage.getItem('kimchi_pos_corrections') || '{}'); } catch(e){}
+
 function findPOSMatch(item, invoiceVendor) {
+  const itemNo = (item.itemNo || '').trim();
+  const cacheKey = (invoiceVendor || '') + ':' + itemNo;
+
+  // 0. User correction (highest priority - manually verified)
+  if (itemNo && USER_CORRECTIONS[cacheKey]) {
+    const corrected = POS_BY_BARCODE[USER_CORRECTIONS[cacheKey]];
+    if (corrected) return { pos: corrected, method: 'manual', confidence: 1.0 };
+  }
+
+  // 0b. Cache hit (same item always gets same match)
+  if (itemNo && MATCH_CACHE[cacheKey] !== undefined) return MATCH_CACHE[cacheKey];
+
+  const result = _findPOSMatchInner(item, invoiceVendor);
+
+  // Cache the result
+  if (itemNo) MATCH_CACHE[cacheKey] = result;
+  return result;
+}
+
+function _findPOSMatchInner(item, invoiceVendor) {
   // 1. Barcode match (highest confidence)
   const itemNo = (item.itemNo || '').trim();
   if (itemNo) {
@@ -1800,7 +1826,7 @@ function renderInvoiceDetail() {
   let totalMargin = 0, totalOverpay = 0;
   const enriched = items.map(it => {
     const m = findPOSMatch(it, vendor);
-    const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '', caseQty: 1, unitCost: it.unitPrice };
+    const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '', posMethod: '', posConf: 0, caseQty: 1, unitCost: it.unitPrice };
     const matchedCost = m ? (m.pos.co || 0) : 0;
     r.caseQty = extractCaseQty((it.description||it.name||'') + ' ' + (it.size||''), it.unitPrice, matchedCost, vendor);
     r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
@@ -1809,6 +1835,8 @@ function renderInvoiceDetail() {
       r.posCost = m.pos.co || 0;
       r.posPrice = m.pos.pr || 0;
       r.posName = m.pos.nm || '';
+      r.posMethod = m.method || '';
+      r.posConf = m.confidence || 0;
       if (r.posCost > 0) {
         r.posDiffPct = ((r.unitCost - r.posCost) / r.posCost) * 100;
         r.posStatus = getPOSStatus(r.unitCost, r.posCost);
@@ -1862,7 +1890,14 @@ function renderInvoiceDetail() {
     else badge = '<span class="badge badge-gray">-</span>';
 
     const name = [r.brand, r.description].filter(Boolean).join(' ') || r.posName || r.itemNo;
-    const posInfo = r.posName && r.posName !== r.description ? `<br><span class="pos-match-info">POS: ${r.posName}</span>` : '';
+    let confBadge = '';
+    if (r.posMethod === 'manual') confBadge = '<span style="font-size:0.5rem;background:#4CAF50;color:#fff;padding:1px 3px;border-radius:3px;">✓확인</span>';
+    else if (r.posMethod === 'barcode') confBadge = '<span style="font-size:0.5rem;background:#2196F3;color:#fff;padding:1px 3px;border-radius:3px;">BC</span>';
+    else if (r.posMethod === 'name-exact') confBadge = '<span style="font-size:0.5rem;background:#4CAF50;color:#fff;padding:1px 3px;border-radius:3px;">정확</span>';
+    else if (r.posConf >= 0.7) confBadge = '<span style="font-size:0.5rem;background:#8BC34A;color:#fff;padding:1px 3px;border-radius:3px;">' + Math.round(r.posConf*100) + '%</span>';
+    else if (r.posConf >= 0.5) confBadge = '<span style="font-size:0.5rem;background:#FF9800;color:#fff;padding:1px 3px;border-radius:3px;">' + Math.round(r.posConf*100) + '%</span>';
+    else if (r.posConf > 0) confBadge = '<span style="font-size:0.5rem;background:#F44336;color:#fff;padding:1px 3px;border-radius:3px;">' + Math.round(r.posConf*100) + '%</span>';
+    const posInfo = r.posName && r.posName !== r.description ? `<br><span class="pos-match-info">${confBadge} POS: ${r.posName}</span>` : (confBadge ? `<br><span class="pos-match-info">${confBadge}</span>` : '');
 
     let vsPOS = '-';
     if (r.posDiffPct !== null) {
