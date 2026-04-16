@@ -369,9 +369,7 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
     </div>
     <div id="uploadContext" style="display:none; margin-top:8px; padding:10px; background:#FFF3E0; border-radius:8px; font-size:0.75rem;">
     </div>
-    <!-- Comparison Mode Banner - shows clearly when this upload will be compared -->
-    <div id="uploadComparisonBanner" style="display:none; margin-top:10px; padding:14px 16px; background:linear-gradient(135deg,#E8F5E9,#C8E6C9); border-radius:12px; border:2px solid #4CAF50;">
-    </div>
+    <div id="uploadComparisonBanner" style="display:none;"></div>
   </div>
 
   <!-- STEP 2: Upload Invoice -->
@@ -731,40 +729,142 @@ function findPOSMatch(item, invoiceVendor) {
 }
 
 // Extract case/pack quantity from invoice item description
-function extractCaseQty(desc, invoicePrice, posCost) {
-  if (!desc) return 1;
+// Weight-based vendors: divide by LB weight when POS is per-LB
+const WEIGHT_VENDORS = ['FreshPoint','Asia Vegetable','Sysco','Buckhead'];
+
+function extractCaseQty(desc, invoicePrice, posCost, vendor) {
+  if (!desc) return inferCaseFromPOS(invoicePrice, posCost);
   const d = desc.toUpperCase();
-  let m;
-  // 1. "4X4X4.5" → first number (multi-pack)
-  m = d.match(/\b(\d+)\s*X\s*\d+\s*X/);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 2. "16X2", "12X23", "6X5.11" → NNX anywhere (Rhee Bros key format)
-  m = d.match(/\b(\d+)\s*X\s*[\d.]+\b/);
-  if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) return parseInt(m[1]);
-  // 3. "12/20OZ", "24/14.1 OZ", "20/1LB" → NN/size
-  m = d.match(/\b(\d+)\s*\/\s*[\d.]+\s*(OZ|LB|G|KG|ML|L|GAL|FLOZ|PC|EA|PK|PKGS?)\b/);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 4. "12pkgs/", "24/(120g" → number before pkgs or /(
-  m = d.match(/\b(\d+)\s*(PKGS?|PKS|PCS|PACKS?)\s*\//);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 5. "(8 IN CS)", "(12 IN CASE)"
-  m = d.match(/\((\d+)\s*IN\s*(CS|CASE|BOX|CTN)\)/);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 6. "14OZ/12", "1KG/12" → size/number
-  m = d.match(/[\d.]+(OZ|LB|G|KG|ML)\s*\/\s*(\d+)\b/);
-  if (m && parseInt(m[2]) > 1) return parseInt(m[2]);
-  // 7. "*4/8", "*16/3.97OZ"
-  m = d.match(/\*\s*(\d+)\s*\//);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 8. "6CT", "6CUP", "12CS", "24PK"
-  m = d.match(/\b(\d+)\s*(CT|CUP|CS|PK|PKS|CASE|BOX|SET|CNT|MESH)\b/);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  // 9. "NN/" anywhere → "24/", "6/ ", "12/"
-  m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.(]/);
-  if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) return parseInt(m[1]);
-  // 10. ends with "/NN"
-  m = d.match(/\/\s*(\d+)\s*$/);
-  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  let m, textCq = 1;
+
+  // === STEP 1: Try text patterns to get candidate case qty ===
+
+  // Weight-based vendors: extract LB weight
+  if (vendor && WEIGHT_VENDORS.includes(vendor)) {
+    m = d.match(/\b(\d+)\s*(?:LB|LBS|#)\b/);
+    if (m && parseInt(m[1]) >= 3) textCq = parseInt(m[1]);
+    if (textCq <= 1) {
+      m = d.match(/\b(\d+)\s*(?:CT|BUNCHE?S?|PCS|HEADS?|STALKS?)\b/i);
+      if (m && parseInt(m[1]) >= 2) textCq = parseInt(m[1]);
+    }
+  }
+
+  if (textCq <= 1) {
+    // Multi-level: "12/4/135g" → 12*4=48, "6/12/238ml" → 6*12=72, "4X10X..."
+    m = d.match(/\b(\d+)\s*[\/X]\s*(\d+)\s*[\/X]\s*[\d.]+\s*(G|OZ|ML|LB|FLOZ|KG)\b/);
+    if (m) {
+      const n1 = parseInt(m[1]), n2 = parseInt(m[2]);
+      if (n1 >= 2 && n2 >= 2 && n1 * n2 <= 200) textCq = n1 * n2;
+      else if (n1 > 1) textCq = n1;
+    }
+  }
+
+  if (textCq <= 1) {
+    // "NNxNN LB/OZ" two-level with unit: "4X10 LB" → multiply if POS suggests it
+    m = d.match(/\b(\d+)\s*X\s*(\d+)\s*(LB|OZ|KG|G|ML|L)\b/);
+    if (m) {
+      const n1 = parseInt(m[1]), n2 = parseInt(m[2]);
+      textCq = n1; // default: first number
+      if (n1 * n2 <= 200) {
+        // Check which gives a better POS match: n1 or n1*n2
+        if (posCost > 0 && invoicePrice > 0) {
+          const r1 = Math.abs(invoicePrice / n1 / posCost - 1);
+          const r2 = Math.abs(invoicePrice / (n1 * n2) / posCost - 1);
+          if (r2 < r1 && r2 < 0.3) textCq = n1 * n2;
+        }
+      }
+    }
+  }
+
+  if (textCq <= 1) {
+    // "16X2", "12X23", "6X5.11" → NNX (Rhee Bros key format)
+    m = d.match(/\b(\d+)\s*X\s*[\d.]+\b/);
+    if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "12/20OZ", "24/14.1 OZ" → NN/size
+    m = d.match(/\b(\d+)\s*\/\s*[\d.]+\s*(OZ|LB|G|KG|ML|L|GAL|FLOZ|PC|EA|PK|PKGS?)\b/);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "12pkgs/", "24/(120g"
+    m = d.match(/\b(\d+)\s*(PKGS?|PKS|PCS|PACKS?)\s*\//);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "(8 IN CS)"
+    m = d.match(/\((\d+)\s*IN\s*(CS|CASE|BOX|CTN)\)/);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "14OZ/12"
+    m = d.match(/[\d.]+(OZ|LB|G|KG|ML)\s*\/\s*(\d+)\b/);
+    if (m && parseInt(m[2]) > 1) textCq = parseInt(m[2]);
+  }
+
+  if (textCq <= 1) {
+    // "*4/8"
+    m = d.match(/\*\s*(\d+)\s*\//);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "6CT", "12CS", "24PK"
+    m = d.match(/\b(\d+)\s*(CT|CUP|CS|PK|PKS|CASE|BOX|SET|CNT|MESH)\b/);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // "NN/" anywhere
+    m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.(]/);
+    if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) textCq = parseInt(m[1]);
+  }
+
+  if (textCq <= 1) {
+    // ends with "/NN"
+    m = d.match(/\/\s*(\d+)\s*$/);
+    if (m && parseInt(m[1]) > 1) textCq = parseInt(m[1]);
+  }
+
+  // === STEP 2: Validate text result against POS cost ===
+  if (textCq > 1 && posCost > 0 && invoicePrice > 0) {
+    const unitFromText = invoicePrice / textCq;
+    // If text-based unit cost is still 2.5x+ POS cost, text pattern may be wrong
+    if (unitFromText > posCost * 2.5) {
+      const posInferred = inferCaseFromPOS(invoicePrice, posCost);
+      // Use POS inference if it gives a larger (more accurate) divisor
+      if (posInferred > textCq) return posInferred;
+    }
+    return textCq;
+  }
+
+  if (textCq > 1) return textCq;
+
+  // === STEP 3: POS inference fallback ===
+  return inferCaseFromPOS(invoicePrice, posCost);
+}
+
+// Infer case quantity by comparing invoice price to POS per-unit cost
+function inferCaseFromPOS(invoicePrice, posCost) {
+  if (!invoicePrice || !posCost || posCost <= 0 || invoicePrice <= 0) return 1;
+  const ratio = invoicePrice / posCost;
+  if (ratio < 1.8) return 1;
+  const commonCases = [2,3,4,5,6,8,9,10,12,15,16,18,20,24,25,30,36,40,48,50,60,72,80,96,100,120,144,200];
+  let bestCq = Math.round(ratio);
+  let bestDist = Math.abs(ratio - bestCq);
+  for (const cq of commonCases) {
+    const dist = Math.abs(ratio - cq);
+    if (dist / cq < 0.15 && dist < bestDist) {
+      bestCq = cq;
+      bestDist = dist;
+    }
+  }
+  if (bestCq >= 2 && bestCq <= 200 && Math.abs(ratio - bestCq) / bestCq < 0.20) return bestCq;
+  if (ratio >= 2 && Math.round(ratio) >= 2) return Math.round(ratio);
   return 1;
 }
 
@@ -927,6 +1027,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Fill empty item descriptions from other invoices with same vendor + itemNo
+function fillEmptyDescriptions() {
+  // Build lookup: vendor+itemNo → {description, brand, size} from all items with descriptions
+  const lookup = {};
+  for (const inv of SEED_DATA.invoices) {
+    for (const it of (inv.items || [])) {
+      if (it.itemNo && (it.description || '').trim()) {
+        const key = (inv.vendor || '') + ':' + it.itemNo;
+        if (!lookup[key]) lookup[key] = { description: it.description, brand: it.brand, size: it.size };
+      }
+    }
+  }
+  // Fill empty descriptions
+  let filled = 0;
+  for (const inv of SEED_DATA.invoices) {
+    for (const it of (inv.items || [])) {
+      if (it.itemNo && !(it.description || '').trim()) {
+        const key = (inv.vendor || '') + ':' + it.itemNo;
+        const found = lookup[key];
+        if (found) {
+          it.description = found.description;
+          if (!it.brand && found.brand) it.brand = found.brand;
+          if (!it.size && found.size) it.size = found.size;
+          filled++;
+        }
+      }
+    }
+  }
+  if (filled > 0) console.log('Auto-filled ' + filled + ' empty item descriptions');
+}
+
 function initApp() {
   // Build POS product index for baseline comparison
   buildPOSIndex();
@@ -951,6 +1082,9 @@ function initApp() {
   for (const inv of SEED_DATA.invoices) {
     inv.vendor = normalizeVendor(inv.vendor);
   }
+
+  // Auto-fill empty descriptions from other invoices with same itemNo
+  fillEmptyDescriptions();
 
   const data = SEED_DATA;
   // Home stats
@@ -1273,7 +1407,7 @@ function renderVendorPage(branchId, vendorName) {
         const it = normalizeItem(rawIt);
         const m = findPOSMatch(it, vendorName);
         if (m && m.pos.co > 0) {
-          const cq = extractCaseQty((it.description||it.name||'') + ' ' + (it.size||''), 0, 0);
+          const cq = extractCaseQty((it.description||it.name||'') + ' ' + (it.size||''), it.unitPrice, m.pos.co, vendorName);
           const uc = cq > 1 ? it.unitPrice / cq : it.unitPrice;
           const st = getPOSStatus(uc, m.pos.co);
           if (st==='pos-alert') al++;
@@ -1667,8 +1801,8 @@ function renderInvoiceDetail() {
   const enriched = items.map(it => {
     const m = findPOSMatch(it, vendor);
     const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '', caseQty: 1, unitCost: it.unitPrice };
-    // Always extract case qty from description (for ALL items, not just POS matched)
-    r.caseQty = extractCaseQty((it.description||it.name||'') + ' ' + (it.size||''), 0, 0);
+    const matchedCost = m ? (m.pos.co || 0) : 0;
+    r.caseQty = extractCaseQty((it.description||it.name||'') + ' ' + (it.size||''), it.unitPrice, matchedCost, vendor);
     r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
     if (m) {
       posMatched++;
@@ -1743,13 +1877,21 @@ function renderInvoiceDetail() {
       marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
 
-    // Per-unit cost with case breakdown or BOX label
+    // Per-unit cost with case breakdown
     const uc = r.unitCost || r.unitPrice;
     let priceCell2;
     if (r.caseQty > 1) {
       priceCell2 = `$${uc.toFixed(2)}<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>`;
-    } else if (r.posCost && r.unitPrice > r.posCost * 1.8) {
-      priceCell2 = `$${r.unitPrice.toFixed(2)}<br><span style="font-size:0.55rem;background:#FFE0B2;color:#E65100;padding:1px 4px;border-radius:3px;font-weight:700;">📦 BOX</span>`;
+    } else if (r.posCost && r.posCost > 0 && r.unitPrice > r.posCost * 1.8) {
+      // Fallback: estimate per-unit using POS cost ratio
+      const estQty = Math.round(r.unitPrice / r.posCost);
+      const estUnit = r.unitPrice / estQty;
+      priceCell2 = `$${estUnit.toFixed(2)}<br><span class="pos-match-info" style="color:#E65100;">~$${r.unitPrice.toFixed(2)}÷${estQty}</span>`;
+      // Update comparison values to use estimated unit cost
+      r.unitCost = estUnit;
+      r.posDiffPct = ((estUnit - r.posCost) / r.posCost) * 100;
+      r.posStatus = getPOSStatus(estUnit, r.posCost);
+      if (r.posPrice > 0) r.posMargin = r.posPrice - estUnit;
     } else {
       priceCell2 = `$${uc.toFixed(2)}`;
     }
@@ -1935,8 +2077,8 @@ function parseInvoiceText(text) {
     }
   }
 
-  // If no structured header found, try to detect from PDF text
-  if (items.length === 0 && !headerDone) {
+  // If no items found (even if header was detected), try PDF text parsing
+  if (items.length === 0) {
     // --- RHEE BROS PDF PARSER ---
     const psiMatch = text.match(/PSI-(\d+)/);
     if (psiMatch) invoiceNumber = 'PSI-' + psiMatch[1];
@@ -1954,23 +2096,28 @@ function parseInvoiceText(text) {
     if (totalMatch) total = parseFloat(totalMatch[1].replace(/,/g, '')) || 0;
 
     // Try to parse line items from PDF text using item number patterns
-    // Rhee Bros: 5-digit + letter pattern like 00030D, 08180K, 19121J
-    const itemPattern = /(\d{5}[A-Z])\s+([A-Z][A-Z\s&'\-\.]+?)\s+(\d+)\s*(CS|EA|BX|PK|BG|BT|PC|CT|DZ|PL|JR|TB|GL|LB)\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+(\d+[\d,]*\.?\d*)/g;
+    // Rhee Bros PDF: "07434K SAMPO COOKED SILKWORM CHRYSALIS (CAN) 48X4.5 OZ 1 Case Dry 52.70 1.10 52.70"
+    // Pattern: 5-digit+letter, then description, then qty + Case/Each + Dry/Frozen/Refrigerated + prices
+    const itemPattern = /(\d{5}[A-Z])\s+(.+?)\s+(\d+)\s+(Case|Each|Pack|Box|CS|EA|BX|PK|BG|BT|PC|CT|DZ|PL|JR|TB|GL|LB)\s+(Dry|Frozen|Refrigerated|Frzn|Ref|dry|frozen|refrigerated)\s+([\d.]+)\s+([\d.]+)\s+([\d,.]+)/g;
     let m;
     while ((m = itemPattern.exec(text)) !== null) {
       const itemNo = m[1];
       const rawDesc = m[2].trim();
       const qty = parseInt(m[3]) || 0;
       const um = m[4];
-      const unitPrice = parseFloat(m[5]) || 0;
-      const eachPrice = parseFloat(m[6]) || 0;
-      const totalPrice = parseFloat(m[7].replace(/,/g, '')) || 0;
+      const unitPrice = parseFloat(m[6]) || 0;
+      const eachPrice = parseFloat(m[7]) || 0;
+      const totalPrice = parseFloat(m[8].replace(/,/g, '')) || 0;
       // Split brand from description (first word usually)
-      const descParts = rawDesc.split(/\s+/);
+      const descParts = rawDesc.replace(/\s+/g, ' ').split(' ');
       const brand = descParts[0] || '';
       const description = descParts.slice(1).join(' ') || rawDesc;
+      // Extract size from description (patterns like "48X4.5 OZ", "12X4X5.3 OZ")
+      const sizeMatch = rawDesc.match(/(\d+X[\dX.]+\s*(?:OZ|LB|G|KG|ML|L|PC|PR|CT|EA))\s*$/i);
+      const size = sizeMatch ? sizeMatch[1] : '';
+      const descClean = sizeMatch ? rawDesc.replace(sizeMatch[0], '').trim() : rawDesc;
       if (unitPrice > 0) {
-        items.push({ itemNo, brand, description: rawDesc, size: '', qty, um, type: um, unitPrice, eachPrice, totalPrice });
+        items.push({ itemNo, brand, description: descClean.replace(/\s+/g,' '), size, qty, um, type: m[5], unitPrice, eachPrice, totalPrice });
       }
     }
 
@@ -2168,8 +2315,8 @@ function runComparison() {
         const posMatch = findPOSMatch(item, normalizeVendor(selVendor));
         let posCost = null, posPrice = null, posMargin = null, posMarginPct = null;
         let posStatus = 'no-pos', posMethod = '', posDiff = null, posDiffPct = null, posName = '';
-        // Always extract case qty from description (for ALL items)
-        let caseQty = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), 0, 0);
+        const matchedPosCost = posMatch ? (posMatch.pos.co || 0) : 0;
+        let caseQty = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), item.unitPrice, matchedPosCost, normalizeVendor(selVendor));
         let unitCost = caseQty > 1 ? item.unitPrice / caseQty : item.unitPrice;
 
         if (posMatch) {
@@ -2425,13 +2572,19 @@ function filterResults(filter) {
       marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
 
-    // Show per-unit cost with case info, or BOX label
+    // Show per-unit cost with case info
     const uc = r.unitCost || r.unitPrice;
     let priceCell;
     if (r.caseQty > 1) {
       priceCell = `$${uc.toFixed(2)}<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>`;
-    } else if (r.posCost && r.unitPrice > r.posCost * 1.8) {
-      priceCell = `$${r.unitPrice.toFixed(2)}<br><span style="font-size:0.55rem;background:#FFE0B2;color:#E65100;padding:1px 4px;border-radius:3px;font-weight:700;">📦 BOX</span>`;
+    } else if (r.posCost && r.posCost > 0 && r.unitPrice > r.posCost * 1.8) {
+      const estQty = Math.round(r.unitPrice / r.posCost);
+      const estUnit = r.unitPrice / estQty;
+      priceCell = `$${estUnit.toFixed(2)}<br><span class="pos-match-info" style="color:#E65100;">~$${r.unitPrice.toFixed(2)}÷${estQty}</span>`;
+      r.unitCost = estUnit;
+      r.posDiffPct = ((estUnit - r.posCost) / r.posCost) * 100;
+      r.posStatus = getPOSStatus(estUnit, r.posCost);
+      if (r.posMargin !== null && r.posPrice > 0) r.posMargin = r.posPrice - estUnit;
     } else {
       priceCell = `$${uc.toFixed(2)}`;
     }
@@ -2555,7 +2708,8 @@ function renderCrossBranch() {
           let displayName = posName || [item.brand, item.description].filter(Boolean).join(' ') || item.itemNo;
 
           // Convert box to per-unit
-          const cq = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), 0, 0);
+          const posCostVal = posMatch ? (posMatch.pos.co || 0) : 0;
+          const cq = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), item.unitPrice, posCostVal, inv.vendor);
           const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
 
           if (!itemMap[key]) {
@@ -2798,7 +2952,8 @@ function renderCrossVendor() {
       const posCat = posMatch.pos.ct || '';
 
       // Convert to per-unit price
-      const cq = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), 0, 0);
+      const posCostVal2 = posMatch ? (posMatch.pos.co || 0) : 0;
+      const cq = extractCaseQty((item.description||item.name||'') + ' ' + (item.size||''), item.unitPrice, posCostVal2, vendor);
       const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
 
       if (!productMap[posKey]) {
