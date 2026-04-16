@@ -2602,7 +2602,8 @@ function renderCrossBranch() {
   const catLabels = { frozen: '🧊 냉동', fridge: '🥬 냉장', grocery: '🛒 그로서리', unknown: '' };
 
   // Render table
-  const activeBranches = branchIds.filter(bId => latestByBranch[bId]);
+  const branchesWithData = new Set(latestInvoices.map(x => x.bId));
+  const activeBranches = branchIds.filter(bId => branchesWithData.has(bId));
   let html = `<div style="font-size:0.75rem;color:#666;margin-bottom:6px;">${items.length}개 제품</div>`;
   html += '<table class="cross-branch-table"><tr><th style="text-align:left;min-width:140px;">제품</th>';
   for (const bId of activeBranches) {
