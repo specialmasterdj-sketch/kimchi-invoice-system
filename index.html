@@ -946,7 +946,7 @@ function initApp() {
 
   // Branch grid
   const grid = document.getElementById('branchGrid');
-  const branchColors = { miami: '#FF6F00', pembroke_pines: '#1565C0', hollywood: '#2E7D32', coral_springs: '#6A1B9A', fort_lauderdale: '#D84315' };
+  const branchColors = { miami: '#FF6F00', pembroke_pines: '#1565C0', hollywood: '#2E7D32', coral_springs: '#6A1B9A', fort_lauderdale: '#D84315', west_palm_beach: '#00838F' };
   let html = '';
   for (const [id, br] of Object.entries(branches)) {
     const brInvoices = invoices.filter(i => i.branchId === id);
@@ -1230,32 +1230,6 @@ function renderVendorPage(branchId, vendorName) {
   `;
 
   let content = '';
-  const dateGroups = getVendorDateGroups(branchId, vendorId);
-  if (dateGroups.length === 1) {
-    content += `<div style="background:#E3F2FD;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:8px;">
-      📌 <strong>첫 번째 인보이스</strong> — 앞으로 업로드되는 인보이스와 가격이 비교됩니다.<br>
-      <span style="color:#666;">First invoice on record. Upload more invoices to enable price comparison.</span>
-    </div>`;
-  } else if (dateGroups.length >= 2) {
-    const fmtD = d => { const [y,m,dd] = d.split('-'); return `${m}/${dd}/${y.slice(2)}`; };
-    const fmtOpt = g => {
-      const label = g.invoiceNumbers.length > 1
-        ? `${fmtD(g.date)} (${g.invoiceNumbers.length} invoices combined)`
-        : `${g.invoiceNumbers[0]} (${fmtD(g.date)})`;
-      return `${label} - ${g.itemCount} items - $${g.total.toLocaleString()}`;
-    };
-    const newOpts = dateGroups.map((g, idx) => `<option value="${idx}">${fmtOpt(g)}</option>`).join('');
-    content += `<div class="comp-range" id="compRange_${branchId}_${vendorId}">`;
-    content += `<label>New Invoice (latest)</label><select id="compNew_${branchId}_${vendorId}" onchange="updateComparison('${branchId}','${vendorId}')">${newOpts}</select>`;
-    content += `<div class="comp-period-btns">`;
-    content += `<span class="comp-period-btn active" data-period="all" onclick="setCompPeriod('${branchId}','${vendorId}','all',this)">All</span>`;
-    content += `<span class="comp-period-btn" data-period="3m" onclick="setCompPeriod('${branchId}','${vendorId}','3m',this)">3 Months</span>`;
-    content += `<span class="comp-period-btn" data-period="6m" onclick="setCompPeriod('${branchId}','${vendorId}','6m',this)">6 Months</span>`;
-    content += `<span class="comp-period-btn" data-period="1y" onclick="setCompPeriod('${branchId}','${vendorId}','1y',this)">1 Year</span>`;
-    content += `</div>`;
-    content += `<div class="comp-info" id="compInfo_${branchId}_${vendorId}"></div>`;
-    content += `</div>`;
-  }
 
   for (const inv of vInvoices) {
     const hasItems = inv.itemCount > 0;
@@ -1274,12 +1248,7 @@ function renderVendorPage(branchId, vendorName) {
     </div>`;
   }
 
-  content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
   document.getElementById('vendorContent').innerHTML = content;
-
-  if (dateGroups.length >= 2) {
-    updateComparison(branchId, vendorId);
-  }
 
   // Async POS badge computation (non-blocking, one invoice at a time)
   if (typeof POS_DATA !== 'undefined') {
@@ -1764,15 +1733,22 @@ function renderInvoiceDetail() {
       marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
 
-    // Per-unit cost with case breakdown
+    // Per-unit cost with case breakdown or BOX label
     const uc = r.unitCost || r.unitPrice;
-    const caseInfo = r.caseQty > 1 ? `<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>` : '';
+    let priceCell2;
+    if (r.caseQty > 1) {
+      priceCell2 = `$${uc.toFixed(2)}<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>`;
+    } else if (r.posCost && r.unitPrice > r.posCost * 1.8) {
+      priceCell2 = `$${r.unitPrice.toFixed(2)}<br><span style="font-size:0.55rem;background:#FFE0B2;color:#E65100;padding:1px 4px;border-radius:3px;font-weight:700;">📦 BOX</span>`;
+    } else {
+      priceCell2 = `$${uc.toFixed(2)}`;
+    }
 
     html += `<tr class="${r.posStatus}">
       <td>${badge}</td>
       <td class="item-desc">${name}${posInfo}</td>
       <td>${r.qty}</td>
-      <td style="font-weight:700">$${uc.toFixed(2)}${caseInfo}</td>
+      <td style="font-weight:700">${priceCell2}</td>
       <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
       <td>${vsPOS}</td>
       <td>${marginText}</td>
@@ -2441,14 +2417,21 @@ function filterResults(filter) {
       marginText = `<span style="color:${mColor};font-weight:700">$${r.posMargin.toFixed(2)}</span>`;
     }
 
-    // Show per-unit cost with case info
+    // Show per-unit cost with case info, or BOX label
     const uc = r.unitCost || r.unitPrice;
-    const caseInfo = r.caseQty > 1 ? `<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>` : '';
+    let priceCell;
+    if (r.caseQty > 1) {
+      priceCell = `$${uc.toFixed(2)}<br><span class="pos-match-info">$${r.unitPrice.toFixed(2)}÷${r.caseQty}</span>`;
+    } else if (r.posCost && r.unitPrice > r.posCost * 1.8) {
+      priceCell = `$${r.unitPrice.toFixed(2)}<br><span style="font-size:0.55rem;background:#FFE0B2;color:#E65100;padding:1px 4px;border-radius:3px;font-weight:700;">📦 BOX</span>`;
+    } else {
+      priceCell = `$${uc.toFixed(2)}`;
+    }
 
     html += `<tr class="${r.status}">
       <td>${badge}</td>
       <td class="item-desc"><strong>${r.brand || ''}</strong><br>${r.description}${r.posName && r.posMethod !== 'name-exact' ? '<br><span class="pos-match-info">POS: ' + r.posName + '</span>' : ''}</td>
-      <td style="font-weight:700">$${uc.toFixed(2)}${caseInfo}</td>
+      <td style="font-weight:700">${priceCell}</td>
       <td>${r.posCost !== null ? '$' + r.posCost.toFixed(2) : '-'}</td>
       <td>${vsPOS}</td>
       <td>${r.posPrice !== null && r.posPrice > 0 ? '$' + r.posPrice.toFixed(2) : '-'}</td>
