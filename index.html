@@ -1668,14 +1668,14 @@ function renderInvoiceDetail() {
   const enriched = items.map(it => {
     const m = findPOSMatch(it, vendor);
     const r = { ...it, posCost: null, posPrice: null, posMargin: null, posDiffPct: null, posStatus: 'no-pos', posName: '', caseQty: 1, unitCost: it.unitPrice };
+    // Always extract case qty from description (for ALL items, not just POS matched)
+    r.caseQty = extractCaseQty(it.description || it.name || '', 0, 0);
+    r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
     if (m) {
       posMatched++;
       r.posCost = m.pos.co || 0;
       r.posPrice = m.pos.pr || 0;
       r.posName = m.pos.nm || '';
-      // Convert box price to per-unit cost
-      r.caseQty = extractCaseQty(it.description || it.name || '', it.unitPrice, r.posCost);
-      r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
       if (r.posCost > 0) {
         r.posDiffPct = ((r.unitCost - r.posCost) / r.posCost) * 100;
         r.posStatus = getPOSStatus(r.unitCost, r.posCost);
@@ -2169,7 +2169,9 @@ function runComparison() {
         const posMatch = findPOSMatch(item, normalizeVendor(selVendor));
         let posCost = null, posPrice = null, posMargin = null, posMarginPct = null;
         let posStatus = 'no-pos', posMethod = '', posDiff = null, posDiffPct = null, posName = '';
-        let caseQty = 1, unitCost = item.unitPrice;
+        // Always extract case qty from description (for ALL items)
+        let caseQty = extractCaseQty(item.description || item.name || '', 0, 0);
+        let unitCost = caseQty > 1 ? item.unitPrice / caseQty : item.unitPrice;
 
         if (posMatch) {
           posMatchCount++;
@@ -2177,10 +2179,6 @@ function runComparison() {
           posPrice = posMatch.pos.pr || 0;
           posName = posMatch.pos.nm || '';
           posMethod = posMatch.method;
-
-          // Extract case quantity and calculate per-unit cost
-          caseQty = extractCaseQty(item.description || item.name || '', item.unitPrice, posCost);
-          unitCost = caseQty > 1 ? item.unitPrice / caseQty : item.unitPrice;
 
           // Per-unit invoice cost vs POS cost
           if (posCost > 0) {
@@ -2517,134 +2515,116 @@ function setCrossCategory(cat) {
 }
 
 function renderCrossBranch() {
-  const search = (document.getElementById('crossSearch')?.value || '').toLowerCase();
-  const branches = SEED_DATA.branches;
-  const branchIds = Object.keys(branches);
+  const wrap = document.getElementById('crossTableWrap');
+  wrap.innerHTML = '<div style="text-align:center;padding:40px;color:#666;font-size:0.85rem;"><div class="spinner" style="margin:0 auto 10px;"></div>POS 매칭 중... 잠시 기다려주세요</div>';
 
-  // For each branch + vendor combo, get the latest invoice
-  const latestInvoices = [];
-  for (const bId of branchIds) {
-    const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === bId && i.items.length > 0);
-    // Group by vendor, take latest from each
-    const byVendor = {};
-    for (const inv of brInvoices) {
-      const v = inv.vendor || 'Other';
-      if (!byVendor[v] || inv.date > byVendor[v].date) byVendor[v] = inv;
-    }
-    for (const inv of Object.values(byVendor)) {
-      latestInvoices.push({ bId, inv });
-    }
-  }
+  // Run async to avoid freezing
+  setTimeout(() => {
+    try {
+      const search = (document.getElementById('crossSearch')?.value || '').toLowerCase();
+      const branches = SEED_DATA.branches;
+      const branchIds = Object.keys(branches);
 
-  // Build item map using POS product as the key (matches across vendors/branches)
-  const itemMap = {};
-  for (const { bId, inv } of latestInvoices) {
-    for (const rawItem of inv.items) {
-      const item = normalizeItem(rawItem);
-      if (item.unitPrice <= 2) continue;
-      // Match to POS product
-      const posMatch = findPOSMatch(item, inv.vendor);
-      // Use POS barcode as key (same product across vendors), fallback to itemNo
-      const key = posMatch ? (posMatch.pos.bc || posMatch.pos.nm) : ('NO:' + item.itemNo);
-      const posName = posMatch ? posMatch.pos.nm : '';
-      const posCat = posMatch ? posMatch.pos.ct : '';
-      const catGroup = getCategoryGroup(posCat);
-      let displayName;
-      if (posName) {
-        displayName = posName;
-      } else if (item.description && item.description.length > 3) {
-        displayName = [item.brand, item.description].filter(Boolean).join(' ');
-      } else {
-        displayName = [item.brand, item.itemNo].filter(Boolean).join(' ');
-      }
-      if (!itemMap[key]) {
-        itemMap[key] = { itemNo: item.itemNo, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {}, vendors: {} };
-      }
-      // Convert box price to per-unit, then store per branch
-      const cq = extractCaseQty(item.description || item.name || '', item.unitPrice, posMatch ? posMatch.pos.co : 0);
-      const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
-      if (!itemMap[key].prices[bId] || unitP > itemMap[key].prices[bId]) {
-        itemMap[key].prices[bId] = unitP;
-        itemMap[key].vendors[bId] = inv.vendor;
-      }
-    }
-  }
-
-  // Filter to items in 2+ branches
-  let items = Object.values(itemMap).filter(it => Object.keys(it.prices).length >= 2);
-
-  // Filter by category
-  if (crossCategory !== 'all') {
-    items = items.filter(it => it.catGroup === crossCategory);
-  }
-
-  // Filter by different prices
-  if (crossFilter === 'diff') {
-    items = items.filter(it => {
-      const prices = Object.values(it.prices);
-      const min = Math.min(...prices);
-      const max = Math.max(...prices);
-      return max > 0 && ((max - min) / min) > 0.01;
-    });
-  }
-
-  // Search filter
-  if (search) items = items.filter(it => `${it.displayName} ${it.posName} ${it.itemNo}`.toLowerCase().includes(search));
-
-  // Sort by max price diff
-  items.sort((a, b) => {
-    const aDiff = Math.max(...Object.values(a.prices)) - Math.min(...Object.values(a.prices));
-    const bDiff = Math.max(...Object.values(b.prices)) - Math.min(...Object.values(b.prices));
-    return bDiff - aDiff;
-  });
-
-  // Category labels
-  const catLabels = { frozen: '🧊 냉동', fridge: '🥬 냉장', grocery: '🛒 그로서리', unknown: '' };
-
-  // Render table
-  const branchesWithData = new Set(latestInvoices.map(x => x.bId));
-  const activeBranches = branchIds.filter(bId => branchesWithData.has(bId));
-  let html = `<div style="font-size:0.75rem;color:#666;margin-bottom:6px;">${items.length}개 제품</div>`;
-  html += '<table class="cross-branch-table"><tr><th style="text-align:left;min-width:140px;">제품</th>';
-  for (const bId of activeBranches) {
-    const shortName = branches[bId].name.split(' ')[0].substring(0, 6);
-    html += `<th>${shortName}</th>`;
-  }
-  html += '<th>차이</th></tr>';
-
-  for (const item of items.slice(0, 150)) {
-    const prices = Object.values(item.prices);
-    const minP = Math.min(...prices);
-    const maxP = Math.max(...prices);
-    const diff = maxP - minP;
-    const catBadge = catLabels[item.catGroup] || '';
-
-    html += `<tr><td class="item-name" style="font-size:0.65rem;"><strong>${item.displayName}</strong>`;
-    if (item.itemNo) html += `<br><span style="font-size:0.5rem;color:#aaa;">#${item.itemNo}</span>`;
-    if (catBadge) html += ` <span style="font-size:0.5rem;">${catBadge}</span>`;
-    html += `</td>`;
-    for (const bId of activeBranches) {
-      const p = item.prices[bId];
-      if (p !== undefined) {
-        let cls = '';
-        if (prices.length > 1) {
-          if (p === maxP && maxP !== minP) cls = 'price-high';
-          else if (p === minP && maxP !== minP) cls = 'price-low';
+      // For each branch + vendor combo, get the latest invoice
+      const latestInvoices = [];
+      for (const bId of branchIds) {
+        const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === bId && i.items.length > 0);
+        const byVendor = {};
+        for (const inv of brInvoices) {
+          const v = inv.vendor || 'Other';
+          if (!byVendor[v] || inv.date > byVendor[v].date) byVendor[v] = inv;
         }
-        html += `<td class="${cls}">$${p.toFixed(2)}</td>`;
-      } else {
-        html += '<td style="color:#ccc;">-</td>';
+        for (const inv of Object.values(byVendor)) latestInvoices.push({ bId, inv });
       }
+
+      // Build item map — use itemNo as primary key, POS barcode as secondary
+      const itemMap = {};
+      for (const { bId, inv } of latestInvoices) {
+        for (const rawItem of inv.items) {
+          const item = normalizeItem(rawItem);
+          if (item.unitPrice <= 2) continue;
+
+          // Try POS match for product name and category
+          const posMatch = findPOSMatch(item, inv.vendor);
+          const posKey = posMatch ? (posMatch.pos.bc || posMatch.pos.nm) : null;
+          // Key: POS barcode if matched, otherwise vendor:itemNo
+          const key = posKey || (inv.vendor + ':' + item.itemNo);
+
+          const posName = posMatch ? posMatch.pos.nm : '';
+          const posCat = posMatch ? posMatch.pos.ct : '';
+          const catGroup = getCategoryGroup(posCat);
+          let displayName = posName || [item.brand, item.description].filter(Boolean).join(' ') || item.itemNo;
+
+          // Convert box to per-unit
+          const cq = extractCaseQty(item.description || item.name || '', 0, 0);
+          const unitP = cq > 1 ? item.unitPrice / cq : item.unitPrice;
+
+          if (!itemMap[key]) {
+            itemMap[key] = { displayName, posName, catGroup, prices: {} };
+          }
+          if (!itemMap[key].prices[bId] || unitP > itemMap[key].prices[bId]) {
+            itemMap[key].prices[bId] = unitP;
+          }
+        }
+      }
+
+      // Filter to items in 2+ branches
+      let items = Object.values(itemMap).filter(it => Object.keys(it.prices).length >= 2);
+
+      if (crossCategory !== 'all') items = items.filter(it => it.catGroup === crossCategory);
+
+      if (crossFilter === 'diff') {
+        items = items.filter(it => {
+          const prices = Object.values(it.prices);
+          return Math.max(...prices) > 0 && ((Math.max(...prices) - Math.min(...prices)) / Math.min(...prices)) > 0.01;
+        });
+      }
+
+      if (search) items = items.filter(it => `${it.displayName} ${it.posName || ''}`.toLowerCase().includes(search));
+
+      items.sort((a, b) => {
+        const ad = Math.max(...Object.values(a.prices)) - Math.min(...Object.values(a.prices));
+        const bd = Math.max(...Object.values(b.prices)) - Math.min(...Object.values(b.prices));
+        return bd - ad;
+      });
+
+      const catLabels = { frozen: '🧊', fridge: '🥬', grocery: '🛒' };
+      const branchesWithData = new Set(latestInvoices.map(x => x.bId));
+      const activeBranches = branchIds.filter(bId => branchesWithData.has(bId));
+
+      let html = `<div style="font-size:0.75rem;color:#666;margin-bottom:6px;">${items.length}개 제품</div>`;
+      html += '<table class="cross-branch-table"><tr><th style="text-align:left;min-width:120px;">제품</th>';
+      for (const bId of activeBranches) {
+        html += `<th>${branches[bId].name.substring(0, 6)}</th>`;
+      }
+      html += '<th>차이</th></tr>';
+
+      for (const item of items.slice(0, 200)) {
+        const prices = Object.values(item.prices);
+        const minP = Math.min(...prices), maxP = Math.max(...prices);
+        const diff = maxP - minP;
+        const cat = catLabels[item.catGroup] || '';
+
+        html += `<tr><td class="item-name" style="font-size:0.6rem;"><strong>${item.displayName}</strong> ${cat}</td>`;
+        for (const bId of activeBranches) {
+          const p = item.prices[bId];
+          if (p !== undefined) {
+            const cls = (p === maxP && maxP !== minP) ? 'price-high' : (p === minP && maxP !== minP) ? 'price-low' : '';
+            html += `<td class="${cls}">$${p.toFixed(2)}</td>`;
+          } else {
+            html += '<td style="color:#ccc;">-</td>';
+          }
+        }
+        html += `<td style="font-weight:700;color:#C62828;">$${diff.toFixed(2)}</td></tr>`;
+      }
+      html += '</table>';
+      if (items.length === 0) html = '<div style="text-align:center;padding:30px;color:#999;">비교 가능한 제품 없음</div>';
+      wrap.innerHTML = html;
+    } catch(e) {
+      wrap.innerHTML = '<div style="text-align:center;padding:30px;color:#C62828;">Error: ' + e.message + '</div>';
+      console.error(e);
     }
-    html += `<td style="font-weight:700;color:#C62828;">$${diff.toFixed(2)}</td></tr>`;
-  }
-  html += '</table>';
-
-  if (items.length === 0) {
-    html = '<div style="text-align:center;padding:30px;color:#999;">해당 카테고리에 비교 가능한 제품 없음</div>';
-  }
-
-  document.getElementById('crossTableWrap').innerHTML = html;
+  }, 50);
 }
 
 // Auto-render cross branch when page shows
