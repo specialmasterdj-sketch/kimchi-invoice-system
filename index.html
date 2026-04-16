@@ -2543,7 +2543,15 @@ function renderCrossBranch() {
         const posName = posMatch ? posMatch.pos.nm : '';
         const posCat = posMatch ? posMatch.pos.ct : '';
         const catGroup = getCategoryGroup(posCat);
-        const displayName = [item.brand, item.description].filter(Boolean).join(' ') || posName || item.itemNo;
+        // Build display name: prefer POS name > brand+description > brand+itemNo
+        let displayName;
+        if (posName) {
+          displayName = posName;
+        } else if (item.description && item.description.length > 3) {
+          displayName = [item.brand, item.description].filter(Boolean).join(' ');
+        } else {
+          displayName = [item.brand, item.itemNo].filter(Boolean).join(' ');
+        }
         itemMap[key] = { itemNo: key, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {} };
       }
       if (!itemMap[key].prices[bId] || item.unitPrice > itemMap[key].prices[bId]) {
@@ -2601,8 +2609,8 @@ function renderCrossBranch() {
     const catBadge = catLabels[item.catGroup] || '';
 
     html += `<tr><td class="item-name" style="font-size:0.65rem;"><strong>${item.displayName}</strong>`;
-    if (item.posName && item.posName !== item.displayName) html += `<br><span style="font-size:0.5rem;color:#999;">POS: ${item.posName}</span>`;
-    if (catBadge) html += `<br><span style="font-size:0.5rem;">${catBadge}</span>`;
+    if (item.itemNo) html += `<br><span style="font-size:0.5rem;color:#aaa;">#${item.itemNo}</span>`;
+    if (catBadge) html += ` <span style="font-size:0.5rem;">${catBadge}</span>`;
     html += `</td>`;
     for (const bId of activeBranches) {
       const p = item.prices[bId];
