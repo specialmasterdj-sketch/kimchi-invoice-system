@@ -961,11 +961,6 @@ function initApp() {
   const uniqueSet = new Set();
   invoices.forEach(inv => inv.items.forEach(it => uniqueSet.add(it.itemNo)));
 
-  document.getElementById('totalInvoices').textContent = invoices.length;
-  document.getElementById('totalItems').textContent = allItems.toLocaleString();
-  document.getElementById('totalBranches').textContent = Object.keys(branches).length;
-  document.getElementById('uniqueItems').textContent = (typeof POS_DATA !== 'undefined' ? POS_DATA.length : uniqueSet.size).toLocaleString();
-
   // Branch grid
   const grid = document.getElementById('branchGrid');
   const branchColors = { miami: '#FF6F00', pembroke_pines: '#1565C0', hollywood: '#2E7D32', coral_springs: '#6A1B9A', fort_lauderdale: '#D84315', west_palm_beach: '#00838F' };
