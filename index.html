@@ -321,18 +321,15 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
     <div class="branch-grid" id="branchGrid"></div>
   </div>
 
-  <!-- 4. Advanced Tools (bottom) -->
+  <!-- 4. Price Comparison Tools (bottom) -->
   <div style="margin-top:16px; padding-top:12px; border-top:1px solid #e0e0e0;">
-    <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;" data-t="advTools">Advanced Tools</div>
-    <div class="card" style="border-left: 4px solid #1565C0; margin-bottom:8px;">
-      <div class="card-title" style="color:#1565C0; font-size:0.8rem;" data-t="allBranches">전체 지점 비교</div>
-      <div class="card-subtitle" data-t="allBranchesSub">지점별 같은 제품 가격 비교 (냉동/냉장/그로서리)</div>
-      <button class="btn btn-sm" style="background:#1565C0;color:#fff;" onclick="showPage('page-cross')">지점 비교</button>
-    </div>
-    <div class="card" style="border-left: 4px solid #FF6F00;">
-      <div class="card-title" style="color:#FF6F00; font-size:0.8rem;" data-t="crossVendor">Cross-Vendor Price Comparison</div>
-      <div class="card-subtitle" data-t="crossVendorDesc">Same product, different vendors - who has the best price?</div>
-      <button class="btn btn-sm" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()" data-t="crossVendorBtn">Compare Vendors</button>
+    <div class="card" style="border-left:4px solid #1565C0;">
+      <div class="card-title" style="color:#1565C0; font-size:0.9rem;">📊 주요 제품 가격 비교</div>
+      <div class="card-subtitle">지점별 · 벤더별 같은 제품 가격 비교 (냉동/냉장/그로서리)</div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button class="btn btn-sm" style="background:#1565C0;color:#fff;flex:1;" onclick="showPage('page-cross')">지점별 비교</button>
+        <button class="btn btn-sm" style="background:#FF6F00;color:#fff;flex:1;" onclick="openCrossVendor()">벤더별 비교</button>
+      </div>
     </div>
   </div>
 </div>
