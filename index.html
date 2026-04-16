@@ -1277,7 +1277,7 @@ function renderVendorPage(branchId, vendorName) {
         <div class="history-info">
           <h4>${inv.invoiceNumber}</h4>
           <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
-          <div id="pos-badge-${inv.invoiceNumber.replace(/[^a-zA-Z0-9]/g,'_')}" style="display:flex;gap:4px;margin-top:3px;"><span style="font-size:0.55rem;color:#bbb;">POS 분석중...</span></div>
+          <div id="pos-badge-${inv.invoiceNumber.replace(/[^a-zA-Z0-9]/g,'_')}" style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;"><span style="font-size:0.7rem;color:#bbb;">POS 분석중...</span></div>
         </div>
         <div class="history-meta">
           <div class="amount">$${inv.total.toLocaleString()}</div>
@@ -1317,10 +1317,12 @@ function renderVendorPage(branchId, vendorName) {
       }
       const el = document.getElementById('pos-badge-' + inv.invoiceNumber.replace(/[^a-zA-Z0-9]/g,'_'));
       if (el) {
-        el.innerHTML = (al?`<span class="badge badge-red" style="font-size:0.55rem">🔴${al}</span>`:'')
-          + (wa?`<span class="badge badge-orange" style="font-size:0.55rem">🟡${wa}</span>`:'')
-          + (gd?`<span class="badge badge-green" style="font-size:0.55rem">🟢${gd}</span>`:'')
-          + (nm?`<span class="badge badge-gray" style="font-size:0.55rem">⚪${nm}</span>`:'');
+        el.innerHTML = `<div style="display:flex;gap:6px;flex-wrap:wrap;">`
+          + `<div style="display:flex;align-items:center;gap:3px;padding:3px 8px;background:#FFEBEE;border-radius:8px;"><span style="font-size:0.85rem;">🔴</span><span style="font-size:0.8rem;font-weight:800;color:#C62828;">${al}</span><span style="font-size:0.6rem;color:#999;">Alert</span></div>`
+          + `<div style="display:flex;align-items:center;gap:3px;padding:3px 8px;background:#FFF8E1;border-radius:8px;"><span style="font-size:0.85rem;">🟡</span><span style="font-size:0.8rem;font-weight:800;color:#F57F17;">${wa}</span><span style="font-size:0.6rem;color:#999;">Watch</span></div>`
+          + `<div style="display:flex;align-items:center;gap:3px;padding:3px 8px;background:#E8F5E9;border-radius:8px;"><span style="font-size:0.85rem;">🟢</span><span style="font-size:0.8rem;font-weight:800;color:#2E7D32;">${gd}</span><span style="font-size:0.6rem;color:#999;">Good</span></div>`
+          + `<div style="display:flex;align-items:center;gap:3px;padding:3px 8px;background:#F5F5F5;border-radius:8px;"><span style="font-size:0.85rem;">⚪</span><span style="font-size:0.8rem;font-weight:800;color:#999;">${nm}</span><span style="font-size:0.6rem;color:#999;">N/A</span></div>`
+          + `</div>`;
       }
       setTimeout(computeNextBadge, 0);
     }
