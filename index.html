@@ -1148,9 +1148,36 @@ function renderVendorPage(branchId, vendorName) {
 
   for (const inv of vInvoices) {
     const hasItems = inv.itemCount > 0;
-    // POS comparison stats for each invoice
-    let posStats = '';
-    if (hasItems && typeof POS_DATA !== 'undefined') {
+    content += `<div class="history-item" style="flex-direction:column;align-items:stretch;gap:4px;cursor:${hasItems?'pointer':'default'}" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="history-info">
+          <h4>${inv.invoiceNumber}</h4>
+          <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
+          <div id="pos-badge-${inv.invoiceNumber.replace(/[^a-zA-Z0-9]/g,'_')}" style="display:flex;gap:4px;margin-top:3px;"><span style="font-size:0.55rem;color:#bbb;">POS 분석중...</span></div>
+        </div>
+        <div class="history-meta">
+          <div class="amount">$${inv.total.toLocaleString()}</div>
+          <div class="date">${inv.dateDisplay}</div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
+  document.getElementById('vendorContent').innerHTML = content;
+
+  if (dateGroups.length >= 2) {
+    updateComparison(branchId, vendorId);
+  }
+
+  // Async POS badge computation (non-blocking, one invoice at a time)
+  if (typeof POS_DATA !== 'undefined') {
+    let idx = 0;
+    function computeNextBadge() {
+      if (idx >= vInvoices.length || currentPage !== 'page-vendor') return;
+      const inv = vInvoices[idx];
+      idx++;
+      if (inv.itemCount === 0) { setTimeout(computeNextBadge, 0); return; }
       let al=0, wa=0, gd=0, nm=0;
       for (const rawIt of inv.items) {
         const it = normalizeItem(rawIt);
@@ -1162,45 +1189,16 @@ function renderVendorPage(branchId, vendorName) {
           else gd++;
         } else { nm++; }
       }
-      posStats = `<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
-        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#FFEBEE;border-radius:8px;">
-          <div style="font-size:0.85rem;font-weight:800;color:#C62828;">🔴 ${al}</div>
-          <div style="font-size:0.5rem;color:#999;">초과</div>
-        </div>
-        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#FFF8E1;border-radius:8px;">
-          <div style="font-size:0.85rem;font-weight:800;color:#F57F17;">🟡 ${wa}</div>
-          <div style="font-size:0.5rem;color:#999;">주의</div>
-        </div>
-        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#E8F5E9;border-radius:8px;">
-          <div style="font-size:0.85rem;font-weight:800;color:#2E7D32;">🟢 ${gd}</div>
-          <div style="font-size:0.5rem;color:#999;">정상</div>
-        </div>
-        <div style="text-align:center;min-width:42px;padding:4px 6px;background:#F5F5F5;border-radius:8px;">
-          <div style="font-size:0.85rem;font-weight:800;color:#999;">⚪ ${nm}</div>
-          <div style="font-size:0.5rem;color:#999;">미매칭</div>
-        </div>
-      </div>`;
+      const el = document.getElementById('pos-badge-' + inv.invoiceNumber.replace(/[^a-zA-Z0-9]/g,'_'));
+      if (el) {
+        el.innerHTML = (al?`<span class="badge badge-red" style="font-size:0.55rem">🔴${al}</span>`:'')
+          + (wa?`<span class="badge badge-orange" style="font-size:0.55rem">🟡${wa}</span>`:'')
+          + (gd?`<span class="badge badge-green" style="font-size:0.55rem">🟢${gd}</span>`:'')
+          + (nm?`<span class="badge badge-gray" style="font-size:0.55rem">⚪${nm}</span>`:'');
+      }
+      setTimeout(computeNextBadge, 0);
     }
-    content += `<div class="history-item" style="flex-direction:column;align-items:stretch;gap:4px;cursor:${hasItems?'pointer':'default'}" onclick="${hasItems ? `openInvoiceDetail('${inv.invoiceNumber}')` : ''}">
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div class="history-info">
-          <h4>${inv.invoiceNumber}</h4>
-          <p>${inv.itemCount} items ${inv.note ? '(partial)' : ''}</p>
-        </div>
-        <div class="history-meta">
-          <div class="amount">$${inv.total.toLocaleString()}</div>
-          <div class="date">${inv.dateDisplay}</div>
-        </div>
-      </div>
-      ${posStats}
-    </div>`;
-  }
-
-  content += `<div id="compTable_${branchId}_${vendorId}" style="margin-top:8px;" data-vendor="${vendorName}" data-color="${vColor}"></div>`;
-  document.getElementById('vendorContent').innerHTML = content;
-
-  if (dateGroups.length >= 2) {
-    updateComparison(branchId, vendorId);
+    setTimeout(computeNextBadge, 100);
   }
 }
 
