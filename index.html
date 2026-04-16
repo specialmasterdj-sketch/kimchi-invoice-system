@@ -283,9 +283,15 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 <!-- ===== HEADER ===== -->
 <div class="header">
   <button class="back-btn" id="backBtn" onclick="goBack()">&#8592;</button>
-  <div>
+  <button class="back-btn" id="homeBtn" style="display:none;font-size:1.2rem;" onclick="goHome()">&#127968;</button>
+  <div style="flex:1">
     <h1 id="headerTitle">김치마트 인보이스 시스템</h1>
     <div class="subtitle" id="headerSubtitle">POS 기준 가격 비교</div>
+  </div>
+  <div id="langSwitcher" style="display:flex;gap:2px;">
+    <button onclick="setLang('ko')" id="lang-ko" class="lang-btn active" style="padding:3px 7px;border:1px solid rgba(255,255,255,0.4);border-radius:6px;background:rgba(255,255,255,0.25);color:#fff;font-size:0.6rem;font-weight:700;cursor:pointer;">KO</button>
+    <button onclick="setLang('en')" id="lang-en" class="lang-btn" style="padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:6px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.6rem;font-weight:700;cursor:pointer;">EN</button>
+    <button onclick="setLang('es')" id="lang-es" class="lang-btn" style="padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:6px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.6rem;font-weight:700;cursor:pointer;">ES</button>
   </div>
 </div>
 
@@ -295,36 +301,36 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
   <div class="stat-grid">
-    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label">인보이스</div></div>
-    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label">총 아이템</div></div>
-    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label">지점</div></div>
-    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label">POS SKU</div></div>
+    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label" data-t="invoices">인보이스</div></div>
+    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label" data-t="totalItems">총 아이템</div></div>
+    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label" data-t="branches">지점</div></div>
+    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label" data-t="posSku">POS SKU</div></div>
   </div>
 
   <div class="branch-grid" id="branchGrid"></div>
 
   <!-- Upload New Invoice -->
   <div class="card" style="margin-top:14px;">
-    <div class="card-title">📄 인보이스 업로드</div>
-    <div class="card-subtitle">PDF/텍스트 인보이스를 POS 기준 가격과 비교 (21,296 SKU 기준)</div>
-    <button class="btn btn-primary" onclick="showPage('page-upload')">업로드 & 비교</button>
+    <div class="card-title" data-t="uploadTitle">📄 인보이스 업로드</div>
+    <div class="card-subtitle" data-t="uploadDesc">PDF/텍스트 인보이스를 POS 기준 가격과 비교 (21,296 SKU 기준)</div>
+    <button class="btn btn-primary" onclick="showPage('page-upload')" data-t="uploadBtn">업로드 & 비교</button>
   </div>
 
   <!-- Scan Physical Invoice - CAMERA -->
   <div class="card" style="margin-top:10px; border-left: 4px solid #00897B;">
-    <div class="card-title" style="color:#00897B">📸 인보이스 촬영</div>
-    <div class="card-subtitle">종이 인보이스를 촬영하여 POS 가격과 즉시 비교</div>
+    <div class="card-title" style="color:#00897B" data-t="scanTitle">📸 인보이스 촬영</div>
+    <div class="card-subtitle" data-t="scanDesc">종이 인보이스를 촬영하여 POS 가격과 즉시 비교</div>
     <button class="btn" style="background:#00897B;color:#fff;" onclick="showPage('page-upload'); setTimeout(()=>setInputMethod('photo'),100);">Scan with Camera</button>
     <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleCameraCapture(this)">
   </div>
 
   <!-- Advanced Tools (bottom, less prominent) -->
   <div style="margin-top:30px; padding-top:14px; border-top:1px solid #e0e0e0;">
-    <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;">Advanced Tools</div>
+    <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;" data-t="advTools">Advanced Tools</div>
     <div class="card" style="border-left: 4px solid #FF6F00; opacity:0.8;">
-      <div class="card-title" style="color:#FF6F00; font-size:0.8rem;">Cross-Vendor Price Comparison</div>
-      <div class="card-subtitle">Same product, different vendors - who has the best price?</div>
-      <button class="btn btn-sm" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()">Compare Vendors</button>
+      <div class="card-title" style="color:#FF6F00; font-size:0.8rem;" data-t="crossVendor">Cross-Vendor Price Comparison</div>
+      <div class="card-subtitle" data-t="crossVendorDesc">Same product, different vendors - who has the best price?</div>
+      <button class="btn btn-sm" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()" data-t="crossVendorBtn">Compare Vendors</button>
     </div>
   </div>
 </div>
@@ -657,6 +663,105 @@ function getPOSStatus(invoicePrice, posCost) {
   return 'pos-alert';                      // 15%+ above
 }
 
+// ===== i18n TRANSLATIONS =====
+let currentLang = localStorage.getItem('kimchi_lang') || 'ko';
+const T = {
+  // Header
+  headerTitle:    { ko:'김치마트 인보이스 시스템', en:'Kimchi Mart Invoice System', es:'Sistema de Facturas Kimchi Mart' },
+  headerSub:      { ko:'POS 기준 가격 비교', en:'POS-Based Price Comparison', es:'Comparación de Precios POS' },
+  // Stats
+  invoices:       { ko:'인보이스', en:'Invoices', es:'Facturas' },
+  totalItems:     { ko:'총 아이템', en:'Total Items', es:'Total Artículos' },
+  branches:       { ko:'지점', en:'Branches', es:'Sucursales' },
+  posSku:         { ko:'POS SKU', en:'POS SKU', es:'POS SKU' },
+  // Home cards
+  uploadTitle:    { ko:'인보이스 업로드', en:'Upload Invoice', es:'Subir Factura' },
+  uploadDesc:     { ko:'PDF/텍스트 인보이스를 POS 기준 가격과 비교 (21,296 SKU 기준)', en:'Compare PDF/text invoice against POS baseline (21,296 SKUs)', es:'Comparar factura PDF/texto con precio base POS (21,296 SKUs)' },
+  uploadBtn:      { ko:'업로드 & 비교', en:'Upload & Compare', es:'Subir y Comparar' },
+  scanTitle:      { ko:'인보이스 촬영', en:'Scan Invoice', es:'Escanear Factura' },
+  scanDesc:       { ko:'종이 인보이스를 촬영하여 POS 가격과 즉시 비교', en:'Take a photo of paper invoice to compare with POS instantly', es:'Tome foto de factura en papel para comparar con POS al instante' },
+  scanBtn:        { ko:'카메라 스캔', en:'Scan with Camera', es:'Escanear con Cámara' },
+  allBranches:    { ko:'전체 지점 비교', en:'All Branches Comparison', es:'Comparación Todas las Sucursales' },
+  allBranchesSub: { ko:'지점별 같은 제품 가격 비교', en:'Compare same items across branches', es:'Comparar mismos artículos entre sucursales' },
+  crossVendor:    { ko:'벤더별 가격 비교', en:'Cross-Vendor Price Comparison', es:'Comparación de Precios por Proveedor' },
+  crossVendorDesc:{ ko:'같은 제품, 다른 벤더 - 누가 가장 싸?', en:'Same product, different vendors - who has the best price?', es:'Mismo producto, diferentes proveedores - ¿quién tiene mejor precio?' },
+  crossVendorBtn: { ko:'벤더 비교', en:'Compare Vendors', es:'Comparar Proveedores' },
+  advTools:       { ko:'고급 도구', en:'Advanced Tools', es:'Herramientas Avanzadas' },
+  // POS status
+  alert:          { ko:'초과', en:'Alert', es:'Alerta' },
+  watch:          { ko:'주의', en:'Watch', es:'Atención' },
+  good:           { ko:'정상', en:'Good', es:'Normal' },
+  noPos:          { ko:'미매칭', en:'Unmatched', es:'Sin Coincidencia' },
+  posMatch:       { ko:'POS 매칭', en:'POS Match', es:'Coincidencia POS' },
+  estMargin:      { ko:'예상 마진', en:'Est. Margin', es:'Margen Est.' },
+  overBase:       { ko:'기준 초과분', en:'Over Baseline', es:'Sobre Base' },
+  // Table headers
+  status:         { ko:'상태', en:'Status', es:'Estado' },
+  product:        { ko:'제품', en:'Product', es:'Producto' },
+  invoiceP:       { ko:'인보이스$', en:'Invoice$', es:'Factura$' },
+  posCost:        { ko:'POS원가', en:'POS Cost', es:'Costo POS' },
+  vsBase:         { ko:'vs기준', en:'vs Base', es:'vs Base' },
+  sellPrice:      { ko:'판매가', en:'Sell Price', es:'Precio Venta' },
+  margin:         { ko:'마진', en:'Margin', es:'Margen' },
+  qty:            { ko:'수량', en:'Qty', es:'Cant.' },
+  // Tabs
+  tabAll:         { ko:'전체', en:'All', es:'Todo' },
+  tab15:          { ko:'🔴 15%+', en:'🔴 15%+', es:'🔴 15%+' },
+  tab5:           { ko:'🟡 5-15%', en:'🟡 5-15%', es:'🟡 5-15%' },
+  tabGood:        { ko:'🟢 정상', en:'🟢 Good', es:'🟢 Normal' },
+  tabNone:        { ko:'미매칭', en:'Unmatched', es:'Sin Coincid.' },
+  tabHist:        { ko:'이력비교', en:'History', es:'Historial' },
+  // Misc
+  items:          { ko:'items', en:'items', es:'artículos' },
+  vendorDetail:   { ko:'벤더 상세', en:'Vendor Detail', es:'Detalle Proveedor' },
+  invoiceDetail:  { ko:'인보이스 상세', en:'Invoice Detail', es:'Detalle Factura' },
+  search:         { ko:'검색 / 검색...', en:'Search items...', es:'Buscar artículos...' },
+};
+
+function t(key) { return (T[key] && T[key][currentLang]) || (T[key] && T[key]['en']) || key; }
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('kimchi_lang', lang);
+  // Update switcher style
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.style.background = 'transparent';
+    b.style.borderColor = 'rgba(255,255,255,0.2)';
+    b.style.color = 'rgba(255,255,255,0.7)';
+  });
+  const active = document.getElementById('lang-' + lang);
+  if (active) {
+    active.style.background = 'rgba(255,255,255,0.25)';
+    active.style.borderColor = 'rgba(255,255,255,0.4)';
+    active.style.color = '#fff';
+  }
+  applyTranslations();
+}
+
+function applyTranslations() {
+  // Header
+  document.getElementById('headerTitle').textContent = t('headerTitle');
+  document.getElementById('headerSubtitle').textContent = t('headerSub');
+  // Home stats labels
+  document.querySelectorAll('.stat-label').forEach(el => {
+    const map = {'인보이스':'invoices','Invoices':'invoices','Facturas':'invoices',
+      '총 아이템':'totalItems','Total Items':'totalItems','Total Artículos':'totalItems',
+      '지점':'branches','Branches':'branches','Sucursales':'branches',
+      'POS SKU':'posSku'};
+    const key = map[el.textContent];
+    if (key) el.textContent = t(key);
+  });
+  // Translatable elements
+  document.querySelectorAll('[data-t]').forEach(el => {
+    el.textContent = t(el.dataset.t);
+  });
+}
+
+function goHome() {
+  pageHistory = [];
+  showPage('page-home');
+}
+
 // ===== STATE =====
 let currentPage = 'page-home';
 let pageHistory = [];
@@ -743,9 +848,12 @@ function initApp() {
     </div>`;
   }
   html += `<div class="all-branches-btn" onclick="showPage('page-cross')">
-    All Branches Comparison<span>Compare same items across branches</span>
+    <span data-t="allBranches">All Branches Comparison</span><span data-t="allBranchesSub">Compare same items across branches</span>
   </div>`;
   grid.innerHTML = html;
+
+  // Apply saved language
+  setLang(currentLang);
 }
 
 // ===== NAVIGATION =====
@@ -753,6 +861,9 @@ function updateNavBtns() {
   const hasHistory = pageHistory.length > 0;
   document.getElementById('backBtn').classList.toggle('visible', hasHistory);
   document.getElementById('fabBack').classList.toggle('visible', hasHistory);
+  // Show home button when not on home page
+  const homeBtn = document.getElementById('homeBtn');
+  if (homeBtn) homeBtn.style.display = (currentPage !== 'page-home') ? 'flex' : 'none';
 }
 
 function showPage(pageId) {
