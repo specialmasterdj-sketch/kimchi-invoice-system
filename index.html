@@ -300,23 +300,14 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
 
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
-  <div class="stat-grid">
-    <div class="stat-card"><div class="stat-number blue" id="totalInvoices">0</div><div class="stat-label" data-t="invoices">인보이스</div></div>
-    <div class="stat-card"><div class="stat-number" id="totalItems">0</div><div class="stat-label" data-t="totalItems">총 아이템</div></div>
-    <div class="stat-card"><div class="stat-number green" id="totalBranches">0</div><div class="stat-label" data-t="branches">지점</div></div>
-    <div class="stat-card"><div class="stat-number orange" id="uniqueItems">0</div><div class="stat-label" data-t="posSku">POS SKU</div></div>
-  </div>
-
-  <div class="branch-grid" id="branchGrid"></div>
-
-  <!-- Upload New Invoice -->
-  <div class="card" style="margin-top:14px;">
+  <!-- 1. Upload Invoice - PRIMARY ACTION -->
+  <div class="card" style="border-left:4px solid #C62828;">
     <div class="card-title" data-t="uploadTitle">📄 인보이스 업로드</div>
     <div class="card-subtitle" data-t="uploadDesc">PDF/텍스트 인보이스를 POS 기준 가격과 비교 (21,296 SKU 기준)</div>
     <button class="btn btn-primary" onclick="showPage('page-upload')" data-t="uploadBtn">업로드 & 비교</button>
   </div>
 
-  <!-- Scan Physical Invoice - CAMERA -->
+  <!-- 2. Scan Invoice - CAMERA -->
   <div class="card" style="margin-top:10px; border-left: 4px solid #00897B;">
     <div class="card-title" style="color:#00897B" data-t="scanTitle">📸 인보이스 촬영</div>
     <div class="card-subtitle" data-t="scanDesc">종이 인보이스를 촬영하여 POS 가격과 즉시 비교</div>
@@ -324,10 +315,21 @@ textarea { resize: vertical; min-height: 120px; font-size: 0.8rem; }
     <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleCameraCapture(this)">
   </div>
 
-  <!-- Advanced Tools (bottom, less prominent) -->
-  <div style="margin-top:30px; padding-top:14px; border-top:1px solid #e0e0e0;">
+  <!-- 3. Branch Cards -->
+  <div style="margin-top:16px; padding-top:12px; border-top:1px solid #e0e0e0;">
+    <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;">지점별 인보이스</div>
+    <div class="branch-grid" id="branchGrid"></div>
+  </div>
+
+  <!-- 4. Advanced Tools (bottom) -->
+  <div style="margin-top:16px; padding-top:12px; border-top:1px solid #e0e0e0;">
     <div style="font-size:0.7rem; color:#999; margin-bottom:8px; text-align:center;" data-t="advTools">Advanced Tools</div>
-    <div class="card" style="border-left: 4px solid #FF6F00; opacity:0.8;">
+    <div class="card" style="border-left: 4px solid #1565C0; margin-bottom:8px;">
+      <div class="card-title" style="color:#1565C0; font-size:0.8rem;" data-t="allBranches">전체 지점 비교</div>
+      <div class="card-subtitle" data-t="allBranchesSub">지점별 같은 제품 가격 비교 (냉동/냉장/그로서리)</div>
+      <button class="btn btn-sm" style="background:#1565C0;color:#fff;" onclick="showPage('page-cross')">지점 비교</button>
+    </div>
+    <div class="card" style="border-left: 4px solid #FF6F00;">
       <div class="card-title" style="color:#FF6F00; font-size:0.8rem;" data-t="crossVendor">Cross-Vendor Price Comparison</div>
       <div class="card-subtitle" data-t="crossVendorDesc">Same product, different vendors - who has the best price?</div>
       <button class="btn btn-sm" style="background:#FF6F00;color:#fff;" onclick="openCrossVendor()" data-t="crossVendorBtn">Compare Vendors</button>
@@ -475,8 +477,14 @@ No.|Brand|Description|Size|Qty|UM|Type|Unit Price|Each Price|Total
   </div>
   <div class="search-box"><input type="text" id="crossSearch" placeholder="Search items / 품목 검색..." oninput="renderCrossBranch()"></div>
   <div class="tab-bar" id="crossFilterTabs">
-    <button class="tab active" onclick="setCrossFilter('diff')">Different Prices / 가격 차이</button>
-    <button class="tab" onclick="setCrossFilter('all')">All Items / 전체</button>
+    <button class="tab active" onclick="setCrossFilter('diff')">가격 차이</button>
+    <button class="tab" onclick="setCrossFilter('all')">전체</button>
+  </div>
+  <div class="tab-bar" id="crossCategoryTabs" style="margin-top:-4px;">
+    <button class="tab active" onclick="setCrossCategory('all')" id="catAll">전체</button>
+    <button class="tab" onclick="setCrossCategory('frozen')" id="catFrozen" style="background:#E3F2FD;color:#1565C0;">🧊 냉동</button>
+    <button class="tab" onclick="setCrossCategory('fridge')" id="catFridge" style="background:#E8F5E9;color:#2E7D32;">🥬 냉장</button>
+    <button class="tab" onclick="setCrossCategory('grocery')" id="catGrocery" style="background:#FFF8E1;color:#F57F17;">🛒 그로서리</button>
   </div>
   <div class="table-wrap" id="crossTableWrap"></div>
 </div>
@@ -881,6 +889,23 @@ let currentVendor = null;
 let _ignoredPopstates = 0; // count of popstate events to ignore (fired by in-app goBack())
 let currentFilter = 'all';
 let crossFilter = 'diff';
+let crossCategory = 'all';
+
+// POS category → group mapping
+const CATEGORY_GROUPS = {
+  frozen: ['FROZEN MEALS','FROZEN SEAFOOD','ICE CREAM & DESSERT','MARINATED MEAT'],
+  fridge: ['REFRIGERATED-NOODLES,RICECAKE','REFRIGERATED-OTHERS','DAIRY','BANCHAN','KIMCHI','MEAT','SEAFOOD','SUSHI','FRUITS','VEGETABLE','BAKERY','SLICED FRUIT','READY-TO-EAT','BOBA TEA'],
+  grocery: ['RAMEN','NOODLE','SNACKS','CANNED GOODS','RICE & GRAINS','DRINKS','PASTE,MARINADE,SAUCE','OIL,SEASONING,VINGER,SYRUP','DRIED SEAWEED','CANDY','TEA','OTHER DRY ITEMS','HEALTH & BEAUTY','KITCHENWARE','ALCOHOL','TAX PROD']
+};
+
+function getCategoryGroup(posCat) {
+  if (!posCat) return 'unknown';
+  const cat = posCat.replace(/\s*\(F\)\s*/g, '').trim();
+  for (const [group, cats] of Object.entries(CATEGORY_GROUPS)) {
+    if (cats.some(c => cat.includes(c) || c.includes(cat))) return group;
+  }
+  return 'grocery';
+}
 let comparisonResults = [];
 let comparisonInvoice = null;
 let currentInvoice = null;
@@ -958,9 +983,7 @@ function initApp() {
       <div class="branch-stats">${brInvoices.length} invoices / ${brItems} items<br>Latest: ${latestDate}</div>
     </div>`;
   }
-  html += `<div class="all-branches-btn" onclick="showPage('page-cross')">
-    <span data-t="allBranches">All Branches Comparison</span><span data-t="allBranchesSub">Compare same items across branches</span>
-  </div>`;
+  // All Branches button moved to Advanced Tools section
   grid.innerHTML = html;
 
   // Apply saved language
@@ -2494,6 +2517,17 @@ function setCrossFilter(filter) {
   renderCrossBranch();
 }
 
+function setCrossCategory(cat) {
+  crossCategory = cat;
+  document.querySelectorAll('#crossCategoryTabs .tab').forEach(t => {
+    t.classList.remove('active');
+    t.style.fontWeight = '600';
+  });
+  event.target.classList.add('active');
+  event.target.style.fontWeight = '800';
+  renderCrossBranch();
+}
+
 function renderCrossBranch() {
   const search = (document.getElementById('crossSearch')?.value || '').toLowerCase();
   const branches = SEED_DATA.branches;
@@ -2508,17 +2542,22 @@ function renderCrossBranch() {
     if (brInvoices.length > 0) latestByBranch[bId] = brInvoices[0];
   }
 
-  // Build item -> {branchId: price} map
+  // Build item -> {branchId: price} map with POS category
   const itemMap = {};
   for (const [bId, inv] of Object.entries(latestByBranch)) {
     for (const rawItem of inv.items) {
       const item = normalizeItem(rawItem);
-      if (item.unitPrice <= 2) continue; // Skip promo/credit lines
+      if (item.unitPrice <= 2) continue;
       const key = item.itemNo;
       if (!itemMap[key]) {
-        itemMap[key] = { itemNo: key, brand: item.brand, description: item.description, size: item.size, prices: {} };
+        // Look up POS for product name and category
+        const posMatch = findPOSMatch(item, inv.vendor);
+        const posName = posMatch ? posMatch.pos.nm : '';
+        const posCat = posMatch ? posMatch.pos.ct : '';
+        const catGroup = getCategoryGroup(posCat);
+        const displayName = [item.brand, item.description].filter(Boolean).join(' ') || posName || item.itemNo;
+        itemMap[key] = { itemNo: key, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {} };
       }
-      // Use the highest price if item appears multiple times (skip promo lines)
       if (!itemMap[key].prices[bId] || item.unitPrice > itemMap[key].prices[bId]) {
         itemMap[key].prices[bId] = item.unitPrice;
       }
@@ -2527,6 +2566,11 @@ function renderCrossBranch() {
 
   // Filter to items in 2+ branches
   let items = Object.values(itemMap).filter(it => Object.keys(it.prices).length >= 2);
+
+  // Filter by category
+  if (crossCategory !== 'all') {
+    items = items.filter(it => it.catGroup === crossCategory);
+  }
 
   // Filter by different prices
   if (crossFilter === 'diff') {
@@ -2539,33 +2583,39 @@ function renderCrossBranch() {
   }
 
   // Search filter
-  if (search) items = items.filter(it => `${it.brand} ${it.description} ${it.itemNo}`.toLowerCase().includes(search));
+  if (search) items = items.filter(it => `${it.displayName} ${it.posName} ${it.itemNo}`.toLowerCase().includes(search));
 
   // Sort by max price diff
   items.sort((a, b) => {
-    const aPrices = Object.values(a.prices);
-    const bPrices = Object.values(b.prices);
-    const aDiff = Math.max(...aPrices) - Math.min(...aPrices);
-    const bDiff = Math.max(...bPrices) - Math.min(...bPrices);
+    const aDiff = Math.max(...Object.values(a.prices)) - Math.min(...Object.values(a.prices));
+    const bDiff = Math.max(...Object.values(b.prices)) - Math.min(...Object.values(b.prices));
     return bDiff - aDiff;
   });
 
+  // Category labels
+  const catLabels = { frozen: '🧊 냉동', fridge: '🥬 냉장', grocery: '🛒 그로서리', unknown: '' };
+
   // Render table
   const activeBranches = branchIds.filter(bId => latestByBranch[bId]);
-  let html = '<table class="cross-branch-table"><tr><th style="text-align:left">Item</th>';
+  let html = `<div style="font-size:0.75rem;color:#666;margin-bottom:6px;">${items.length}개 제품</div>`;
+  html += '<table class="cross-branch-table"><tr><th style="text-align:left;min-width:140px;">제품</th>';
   for (const bId of activeBranches) {
-    const shortName = branches[bId].name.split(' ')[0].substring(0, 8);
-    html += `<th>${shortName}<br><span style="font-size:0.55rem;color:#999;">${branches[bId].code}</span></th>`;
+    const shortName = branches[bId].name.split(' ')[0].substring(0, 6);
+    html += `<th>${shortName}</th>`;
   }
-  html += '<th>Diff</th></tr>';
+  html += '<th>차이</th></tr>';
 
-  for (const item of items.slice(0, 100)) {
+  for (const item of items.slice(0, 150)) {
     const prices = Object.values(item.prices);
     const minP = Math.min(...prices);
     const maxP = Math.max(...prices);
     const diff = maxP - minP;
+    const catBadge = catLabels[item.catGroup] || '';
 
-    html += `<tr><td class="item-name">${item.brand}<br>${item.description}</td>`;
+    html += `<tr><td class="item-name" style="font-size:0.65rem;"><strong>${item.displayName}</strong>`;
+    if (item.posName && item.posName !== item.displayName) html += `<br><span style="font-size:0.5rem;color:#999;">POS: ${item.posName}</span>`;
+    if (catBadge) html += `<br><span style="font-size:0.5rem;">${catBadge}</span>`;
+    html += `</td>`;
     for (const bId of activeBranches) {
       const p = item.prices[bId];
       if (p !== undefined) {
@@ -2584,7 +2634,7 @@ function renderCrossBranch() {
   html += '</table>';
 
   if (items.length === 0) {
-    html = '<div style="text-align:center;padding:30px;color:#999;">No matching items found across branches</div>';
+    html = '<div style="text-align:center;padding:30px;color:#999;">해당 카테고리에 비교 가능한 제품 없음</div>';
   }
 
   document.getElementById('crossTableWrap').innerHTML = html;
