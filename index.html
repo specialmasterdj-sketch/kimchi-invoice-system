@@ -2521,41 +2521,49 @@ function renderCrossBranch() {
   const branches = SEED_DATA.branches;
   const branchIds = Object.keys(branches);
 
-  // For each branch, get latest invoice with items
-  const latestByBranch = {};
+  // For each branch + vendor combo, get the latest invoice
+  const latestInvoices = [];
   for (const bId of branchIds) {
-    const brInvoices = SEED_DATA.invoices
-      .filter(i => i.branchId === bId && i.items.length > 0)
-      .sort((a, b) => b.date.localeCompare(a.date));
-    if (brInvoices.length > 0) latestByBranch[bId] = brInvoices[0];
+    const brInvoices = SEED_DATA.invoices.filter(i => i.branchId === bId && i.items.length > 0);
+    // Group by vendor, take latest from each
+    const byVendor = {};
+    for (const inv of brInvoices) {
+      const v = inv.vendor || 'Other';
+      if (!byVendor[v] || inv.date > byVendor[v].date) byVendor[v] = inv;
+    }
+    for (const inv of Object.values(byVendor)) {
+      latestInvoices.push({ bId, inv });
+    }
   }
 
-  // Build item -> {branchId: price} map with POS category
+  // Build item map using POS product as the key (matches across vendors/branches)
   const itemMap = {};
-  for (const [bId, inv] of Object.entries(latestByBranch)) {
+  for (const { bId, inv } of latestInvoices) {
     for (const rawItem of inv.items) {
       const item = normalizeItem(rawItem);
       if (item.unitPrice <= 2) continue;
-      const key = item.itemNo;
-      if (!itemMap[key]) {
-        // Look up POS for product name and category
-        const posMatch = findPOSMatch(item, inv.vendor);
-        const posName = posMatch ? posMatch.pos.nm : '';
-        const posCat = posMatch ? posMatch.pos.ct : '';
-        const catGroup = getCategoryGroup(posCat);
-        // Build display name: prefer POS name > brand+description > brand+itemNo
-        let displayName;
-        if (posName) {
-          displayName = posName;
-        } else if (item.description && item.description.length > 3) {
-          displayName = [item.brand, item.description].filter(Boolean).join(' ');
-        } else {
-          displayName = [item.brand, item.itemNo].filter(Boolean).join(' ');
-        }
-        itemMap[key] = { itemNo: key, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {} };
+      // Match to POS product
+      const posMatch = findPOSMatch(item, inv.vendor);
+      // Use POS barcode as key (same product across vendors), fallback to itemNo
+      const key = posMatch ? (posMatch.pos.bc || posMatch.pos.nm) : ('NO:' + item.itemNo);
+      const posName = posMatch ? posMatch.pos.nm : '';
+      const posCat = posMatch ? posMatch.pos.ct : '';
+      const catGroup = getCategoryGroup(posCat);
+      let displayName;
+      if (posName) {
+        displayName = posName;
+      } else if (item.description && item.description.length > 3) {
+        displayName = [item.brand, item.description].filter(Boolean).join(' ');
+      } else {
+        displayName = [item.brand, item.itemNo].filter(Boolean).join(' ');
       }
+      if (!itemMap[key]) {
+        itemMap[key] = { itemNo: item.itemNo, brand: item.brand, description: item.description, displayName, posName, posCat, catGroup, size: item.size, prices: {}, vendors: {} };
+      }
+      // Keep highest price per branch, track vendor
       if (!itemMap[key].prices[bId] || item.unitPrice > itemMap[key].prices[bId]) {
         itemMap[key].prices[bId] = item.unitPrice;
+        itemMap[key].vendors[bId] = inv.vendor;
       }
     }
   }
