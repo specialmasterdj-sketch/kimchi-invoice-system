@@ -604,6 +604,45 @@ function buildPOSIndex() {
   }
 }
 
+// Korean → English product keyword dictionary for cross-language POS matching
+const KO_EN_MAP = {
+  // Brands
+  '동원':'DONGWON','농심':'NONGSHIM','삼양':'SAMYANG','오뚜기':'OTTOGI','롯데':'LOTTE',
+  '왕':'WANG','수라상':'SURASANG','비비고':'BIBIGO','곰표':'GOMPYO','팔도':'PALDO',
+  '한상':'HANSANG','빙그레':'BINGGRAE','삼립':'SAMLIP','크라운':'CROWN','해태':'HAITAI',
+  '매일':'MAEIL','청우':'CHUNGWOO','칠갑':'CHILKAB','이롬':'EROM','태경':'TAEKYUNG',
+  '초':'CHORIPDONG','스키나':'SKIENA','구겐':'GUGEN','올가':'ORGA',
+  // Product types
+  '라면':'RAMEN','라멘':'RAMEN','우동':'UDON','칼국수':'KALGUKSU','냉면':'NAENGMYUN',
+  '국수':'NOODLE','당면':'GLASS NOODLE','쌀국수':'RICE NOODLE','짜장':'JJAJANG',
+  '김치':'KIMCHI','만두':'DUMPLING','교자':'GYOZA','왕교자':'GYOZA',
+  '참치':'TUNA','고등어':'MACKEREL','새우':'SHRIMP','게맛살':'CRAB STICK',
+  '두유':'SOYMILK','라떼':'LATTE','커피':'COFFEE',
+  '떡볶이':'TTEOKBOKKI','떡':'RICE CAKE','어묵':'FISH CAKE',
+  '김':'SEAWEED','김밥':'KIMBAP','미역':'SEAWEED',
+  '고추장':'GOCHUJANG','된장':'SOYBEAN PASTE','간장':'SOY SAUCE',
+  '고춧가루':'RED PEPPER','참깨':'SESAME','소금':'SALT',
+  '소세지':'SAUSAGE','핫도그':'HOTDOG','빵':'BREAD',
+  '아이스크림':'ICE CREAM','빼빼로':'PEPERO','과자':'SNACK','감자칩':'POTATO CHIP',
+  '캔디':'CANDY','초코':'CHOCOLATE','쿠키':'COOKIE',
+  '조개':'CLAM','고구마':'SWEET POTATO','감자':'POTATO','호박':'ZUCCHINI',
+  '쌀':'RICE','콩':'BEAN','차':'TEA','꿀':'HONEY','매실':'PLUM',
+  '소스':'SAUCE','식초':'VINEGAR','기름':'OIL','단무지':'PICKLED RADISH',
+  '추어탕':'SOUP','육개장':'SOUP','볶음밥':'FRIED RICE','비빔':'BIBIM',
+  '치즈':'CHEESE','크림':'CREAM','딸기':'STRAWBERRY','포도':'GRAPE','오렌지':'ORANGE',
+  '멀티':'MULTI','번들':'BUNDLE','용기':'CUP','봉지':'BAG',
+};
+
+function translateKoToEn(desc) {
+  // If description has Korean characters, extract and translate keywords
+  if (!/[\uAC00-\uD7AF]/.test(desc)) return null;
+  const translated = [];
+  for (const [ko, en] of Object.entries(KO_EN_MAP)) {
+    if (desc.includes(ko)) translated.push(en);
+  }
+  return translated.length > 0 ? translated.join(' ') : null;
+}
+
 function findPOSMatch(item, invoiceVendor) {
   // 1. Barcode match (highest confidence)
   const itemNo = (item.itemNo || '').trim();
@@ -620,9 +659,21 @@ function findPOSMatch(item, invoiceVendor) {
   if (!desc || desc.length < 3) return null;
   if (POS_BY_NAME[desc]) return { pos: POS_BY_NAME[desc], method: 'name-exact', confidence: 0.95 };
 
+  // 2b. Korean → English translation fallback
+  const enTranslation = translateKoToEn(item.description || item.name || '');
+  if (enTranslation) {
+    const enKey = enTranslation.toUpperCase().trim().replace(/\s+/g, ' ');
+    if (POS_BY_NAME[enKey]) return { pos: POS_BY_NAME[enKey], method: 'ko-exact', confidence: 0.85 };
+  }
+
   // 3. Word-overlap matching (weighted by vendor match)
   const descClean = desc.replace(/[^A-Z0-9\s]/g, ' ');
-  const words = descClean.split(/\s+/).filter(w => w.length > 2);
+  let words = descClean.split(/\s+/).filter(w => w.length > 2);
+  // Add translated English words for Korean descriptions
+  if (enTranslation) {
+    const enWords = enTranslation.toUpperCase().split(/\s+/).filter(w => w.length > 2);
+    words = [...new Set([...words, ...enWords])];
+  }
   if (words.length === 0) return null;
 
   const posVendor = invoiceVendor ? (VENDOR_MAP_TO_POS[invoiceVendor] || invoiceVendor).toUpperCase() : '';
@@ -654,14 +705,21 @@ function findPOSMatch(item, invoiceVendor) {
 }
 
 // Extract case/pack quantity from invoice item description
-function extractCaseQty(desc) {
-  if (!desc) return 1;
+function extractCaseQty(desc, invoicePrice, posCost) {
+  if (!desc) return _estimateCaseQty(invoicePrice, posCost);
   const d = desc.toUpperCase();
+  let m;
   // Pattern: "12/20OZ", "24/14.1 OZ", "20/1LB" → number before /size
-  let m = d.match(/\b(\d+)\s*\/\s*[\d.]+\s*(OZ|LB|G|KG|ML|L|GAL|FLOZ|PC|EA|PK)\b/);
+  m = d.match(/\b(\d+)\s*\/\s*[\d.]+\s*(OZ|LB|G|KG|ML|L|GAL|FLOZ|PC|EA|PK|PKGS?)\b/);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "12pkgs/240g", "12pks/size" → number before pkgs
+  m = d.match(/\b(\d+)\s*(PKGS?|PKS|PCS|PACKS?)\s*\//);
+  if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
+  // Pattern: "(8 IN CS)", "(12 IN CASE)", "(24IN CS)"
+  m = d.match(/\((\d+)\s*IN\s*(CS|CASE|BOX|CTN)\)/);
   if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
   // Pattern: "14OZ/12", "1KG/12", "500G/12" → size/number at end
-  m = d.match(/[\d.]+(OZ|LB|G|KG|ML)\s*\/\s*(\d+)\s*$/);
+  m = d.match(/[\d.]+(OZ|LB|G|KG|ML)\s*\/\s*(\d+)\b/);
   if (m && parseInt(m[2]) > 1) return parseInt(m[2]);
   // Pattern: "12X23", "6X5.11", "10X21.16" → NNX at end (Rhee Bros format)
   m = d.match(/\b(\d+)\s*X\s*[\d.]+\s*$/);
@@ -675,7 +733,28 @@ function extractCaseQty(desc) {
   // Pattern ends with "/NN"
   m = d.match(/\/\s*(\d+)\s*$/);
   if (m && parseInt(m[1]) > 1) return parseInt(m[1]);
-  return 1;
+  // Pattern: leading "NN/" like "12/1.1 LB" at start or after brand
+  m = d.match(/(?:^|\s|\))(\d+)\s*\/\s*[\d.]+/);
+  if (m && parseInt(m[1]) > 1 && parseInt(m[1]) <= 100) return parseInt(m[1]);
+  // Fallback: estimate from price ratio if POS cost available
+  return _estimateCaseQty(invoicePrice, posCost);
+}
+
+function _estimateCaseQty(invoicePrice, posCost) {
+  if (!invoicePrice || !posCost || posCost <= 0) return 1;
+  const ratio = invoicePrice / posCost;
+  if (ratio < 2.5) return 1; // Likely per-unit already
+  // Find closest common case qty: 4,6,8,10,12,16,20,24,30,36,40,48
+  const common = [4,6,8,10,12,16,20,24,30,36,40,48];
+  let best = 1, bestDiff = ratio;
+  for (const cq of common) {
+    const diff = Math.abs(ratio - cq);
+    if (diff < bestDiff) { bestDiff = diff; best = cq; }
+  }
+  // Only use estimate if it's reasonably close (within 20%)
+  if (bestDiff / best < 0.2) return best;
+  // Use rounded ratio as last resort
+  return Math.round(ratio);
 }
 
 // POS-based status classification
@@ -1208,7 +1287,7 @@ function renderVendorPage(branchId, vendorName) {
         const it = normalizeItem(rawIt);
         const m = findPOSMatch(it, vendorName);
         if (m && m.pos.co > 0) {
-          const cq = extractCaseQty(it.description || it.name || '');
+          const cq = extractCaseQty(it.description || it.name || '', it.unitPrice, m.pos.co);
           const uc = cq > 1 ? it.unitPrice / cq : it.unitPrice;
           const st = getPOSStatus(uc, m.pos.co);
           if (st==='pos-alert') al++;
@@ -1606,7 +1685,7 @@ function renderInvoiceDetail() {
       r.posPrice = m.pos.pr || 0;
       r.posName = m.pos.nm || '';
       // Convert box price to per-unit cost
-      r.caseQty = extractCaseQty(it.description || it.name || '');
+      r.caseQty = extractCaseQty(it.description || it.name || '', it.unitPrice, r.posCost);
       r.unitCost = r.caseQty > 1 ? it.unitPrice / r.caseQty : it.unitPrice;
       if (r.posCost > 0) {
         r.posDiffPct = ((r.unitCost - r.posCost) / r.posCost) * 100;
@@ -2104,7 +2183,7 @@ function runComparison() {
           posMethod = posMatch.method;
 
           // Extract case quantity and calculate per-unit cost
-          caseQty = extractCaseQty(item.description || item.name || '');
+          caseQty = extractCaseQty(item.description || item.name || '', item.unitPrice, posCost);
           unitCost = caseQty > 1 ? item.unitPrice / caseQty : item.unitPrice;
 
           // Per-unit invoice cost vs POS cost
