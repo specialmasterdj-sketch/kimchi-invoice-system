@@ -1,4 +1,4 @@
-const CDN_CACHE = 'kimchi-cdn-v1';
+const CDN_CACHE = 'kimchi-cdn-v2';
 
 // Install - nothing to pre-cache (local assets always fetched from network)
 self.addEventListener('install', event => {
